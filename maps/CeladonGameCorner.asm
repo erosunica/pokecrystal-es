@@ -74,7 +74,7 @@ CeladonGameCornerFisherScript:
 	end
 
 .coinname
-	db "COIN@"
+	db "FICHAS@"
 
 .NoCoinCase:
 	writetext CeladonGameCornerFisherNoCoinCaseText
@@ -148,177 +148,130 @@ CeladonGameCornerUnusedMovementData:
 	step_end
 
 CeladonGameCornerReceptionistText:
-	text "Welcome!"
+	text "¡Hola!"
 
-	para "You may exchange"
-	line "your coins for"
+	para "Al lado puedes"
+	line "cambiar tus fichas"
 
-	para "fabulous prizes"
-	line "next door."
+	para "por fabulosos"
+	line "premios."
 	done
 
 CeladonGameCornerPokefanMText:
-	text "The slot machines"
-	line "are all state of"
-	cont "the art."
+	text "Todas las"
+	line "tragaperras son de"
+	cont "última generación."
 	done
 
 CeladonGameCornerTeacherText:
-if DEF(_CRYSTAL_AU)
-	text "The weather"
-	line "outside is very"
-	cont "nice."
-	done
-else
-	text "It's this machine"
-	line "I want."
+	text "Quiero jugar en"
+	line "esta máquina."
 
-	para "It cleaned me out"
-	line "yesterday, so it"
-
-	para "should pay out"
-	line "today."
+	para "Ayer me desplumó,"
+	line "así que hoy sol-"
+	cont "tará las fichas."
 	done
-endc
 
 CeladonGameCornerFishingGuruText:
-if DEF(_CRYSTAL_AU)
-	text "This machine looks"
-	line "the same as the"
-	cont "others."
-	done
-else
-	text "I think this slot"
-	line "machine will pay"
-	cont "out…"
+	text "Creo que esta"
+	line "máquina está"
+	cont "repleta de fichas…"
 
-	para "The odds vary"
-	line "among machines."
+	para "Las posibilidades"
+	line "de ganar varían"
+	cont "según la máquina."
 	done
-endc
 
 CeladonGameCornerFisherText1:
-if DEF(_CRYSTAL_AU)
-	text "Whoa!"
+	text "¡Muajajaja!"
 
-	para "What? You want to"
-	line "play this machine?"
+	para "¡Las fichas no"
+	line "dejan de salir!"
 
-	para "Here, take my"
-	line "coins."
+	para "¿Mm? ¿Qué?"
+	line "¿Quieres jugar?"
+
+	para "¡Compartiré mi"
+	line "suerte contigo!"
 	done
-else
-	text "Gahahaha!"
-
-	para "The coins just"
-	line "keep popping out!"
-
-	para "Hm? What, kid? You"
-	line "want to play?"
-
-	para "I'll share my luck"
-	line "with you!"
-	done
-endc
 
 CeladonGameCornerFisherText2:
-	text "Gahahaha!"
+	text "¡Bien!"
 
-	para "It makes me feel"
-	line "good to do nice"
-
-	para "things for other"
-	line "people!"
+	para "¡Me gusta hacer"
+	line "favores a la"
+	cont "gente!"
 	done
 
 CeladonGameCornerFisherNoCoinCaseText:
-	text "Hey, you don't"
-	line "have a COIN CASE."
+	text "Oye, pero si no"
+	line "tienes MONEDERO."
 
-	para "How am I supposed"
-	line "to give you any"
-	cont "coins, kid?"
+	para "¿Cómo piensas que"
+	line "te puedo dar las"
+	cont "fichas, joven?"
 	done
 
 CeladonGameCornerFisherFullCoinCaseText:
-if DEF(_CRYSTAL_AU)
-	text "Your COIN CASE is"
-	line "full."
-	done
-else
-	text "Hey, your COIN"
-	line "CASE is full, kid."
+	text "Oye, tu MONEDERO"
+	line "está lleno, joven."
 
-	para "You must be riding"
-	line "a winning streak"
-	cont "too."
+	para "Debes de haber"
+	line "estado en racha."
 	done
-endc
 
 CeladonGymGuyText:
-	text "Hey! CHAMP in"
-	line "making!"
+	text "¿Tú también juegas"
+	line "a las tragaperras?"
 
-	para "Are you playing"
-if DEF(_CRYSTAL_AU)
-	line "too?"
-else
-	line "the slots too?"
-endc
+	para "Quiero conseguir"
+	line "bastantes fichas"
 
-	para "I'm trying to get"
-	line "enough coins for a"
-	cont "prize #MON."
+	para "para cambiarlas"
+	line "por un #MON."
 
-	para "But I don't have"
-	line "enough coins yet…"
+	para "Pero aún no tengo"
+	line "suficientes…"
 	done
 
 CeladonGameCornerGrampsText:
-if DEF(_CRYSTAL_AU)
-	text "Is there any"
-	line "difference between"
-	cont "these lines?"
-	done
-else
-	text "Hmmm… The odds are"
-	line "surely better for"
+	text "¡Mmm…! Seguro que"
+	line "la línea de"
 
-	para "PIKACHU's line,"
-	line "but… What to do?"
+	para "PIKACHU es gana-"
+	line "dora. ¿Qué hago?"
 	done
-endc
 
 CeladonGameCornerPoster1Text:
-	text "Hey!"
+	text "¡Eh!"
 
-	para "Underneath this"
-	line "poster…"
+	para "Debajo de este"
+	line "póster…"
 
-	para "There's nothing!"
+	para "¡No hay nada!"
 	done
 
 CeladonGameCornerPoster2Text:
-	text "Hey!"
+	text "¡Eh!"
 
-	para "Underneath this"
-	line "poster…"
+	para "Debajo de este"
+	line "póster…"
 
-	para "There's nothing!"
+	para "¡No hay nada!"
 	done
 
 CeladonGameCornerLighterText:
-	text "There's a lighter"
-	line "here."
+	text "Aquí hay un"
+	line "encendedor."
 	done
 
 CeladonGameCornerSodaCanText:
-	text "A can of soda…"
+	text "¡Un refresco!"
 
-	para "Someone must be"
-	line "coming back…"
+	para "Alguien se lo"
+	line "habrá dejado…"
 
-	para "Huh? It's empty!"
+	para "¿Uh? ¡Está vacío!"
 	done
 
 CeladonGameCorner_MapEvents:

@@ -1,10 +1,10 @@
-	db "WATER FISH@" ; species name
-	dw 104, 190 ; height, weight
+	db "PEZ AGUA@" ; species name
+	dbw 4, 85 ; height, weight
 
-	db   "A mucous"
-	next "membrane covers"
-	next "its body. Touching"
+	db   "Está cubierto por"
+	next "una membrana muco-"
+	next "sa. Si le tocas"
 
-	page "it barehanded will"
-	next "cause a shooting"
-	next "pain.@"
+	page "directamente con"
+	next "las manos, senti-"
+	next "rás un gran dolor.@"

@@ -1,10 +1,10 @@
-	db "HAPPINESS@" ; species name
-	dw 200, 70 ; height, weight
+	db "FELICIDAD@" ; species name
+	dbw 6, 32 ; height, weight
 
-	db   "Although it does"
-	next "not flap its wings"
-	next "very much, it can"
+	db   "Aunque no bate mu-"
+	next "cho las alas, pue-"
+	next "de aguantar en el"
 
-	page "stay up in the air"
-	next "as it tags along"
-	next "after its trainer.@"
+	page "aire el tiempo que"
+	next "quiera al lado de"
+	next "su entrenador.@"

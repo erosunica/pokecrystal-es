@@ -148,226 +148,227 @@ MahoganyGymStatue:
 	jumpstd gymstatue2
 
 PryceText_Intro:
-	text "#MON have many"
-	line "experiences in"
+	text "Los #MON viven"
+	line "todo tipo de"
+	cont "experiencias."
 
-	para "their lives, just "
-	line "like we do. "
+	para "Yo también he"
+	line "visto y sufrido"
+	cont "mucho en mi vida."
 
-	para "I, too, have seen"
-	line "and suffered much"
-	cont "in my life."
+	para "Soy mayor, así que"
+	line "te enseñaré lo que"
+	cont "quiero decir."
 
-	para "Since I am your"
-	line "elder, let me show"
-	cont "you what I mean."
+	para "He estado con los"
+	line "#MON desde"
 
-	para "I have been with"
-	line "#MON since"
+	para "antes de que tú"
+	line "nacieras."
 
-	para "before you were"
-	line "born."
+	para "Y no pierdo"
+	line "fácilmente."
 
-	para "I do not lose"
-	line "easily."
+	para "¡Yo, FREDO, el"
+	line "entrenador del"
 
-	para "I, PRYCE--the"
-	line "winter trainer--"
-
-	para "shall demonstrate"
-	line "my power!"
+	para "invierno, te"
+	line "mostraré mi poder!"
 	done
 
 PryceText_Impressed:
-	text "Ah, I am impressed"
-	line "by your prowess."
+	text "¡Ah! Me impresiona"
+	line "tu valor."
 
-	para "With your strong"
-	line "will, I know you"
+	para "Con tu gran"
+	line "voluntad, sé que"
 
-	para "will overcome all"
-	line "life's obstacles."
+	para "superarás todos"
+	line "los obstáculos."
 
-	para "You are worthy of"
-	line "this BADGE!"
+	para "¡Te mereces esta"
+	line "MEDALLA!"
 	done
 
 Text_ReceivedGlacierBadge:
-	text "<PLAYER> received"
-	line "GLACIERBADGE."
+	text "<PLAYER> recibió la"
+	line "MEDALLA GLACIAR."
 	done
 
 PryceText_GlacierBadgeSpeech:
-	text "That BADGE will"
-	line "raise the SPECIAL"
-	cont "stats of #MON."
+	text "Esta MEDALLA sube"
+	line "las habilidades"
 
-	para "It also lets your"
-	line "#MON use WHIRL-"
-	cont "POOL to get across"
-	cont "real whirlpools."
+	para "ESPECIALES de los"
+	line "#MON."
 
-	para "And this… This is"
-	line "a gift from me!"
+	para "Y tus #MON"
+	line "usarán TORBELLINO"
+
+	para "para pasar los"
+	line "torbellinos."
+
+	para "¡Además, te voy a"
+	line "hacer un regalo!"
 	done
 
 PryceText_IcyWindSpeech:
-	text "That TM contains"
-	line "ICY WIND."
+	text "Esta MT contiene"
+	line "VIENTO HIELO."
 
-	para "It inflicts damage"
-	line "and lowers speed."
+	para "Causa daño y baja"
+	line "la velocidad."
 
-	para "It demonstrates"
-	line "the harshness of"
-	cont "winter."
+	para "Demuestra la dure-"
+	line "za del invierno."
 	done
 
 PryceText_CherishYourPokemon:
-	text "When the ice and"
-	line "snow melt, spring"
-	cont "arrives."
+	text "La primavera llega"
+	line "cuando se derrite"
 
-	para "You and your #-"
-	line "MON will be to-"
+	para "el hielo y la"
+	line "nieve."
 
-	para "gether for many"
-	line "years to come."
+	para "Tú y tus #MON"
+	line "pasaréis juntos"
+	cont "muchos años."
 
-	para "Cherish your time"
-	line "together!"
+	para "¡Pasadlo bien!"
 	done
 
 BoarderRonaldSeenText:
-	text "I'll freeze your"
-	line "#MON, so you"
-	cont "can't do a thing!"
+	text "¡Congelaré a tus"
+	line "#MON! ¡No"
+	cont "podrás hacer nada!"
 	done
 
 BoarderRonaldBeatenText:
-	text "Darn. I couldn't"
-	line "do a thing."
+	text "Maldición. No pude"
+	line "hacer nada."
 	done
 
 BoarderRonaldAfterBattleText:
-	text "I think there's a"
-	line "move a #MON"
+	text "Hay un movimiento"
+	line "que se puede usar"
 
-	para "can use while it's"
-	line "frozen."
+	para "cuando el #MON"
+	line "está congelado."
 	done
 
 BoarderBradSeenText:
-	text "This GYM has a"
-	line "slippery floor."
+	text "Este GIMNASIO"
+	line "tiene un suelo"
 
-	para "It's fun, isn't"
-	line "it?"
+	para "resbaladizo. ¿A"
+	line "que es divertido?"
 
-	para "But hey--we're"
-	line "not playing games"
-	cont "here!"
+	para "¡Pero oye, aquí no"
+	line "estamos jugando!"
 	done
 
 BoarderBradBeatenText:
-	text "Do you see how"
-	line "serious we are?"
+	text "¿Ves lo serios que"
+	line "somos?"
 	done
 
 BoarderBradAfterBattleText:
-	text "This GYM is great."
-	line "I love boarding"
-	cont "with my #MON!"
+	text "Este GIMNASIO es"
+	line "genial. ¡Me"
+
+	para "encanta patinar"
+	line "con mis #MON!"
 	done
 
 BoarderDouglasSeenText:
-	text "I know PRYCE's"
-	line "secret."
+	text "Conozco el secreto"
+	line "de FREDO."
 	done
 
 BoarderDouglasBeatenText:
-	text "OK. I'll tell you"
-	line "PRYCE's secret."
+	text "Te contaré el"
+	line "secreto de FREDO."
 	done
 
 BoarderDouglasAfterBattleText:
-	text "The secret behind"
-	line "PRYCE's power…"
+	text "El secreto del"
+	line "poder de FREDO…"
 
-	para "He meditates under"
-	line "a waterfall daily"
+	para "Medita todos los"
+	line "días bajo una"
 
-	para "to strengthen his"
-	line "mind and body."
+	para "cascada para"
+	line "fortalecer el"
+	cont "cuerpo y la mente."
 	done
 
 SkierRoxanneSeenText:
-	text "To get to PRYCE,"
-	line "our GYM LEADER,"
+	text "Para vencer a"
+	line "FREDO, el LÍDER"
 
-	para "you need to think"
-	line "before you skate."
+	para "del GIMNASIO,"
+	line "piensa antes de"
+	cont "patinar."
 	done
 
 SkierRoxanneBeatenText:
-	text "I wouldn't lose to"
-	line "you in skiing!"
+	text "¡No perderé ante"
+	line "ti esquiando!"
 	done
 
 SkierRoxanneAfterBattleText:
-	text "If you don't skate"
-	line "with precision,"
+	text "Si no patinas con"
+	line "precisión, no"
 
-	para "you won't get far"
-	line "in this GYM."
+	para "lograrás nada en"
+	line "este GIMNASIO."
 	done
 
 SkierClarissaSeenText:
-	text "Check out my"
-	line "parallel turn!"
+	text "¡Mira qué bien lo"
+	line "hago!"
 	done
 
 SkierClarissaBeatenText:
-	text "No! You made me"
-	line "wipe out!"
+	text "¡No! ¡He perdido!"
 	done
 
 SkierClarissaAfterBattleText:
-	text "I shouldn't have"
-	line "been bragging"
-	cont "about my skiing…"
+	text "No debería haber"
+	line "presumido sobre mi"
+	cont "forma de esquiar."
 	done
 
 MahoganyGymGuyText:
-	text "PRYCE is a veteran"
-	line "who has trained"
+	text "FREDO es veterano."
+	line "Lleva entrenando"
 
-	para "#MON for some"
-	line "50 years."
+	para "#MON desde hace"
+	line "50 años."
 
-	para "He's said to be"
-	line "good at freezing"
+	para "Dicen que es bueno"
+	line "congelando a sus"
 
-	para "opponents with"
-	line "ice-type moves."
+	para "rivales con los"
+	line "ataques de hielo."
 
-	para "That means you"
-	line "should melt him"
+	para "¡Eso quiere decir"
+	line "que deberías"
 
-	para "with your burning"
-	line "ambition!"
+	para "derretirle con tu"
+	line "ardiente ambición!"
 	done
 
 MahoganyGymGuyWinText:
-	text "PRYCE is some-"
-	line "thing, but you're"
-	cont "something else!"
+	text "¡FREDO es bueno,"
+	line "pero tú eres aún"
+	cont "mejor!"
 
-	para "That was a hot"
-	line "battle that"
+	para "¡Ha sido un gran"
+	line "combate que acortó"
 
-	para "bridged the gen-"
-	line "eration gap!"
+	para "distancias entre"
+	line "generaciones!"
 	done
 
 MahoganyGym_MapEvents:

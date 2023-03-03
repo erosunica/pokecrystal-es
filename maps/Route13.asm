@@ -78,115 +78,114 @@ Route13HiddenCalcium:
 	hiddenitem CALCIUM, EVENT_ROUTE_13_HIDDEN_CALCIUM
 
 PokefanmAlexSeenText:
-	text "Bow down before my"
-	line "regal #MON!"
+	text "¡Arrodíllate ante"
+	line "mi regio #MON!"
 	done
 
 PokefanmAlexBeatenText:
-	text "How… How dare you"
-	line "mock royalty!"
+	text "¿Qué? ¡Te burlas"
+	line "de la realeza!"
 	done
 
 PokefanmAlexAfterBattleText:
-	text "Doesn't everyone"
-	line "wish to someday be"
-	cont "a king?"
+	text "¿Acaso no quiere"
+	line "ser rey todo el"
+	cont "mundo?"
 	done
 
 PokefanmJoshuaSeenText:
-	text "Nihihi! Would you"
-	line "like to battle my"
-	cont "PIKACHU gang?"
+	text "¡Jijiji! ¿Quieres"
+	line "luchar contra mi"
+	cont "grupo de PIKACHU?"
 	done
 
 PokefanmJoshuaBeatenText:
-	text "PI-PIKACHU!"
+	text "¡PI, PIKACHU!"
 	done
 
 PokefanmJoshuaAfterBattleText:
-	text "You look like you"
-	line "have many #MON,"
+	text "Parece que tienes"
+	line "muchos #MON,"
 
-	para "but PIKACHU is"
-	line "still the best."
+	para "pero PIKACHU es el"
+	line "mejor."
 	done
 
 BirdKeeperPerrySeenText:
-	text "Agility is the key"
-	line "attribute of bird"
-	cont "#MON."
+	text "La agilidad es"
+	line "la clave de los"
+	cont "#MON pájaro."
 	done
 
 BirdKeeperPerryBeatenText:
-	text "You beat me with"
-	line "your speed…"
+	text "Me venciste con"
+	line "tu velocidad…"
 	done
 
 BirdKeeperPerryAfterBattleText:
-	text "Your #MON are"
-	line "remarkably well-"
-	cont "trained."
+	text "Tus #MON"
+	line "están muy bien"
+	cont "entrenados."
 	done
 
 BirdKeeperBretSeenText:
-	text "Check out my #-"
-	line "MON. Just look at"
+	text "Mira mis #MON."
 
-	para "their coloring and"
-	line "their plumage."
+	para "Fíjate en su color"
+	line "y en su plumaje."
 	done
 
 BirdKeeperBretBeatenText:
-	text "Shoot!"
-	line "Not good enough!"
+	text "¡Vaya! ¡No soy lo"
+	line "bastante bueno!"
 	done
 
 BirdKeeperBretAfterBattleText:
-	text "If you groom them,"
-	line "#MON get happy."
+	text "Los #MON son"
+	line "felices si los"
+	cont "pones guapos."
 	done
 
 HikerKennySeenText:
-	text "I should go to"
-	line "ROCK TUNNEL to get"
-	cont "myself an ONIX."
+	text "Debería ir al"
+	line "TÚNEL ROCA para"
+	cont "conseguir un ONIX."
 	done
 
 HikerKennyBeatenText:
-	text "I lost…"
+	text "He perdido…"
 	done
 
 HikerKennyAfterBattleText:
-	text "Geological fea-"
-	line "tures don't appear"
-	cont "to change."
+	text "Parece que las"
+	line "formas geológicas"
+	cont "no cambian."
 
-	para "But they actually"
-	line "change, little by"
-	cont "little."
+	para "Pero sí que"
+	line "cambian, aunque"
+	cont "poco a poco."
 	done
 
 Route13TrainerTipsText:
-	text "TRAINER TIPS"
+	text "PISTAS ENTRENADOR"
 
-	para "Look! Right there,"
-	line "at the left side"
-	cont "of the post."
+	para "¡Mira! Allí, a la"
+	line "izquierda del"
+	cont "poste"
 	done
 
 Route13SignText:
-	text "ROUTE 13"
-
-	para "NORTH TO SILENCE"
-	line "BRIDGE"
+	text "RUTA 13 HACIA EL"
+	line "NORTE AL PUENTE"
+	cont "SILENCIO"
 	done
 
 Route13DirectionsSignText:
-	text "NORTH TO LAVENDER"
-	line "TOWN"
+	text "HACIA EL NORTE"
+	line "AL PUEBLO LAVANDA"
 
-	para "WEST TO FUCHSIA"
-	line "CITY"
+	para "HACIA EL OESTE"
+	line "A CIUDAD FUCSIA"
 	done
 
 Route13_MapEvents:

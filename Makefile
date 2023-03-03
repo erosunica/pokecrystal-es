@@ -1,6 +1,6 @@
-roms := pokecrystal.gbc pokecrystal11.gbc pokecrystal-au.gbc
+rom := pokecrystal-es.gbc
 
-crystal_obj := \
+crystal-es_obj := \
 audio.o \
 home.o \
 main.o \
@@ -16,9 +16,6 @@ gfx/pics.o \
 gfx/sprites.o \
 gfx/tilesets.o \
 lib/mobile/main.o
-
-crystal11_obj := $(crystal_obj:.o=11.o)
-crystal_au_obj := $(crystal_obj:.o=_au.o)
 
 
 ### Build tools
@@ -39,36 +36,31 @@ RGBLINK ?= $(RGBDS)rgblink
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all crystal crystal11 crystal_au clean tidy compare tools
+.PHONY: all clean tidy compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
-all: crystal
-crystal: pokecrystal.gbc
-crystal11: pokecrystal11.gbc
-crystal-au: pokecrystal-au.gbc
+all: $(rom)
 
 clean:
-	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(crystal_au_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(rom) $(crystal-es_obj) $(rom:.gbc=.map) $(rom:.gbc=.sym)
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" \) -delete
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 	$(MAKE) clean -C tools/
 
 tidy:
-	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(crystal_au_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(rom) $(crystal-es_obj) $(rom:.gbc=.map) $(rom:.gbc=.sym)
 	$(MAKE) clean -C tools/
 
-compare: $(roms)
-	@$(SHA1) -c roms.sha1
+compare: $(rom)
+	@$(SHA1) -c rom.sha1
 
 tools:
 	$(MAKE) -C tools/
 
 
-$(crystal_obj):   RGBASMFLAGS =
-$(crystal11_obj): RGBASMFLAGS = -D _CRYSTAL11
-$(crystal_au_obj): RGBASMFLAGS = -D _CRYSTAL11 -D _CRYSTAL_AU
+$(crystal-es_obj):   RGBASMFLAGS =
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
@@ -84,27 +76,15 @@ ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
 
-$(foreach obj, $(crystal_au_obj), $(eval $(call DEP,$(obj),$(obj:_au.o=.asm))))
-$(foreach obj, $(crystal11_obj), $(eval $(call DEP,$(obj),$(obj:11.o=.asm))))
-$(foreach obj, $(crystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(crystal-es_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
 
 endif
 
 
-pokecrystal.gbc: $(crystal_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal.sym -m pokecrystal.map -l pokecrystal.link -o $@ $(crystal_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
-	tools/sort_symfile.sh pokecrystal.sym
-
-pokecrystal11.gbc: $(crystal11_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal11.sym -m pokecrystal11.map -l pokecrystal.link -o $@ $(crystal11_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_CRYSTAL $@
-	tools/sort_symfile.sh pokecrystal11.sym
-
-pokecrystal-au.gbc: $(crystal_au_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal-au.sym -m pokecrystal-au.map -l pokecrystal.link -o $@ $(crystal_au_obj)
-	$(RGBFIX) -Cjv -i BYTU -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
-	tools/sort_symfile.sh pokecrystal-au.sym
+$(rom): $(crystal-es_obj) $(rom:.gbc=.link)
+	$(RGBLINK) -n $(rom:.gbc=.sym) -m $(rom:.gbc=.map) -l $(rom:.gbc=.link) -o $@ $(crystal-es_obj)
+	$(RGBFIX) -Cjv -i BYTS -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
+	tools/sort_symfile.sh $(rom:.gbc=.sym)
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.

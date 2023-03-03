@@ -51,66 +51,67 @@ TrainerPokefanmTrevor:
 	end
 
 PokefanmCarterSeenText:
-	text "Let me tell you,"
-	line "I had a hard time"
+	text "Que sepas que me"
+	line "costó mucho"
 
-	para "catching my prized"
-	line "#MON."
+	para "atrapar a mis"
+	line "queridos #MON."
 	done
 
 PokefanmCarterBeatenText:
-	text "Awaaah!"
+	text "¡Auuuu!"
 	done
 
 PokefanmCarterAfterBattleText:
 	text "SQUIRTLE, CHARMAN-"
-	line "DER and BULBASAUR…"
+	line "DER y BULBASAUR."
 
-	para "I think that's a"
-	line "well-balanced mix."
+	para "Creo que es una"
+	line "buena combinación."
 	done
 
 BirdKeeperRoySeenText:
-	text "My dream is to fly"
-	line "with my beloved"
-	cont "bird #MON."
+	text "Mi sueño es volar"
+	line "con mi querido"
+	cont "#MON pájaro."
 	done
 
 BirdKeeperRoyBeatenText:
-	text "I can dream, but I"
-	line "can't ever fly…"
+	text "Puedo soñar, pero"
+	line "nunca podré volar."
 	done
 
 BirdKeeperRoyAfterBattleText:
-	text "You have #MON"
-	line "that know the HM"
+	text "¿Tienes #MON"
+	line "que conozcan la"
 
-	para "move FLY, don't"
-	line "you? I envy you."
+	para "MO VUELO? ¿Sí?"
+	line "¡Qué envidia!"
 	done
 
 PokefanmTrevorSeenText:
-	text "Hi. Did you know…?"
+	text "Hola."
+	line "¿Sabes qué…?"
 
-	para "#MON get more"
-	line "friendly if you"
+	para "Los #MON son"
+	line "más amigables si"
 
-	para "train them in a"
-	line "place that they"
-	cont "remember."
+	para "los entrenas en un"
+	line "lugar que ellos"
+	cont "recuerden."
 	done
 
 PokefanmTrevorBeatenText:
-	text "Where did I meet"
-	line "this PSYDUCK?"
+	text "¿Dónde conocí a"
+	line "este PSYDUCK?"
 	done
 
 PokefanmTrevorAfterBattleText:
-	text "If only there were"
-	line "an easy way to"
+	text "Si hubiera un"
+	line "sistema fácil de"
 
-	para "identify where I"
-	line "got my #MON…"
+	para "identificar dónde"
+	line "obtuve mi #MON…"
 	done
 
 Route14_MapEvents:

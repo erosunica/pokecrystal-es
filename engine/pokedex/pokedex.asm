@@ -421,10 +421,10 @@ Pokedex_ReinitDexEntryScreen:
 
 DexEntryScreen_ArrowCursorData:
 	db D_RIGHT | D_LEFT, 4
-	dwcoord 1, 17  ; PAGE
-	dwcoord 6, 17  ; AREA
-	dwcoord 11, 17 ; CRY
-	dwcoord 15, 17 ; PRNT
+	dwcoord 1, 17  ; PÁG
+	dwcoord 5, 17  ; ÁREA
+	dwcoord 10, 17 ; GRIT
+	dwcoord 15, 17 ; IMPR
 
 DexEntryScreen_MenuActionJumptable:
 	dw Pokedex_Page
@@ -1125,9 +1125,9 @@ Pokedex_DrawMainScreenBG:
 	ret
 
 String_SEEN:
-	db "SEEN", -1
+	db "VIST", -1
 String_OWN:
-	db "OWN", -1
+	db "TIEN", -1
 String_SELECT_OPTION:
 	db $3b, $48, $49, $4a, $44, $45, $46, $47 ; SELECT > OPTION
 	; fallthrough
@@ -1169,11 +1169,11 @@ Pokedex_DrawDexEntryScreenBG:
 .Unused:
 	db $5c, $5d, -1 ; No.
 .Height:
-	db "HT  ?", $5e, "??", $5f, -1 ; HT  ?'??"
+	db "AL   ¿? m", -1
 .Weight:
-	db "WT   ???lb", -1 ; WT   ???lb
+	db "PE   ¿? kg", -1
 .MenuItems:
-	db $3b, " PAGE AREA CRY PRNT", -1
+	db $3b, " PÁG ÁREA GRIT IMPR", -1
 
 Pokedex_DrawOptionScreenBG:
 	call Pokedex_FillBackgroundColor2
@@ -1198,16 +1198,16 @@ Pokedex_DrawOptionScreenBG:
 	ret
 
 .Title:
-	db $3b, " OPTION ", $3c, -1
+	db $3b, " OPCIÓN ", $3c, -1
 
 .Modes:
-	db   "NEW #DEX MODE"
-	next "OLD #DEX MODE"
-	next "A to Z MODE"
+	db   "M. #DEX NUEVA"
+	next "M. #DEX VIEJA"
+	next "MODO A a Z"
 	db   "@"
 
 .UnownMode:
-	db "UNOWN MODE@"
+	db "MODO UNOWN@"
 
 Pokedex_DrawSearchScreenBG:
 	call Pokedex_FillBackgroundColor2
@@ -1232,19 +1232,19 @@ Pokedex_DrawSearchScreenBG:
 	ret
 
 .Title:
-	db $3b, " SEARCH ", $3c, -1
+	db $3b, " BUSCA ", $3c, -1
 
 .TypeLeftRightArrows:
 	db $3d, "        ", $3e, -1
 
 .Types:
-	db   "TYPE1"
-	next "TYPE2"
+	db   "TIPO1"
+	next "TIPO2"
 	db   "@"
 
 .Menu:
-	db   "BEGIN SEARCH!!"
-	next "CANCEL"
+	db   "¡INICIAR BUSCA!"
+	next "SALIR"
 	db   "@"
 
 Pokedex_DrawSearchResultsScreenBG:
@@ -1259,7 +1259,7 @@ Pokedex_DrawSearchResultsScreenBG:
 	ld de, .BottomWindowText
 	call PlaceString
 	ld de, wDexSearchResultCount
-	hlcoord 1, 16
+	hlcoord 2, 16
 	lb bc, 1, 3
 	call PrintNum
 	hlcoord 8, 0
@@ -1278,10 +1278,9 @@ Pokedex_DrawSearchResultsScreenBG:
 	ret
 
 .BottomWindowText:
-	db   "SEARCH RESULTS"
-	next "  TYPE"
-	next "    FOUND!"
-	db   "@"
+	db   "RESULT. BUSCA"
+	next "  TIPO"
+	next "¡    HALLADO(S)!@"
 
 Pokedex_PlaceSearchResultsTypeStrings:
 	ld a, [wDexSearchMonType1]
@@ -1729,20 +1728,20 @@ Pokedex_DisplayModeDescription:
 	dw .UnownMode
 
 .NewMode:
-	db   "<PK><MN> are listed by"
-	next "evolution type.@"
+	db   "<PKMN> ordenados por"
+	next "tipo de evolución.@"
 
 .OldMode:
-	db   "<PK><MN> are listed by"
-	next "official type.@"
+	db   "<PKMN> ordenados"
+	next "por tipo oficial.@"
 
 .ABCMode:
-	db   "<PK><MN> are listed"
-	next "alphabetically.@"
+	db   "<PKMN> ordenados"
+	next "alfabéticamente.@"
 
 .UnownMode:
-	db   "UNOWN are listed"
-	next "in catching order.@"
+	db   "UNOWN ordenados"
+	next "según capturados.@"
 
 Pokedex_DisplayChangingModesMessage:
 	xor a
@@ -1764,8 +1763,8 @@ Pokedex_DisplayChangingModesMessage:
 	ret
 
 String_ChangingModesPleaseWait:
-	db   "Changing modes."
-	next "Please wait.@"
+	db   "Cambiando modos."
+	next "Espera, por favor.@"
 
 Pokedex_UpdateSearchMonType:
 	ld a, [wDexArrowCursorPosIndex]
@@ -1964,8 +1963,8 @@ Pokedex_DisplayTypeNotFoundMessage:
 	ret
 
 .TypeNotFound:
-	db   "The specified type"
-	next "was not found.@"
+	db   "Tipo especificado"
+	next "no encontrado.@"
 
 Pokedex_UpdateCursorOAM:
 	ld a, [wCurDexMode]

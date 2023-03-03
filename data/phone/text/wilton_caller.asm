@@ -1,103 +1,103 @@
 WiltonMonHasGrownText:
-	text "My @"
+	text "¡Mi @"
 	text_ram wStringBuffer4
-	text "'s"
-	line "grown impressive!"
+	text " está"
+	line "impresionante!"
 
-	para "My fishing skills"
-	line "have improved too!"
+	para "¡También soy mejor"
+	line "pescador!"
 	done
 
 WiltonDefeatedMonText:
-	text "We beat a wild"
+	text "Derrotamos a un"
 	line "@"
 	text_ram wStringBuffer4
-	text "…"
+	text_start
+	cont "salvaje…"
 
-	para "You know, I have"
-	line "more fun fishing"
+	para "¿Sabes? Me gusta"
+	line "más pescar que"
 
-	para "than beating wild"
-	line "#MON."
+	para "luchar contra"
+	line "#MON salvajes."
 	done
 
 WiltonLostAMonText:
-	text "But a while back,"
-	line "we came this close"
+	text "Pero, hace nada,"
+	line "estuvimos a punto"
 
-	para "to landing a wild"
+	para "de darle a un"
 	line "@"
 	text_ram wStringBuffer4
-	text "."
+	text_start
+	cont "salvaje."
 
-	para "I tell you, it was"
-	line "huge. Believe me."
+	para "Te aseguro que era"
+	line "enorme, en serio."
 	done
 
 WiltonBattleRematchText:
-	text "I'm fishing on"
+	text "Estoy pescando en"
 	line "@"
 	text_ram wStringBuffer5
 	text ","
+	cont "pero hoy no pican."
 
-	para "but nothing's"
-	line "biting today."
-
-	para "Help me while my"
-	line "time away, come"
-	cont "over for a battle."
+	para "Ayúdame a pasar"
+	line "el rato. Ven a"
+	cont "luchar conmigo."
 	done
 
 WiltonHangUpText:
-	text "All right, later."
+	text "Vale, nos vemos."
 	done
 
 WiltonFoundItemText:
-	text "I snagged an item"
-	line "while fishing."
+	text "Enganché un"
+	line "objeto pescando."
 
-	para "Come pick it up on"
+	para "Recógelo en"
 	line "@"
 	text_ram wStringBuffer5
 	text "."
 	done
 
 WiltonHaventFoundAnythingText:
-	text "Nah, I haven't"
-	line "found anything"
+	text "Nada, no he"
+	line "encontrado nada"
 
-	para "that's worth your"
-	line "time."
+	para "que merezca la"
+	line "pena."
 
-	para "You have to have"
-	line "patience."
+	para "Debes ser"
+	line "paciente."
 	done
 
 WiltonNotBitingText:
-	text "Sigh…"
-	line "They're not biting"
+	text "(Suspiro…)"
+	line "Ya no pican en"
 
-	para "like before on"
-	line "@"
+	para "@"
 	text_ram wStringBuffer5
-	text "…"
+	text_start
+	line "como antes…"
 
-	para "You have to come"
-	line "for a battle!"
+	para "¡Tienes que venir"
+	line "a luchar!"
 	done
 
 WiltonWantThisText:
-	text "Don't you want"
-	line "this item?"
+	text "¿No quieres este"
+	line "objeto?"
 
-	para "Hah? You don't"
-	line "know where?"
+	para "¿Cómo? ¿No sabes"
+	line "dónde ir?"
 
 	para "@"
 	text_ram wStringBuffer5
 	text "…"
-	line "Just head from"
+	line "¡Dirígete desde"
 
-	para "MAHOGANY toward"
-	line "BLACKTHORN!"
+	para "PUEBLO CAOBA a"
+	line "CIUDAD ENDRINO!"
 	done

@@ -80,11 +80,11 @@ _BillsPC:
 	dw .strings
 
 .strings
-	db "WITHDRAW <PK><MN>@"
-	db "DEPOSIT <PK><MN>@"
-	db "CHANGE BOX@"
-	db "MOVE <PK><MN> W/O MAIL@"
-	db "SEE YA!@"
+	db "SACAR <PK><MN>@"
+	db "DEJAR <PK><MN>@"
+	db "CAMBIA CAJA@"
+	db "MOVER <PKMN> SIN CAR@"
+	db "¡NOS VEMOS!@"
 
 .Jumptable:
 	dw BillsPC_WithdrawMenu

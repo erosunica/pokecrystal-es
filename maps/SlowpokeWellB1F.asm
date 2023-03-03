@@ -143,179 +143,186 @@ KurtSlowpokeWellVictoryMovementData:
 	step_end
 
 SlowpokeWellB1FKurtText:
-	text "KURT: Hey there,"
+	text "CÉSAR: ¡Hola,"
 	line "<PLAYER>!"
 
-	para "The guard up top"
-	line "took off when I"
-	cont "shouted at him."
+	para "Los guardias de"
+	line "arriba huyeron en"
+	cont "cuanto les grité."
 
-	para "But then I took a"
-	line "tumble down the"
-	cont "WELL."
+	para "Pero entonces me"
+	line "caí por el POZO."
 
-	para "I slammed down"
-	line "hard on my back,"
-	cont "so I can't move."
+	para "Me golpeé en la"
+	line "espalda y ahora"
+	cont "no puedo moverme."
 
-	para "Rats! If I were"
-	line "fit, my #MON"
+	para "Si estuviera bien,"
+	line "mis #MON"
 
-	para "would've punished"
-	line "them…"
+	para "los habrían"
+	line "machacado…"
 
-	para "Ah, it can't be"
-	line "helped."
+	para "¡Bah! Pero no"
+	line "puedo hacer nada."
 
-	para "<PLAYER>, show them"
-	line "how gutsy you are"
-	cont "in my place!"
+	para "¡<PLAYER>,"
+	line "demuéstrales lo"
+	cont "que vales!"
 	done
 
 KurtLeaveSlowpokeWellText:
-	text "KURT: Way to go,"
+	text "CÉSAR: ¡Muy bien,"
 	line "<PLAYER>!"
 
-	para "TEAM ROCKET has"
-	line "taken off."
+	para "El TEAM ROCKET"
+	line "ha huido."
 
-	para "My back's better"
-	line "too. Let's get out"
-	cont "of here."
+	para "Ya estoy mejor"
+	line "de la espalda."
+	cont "¡Salgamos de aquí!"
 	done
 
 GruntM29SeenText:
-	text "Darn! I was stand-"
-	line "ing guard up top"
+	text "¡Maldición! Estaba"
+	line "de guardia arriba"
 
-	para "when some old coot"
-	line "yelled at me."
+	para "cuando un viejo"
+	line "memo me gritó."
 
-	para "He startled me so"
-	line "much that I fell"
-	cont "down here."
+	para "Me asusté tanto"
+	line "que me caí aquí"
+	cont "abajo."
 
-	para "I think I'll vent"
-	line "my anger by taking"
-	cont "it out on you!"
+	para "¡Creo que voy a"
+	line "desahogar mi ira"
+
+	para "luchando contra"
+	line "ti!"
 	done
 
 GruntM29BeatenText:
-	text "Arrgh! This is NOT"
-	line "my day!"
+	text "¡Arrg! ¡Hoy no"
+	line "es mi día!"
 	done
 
 GruntM29AfterBattleText:
-	text "Sure, we've been"
-	line "hacking the tails"
+	text "Sí, hemos estado"
+	line "cortando las colas"
 
-	para "off SLOWPOKE and"
-	line "selling them."
+	para "de los SLOWPOKE"
+	line "y vendiéndolas."
 
-	para "Everything we do"
-	line "is for profit."
+	para "Lo hacemos sólo"
+	line "por dinero."
 
-	para "That's right!"
-	line "We're TEAM ROCKET,"
+	para "¡Así es! Somos"
+	line "el TEAM ROCKET,"
 
-	para "and we'll do any-"
-	line "thing for money!"
+	para "¡y haríamos lo que"
+	line "fuera por dinero!"
 	done
 
 GruntM1SeenText:
-	text "What do you want?"
+	text "¿Qué quieres?"
 
-	para "If you interrupt"
-	line "our work, don't"
-	cont "expect any mercy!"
+	para "¡Si nos molestas,"
+	line "no esperes"
+	cont "misericordia!"
 	done
 
 GruntM1BeatenText:
-	text "You did OK today,"
-	line "but wait till next"
-	cont "time!"
+	text "Lo hiciste bien"
+	line "hoy, pero… ¡espera"
+	cont "a la próxima vez!"
 	done
 
 TrainerGruntM1WhenTalkText:
-	text "Yeah, TEAM ROCKET"
-	line "was broken up"
-	cont "three years ago."
+	text "Sí, el TEAM ROCKET"
+	line "se separó hace"
+	cont "tres años."
 
-	para "But we continued"
-	line "our activities"
-	cont "underground."
+	para "Pero seguimos"
+	line "clandestinamente"
 
-	para "Now you can have"
-	line "fun watching us"
-	cont "stir up trouble!"
+	para "con nuestras"
+	line "actividades."
+
+	para "¡Diviértete ahora"
+	line "con nuestras"
+	cont "fechorías!"
 	done
 
 GruntM2SeenText:
-	text "Quit taking SLOW-"
-	line "POKETAILS?"
+	text "¿Dejar de cortar"
+	line "las COLAS de los"
+	cont "SLOWPOKE?"
 
-	para "If we obeyed you,"
-	line "TEAM ROCKET's rep"
-	cont "would be ruined!"
+	para "¡Obedecerte"
+	line "arruinaría la"
+
+	para "reputación del"
+	line "TEAM ROCKET!"
 	done
 
 GruntM2BeatenText:
-	text "Just…"
-	line "Too strong…"
+	text "Simplemente…"
+	line "Muy fuerte…"
 	done
 
 GruntM2AfterBattleText:
-	text "We need the money,"
-	line "but selling SLOW-"
-	cont "POKETAILS?"
+	text "Necesitamos pasta,"
+	line "¿pero vendiendo"
+	cont "COLAS de SLOWPOKE?"
 
-	para "It's tough being a"
-	line "ROCKET GRUNT!"
+	para "¡Es muy duro ser"
+	line "un SOLDADO ROCKET!"
 	done
 
 GruntF1SeenText:
-	text "Stop taking TAILS?"
+	text "¿No más COLAS?"
 
-	para "Yeah, just try to"
-	line "defeat all of us!"
+	para "¡Claro! ¡Intenta"
+	line "vencernos a todos!"
 	done
 
 GruntF1BeatenText:
-	text "You rotten brat!"
+	text "¡Maldición!"
 	done
 
 GruntF1AfterBattleText:
-	text "SLOWPOKETAILS"
-	line "grow back fast!"
+	text "¡Las COLAS de los"
+	line "SLOWPOKE se"
+	cont "regeneran rápido!"
 
-	para "What's wrong with"
-	line "selling them?"
+	para "¿Qué hay de malo"
+	line "en venderlas?"
 	done
 
 SlowpokeWellB1FSlowpokeWithMailText:
-	text "A SLOWPOKE with"
-	line "its TAIL cut off…"
+	text "Un SLOWPOKE sin"
+	line "COLA…"
 
-	para "Huh? It has MAIL."
-	line "Read it?"
+	para "¿Qué? Tiene una"
+	line "CARTA. ¿La lees?"
 	done
 
 SlowpokeWellB1FSlowpokeMailText:
-	text "<PLAYER> read the"
-	line "MAIL."
+	text "<PLAYER> lee"
+	line "la CARTA."
 
-	para "Be good and look"
-	line "after the house"
+	para "Sé buena y cuida"
+	line "de la casa donde"
 
-	para "with Grandpa and"
+	para "están el abuelo y"
 	line "SLOWPOKE."
 
-	para "Love, Dad"
+	para "Te quiere, papá."
 	done
 
 SlowpokeWellB1FTaillessSlowpokeText:
-	text "A SLOWPOKE with"
-	line "its TAIL cut off…"
+	text "Un SLOWPOKE"
+	line "sin COLA…"
 	done
 
 SlowpokeWellB1F_MapEvents:

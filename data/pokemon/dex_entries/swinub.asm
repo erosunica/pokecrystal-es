@@ -1,10 +1,10 @@
-	db "PIG@" ; species name
-	dw 104, 140 ; height, weight
+	db "CERDO@" ; species name
+	dbw 4, 65 ; height, weight
 
-	db   "It uses the tip of"
-	next "its nose to dig"
-	next "for food. Its nose"
+	db   "Usa el hocico para"
+	next "buscar comida por"
+	next "el suelo. Ni el"
 
-	page "is so tough that"
-	next "even frozen ground"
-	next "poses no problem.@"
+	page "suelo más frío le"
+	next "supondrá obstáculo"
+	next "alguno.@"

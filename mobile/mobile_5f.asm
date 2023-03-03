@@ -482,16 +482,16 @@ MenuData_17d272:
 
 MenuHeader_ChallengeExplanationCancel:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 7
+	menu_coords 0, 0, 15, 7
 	dw MenuData_ChallengeExplanationCancel
 	db 1 ; default option
 
 MenuData_ChallengeExplanationCancel:
 	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
 	db 3
-	db "Challenge@"
-	db "Explanation@"
-	db "Cancel@"
+	db "Desafío@"
+	db "Explicación@"
+	db "Cancelar@"
 
 Function17d2b6:
 	call Function17d2c0
@@ -3947,8 +3947,8 @@ Function17f220:
 	ret
 
 .Genders: dw .Boy, .Girl
-.Boy:     db "Boy@"
-.Girl:    db "Girl@"
+.Boy:     db "@"
+.Girl:    db "@"
 
 Function17f27b:
 	pop hl

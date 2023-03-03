@@ -25,18 +25,18 @@ CherrygroveEvolutionSpeechHouseBookshelf:
 	jumpstd magazinebookshelf
 
 CherrygroveEvolutionSpeechHouseYoungsterText:
-	text "#MON gain expe-"
-	line "rience in battle"
+	text "Luchando, los"
+	line "#MON ganan"
 
-	para "and change their"
-	line "form."
+	para "experiencia y se"
+	line "transforman."
 	done
 
 CherrygroveEvolutionSpeechHouseLassText:
-	text "#MON change?"
+	text "¿Se transforman?"
 
-	para "I would be shocked"
-	line "if one did that!"
+	para "¡Alucinaría si lo"
+	line "viera!"
 	done
 
 CherrygroveEvolutionSpeechHouse_MapEvents:

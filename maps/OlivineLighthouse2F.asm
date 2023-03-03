@@ -152,54 +152,55 @@ TrainerSailorHuey:
 	end
 
 SailorHueySeenText:
-	text "Men of the sea are"
-	line "always spoiling"
-	cont "for a good fight!"
+	text "¡Los hombres de"
+	line "mar siempre"
+	cont "quieren luchar!"
 	done
 
 SailorHueyBeatenText:
-	text "Urf!"
-	line "I lose!"
+	text "¡Urf!"
+	line "¡He perdido!"
 	done
 
 SailorHueyUnusedText:
 ; unused
-	text "What power!"
-	line "How would you like"
+	text "¡Qué poder!"
+	line "¿Te gustaría"
 
-	para "to sail the seas"
-	line "with me?"
+	para "navegar conmigo"
+	line "por estos mares?"
 	done
 
 GentlemanAlfredSeenText:
-	text "Hm? This is no"
-	line "place for playing."
+	text "¿Qué? Aquí no se"
+	line "juega."
 	done
 
 GentlemanAlfredBeatenText:
-	text "Ah! I can see that"
-	line "you're serious."
+	text "¡Ah! Ya veo que"
+	line "vas en serio."
 	done
 
 GentlemanAlfredAfterBattleText:
-	text "Up top is a #-"
-	line "MON that keeps the"
-	cont "LIGHTHOUSE lit."
+	text "Arriba hay un"
+	line "#MON que"
+	cont "ilumina el FARO."
 
-	para "But I hear that"
-	line "it's sick now and"
+	para "Pero dicen que"
+	line "está enfermo y que"
 
-	para "can't be cured by"
-	line "ordinary medicine."
+	para "la medicina normal"
+	line "no puede curarle."
 	done
 
 SailorHueyGiveProteinText:
-	text "Man! You're as"
-	line "tough as ever!"
+	text "¡Ja! ¡Tan"
+	line "especial como"
+	cont "siempre!"
 
-	para "Anyway, here's"
-	line "that medicine from"
-	cont "before."
+	para "De todas formas,"
+	line "aquí está la medi-"
+	cont "cina que buscabas."
 	done
 
 OlivineLighthouse2F_MapEvents:

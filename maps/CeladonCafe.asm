@@ -117,92 +117,94 @@ CeladonCafeTrashcan:
 	jumpstd trashcan
 
 ChefText_Eatathon:
-	text "Hi!"
+	text "¡Hola!"
 
-	para "We're holding an"
-	line "eatathon contest."
+	para "Estamos celebrando"
+	line "un concurso de"
+	cont "tragones."
 
-	para "We can't serve you"
-	line "right now. Sorry."
+	para "Perdona. Ahora no"
+	line "podemos atenderte."
 	done
 
 Fisher1Text_Snarfle:
-	text "…Snarfle, chew…"
+	text "¡Ñam, ñam!"
 	done
 
 Fisher1Text_Concentration:
-	text "Don't talk to me!"
+	text "¡No me hables!"
 
-	para "You'll break my"
-	line "concentration!"
+	para "¡Me vas a"
+	line "desconcentrar!"
 	done
 
 Fisher2Text_GulpChew:
-	text "…Gulp… Chew…"
+	text "¡Glup…! ¡Ñam!"
 	done
 
 Fisher2Text_Quantity:
-	text "I take quantity"
-	line "over quality!"
+	text "¡Mejor cantidad"
+	line "que calidad!"
 
-	para "I'm happy when I'm"
-	line "full!"
+	para "¡Si estoy lleno,"
+	line "estoy feliz!"
 	done
 
 Fisher3Text_MunchMunch:
-	text "Munch, munch…"
+	text "¡Ñam, ñam!"
 	done
 
 Fisher3Text_GoldenrodIsBest:
-	text "The food is good"
-	line "here, but GOLDEN-"
-	cont "ROD has the best"
-	cont "food anywhere."
+	text "La comida de aquí"
+	line "es buena, pero en"
+
+	para "CIUDAD TRIGAL es"
+	line "aún mejor."
 	done
 
 TeacherText_CrunchCrunch:
-	text "Crunch… Crunch…"
+	text "¡Ñam, ñam!"
 	done
 
 TeacherText_NoCoinCase:
-	text "Nobody here will"
-	line "give you a COIN"
+	text "Aquí nadie te va"
+	line "a dar un MONEDERO."
 
-	para "CASE. You should"
-	line "look in JOHTO."
+	para "Mejor que lo"
+	line "busques en JOHTO."
 	done
 
 TeacherText_KeepEating:
-	text "Crunch… Crunch…"
+	text "¡Ñam, ñam!"
 
-	para "I can keep eating!"
+	para "¡Sigo comiendo!"
 	done
 
 TeacherText_MoreChef:
-	text "More, CHEF!"
+	text "¡Más, JEFE!"
 	done
 
 EatathonContestPosterText:
-	text "Eatathon Contest!"
-	line "No time limit!"
+	text "¡Concurso de"
+	line "tragones! ¡Sin"
 
-	para "A battle without"
-	line "end! The biggest"
+	para "tiempo! ¡Una lucha"
+	line "sin fin! ¡El mayor"
 
-	para "muncher gets it"
-	line "all for free!"
+	para "tragón podrá comer"
+	line "gratis!"
 	done
 
 FoundLeftoversText:
-	text "<PLAYER> found"
+	text "<PLAYER> encontró"
 	line "@"
 	text_ram wStringBuffer3
-	text "!"
+	text "."
 	done
 
 NoRoomForLeftoversText:
-	text "But <PLAYER> can't"
-	line "hold another item…"
+	text "Pero <PLAYER> no"
+	line "tiene espacio…"
 	done
 
 CeladonCafe_MapEvents:

@@ -113,179 +113,179 @@ SaffronGymStatue:
 	jumpstd gymstatue2
 
 SabrinaIntroText:
-	text "SABRINA: I knew"
-	line "you were coming…"
+	text "SABRINA: Sabía"
+	line "que vendrías…"
 
-	para "Three years ago I"
-	line "had a vision of"
-	cont "your arrival."
+	para "Hace tres años"
+	line "tuve una visión"
+	cont "de tu llegada."
 
-	para "You're after my"
-	line "BADGE."
+	para "Tú lo que quieres"
+	line "es mi MEDALLA."
 
-	para "I don't enjoy bat-"
-	line "tling, but it's my"
+	para "No me gusta"
+	line "luchar, pero mi"
 
-	para "duty as a LEADER"
-	line "to confer BADGES"
+	para "deber como LÍDER"
+	line "es conceder"
 
-	para "on anyone who has"
-	line "proven him- or"
-	cont "herself worthy."
+	para "MEDALLAS a todo"
+	line "aquel que se las"
+	cont "merezca."
 
-	para "Since you wish it,"
-	line "I will show you my"
-	cont "psychic powers!"
+	para "Como eso es lo que"
+	line "quieres, mira mis"
+	cont "poderes psíquicos."
 	done
 
 SabrinaWinLossText:
-	text "SABRINA: Your"
-	line "power…"
+	text "SABRINA: Tu poder…"
+	line "supera con creces"
+	cont "lo que esperaba…"
 
-	para "It far exceeds"
-	line "what I foresaw…"
+	para "Quizá no se pueda"
+	line "predecir del todo"
 
-	para "Maybe it isn't"
-	line "possible to fully"
+	para "lo que nos espera"
+	line "en el futuro…"
 
-	para "predict what the"
-	line "future holds…"
-
-	para "OK, you win. You"
-	line "earned yourself"
-	cont "MARSHBADGE."
+	para "Vale, tú ganas."
+	line "Te has ganado la"
+	cont "MEDALLA PANTANO."
 	done
 
 ReceivedMarshBadgeText:
-	text "<PLAYER> received"
-	line "MARSHBADGE."
+	text "<PLAYER> recibió"
+	line "MEDALLA PANTANO."
 	done
 
 SabrinaMarshBadgeText:
-	text "SABRINA: MARSH-"
-	line "BADGE draws out"
+	text "SABRINA: La"
+	line "MEDALLA PANTANO"
 
-	para "your subliminal"
-	line "powers…"
+	para "muestra tus"
+	line "poderes ocultos."
 
-	para "Although I failed"
-	line "to accurately pre-"
-	cont "dict your power,"
-	cont "this much I know"
-	cont "to be true."
+	para "Aunque no supe"
+	line "predecir tu poder"
 
-	para "You will become a"
-	line "celebrated and"
-	cont "beloved CHAMPION!"
+	para "con exactitud,"
+	line "sabía que valías"
+	cont "mucho."
+
+	para "¡Llegarás a ser lo"
+	line "que te propongas!"
 	done
 
 SabrinaFightDoneText:
-	text "SABRINA: Your love"
-	line "for your #MON"
+	text "SABRINA: Tu amor"
+	line "por tus #MON"
 
-	para "overwhelmed my"
-	line "psychic power…"
+	para "supera mi poder"
+	line "psíquico…"
 
-	para "The power of love,"
-	line "I think, is also a"
+	para "Creo que el poder"
+	line "del amor es un"
 
-	para "kind of psychic"
-	line "power…"
+	para "tipo de poder"
+	line "psíquico…"
 	done
 
 MediumRebeccaSeenText:
-	text "The power of all"
-	line "those you defeated"
-	cont "comes to me!"
+	text "¡El poder de todos"
+	line "a los que venciste"
+	cont "está en mí!"
 	done
 
 MediumRebeccaBeatenText:
-	text "Strong…"
-	line "Far too strong…"
+	text "Fuerte…"
+	line "Muy fuerte…"
 	done
 
 MediumRebeccaAfterBattleText:
-	text "What is the source"
-	line "of your power?"
+	text "¿De dónde proviene"
+	line "tu poder?"
 	done
 
 PsychicFranklinSeenText:
-	text "Psychic power is"
-	line "the power of your"
-	cont "soul."
+	text "El poder psíquico"
+	line "es el poder de tu"
+	cont "alma."
 	done
 
 PsychicFranklinBeatenText:
-	text "Your soul has more"
-	line "power than mine!"
+	text "¡Tu alma tiene más"
+	line "poder que la mía!"
 	done
 
 PsychicFranklinAfterBattleText:
-	text "You made your soul"
-	line "stronger, not just"
-	cont "your abilities."
+	text "Has fortalecido tu"
+	line "alma, no sólo tus"
+	cont "habilidades."
 	done
 
 MediumDorisSeenText:
-	text "Fufufufu…"
-	line "I see it clearly."
+	text "¡Fufufufu…!"
+	line "Lo veo claramente."
 
-	para "I can see into"
-	line "your soul!"
+	para "¡Puedo ver lo que"
+	line "encierra tu alma!"
 	done
 
 MediumDorisBeatenText:
-	text "Though I read you,"
-	line "I still lost…"
+	text "A pesar de leerte"
+	line "el pensamiento,"
+	cont "he perdido…"
 	done
 
 MediumDorisAfterBattleText:
-	text "Darn! I forgot"
-	line "that I predicted I"
-	cont "would lose to you."
+	text "¡Maldición! Olvidé"
+	line "que predije mi"
+	cont "derrota contra ti."
 	done
 
 PsychicJaredSeenText:
-	text "The FIGHTING DOJO"
-	line "next door was once"
-	cont "this city's GYM."
+	text "El DOJO-KARATE era"
+	line "el GIMNASIO de"
+	cont "esta ciudad."
 	done
 
 PsychicJaredBeatenText:
-	text "I was no match…"
+	text "¡No he estado a tu"
+	line "altura…!"
 	done
 
 PsychicJaredAfterBattleText:
-	text "KARATE KING, the"
-	line "master of the"
+	text "El REY del KARATE,"
+	line "el maestro del"
 
-	para "FIGHTING DOJO, was"
-	line "just destroyed by"
-	cont "SABRINA."
+	para "DOJO-KARATE, acaba"
+	line "de ser machacado"
+	cont "por SABRINA."
 	done
 
 SaffronGymGuyText:
-	text "Yo, CHAMP in"
-	line "making!"
+	text "¡Oye, realmente"
+	line "prometes!"
 
-	para "A trainer as"
-	line "skilled as you"
+	para "Alguien tan hábil"
+	line "como tú, no"
 
-	para "doesn't need to be"
-	line "told how to deal"
+	para "necesita que le"
+	line "digan cómo luchar"
 
-	para "with psychic-type"
-	line "#MON, right?"
+	para "contra #MON"
+	line "psíquicos, ¿no?"
 
-	para "I expect great"
-	line "things from you!"
+	para "¡Espero mucho de"
+	line "ti!"
 
-	para "Good luck!"
+	para "¡Buena suerte!"
 	done
 
 SaffronGymGuyWinText:
-	text "That was another"
-	line "fantastic battle!"
+	text "¡Otro combate"
+	line "fantástico!"
 	done
 
 SaffronGym_MapEvents:

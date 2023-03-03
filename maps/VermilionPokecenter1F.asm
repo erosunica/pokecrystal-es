@@ -35,43 +35,43 @@ VermilionPokecenter1FBugCatcherScript:
 	jumptextfaceplayer VermilionPokecenter1FBugCatcherText
 
 VermilionPokecenter1FFishingGuruText:
-	text "A sleeping #MON"
-	line "is lying in front"
-	cont "of DIGLETT'S CAVE."
+	text "Hay un #MON"
+	line "dormido delante de"
+	cont "la CUEVA DIGLETT."
 
-	para "It's a fantastic"
-	line "opportunity to get"
+	para "¡El momento ideal"
+	line "para atraparlo!"
 
-	para "it, but how do you"
-	line "wake it up?"
+	para "¿Pero cómo lo"
+	line "despertaremos?"
 	done
 
 VermilionPokecenter1FFishingGuruText_FoughtSnorlax:
-	text "There used to be a"
-	line "sleeping #MON"
+	text "Antes había un"
+	line "#MON durmiendo"
 
-	para "lying in front of"
-	line "DIGLETT'S CAVE."
+	para "delante de la"
+	line "CUEVA de DIGLETT."
 
-	para "But it seems to"
-	line "have disappeared."
+	para "Pero parece que"
+	line "ha desaparecido."
 	done
 
 VermilionPokecenter1FSailorText:
-	text "The FAST SHIP is a"
-	line "great place to"
+	text "El FERRY es un"
+	line "buen lugar para"
 
-	para "meet and battle"
-	line "trainers."
+	para "luchar y conocer"
+	line "entrenadores."
 	done
 
 VermilionPokecenter1FBugCatcherText:
-	text "Oh? You have some"
-	line "BADGES I've never"
-	cont "seen before."
+	text "Tienes algunas"
+	line "MEDALLAS que no"
+	cont "había visto nunca."
 
-	para "Oh, I get it. You"
-	line "got them in JOHTO."
+	para "¡Claro! Las has"
+	line "ganado en JOHTO."
 	done
 
 VermilionPokecenter1F_MapEvents:

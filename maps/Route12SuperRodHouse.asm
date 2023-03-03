@@ -37,44 +37,44 @@ SuperRodHouseBookshelf:
 	jumpstd picturebookshelf
 
 OfferSuperRodText:
-	text "I'm the FISHING"
-	line "GURU's younger"
-	cont "brother."
+	text "Soy el hermano"
+	line "pequeño del GURÚ"
+	cont "PESCADOR."
 
-	para "I can see that you"
-	line "like fishing."
+	para "Veo que te gusta"
+	line "pescar."
 
-	para "There's no doubt"
-	line "in my mind at all!"
+	para "¡No tengo ninguna"
+	line "duda!"
 
-	para "So? I know I'm"
-	line "right."
+	para "Sé que tengo"
+	line "razón."
 	done
 
 GiveSuperRodText:
-	text "Yes, yes. Just as"
-	line "I thought!"
+	text "Sí, sí. ¡Justo lo"
+	line "que pensaba!"
 
-	para "Here, fishing fan!"
-	line "Take this--it's a"
-	cont "SUPER ROD."
+	para "¡Aquí tienes!"
+	line "Toma esto. Es"
+	cont "una SÚPER CAÑA."
 	done
 
 GaveSuperRodText:
-	text "Try your hand at"
-	line "fishing wherever"
-	cont "there is water."
+	text "Intenta pescar"
+	line "allí donde veas"
+	cont "agua."
 
-	para "Remember--you can"
-	line "catch different"
+	para "Recuerda: puedes"
+	line "capturar #MON"
 
-	para "#MON using"
-	line "different RODS."
+	para "diferentes usando"
+	line "distintas CAÑAS."
 	done
 
 DontWantSuperRodText:
-	text "Huh? My own eyes"
-	line "deceived me?"
+	text "¿Eh? ¿Me engañan"
+	line "mis ojos?"
 	done
 
 Route12SuperRodHouse_MapEvents:

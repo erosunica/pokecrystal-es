@@ -3860,27 +3860,27 @@ String_119d07:
 	db "   ▼@"
 
 Strings_L10ToL100:
-	db " L:10 @@"
-	db " L:20 @@"
-	db " L:30 @@"
-	db " L:40 @@"
-	db " L:50 @@"
-	db " L:60 @@"
-	db " L:70 @@"
-	db " L:80 @@"
-	db " L:90 @@"
-	db " L:100@@"
-	db "CANCEL@@"
+	db " N:10 @@"
+	db " N:20 @@"
+	db " N:30 @@"
+	db " N:40 @@"
+	db " N:50 @@"
+	db " N:60 @@"
+	db " N:70 @@"
+	db " N:80 @@"
+	db " N:90 @@"
+	db " N:100@@"
+	db "SALIR @@"
 
 Strings_Ll0ToL40:
-	db " L:10 @@"
-	db " L:20 @@"
-	db " L:30 @@"
-	db " L:40 @@"
-	db "CANCEL@@"
+	db " N:10 @@"
+	db " N:20 @@"
+	db " N:30 @@"
+	db " N:40 @@"
+	db " SALIR@@"
 
 String_119d8c:
-	db "CANCEL@"
+	db " SALIR@@"
 
 BattleTower_LevelCheck:
 	ldh a, [rSVBK]
@@ -4504,13 +4504,13 @@ BattleTowerRoomMenu2_PlaceYesNoMenu:
 	call MenuBox
 	call MenuBoxCoord2Tile
 	call ApplyTilemap
-	hlcoord 16, 8
+	hlcoord 17, 8
 	ld de, String_11a2cf
 	call PlaceString
-	hlcoord 16, 10
+	hlcoord 17, 10
 	ld de, String_11a2d3
 	call PlaceString
-	hlcoord 15, 8
+	hlcoord 16, 8
 	ld a, $ed
 	ld [hl], a
 	xor a
@@ -4545,10 +4545,10 @@ BattleTowerRoomMenu2_UpdateYesNoMenu:
 	jr z, .asm_11a24c
 	xor a
 	ld [wMobileInactivityTimerMinutes], a
-	hlcoord 15, 8
+	hlcoord 16, 8
 	ld a, $ed
 	ld [hl], a
-	hlcoord 15, 10
+	hlcoord 16, 10
 	ld a, $7f
 	ld [hl], a
 	jr .asm_11a24c
@@ -4562,10 +4562,10 @@ BattleTowerRoomMenu2_UpdateYesNoMenu:
 	jr nz, .asm_11a24c
 	inc a
 	ld [wMobileInactivityTimerMinutes], a
-	hlcoord 15, 8
+	hlcoord 16, 8
 	ld a, $7f
 	ld [hl], a
-	hlcoord 15, 10
+	hlcoord 16, 10
 	ld a, $ed
 	ld [hl], a
 	jr .asm_11a24c
@@ -4606,20 +4606,20 @@ BattleTowerRoomMenu2_UpdateYesNoMenu:
 	ret
 
 String_11a2cf:
-	db "YES@"
+	db "SÍ@"
 
 String_11a2d3:
 	db "NO@"
 
 MenuHeader_11a2d6:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 14, 6, SCREEN_WIDTH - 1, 10
+	menu_coords 15, 6, SCREEN_WIDTH - 1, 10
 	dw NULL
 	db 0 ; default option
 
 MenuHeader_11a2de:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 14, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 15, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw NULL
 	db 0 ; default option
 
@@ -5406,102 +5406,118 @@ Function11a9f4:
 	ret
 
 Text_SaveFileWillBeSent:
-	text "SAVE FILE will be"
-	line "sent."
+	text "Se enviará el"
+	line "FICHERO GUARDADO."
 	done
 
 Text_SentSaveFileReadingNews:
-	text "Sent SAVE FILE."
-	line "Reading NEWS…"
+	text "FICHERO GUARDADO"
+	line "enviado."
+	cont "Leyendo NOTICIAS…"
 	done
 
 Text_ReadingNews:
-	text "Reading NEWS…"
+	text "Leyendo NOTICIAS…"
 	done
 
 Text_ReceivedNews:
-	text "Received NEWS!"
+	text "¡NOTICIAS"
+	line "recibidas!"
 	done
 
 Text_QuitReadingNews:
-	text "Quit reading NEWS?"
+	text "¿Dejas de leer las"
+	line "NOTICIAS?"
 	done
 
 Text_CanceledSendingSaveFile:
-	text "Canceled sending"
-	line "SAVE FILE."
+	text "Envío de FICHERO"
+	line "GUARDADO"
+	cont "cancelado."
 	done
 
 Text_ReceivedOddEgg:
-	text "ODD EGG"
-	line "was received!"
+	text "¡Recibido"
+	line "HUEVO RARO!"
 	done
 
 Text_RegisteringRecord:
-	text "Registering your"
-	line "record…"
+	text "Registrando tu"
+	line "récord…"
 	done
 
 Text_BattleRoomVisitLimit:
-	text "One visit per day"
-	line "per BATTLE ROOM!"
+	text "¡Sólo puedes"
+	line "visitar una vez al"
+
+	para "día cada SALA"
+	line "BATALLA!"
 	done
 
 Text_PartyMonTopsThisLevel:
-	text "A party #MON"
-	line "tops this level."
+	text "Uno o más #MON"
+	line "de tu equipo"
+	cont "superan ese nivel."
 	done
 
 Text_UberRestriction:
 	text_ram wcd49
-	text " may go"
-	line "only to BATTLE"
+	text " puede"
+	line "ir sólo a SALAS"
 
-	para "ROOMS that are"
-	line "Lv.70 or higher."
+	para "BATALLA que sean"
+	line "de Nivel 70 o"
+	cont "superior."
 	done
 
 Text_CancelBattleRoomChallenge:
-	text "Cancel your BATTLE"
-	line "ROOM challenge?"
+	text "¿Cancelas tu"
+	line "desafío de SALA"
+	cont "BATALLA?"
 	done
 
 Text_ExitGymLeaderHonorRoll:
-	text "Exit GYM LEADER"
-	line "HONOR ROLL?"
+	text "¿Sales de la LISTA"
+	line "de HONOR de los"
+	cont "LíD. de GIMNASIO?"
 	done
 
 Text_LinkingWithCenter:
-	text "Linking with the"
-	line "CENTER…"
+	text "Conectando con el"
+	line "CENTRO…"
 	done
 
 Text_WhatLevelDoYouWantToChallenge:
-	text "What level do you"
-	line "want to challenge?"
+	text "¿Contra qué nivel"
+	line "quieres combatir?"
 	done
 
 Text_CheckBattleRoomListByMaxLevel:
-	text "Check BATTLE ROOM"
-	line "list by max level?"
+	text "¿Compruebas la"
+	line "lista de SALAS"
+
+	para "BATALLA por nivel"
+	line "máximo?"
 	done
 
 Text_EnterWhichBattleRoom:
-	text "Enter which"
-	line "BATTLE ROOM?"
+	text "¿En qué SALA"
+	line "BATALLA entras?"
 	done
 
 Text_WhichBattleRoom:
-	text "Which BATTLE ROOM?"
+	text "¿Qué SALA"
+	line "BATALLA?"
 	done
 
 Text_ThisBattleRoomPleaseWait:
-	text_ram wStringBuffer3
-	text "'s ROOM"
-	line "@"
+	text "¿SALA @"
 	text_ram wStringBuffer4
+	text_start
+	line "de @"
+	text_ram wStringBuffer3
 	text "?"
-	cont "Please wait…"
+	cont "Por favor, espera…"
 	done
 
 Function11ac3e:

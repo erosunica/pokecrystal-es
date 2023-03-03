@@ -108,37 +108,39 @@ RuinsOfAlphAerodactylChamberSkyfallTopMovement:
 	step_end
 
 RuinsOfAlphAerodactylChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "Aparecieron"
+	line "dibujos en las"
+	cont "paredes…"
 	done
 
 RuinsOfAlphAerodactylChamberUnownText:
 ; unused
-	text "It's UNOWN text!"
+	text "¡Es texto UNOWN!"
 	done
 
 RuinsOfAlphAerodactylChamberWallPatternRightText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "Aparecieron"
+	line "dibujos en las"
+	cont "paredes…"
 	done
 
 RuinsOfAlphAerodactylChamberWallHoleText:
-	text "There's a big hole"
-	line "in the wall!"
+	text "¡Hay un gran agu-"
+	line "jero en la pared!"
 	done
 
 RuinsOfAlphAerodactylChamberAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "Es una réplica de"
+	line "un #MON"
+	cont "antiguo."
 	done
 
 RuinsOfAlphAerodactylChamberDescriptionText:
-	text "This flying #-"
-	line "MON attacked its"
+	text "Este #MON"
+	line "volador ataca a"
 
-	para "prey with saw-like"
-	line "fangs."
+	para "su presa con sus"
+	line "fuertes colmillos."
 	done
 
 RuinsOfAlphAerodactylChamber_MapEvents:

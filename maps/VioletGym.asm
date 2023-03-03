@@ -111,172 +111,178 @@ VioletGymStatue:
 	jumpstd gymstatue2
 
 FalknerIntroText:
-	text "I'm FALKNER, the"
-	line "VIOLET #MON GYM"
-	cont "leader!"
+	text "¡Soy PEGASO, LÍDER"
+	line "del GIMNASIO de"
+	cont "CIUDAD MALVA!"
 
-	para "People say you can"
-	line "clip flying-type"
+	para "Dicen que una"
+	line "sacudida eléctrica"
 
-	para "#MON's wings"
-	line "with a jolt of"
-	cont "electricity…"
+	para "puede acabar con"
+	line "las alas de los"
+	cont "#MON voladores."
 
-	para "I won't allow such"
-	line "insults to bird"
-	cont "#MON!"
+	para "¡No permitiré que"
+	line "hablen así de"
+	cont "ellos!"
 
-	para "I'll show you the"
-	line "real power of the"
+	para "¡Yo te enseñaré el"
+	line "auténtico poder de"
 
-	para "magnificent bird"
-	line "#MON!"
+	para "los magníficos"
+	line "pájaros #MON!"
 	done
 
 FalknerWinLossText:
-	text "…Darn! My dad's"
-	line "cherished bird"
-	cont "#MON…"
+	text "¡Maldición! Los"
+	line "queridos #MON"
+	cont "de mi padre…"
 
-	para "All right."
-	line "Take this."
+	para "¡Muy bien!"
+	line "Toma esto."
 
-	para "It's the official"
-	line "#MON LEAGUE"
-	cont "ZEPHYRBADGE."
+	para "Es la MEDALLA"
+	line "CÉFIRO oficial de"
+	cont "la LIGA #MON."
 	done
 
 ReceivedZephyrBadgeText:
-	text "<PLAYER> received"
-	line "ZEPHYRBADGE."
+	text "<PLAYER> recibió"
+	line "la MEDALLA CÉFIRO."
 	done
 
 FalknerZephyrBadgeText:
-	text "ZEPHYRBADGE"
-	line "raises the attack"
-	cont "power of #MON."
+	text "La MEDALLA CÉFIRO"
+	line "mejora el ATAQUE"
+	cont "de los #MON."
 
-	para "It also enables"
-	line "#MON to use"
+	para "Y permite que"
+	line "los #MON"
 
-	para "FLASH, if they"
-	line "have it, anytime."
+	para "usen DESTELLO, si"
+	line "lo tienen."
 
-	para "Here--take this"
-	line "too."
+	para "Toma, también te"
+	line "daré esto."
 	done
 
 FalknerTMMudSlapText:
-	text "By using a TM, a"
-	line "#MON will"
+	text "Al usar una MT, el"
+	line "#MON aprenderá"
 
-	para "instantly learn a"
-	line "new move."
+	para "inmediatamente un"
+	line "nuevo movimiento."
 
-	para "Think before you"
-	line "act--a TM can be"
-	cont "used only once."
+	para "Piensa antes de"
+	line "actuar, ya que las"
 
-	para "TM31 contains"
-	line "MUD-SLAP."
+	para "MT sólo se pueden"
+	line "usar una vez."
 
-	para "It reduces the"
-	line "enemy's accuracy"
+	para "MT31 contiene"
+	line "BOFETÓN-LODO."
 
-	para "while it causes"
-	line "damage."
+	para "Reduce la"
+	line "precisión del"
 
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	para "enemigo y causa"
+	line "grandes daños."
+
+	para "Es decir, es tanto"
+	line "defensiva como"
+	cont "ofensiva."
 	done
 
 FalknerFightDoneText:
-	text "There are #MON"
-	line "GYMS in cities and"
-	cont "towns ahead."
+	text "Encontrarás"
+	line "GIMNASIOS #MON"
 
-	para "You should test"
-	line "your skills at"
-	cont "these GYMS."
+	para "en las ciudades"
+	line "y en los pueblos."
 
-	para "I'm going to train"
-	line "harder to become"
+	para "Deberías probar"
+	line "tus habilidades en"
+	cont "estos GIMNASIOS."
 
-	para "the greatest bird"
-	line "master!"
+	para "¡Yo seguiré"
+	line "entrenándome para"
+
+	para "ser el maestro de"
+	line "los pájaros!"
 	done
 
 BirdKeeperRodSeenText:
-	text "The keyword is"
-	line "guts!"
+	text "¡La clave está en"
+	line "tener valor!"
 
-	para "Those here are"
-	line "training night and"
+	para "Éstos se entrenan"
+	line "noche y día para"
 
-	para "day to become bird"
-	line "#MON masters."
+	para "convertirse en"
+	line "maestros #MON."
 
-	para "Come on!"
+	para "¡Adelante!"
 	done
 
 BirdKeeperRodBeatenText:
-	text "Gaaah!"
+	text "¡Aaah!"
 	done
 
 BirdKeeperRodAfterBattleText:
-	text "FALKNER's skills"
-	line "are for real!"
+	text "¡La destreza de"
+	line "PEGASO es real!"
 
-	para "Don't get cocky"
-	line "just because you"
-	cont "beat me!"
+	para "¡No te confíes por"
+	line "haberme vencido!"
 	done
 
 BirdKeeperAbeSeenText:
-	text "Let me see if you"
-	line "are good enough to"
-	cont "face FALKNER!"
+	text "¡Demuéstrame que"
+	line "vales lo suficien-"
+	cont "te para luchar"
+	cont "contra PEGASO!"
 	done
 
 BirdKeeperAbeBeatenText:
-	text "This can't be"
-	line "true!"
+	text "¡No puede ser"
+	line "cierto!"
 	done
 
 BirdKeeperAbeAfterBattleText:
-	text "This is pathetic,"
-	line "losing to some"
-	cont "rookie trainer…"
+	text "Qué patético"
+	line "resulta perder"
+
+	para "contra entrena-"
+	line "dores novatos…"
 	done
 
 VioletGymGuyText:
-	text "Hey! I'm no train-"
-	line "er but I can give"
-	cont "some advice!"
+	text "¡Hola! ¡No soy"
+	line "entrenador pero te"
+	cont "puedo aconsejar!"
 
-	para "Believe me!"
-	line "If you believe, a"
+	para "¡Créeme!"
+	line "Si confías, tus"
 
-	para "championship dream"
-	line "can come true."
+	para "sueños de triunfo"
+	line "podrían cumplirse."
 
-	para "You believe?"
-	line "Then listen."
+	para "¿Confías? Pues"
+	line "escucha."
 
-	para "The grass-type is"
-	line "weak against the"
+	para "El tipo planta es"
+	line "débil contra el"
 
-	para "flying-type. Keep"
-	line "this in mind."
+	para "tipo volador."
+	line "¡No lo olvides!"
 	done
 
 VioletGymGuyWinText:
-	text "Nice battle! Keep"
-	line "it up, and you'll"
+	text "¡Bonita batalla!"
+	line "¡Sigue así y"
 
-	para "be the CHAMP in no"
-	line "time at all!"
+	para "podrás conseguir"
+	line "lo que quieras!"
 	done
 
 VioletGym_MapEvents:

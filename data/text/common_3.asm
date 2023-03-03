@@ -1,454 +1,470 @@
 _OakText6::
-	text "Now, what did you"
-	line "say your name was?"
+	text "¿Cómo has dicho"
+	line "que te llamas?"
 	prompt
 
 _OakText7::
-	text "<PLAYER>, are you"
-	line "ready?"
+	text "<PLAYER>,"
+	line "prepárate."
 
-	para "Your very own"
-	line "#MON story is"
-	cont "about to unfold."
+	para "Tu propia historia"
+	line "#MON está a"
+	cont "punto de empezar."
 
-	para "You'll face fun"
-	line "times and tough"
-	cont "challenges."
+	para "Te divertirás y"
+	line "te enfrentarás a"
+	cont "duros desafíos."
 
-	para "A world of dreams"
-	line "and adventures"
+	para "¡Te espera un"
+	line "mundo de sueños y"
 
-	para "with #MON"
-	line "awaits! Let's go!"
+	para "aventuras con"
+	line "#MON! ¡Vamos!"
 
-	para "I'll be seeing you"
-	line "later!"
+	para "¡Nos vemos!"
 	done
 
 _ClockTimeMayBeWrongText::
-	text "The clock's time"
-	line "may be wrong."
+	text "La hora del reloj"
+	line "podría estar mal."
 
-	para "Please reset the"
-	line "time."
+	para "Por favor, vuelve"
+	line "a ponerlo en hora."
 	prompt
 
 _ClockSetWithControlPadText::
-	text "Set with the"
-	line "Control Pad."
+	text "Cambia la hora con"
+	line "el Panel Control."
 
-	para "Confirm: A Button"
-	line "Cancel:  B Button"
+	para "Confirmar: Botón A"
+	line "Cancelar:  Botón B"
 	done
 
 _ClockIsThisOKText::
-	text "Is this OK?"
+	text "¿Estás de acuerdo?"
 	done
 
 _ClockHasResetText::
-	text "The clock has been"
-	line "reset."
+	text "Reloj puesto en"
+	line "hora otra vez."
 	done
 
 _LinkTimeoutText::
-	text "Too much time has"
-	line "elapsed. Please"
-	cont "try again."
+	text "Ha pasado mucho"
+	line "tiempo. Por favor,"
+	cont "vuelve a probar."
 	prompt
 
 _LinkTradeCantBattleText::
-	text "If you trade that"
-	line "#MON, you won't"
-	cont "be able to battle."
+	text "Si cambias ese"
+	line "#MON, no"
+	cont "podrás luchar."
 	prompt
 
 _LinkAbnormalMonText::
-	text "Your friend's"
-	line "@"
+	text "¡El @"
 	text_ram wStringBuffer1
-	text " appears"
-	cont "to be abnormal!"
+	text_start
+	line "de tu amigo/a no"
+	cont "parece estar bien!"
 	prompt
 
 _LinkAskTradeForText::
-	text "Trade @"
+	text "¿Cambiar"
+	line "@"
 	text_ram wd004
 	text_start
-	line "for @"
+	cont "por @"
 	text_ram wStringBuffer1
 	text "?"
 	done
 
 UnknownText_0x1c422a::
-	text "To enter a mobile"
-	line "battle, you must"
+	text "Para entrar en una"
+	line "batalla móvil,"
 
-	para "pick a team of"
-	line "three #MON."
+	para "debes tener un"
+	line "equipo de tres"
+	cont "#MON."
 
-	para "Is that OK?"
+	para "¿De acuerdo?"
 	done
 
 UnknownText_0x1c4275::
-	text "Need more info on"
-	line "mobile battles?"
+	text "¿Necesitas más"
+	line "información acerca"
+
+	para "de las batallas"
+	line "móviles?"
 	done
 
 UnknownText_0x1c4298::
-	text "For a mobile"
-	line "battle, choose"
-	cont "three #MON."
+	text "Para una batalla"
+	line "móvil, elige tres"
+	cont "#MON."
 
-	para "The maximum daily"
-	line "play time is ten"
+	para "Sólo se pueden"
+	line "jugar diez minutos"
 
-	para "minutes for each"
-	line "linked player."
+	para "por día por cada"
+	line "jugador conectado."
 
-	para "If a battle isn't"
-	line "finished within"
+	para "Si una batalla no"
+	line "se termina dentro"
 
-	para "the time limit,"
-	line "the player with"
+	para "del límite de"
+	line "tiempo, el jugador"
 
-	para "the fewest fainted"
-	line "#MON wins."
+	para "con menos #MON"
+	line "debilitados, gana."
 
-	para "If tied, the team"
-	line "that lost the"
+	para "Si hay empate, el"
+	line "equipo que haya"
 
-	para "least amount of HP"
-	line "wins."
+	para "perdido menos PS,"
+	line "gana."
 	done
 
 UnknownText_0x1c439c::
-	text "Today's remaining"
-	line "time is @"
+	text "El tiempo restante"
+	line "de hoy es de"
+	cont "@"
 	text_decimal wStringBuffer2, 1, 2
 	text " min."
 
-	para "Would you like to"
-	line "battle?"
+	para "¿Quieres luchar?"
 	done
 
 UnknownText_0x1c43dc::
-	text "There are only @"
+	text "Sólo quedan @"
 	text_decimal wStringBuffer2, 1, 2
 	text_start
-	line "min. left today."
+	line "min. hoy."
 
-	para "Want a quick"
-	line "battle?"
+	para "¿Quieres una lucha"
+	line "rápida?"
 	done
 
 UnknownText_0x1c4419::
-	text "There is only"
-	line "1 min. left today!"
+	text "¡Sólo queda 1 min."
+	line "hoy!"
 
-	para "Want to rush"
-	line "through a battle?"
+	para "¿Quieres entrar en"
+	line "una batalla?"
 	done
 
 UnknownText_0x1c445a::
-	text "There is less than"
-	line "1 min. left today!"
+	text "¡Apenas dispones"
+	line "de un minuto!"
 
-	para "Please try again"
-	line "tomorrow."
+	para "Por favor, intén-"
+	line "talo mañana."
 	done
 
 UnknownText_0x1c449c::
-	text "Try again using"
-	line "the same settings?"
+	text "¿Lo intentas otra"
+	line "vez con los mismos"
+	cont "parámetros?"
 	done
 
 _MobileBattleLessThanOneMinuteLeftText::
-	text "There is less than"
-	line "1 min. left today!"
+	text "¡Apenas dispones"
+	line "de un minuto!"
 	done
 
 _MobileBattleNoTimeLeftForLinkingText::
-	text "No time left for"
-	line "linking today."
+	text "Hoy no queda tiem-"
+	line "po de conexión."
 	done
 
 UnknownText_0x1c4508::
-	text "Pick three #MON"
-	line "for battle."
+	text "Elige tres #MON"
+	line "para luchar."
 	done
 
 UnknownText_0x1c4525::
-	text "Today's remaining"
-	line "time is @"
+	text "Hoy quedan todavía"
+	line "@"
 	text_decimal wStringBuffer2, 1, 2
 	text " min."
 	done
 
 _WouldYouLikeToSaveTheGameText::
-	text "Would you like to"
-	line "save the game?"
+	text "¿Quieres guardar"
+	line "el juego?"
 	done
 
 _SavingDontTurnOffThePowerText::
-	text "SAVING… DON'T TURN"
-	line "OFF THE POWER."
+	text "GUARDANDO… NO"
+	line "APAGAR LA CONSOLA."
 	done
 
 _SavedTheGameText::
-	text "<PLAYER> saved"
-	line "the game."
+	text "<PLAYER> guardó"
+	line "el juego."
 	done
 
 _AlreadyASaveFileText::
-	text "There is already a"
-	line "save file. Is it"
-	cont "OK to overwrite?"
+	text "Ya existe un"
+	line "archivo guardado."
+	cont "¿Sobrescribirlo?"
 	done
 
 _AnotherSaveFileText::
-	text "There is another"
-	line "save file. Is it"
-	cont "OK to overwrite?"
+	text "Hay otro archivo"
+	line "guardado."
+	cont "¿Sobrescribirlo?"
 	done
 
 _SaveFileCorruptedText::
-	text "The save file is"
-	line "corrupted!"
+	text "¡El archivo"
+	line "guardado está"
+	cont "corrupto!"
 	prompt
 
 _ChangeBoxSaveText::
-	text "When you change a"
-	line "#MON BOX, data"
-	cont "will be saved. OK?"
+	text "Cuando cambies una"
+	line "CAJA de #MON,"
+
+	para "los datos se"
+	line "guardarán. ¿Vale?"
 	done
 
 _MoveMonWOMailSaveText::
-	text "Each time you move"
-	line "a #MON, data"
-	cont "will be saved. OK?"
+	text "Cuando muevas un"
+	line "#MON, los datos"
+
+	para "se guardarán."
+	line "¿Estás de acuerdo?"
 	done
 
 ; unused
 _WindowAreaExceededErrorText::
-	text "The window save"
-	line "area was exceeded."
+	text "Se excedió el área"
+	line "de guardar de la"
+	cont "ventana."
 	done
 
 _WindowPoppingErrorText::
-	text "No windows avail-"
-	line "able for popping."
+	text "No hay ventanas"
+	line "emergentes."
 	done
 
 ; unused
 _CorruptedEventErrorText::
-	text "Corrupted event!"
+	text "¡Evento corrupto!"
 	prompt
 
 _ObjectEventText::
-	text "Object event"
+	text "Evento de objeto."
 	done
 
 _BGEventText::
-	text "BG event"
+	text "Evento BG"
 	done
 
 _CoordinatesEventText::
-	text "Coordinates event"
+	text "Coordenadas evento"
 	done
 
 _ReceivedItemText::
-	text "<PLAYER> received"
+	text "<PLAYER> recibió"
 	line "@"
 	text_ram wStringBuffer4
 	text "."
 	done
 
 _PutItemInPocketText::
-	text "<PLAYER> put the"
+	text "<PLAYER> puso"
 	line "@"
 	text_ram wStringBuffer1
-	text " in"
-	cont "the @"
+	text " en"
+	cont "@"
 	text_ram wStringBuffer3
 	text "."
 	prompt
 
 _PocketIsFullText::
-	text "The @"
+	text "La @"
 	text_ram wStringBuffer3
 	text_start
-	line "is full…"
+	line "está llena…"
 	prompt
 
 _SeerSeeAllText::
-	text "I see all."
-	line "I know all…"
+	text "He visto todo."
+	line "Lo sé todo…"
 
-	para "Certainly, I know"
-	line "of your #MON!"
+	para "¡Ciertamente,"
+	line "conozco tus"
+	cont "#MON!"
 	done
 
 _SeerCantTellAThingText::
-	text "Whaaaat? I can't"
-	line "tell a thing!"
+	text "¿Cómoooo? ¡No"
+	line "puedo decir nada!"
 
-	para "How could I not"
-	line "know of this?"
+	para "¿Cómo es posible"
+	line "que no sepa esto?"
 	done
 
 _SeerNameLocationText::
-	text "Hm… I see you met"
-	line "@"
+	text "Mmm… Veo que"
+	line "conociste a"
+
+	para "@"
 	text_ram wSeerNickname
-	text " here:"
-	cont "@"
+	text " aquí:"
+	line "¡@"
 	text_ram wSeerCaughtLocation
 	text "!"
 	prompt
 
 _SeerTimeLevelText::
-	text "The time was"
+	text "¡Fue de"
 	line "@"
 	text_ram wSeerTimeOfDay
 	text "!"
 
-	para "Its level was @"
+	para "¡Su nivel era @"
 	text_ram wSeerCaughtLevelString
 	text "!"
 
-	para "Am I good or what?"
+	para "¿Soy buena o no?"
 	prompt
 
 _SeerTradeText::
-	text "Hm… @"
+	text "Mmm… ¿@"
 	text_ram wSeerNickname
 	text_start
-	line "came from @"
+	line "te lo intercambió"
+	cont "@"
 	text_ram wSeerOTName
-	text_start
-	cont "in a trade?"
+	text "?"
 
-	para "@"
-	text_ram wSeerCaughtLocation
-	text_start
-	line "was where @"
+	para "¡@"
 	text_ram wSeerOTName
-	text_start
-	cont "met @"
+	text " conoció"
+	line "a @"
 	text_ram wSeerNickname
+	text " en"
+	cont "@"
+	text_ram wSeerCaughtLocation
 	text "!"
 	prompt
 
 _SeerNoLocationText::
-	text "What!? Incredible!"
+	text "¿Qué? ¡Increíble!"
 
-	para "I don't understand"
-	line "how, but it is"
+	para "¡No entiendo el"
+	line "porqué, pero eres"
 
-	para "incredible!"
-	line "You are special."
+	para "increíble!"
+	line "Eres especial."
 
-	para "I can't tell where"
-	line "you met it, but it"
-	cont "was at level @"
+	para "No puedo decirte"
+	line "dónde lo conocis-"
+	cont "te, pero tenía"
+	cont "el nivel @"
 	text_ram wSeerCaughtLevelString
 	text "."
 
-	para "Am I good or what?"
+	para "¿Soy buena o no?"
 	prompt
 
 _SeerEggText::
-	text "Hey!"
+	text "¡Eh!"
 
-	para "That's an EGG!"
+	para "¡Eso es un HUEVO!"
 
-	para "You can't say that"
-	line "you've met it yet…"
+	para "Todavía no puedes"
+	line "decir que le"
+	cont "conoces…"
 	done
 
 _SeerDoNothingText::
-	text "Fufufu! I saw that"
-	line "you'd do nothing!"
+	text "¡Fufufu! ¡Veo que"
+	line "no has hecho nada!"
 	done
 
 _SeerMoreCareText::
-	text "Incidentally…"
+	text "A propósito…"
 
-	para "It would be wise"
-	line "to raise your"
+	para "Estaría bien que"
+	line "trataras a tus"
 
-	para "#MON with a"
-	line "little more care."
+	para "#MON con un"
+	line "poco más de"
+	cont "cuidado."
 	done
 
 _SeerMoreConfidentText::
-	text "Incidentally…"
+	text "A propósito…"
 
-	para "It seems to have"
-	line "grown a little."
+	para "Parece que ha"
+	line "crecido un poco."
 
-	para "@"
+	para "¡A @"
 	text_ram wSeerNickname
-	text " seems"
-	line "to be becoming"
-	cont "more confident."
+	text_start
+	line "se le ve más"
+	cont "seguro!"
 	done
 
 _SeerMuchStrengthText::
-	text "Incidentally…"
+	text "A propósito…"
 
 	para "@"
 	text_ram wSeerNickname
-	text " has"
-	line "grown. It's gained"
-	cont "much strength."
+	text " ha"
+	line "crecido. Ha ganado"
+	cont "mucha fuerza."
 	done
 
 _SeerMightyText::
-	text "Incidentally…"
+	text "A propósito…"
 
-	para "It certainly has"
-	line "grown mighty!"
+	para "¡Ciertamente"
+	line "es enorme!"
 
-	para "This @"
+	para "Este @"
 	text_ram wSeerNickname
 	text_start
-	line "must have come"
+	line "debe de haber lu-"
+	cont "chado en numerosos"
+	cont "combates #MON."
 
-	para "through numerous"
-	line "#MON battles."
-
-	para "It looks brimming"
-	line "with confidence."
+	para "Se le ve muy"
+	line "seguro."
 	done
 
 _SeerImpressedText::
-	text "Incidentally…"
+	text "A propósito…"
 
-	para "I'm impressed by"
-	line "your dedication."
+	para "Estoy impresionada"
+	line "con tu dedicación."
 
-	para "It's been a long"
-	line "time since I've"
+	para "Hacía mucho desde"
+	line "la última vez que"
 
-	para "seen a #MON as"
-	line "mighty as this"
-	cont "@"
+	para "vi a un #MON"
+	line "tan poderoso como"
+	cont "este @"
 	text_ram wSeerNickname
 	text "."
 
-	para "I'm sure that"
-	line "seeing @"
-	text_ram wSeerNickname
-	text_start
+	para "Estoy segura de"
+	line "que ver luchar a"
 
-	para "in battle would"
-	line "excite anyone."
+	para "@"
+	text_ram wSeerNickname
+	text " debe de"
+	line "ser emocionante."
 	done
 
 _CongratulationsYourPokemonText::
-	text "Congratulations!"
-	line "Your @"
+	text "¡Enhorabuena!"
+	line "¡Tu @"
 	text_ram wStringBuffer2
 	text_end
 
@@ -457,311 +473,319 @@ _CongratulationsYourPokemonText::
 _EvolvedIntoText::
 	text_start
 
-	para "evolved into"
+	para "evolucionó en"
 	line "@"
 	text_ram wStringBuffer1
 	text "!"
 	done
 
 _StoppedEvolvingText::
-	text "Huh? @"
+	text "¡@"
 	text_ram wStringBuffer2
 	text_start
-	line "stopped evolving!"
+	line "no evolucionó!"
 	prompt
 
 _EvolvingText::
-	text "What? @"
+	text "¡@"
 	text_ram wStringBuffer2
-	text_start
-	line "is evolving!"
+	text " está"
+	line "evolucionando!"
 	done
 
 _MartHowManyText::
-	text "How many?"
+	text "¿Cuántas unidades?"
 	done
 
 _MartFinalPriceText::
 	text_decimal wItemQuantityChangeBuffer, 1, 2
-	text " @"
+	text " unidad/es"
+	line "de @"
 	text_ram wStringBuffer2
-	text "(S)"
-	line "will be ¥@"
+	text_start
+	cont "serán @"
 	text_decimal hMoneyTemp, 3, 6
-	text "."
+	text "¥."
 	done
 
 _HerbShopLadyIntroText::
-	text "Hello, dear."
+	text "Hola, joven."
 
-	para "I sell inexpensive"
-	line "herbal medicine."
+	para "Vendo hierbas"
+	line "medicinales."
 
-	para "They're good, but"
-	line "a trifle bitter."
+	para "Son buenas, pero"
+	line "un poco amargas."
 
-	para "Your #MON may"
-	line "not like them."
+	para "Quizá tus #MON"
+	line "no las quieran."
 
-	para "Hehehehe…"
+	para "¡Je, je, je…!"
 	done
 
 _HerbalLadyHowManyText::
-	text "How many?"
+	text "¿Cuántas unidades?"
 	done
 
 _HerbalLadyFinalPriceText::
 	text_decimal wItemQuantityChangeBuffer, 1, 2
-	text " @"
+	text " unidad/es"
+	line "de @"
 	text_ram wStringBuffer2
-	text "(S)"
-	line "will be ¥@"
+	text_start
+	cont "serán @"
 	text_decimal hMoneyTemp, 3, 6
-	text "."
+	text "¥."
 	done
 
 _HerbalLadyThanksText::
-	text "Thank you, dear."
-	line "Hehehehe…"
+	text "Gracias, joven."
+	line "¡Je, je, je…!"
 	done
 
 _HerbalLadyPackFullText::
-	text "Oh? Your PACK is"
-	line "full, dear."
+	text "¡Oh! Tu MOCHILA"
+	line "está llena, joven."
 	done
 
 _HerbalLadyNoMoneyText::
-	text "Hehehe… You don't"
-	line "have the money."
+	text "¡Je, je…! No"
+	line "tienes ese dinero."
 	done
 
 _HerbalLadyComeAgainText::
-	text "Come again, dear."
-	line "Hehehehe…"
+	text "Vuelve otra vez."
+	line "¡Je, je, je…!"
 	done
 
 _BargainShopIntroText::
-	text "Hiya! Care to see"
-	line "some bargains?"
+	text "¡Oye! ¿Quieres ver"
+	line "unas gangas?"
 
-	para "I sell rare items"
-	line "that nobody else"
+	para "Vendo objetos que"
+	line "nadie posee, pero"
 
-	para "carries--but only"
-	line "one of each item."
+	para "sólo un objeto de"
+	line "cada tipo."
 	done
 
 _BargainShopFinalPriceText::
 	text_ram wStringBuffer2
-	text " costs"
-	line "¥@"
+	text_start
+	line "cuesta @"
 	text_decimal hMoneyTemp, 3, 6
-	text ". Want it?"
+	text "¥."
+	cont "¿Lo quieres?"
 	done
 
 _BargainShopThanksText::
-	text "Thanks."
+	text "Gracias."
 	done
 
 _BargainShopPackFullText::
-	text "Uh-oh, your PACK"
-	line "is chock-full."
+	text "¡Oh! Tu MOCHILA"
+	line "está a tope."
 	done
 
 _BargainShopSoldOutText::
-	text "You bought that"
-	line "already. I'm all"
-	cont "sold out of it."
+	text "Eso ya lo has"
+	line "comprado. No me"
+	cont "quedan más."
 	done
 
 _BargainShopNoFundsText::
-	text "Uh-oh, you're"
-	line "short on funds."
+	text "¡Oh! No tienes"
+	line "suficiente dinero."
 	done
 
 _BargainShopComeAgainText::
-	text "Come by again"
-	line "sometime."
+	text "Vuelve en otra"
+	line "ocasión."
 	done
 
 _PharmacyIntroText::
-	text "What's up? Need"
-	line "some medicine?"
+	text "¿Qué quieres?"
+	line "¿Alguna medicina?"
 	done
 
 _PharmacyHowManyText::
-	text "How many?"
+	text "¿Cuántas unidades?"
 	done
 
 _PharmacyFinalPriceText::
 	text_decimal wItemQuantityChangeBuffer, 1, 2
-	text " @"
+	text " unidad/es"
+	line "de @"
 	text_ram wStringBuffer2
-	text "(S)"
-	line "will cost ¥@"
+	text_start
+	cont "serán @"
 	text_decimal hMoneyTemp, 3, 6
-	text "."
+	text "¥."
 	done
 
 _PharmacyThanksText::
-	text "Thanks much!"
+	text "¡Muchas gracias!"
 	done
 
 _PharmacyPackFullText::
-	text "You don't have any"
-	line "more space."
+	text "No te queda sitio."
 	done
 
 _PharmacyNoMoneyText::
-	text "Huh? That's not"
-	line "enough money."
+	text "¿Eh? No tienes"
+	line "bastante dinero."
 	done
 
 _PharmacyComeAgainText::
-	text "All right."
-	line "See you around."
+	text "De acuerdo."
+	line "Hasta luego."
 	done
 
 ; unused
 _NothingToSellText::
-	text "You don't have"
-	line "anything to sell."
+	text "No tienes nada"
+	line "para vender."
 	prompt
 
 _MartSellHowManyText::
-	text "How many?"
+	text "¿Cuántas unidades?"
 	done
 
 _MartSellPriceText::
-	text "I can pay you"
-	line "¥@"
+	text "Puedo pagarte"
+	line "@"
 	text_decimal hMoneyTemp, 3, 6
-	text "."
+	text "¥."
 
-	para "Is that OK?"
+	para "¿Te parece bien?"
 	done
 
 _MartWelcomeText::
-	text "Welcome! How may I"
-	line "help you?"
+	text "¡Hola!"
+	line "¿Qué deseas?"
 	done
 
 _MartThanksText::
-	text "Here you are."
-	line "Thank you!"
+	text "Aquí tienes."
+	line "¡Gracias!"
 	done
 
 _MartNoMoneyText::
-	text "You don't have"
-	line "enough money."
+	text "No tienes"
+	line "suficiente dinero."
 	done
 
 _MartPackFullText::
-	text "You can't carry"
-	line "any more items."
+	text "No puedes llevar"
+	line "más objetos."
 	done
 
 _MartCantBuyText::
-	text "Sorry, I can't buy"
-	line "that from you."
+	text "Lo siento, no"
+	line "puedo comprártelo."
 	prompt
 
 _MartComeAgainText::
-	text "Please come again!"
+	text "¡Vuelve cuando"
+	line "quieras!"
 	done
 
 _MartAskMoreText::
-	text "Can I do anything"
-	line "else for you?"
+	text "¿Puedo ayudarte"
+	line "en algo más?"
 	done
 
 _MartBoughtText::
-	text "Got ¥@"
+	text "Recibiste @"
 	text_decimal hMoneyTemp, 3, 6
-	text " for"
-	line "@"
+	text " ¥"
+	line "por @"
 	text_ram wStringBuffer2
-	text "(S)."
+	text "."
 	done
 
 _SlotsBetHowManyCoinsText::
-	text "Bet how many"
-	line "coins?"
+	text "¿Cuántas"
+	line "fichas?"
 	done
 
 _SlotsStartText::
-	text "Start!"
+	text "¡Adelante!"
 	done
 
 _SlotsNotEnoughCoinsText::
-	text "Not enough"
-	line "coins."
+	text "No tienes"
+	line "bastantes fichas."
 	prompt
 
 _SlotsRanOutOfCoinsText::
-	text "Darn… Ran out of"
-	line "coins…"
+	text "¡Vaya…! No me"
+	line "quedan fichas…"
 	done
 
 _SlotsPlayAgainText::
-	text "Play again?"
+	text "¿Vuelves a"
+	line "jugar?"
 	done
 
 _SlotsLinedUpText::
-	text "lined up!"
-	line "Won @"
+	text "¡Línea! ¡Has"
+	line "ganado @"
 	text_ram wStringBuffer2
-	text " coins!"
+	text " fichas!"
 	done
 
 _SlotsDarnText::
-	text "Darn!"
+	text "¡Fallaste!"
 	done
 
 _MobileStadiumEntryText::
-	text "Data for use in"
-	line "the MOBILE STADIUM"
+	text "Los datos para"
+	line "utilizar en el"
 
-	para "of the N64 #MON"
-	line "STADIUM 2 can be"
-	cont "read here."
+	para "#MON STADIUM 2"
+	line "de Nintendo 64"
 
-	para "Read the data?"
+	para "pueden leerse"
+	line "aquí."
+
+	para "¿Lees los datos?"
 	done
 
 _MobileStadiumSuccessText::
-	text "Data transfer is"
-	line "complete."
+	text "Datos"
+	line "transferidos."
 
-	para "We hope you enjoy"
-	line "MOBILE STADIUM"
+	para "Esperamos que"
+	line "disfrutes con los"
 
-	para "battles in the N64"
-	line "#MON STADIUM 2."
+	para "combates en"
+	line "#MON STADIUM 2"
+	cont "de N64."
 
 	para ""
 	done
 
 _MainMenuTimeUnknownText::
-	text "Clock time unknown"
+	text "Hora desconocida"
 	done
 
 ; unused mobile
 _DeleteSavedLoginPasswordText::
-	text "Delete the saved"
-	line "LOG-IN PASSWORD?"
+	text "¿Borras la CONTRA-"
+	line "SEÑA de ACCESO?"
 	done
 
 ; unused mobile
 _DeletedTheLoginPasswordText::
-	text "Deleted the LOG-IN"
-	line "PASSWORD."
+	text "CONTRASEÑA de"
+	line "ACCESO borrada."
 	done
 
 ; unused mobile
 _MobilePickThreeMonForBattle::
-	text "Pick three #MON"
-	line "for battle."
+	text "Elige tres #MON"
+	line "para luchar."
 	prompt
 
 ; unused mobile
@@ -770,139 +794,136 @@ _MobileUseTheseThreeMonText::
 	text ","
 	line "@"
 	text_ram wMobileParticipant2Nickname
-	text " and"
+	text " y"
 	cont "@"
 	text_ram wMobileParticipant3Nickname
 	text "."
 
-	para "Use these three?"
+	para "¿Usas estos tres?"
 	done
 
 ; unused mobile
 _MobileOnlyThreeMonMayEnterText::
-	text "Only three #MON"
-	line "may enter."
+	text "Sólo pueden entrar"
+	line "tres #MON."
 	prompt
 
 ; unused mobile
 _MobileCardFolderIntro1Text::
-	text "The CARD FOLDER"
-	line "stores your and"
+	text "El TARJETERO"
+	line "guarda tus"
 
-	para "your friends'"
-	line "CARDS."
+	para "TARJETAS y las de"
+	line "tus amigos/as."
 
-	para "A CARD contains"
-	line "information like"
+	para "Una TARJETA con-"
+	line "tiene información,"
 
-	para "the person's name,"
-	line "phone number and"
-	cont "profile."
+	para "como el nombre de"
+	line "la persona, su"
 
-	para ""
-	done
+	para "número de teléfono"
+	line "y su perfil."
+	prompt
 
 ; unused mobile
 _MobileCardFolderIntro2Text::
-	text "This is your CARD."
+	text "Ésta es tu"
+	line "TARJETA."
 
-	para "Once you've"
-	line "entered your phone"
+	para "Una vez hayas in-"
+	line "troducido tu núme-"
+	cont "ro de teléfono,"
+	cont "podrás cambiar"
 
-	para "number, you can"
-	line "trade CARDS with"
-	cont "your friends."
-
-	para ""
-	done
+	para "TARJETAS con tus"
+	line "amigos/as."
+	prompt
 
 ; unused mobile
 _MobileCardFolderIntro3Text::
-	text "If you have your"
-	line "friend's CARD, you"
+	text "Si tienes la"
+	line "TARJETA de un/a"
 
-	para "can use it to make"
-	line "a call from a"
+	para "amigo/a, podrás"
+	line "usarla para llamar"
 
-	para "mobile phone on"
-	line "the 2nd floor of a"
-	cont "#MON CENTER."
+	para "a un teléfono"
+	line "móvil desde el 2°"
 
-	para ""
-	done
+	para "piso de los"
+	line "CENTROS #MON."
+	prompt
 
 ; unused mobile
 _MobileCardFolderIntro4Text::
-	text "To safely store"
-	line "your collection of"
+	text "Para guardar tu"
+	line "colección de"
 
-	para "CARDS, you must"
-	line "set a PASSCODE for"
-	cont "your CARD FOLDER."
+	para "TARJETAS de manera"
+	line "segura, asigna una"
 
-	para ""
-	done
+	para "CONTRASEÑA a tu"
+	line "TARJETERO."
+	prompt
 
 ; unused mobile
 _MobileCardFolderAskDeleteText::
-	text "If the CARD FOLDER"
-	line "is deleted, all"
+	text "Si se borra el"
+	line "TARJETERO, todas"
 
-	para "its CARDS and the"
-	line "PASSCODE will also"
-	cont "be deleted."
+	para "las TARJETAS y la"
+	line "CONTRASEÑA también"
+	cont "se borrarán."
 
-	para "Beware--a deleted"
-	line "CARD FOLDER can't"
-	cont "be restored."
+	para "¡Cuidado! Un TAR-"
+	line "JETERO borrado no"
+	cont "puede recuperarse."
 
-	para "Want to delete"
-	line "your CARD FOLDER?"
+	para "¿Quieres borrar"
+	line "tu TARJETERO?"
 	done
 
 ; unused mobile
 _MobileCardFolderDeleteAreYouSureText::
-	text "Are you sure you"
-	line "want to delete it?"
+	text "¿Seguro que"
+	line "quieres borrarlo?"
 	done
 
 ; unused mobile
 _MobileCardFolderDeletedText::
-	text "The CARD FOLDER"
-	line "has been deleted."
-
-	para ""
-	done
+	text "El TARJETERO"
+	line "ha sido borrado."
+	prompt
 
 ; unused mobile
 _MobileCardFolderAskOpenOldText::
-	text "There is an older"
-	line "CARD FOLDER from a"
-	cont "previous journey."
+	text "Hay un TARJETERO"
+	line "antiguo de un"
+	cont "viaje anterior."
 
-	para "Do you want to"
-	line "open it?"
+	para "¿Quieres abrirlo?"
 	done
 
 ; unused mobile
 _MobileCardFolderAskDeleteOldText::
-	text "Delete the old"
-	line "CARD FOLDER?"
+	text "¿Borras el TARJE-"
+	line "TERO antiguo?"
 	done
 
 ; unused mobile
 _MobileCardFolderFinishRegisteringCardsText::
-	text "Finish registering"
-	line "CARDS?"
+	text "¿Acabas de regis-"
+	line "trar TARJETAS?"
 	done
 
 _PhoneWrongNumberText::
-	text "Huh? Sorry, wrong"
-	line "number!"
+	text "¿Eh? Perdona,"
+	line "n.° equivocado."
 	done
 
 _PhoneClickText::
-	text "Click!"
+	text "¡Clic!"
 	done
 
 _PhoneEllipseText::
@@ -910,17 +931,18 @@ _PhoneEllipseText::
 	done
 
 _PhoneOutOfAreaText::
-	text "That number is out"
-	line "of the area."
+	text "Ese número no es"
+	line "de esta zona."
 	done
 
 _PhoneJustTalkToThemText::
-	text "Just go talk to"
-	line "that person!"
+	text "¡No es necesario"
+	line "llamar, está muy"
+	cont "cerca!"
 	done
 
 _PhoneThankYouText::
-	text "Thank you!"
+	text "¡Gracias!"
 	done
 
 ; unused
@@ -929,48 +951,53 @@ UnknownText_0x1c55d6::
 	done
 
 _PasswordAskResetText::
-	text "Password OK."
-	line "Select CONTINUE &"
-	cont "reset settings."
+	text "Contraseña válida."
+	line "Elige CONTINUAR"
+
+	para "y cambia las"
+	line "opciones."
 	prompt
 
 _PasswordWrongText::
-	text "Wrong password!"
+	text "¡Contraseña"
+	line "no válida!"
 	prompt
 
 _PasswordAskResetClockText::
-	text "Reset the clock?"
+	text "¿Cambias la hora?"
 	done
 
 _PasswordAskEnterText::
-	text "Please enter the"
-	line "password."
+	text "Introduce la"
+	line "contraseña."
 	done
 
 _ClearAllSaveDataText::
-	text "Clear all save"
-	line "data?"
+	text "¿Borras todos los"
+	line "datos guardados?"
 	done
 
 _LearnedMoveText::
+	text "¡@"
 	text_ram wMonOrItemNameBuffer
-	text " learned"
-	line "@"
+	text_start
+	line "ha aprendido"
+	cont "@"
 	text_ram wStringBuffer2
 	text "!@"
 	sound_dex_fanfare_50_79
-	text_promptbutton
+	text_waitbutton
 	text_end
 
 	text_end ; unused
 
 _MoveAskForgetText::
-	text "Which move should"
-	next "be forgotten?"
+	text "¿Qué movimiento"
+	next "debería olvidar?"
 	done
 
 _StopLearningMoveText::
-	text "Stop learning"
+	text "¿Deja de aprender"
 	line "@"
 	text_ram wStringBuffer2
 	text "?"
@@ -979,7 +1006,7 @@ _StopLearningMoveText::
 _DidNotLearnMoveText::
 	text_ram wMonOrItemNameBuffer
 	text_start
-	line "did not learn"
+	line "no aprendió"
 	cont "@"
 	text_ram wStringBuffer2
 	text "."
@@ -987,85 +1014,92 @@ _DidNotLearnMoveText::
 
 _AskForgetMoveText::
 	text_ram wMonOrItemNameBuffer
-	text " is"
-	line "trying to learn"
+	text_start
+	line "intenta aprender"
 	cont "@"
 	text_ram wStringBuffer2
 	text "."
 
-	para "But @"
+	para "Pero"
+	line "@"
 	text_ram wMonOrItemNameBuffer
 	text_start
-	line "can't learn more"
-	cont "than four moves."
 
-	para "Delete an older"
-	line "move to make room"
-	cont "for @"
+	para "no puede aprender"
+	line "más de cuatro"
+	cont "movimientos."
+
+	para "¿Borras movimiento"
+	line "anterior para"
+
+	para "dejar sitio a"
+	line "@"
 	text_ram wStringBuffer2
 	text "?"
 	done
 
 Text_MoveForgetCount::
-	text "1, 2 and…@"
+	text "1, 2 y…@"
 	text_pause
 	text_end
 
 	text_end ; unused
 
 _MoveForgotText::
-	text " Poof!@"
+	text " ¡Puf!@"
 	text_pause
 	text_start
 
 	para "@"
 	text_ram wMonOrItemNameBuffer
-	text " forgot"
-	line "@"
+	text_start
+	line "olvidó"
+	cont "@"
 	text_ram wStringBuffer1
 	text "."
 
-	para "And…"
+	para "Y…"
 	prompt
 
 _MoveCantForgetHMText::
-	text "HM moves can't be"
-	line "forgotten now."
+	text "Los movimientos MO"
+	line "no se pueden"
+	cont "olvidar ahora."
 	prompt
 
 _CardFlipPlayWithThreeCoinsText::
-	text "Play with three"
-	line "coins?"
+	text "¿Quieres apostar"
+	line "tres?"
 	done
 
 _CardFlipNotEnoughCoinsText::
-	text "Not enough coins…"
+	text "Faltan fichas."
 	prompt
 
 _CardFlipChooseACardText::
-	text "Choose a card."
+	text "Elige una carta."
 	done
 
 _CardFlipPlaceYourBetText::
-	text "Place your bet."
+	text "Haz tu apuesta."
 	done
 
 _CardFlipPlayAgainText::
-	text "Want to play"
-	line "again?"
+	text "¿Vuelves a"
+	line "jugar?"
 	done
 
 _CardFlipShuffledText::
-	text "The cards have"
-	line "been shuffled."
+	text "Has barajado el"
+	line "mazo."
 	prompt
 
 _CardFlipYeahText::
-	text "Yeah!"
+	text "¡Sí!"
 	done
 
 _CardFlipDarnText::
-	text "Darn…"
+	text "¡Fallaste…!"
 	done
 
 _GearTodayText::
@@ -1079,249 +1113,241 @@ _GearEllipseText::
 	done
 
 _GearOutOfServiceText::
-	text "You're out of the"
-	line "service area."
+	text "Estás fuera de"
+	line "cobertura."
 	prompt
 
 _PokegearAskWhoCallText::
-	text "Whom do you want"
-	line "to call?"
+	text "¿A quién quieres"
+	line "llamar?"
 	done
 
 _PokegearPressButtonText::
-	text "Press any button"
-	line "to exit."
+	text "Pulsa un botón"
+	line "para salir."
 	done
 
 _PokegearAskDeleteText::
-	text "Delete this stored"
-	line "phone number?"
+	text "¿Borras este"
+	line "n.° de teléfono?"
 	done
 
 _BuenaAskWhichPrizeText::
-	text "Which prize would"
-	line "you like?"
+	text "¿Qué premio"
+	line "quieres?"
 	done
 
 _BuenaIsThatRightText::
+	text "¿@"
 	text_ram wStringBuffer1
 	text "?"
-	line "Is that right?"
+	line "¿Vale?"
 	done
 
 _BuenaHereYouGoText::
-	text "Here you go!"
-
-	para ""
-	done
+	text "¡Vale!"
+	prompt
 
 _BuenaNotEnoughPointsText::
-	text "You don't have"
-	line "enough points."
-
-	para ""
-	done
+	text "No tienes puntos"
+	line "suficientes."
+	prompt
 
 _BuenaNoRoomText::
-	text "You have no room"
-	line "for it."
-
-	para ""
-	done
+	text "No tienes sitio"
+	line "para esto."
+	prompt
 
 _BuenaComeAgainText::
-	text "Oh. Please come"
-	line "back again!"
+	text "Oh. ¡Por favor,"
+	line "vuelve en otra"
+	cont "ocasión!"
 	done
 
 _BTExcuseMeText::
-	text "Excuse me!"
-
-	para ""
-	done
+	text "¡Disculpa!"
+	prompt
 
 _ExcuseMeYoureNotReadyText::
-	text "Excuse me."
-	line "You're not ready."
-
-	para ""
-	done
+	text "Discúlpame."
+	line "No estás a punto."
+	prompt
 
 _BattleTowerReturnWhenReadyText::
-	text "Please return when"
-	line "you're ready."
+	text "Por favor, vuelve"
+	line "cuando estés a"
+	cont "punto."
 	done
 
 _NeedAtLeastThreeMonText::
-	text "You need at least"
-	line "three #MON."
-
-	para ""
-	done
+	text "Necesitas al menos"
+	line "tres #MON."
+	prompt
 
 _EggDoesNotQualifyText::
-	text "Sorry, an EGG"
-	line "doesn't qualify."
-
-	para ""
-	done
+	text "Lo siento."
+	line "Un HUEVO no vale."
+	prompt
 
 _OnlyThreeMonMayBeEnteredText::
-	text "Only three #MON"
-	line "may be entered."
-
-	para ""
-	done
+	text "Sólo puedes usar"
+	line "tres #MON."
+	prompt
 
 _TheMonMustAllBeDifferentKindsText::
-	text "The @"
+	text "Los @"
 	text_ram wStringBuffer2
 	text " #MON"
-	line "must all be"
-	cont "different kinds."
+	line "deben ser diferen-"
+	cont "tes."
 
 	para ""
 	done
 
 _TheMonMustNotHoldTheSameItemsText::
-	text "The @"
+	text "Los @"
 	text_ram wStringBuffer2
-	text " #MON"
-	line "must not hold the"
-	cont "same items."
+	text " #MON no"
+	line "pueden llevar los"
+	cont "mismos objetos."
 
 	para ""
 	done
 
 _YouCantTakeAnEggText::
-	text "You can't take an"
-	line "EGG!"
-
-	para ""
-	done
+	text "¡No puedes llevar"
+	line "un HUEVO!"
+	prompt
 
 _BallDodgedText::
-	text "It dodged the"
-	line "thrown BALL!"
+	text "¡Esquivó la BALL!"
 
-	para "This #MON"
-	line "can't be caught!"
+	para "¡Imposible atrapar"
+	line "a este #MON!"
 	prompt
 
 _BallMissedText::
-	text "You missed the"
+	text "¡Has perdido al"
 	line "#MON!"
 	prompt
 
 _BallBrokeFreeText::
-	text "Oh no! The #MON"
-	line "broke free!"
+	text "¡No! ¡El #MON"
+	line "se ha escapado!"
 	prompt
 
 _BallAppearedCaughtText::
-	text "Aww! It appeared"
-	line "to be caught!"
+	text "¡Parecía que lo"
+	line "habías atrapado!"
 	prompt
 
 _BallAlmostHadItText::
-	text "Aargh!"
-	line "Almost had it!"
+	text "¡Vaya!"
+	line "¡Te faltó poco!"
 	prompt
 
 _BallSoCloseText::
-	text "Shoot! It was so"
-	line "close too!"
+	text "¡Caray! ¡Casi"
+	line "lo consigues!"
 	prompt
 
 Text_BallCaught::
-	text "Gotcha! @"
+	text "¡Ya está!"
+	line "¡@"
 	text_ram wEnemyMonNick
 	text_start
-	line "was caught!@"
+	cont "atrapado!@"
 	sound_caught_mon
 	text_end
 
 	text_end ; unused
 
 _WaitButtonText::
-	text_promptbutton
+	text_waitbutton
 	text_end
 
 	text_end ; unused
 
 _BallSentToPCText::
 	text_ram wMonOrItemNameBuffer
-	text " was"
-	line "sent to BILL's PC."
+	text_start
+	line "fue enviado al PC"
+	cont "de BILL."
 	prompt
 
 _NewDexDataText::
+	text "Registrados en la"
+	line "#DEX los datos"
+
+	para "de @"
 	text_ram wEnemyMonNick
-	text "'s data"
-	line "was newly added to"
-	cont "the #DEX.@"
+	text "."
+	line "@"
 	sound_slot_machine_start
-	text_promptbutton
+	text_waitbutton
 	text_end
 
 	text_end ; unused
 
 _AskGiveNicknameText::
-	text "Give a nickname to"
-	line "@"
+	text "¿Quieres darle"
+	line "un mote a"
+	cont "@"
 	text_ram wStringBuffer1
 	text "?"
 	done
 
 _ItemStatRoseText::
-	text_ram wStringBuffer1
-	text "'s"
-	line "@"
 	text_ram wStringBuffer2
-	text " rose."
+	text " de"
+	line "@"
+	text_ram wStringBuffer1
+	text " creció."
 	prompt
 
 _ItemCantUseOnMonText::
-	text "That can't be used"
-	line "on this #MON."
+	text "Eso no se puede"
+	line "usar con este"
+	cont "#MON."
 	prompt
 
 _RepelUsedEarlierIsStillInEffectText::
-	text "The REPEL used"
-	line "earlier is still"
-	cont "in effect."
+	text "Todavía funciona"
+	line "el REPELENTE que"
+	cont "usaste antes."
 	prompt
 
 _PlayedFluteText::
-	text "Played the #"
-	line "FLUTE."
+	text "Escuchaste la"
+	line "# FLAUTA."
 
-	para "Now, that's a"
-	line "catchy tune!"
+	para "¡Es una canción"
+	line "muy pegadiza!"
 	prompt
 
 _FluteWakeUpText::
-	text "All sleeping"
-	line "#MON woke up."
+	text "Se han despertado"
+	line "todos los #MON."
 	prompt
 
 Text_PlayedPokeFlute::
-	text "<PLAYER> played the"
-	line "# FLUTE.@"
-	text_promptbutton
+	text "<PLAYER> sintonizó"
+	line "el canal FLAUTA"
+	cont "#MON.@"
+	text_waitbutton
 	text_end
 
 	text_end ; unused
 
 _BlueCardBalanceText::
-	text "You now have"
+	text "Ahora tienes"
 	line "@"
 	text_decimal wBlueCardBalance, 1, 2
-	text " points."
+	text " punto/s."
 	done
 
 _CoinCaseCountText::
-	text "Coins:"
+	text "Fichas:"
 	line "@"
 	text_decimal wCoins, 2, 4
 	text_end
@@ -1329,217 +1355,223 @@ _CoinCaseCountText::
 	text_end ; unused
 
 _RaiseThePPOfWhichMoveText::
-	text "Raise the PP of"
-	line "which move?"
+	text "¿A qué movimiento"
+	line "quieres añadir PP?"
 	done
 
 _RestoreThePPOfWhichMoveText::
-	text "Restore the PP of"
-	line "which move?"
+	text "¿Restaurar los PP"
+	line "de qué movimiento?"
 	done
 
 _PPIsMaxedOutText::
+	text "Los PP de"
+	line "@"
 	text_ram wStringBuffer2
-	text "'s PP"
-	line "is maxed out."
+	text_start
+	cont "están al máximo."
 	prompt
 
 _PPsIncreasedText::
+	text "Los PP de"
+	line "@"
 	text_ram wStringBuffer2
-	text "'s PP"
-	line "increased."
+	text_start
+	cont "han aumentado."
 	prompt
 
 _PPRestoredText::
-	text "PP was restored."
+	text "PP restaurados."
 	prompt
 
 _SentTrophyHomeText::
-	text "There was a trophy"
-	line "inside!@"
+	text "¡Había un trofeo"
+	line "dentro!@"
 	sound_dex_fanfare_50_79
 	text_start
 
 	para "@"
 	text_ram wPlayerName
-	text " sent the"
-	line "trophy home."
+	text " envió"
+	line "el trofeo a casa."
 	prompt
 
 _ItemLooksBitterText::
-	text "It looks bitter…"
+	text "Parece amarga…"
 	prompt
 
 _ItemCantUseOnEggText::
-	text "That can't be used"
-	line "on an EGG."
+	text "Eso no se puede"
+	line "usar con un HUEVO."
 	prompt
 
 _ItemOakWarningText::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that!"
+	text "OAK: ¡<PLAYER>!"
+	line "¡Éste no es el"
+	cont "momento de usarlo!"
 	prompt
 
 _ItemBelongsToSomeoneElseText::
-	text "That belongs to"
-	line "someone else!"
+	text "¡Eso pertenece"
+	line "a alguien!"
 	prompt
 
 _ItemWontHaveEffectText::
-	text "It won't have any"
-	line "effect."
+	text "No tendrá"
+	line "ningún efecto."
 	prompt
 
 _BallBlockedText::
-	text "The trainer"
-	line "blocked the BALL!"
+	text "¡El entrenador"
+	line "bloqueó la BALL!"
 	prompt
 
 _BallDontBeAThiefText::
-	text "Don't be a thief!"
+	text "¡No robes #MON!"
 	prompt
 
 _NoCyclingText::
-	text "Cycling isn't"
-	line "allowed here."
+	text "Aquí no se permite"
+	line "ir en bici."
 	prompt
 
 _ItemCantGetOnText::
-	text "Can't get on your"
-	line "@"
+	text "No puedes subir a"
+	line "tu @"
 	text_ram wStringBuffer1
-	text " now."
+	text "."
 	prompt
 
 _BallBoxFullText::
-	text "The #MON BOX"
-	line "is full. That"
-	cont "can't be used now."
+	text "La CAJA de #MON"
+	line "está llena. Ahora"
+	cont "no puedes usarla."
 	prompt
 
 _ItemUsedText::
-	text "<PLAYER> used the@"
-	text_low
+	text "<PLAYER> usó"
+	line "@"
 	text_ram wStringBuffer2
 	text "."
 	done
 
 _ItemGotOnText::
-	text "<PLAYER> got on the@"
+	text "<PLAYER> se montó@"
 	text_low
+	text "en la @"
 	text_ram wStringBuffer2
 	text "."
 	prompt
 
 _ItemGotOffText::
-	text "<PLAYER> got off@"
+	text "<PLAYER> se bajó de@"
 	text_low
-	text "the @"
+	text "la @"
 	text_ram wStringBuffer2
 	text "."
 	prompt
 
 _KnowsMoveText::
 	text_ram wStringBuffer1
-	text " knows"
-	line "@"
+	text_start
+	line "ya conoce"
+	cont "@"
 	text_ram wStringBuffer2
 	text "."
 	prompt
 
 _MoveKnowsOneText::
-	text "That #MON knows"
-	line "only one move."
+	text "Ese #MON"
+	line "sólo conoce un"
+	cont "movimiento."
 	done
 
 _AskDeleteMoveText::
-	text "Oh, make it forget"
+	text "¿Le haces olvidar"
 	line "@"
 	text_ram wStringBuffer1
 	text "?"
 	done
 
 _DeleterForgotMoveText::
-	text "Done! Your #MON"
-	line "forgot the move."
+	text "¡Hecho! Tu #MON"
+	line "olvidó el movi-"
+	cont "miento."
 	done
 
 _DeleterEggText::
-	text "An EGG doesn't"
-	line "know any moves!"
+	text "¡Los HUEVOS no"
+	line "saben movimientos!"
 	done
 
 _DeleterNoComeAgainText::
-	text "No? Come visit me"
-	line "again."
+	text "¿No? Vuelve"
+	line "cuando quieras."
 	done
 
 _DeleterAskWhichMoveText::
-	text "Which move should"
-	line "it forget, then?"
+	text "¿Qué movimiento"
+	line "debería olvidar?"
 	prompt
 
 _DeleterIntroText::
-	text "Um… Oh, yes, I'm"
-	line "the MOVE DELETER."
+	text "Soy el QUITA-"
+	line "MOVIMIENTOS. Hago"
 
-	para "I can make #MON"
-	line "forget moves."
+	para "olvidar movimien-"
+	line "tos a los #MON."
 
-	para "Shall I make a"
-	line "#MON forget?"
+	para "¿Quieres que"
+	line "olviden algún"
+	cont "movimiento?"
 	done
 
 _DeleterAskWhichMonText::
-	text "Which #MON?"
+	text "¿Qué #MON?"
 	prompt
 
 _DSTIsThatOKText::
-	text " DST,"
-	line "is that OK?"
+	text "."
+	line "¿Correcto?"
 	done
 
 _TimeAskOkayText::
-	text ","
-	line "is that OK?"
+	text "."
+	line "¿Correcto?"
 	done
 
 _TimesetAskDSTText::
-	text "Do you want to"
-	line "switch to Daylight"
-	cont "Saving Time?"
+	text "¿Quieres cambiar"
+	line "el reloj al"
+	cont "horario de verano?"
 	done
 
 _TimesetDSTText::
-	text "I set the clock"
-	line "forward by one"
-	cont "hour."
+	text "He adelantado el"
+	line "reloj una hora."
 	prompt
 
 _TimesetAskNotDSTText::
-	text "Is Daylight Saving"
-	line "Time over?"
+	text "¿Terminó el"
+	line "horario de verano?"
 	done
 
 _TimesetNotDSTText::
-	text "I put the clock"
-	line "back one hour."
+	text "He atrasado el"
+	line "reloj una hora."
 	prompt
 
 _TimesetAskAdjustDSTText::
-	text "Do you want to"
-	line "adjust your clock"
-
-	para "for Daylight"
-	line "Saving Time?"
+	text "¿Quieres cambiar"
+	line "el reloj al"
+	cont "horario de verano?"
 	done
 
 _MomLostGearBookletText::
-	text "I lost the in-"
-	line "struction booklet"
-	cont "for the #GEAR."
+	text "He perdido las"
+	line "instrucciones del"
 
-	para "Come back again in"
-	line "a while."
+	para "#GEAR."
+	line "Vuelve dentro de"
+	cont "un rato."
 	prompt

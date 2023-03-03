@@ -65,53 +65,53 @@ MountMortar1FInsideHiddenMaxRepel:
 	hiddenitem MAX_REPEL, EVENT_MOUNT_MORTAR_1F_INSIDE_HIDDEN_MAX_REPEL
 
 PokemaniacMillerSeenText:
-	text "I'm not losing"
-	line "this time!"
+	text "¡No perderé esta"
+	line "vez!"
 	done
 
 PokemaniacMillerBeatenText:
-	text "I lost to some"
-	line "kid…?"
+	text "¿He perdido…?"
 	done
 
 PokemaniacMillerAfterBattleText:
-	text "A while back, this"
-	line "karate dude wanted"
+	text "Hace un rato, este"
+	line "KARATEKA quería"
+	cont "luchar."
 
-	para "to battle. He was"
-	line "ridiculously good."
+	para "Era increíblemente"
+	line "bueno."
 
-	para "He just thrashed"
-	line "us silly."
+	para "Nos machacó."
 
-	para "He went in deeper"
-	line "saying it was for"
+	para "Nos dijo que sólo"
+	line "se estaba"
 
-	para "his training. I"
-	line "wonder how he is?"
+	para "entrenando."
+	line "¿Cómo será?"
 	done
 
 SupernerdMarkusSeenText:
-	text "Hey! HUGH!"
+	text "¡Hey! ¡UFF!"
 	done
 
 SupernerdMarkusBeatenText:
-	text "I mistook you for"
-	line "someone else…"
+	text "Te confundí con"
+	line "otra persona…"
 	done
 
 SupernerdMarkusAfterBattleText:
-	text "I came to explore"
-	line "MT.MORTAR, but I"
+	text "Vine a explorar el"
+	line "MT. MORTERO, pero"
 
-	para "got separated from"
-	line "my partner…"
+	para "me separé de mi"
+	line "compañero…"
 
-	para "Did you run into a"
-	line "trainer who uses a"
+	para "¿Te has encontrado"
+	line "con un entrenador"
 
-	para "SEADRA that knows"
-	line "WATERFALL?"
+	para "que usa a un"
+	line "SEADRA que conoce"
+	cont "CASCADA?"
 	done
 
 MountMortar1FInside_MapEvents:

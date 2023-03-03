@@ -23,22 +23,22 @@ CeruleanDiglett:
 	end
 
 CeruleanPoliceStationFishingGuruText:
-	text "I heard that some"
-	line "shady character is"
-	cont "skulking about."
+	text "Dicen que hay un"
+	line "tipo sospechoso"
+	cont "merodeando."
 
-	para "I won't stand for"
-	line "it if he turns out"
-	cont "to be a thief."
+	para "Si resulta ser el"
+	line "ladrón, le"
+	cont "detendré."
 	done
 
 CeruleanPoliceStationPokefanFText:
-	text "We were held up by"
-	line "robbers before."
+	text "Ya nos atracaron"
+	line "antes."
 	done
 
 CeruleanDiglettText:
-	text "DIGLETT: Dug dug."
+	text "DIGLETT: Dig, dig."
 	done
 
 CeruleanPoliceStation_MapEvents:

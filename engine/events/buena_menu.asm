@@ -9,14 +9,14 @@ AskRememberPassword:
 	ret
 
 .DoMenu:
-	lb bc, 14, 7
+	lb bc, 15, 7
 	push bc
 	ld hl, YesNoMenuHeader
 	call CopyMenuHeader
 	pop bc
 	ld a, b
 	ld [wMenuBorderLeftCoord], a
-	add $5
+	add $4
 	ld [wMenuBorderRightCoord], a
 	ld a, c
 	ld [wMenuBorderTopCoord], a

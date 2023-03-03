@@ -98,110 +98,112 @@ EcruteakPokecenter1FPlayerMovement1:
 	step_end
 
 EcruteakPokecenter1F_BillText1:
-	text "Hi, I'm BILL. And"
-	line "who are you?"
+	text "Hola, soy BILL."
+	line "¿Quién eres tú?"
+	cont "¿Eh? ¿<PLAYER>?"
 
-	para "Hmm, <PLAYER>, huh?"
-	line "You've come at the"
-	cont "right time."
+	para "¡Has llegado justo"
+	line "a tiempo!"
 	done
 
 EcruteakPokecenter1F_BillText2:
-	text "I just finished"
-	line "adjustments on my"
-	cont "TIME CAPSULE."
+	text "Ya he terminado de"
+	line "ajustar la CÁPSULA"
+	cont "DEL TIEMPO."
 
-	para "You know that"
-	line "#MON can be"
-	cont "traded, right?"
+	para "Sabes que puedes"
+	line "cambiar #MON,"
+	cont "¿verdad?"
 
-	para "My TIME CAPSULE"
-	line "was developed to"
+	para "Mi CÁPSULA DEL"
+	line "TIEMPO sirve para"
 
-	para "enable trades with"
-	line "the past."
+	para "intercambiar"
+	line "con el pasado."
 
-	para "But you can't send"
-	line "anything that"
+	para "Pero no podrás"
+	line "enviar nada que no"
 
-	para "didn't exist in"
-	line "the past."
+	para "existiera en el"
+	line "pasado."
 
-	para "If you did, the PC"
-	line "in the past would"
-	cont "have a breakdown."
+	para "Si lo haces, el PC"
+	line "del pasado podría"
+	cont "estropearse."
 
-	para "So you have to"
-	line "remove anything"
+	para "Así que debes"
+	line "eliminar cualquier"
 
-	para "that wasn't around"
-	line "in the past."
+	para "cosa que no"
+	line "existiera antes."
 
-	para "Put simply, no"
-	line "sending new moves"
+	para "Esto es, no envíes"
+	line "nuevos movimientos"
 
-	para "or new #MON in"
-	line "the TIME CAPSULE."
+	para "ni nuevos #MON"
+	line "en esta CÁPSULA."
 
-	para "Don't you worry."
-	line "I'm done with the"
-	cont "adjustments."
+	para "No te preocupes."
+	line "Ya he acabado"
+	cont "de ajustarla."
 
-	para "Tomorrow, TIME"
-	line "CAPSULES will be"
+	para "Mañana funcionarán"
+	line "todas las CÁPSULAS"
 
-	para "running at all"
-	line "#MON CENTERS."
+	para "DEL TIEMPO de los"
+	line "CENTROS #MON."
 
-	para "I have to hurry on"
-	line "back to GOLDENROD"
-	cont "and see my folks."
+	para "Debo volver pronto"
+	line "a CIUDAD TRIGAL."
+	cont "Mi familia espera."
 
-	para "Buh-bye!"
+	para "¡Hasta luego!"
 	done
 
 EcruteakPokecenter1FPokefanMText:
-	text "The way the KIMONO"
-	line "GIRLS dance is"
+	text "Las CHICAS KIMONO"
+	line "son unas geniales"
 
-	para "marvelous. Just"
-	line "like the way they"
-	cont "use their #MON."
+	para "bailarinas, además"
+	line "de magníficas con"
+	cont "sus #MON."
 	done
 
 EcruteakPokecenter1FPokefanMTextMobile:
-	text "You must be hoping"
-	line "to battle more"
+	text "Seguro que esperas"
+	line "luchar con más"
 
-	para "people, right?"
-	line "There's apparently"
+	para "gente, ¿verdad?"
+	line "Parece que hay un"
 
-	para "some place where"
-	line "trainers gather."
+	para "sitio en el que se"
+	line "reúnen los"
+	cont "entrenadores."
 
-	para "Where, you ask?"
+	para "Te preguntarás"
+	line "dónde."
 
-	para "It's a little past"
-	line "OLIVINE CITY."
+	para "Es pasando CIUDAD"
+	line "OLIVO."
 	done
 
 EcruteakPokecenter1FCooltrainerFText:
-	text "MORTY, the GYM"
-	line "LEADER, is soooo"
-	cont "cool."
+	text "MORTI, el LÍDER"
+	line "del GIMNASIO, es"
+	cont "muy bueno."
 
-	para "His #MON are"
-	line "really tough too."
+	para "Y sus #MON son"
+	line "muy fuertes."
 	done
 
 EcruteakPokecenter1FGymGuyText:
-	text "LAKE OF RAGE…"
+	text "LAGO DE LA FURIA."
 
-	para "The appearance of"
-	line "a GYARADOS swarm…"
+	para "Un montón de"
+	line "GYARADOS…"
 
-	para "I smell a conspir-"
-	line "acy. I know it!"
+	para "¡Esto huele a"
+	line "conspiración!"
 	done
 
 EcruteakPokecenter1F_MapEvents:

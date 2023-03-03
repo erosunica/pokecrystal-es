@@ -52,70 +52,72 @@ Route4HiddenUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_ROUTE_4_HIDDEN_ULTRA_BALL
 
 BirdKeeperHankSeenText:
-	text "I'm raising my"
-	line "#MON. Want to"
-	cont "battle with me?"
+	text "Estoy mejorando"
+	line "mis #MON."
+
+	para "¿Quieres luchar"
+	line "contra mí?"
 	done
 
 BirdKeeperHankBeatenText:
-	text "Ack! I lost that"
-	line "one…"
+	text "¡Argh! He perdido"
+	line "esta vez…"
 	done
 
 BirdKeeperHankAfterBattleText:
-	text "If you have a"
-	line "specific #MON"
+	text "Si tienes un"
+	line "#MON que desees"
 
-	para "that you want to"
-	line "raise, put it out"
+	para "mejorar, ponlo en"
+	line "primer lugar y"
 
-	para "first, then switch"
-	line "it right away."
+	para "cámbialo nada más"
+	line "empezar."
 
-	para "That's how to do"
-	line "it."
+	para "Así es como hay"
+	line "que hacerlo."
 	done
 
 PicnickerHopeSeenText:
-	text "I have a feeling"
-	line "that I can win."
+	text "Presiento que"
+	line "puedo ganar."
 
-	para "Let's see if I'm"
-	line "right!"
+	para "¡Veamos si tengo"
+	line "razón!"
 	done
 
 PicnickerHopeBeatenText:
-	text "Aww, you are too"
-	line "strong."
+	text "¡Uau! Eres"
+	line "demasiado fuerte."
 	done
 
 PicnickerHopeAfterBattleText:
-	text "I heard CLEFAIRY"
-	line "appear at MT.MOON."
+	text "Dicen que CLEFAIRY"
+	line "aparece en el"
 
-	para "But where could"
-	line "they be?"
+	para "MT. MOON."
+	line "¿Pero dónde?"
 	done
 
 PicnickerSharonSeenText:
-	text "Um…"
-	line "I…"
+	text "¡Umm…!"
+	line "Yo…"
 	done
 
 PicnickerSharonBeatenText:
-	text "…"
+	text "<……>"
 	done
 
 PicnickerSharonAfterBattleText:
-	text "……I'll go train"
-	line "some more…"
+	text "…Creo que seguiré"
+	line "entrenándome…"
 	done
 
 MtMoonSquareSignText:
-	text "MT.MOON SQUARE"
+	text "PLAZA MT. MOON"
 
-	para "Just go up the"
-	line "stairs."
+	para "Sube las"
+	line "escaleras"
 	done
 
 Route4_MapEvents:

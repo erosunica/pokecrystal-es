@@ -23,24 +23,29 @@ Route19FuchsiaGateOfficerScript:
 	end
 
 Route19FuchsiaGateOfficerText:
-	text "CINNABAR's volcano"
-	line "erupted."
+	text "El volcán de ISLA"
+	line "CANELA ha entrado"
+	cont "en erupción."
 
-	para "It hurled boulders"
-	line "that cut off ROUTE"
-	cont "19 indefinitely."
+	para "Y ha lanzado rocas"
+	line "que han cortado la"
 
-	para "I wonder if the"
-	line "people of CINNABAR"
-	cont "are safe…"
+	para "RUTA 19 hasta"
+	line "nuevo aviso."
+
+	para "Me pregunto si la"
+	line "gente de ISLA"
+
+	para "CANELA estará"
+	line "bien…"
 	done
 
 Route19FuchsiaGateOfficerText_RocksCleared:
-	text "No CINNABAR citi-"
-	line "zens were injured"
+	text "Nadie en ISLA"
+	line "CANELA resultó"
 
-	para "by the eruption."
-	line "That's great!"
+	para "herido por la"
+	line "erupción. ¡Bien!"
 	done
 
 Route19FuchsiaGate_MapEvents:

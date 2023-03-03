@@ -120,7 +120,7 @@ InitTradeSpeciesList:
 	ret
 
 .CANCEL:
-	db "CANCEL@"
+	db "CANCELAR@"
 
 _LoadTradeScreenBorder:
 	call __LoadTradeScreenBorder
@@ -175,7 +175,7 @@ Function16d6e1:
 	jp DelayFrames
 
 .Waiting:
-	db "WAITING..!@"
+	db "¡ESPERA.…!@"
 
 LinkTradeMenu:
 	call .MenuAction

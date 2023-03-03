@@ -85,118 +85,122 @@ Route15PPUp:
 	itemball PP_UP
 
 TeacherColetteSeenText:
-	text "Have you forgotten"
-	line "anything?"
+	text "¿Has olvidado"
+	line "algo?"
 	done
 
 TeacherColetteBeatenText:
-	text "Kyaaah!"
+	text "¡Kiaaa!"
 	done
 
 TeacherColetteAfterBattleText:
-	text "Before I became a"
-	line "teacher, I used to"
+	text "Antes de ser"
+	line "maestra, solía"
 
-	para "forget a lot of"
-	line "things."
+	para "olvidarme de"
+	line "muchas cosas."
 	done
 
 TeacherHillarySeenText:
-	text "On sunny days, I"
-	line "think that the"
+	text "Creo que si hace"
+	line "sol, los niños"
 
-	para "kids would rather"
-	line "be playing in the"
+	para "deberían estar"
+	line "jugando en el"
 
-	para "schoolyard than"
-	line "studying in class."
+	para "patio en lugar"
+	line "de estar en clase."
 	done
 
 TeacherHillaryBeatenText:
-	text "I didn't want to"
-	line "lose…"
+	text "No quería perder…"
 	done
 
 TeacherHillaryAfterBattleText:
-	text "Studying is impor-"
-	line "tant, but exercise"
-	cont "is just as vital."
+	text "Es importante"
+	line "estudiar, pero"
+
+	para "hacer deporte"
+	line "también."
 	done
 
 SchoolboyKippSeenText:
-	text "Hang on. I have to"
-	line "phone my mom."
+	text "Espera. Tengo que"
+	line "llamar a mamá."
 	done
 
 SchoolboyKippBeatenText:
-	text "Sorry, Mom!"
-	line "I was beaten!"
+	text "¡Lo siento, mamá!"
+	line "¡Me han vencido!"
 	done
 
 SchoolboyKippAfterBattleText:
-	text "My mom worries so"
-	line "much about me, I"
+	text "Mi madre se"
+	line "preocupa mucho por"
 
-	para "have to phone her"
-	line "all the time."
+	para "mí, tengo que"
+	line "llamarla siempre."
 	done
 
 SchoolboyTommySeenText:
-	text "Let's battle."
-	line "I won't lose!"
+	text "Luchemos."
+	line "¡No perderé!"
 	done
 
 SchoolboyTommyBeatenText:
-	text "I forgot to do my"
-	line "homework!"
+	text "¡Me olvidé de"
+	line "hacer los deberes!"
 	done
 
 SchoolboyTommyAfterBattleText:
-	text "Sayonara! I just"
-	line "learned that in my"
-	cont "Japanese class."
+	text "¡Sayonara! Lo he"
+	line "aprendido en la"
+	cont "clase de japonés."
 	done
 
 SchoolboyJohnnySeenText:
-	text "We're on a field"
-	line "trip to LAVENDER"
+	text "Vamos a la TORRE"
+	line "RADIO de LAVANDA"
 
-	para "RADIO TOWER for"
-	line "social studies."
+	para "para realizar unos"
+	line "estudios sociales."
 	done
 
 SchoolboyJohnnyBeatenText:
-	text "You're wickedly"
-	line "tough!"
+	text "¡Eres demasiado"
+	line "fuerte!"
 	done
 
 SchoolboyJohnnyAfterBattleText:
-	text "I'm tired of walk-"
-	line "ing. I need to"
-	cont "take a break."
+	text "Estoy cansado de"
+	line "caminar. Necesito"
+	cont "un descanso."
 	done
 
 SchoolboyBillySeenText:
-	text "My favorite class"
-	line "is gym!"
+	text "¡Mi asignatura"
+	line "favorita es la"
+	cont "gimnasia!"
 	done
 
 SchoolboyBillyBeatenText:
-	text "Oh, no!"
-	line "How could I lose?"
+	text "¡Oh, no! ¿Cómo he"
+	line "podido perder?"
 	done
 
 SchoolboyBillyAfterBattleText:
-	text "If #MON were a"
-	line "subject at school,"
-	cont "I'd be the best!"
+	text "¡Si los #MON"
+	line "fueran una"
+
+	para "asignatura, yo"
+	line "sería el mejor!"
 	done
 
 Route15SignText:
-	text "ROUTE 15"
+	text "RUTA 15"
 
-	para "FUCHSIA CITY -"
-	line "LAVENDER TOWN"
+	para "CIUDAD FUCSIA -"
+	line "PUEBLO LAVANDA"
 	done
 
 Route15_MapEvents:

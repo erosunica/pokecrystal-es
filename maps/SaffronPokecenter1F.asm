@@ -40,73 +40,73 @@ SaffronPokecenter1FYoungsterScript:
 	jumptextfaceplayer SaffronPokecenter1FYoungsterText
 
 SaffronPokecenter1FTeacherText:
-	text "What are JOHTO's"
-	line "#MON CENTERS"
-	cont "like?"
+	text "¿Cómo son los"
+	line "CENTROS #MON"
+	cont "de JOHTO?"
 
-	para "…Oh, I see. So"
-	line "they're not much"
+	para "Oh… ya veo."
+	line "Así que no son tan"
 
-	para "different from the"
-	line "ones in KANTO."
+	para "diferentes de los"
+	line "de KANTO…"
 
-	para "I can go to JOHTO"
-	line "without worrying,"
-	cont "then!"
+	para "¡Entonces puedo ir"
+	line "a JOHTO sin tener"
+	cont "que preocuparme!"
 	done
 
 SaffronPokecenter1FTeacherMobileText:
-	text "What are JOHTO's"
-	line "#MON CENTERS"
-	cont "like?"
+	text "¿Cómo son los"
+	line "CENTROS #MON"
+	cont "de JOHTO?"
 
-	para "…Oh, I see."
-	line "So they let you"
+	para "…Oh, ya veo."
+	line "Así que permiten"
 
-	para "link with people"
-	line "far away?"
+	para "conectar con gente"
+	line "de lejos…"
 
-	para "Then I'll get my"
-	line "friend in JOHTO to"
+	para "¡Entonces le diré"
+	line "a mi amigo de"
 
-	para "catch a MARILL and"
-	line "trade it to me!"
+	para "JOHTO que capture"
+	line "un MARILL y me lo"
+	cont "cambie!"
 	done
 
 SaffronPokecenter1FFisherText:
-	text "I just happened to"
-	line "come through ROCK"
+	text "Acabo de cruzar"
+	line "el TÚNEL ROCA."
 
-	para "TUNNEL. There was"
-	line "some commotion at"
-	cont "the POWER PLANT."
+	para "Pasaba algo en la"
+	line "CENTRAL ENERGÍA."
 	done
 
 SaffronPokecenter1FFisherReturnedMachinePartText:
-	text "Caves collapse"
-	line "easily."
+	text "Las cuevas suelen"
+	line "derrumbarse."
 
-	para "Several caves have"
-	line "disappeared in the"
+	para "Últimamente han"
+	line "desaparecido"
 
-	para "past few years,"
-	line "like the one out-"
-	cont "side CERULEAN."
+	para "varias cuevas,"
+	line "como la de"
+	cont "CIUDAD CELESTE."
 
-	para "As a pro HIKER,"
-	line "that's common"
-	cont "knowledge."
+	para "Para un MONTAÑERO"
+	line "profesional, eso"
+	cont "es obvio."
 	done
 
 SaffronPokecenter1FYoungsterText:
-	text "SILPH CO.'s HEAD"
-	line "OFFICE and the"
+	text "La OFICINA CENTRAL"
+	line "de SILPH S.A. y"
 
-	para "MAGNET TRAIN STA-"
-	line "TION--they're the"
+	para "la ESTACIÓN del"
+	line "MAGNETOTRÉN son"
 
-	para "places to see in"
-	line "SAFFRON."
+	para "los lugares más"
+	line "vistos de AZAFRÁN."
 	done
 
 SaffronPokecenter1F_MapEvents:

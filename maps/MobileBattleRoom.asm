@@ -54,14 +54,14 @@ MobileBattleRoomConsoleScript:
 	end
 
 MobileBattleRoom_EstablishingCommsText:
-	text "Establishing"
-	line "communications…"
+	text "Estableciendo"
+	line "conexión…"
 	done
 
 MobileBattleRoom_HealText:
-	text "Your #MON will"
-	line "be fully healed"
-	cont "before battle."
+	text "Tus #MON serán"
+	line "curados totalmente"
+	cont "antes del combate."
 	done
 
 MobileBattleRoom_MapEvents:

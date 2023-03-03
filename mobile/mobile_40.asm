@@ -5674,7 +5674,7 @@ Function1027eb:
 	ret
 
 .Stats_Trade:
-	db "STATS     TRADE@"
+	db "ESTAD.    TRATO@"
 
 Function102814:
 	ld a, [wMenuCursorY]
@@ -5976,8 +5976,8 @@ Function1029fe:
 	ret
 
 String_102a26:
-	db   "TRADE"
-	next "CANCEL"
+	db   "TRATO"
+	next "CANCELAR"
 	db   "@"
 
 MenuData3_102a33:
@@ -6484,7 +6484,7 @@ Function102e07:
 	ret
 
 .waiting
-	db "Waiting...!@"
+	db "¡ESPERA.…!@"
 
 Function102e3e:
 	ld de, .CANCEL
@@ -6493,7 +6493,7 @@ Function102e3e:
 	ret
 
 .CANCEL:
-	db "CANCEL@"
+	db "CANCELAR@"
 
 Function102e4f:
 	farcall Function16d42e
@@ -6581,9 +6581,8 @@ Function102ee7:
 	ret
 
 String_102ef4:
-	db   "Too bad! The trade"
-	next "was canceled!"
-	db   "@"
+	db   "¡Mal! ¡El trato"
+	next "está cancelado!@"
 
 Function102f15:
 	call Function102dc3
@@ -6603,7 +6602,7 @@ Function102f32:
 	ret
 
 .TradeCompleted:
-	db "Trade completed!@"
+	db "TRATO COMPLETADO@"
 
 Function102f50:
 	call Function102dc3

@@ -35,85 +35,80 @@ Route24RocketScript:
 	end
 
 Route24RocketSeenText:
-	text "Hey, kid! Me am a"
-	line "TEAM ROCKET member"
-	cont "kind of guy!"
+	text "¡Eh, tú! ¡Un"
+	line "miembro del TEAM"
+	cont "ROCKET ser yo!"
 
-	para "Come from another"
-	line "country, a trainer"
-	cont "number one, me!"
+	para "Ser de otro país."
+	line "Entrenador número"
+	cont "uno, ¡yo ése!"
 
-	para "Think I did, if"
-	line "stop the energy,"
+	para "Pensar hice. Si"
+	line "cortar energía,"
 
-	para "be big panic for"
-	line "here people!"
+	para "¡mucho pánico"
+	line "aquí todos!"
 
-	para "Secret it is my"
-	line "mission, so tell"
-	cont "you I not!"
+	para "Misión secreta"
+	line "es, ¡no contar"
+	cont "a ti!"
 
-	para "But! If win you do"
-	line "versus me, a man I"
+	para "Pero, si ganar a"
+	line "mí, un hombre"
 
-	para "be and mine secret"
-	line "to you I tell."
+	para "soy y secreto mío"
+	line "a ti contar."
 
-	para "Hey, kid! Battle"
-	line "begin we do!"
+	para "¡Eh, tú!"
+	line "¡Lucha empezar!"
 	done
 
 Route24RocketBeatenText:
-	text "Ayieeeh! No, no,"
-	line "no, believe it I"
-	cont "can't!"
+	text "¡Ayyyy! ¡No, no,"
+	line "no! ¡Creer no"
+	cont "puedo!"
 
-	para "Strong very much"
-	line "be you! Match I am"
-	cont "not to you!"
+	para "¡Fuerte mucho"
+	line "eres! ¡Rival"
+	cont "para ti no soy!"
 	done
 
 Route24RocketAfterBattleText:
-	text "OK. Tell you mine"
-	line "secret will I."
+	text "Vale. Contar"
+	line "secreto a ti."
 
-	para "MACHINE PART steal"
-	line "by me, hide it I"
+	para "MAQUINARIA yo"
+	line "robar, escondida"
 
-	para "did in GYM of the"
-	line "CERULEAN."
+	para "en GIMNASIO de"
+	line "CELESTE."
 
-	para "Inside water put"
-	line "it I did. Look for"
+	para "En agua yo poner."
+	line "Mirar en centro de"
+	cont "agua de GIMNASIO."
 
-	para "in water center of"
-	line "GYM at."
+	para "¡Pero tú no"
+	line "olvidar a mí!"
 
-	para "But you forget me"
-	line "not!"
+	para "TEAM ROCKET seguro"
+	line "derrotar a ti."
 
-	para "Beat you for sure"
-	line "will TEAM ROCKET."
-
-	para "Come from JOHTO"
-	line "will they, mine"
-
-	para "friends, yes. Will"
-	line "revenge they are."
+	para "Míos amigos venir"
+	line "de JOHTO, sí."
+	cont "Vengar ellos a mí."
 	done
 
 Route24RocketDisappearsText:
 	text "…"
 
-	para "You say what? TEAM"
-	line "ROCKET bye-bye a"
+	para "¿Dices que TEAM"
+	line "ROCKET adiós?"
 
-	para "go-go? Broken it"
-	line "is says you?"
+	para "¿Roto? ¿Eso dices?"
 
-	para "Oh, no! Should I"
-	line "do what now on"
-	cont "from, me?"
+	para "¡Oh, no! ¿Debo ir"
+	line "por cuenta mía"
+	cont "ahora?"
 	done
 
 Route24_MapEvents:

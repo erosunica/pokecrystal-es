@@ -1,70 +1,77 @@
 WadeAskNumber1Text:
-	text "You're awesome!"
-	line "I like you!"
+	text "¡Eres increíble!"
+	line "¡Me gustas!"
 
-	para "I look for #MON"
-	line "here every day."
+	para "Busco #MON aquí"
+	line "todos los días."
 
-	para "When I'm in the"
-	line "grass, I find all"
-	cont "kinds of BERRIES."
+	para "Cuando salgo al"
+	line "campo, encuentro"
 
-	para "If you'd like,"
-	line "I'll share some."
+	para "toda clase de"
+	line "BAYAS."
 
-	para "Could I get your"
-	line "phone number?"
+	para "Si quieres, te"
+	line "daré algunas."
+
+	para "¿Me das tu número"
+	line "de teléfono?"
 	done
 
 WadeAskNumber2Text:
-	text "When I'm in the"
-	line "grass, I find all"
-	cont "kinds of BERRIES."
+	text "Cuando salgo al"
+	line "campo, encuentro"
 
-	para "If you'd like,"
-	line "I'll share some."
+	para "toda clase de"
+	line "BAYAS."
 
-	para "Could I get your"
-	line "phone number?"
+	para "Si quieres, te"
+	line "daré algunas."
+
+	para "¿Me das tu número"
+	line "de teléfono?"
 	done
 
 WadeNumberAcceptedText:
-	text "You'll hear from"
-	line "me as soon as I"
+	text "Oirás de mí tan"
+	line "pronto como"
 
-	para "find anything that"
-	line "you might like."
+	para "encuentre algo que"
+	line "te pueda gustar."
 	done
 
 WadeNumberDeclinedText:
-	text "Oh well. Don't be"
-	line "shy if you want to"
-	cont "get my number."
+	text "Bueno, no dudes"
+	line "en pedirme mi nú-"
+	cont "mero de teléfono."
 	done
 
 WadePhoneFullText:
-	text "Your phone list"
-	line "has no room for my"
-	cont "number."
+	text "Tu agenda de"
+	line "teléfonos no tiene"
+
+	para "espacio para mi"
+	line "número."
 	done
 
 WadeRematchText:
-	text "I was waiting for"
-	line "you. Let's battle!"
+	text "Te esperaba."
+	line "¡Luchemos!"
 	done
 
 WadeGiftText:
-	text "Good to see you!"
-	line "See? This is what"
+	text "¡Qué bien que has"
+	line "venido! Esto es lo"
 
-	para "I found."
-	line "It's for you!"
+	para "que he encontrado."
+	line "¡Es para ti!"
 	done
 
 WadePackFullText:
-	text "Oops, your PACK's"
-	line "full. Too bad."
+	text "Vaya, tu MOCHILA"
+	line "está llena."
+	cont "Mala suerte."
 
-	para "You should come"
-	line "back for it later."
+	para "Debes volver más"
+	line "tarde."
 	done

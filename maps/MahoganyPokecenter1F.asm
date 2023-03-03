@@ -22,33 +22,35 @@ MahoganyPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer MahoganyPokecenter1FCooltrainerFText
 
 MahoganyPokecenter1FPokefanMText:
-	text "What's this? TEAM"
-	line "ROCKET has come"
-	cont "back?"
+	text "¿Qué pasa?"
+	line "¿Ha vuelto el"
+	cont "TEAM ROCKET?"
 
-	para "I saw some men in"
-	line "black at LAKE OF"
-	cont "RAGE…"
+	para "He visto hombres"
+	line "de negro en el"
+	cont "LAGO DE LA FURIA."
 	done
 
 MahoganyPokecenter1FYoungsterText:
-	text "I stop my #MON"
-	line "from evolving too"
-	cont "early."
+	text "No permito que mis"
+	line "#MON evolu-"
+	cont "cionen demasiado"
+	cont "pronto."
 
-	para "I make them learn"
-	line "certain moves be-"
-	cont "fore I let them"
-	cont "evolve."
+	para "Antes de dejarles"
+	line "evolucionar, les"
+
+	para "enseño algunos"
+	line "movimientos."
 	done
 
 MahoganyPokecenter1FCooltrainerFText:
-	text "#MON do become"
-	line "stronger when they"
+	text "Al evolucionar,"
+	line "los #MON se"
 
-	para "evolve, but they"
-	line "also learn moves"
-	cont "more slowly."
+	para "fortalecen, pero"
+	line "tardan más en"
+	cont "aprender ataques."
 	done
 
 MahoganyPokecenter1F_MapEvents:

@@ -1,82 +1,81 @@
 BeverlyMadeMonEvenCuterText:
-	text "I fancied up my"
-	line "@"
+	text "¡He arreglado a"
+	line "mi @"
 	text_ram wStringBuffer4
-	text " and"
+	text " y"
 
-	para "made it even cuter"
-	line "than before!"
+	para "está más guapo que"
+	line "nunca!"
 	done
 
 BeverlyDefeatedMonText:
-	text "I happened to come"
-	line "across a wild"
-	cont "SNUBBULL recently."
+	text "Hace poco me"
+	line "encontré con un"
+	cont "SNUBBULL salvaje."
 
-	para "My SNUBBULL, I"
-	line "assure you, was"
+	para "Te puedo asegurar"
+	line "que mi SNUBBULL"
 
-	para "far cuter than the"
-	line "wild one."
+	para "es mucho más guapo"
+	line "que el salvaje."
 	done
 
 BeverlyLostAMonText:
-	text "I happened to see"
-	line "a wild MARILL the"
+	text "Hace poco me"
+	line "encontré con un"
 
-	para "other day."
-	line "Or so I thought."
+	para "MARILL salvaje."
+	line "O eso pensaba."
 
-	para "A closer look"
-	line "showed it was"
+	para "Mirándolo más de"
+	line "cerca vi que era"
 
-	para "@"
+	para "un @"
 	text_ram wStringBuffer4
-	text ". I was"
-	line "quite miffed."
+	text "."
+	line "Me disgusté mucho."
 	done
 
 BeverlyHangUpText:
-	text "You can expect a"
-	line "call from me."
+	text "Seguro que te"
+	line "llamaré."
 	done
 
 BeverlyFoundItemText:
-	text "My husband got"
-	line "some NUGGETS."
+	text "Mi marido obtuvo"
+	line "algunas PEPITAS."
 
-	para "If you'd like, you"
-	line "could have one as"
+	para "Si quieres, puedes"
+	line "quedarte con una"
+	cont "por ayudarme."
 
-	para "thanks for helping"
-	line "me out."
-
-	para "I'll be at"
+	para "Estaré en"
 	line "@"
 	text_ram wStringBuffer5
 	text "."
 
-	para "Please come see me"
-	line "when you can."
+	para "Por favor, ven a"
+	line "verme cuando"
+	cont "puedas."
 	done
 
 BeverlyLetsChatAboutMonAgainText:
-	text "Are your #MON"
-	line "in prime form?"
+	text "¿Están tus #MON"
+	line "en forma?"
 
-	para "Let's chat about"
-	line "#MON again."
+	para "Hablemos de"
+	line "#MON otra vez."
 	done
 
 BeverlyComePickUpText:
-	text "Pardon?"
-	line "Oh, the NUGGET?"
+	text "¿Perdón?"
+	line "Oh… ¿la PEPITA?"
 
-	para "There's no need to"
-	line "hurry. Come see me"
+	para "No necesitas darte"
+	line "prisa. Ven a verme"
 
-	para "in @"
+	para "a @"
 	text_ram wStringBuffer5
 	text_start
-	line "when you can."
+	line "cuando puedas."
 	done

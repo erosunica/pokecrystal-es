@@ -56,108 +56,106 @@ ItemFinderHouseRadio:
 	jumpstd radio2
 
 EcruteakItemfinderAdventureText:
-	text "Ah. You're on an"
-	line "adventure with"
-	cont "your #MON?"
+	text "¡Ah! ¿Vas de"
+	line "aventura con tus"
+	cont "#MON?"
 
-	para "Well, what's an"
-	line "adventure without"
-	cont "treasure hunting?"
+	para "¿Y qué es una"
+	line "aventura sin un"
+	cont "tesoro?"
 
-	para "Am I right, or am"
-	line "I right?"
+	para "¿Tengo razón o no?"
 	done
 
 EcruteakItemfinderTrueSpiritText:
-	text "Good! You under-"
-	line "stand the true"
+	text "¡Bien! Entiendes"
+	line "el verdadero"
 
-	para "spirit of adven-"
-	line "ture."
+	para "espíritu de la"
+	line "aventura."
 
-	para "I like that! Take"
-	line "this with you."
+	para "¡Me gusta!"
+	line "Toma esto."
 	done
 
 ItemfinderExplanationText:
-	text "There are many"
-	line "items lying about"
+	text "Por aquí hay"
+	line "muchos objetos que"
 
-	para "that aren't ob-"
-	line "vious."
+	para "no se ven tan"
+	line "fácilmente."
 
-	para "Use ITEMFINDER to"
-	line "check if there is"
+	para "Utiliza el"
+	line "BUSCAOBJETOS para"
 
-	para "an item on the"
-	line "ground near you."
+	para "saber si hay algún"
+	line "objeto cerca."
 
-	para "It doesn't show"
-	line "the exact spot,"
+	para "Éste no indica el"
+	line "lugar exacto, así"
 
-	para "so you'll have to"
-	line "look yourself."
+	para "que tú tendrás que"
+	line "encontrarlo."
 
-	para "Oh yeah--I heard"
-	line "there are items"
+	para "¡Ah, sí! Dicen que"
+	line "hay muchos objetos"
 
-	para "in ECRUTEAK's"
-	line "BURNED TOWER."
+	para "en TORRE QUEMADA"
+	line "de CIUDAD IRIS."
 	done
 
 EcruteakItemfinderToEachHisOwnText:
-	text "Oh… To each his"
-	line "own, I suppose…"
+	text "¡Oh! A cada uno lo"
+	line "suyo, supongo…"
 	done
 
 EcruteakHistoryBookText:
-	text "HISTORY OF"
-	line "ECRUTEAK"
+	text "HISTORIA de"
+	line "CIUDAD IRIS"
 
-	para "Want to read it?"
+	para "¿Quieres leerla?"
 	done
 
 EcruteakTwoTowersText:
-	text "In ECRUTEAK, there"
-	line "were two towers."
+	text "En CIUDAD IRIS"
+	line "había dos torres."
 
-	para "Each tower was the"
-	line "roost of powerful"
-	cont "flying #MON."
+	para "Cada una acogía a"
+	line "un fuerte #MON"
+	cont "volador."
 
-	para "But one of the"
-	line "towers burned to"
-	cont "the ground."
+	para "Pero una de ellas"
+	line "se quemó."
 
-	para "The two #MON"
-	line "haven't been seen"
-	cont "since…"
+	para "Y desde entonces"
+	line "no se ha visto a"
 
-	para "Keep reading?"
+	para "ninguno de los dos"
+	line "#MON."
+
+	para "¿Sigues leyendo?"
 	done
 
 EcruteakThreeMonText:
-	text "ECRUTEAK was also"
-	line "home to three"
+	text "En CIUDAD IRIS"
+	line "también vivían"
 
-	para "#MON that raced"
-	line "around the town."
+	para "tres #MON que"
+	line "corrían por toda"
+	cont "la ciudad."
 
-	para "They were said to"
-	line "have been born of"
+	para "Dicen que habían"
+	line "nacido del agua,"
 
-	para "water, lightning"
-	line "and fire."
+	para "del fuego y del"
+	line "rayo."
 
-	para "But they could not"
-	line "contain their"
-	cont "excessive power."
+	para "Pero como no"
+	line "podían contener su"
+	cont "enorme fuerza…"
 
-	para "So they say the"
-	line "three ran like the"
-
-	para "wind off into the"
-	line "grassland."
+	para "Huyeron hacia los"
+	line "pastos."
 	done
 
 EcruteakItemfinderHouse_MapEvents:

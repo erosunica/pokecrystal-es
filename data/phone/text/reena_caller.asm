@@ -1,88 +1,90 @@
 ReenaMonsIsAPerfectMatchText:
-	text "Listen, dear…"
+	text "Escucha, joven…"
 
-	para "Do you recall my"
+	para "¿Te acuerdas de mi"
 	line "@"
 	text_ram wStringBuffer4
 	text "?"
 
-	para "Yes, exactly. That"
-	line "lovely @"
+	para "Exactamente. Ese"
+	line "bonito @"
 	text_ram wStringBuffer4
 	text "."
 
-	para "Wouldn't you agree"
-	line "it's a perfect"
-	cont "match for me?"
+	para "¿No opinas que es"
+	line "una pareja"
+	cont "perfecta para mí?"
 	done
 
 ReenaDefeatedMonText:
-	text "Have I ever faced"
-	line "a wild @"
-	text_ram wStringBuffer4
-	text "?"
-
-	para "You need to ask?"
+	text "¿Que si me he"
+	line "enfrentado a un"
 
 	para "@"
 	text_ram wStringBuffer4
-	text " I've"
-	line "beaten on numerous"
-	cont "occasions!"
+	text_start
+	line "salvaje alguna"
+	cont "vez?"
+
+	para "¿No lo sabes?"
+
+	para "¡He derrotado a"
+	line "miles de"
+	cont "@"
+	text_ram wStringBuffer4
+	text "!"
 	done
 
 ReenaLostAMonText:
-	text "Have I ever failed"
-	line "to catch a wild"
-	cont "#MON?"
+	text "¿Alguna vez no he"
+	line "podido atrapar a"
+	cont "un #MON?"
 
-	para "You need to ask?"
+	para "¿No lo sabes?"
 
-	para "I would never fail"
-	line "to catch a wild"
+	para "Nunca dejaría"
+	line "escapar a un"
 
 	para "@"
 	text_ram wStringBuffer4
-	text "…"
-	line "Oh! Never mind!"
+	text_start
+	line "salvaje…"
+
+	para "¡Bah! ¡Da igual!"
 	done
 
 ReenaBattleRematchText:
-	text "We are going to"
-	line "battle!"
+	text "¡Vamos a luchar!"
 
-	para "The place shall be"
+	para "¡Te espero en"
 	line "@"
 	text_ram wStringBuffer5
 	text "!"
 
-	para "Don't make me"
-	line "wait! Got it?"
+	para "¡No tardes mucho!"
+	line "¿Lo coges?"
 	done
 
 ReenaHangUpText:
-	text "Fine, you may go."
+	text "Bien, puedes irte."
 	done
 
 ReenaForwardText:
-	text "Don't be too proud"
-	line "just because you"
+	text "No te enorgullez-"
+	line "cas tanto por"
+	cont "haberme vencido…"
 
-	para "happened to beat"
-	line "me… "
-
-	para "It was a fluke!"
+	para "¡Ha sido chiripa!"
 	done
 
 ReenaHurryText:
-	text "What are you"
-	line "doing?"
+	text "¿Qué haces?"
 
-	para "I told you that"
-	line "the place was"
+	para "¡Te dije que te"
+	line "esperaba en"
 
 	para "@"
 	text_ram wStringBuffer5
 	text "!"
-	line "Don't try to run!"
+	line "¡No intentes huir!"
 	done

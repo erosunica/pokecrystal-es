@@ -13,17 +13,18 @@ LavenderSpeechHouseBookshelf:
 	jumpstd picturebookshelf
 
 LavenderSpeechHousePokefanFText:
-	text "LAVENDER is a"
-	line "tiny, quiet town"
+	text "El PUEBLO LAVANDA"
+	line "es un pequeño y"
 
-	para "at the foot of the"
-	line "mountains."
+	para "apacible lugar,"
+	line "al pie de las"
+	cont "montañas."
 
-	para "It's gotten a bit"
-	line "busier since the"
+	para "Desde que se"
+	line "construyó la TORRE"
 
-	para "RADIO TOWER was"
-	line "built."
+	para "RADIO, acude algo"
+	line "más de gente."
 	done
 
 LavenderSpeechHouse_MapEvents:

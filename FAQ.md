@@ -3,8 +3,6 @@
 
 ## Questions
 
-- [What is pokecrystal11.gbc?](#what-is-pokecrystal11gbc)
-- [What is pokecrystal-au.gbc?](#what-is-pokecrystal-augbc)
 - [I can't build the ROM, `make` just prints an error!](#i-cant-build-the-rom-make-just-prints-an-error)
   - [`gcc`: command not found](#gcc-command-not-found)
   - ["ERROR: `UNION` already defined"](#error-union-already-defined)
@@ -17,15 +15,6 @@
 - [How do I edit the colors of an image?](#how-do-i-edit-the-colors-of-an-image)
 - [How do I write new features?](#how-do-i-write-new-features)
 - [I need more help!](#i-need-more-help)
-
-
-## What is pokecrystal11.gbc?
-
-Version 1.1 of Pokémon Crystal, which fixed some issues with the initial international release. `make crystal11` defines `_CRYSTAL11` so the assembly builds the changed version.
-
-## What is pokecrystal-au.gbc?
-
-The Australian release of Pokémon Crystal, which is based on the international 1.1 release but censors gambling references from the Game Corners. `make crystal-au` defines `_CRYSTAL11` and `_CRYSTAL_AU` so the assembly builds the changed version.
 
 
 ## I can't build the ROM, `make` just prints an error!
@@ -52,7 +41,7 @@ If you are using 64-bit Windows, download [**64-bit Cygwin**][cygwin] and [**64-
 
 If you have not changed any of the asm, make sure you have the latest version of pokecrystal and the correct version of rgbds (see [INSTALL.md](INSTALL.md)).
 
-If you added or changed any code, it has to fit in the **memory banks**. The 2MB ROM is divided into 128 banks of 4KB ($4000 bytes) each, numbered $00 to $7F. The linkerscript [pokecrystal.link](pokecrystal.link) lists which `SECTION`s go in which banks. Try moving some code into a new section.
+If you added or changed any code, it has to fit in the **memory banks**. The 2MB ROM is divided into 128 banks of 4KB ($4000 bytes) each, numbered $00 to $7F. The linkerscript [pokecrystal-es.link](pokecrystal-es.link) lists which `SECTION`s go in which banks. Try moving some code into a new section.
 
 ### "Invalid file or object file version"
 

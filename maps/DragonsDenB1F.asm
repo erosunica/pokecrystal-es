@@ -203,204 +203,209 @@ MovementDragonsDen_ClairWalksAway:
 	step_end
 
 ClairText_Wait:
-	text "Wait!"
+	text "¡Espera!"
 	done
 
 ClairText_GiveDragonbreathDragonDen:
-	text "CLAIR: I'm sorry"
-	line "about this."
+	text "DÉBORA: Siento"
+	line "todo esto."
 
-	para "Here, take this as"
-	line "my apology."
+	para "Toma esto en señal"
+	line "de disculpa."
 	done
 
 NotifyReceiveDragonbreath:
-	text "<PLAYER> received"
-	line "TM24."
+	text "<PLAYER> recibió"
+	line "MT24."
 	done
 
 ClairText_DescribeDragonbreathDragonDen:
-	text "That contains"
-	line "DRAGONBREATH."
+	text "Esta MT contiene"
+	line "DRAGOALIENTO."
 
-	para "No, it doesn't"
-	line "have anything to"
-	cont "do with my breath."
+	para "No, no tiene nada"
+	line "que ver con mi"
+	cont "aliento."
 
-	para "If you don't want"
-	line "it, you don't have"
-	cont "to take it."
+	para "Si no la quieres,"
+	line "no es necesario"
+	cont "que la aceptes."
 	done
 
 ClairText_NoRoom:
-	text "Oh? You don't have"
-	line "any room for this."
+	text "¿Eh? No tienes"
+	line "sitio para esto."
 
-	para "I'm going back to"
-	line "the GYM, so make"
+	para "Me vuelvo al"
+	line "GIMNASIO, así que"
 
-	para "room, then come"
-	line "see me there."
+	para "haz hueco y ven a"
+	line "verme allí."
 	done
 
 ClairText_WhatsTheMatterDragonDen:
-	text "CLAIR: What's the"
-	line "matter? Aren't you"
+	text "DÉBORA: ¿Qué pasa?"
+	line "¿No vas a la LIGA"
+	cont "#MON?"
 
-	para "going on to the"
-	line "#MON LEAGUE?"
+	para "¿Sabes cómo ir"
+	line "hasta allí?"
 
-	para "Do you know how to"
-	line "get there?"
+	para "Desde aquí, ve a"
+	line "PUEBLO PRIMAVERA."
 
-	para "From here, go to"
-	line "NEW BARK TOWN."
+	para "Ve hacia el Este,"
+	line "con SURF, a la"
+	cont "LIGA #MON."
 
-	para "Then SURF east to"
-	line "#MON LEAGUE."
+	para "La ruta es muy"
+	line "dura."
 
-	para "The route there is"
-	line "very tough."
+	para "¡No te atrevas a"
+	line "perder en la LIGA"
+	cont "#MON!"
 
-	para "Don't you dare"
-	line "lose at the #-"
-	cont "MON LEAGUE!"
+	para "¡Si lo haces, me"
+	line "sentará muy mal"
 
-	para "If you do, I'll"
-	line "feel even worse"
+	para "haber perdido"
+	line "contigo!"
 
-	para "about having lost"
-	line "to you!"
-
-	para "Give it everything"
-	line "you've got."
+	para "Haz todo lo que"
+	line "puedas."
 	done
 
 DragonShrineSignpostText:
-	text "DRAGON SHRINE"
+	text "SANTUARIO DRAGÓN"
 
-	para "A shrine honoring"
-	line "the dragon #MON"
+	para "Erigido en honor"
+	line "de los #MON"
 
-	para "said to have lived"
-	line "in DRAGON'S DEN."
+	para "dragón de la"
+	line "GUARIDA DRAGÓN"
 	done
 
 SilverText_Training1:
 	text "…"
-	line "What? <PLAYER>?"
+	line "¿Qué? ¿<PLAYER>?"
 
-	para "…No, I won't"
-	line "battle you now…"
+	para "No, no lucharé"
+	line "contra ti…"
 
-	para "My #MON aren't"
-	line "ready to beat you."
+	para "Mis #MON no"
+	line "pueden ganarte."
 
-	para "I can't push them"
-	line "too hard now."
+	para "Y ahora no puedo"
+	line "presionarles."
 
-	para "I have to be dis-"
-	line "ciplined to become"
+	para "La disciplina es"
+	line "clave para ser el"
 
-	para "the greatest #-"
-	line "MON trainer…"
+	para "mejor entrenador"
+	line "#MON."
 	done
 
 SilverText_Training2:
 	text "…"
 
-	para "Whew…"
+	para "¡Vaya…!"
 
-	para "Learn to stay out"
-	line "of my way…"
+	para "Aprende a no"
+	line "cruzarte en mi"
+	cont "camino."
 	done
 
 CooltrainermDarinSeenText:
-	text "You! How dare you"
-	line "enter uninvited!"
+	text "¡Tú! ¿Cómo te"
+	line "atreves a entrar"
+
+	para "sin que te hayan"
+	line "invitado?"
 	done
 
 CooltrainermDarinBeatenText:
-	text "S-strong!"
+	text "¡Qué fuerte!"
 	done
 
 CooltrainermDarinAfterBattleText:
-	text "The SHRINE ahead"
-	line "is home to the"
+	text "El SANTUARIO de"
+	line "ahí delante es el"
 
-	para "MASTER of our"
-	line "dragon-user clan."
+	para "hogar del MAESTRO"
+	line "del clan de los"
+	cont "dragones."
 
-	para "You're not allowed"
-	line "to just go in!"
+	para "¡No te está"
+	line "permitido pasar!"
 	done
 
 CooltrainerfCaraSeenText:
-	text "You shouldn't be"
-	line "in here!"
+	text "¡No deberías estar"
+	line "aquí!"
 	done
 
 CooltrainerfCaraBeatenText:
-	text "Oh yikes, I lost!"
+	text "¡Oh, maldición!"
+	line "¡Perdí!"
 	done
 
 CooltrainerfCaraAfterBattleText:
-	text "Soon I'm going to"
-	line "get permission"
+	text "Pronto conseguiré"
+	line "el permiso del"
 
-	para "from our MASTER to"
-	line "use dragons."
+	para "MAESTRO para poder"
+	line "usar dragones."
 
-	para "When I do, I'm"
-	line "going to become an"
+	para "Cuando lo tenga,"
+	line "seré una admirable"
 
-	para "admirable dragon"
-	line "trainer and gain"
+	para "entrenadora de"
+	line "dragones y ganaré"
 
-	para "our MASTER's"
-	line "approval."
+	para "la aprobación del"
+	line "MAESTRO."
 	done
 
 TwinsLeaandpia1SeenText:
-	text "It's a stranger we"
-	line "don't know."
+	text "Es alguien que no"
+	line "conocemos."
 	done
 
 TwinsLeaandpia1BeatenText:
-	text "Ouchies."
+	text "Ayyyy…"
 	done
 
 TwinsLeaandpia1AfterBattleText:
-	text "It was like having"
-	line "to battle LANCE."
+	text "Fue como tener que"
+	line "luchar con LANCE."
 	done
 
 TwinsLeaandpia2SeenText:
-	text "Who are you?"
+	text "¿Quién eres tú?"
 	done
 
 TwinsLeaandpia2BeatenText:
-	text "Meanie."
+	text "Qué cutre."
 	done
 
 TwinsLeaandpia2AfterBattleText:
-	text "We'll tell on you."
+	text "Te lo avisamos."
 
-	para "MASTER will be"
-	line "angry with you."
+	para "El MAESTRO se"
+	line "enfadará contigo."
 	done
 
 Text_FoundDragonFang:
-	text "<PLAYER> found"
+	text "¡<PLAYER> encontró"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
 	done
 
 Text_NoRoomForDragonFang:
-	text "But <PLAYER> can't"
-	line "carry any more"
-	cont "items."
+	text "Pero <PLAYER> no"
+	line "puede llevar"
+	cont "más cosas."
 	done
 
 DragonsDenB1F_MapEvents:

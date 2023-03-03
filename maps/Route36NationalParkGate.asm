@@ -474,379 +474,382 @@ Route36NationalParkGatePlayerWaitWithContestantsMovement:
 	step_end
 
 Route36NationalParkGateOfficer1AskToParticipateText:
-	text "Today's @"
+	text "Hoy es @"
 	text_ram wStringBuffer3
 	text "."
-	line "That means the"
+	line "Eso significa que"
 
-	para "Bug-Catching Con-"
-	line "test is on today."
+	para "hoy es el Concurso"
+	line "Captura de Bichos."
 
-	para "The rules are sim-"
-	line "ple."
+	para "Las reglas son"
+	line "sencillas."
 
-	para "Using one of your"
-	line "#MON, catch a"
+	para "Usa uno de tus"
+	line "#MON y captura"
 
-	para "bug #MON to be"
-	line "judged."
+	para "un #MON bicho"
+	line "para ganar."
 
-	para "Would you like to"
-	line "give it a try?"
+	para "¿Te gustaría"
+	line "intentarlo?"
 	done
 
 Route36NationalParkGateOfficer1GiveParkBallsText:
-	text "Here are the PARK"
-	line "BALLS for the"
-	cont "Contest."
+	text "Aquí tienes las"
+	line "PARQUE BALL para"
+	cont "el Concurso."
 	done
 
 Route36NationalParkGatePlayerReceivedParkBallsText:
-	text "<PLAYER> received"
-	line "20 PARK BALLS."
+	text "<PLAYER> recibió"
+	line "20 PARQUE BALL."
 	done
 
 Route36NationalParkGateOfficer1ExplainsRulesText:
-	text "The person who"
-	line "gets the strong-"
-	cont "est bug #MON"
-	cont "is the winner."
+	text "Aquel que consiga"
+	line "el #MON bicho"
 
-	para "You have 20"
-	line "minutes."
+	para "más fuerte será el"
+	line "ganador."
 
-	para "If you run out of"
-	line "PARK BALLS, you're"
-	cont "done."
+	para "Tienes 20 minutos."
 
-	para "You can keep the"
-	line "last #MON you"
-	cont "catch as your own."
+	para "Si te quedas sin"
+	line "PARQUE BALL, no"
+	cont "tendrás opción."
 
-	para "Go out and catch"
-	line "the strongest bug"
+	para "Puedes quedarte"
+	line "el último #MON"
+	cont "que captures."
 
-	para "#MON you can"
-	line "find!"
+	para "¡Sal y captura"
+	line "el #MON"
+
+	para "bicho más fuerte"
+	line "que encuentres!"
 	done
 
 Route36NationalParkGateOfficer1AskToUseFirstMonText:
-	text "Uh-oh…"
+	text "¡Oh, oh…!"
 
-	para "You have more than"
-	line "one #MON."
+	para "Tienes más de un"
+	line "#MON."
 
-	para "You'll have to use"
+	para "Tendrás que usar"
 	line "@"
 	text_ram wStringBuffer3
-	text ", the"
+	text ", el"
 
-	para "first #MON in"
-	line "your party."
+	para "primer #MON de"
+	line "tu equipo."
 
-	para "Is that OK with"
-	line "you?"
+	para "¿Te parece bien?"
 	done
 
 Route36NationalParkGateOfficer1WellHoldYourMonText:
-	text "Fine, we'll hold"
-	line "your other #MON"
-	cont "while you compete."
+	text "Bien, guardaremos"
+	line "los otros #MON"
+	cont "mientras compites."
 	done
 
 Route36NationalParkGatePlayersMonLeftWithHelperText:
-	text "<PLAYER>'s #MON"
-	line "were left with the"
-	cont "CONTEST HELPER."
+	text "Los #MON de"
+	line "<PLAYER> se quedan"
+	cont "con el AYUDANTE."
 	done
 
 Route36NationalParkGateOfficer1ChooseMonAndComeBackText:
-	text "Please choose the"
-	line "#MON to be used"
+	text "Elige los #MON"
+	line "que usarás en el"
 
-	para "in the Contest,"
-	line "then come see me."
+	para "Concurso y luego"
+	line "ven a verme."
 	done
 
 Route36NationalParkGateOfficer1TakePartInFutureText:
-	text "OK. We hope you'll"
-	line "take part in the"
-	cont "future."
+	text "Bien. Esperamos"
+	line "volver a verte"
+	cont "por aquí pronto."
 	done
 
 Route36NationalParkGateOfficer1FirstMonCantBattleText:
-	text "Uh-oh…"
-	line "The first #MON"
+	text "¡Oh, oh…!"
+	line "El primer #MON"
 
-	para "in your party"
-	line "can't battle."
+	para "de tu equipo no"
+	line "puede luchar."
 
-	para "Please switch it"
-	line "with the #MON"
+	para "Sustitúyelo por"
+	line "el #MON que"
 
-	para "you want to use,"
-	line "then come see me."
+	para "quieras usar y"
+	line "luego ven a verme."
 	done
 
 Route36NationalParkGateOfficer1MakeRoomText:
-	text "Uh-oh…"
-	line "Both your party"
+	text "¡Oh, oh…!"
+	line "Tu equipo y tu"
 
-	para "and your PC BOX"
-	line "are full."
+	para "CAJA del PC están"
+	line "llenos."
 
-	para "You have no room"
-	line "to put the bug"
-	cont "#MON you catch."
+	para "No tienes sitio"
+	line "para guardar el"
+	cont "#MON bicho."
 
-	para "Please make room"
-	line "in your party or"
+	para "Haz sitio en tu"
+	line "equipo o en la"
 
-	para "your PC BOX, then"
-	line "come see me."
+	para "CAJA del PC y"
+	line "luego ven a verme."
 	done
 
 Route36NationalParkGateOfficer1EggAsFirstMonText:
-	text "Uh-oh…"
-	line "You have an EGG as"
+	text "¡Oh, oh…! Tienes"
+	line "un HUEVO como"
 
-	para "the first #MON"
-	line "in your party."
+	para "primer #MON"
+	line "de tu equipo."
 
-	para "Please switch it"
-	line "with the #MON"
+	para "Sustitúyelo por"
+	line "el #MON que"
 
-	para "you want to use,"
-	line "then come see me."
+	para "quieras usar y"
+	line "luego ven a verme."
 	done
 
 Route36NationalParkGateOfficer1WantToFinishText:
-	text "You still have @"
+	text "Aún te quedan @"
 	text_ram wStringBuffer3
 	text_start
-	line "minute(s) left."
+	line "minutos."
 
-	para "Do you want to"
-	line "finish now?"
+	para "¿Quieres terminar"
+	line "ahora?"
 	done
 
 Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
-	text "OK. Please wait"
-	line "here for the"
+	text "Bien. Por favor,"
+	line "espera aquí a que"
 
-	para "announcement of"
-	line "the winners."
+	para "se anuncien los"
+	line "ganadores."
 	done
 
 Route36NationalParkGateOfficer1OkGoFinishText:
-	text "OK. Please go back"
-	line "outside and finish"
-	cont "up."
+	text "Bien. Por favor,"
+	line "vuelve fuera y"
+	cont "termina."
 	done
 
 Route36NationalParkGateOfficer1ContestIsOverText:
-	text "Today's Contest is"
-	line "over. We hope you"
+	text "El Concurso ha"
+	line "acabado. Esperamos"
 
-	para "will participate"
-	line "in the future."
+	para "volver a veros por"
+	line "aquí muy pronto."
 	done
 
 Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText:
-	text "Some #MON can"
-	line "only be seen in"
-	cont "the PARK."
+	text "Algunos #MON"
+	line "sólo aparecen en"
+	cont "el PARQUE."
 	done
 
 BugCatchingContestant1BText:
-	text "DON: Wow, you beat"
-	line "me. You're pretty"
-	cont "good."
+	text "RAFA: ¡Uau!"
+	line "Me has vencido."
+	cont "No está mal."
 	done
 
 BugCatchingContestant1BStillCompetingText:
-	text "DON: Luck plays a"
-	line "big part in this."
+	text "RAFA: La suerte"
+	line "cuenta mucho."
 
-	para "You never know"
-	line "what #MON will"
-	cont "appear."
+	para "Nunca se sabe qué"
+	line "#MON va a"
+	cont "aparecer."
 	done
 
 BugCatchingContestant2BText:
-	text "ED: I envy you."
-	line "I just couldn't"
-	cont "do it this time."
+	text "SAM: Te envidio."
+	line "Esta vez no"
+	cont "lo he conseguido."
 	done
 
 BugCatchingContestant2BStillCompetingText:
-	text "ED: Maybe you win"
-	line "with big #MON?"
+	text "SAM: A lo mejor es"
+	line "que has ganado"
+
+	para "porque tus #MON"
+	line "son grandes…"
 	done
 
 BugCatchingContestant3BText:
-	text "NICK: Well done!"
-	line "I'm going to raise"
-	cont "my #MON better."
+	text "NANO: ¡Eso es!"
+	line "Voy a entrenar"
+
+	para "mejor a mis"
+	line "#MON."
 	done
 
 BugCatchingContestant3BStillCompetingText:
-	text "NICK: Maybe you"
-	line "get a higher score"
+	text "NANO: Quizá ganes"
+	line "más puntos por un"
 
-	para "for a #MON of"
-	line "an unusual color."
+	para "#MON de un"
+	line "color inusual."
 	done
 
 BugCatchingContestant4BText:
-	text "WILLIAM: You're"
-	line "the winner? What"
-	cont "did you catch?"
+	text "GUILLE: ¿Ganaste?"
+	line "¿Qué has atrapado?"
 	done
 
 BugCatchingContestant4BStillCompetingText:
-	text "WILLIAM: Well, I'm"
-	line "satisfied because"
+	text "GUILLE: Me alegra"
+	line "haber atrapado el"
 
-	para "I caught a #MON"
-	line "that I wanted."
+	para "#MON que"
+	line "quería."
 	done
 
 BugCatchingContestant5BText:
-	text "BENNY: Congrats!"
-	line "You have earned my"
-	cont "respect!"
+	text "TINO: Enhorabuena."
+	line "¡Te has ganado mi"
+	cont "respeto!"
 	done
 
 BugCatchingContestant5BStillCompetingText:
-	text "BENNY: I caught a"
-	line "SCYTHER before,"
-	cont "but I didn't win."
+	text "TINO: He atrapado"
+	line "un SCYTHER, pero"
+	cont "he perdido."
 	done
 
 BugCatchingContestant6BText:
-	text "BARRY: That #-"
-	line "MON you caught…"
-	cont "it's awesome!"
+	text "BENITO: El #MON"
+	line "que has atrapado…"
+	cont "es impresionante."
 	done
 
 BugCatchingContestant6BStillCompetingText:
-	text "BARRY: It's easier"
-	line "to win if you get"
+	text "BENITO: Es más"
+	line "fácil ganar con"
 
-	para "a high-level bug"
-	line "#MON."
+	para "un #MON bicho"
+	line "de nivel alto."
 
-	para "But I think they"
-	line "also consider some"
-	cont "other points."
+	para "Pero creo que"
+	line "también cuentan"
+	cont "otros aspectos."
 	done
 
 BugCatchingContestant7BText:
-	text "CINDY: You won?"
-	line "That's great!"
+	text "CINDY: ¿Ganaste?"
+	line "¡Qué bien!"
 
-	para "Do you feel like"
-	line "looking for bug"
-	cont "#MON with me?"
+	para "¿Te apetece buscar"
+	line "#MON bicho"
+	cont "conmigo?"
 	done
 
 BugCatchingContestant7BStillCompetingText:
-	text "CINDY: I really"
-	line "love bug #MON!"
+	text "CINDY: ¡Adoro los"
+	line "#MON bicho!"
 	done
 
 BugCatchingContestant8BText:
-	text "JOSH: I… I can't"
-	line "believe I lost at"
-	cont "bug-catching…"
+	text "KAI: ¡No…!"
+	line "No me puedo creer"
+	cont "que haya perdido."
 	done
 
 BugCatchingContestant8BStillCompetingText:
-	text "JOSH: I heard that"
-	line "somebody won with"
-	cont "a CATERPIE!"
+	text "KAI: ¡Dicen que"
+	line "alguien ha ganado"
+	cont "con un CATERPIE!"
 	done
 
 BugCatchingContestant9BText:
-	text "SAMUEL: Next time,"
-	line "I'm going to win."
+	text "SAMUEL: La próxima"
+	line "vez ganaré yo."
 	done
 
 BugCatchingContestant9BStillCompetingText:
-	text "SAMUEL: Darn."
-	line "I thought I would"
-	cont "score higher…"
+	text "SAMUEL: Vaya, creí"
+	line "que obtendría más"
+	cont "puntos…"
 	done
 
 BugCatchingContestant10BText:
-	text "KIPP: Could you"
-	line "give me some tips?"
+	text "KOLDO: ¿Me das"
+	line "algún consejo?"
 
-	para "I want to study"
-	line "your style."
+	para "Quiero estudiar"
+	line "tu estilo."
 	done
 
 BugCatchingContestant10BStillCompetingText:
-	text "KIPP: I study a"
-	line "lot, but that's"
+	text "KOLDO: He"
+	line "estudiado mucho,"
 
-	para "not good enough to"
-	line "win."
+	para "pero eso no vale"
+	line "para ganar."
 	done
 
 UnusedSudowoodoText:
 ; This text is unused and unreferenced in the final game.
 ; The tree Pokémon is Sudowoodo.
 ; The Silph Scope 2 was later reworked into the Squirtbottle.
-	text "I hear there's a"
-	line "#MON that looks"
-	cont "just like a tree."
+	text "Dicen que hay"
+	line "un #MON que"
+	cont "parece un árbol."
 
-	para "You can reveal its"
-	line "identity using a"
-	cont "SILPHSCOPE 2."
+	para "Se puede descubrir"
+	line "su identidad con"
+	cont "el SCOPE SILPH 2."
 	done
 
 UnusedBugCatchingContestExplanationText:
 ; duplicate of BugCatchingContestExplanationText in Route35NationalParkGate.asm
-	text "The Bug-Catching"
-	line "Contest is held on"
+	text "El Concurso de"
+	line "Captura de Bichos"
 
-	para "Tuesday, Thursday"
-	line "and Saturday."
+	para "es los martes,"
+	line "jueves y sábados."
 
-	para "Not only do you"
-	line "earn a prize just"
+	para "No sólo ganas un"
+	line "premio por"
 
-	para "for participating,"
-	line "you also get to"
+	para "participar,"
+	line "sino que también"
 
-	para "keep the bug"
-	line "#MON you may"
+	para "te quedarás con el"
+	line "#MON bicho"
 
-	para "have at the end of"
-	line "the contest."
+	para "que tengas cuando"
+	line "termine."
 	done
 
 Route36NationalParkGateOfficer1WellHoldPrizeText:
-	text "Uh-oh… Your PACK"
-	line "is full."
+	text "¡Vaya…! Tu MOCHILA"
+	line "está llena."
 
-	para "We'll hold on to"
-	line "your prize, but"
-	cont "only for today."
+	para "Guardaremos tu"
+	line "premio, pero sólo"
+	cont "hoy."
 
-	para "Please make room,"
-	line "then come see me."
+	para "Haz sitio en ella"
+	line "y ven a verme."
 	done
 
 Route36NationalParkGateOfficer1HeresThePrizeText:
-	text "<PLAYER>?"
+	text "¿<PLAYER>?"
 
-	para "Here's the prize"
-	line "we were holding"
-	cont "for you."
+	para "Aquí tienes el"
+	line "premio que te"
+	cont "guardábamos."
 	done
 
 Route36NationalParkGate_MapEvents:
@@ -861,7 +864,7 @@ Route36NationalParkGate_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event  6,  0, BGEVENT_READ, BugCatchingContestExplanationSign
+	bg_event  6,  0, BGEVENT_READ, UnusedBugCatchingContestExplanationSign
 
 	db 12 ; object events
 	object_event  0,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route36OfficerScriptContest, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_CONTEST_DAY

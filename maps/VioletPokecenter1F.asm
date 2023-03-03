@@ -53,7 +53,7 @@ VioletPokecenter1F_ElmsAideScript:
 	end
 
 .eggname
-	db "EGG@"
+	db "HUEVO@"
 
 .AideGivesEgg:
 	jumpstd receivetogepiegg
@@ -104,115 +104,123 @@ MovementData_AideFinishesLeavingPokecenter:
 	step_end
 
 VioletPokecenterElmsAideFavorText:
-	text "<PLAY_G>, long"
-	line "time, no see."
+	text "<PLAY_G>, cuánto"
+	line "tiempo. El PROF."
 
-	para "PROF.ELM asked me"
-	line "to find you."
+	para "ELM me pidió que"
+	line "te buscara."
 
-	para "He has another"
-	line "favor to ask."
+	para "Tiene que pedirte"
+	line "otro favor."
 
-	para "Would you take the"
-	line "#MON EGG?"
+	para "¿Puedes llevar el"
+	line "HUEVO #MON?"
 	done
 
 VioletPokecenterElmsAideGiveEggText:
-	text "We discovered that"
-	line "a #MON will not"
+	text "Descubrimos que el"
+	line "#MON no saldrá"
 
-	para "hatch until it"
-	line "grows in the EGG."
+	para "hasta que no haya"
+	line "crecido dentro del"
+	cont "HUEVO."
 
-	para "It also has to be"
-	line "with other active"
-	cont "#MON to hatch."
+	para "Además, tiene que"
+	line "ir acompañado de"
+	cont "#MON activos."
 
-	para "<PLAY_G>, you're"
-	line "the only person"
-	cont "we can rely on."
+	para "<PLAY_G>, eres"
+	line "la única persona"
 
-	para "Please call PROF."
-	line "ELM when that EGG"
-	cont "hatches!"
+	para "en la que podemos"
+	line "confiar."
+
+	para "¡Por favor, llama"
+	line "al PROF. ELM"
+
+	para "cuando eclosione"
+	line "el HUEVO!"
 	done
 
 VioletCityElmsAideFullPartyText:
-	text "Oh, no. You can't"
-	line "carry any more"
-	cont "#MON with you."
+	text "¡Oh, no! No puedes"
+	line "llevar más"
+	cont "#MON."
 
-	para "I'll wait here"
-	line "while you make"
-	cont "room for the EGG."
+	para "Esperaré aquí a"
+	line "que le hagas"
+	cont "sitio al HUEVO."
 	done
 
 VioletPokecenterElmsAideRefuseText:
-	text "B-but… PROF.ELM"
-	line "asked for you…"
+	text "Pero…"
+	line "El PROF. ELM"
+	cont "preguntó por ti."
 	done
 
 VioletPokecenterElmsAideAskEggText:
-	text "<PLAY_G>, will you"
-	line "take the EGG?"
+	text "<PLAY_G>, ¿tomas"
+	line "el HUEVO?"
 	done
 
 ; unused
 VioletPokecenterFarawayLinkText:
-	text "I've been thinking"
-	line "it'd be great to"
-
-	para "be able to link up"
-	line "and battle with my"
-
-	para "friends who live"
-	line "far away."
+	text "He pensado que"
+	line "sería genial co-"
+	cont "nectarme y luchar"
+	cont "con mis amigos que"
+	cont "viven lejos."
 	done
 
 ; unused
 VioletPokecenterMobileAdapterText:
-	text "I just battled a"
-	line "friend in CIANWOOD"
-	cont "over a link."
+	text "Combatí con un"
+	line "amigo de ORQUÍDEA"
 
-	para "If you connect a"
-	line "MOBILE ADAPTER,"
+	para "mediante un enlace"
+	line "móvil."
 
-	para "you can link with"
-	line "a friend far away."
+	para "Si conectas un"
+	line "ADAPTADOR DE MÓVIL"
+
+	para "puedes enlazar con"
+	line "un/a amigo/a"
+	cont "lejano/a."
 	done
 
 VioletPokecenter1FGameboyKidText:
-	text "A guy named BILL"
-	line "made the #MON"
-	cont "PC storage system."
+	text "Un tal BILL creó"
+	line "el Sistema de"
+
+	para "Almacenamiento"
+	line "de #MON."
 	done
 
 VioletPokecenter1FGentlemanText:
-	text "It was around"
-	line "three years ago."
+	text "Fue hace unos tres"
+	line "años."
 
-	para "TEAM ROCKET was up"
-	line "to no good with"
-	cont "#MON."
+	para "El TEAM ROCKET"
+	line "quería hacer daño"
+	cont "a los #MON."
 
-	para "But justice pre-"
-	line "vailed--a young"
-	cont "kid broke 'em up."
+	para "Pero prevaleció la"
+	line "justicia y un niño"
+	cont "acabó con ellos."
 	done
 
 VioletPokecenter1FYoungsterText:
-	text "#MON are smart."
-	line "They won't obey a"
+	text "Los #MON son"
+	line "listos y no"
 
-	para "trainer they don't"
-	line "respect."
+	para "obedecen a quien"
+	line "no respetan."
 
-	para "Without the right"
-	line "GYM BADGES, they"
+	para "Sin las MEDALLAS"
+	line "necesarias, harán"
 
-	para "will just do as"
-	line "they please."
+	para "lo que ellos"
+	line "quieran."
 	done
 
 VioletPokecenter1F_MapEvents:

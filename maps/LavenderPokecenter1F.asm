@@ -35,47 +35,53 @@ LavenderPokecenter1FYoungsterScript:
 	end
 
 LavenderPokecenter1FGentlemanText:
-	text "To the north of"
-	line "LAVENDER is ROCK"
+	text "Al norte de PUEBLO"
+	line "LAVANDA está el"
+	cont "TÚNEL ROCA."
 
-	para "TUNNEL. Go through"
-	line "it to get to the"
-	cont "POWER PLANT."
+	para "Crúzalo para lle-"
+	line "gar a la CENTRAL"
+	cont "ENERGÍA."
 	done
 
 LavenderPokecenter1FTeacherText:
-	text "There's a radio"
-	line "program that plays"
-	cont "# FLUTE music."
+	text "Hay un programa de"
+	line "radio que pone"
 
-	para "Oh? Ah, your radio"
-	line "needs an EXPN CARD"
-	cont "to tune into it."
+	para "música de #"
+	line "FLAUTA."
+
+	para "Necesitas una"
+	line "TARJETA EXPN para"
+	cont "sintonizarlo."
 	done
 
 LavenderPokecenter1FYoungsterText:
-	text "If the POWER PLANT"
-	line "isn't running, the"
+	text "Si la CENTRAL"
+	line "ENERGÍA no está en"
 
-	para "MAGNET TRAIN won't"
-	line "run either…"
+	para "funcionamiento, el"
+	line "MAGNETOTRÉN"
+	cont "tampoco lo estará…"
 
-	para "It also means the"
-	line "RADIO STATION"
-	cont "can't broadcast…"
+	para "Y eso significa"
+	line "que la ESTACIÓN de"
+
+	para "RADIO no podrá"
+	line "emitir…"
 	done
 
 LavenderPokecenter1FYoungsterText_ReturnedMachinePart:
-	text "The DIRECTOR of"
-	line "the RADIO STATION"
-	cont "sure was happy."
+	text "El DIRECTOR de la"
+	line "EMISORA estaba muy"
+	cont "contento."
 
-	para "He said they're"
-	line "back on the air"
+	para "Dijo que han"
+	line "vuelto a emitir"
 
-	para "because the POWER"
-	line "PLANT is running"
-	cont "smoothly again."
+	para "porque la CENTRAL"
+	line "ENERGÍA ya"
+	cont "funciona."
 	done
 
 LavenderPokecenter1F_MapEvents:

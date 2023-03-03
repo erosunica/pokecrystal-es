@@ -13,16 +13,16 @@ GuideGentsHouseBookshelf:
 	jumpstd magazinebookshelf
 
 GuideGentsHouseGuideGentText:
-	text "When I was a wee"
-	line "lad, I was a hot-"
-	cont "shot trainer!"
+	text "¡Cuando era niño,"
+	line "era un brillante"
+	cont "entrenador!"
 
-	para "Here's a word of"
-	line "advice: Catch lots"
-	cont "of #MON!"
+	para "Éste es mi"
+	line "consejo: ¡atrapa"
+	cont "muchos #MON!"
 
-	para "Treat them all"
-	line "with kindness!"
+	para "¡Y trátalos con"
+	line "mucho cariño!"
 	done
 
 GuideGentsHouse_MapEvents:

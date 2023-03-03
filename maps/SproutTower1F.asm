@@ -41,63 +41,63 @@ SproutTower1FStatue:
 	jumptext SproutTower1FStatueText
 
 SageChowSeenText:
-	text "We stand guard in"
-	line "this tower."
+	text "Montamos guardia"
+	line "en esta torre."
 
-	para "Here, we express"
-	line "our gratitude to"
-	cont "honor all #MON."
+	para "Así expresamos"
+	line "nuestra gratitud a"
+	cont "todos los #MON."
 	done
 
 SageChowBeatenText:
-	text "Th-Thank you!"
+	text "Gra… ¡Gracias!"
 	done
 
 SageChowAfterBattleText:
-	text "All living beings"
-	line "coexist through"
-	cont "cooperation."
+	text "Todos los seres"
+	line "vivos cooperan"
+	cont "para sobrevivir."
 
-	para "We must always be"
-	line "thankful for this."
+	para "Deberíamos estar"
+	line "agradecidos."
 	done
 
 SproutTower1FSage1Text:
-	text "Only if you reach"
-	line "the top will you"
-	cont "obtain an HM."
+	text "Sólo obtendrás"
+	line "una MO si llegas"
+	cont "arriba."
 	done
 
 SproutTower1FSage2Text:
-	text "SPROUT TOWER was"
-	line "built long ago"
+	text "La TORRE"
+	line "BELLSPROUT fue"
 
-	para "as a place for"
-	line "#MON training."
+	para "construida para"
+	line "entrenar #MON."
 	done
 
 SproutTower1FGrannyText:
-	text "A BELLSPROUT over"
-	line "100 feet tall…"
+	text "Un BELLSPROUT de"
+	line "30 m de altura."
 
-	para "People say that it"
-	line "became the center"
-	cont "pillar here."
+	para "Dice la gente que"
+	line "se convirtió en la"
+	cont "columna central."
 	done
 
 SproutTower1FTeacherText:
-	text "See the pillar"
-	line "shaking?"
+	text "¿Ves cómo se mueve"
+	line "la columna?"
 
-	para "People are train-"
-	line "ing upstairs."
+	para "Arriba hay gente"
+	line "entrenándose."
 	done
 
 SproutTower1FStatueText:
-	text "A #MON statue…"
+	text "Estatua #MON…"
 
-	para "It looks very"
-	line "distinguished."
+	para "Parece muy"
+	line "ilustre."
 	done
 
 SproutTower1F_MapEvents:

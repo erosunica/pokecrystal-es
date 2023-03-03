@@ -1,52 +1,56 @@
 AnthonyAskNumber1Text:
-	text "By the way, I'm a"
-	line "HIKER, so I often"
+	text "Por cierto, soy un"
+	line "MONTAÑERO, así que"
 
-	para "go to mountains"
-	line "and caves."
+	para "suelo ir a cuevas"
+	line "y montañas."
 
-	para "I occasionally see"
-	line "rare #MON."
+	para "De vez en cuando"
+	line "veo #MON raros."
 
-	para "I could call you"
-	line "the next time I"
-	cont "see one."
+	para "Puedo llamarte la"
+	line "próxima vez que"
+	cont "vea uno."
 
-	para "Feel like swapping"
-	line "phone numbers?"
+	para "¿Quieres inter-"
+	line "cambiar números de"
+	cont "teléfono?"
 	done
 
 AnthonyAskNumber2Text:
-	text "I could call you"
-	line "when I see some"
-	cont "rare #MON."
+	text "Puedo llamarte la"
+	line "próxima vez que"
+	cont "vea uno."
 
-	para "Feel like swapping"
-	line "phone numbers?"
+	para "¿Quieres inter-"
+	line "cambiar números de"
+	cont "teléfono?"
 	done
 
 AnthonyNumberAcceptedText:
-	text "Be patient. I'll"
-	line "find some rare"
-	cont "#MON for you!"
+	text "Ten paciencia."
+	line "¡Te buscaré"
+	cont "#MON raros!"
 	done
 
 AnthonyNumberDeclinedText:
-	text "You're cold. I may"
-	line "as well head to"
-	cont "the mountains…"
+	text "Yo también debo"
+	line "encaminarme hacia"
+	cont "las montañas…"
 	done
 
 AnthonyPhoneFullText:
-	text "Your phone's full."
+	text "Tu teléfono está"
+	line "lleno."
 
-	para "It can't register"
-	line "my phone number."
+	para "No puede registrar"
+	line "mi número."
 	done
 
 AnthonyRematchText:
-	text "All righty, then!"
+	text "¡Vale, de acuerdo!"
 
-	para "My #MON and I"
-	line "are raring to go!"
+	para "¡Mis #MON y"
+	line "yo estamos"
+	cont "deseando empezar!"
 	done

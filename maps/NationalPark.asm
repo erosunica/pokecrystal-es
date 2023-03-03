@@ -306,209 +306,217 @@ NationalParkHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
 
 NationalParkLassText:
-	text "Look! Check out my"
-	line "bag!"
+	text "¡Eh! ¡Mira mi"
+	line "mochila!"
 
-	para "I printed out my"
-	line "favorites from my"
+	para "Imprimí desde la"
+	line "#DEX mis"
 
-	para "#DEX and stuck"
-	line "them on my bag."
+	para "#MON favoritos"
+	line "y los pegué en"
+	cont "ella."
 	done
 
 NationalParkPokefanFText:
-	text "This is MAIL I got"
-	line "from my daughter."
-	cont "It cheers me up."
+	text "Es una CARTA de"
+	line "mi hija."
+	cont "¡Me da ánimos!"
 	done
 
 NationalParkTeacher1Text:
-	text "Pay attention,"
-	line "please!"
+	text "¡Presta atención,"
+	line "por favor!"
 
-	para "…Oops, I have to"
-	line "quit thinking like"
+	para "¡Ups! A ver si"
+	line "dejo de hablar"
 
-	para "a teacher all the"
-	line "time."
+	para "como si fuera una"
+	line "maestra."
 
-	para "You must be a"
-	line "#MON trainer."
+	para "Parece que"
+	line "entrenas #MON."
 
-	para "Since you're work-"
-	line "ing so hard, I"
+	para "Como estás"
+	line "trabajando tanto,"
 
-	para "want you to have"
-	line "this."
+	para "he pensado darte"
+	line "esto."
 	done
 
 NationalParkTeacher1Text_GotQuickClaw:
-	text "Let a #MON hold"
-	line "that QUICK CLAW."
+	text "Dale a un #MON"
+	line "esa GARRA RÁPIDA."
 
-	para "Sometimes it will"
-	line "strike first"
-	cont "during battle."
+	para "A veces, atacará"
+	line "el primero en"
+	cont "combate."
 	done
 
 NationalParkYoungster1Text:
-	text "I'm playing with"
-	line "stickers I printed"
-	cont "from my #DEX."
+	text "Estoy jugando con"
+	line "las pegatinas de"
+	cont "mi #DEX."
 	done
 
 NationalParkYoungster2Text:
-	text "I get the other"
-	line "guy's #DEX"
-	cont "sticker if I win."
+	text "La pegatina de la"
+	line "#DEX del otro"
+
+	para "chico será mía"
+	line "si gano."
 	done
 
 NationalParkTeacher2Text:
-	text "I take walks in"
-	line "the PARK, but I"
+	text "Doy paseos por el"
+	line "PARQUE, pero nunca"
 
-	para "never go into the"
-	line "grass."
+	para "entro en la"
+	line "hierba."
 
-	para "Trainers always"
-	line "want to battle…"
+	para "Los entrenadores"
+	line "adoran luchar…"
 	done
 
 NationalParkPersianText:
-	text "PERSIAN: Fufushaa!"
+	text "PERSIAN: ¡Persiia!"
 	done
 
 NationalParkGameboyKidText:
-	text "I'm printing out"
-	line "my #DEX."
+	text "Estoy imprimiendo"
+	line "mi #DEX."
 
-	para "You can also print"
-	line "out stuff like"
+	para "También puedes"
+	line "imprimir las"
 
-	para "MAIL and your PC"
-	line "BOXES."
+	para "CARTAS y CAJAS de"
+	line "tu PC."
 	done
 
 SchoolboyJack1SeenText:
-	text "The world of"
-	line "#MON is deep."
+	text "El mundo #MON"
+	line "es muy amplio."
 
-	para "There are still"
-	line "lots of things we"
-	cont "don't know."
+	para "Y sigue habiendo"
+	line "muchas cosas que"
+	cont "ignoramos."
 
-	para "But I know more"
-	line "than you do!"
+	para "¡Pero yo sé más"
+	line "que tú!"
 	done
 
 SchoolboyJack1BeatenText:
-	text "Wha-wha-what?"
+	text "¿Qué, qué, qué?"
 	done
 
 SchoolboyJackTradeMonText:
-	text "There is a lot"
-	line "to learn."
+	text "Hay muchas cosas"
+	line "que aprender."
 
-	para "For example…"
+	para "Por ejemplo…"
 
-	para "There are 50 kinds"
-	line "of TMs."
+	para "Hay 50 tipos de"
+	line "MT."
 
-	para "Traded #MON"
-	line "level up faster."
+	para "Los #MON"
+	line "intercambiados"
+
+	para "suben antes de"
+	line "nivel."
 	done
 
 PokefanfBeverly1SeenText:
-	text "My #MON are"
-	line "simply darling."
+	text "Mis #MON son"
+	line "encantadores."
 
-	para "Let me tell you"
-	line "how proud my"
-	cont "darlings make me."
+	para "Déjame mostrarte"
+	line "lo orgullosa que"
+	cont "estoy de ellos."
 	done
 
 PokefanfBeverly1BeatenText:
-	text "I can beat you in"
-	line "pride, but…"
+	text "Puedo derrotarte,"
+	line "pero…"
 	done
 
 PokefanBeverlyCuteMonText:
-	text "I must say, your"
-	line "#MON are quite"
-	cont "cute, too."
+	text "Debo decirte que"
+	line "tus #MON son"
+	cont "bonitos también."
 	done
 
 PokefanmWilliamSeenText:
-	text "We adore our #-"
-	line "MON, even if they"
-	cont "dislike us."
+	text "Queremos a"
+	line "nuestros #MON,"
 
-	para "That's what being"
-	line "a FAN is about."
+	para "aunque ellos no"
+	line "nos quieran."
+
+	para "Eso significa ser"
+	line "un FAN #MON."
 	done
 
 PokefanmWilliamBeatenText:
-	text "M-my #MON!"
+	text "Mi… ¡Mi #MON!"
 	done
 
 PokefanmWilliamAfterBattleText:
-	text "I lost the battle,"
-	line "but my #MON win"
+	text "Perdí el combate,"
+	line "pero mis #MON"
 
-	para "the prize for"
-	line "being most lovely."
+	para "son más adorables"
+	line "que los tuyos."
 	done
 
 PokefanFBeverlyMarillFriendText:
-	text "My friend keeps a"
+	text "¡Mi amigo tiene un"
 	line "MARILL!"
 
-	para "I find them very"
-	line "endearing."
+	para "Los encuentro muy"
+	line "simpáticos."
 
-	para "Oh, I wish for a"
-	line "MARILL of my own…"
+	para "Oh, deseo tener un"
+	line "MARILL propio…"
 	done
 
 LassKriseSeenText:
-	text "Hello? Why are you"
-	line "staring at me?"
+	text "¿Eh?"
+	line "¿Y tú qué miras?"
 
-	para "Oh, a battle?"
+	para "¿Quieres luchar?"
 	done
 
 LassKriseBeatenText:
-	text "…Hmmm…"
+	text "¡Mmmm…!"
 	done
 
 LassKriseAfterBattleText:
-	text "I thought you were"
-	line "staring at me"
-	cont "because I'm cute!"
+	text "¡Pensaba que me"
+	line "estabas mirando"
+	cont "porque soy bonita!"
 	done
 
 NationalParkRelaxationSquareText:
-	text "RELAXATION SQUARE"
-	line "NATIONAL PARK"
+	text "PLAZA DEL DESCANSO"
+	line "PARQUE NACIONAL"
 	done
 
 NationalParkBattleNoticeText:
-	text "What is this"
-	line "notice?"
+	text "¿Qué dice este"
+	line "cartel?"
 
-	para "Please battle only"
-	line "in the grass."
+	para "Por favor, lucha"
+	line "sólo en la hierba."
 
-	para "NATIONAL PARK"
-	line "WARDEN'S OFFICE"
+	para "PUESTO DEL GUARDA"
+	line "PARQUE NACIONAL"
 	done
 
 NationalParkTrainerTipsText:
-	text "TRAINER TIPS"
+	text "PISTAS ENTRENADOR"
 
-	para "Print out MAIL by"
-	line "opening it then"
-	cont "pressing START."
+	para "Imprime una CARTA"
+	line "abriéndola y"
+	cont "pulsando START"
 	done
 
 NationalPark_MapEvents:

@@ -1,10 +1,10 @@
-	db "LITTLE BEAR@" ; species name
-	dw 200, 190 ; height, weight
+	db "OSITO@" ; species name
+	dbw 6, 88 ; height, weight
 
-	db   "It always licks"
-	next "honey. Its palm"
-	next "tastes sweet"
+	db   "Se pasa el día"
+	next "lamiendo miel. De"
+	next "hecho, las palmas"
 
-	page "because of all the"
-	next "honey it has"
-	next "absorbed.@"
+	page "de las zarpas le"
+	next "huelen a miel de"
+	next "todo lo que come.@"

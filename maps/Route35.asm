@@ -275,189 +275,195 @@ Route35FruitTree:
 	fruittree FRUITTREE_ROUTE_35
 
 CamperIvanSeenText:
-	text "I've been getting"
-	line "#MON data off"
+	text "He estado cogiendo"
+	line "datos de #MON"
 
-	para "my radio. I think"
-	line "I'm good."
+	para "de mi radio. Creo"
+	line "que soy bueno."
 	done
 
 CamperIvanBeatenText:
-	text "I give!"
+	text "¡Me rindo!"
 	done
 
 CamperIvanAfterBattleText:
-	text "Music on the radio"
-	line "changes the moods"
-	cont "of wild #MON."
+	text "La música de la"
+	line "radio cambia el"
+
+	para "ánimo de los"
+	line "#MON salvajes."
 	done
 
 CamperElliotSeenText:
-	text "I'm gonna show my"
-	line "girlfriend I'm hot"
-	cont "stuff!"
+	text "Le voy a demostrar"
+	line "a mi novia lo"
+	cont "bueno que soy."
 	done
 
 CamperElliotBeatenText:
-	text "I wish you would"
-	line "have lost for me…"
+	text "Ojalá hubieras"
+	line "perdido tú…"
 	done
 
 CamperElliotAfterBattleText:
-	text "I was humiliated"
-	line "in front of my"
-	cont "girlfriend…"
+	text "Me humillaste"
+	line "delante de mi"
+	cont "novia…"
 	done
 
 PicnickerBrookeSeenText:
-	text "My boyfriend's"
-	line "weak, so I can't"
-	cont "rely on him."
+	text "Mi novio es débil."
+	line "Así que no puedo"
+	cont "confiar en él."
 	done
 
 PicnickerBrookeBeatenText:
-	text "Oh, my! You're so"
-	line "strong!"
+	text "¡Cielos! ¡Eres tan"
+	line "fuerte!"
 	done
 
 PicnickerBrookeAfterBattleText:
-	text "I can count on my"
-	line "#MON more than"
-	cont "my boyfriend."
+	text "Confío más en mis"
+	line "#MON que en mi"
+	cont "novio."
 	done
 
 PicnickerKimSeenText:
-	text "Are you going to"
-	line "the GYM? Me too!"
+	text "¿Vas al GIMNASIO?"
+	line "¡Yo también!"
 	done
 
 PicnickerKimBeatenText:
-	text "Oh. I couldn't"
-	line "win…"
+	text "¡Vaya! No pude"
+	line "ganar…"
 	done
 
 PicnickerKimAfterBattleText:
-	text "The GYM BADGES are"
-	line "pretty. I collect"
-	cont "them."
+	text "Me gustan las"
+	line "MEDALLAS de los"
+	cont "GIMNASIOS."
+
+	para "Las colecciono."
 	done
 
 BirdKeeperBryanSeenText:
-	text "What kinds of"
-	line "BALLS do you use?"
+	text "¿Qué tipo de"
+	line "# BALL usas?"
 	done
 
 BirdKeeperBryanBeatenText:
-	text "Yikes! Not fast"
-	line "enough!"
+	text "¡Vaya! ¡No lo"
+	line "bastante rápido!"
 	done
 
 BirdKeeperBryanAfterBattleText:
-	text "Some #MON flee"
-	line "right away."
+	text "Algunos #MON"
+	line "huyen enseguida."
 
-	para "Try catching them"
-	line "with KURT's FAST"
-	cont "BALL."
+	para "Intenta atraparlos"
+	line "con la RAPID BALL"
+	cont "de CÉSAR."
 
-	para "Whenever I find a"
-	line "WHT APRICORN, I"
-	cont "take it to KURT."
+	para "Cuando encuentro"
+	line "un BONGURI BLA, se"
+	cont "lo llevo a CÉSAR."
 
-	para "He turns it into a"
-	line "custom BALL."
+	para "Él lo convierte en"
+	line "una # BALL."
 	done
 
 JugglerIrwin1SeenText:
-	text "Behold my graceful"
-	line "BALL dexterity!"
+	text "¡Observa cómo uso"
+	line "las # BALL!"
 	done
 
 JugglerIrwin1BeatenText:
-	text "Whew! That was a"
-	line "jolt!"
+	text "¡Uauuu! ¡Vaya"
+	line "sacudida!"
 	done
 
 JugglerIrwinAfterBattleText:
-	text "I was going to"
-	line "dazzle you with my"
-	cont "prize #MON."
+	text "Te iba a"
+	line "deslumbrar con mi"
+	cont "preciado #MON."
 
-	para "But your prowess"
-	line "electrified me!"
+	para "¡Pero tu habilidad"
+	line "me electrificó!"
 	done
 
 BugCatcherArnieSeenText:
-	text "I'll go anywhere"
-	line "if bug #MON"
-	cont "appear there."
+	text "Iré a cualquier"
+	line "lugar donde haya"
+	cont "#MON bicho."
 	done
 
 BugCatcherArnieBeatenText:
-	text "Huh? I shouldn't"
-	line "have lost that…"
+	text "¿Eh? No debería"
+	line "haber perdido…"
 	done
 
 BugCatcherArnieAfterBattleText:
-	text "My VENONAT won me"
-	line "the Bug-Catching"
+	text "Mi VENONAT ganó"
+	line "el Concurso de"
 
-	para "Contest at the"
-	line "NATIONAL PARK."
+	para "Captura de Bichos"
+	line "del PARQUE"
+	cont "NACIONAL."
 	done
 
 BugCatcherArnieYanmaText:
-	text "Wow… Look at all"
-	line "those YANMA!"
+	text "Uauu… ¡Mira todos"
+	line "esos YANMA!"
 
-	para "I'm so blown away,"
-	line "I can't move."
+	para "Estoy tan"
+	line "alucinado, que no"
+	cont "me puedo mover."
 	done
 
 FirebreatherWaltSeenText:
-	text "I'm practicing my"
-	line "fire breathing."
+	text "Practico mi"
+	line "aliento de fuego."
 	done
 
 FirebreatherWaltBeatenText:
-	text "Ow! I scorched the"
-	line "tip of my nose!"
+	text "¡Me he quemado la"
+	line "punta de la nariz!"
 	done
 
 FirebreatherWaltAfterBattleText:
-	text "The #MON March"
-	line "on the radio lures"
-	cont "wild #MON."
+	text "La Marcha #MON"
+	line "de la radio atrae"
+	cont "#MON salvajes."
 	done
 
 OfficerDirkSeenText:
-	text "Danger lurks in"
-	line "the night!"
+	text "¡El peligro acecha"
+	line "por la noche!"
 	done
 
 OfficerDirkBeatenText:
-	text "Whoops!"
+	text "¡Uy!"
 	done
 
 OfficerDirkAfterBattleText:
-	text "You know, night-"
-	line "time is fun in its"
-	cont "own ways."
+	text "Ya sabes, la noche"
+	line "es divertida a su"
+	cont "manera."
 
-	para "But don't overdo"
-	line "it, OK?"
+	para "Pero no te pases,"
+	line "¿vale?"
 	done
 
 OfficerDirkPrettyToughText:
-	text "Your #MON look"
-	line "pretty tough."
+	text "Tus #MON son"
+	line "bastante fuertes."
 
-	para "You could go any-"
-	line "where safely."
+	para "Estarás a salvo en"
+	line "cualquier parte."
 	done
 
 Route35SignText:
-	text "ROUTE 35"
+	text "RUTA 35"
 	done
 
 Route35_MapEvents:

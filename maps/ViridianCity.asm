@@ -86,131 +86,130 @@ ViridianCityMartSign:
 	jumpstd martsign
 
 ViridianCityCoffeeGrampsQuestionText:
-	text "Hey, kid! I just"
-	line "had a double shot"
+	text "¡Hola! ¡Me acabo"
+	line "de tomar un café"
 
-	para "of espresso, and"
-	line "I am wired!"
+	para "doble y estoy como"
+	line "una moto!"
 
-	para "I need to talk to"
-	line "someone, so you'll"
-	cont "have to do!"
+	para "¡Tengo que hablar"
+	line "con alguien, así"
+	cont "que te toca a ti!"
 
-	para "I might not look"
-	line "like much now, but"
+	para "Puede que ahora no"
+	line "lo parezca, pero"
 
-	para "I was an expert at"
-	line "catching #MON."
+	para "yo era un experto"
+	line "atrapando #MON."
 
-	para "Do you believe me?"
+	para "¿Me crees?"
 	done
 
 ViridianCityCoffeeGrampsBelievedText:
-	text "Good, good. Yes, I"
-	line "was something out"
+	text "Muy bien. Sí, yo"
+	line "era algo fuera de"
 
-	para "of the ordinary,"
-	line "let me tell you!"
+	para "lo normal. ¡Déjame"
+	line "contártelo!"
 	done
 
 ViridianCityCoffeeGrampsDoubtedText:
-	text "What? You little"
-	line "whelp!"
+	text "¿Qué? ¡Serás"
+	line "insolente!"
 
-	para "If I were just a"
-	line "bit younger, I'd"
+	para "Si fuera un poco"
+	line "más joven, te"
 
-	para "show you a thing"
-	line "or two. Humph!"
+	para "enseñaría un par"
+	line "de cosas. ¡Vaya!"
 	done
 
 ViridianCityGrampsNearGymText:
-	text "This GYM didn't"
-	line "have a LEADER"
-	cont "until recently."
+	text "Este GIMNASIO no"
+	line "ha tenido LÍDER"
+	cont "hasta hace poco."
 
-	para "A young man from"
-	line "PALLET became the"
+	para "Un joven de"
+	line "PUEBLO PALETA se"
 
-	para "LEADER, but he's"
-	line "often away."
+	para "convirtió en LÍDER"
+	line "pero viaja mucho."
 	done
 
 ViridianCityGrampsNearGymBlueReturnedText:
-	text "Are you going to"
-	line "battle the LEADER?"
+	text "¿Vas a enfrentarte"
+	line "al LÍDER?"
 
-	para "Good luck to you."
-	line "You'll need it."
+	para "¡Buena suerte! ¡La"
+	line "vas a necesitar!"
 	done
 
 ViridianCityDreamEaterFisherText:
-	text "Yawn!"
+	text "¡Qué sueño!"
 
-	para "I must have dozed"
-	line "off in the sun."
+	para "Me habré quedado"
+	line "dormido al sol."
 
-	para "…I had this dream"
-	line "about a DROWZEE"
+	para "He soñado que un"
+	line "DROWZEE se comía"
+	cont "mi sueño."
 
-	para "eating my dream."
-	line "Weird, huh?"
+	para "Es raro, ¿verdad?"
 
-	para "Huh?"
-	line "What's this?"
+	para "¿Eh?"
+	line "¿Qué es esto?"
 
-	para "Where did this TM"
-	line "come from?"
+	para "¿De dónde ha"
+	line "salido esta MT?"
 
-	para "This is spooky!"
-	line "Here, you can have"
-	cont "this TM."
+	para "¡Esto es muy"
+	line "misterioso! Aquí"
+	cont "tienes esta MT."
 	done
 
 ViridianCityDreamEaterFisherGotDreamEaterText:
-	text "TM42 contains"
-	line "DREAM EATER…"
+	text "MT42 contiene"
+	line "COME SUEÑOS…"
 
-	para "…Zzzzz…"
+	para "¡Zzzzz…!"
 	done
 
 ViridianCityYoungsterText:
-	text "I heard that there"
-	line "are many items on"
+	text "Dicen que en el"
+	line "suelo del BOSQUE"
 
-	para "the ground in"
-	line "VIRIDIAN FOREST."
+	para "VERDE hay muchos"
+	line "objetos."
 	done
 
 ViridianCitySignText:
-	text "VIRIDIAN CITY"
+	text "CIUDAD VERDE"
 
-	para "The Eternally"
-	line "Green Paradise"
+	para "El paraíso"
+	line "eternamente verde"
 	done
 
 ViridianGymSignText:
-	text "VIRIDIAN CITY"
-	line "#MON GYM"
-	cont "LEADER: …"
+	text "LÍDER DEL GIMNASIO"
+	line "#MON DE CIUDAD"
+	cont "VERDE:…"
 
-	para "The rest of the"
-	line "text is illegible…"
+	para "El resto del texto"
+	line "es ilegible…"
 	done
 
 ViridianCityWelcomeSignText:
-	text "WELCOME TO"
-	line "VIRIDIAN CITY,"
-
-	para "THE GATEWAY TO"
-	line "INDIGO PLATEAU"
+	text "Ésta es la CIUDAD"
+	line "VERDE, la entrada"
+	cont "a la MESETA AÑIL"
 	done
 
 TrainerHouseSignText:
-	text "TRAINER HOUSE"
+	text "CASA DEL"
+	line "ENTRENADOR"
 
-	para "The Club for Top"
-	line "Trainer Battles"
+	para "Club de Mejores"
+	line "Entrenadores"
 	done
 
 ViridianCity_MapEvents:

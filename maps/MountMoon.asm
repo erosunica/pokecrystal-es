@@ -88,74 +88,70 @@ MountMoonSilverMovementAfter:
 MountMoonSilverTextBefore:
 	text "<……> <……> <……>"
 
-	para "It's been a while,"
-	line "<PLAYER>."
+	para "¡Cuánto tiempo,"
+	line "<PLAYER>!"
 
-	para "…Since I lost to"
-	line "you, I thought"
+	para "Tras haber sido"
+	line "derrotado por ti,"
 
-	para "about what I was"
-	line "lacking with my"
-	cont "#MON…"
+	para "estuve pensando en"
+	line "mis #MON…"
 
-	para "And we came up"
-	line "with an answer."
+	para "Y llegué a una"
+	line "conclusión…"
 
-	para "<PLAYER>, now we'll"
-	line "show you!"
+	para "¡Ahora verás,"
+	line "<PLAYER>!"
 	done
 
 MountMoonSilverTextWin:
 	text "<……> <……> <……>"
 
-	para "I thought I raised"
-	line "my #MON to be"
+	para "Creía haber"
+	line "entrenado muy bien"
+	cont "a mis #MON…"
 
-	para "the best they"
-	line "could be…"
-
-	para "…But it still "
-	line "wasn't enough…"
+	para "Pero estaba"
+	line "equivocado…"
 	done
 
 MountMoonSilverTextAfter:
 	text "<……> <……> <……>"
 
-	para "…You won, fair"
-	line "and square."
+	para "Has ganado justa-"
+	line "mente. Lo admito."
 
-	para "I admit it. But"
-	line "this isn't the"
-	cont "end."
+	para "Pero esto no"
+	line "termina aquí."
 
-	para "I'm going to be"
-	line "the greatest #-"
-	cont "MON trainer ever."
+	para "Voy a ser el mejor"
+	line "entrenador #MON"
+	cont "del mundo."
 
-	para "Because these guys"
-	line "are behind me."
+	para "Estos chicos me"
+	line "apoyan."
 
-	para "…Listen, <PLAYER>."
+	para "Mira, <PLAYER>…"
 
-	para "One of these days"
-	line "I'm going to prove"
+	para "Uno de estos días"
+	line "te demostraré lo"
 
-	para "how good I am by"
-	line "beating you."
+	para "bueno que soy,"
+	line "derrotándote."
 	done
 
 MountMoonSilverTextLoss:
 	text "<……> <……> <……>"
 
-	para "I've repaid my"
-	line "debt to you."
+	para "Ya te he pagado"
+	line "mi deuda."
 
-	para "With my #MON,"
-	line "I'm going to beat"
+	para "Con mis #MON"
+	line "ganaré al CAMPEÓN"
 
-	para "the CHAMPION and"
-	line "become the world's"
-	cont "greatest trainer."
+	para "y seré el mejor"
+	line "entrenador del"
+	cont "mundo."
 	done
 
 MountMoon_MapEvents:

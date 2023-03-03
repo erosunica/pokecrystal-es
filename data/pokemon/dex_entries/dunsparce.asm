@@ -1,10 +1,10 @@
-	db "LAND SNAKE@" ; species name
-	dw 411, 310 ; height, weight
+	db "SERPTIERRA@" ; species name
+	dbw 15, 140 ; height, weight
 
-	db   "It hides deep"
-	next "inside caves where"
-	next "no light ever"
+	db   "Permanece escon-"
+	next "dido dentro de las"
+	next "cuevas, donde la"
 
-	page "reaches it and"
-	next "remains virtually"
-	next "motionless there.@"
+	page "luz no le llega."
+	next "Y ahí se queda"
+	next "casi sin moverse.@"

@@ -191,231 +191,241 @@ RadioTower5FPlayerTwoStepsLeftMovement:
 	step_end
 
 FakeDirectorTextBefore1:
-	text "Y-you! You came to"
-	line "rescue me?"
+	text "¡Tú! ¿Has venido"
+	line "a rescatarme?"
 	done
 
 FakeDirectorTextBefore2:
-	text "Is that what you"
-	line "were expecting?"
+	text "¿Es eso lo que"
+	line "estabas esperando?"
 
-	para "Wrong!"
-	line "I'm an imposter!"
+	para "¡Pues no!"
+	line "¡Soy un impostor!"
 
-	para "I pretended to be"
-	line "the real thing to"
+	para "Me hice pasar por"
+	line "el DIRECTOR para"
 
-	para "prepare for our"
-	line "takeover."
+	para "preparar nuestra"
+	line "invasión."
 
-	para "Do you want to"
-	line "know where we hid"
-	cont "the real DIRECTOR?"
+	para "¿Quieres saber"
+	line "dónde escondimos"
+	cont "al DIRECTOR?"
 
-	para "Sure, I'll tell"
-	line "you. But only if"
-	cont "you can beat me!"
+	para "Te lo diré,"
+	line "¡pero sólo si eres"
+	cont "capaz de vencerme!"
 	done
 
 FakeDirectorWinText:
-	text "OK, OK. I'll tell"
-	line "you where he is."
+	text "Muy bien. Te diré"
+	line "dónde está."
 	done
 
 FakeDirectorTextAfter:
-	text "We stashed the"
-	line "real DIRECTOR in"
+	text "Escondimos al"
+	line "auténtico DIRECTOR"
 
-	para "the UNDERGROUND"
-	line "WAREHOUSE."
+	para "en el ALMACÉN"
+	line "SUBTERRÁNEO."
 
-	para "It's at the far"
-	line "end of the UNDER-"
-	cont "GROUND."
+	para "Está al otro"
+	line "extremo del"
+	cont "SUBTERRÁNEO."
 
-	para "But I doubt you'll"
-	line "get that far."
+	para "Pero dudo que"
+	line "llegues tan lejos."
 	done
 
 Executivef1SeenText:
-	text "Remember me from"
-	line "the HIDEOUT in"
-	cont "MAHOGANY TOWN?"
+	text "¿Me recuerdas del"
+	line "ESCONDITE de"
+	cont "PUEBLO CAOBA?"
 
-	para "I lost then, but I"
-	line "won't this time."
+	para "Entonces perdí,"
+	line "pero esta vez no"
+	cont "lo haré."
 	done
 
 Executivef1BeatenText:
-	text "This can't be"
-	line "happening!"
+	text "¡Esto no me puede"
+	line "estar pasando!"
 
-	para "I fought hard, but"
-	line "I still lost…"
+	para "He luchado y"
+	line "he perdido…"
 	done
 
 Executivef1AfterBattleText:
-	text "<PLAYER>, isn't it?"
+	text "<PLAYER>, ¿verdad?"
 
-	para "A brat like you"
-	line "won't appreciate"
+	para "Alguien como tú"
+	line "no aprecia la"
 
-	para "the magnificence"
-	line "of TEAM ROCKET."
+	para "magnificencia del"
+	line "TEAM ROCKET."
 
-	para "That's too bad."
-	line "I really admire"
-	cont "your power."
+	para "Una lástima."
+	line "Admiro tu fuerza."
 	done
 
 RadioTower5FRocketBossBeforeText:
-	text "Oh? You managed to"
-	line "get this far?"
+	text "¿Cómo has logrado"
+	line "llegar tan lejos?"
 
-	para "You must be quite"
-	line "the trainer."
+	para "Debes de entrenar"
+	line "muy bien."
 
-	para "We intend to take"
-	line "over this RADIO"
+	para "Queremos hacernos"
+	line "con esta EMISORA"
 
-	para "STATION and an-"
-	line "nounce our come-"
-	cont "back."
+	para "de RADIO para"
+	line "anunciar nuestra"
+	cont "vuelta."
 
-	para "That should bring"
-	line "our boss GIOVANNI"
+	para "Eso debería hacer"
+	line "regresar a"
 
-	para "back from his solo"
-	line "training."
+	para "GIOVANNI de su"
+	line "entrenamiento."
 
-	para "We are going to"
-	line "regain our former"
-	cont "glory."
+	para "Vamos a recuperar"
+	line "la gloria perdida."
 
-	para "I won't allow you"
-	line "to interfere with"
-	cont "our plans."
+	para "Y no voy a"
+	line "permitir que"
+
+	para "interfieras en"
+	line "nuestros planes."
 	done
 
 RadioTower5FRocketBossWinText:
-	text "No! Forgive me,"
+	text "¡No! ¡Perdóname,"
 	line "GIOVANNI!"
 	done
 
 RadioTower5FRocketBossAfterText:
-	text "How could this be?"
+	text "¿Qué ha pasado?"
 
-	para "Our dreams have"
-	line "come to naught."
+	para "Nuestros sueños"
+	line "hechos añicos."
 
-	para "I wasn't up to the"
-	line "task after all."
+	para "Creo que no he"
+	line "estado a la"
+	cont "altura."
 
-	para "Like GIOVANNI did"
-	line "before me, I will"
+	para "Como ya hiciera"
+	line "GIOVANNI, hoy yo"
 
-	para "disband TEAM"
-	line "ROCKET here today."
+	para "desarticularé el"
+	line "TEAM ROCKET."
 
-	para "Farewell."
+	para "¡Adiós!"
 	done
 
 RadioTower5FDirectorThankYouText:
-	text "DIRECTOR: <PLAY_G>,"
-	line "thank you!"
+	text "DIRECTOR:"
+	line "¡<PLAY_G>,"
+	cont "muchas gracias!"
 
-	para "Your courageous"
-	line "actions have saved"
+	para "Tus valerosas"
+	line "acciones han"
 
-	para "#MON nation-"
-	line "wide."
+	para "salvado a los"
+	line "#MON."
 
-	para "I know it's not"
-	line "much, but please"
-	cont "take this."
+	para "Sé que no es"
+	line "mucho, pero coge"
+	cont "esto, por favor."
 	done
 
 RadioTower5FDirectorDescribeClearBellText:
-	text "There used to be a"
-	line "tower right here"
-	cont "in GOLDENROD CITY."
+	text "Antiguamente,"
+	line "había una torre en"
 
-	para "But it was old and"
-	line "creaky."
+	para "CIUDAD TRIGAL,"
+	line "justo aquí."
 
-	para "So we replaced it"
-	line "with our RADIO"
-	cont "TOWER."
+	para "Pero estaba vieja"
+	line "y se caía."
 
-	para "We dug up that"
-	line "bell during"
-	cont "construction."
+	para "Así que la"
+	line "reemplazamos por"
 
-	para "I heard that all"
-	line "sorts of #MON"
+	para "nuestra TORRE"
+	line "RADIO."
 
-	para "lived in GOLDENROD"
-	line "in the past."
+	para "Encontramos esta"
+	line "campana durante"
+	cont "la construcción."
 
-	para "Perhaps…"
+	para "He oído que, en"
+	line "el pasado, toda"
 
-	para "That bell has some"
-	line "connection to the"
+	para "clase de #MON"
+	line "vivían en CIUDAD"
+	cont "TRIGAL."
 
-	para "TIN TOWER in"
-	line "ECRUTEAK CITY…"
+	para "Quizá…"
 
-	para "Ah!"
+	para "Quizá esa campana"
+	line "tenga alguna"
 
-	para "That reminds me…"
+	para "conexión con la"
+	line "TORRE HOJALATA de"
+	cont "CIUDAD IRIS…"
 
-	para "I overheard TEAM"
-	line "ROCKET whispering."
+	para "¡Ah!"
 
-	para "Apparently, some-"
-	line "thing is going on"
-	cont "at the TIN TOWER."
+	para "Eso me recuerda…"
 
-	para "I have no idea"
-	line "what is happening,"
+	para "He oído cuchichear"
+	line "al TEAM ROCKET."
 
-	para "but you might look"
-	line "into it."
+	para "Aparentemente,"
+	line "algo pasa en la"
+	cont "TORRE HOJALATA."
 
-	para "OK, I better go to"
-	line "my OFFICE."
+	para "No tengo ni idea"
+	line "de qué ocurrirá,"
+
+	para "pero debieras"
+	line "echar un vistazo."
+
+	para "Vale. Será mejor"
+	line "que vaya a mi"
+	cont "OFICINA."
 	done
 
 RadioTower5FDirectorText:
-	text "DIRECTOR: Hello,"
+	text "DIRECTOR: ¡Hola,"
 	line "<PLAY_G>!"
 
-	para "You know, I love"
-	line "#MON."
+	para "Ya sabes que adoro"
+	line "a los #MON."
 
-	para "I built this RADIO"
-	line "TOWER so I could"
+	para "Construí esta"
+	line "TORRE RADIO para"
 
-	para "express my love"
-	line "of #MON."
+	para "mostrar mi amor"
+	line "por los #MON."
 
-	para "It would be nice"
-	line "if people enjoyed"
-	cont "our programs."
+	para "Me encantaría que"
+	line "nuestros programas"
+	cont "gustaran."
 	done
 
 BenText:
-	text "BEN: Do you listen"
-	line "to our music?"
+	text "NARDO: ¿Escuchas"
+	line "nuestra música?"
 	done
 
 RadioTower5FDirectorsOfficeSignText:
-	text "5F DIRECTOR'S"
-	line "   OFFICE"
+	text "P4 OFICINA"
+	line "   DEL DIRECTOR"
 	done
 
 RadioTower5FStudio1SignText:
-	text "5F STUDIO 1"
+	text "P4 ESTUDIO 1"
 	done
 
 RadioTower5F_MapEvents:

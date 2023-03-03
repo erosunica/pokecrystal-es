@@ -1,67 +1,70 @@
 GinaAskNumber1Text:
-	text "Whenever I see a"
-	line "strong trainer, I"
+	text "Cuando veo a"
+	line "entrenadores"
 
-	para "want to be their"
-	line "cheerleader."
+	para "fuertes, quiero"
+	line "ser su animadora."
 
-	para "When I'm on my"
-	line "walk, I sometimes"
-	cont "pick up items."
+	para "Cuando voy de"
+	line "paseo, a veces"
+	cont "recojo objetos."
 
-	para "If I get anything,"
-	line "you can have it!"
+	para "¡Si encuentro"
+	line "algo, te lo daré!"
 
-	para "Want to give me"
-	line "your number?"
+	para "¿Quieres darme tu"
+	line "número de"
+	cont "teléfono?"
 
-	para "I'll call as soon"
-	line "as I get anything."
+	para "Te llamaré cuando"
+	line "encuentre algo."
 	done
 
 GinaAskNumber2Text:
-	text "If I find an item,"
-	line "you can have it!"
+	text "¡Si encuentro"
+	line "algo, te lo daré!"
 
-	para "Want to give me"
-	line "your number?"
+	para "¿Quieres darme tu"
+	line "número de"
+	cont "teléfono?"
 	done
 
 GinaNumberAcceptedText:
-	text "I'll call as soon"
-	line "as I get anything!"
+	text "Te llamaré cuando"
+	line "encuentre algo."
 	done
 
 GinaNumberDeclinedText:
-	text "Is that so? Well,"
-	line "I'll still be"
-	cont "rooting for you!"
+	text "¿Ésas tenemos?"
+	line "Bueno… ¡Te estaré"
+	cont "esperando!"
 	done
 
 GinaPhoneFullText:
-	text "But your phone is"
-	line "all filled up!"
+	text "¡Tu teléfono ya"
+	line "no tiene memoria!"
 	done
 
 GinaRematchText:
-	text "I've been waiting!"
+	text "¡Te esperaba!"
 
-	para "I've gotten a bit"
-	line "better at this!"
+	para "¡Le he cogido el"
+	line "tranquillo a esto!"
 	done
 
 GinaGiftText:
-	text "So you're finally"
-	line "here!"
+	text "¡Así que por fin"
+	line "estás aquí!"
 
-	para "I think this will"
-	line "make you happy."
+	para "Creo que esto te"
+	line "va a alegrar."
 	done
 
 GinaPackFullText:
-	text "Your PACK looks"
-	line "completely full."
+	text "Tu MOCHILA parece"
+	line "estar completa-"
+	cont "mente llena."
 
-	para "I'll have to hold"
-	line "on to this."
+	para "Tendré que"
+	line "guardarte esto."
 	done

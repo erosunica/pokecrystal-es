@@ -790,45 +790,9 @@ HeavyBallMultiplier:
 	jr nz, .SkipText
 
 	call GetPokedexEntryBank
-	push bc
 	inc hl
 	inc hl
-	call GetFarHalfword
-
-	srl h
-	rr l
-	ld b, h
-	ld c, l
-
-rept 4
-	srl b
-	rr c
-endr
-	call .subbc
-
-	srl b
-	rr c
-	call .subbc
-
-	ld a, h
-	pop bc
-	jr .compare
-
-.subbc
-	; subtract bc from hl
-	push bc
-	ld a, b
-	cpl
-	ld b, a
-	ld a, c
-	cpl
-	ld c, a
-	inc bc
-	add hl, bc
-	pop bc
-	ret
-
-.compare
+	call GetFarByte
 	ld c, a
 	cp HIGH(1024) ; 102.4 kg
 	jr c, .lightmon
@@ -1233,11 +1197,11 @@ StatStrings:
 	dw .speed
 	dw .special
 
-.health  db "HEALTH@"
-.attack  db "ATTACK@"
-.defense db "DEFENSE@"
-.speed   db "SPEED@"
-.special db "SPECIAL@"
+.health  db "SALUD@"
+.attack  db "ATAQUE@"
+.defense db "DEFENSA@"
+.speed   db "VELOCID.@"
+.special db "ESPECIAL@"
 
 GetStatExpRelativePointer:
 	ld a, [wCurItem]

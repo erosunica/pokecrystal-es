@@ -30,20 +30,19 @@ Route26HealHouseBookshelf:
 	jumpstd picturebookshelf
 
 Route26HealHouseRestAWhileText:
-	text "Your #MON look"
-	line "a little tired."
+	text "Tus #MON"
+	line "parecen cansados."
 
-	para "You should rest"
-	line "them a while."
+	para "Deberías dejarlos"
+	line "descansar un poco."
 	done
 
 Route26HealHouseKeepAtItText:
-	text "There!"
+	text "¡Vaya! ¡Tus"
+	line "#MON tienen"
+	cont "buen aspecto!"
 
-	para "Your #MON are"
-	line "looking good!"
-
-	para "Keep at it!"
+	para "¡Sigue así!"
 	done
 
 Route26HealHouse_MapEvents:

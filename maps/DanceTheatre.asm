@@ -136,203 +136,207 @@ DanceTheatreFancyPanel:
 	jumptext DanceTheatreFancyPanelText
 
 KimonoGirlNaoko2SeenText:
-	text "You have lovely"
-	line "#MON. May I see"
-	cont "them in battle?"
+	text "Tus #MON son"
+	line "encantadores."
+	cont "¿Cómo luchan?"
 	done
 
 KimonoGirlNaoko2BeatenText:
-	text "Oh, you are very"
-	line "strong."
+	text "¡Oh! ¡Eres muy"
+	line "fuerte!"
 	done
 
 KimonoGirlNaoko2AfterBattleText:
-	text "I enjoyed that"
-	line "bout. I would like"
-	cont "to see you again."
+	text "Me ha gustado el"
+	line "combate. Espero"
+	cont "volver a verte."
 	done
 
 KimonoGirlSayoSeenText:
-	text "I always dance"
-	line "with my #MON."
+	text "Yo siempre bailo"
+	line "con mis #MON."
 
-	para "Of course, I also"
-	line "train them."
+	para "Y también los"
+	line "entreno, claro."
 	done
 
 KimonoGirlSayoBeatenText:
-	text "Oh, so close!"
-	line "I almost had you."
+	text "¡Estuve cerca!"
+	line "Por poco te venzo."
 	done
 
 KimonoGirlSayoAfterBattleText:
-	text "Rhythm is impor-"
-	line "tant for both"
+	text "El ritmo es muy"
+	line "importante para la"
 
-	para "dancing and #-"
-	line "MON."
+	para "danza y para los"
+	line "#MON."
 	done
 
 KimonoGirlZukiSeenText:
-	text "Isn't my barrette"
-	line "pretty?"
+	text "¿Te gusta mi"
+	line "pasador?"
 
-	para "Oh. A #MON"
-	line "battle?"
+	para "¡Ah! ¿Un combate"
+	line "#MON?"
 	done
 
 KimonoGirlZukiBeatenText:
-	text "I don't have any"
-	line "#MON left…"
+	text "No me queda ningún"
+	line "#MON…"
 	done
 
 KimonoGirlZukiAfterBattleText:
-	text "I put a different"
-	line "flower in my bar-"
-	cont "rette every month."
+	text "Cada mes pongo una"
+	line "flor nueva en mi"
+	cont "pasador."
 	done
 
 KimonoGirlKuniSeenText:
-	text "Oh, you're a cute"
-	line "trainer. Would you"
-	cont "like to battle?"
+	text "¡Oh! ¡Eres tan"
+	line "guay!"
+	cont "¿Quieres luchar?"
 	done
 
 KimonoGirlKuniBeatenText:
-	text "You're stronger"
-	line "than you look."
+	text "Eres más fuerte de"
+	line "lo que pareces."
 	done
 
 KimonoGirlKuniAfterBattleText:
-	text "I trained a lot,"
-	line "so I thought I was"
+	text "He entrenado mucho"
+	line "y creía que tenía"
 
-	para "a capable trainer."
-	line "I guess I'm not."
+	para "posibilidades,"
+	line "pero no."
 	done
 
 KimonoGirlMikiSeenText:
-	text "Do you like my"
-	line "dancing? I'm good"
-	cont "at #MON too."
+	text "¿Te gusta cómo"
+	line "bailo? También"
+
+	para "soy hábil con los"
+	line "#MON."
 	done
 
 KimonoGirlMikiBeatenText:
-	text "Ooh, you're good"
-	line "at #MON too."
+	text "¡Oh! ¡Tú también"
+	line "eres genial!"
 	done
 
 KimonoGirlMikiAfterBattleText:
-	text "I can keep dancing"
-	line "because there are"
+	text "Sigo bailando"
+	line "porque hay gente a"
 
-	para "people who enjoy"
-	line "what I do."
+	para "la que le gusta lo"
+	line "que hago."
 
-	para "My #MON keep my"
-	line "spirits up too."
+	para "Mis #MON me"
+	line "animan."
 	done
 
 SurfGuyNeverLeftAScratchText:
-	text "Not only are the"
-	line "KIMONO GIRLS great"
+	text "Las CHICAS KIMONO"
+	line "no sólo bailan."
 
-	para "dancers, they're"
-	line "also skilled at"
-	cont "#MON."
+	para "También son"
+	line "extraordinarias"
+	cont "con los #MON."
 
-	para "I always challenge"
-	line "them, but I've"
+	para "Yo siempre las"
+	line "desafío pero nunca"
 
-	para "never even left a"
-	line "scratch…"
+	para "les he hecho ni un"
+	line "rasguño…"
 	done
 
 SurfGuyLadGiftText:
-	text "Lad! If you can"
-	line "defeat all the"
+	text "¡Chaval! Si vences"
+	line "a todas las CHICAS"
 
-	para "KIMONO GIRLS, I'll"
-	line "give you a gift."
+	para "KIMONO, te daré un"
+	line "regalo."
 	done
 
 SurfGuyLassieGiftText:
-	text "Lassie, if you can"
-	line "defeat all the"
+	text "Chica, si vences a"
+	line "todas las CHICAS"
 
-	para "KIMONO GIRLS, I'll"
-	line "give you a gift."
+	para "KIMONO, te daré un"
+	line "regalo."
 	done
 
 SurfGuyLikeADanceText:
-	text "The way you bat-"
-	line "tled, it was like"
-	cont "watching a dance."
+	text "Verte luchar ha"
+	line "sido como ver una"
+	cont "danza."
 
-	para "It was a rare"
-	line "treat to see!"
+	para "¡Ha sido un"
+	line "extraño combate!"
 
-	para "I want you to have"
-	line "this. Don't worry"
-	cont "--take it!"
+	para "Me gustaría darte"
+	line "esto. Adelante,"
+	cont "¡tuyo es!"
 	done
 
 SurfGuySurfExplanationText:
-	text "That's SURF."
+	text "Es SURF."
 
-	para "It's a move that"
-	line "lets #MON swim"
-	cont "across water."
+	para "Un movimiento que"
+	line "permite nadar a"
+	cont "los #MON."
 	done
 
 SurfGuyElegantKimonoGirlsText:
-	text "I wish my #MON"
-	line "were as elegant as"
-	cont "the KIMONO GIRLS…"
+	text "Ojalá mis #MON"
+	line "fueran tan"
+
+	para "elegantes como las"
+	line "CHICAS KIMONO…"
 	done
 
 RhydonText:
-	text "RHYDON: Gugooh"
-	line "gugogooh!"
+	text "RHYDON: ¡Rhydo,"
+	line "rhydo!"
 	done
 
 DanceTheatreCooltrainerMText:
-	text "That man's always"
-	line "with his RHYDON."
+	text "Ese hombre siempre"
+	line "va con su RHYDON."
 
-	para "Says he wants a"
-	line "#MON that can"
-	cont "SURF and dance."
+	para "Dice que quiere un"
+	line "#MON que baile"
+	cont "y haga SURF."
 
-	para "Is he trying to"
-	line "make a synchro-"
-	cont "nized swimming"
-	cont "#MON?"
+	para "¿Intenta crear un"
+	line "#MON que haga"
+
+	para "natación"
+	line "sincronizada?"
 	done
 
 DanceTheatreGrannyText:
-	text "The KIMONO GIRLS"
-	line "are so beautiful…"
+	text "Las CHICAS KIMONO"
+	line "son tan guapas…"
 
-	para "But they have to"
-	line "go through rigor-"
-	cont "ous training."
+	para "Pero tienen que"
+	line "entrenarse mucho."
 
-	para "And they have to"
-	line "learn to follow"
+	para "Y deben aprender"
+	line "los distintos"
 
-	para "customs before ap-"
-	line "pearing in public."
+	para "bailes antes de"
+	line "actuar."
 
-	para "But if you love"
-	line "something, any-"
-	cont "thing is possible."
+	para "Pero si te gusta"
+	line "algo, todo es"
+	cont "posible."
 	done
 
 DanceTheatreFancyPanelText:
-	text "It's a fancy panel"
-	line "that's decorated"
-	cont "with flowers."
+	text "Es un elegante"
+	line "panel decorado con"
+	cont "flores."
 	done
 
 DanceTheatre_MapEvents:

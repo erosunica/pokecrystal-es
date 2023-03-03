@@ -21,42 +21,45 @@ CianwoodLugiaSpeechHouseBookshelf:
 	jumpstd picturebookshelf
 
 CianwoodLugiaSpeechHouseTeacherText:
-	text "You came from"
-	line "OLIVINE?"
+	text "¿Vienes de CIUDAD"
+	line "OLIVO?"
 
-	para "Do you remember"
-	line "the four islands"
-	cont "along the way?"
+	para "¿Te acuerdas de"
+	line "las cuatro islas"
+	cont "del camino?"
 
-	para "I heard that a "
-	line "mythical sea crea-"
-	cont "ture is hiding in"
-	cont "them."
+	para "Dicen que en"
+	line "ellas se esconde"
+
+	para "una mítica"
+	line "criatura marina."
 	done
 
 CianwoodLugiaSpeechHouseLassText:
-	text "I heard that you"
-	line "can only see it if"
+	text "Dicen que sólo"
+	line "puedes verla si"
 
-	para "you have a SILVER"
-	line "WING."
+	para "tienes un ALA"
+	line "PLATEADA."
 
-	para "It must have the"
-	line "same scent as the"
-	cont "creature."
+	para "Debe de tener la"
+	line "misma esencia que"
+	cont "la criatura."
 	done
 
 CianwoodLugiaSpeechHouseTwinText:
-	text "I've heard that"
-	line "the whirlpools"
+	text "He oído que los"
+	line "remolinos que hay"
 
-	para "around the islands"
-	line "are caused by the"
-	cont "sea creature."
+	para "alrededor de las"
+	line "islas son causados"
 
-	para "You might need a"
-	line "special move to"
-	cont "get past them."
+	para "por una criatura"
+	line "marina."
+
+	para "Necesitarás una"
+	line "habilidad especial"
+	cont "para sortearlos."
 	done
 
 CianwoodLugiaSpeechHouse_MapEvents:

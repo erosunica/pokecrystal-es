@@ -32,31 +32,34 @@ DarkCaveBlackthornEntranceTMSnore:
 	itemball TM_SNORE
 
 DarkCaveBlackthornEntrancePharmacistText1:
-	text "Whoa! You startled"
-	line "me there!"
+	text "¡Uauu! ¡Me has"
+	line "asustado!"
 
-	para "I had my BLACK-"
-	line "GLASSES on, so I"
+	para "Tenía puestas las"
+	line "GAFAS DE SOL y no"
 
-	para "didn't notice you"
-	line "at all."
+	para "me di cuenta de tu"
+	line "presencia."
 
-	para "What am I doing"
-	line "here?"
+	para "¿Que qué estoy"
+	line "haciendo aquí?"
 
-	para "Hey, don't you"
-	line "worry about it."
+	para "No te preocupes"
+	line "por eso."
 
-	para "I'll give you a"
-	line "pair of BLACK-"
-	cont "GLASSES, so forget"
-	cont "you saw me, OK?"
+	para "Te daré unas GAFAS"
+	line "DE SOL si olvidas"
+
+	para "que me has visto,"
+	line "¿vale?"
 	done
 
 DarkCaveBlackthornEntrancePharmacistText2:
-	text "BLACKGLASSES ups"
-	line "the power of dark-"
-	cont "type moves."
+	text "Las GAFAS DE SOL"
+	line "aumentan el poder"
+
+	para "de los movimientos"
+	line "de tipo siniestro."
 	done
 
 DarkCaveBlackthornEntrance_MapEvents:

@@ -234,148 +234,144 @@ Movement_NinjaSpin:
 	step_end
 
 JanineText_DisappointYou:
-	text "Fufufufu…"
+	text "¡Fufufufu…!"
 
-	para "I'm sorry to dis-"
-	line "appoint you…"
+	para "Lo siento mucho…"
 
-	para "I'm only joking!"
+	para "¡Sólo bromeaba!"
 
-	para "I'm the real deal!"
+	para "¡Soy la auténtica!"
 
-	para "JANINE of FUCHSIA"
-	line "GYM, that's me!"
+	para "Soy SACHIKO, del"
+	line "GIMNASIO FUCSIA."
+	cont "¡La original!"
 	done
 
 JanineText_ToughOne:
-	text "JANINE: You're a"
-	line "tough one. You"
-	cont "definitely won…"
+	text "SACHIKO: Eres muy"
+	line "fuerte. ¡Y, sin"
+	cont "duda, has ganado!"
 
-	para "Here's SOULBADGE."
-	line "Take it."
+	para "Aquí tienes la"
+	line "MEDALLA ALMA."
 	done
 
 Text_ReceivedSoulBadge:
-	text "<PLAYER> received"
-	line "SOULBADGE."
+	text "<PLAYER> recibió"
+	line "la MEDALLA ALMA."
 	done
 
 JanineText_ToxicSpeech:
-	text "JANINE: You're so"
-	line "tough! I have a"
-	cont "special gift!"
+	text "SACHIKO: ¡Eres tan"
+	line "fuerte! ¡Tengo un"
+	cont "regalo para ti!"
 
-	para "It's TOXIC, a pow-"
-	line "erful poison that"
+	para "Es TÓXICO, un"
+	line "potente veneno que"
 
-	para "steadily saps the"
-	line "victim's HP."
+	para "va agotando los"
+	line "PS de la víctima."
 	done
 
 JanineText_ApplyMyself:
-	text "JANINE: I'm going"
-	line "to really apply"
+	text "SACHIKO: Voy a"
+	line "esforzarme por"
 
-	para "myself and improve"
-	line "my skills."
+	para "mejorar mis"
+	line "habilidades."
 
-	para "I want to become"
-	line "better than both"
-	cont "Father and you!"
+	para "¡Quiero llegar a"
+	line "ser mejor que mi"
+	cont "padre y que tú!"
 	done
 
 LassAliceBeforeText:
-	text "Fufufu!"
+	text "¡Fufufu! ¡Soy"
+	line "SACHIKO, la LÍDER"
+	cont "del GIMNASIO!"
 
-	para "I'm JANINE, the"
-	line "GYM LEADER!"
-
-	para "No, I'm not!"
-	line "Gotcha, sucker!"
+	para "¡No, no soy yo!"
+	line "¡Qué tontería!"
 	done
 
 LassAliceBeatenText:
-	text "I had you fooled…"
+	text "Te he engañado…"
 	done
 
 LassAliceAfterText:
-	text "How will you dis-"
-	line "tinguish our real"
-	cont "LEADER?"
+	text "¿Cómo reconocerás"
+	line "a la auténtica"
+	cont "LÍDER?"
 	done
 
 LassLindaBeforeText:
-	text "Fooled you!"
-	line "Hahaha!"
+	text "¡Te he engañado!"
+	line "¡Ja ja ja!"
 	done
 
 LassLindaBeatenText:
-	text "Ooh… I lost…"
-	line "You're not weak…"
+	text "¡Oh…! He perdido…"
+	line "No eres débil…"
 	done
 
 LassLindaAfterText:
-	text "Well? Wasn't my"
-	line "disguise perfect?"
+	text "¿Qué? ¿Mi disfraz"
+	line "no era perfecto?"
 	done
 
 PicnickerCindyBeforeText:
-	text "I'm JANINE!"
+	text "¡Soy SACHIKO!"
 
-	para "How did you know I"
-	line "was real?"
+	para "¿Cómo has sabido"
+	line "que no era ella?"
 
-	para "Let's battle!"
+	para "¡Luchemos!"
 	done
 
 PicnickerCindyBeatenText:
-	text "Darn it!"
-	line "I wanted to win!"
+	text "¡Maldición!"
+	line "¡Quería ganar!"
 	done
 
 PicnickerCindyAfterText:
-	text "You must be"
-	line "getting tired."
+	text "Debes de estar"
+	line "cansándote."
 	done
 
 CamperBarryBeforeText:
-	text "Wahahaha!"
+	text "¡Uajajaja!"
 
-	para "You betcha!"
-	line "I'm JANINE!"
+	para "Acertaste, joven."
+	line "¡Yo soy SACHIKO!"
 	done
 
 CamperBarryBeatenText:
-	text "My disguise was"
-	line "right on! Dang!"
+	text "¿A que era bueno"
+	line "mi disfraz?"
 	done
 
 CamperBarryAfterText:
-	text "Hey, you. Was my"
-	line "disguise cute or"
-	cont "what, huh?"
+	text "¡Eh, tú!"
+	line "¿No era bueno mi"
+	cont "disfraz?"
 	done
 
 FuchsiaGymGuyText:
-	text "Yo, CHAMP in"
-	line "making!"
+	text "Echa un vistazo a"
+	line "tu alrededor."
 
-	para "Whoops! Take a"
-	line "good look around"
+	para "Todos los"
+	line "entrenadores se"
+	cont "parecen a SACHIKO."
 
-	para "you. The trainers"
-	line "all look like the"
-	cont "LEADER, JANINE."
-
-	para "Which of them is"
-	line "the real JANINE?"
+	para "¿Cuál será la"
+	line "auténtica SACHIKO?"
 	done
 
 FuchsiaGymGuyWinText:
-	text "That was a great"
-	line "battle, trainer"
-	cont "from JOHTO!"
+	text "¡Qué bien luchas,"
+	line "cómo se nota que"
+	cont "eres de JOHTO!"
 	done
 
 FuchsiaGym_MapEvents:

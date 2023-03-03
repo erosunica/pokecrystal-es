@@ -21,18 +21,18 @@ SaffronMartCooltrainerFScript:
 	jumptextfaceplayer SaffronMartCooltrainerFText
 
 SaffronMartCooltrainerMText:
-	text "There's a big"
-	line "RADIO TOWER in"
-	cont "LAVENDER."
+	text "En PUEBLO LAVANDA"
+	line "hay una gran TORRE"
+	cont "RADIO."
 	done
 
 SaffronMartCooltrainerFText:
-	text "I want to become"
-	line "stronger, but I'm"
-	cont "not good yet…"
+	text "Quiero ser más"
+	line "fuerte, pero aún"
+	cont "debo aprender…"
 
-	para "Could you show me"
-	line "how sometime?"
+	para "¿Podrías ayudarme"
+	line "a mejorar?"
 	done
 
 SaffronMart_MapEvents:

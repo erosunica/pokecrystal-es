@@ -1,10 +1,10 @@
-	db "ANGLER@" ; species name
-	dw 108, 260 ; height, weight
+	db "RAPE@" ; species name
+	dbw 5, 120 ; height, weight
 
-	db   "Its antennae, whi-"
-	next "ch evolved from a"
-	next "fin, have both po-"
+	db   "Lo que ahora es"
+	next "una antena, antes"
+	next "era una aleta."
 
-	page "sitive and neg-"
-	next "ative charges flo-"
-	next "wing through them.@"
+	page "En ambos extremos"
+	next "tiene carga posi-"
+	next "tiva y negativa.@"

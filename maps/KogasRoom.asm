@@ -79,52 +79,53 @@ KogasRoom_EnterMovement:
 	step_end
 
 KogaScript_KogaBeforeText:
-	text "Fwahahahaha!"
+	text "¡Ja, ja, ja!"
 
-	para "I am KOGA of the"
-	line "ELITE FOUR."
+	para "Soy KOGA, del ALTO"
+	line "MANDO. Vivo en las"
 
-	para "I live in shadows,"
-	line "a ninja!"
+	para "sombras, como un"
+	line "ninja."
 
-	para "My intricate style"
-	line "will confound and"
-	cont "destroy you!"
+	para "¡Te confundiré y"
+	line "te destruiré con"
+	cont "mi estilo!"
 
-	para "Confusion, sleep,"
-	line "poison…"
+	para "Confusión, sueño,"
+	line "veneno…"
 
-	para "Prepare to be the"
-	line "victim of my sin-"
-	cont "ister technique!"
+	para "¡Prepárate para"
+	line "ser víctima de"
+	cont "mis técnicas!"
 
-	para "Fwahahahaha!"
+	para "¡Ja, ja, ja!"
 
-	para "#MON is not"
-	line "merely about brute"
+	para "Los #MON no"
+	line "utilizan sólo"
 
-	para "force--you shall"
-	line "see soon enough!"
+	para "la fuerza bruta."
+	line "¡Ya lo verás!"
 	done
 
 KogaScript_KogaBeatenText:
-	text "Ah!"
-	line "You have proven"
-	cont "your worth!"
+	text "¡Ah! ¡Has demos-"
+	line "trado tu valor!"
 	done
 
 KogaScript_KogaDefeatText:
-	text "I subjected you to"
-	line "everything I could"
-	cont "muster."
+	text "He probado contigo"
+	line "todo lo que sé."
 
-	para "But my efforts"
-	line "failed. I must"
-	cont "hone my skills."
+	para "Pero he fallado."
 
-	para "Go on to the next"
-	line "room, and put your"
-	cont "abilities to test!"
+	para "Debería entrenarme"
+	line "bastante más."
+
+	para "¡Entra en la"
+	line "siguiente sala"
+
+	para "y demuestra tus"
+	line "habilidades!"
 	done
 
 KogasRoom_MapEvents:

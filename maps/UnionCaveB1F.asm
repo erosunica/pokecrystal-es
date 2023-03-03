@@ -66,88 +66,90 @@ UnionCaveB1FBoulder:
 	jumpstd strengthboulder
 
 HikerPhillipSeenText:
-	text "It's been a while"
-	line "since I last saw"
-	cont "another person."
+	text "Hace mucho tiempo"
+	line "que no veo a"
+	cont "nadie."
 
-	para "Don't be shy."
-	line "Let's battle!"
+	para "Acércate."
+	line "¡Luchemos!"
 	done
 
 HikerPhillipBeatenText:
-	text "Uurggh…"
+	text "¡Uurggh…!"
 	done
 
 HikerPhillipAfterBattleText:
-	text "I've been lost for"
-	line "a long time…"
+	text "Llevo perdido"
+	line "mucho tiempo…"
 
-	para "I don't mind it"
-	line "here, but I am"
-	cont "soooo hungry!"
+	para "No es que me"
+	line "importe, ¡pero"
+	cont "estoy hambriento!"
 	done
 
 HikerLeonardSeenText:
-	text "What do you know!"
-	line "A visitor!"
+	text "¡Qué sabes tú!"
+	line "¡Un visitante!"
 	done
 
 HikerLeonardBeatenText:
-	text "Wahahah! You're a"
-	line "feisty one!"
+	text "¡Jajaja! Te gusta"
+	line "pelear, ¿verdad?"
 	done
 
 HikerLeonardAfterBattleText:
-	text "I live down here."
+	text "Vivo aquí abajo."
 
-	para "You can, too, if"
-	line "you'd like."
+	para "Y tú también"
+	line "podrías si"
+	cont "quisieras."
 
-	para "There's plenty of"
-	line "room, you see."
+	para "Como ves, hay"
+	line "mucho sitio."
 	done
 
 PokemaniacAndrewSeenText:
-	text "Who's there?"
+	text "¿Quién anda ahí?"
 
-	para "Leave me and my"
-	line "#MON alone!"
+	para "¡Déjame en paz,"
+	line "a mí y a mis"
+	cont "#MON!"
 	done
 
 PokemaniacAndrewBeatenText:
-	text "Go…"
-	line "Go away!"
+	text "¡Fuera…!"
+	line "¡Lárgate!"
 	done
 
 PokemaniacAndrewAfterBattleText:
-	text "Just me and my"
-	line "#MON. I'm de-"
-	cont "lirious with joy."
+	text "Sólo yo y mis"
+	line "#MON. ¡Me"
+	cont "muero de alegría!"
 	done
 
 PokemaniacCalvinSeenText:
-	text "I came all the way"
-	line "here to conduct my"
-	cont "#MON research."
+	text "He venido hasta"
+	line "aquí para estudiar"
+	cont "a los #MON."
 
-	para "Let me demonstrate"
-	line "my findings in a"
-	cont "real battle!"
+	para "¡Te demostraré"
+	line "mis hallazgos en"
+	cont "un combate real!"
 	done
 
 PokemaniacCalvinBeatenText:
-	text "You demonstrated"
-	line "on me!"
+	text "¡Lo has demostrado"
+	line "conmigo!"
 	done
 
 PokemaniacCalvinAfterBattleText:
-	text "I should compile"
-	line "and announce my"
-	cont "study findings."
+	text "Debería reunir"
+	line "y publicar mis"
+	cont "hallazgos."
 
-	para "I might even be-"
-	line "come famous like"
-	cont "PROF.ELM."
+	para "Podría hacerme"
+	line "tan famoso como"
+	cont "el PROF. ELM."
 	done
 
 UnionCaveB1F_MapEvents:

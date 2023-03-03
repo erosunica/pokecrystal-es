@@ -47,56 +47,55 @@ GoldenrodBikeShopBicycle:
 	jumptext GoldenrodBikeShopBicycleText
 
 GoldenrodBikeShopClerkIntroText:
-	text "…sigh… I moved"
-	line "here, but I can't"
+	text "(Suspiro…)"
+	line "Me trasladé aquí,"
 
-	para "sell my BICYCLES."
-	line "Why is that?"
+	para "pero no vendo mis"
+	line "BICIS. ¿Por qué?"
 
-	para "Could you ride a"
-	line "BICYCLE and adver-"
-	cont "tise for me?"
+	para "¿Montarías en una"
+	line "BICI para hacerme"
+	cont "publicidad?"
 	done
 
 GoldenrodBikeShopClerkAgreedText:
-	text "Really? Great!"
+	text "¿De verdad? ¡Bien!"
 
-	para "Give me your name"
-	line "and phone number,"
+	para "Dime tu nombre y"
+	line "número de teléfono"
 
-	para "and I'll loan you"
-	line "a BICYCLE."
+	para "y te prestaré una"
+	line "BICI."
 	done
 
 BorrowedABicycleText:
-	text "<PLAYER> borrowed a"
-	line "BICYCLE."
+	text "<PLAYER> tomó"
+	line "prestada una BICI."
 	done
 
 GoldenrodBikeShopClerkFirstRateBikesText:
-	text "My BICYCLES are"
-	line "first-rate! You"
+	text "¡Mis BICIS son de"
+	line "gran calidad!"
 
-	para "can ride them"
-	line "anywhere."
+	para "Puedes usarlas en"
+	line "cualquier lugar."
 	done
 
 GoldenrodBikeShopClerkRefusedText:
-	text "…sigh… Oh, for"
-	line "the kindness of"
-	cont "people…"
+	text "(Suspiro…)"
+	line "¡Oh, rayos y"
+	cont "centellas…!"
 	done
 
 GoldenrodBikeShopJustReleasedCompactBikeText:
-	text "Just released!"
-
-	para "First-rate compact"
-	line "BICYCLES!"
+	text "¡Lo último! ¡BICIS"
+	line "compactas de"
+	cont "máxima calidad!"
 	done
 
 GoldenrodBikeShopBicycleText:
-	text "It's a shiny new"
-	line "BICYCLE!"
+	text "¡Es una BICI"
+	line "novísima!"
 	done
 
 GoldenrodBikeShop_MapEvents:

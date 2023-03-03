@@ -1,106 +1,105 @@
 ArnieMonIsSoCuteText:
-	text "I'm always with my"
-	line "@"
+	text "¡Siempre estoy con"
+	line "mi @"
 	text_ram wStringBuffer4
 	text "!"
 
-	para "It's so cute!"
-	line "I just love it!"
+	para "¡Es tan mono!"
+	line "¡Me encanta!"
 	done
 
 ArnieDefeatedMonText:
-	text "Changing the topic"
-	line "here, I saw this"
+	text "Cambiando de tema,"
+	line "he visto a un"
 
 	para "@"
 	text_ram wStringBuffer4
-	text " for the"
-	line "first time."
+	text " por"
+	line "primera vez."
 
-	para "It was easy to"
-	line "beat, actually."
+	para "La verdad, fue"
+	line "fácil vencerlo."
 	done
 
 ArnieLostAMonText:
-	text "I was wondering,"
-	line "do you happen to"
-	cont "have @"
+	text "Me pregunto…"
+	line "¿tienes algún"
+	cont "@"
 	text_ram wStringBuffer4
 	text "?"
 
-	para "I can't seem to"
-	line "catch one. What is"
+	para "No consigo atrapar"
+	line "ninguno. ¿Cuál"
 
-	para "its weakness, I"
-	line "wonder."
+	para "será su punto"
+	line "débil?"
 	done
 
 ArnieBattleRematchText:
-	text "Hey, let's battle"
-	line "our #MON!"
+	text "¡Enfrentemos a"
+	line "nuestros #MON!"
 
-	para "I won't lose to"
-	line "you battling or in"
+	para "¡No me vencerás ni"
+	line "en combate ni en"
 
-	para "the Bug-Catching"
-	line "Contest!"
+	para "el Concurso de"
+	line "Captura de Bichos!"
 
-	para "I'll be here on"
+	para "¡Estaré en"
 	line "@"
 	text_ram wStringBuffer5
 	text "!"
 	done
 
 ArnieHangUpText:
-	text "Let's talk again,"
-	line "huh?"
+	text "Volvemos a hablar"
+	line "pronto, ¿vale?"
 	done
 
 ArnieSwarmText:
-	text "Boy, am I glad I"
-	line "caught you!"
+	text "¡Qué bien que te"
+	line "localizo!"
 
-	para "A whole bunch of"
+	para "¡Hay un montón de"
 	line "@"
 	text_ram wStringBuffer4
-	text " have"
+	text " por"
 
-	para "appeared around"
+	para "los alrededores de"
 	line "@"
 	text_ram wStringBuffer5
 	text "!"
 
-	para "You have to see"
-	line "this!"
+	para "¡No te lo puedes"
+	line "perder!"
 	done
 
 ArnieHaventSeenRareMonText:
-	text "I haven't had any"
-	line "luck seeing rare"
-	cont "#MON lately…"
+	text "Últimamente no he"
+	line "tenido suerte para"
+	cont "ver #MON raros…"
 
-	para "But I know they're"
-	line "out there!"
+	para "¡Pero sé que están"
+	line "ahí fuera!"
 	done
 
 ArnieReminderText:
-	text "Hey, where are you"
-	line "now?"
+	text "Eh, ¿dónde estás?"
 
-	para "Let's battle. I'll"
-	line "be waiting for you"
-	cont "on @"
+	para "Luchemos. ¡Te"
+	line "estaré esperando"
+	cont "en @"
 	text_ram wStringBuffer5
 	text "!"
 	done
 
 ArnieHurryText:
-	text "Hello? Are you"
-	line "coming or what?"
+	text "¿Hola? ¿Vienes o"
+	line "qué?"
 
-	para "You're missing out"
-	line "on seeing YANMA!"
+	para "¡Te vas a perder"
+	line "a YANMA!"
 
-	para "Get down to ROUTE"
-	line "35 right now!"
+	para "¡Ven a la RUTA 35"
+	line "inmediatamente!"
 	done

@@ -168,122 +168,123 @@ MovementData_0x1a88f7:
 OlivineCityRivalText:
 	text "…"
 
-	para "You again?"
+	para "¿Tú otra vez?"
 
-	para "There's no need to"
-	line "panic. I don't"
+	para "¿Y a mí qué me"
+	line "importa? Enclen-"
+	cont "ques como tú no me"
+	cont "asustan."
 
-	para "bother with wimps"
-	line "like you."
+	para "Y hablando de"
+	line "debiluchos, la"
 
-	para "Speaking of weak-"
-	line "lings, the city's"
+	para "LÍDER del GIMNASIO"
+	line "no está aquí."
 
-	para "GYM LEADER isn't"
-	line "here."
+	para "Se supone que está"
+	line "cuidando a un"
 
-	para "Supposedly taking"
-	line "care of a sick"
+	para "#MON enfermo"
+	line "en el FARO."
 
-	para "#MON at the"
-	line "LIGHTHOUSE."
+	para "¡Buuuu! ¡Fuera los"
+	line "#MON enfermos!"
 
-	para "Humph! Boo-hoo!"
-	line "Just let sick"
-	cont "#MON go!"
+	para "¡Los #MON que"
+	line "no pueden luchar"
+	cont "son unos inútiles!"
 
-	para "A #MON that"
-	line "can't battle is"
-	cont "worthless!"
+	para "¿Por qué no vas a"
+	line "entrenar al FARO?"
 
-	para "Why don't you go"
-	line "train at the"
-	cont "LIGHTHOUSE?"
-
-	para "Who knows. It may"
-	line "make you a bit"
-	cont "less weak!"
+	para "¿Quién sabe?"
+	line "¡A lo mejor te"
+	cont "refuerza!"
 	done
 
 OlivineCitySailor1Text:
-	text "Dark roads are"
-	line "dangerous at"
-	cont "night."
+	text "Las calles oscuras"
+	line "son muy peligrosas"
+	cont "por la noche."
 
-	para "But in the pitch-"
-	line "black of night,"
+	para "Pero, si es noche"
+	line "cerrada, ¡el mar"
 
-	para "the sea is even"
-	line "more treacherous!"
+	para "es aún más"
+	line "traicionero!"
 
-	para "Without the beacon"
-	line "of the LIGHTHOUSE"
+	para "Si no les guiara"
+	line "la luz del FARO,"
 
-	para "to guide it, no"
-	line "ship can sail."
+	para "los barcos no"
+	line "podrían navegar."
 	done
 
 OlivineCityStandingYoungsterPokegearText:
-	text "That thing you"
-	line "have--it's a #-"
-	cont "GEAR, right? Wow,"
-	cont "that's cool."
+	text "Eso que tienes es"
+	line "un #GEAR,"
+
+	para "¿verdad? ¡Uauu!"
+	line "¡Es genial!"
 	done
 
 OlivineCityStandingYoungsterPokedexText:
-	text "Wow, you have a"
+	text "¡Uauu, tienes una"
 	line "#DEX!"
 
-	para "That is just so"
-	line "awesome."
+	para "Es realmente"
+	line "increíble."
 	done
 
 OlivineCitySailor2Text:
-	text "The sea is sweet!"
+	text "¡El mar es dulce!"
 
-	para "Sunsets on the sea"
-	line "are marvelous!"
+	para "¡Los atardeceres"
+	line "en el mar son"
+	cont "maravillosos!"
 
-	para "Sing with me! "
-	line "Yo-ho! Blow the"
-	cont "man down!…"
+	para "¡Canta conmigo!"
+	line "¡La, la, la…!"
 	done
 
 OlivineCitySignText:
-	text "OLIVINE CITY"
+	text "CIUDAD OLIVO"
 
-	para "The Port Closest"
-	line "to Foreign Lands"
+	para "El puerto a"
+	line "tierras lejanas"
 	done
 
 OlivineCityPortSignText:
-	text "OLIVINE PORT"
-	line "FAST SHIP PIER"
+	text "PUERTO OLIVO"
+	line "MUELLE DEL FERRY"
 	done
 
 OlivineGymSignText:
-	text "OLIVINE CITY"
-	line "#MON GYM"
-	cont "LEADER: JASMINE"
+	text "LÍDER DEL GIMNASIO"
+	line "#MON DE CIUDAD"
+	cont "OLIVO: YASMINA"
 
-	para "The Steel-Clad"
-	line "Defense Girl"
+	para "La chica de acero"
 	done
 
 OlivineLighthouseSignText:
-	text "OLIVINE LIGHTHOUSE"
-	line "Also known as the"
-	cont "GLITTER LIGHTHOUSE"
+	text "FARO DE OLIVO"
+	line "También conocido"
+
+	para "como el FARO"
+	line "BRILLANTE"
 	done
 
 OlivineCityBattleTowerSignText:
-	text "BATTLE TOWER AHEAD"
-	line "Opening Now!"
+	text "HACIA LA TORRE"
+	line "BATALLA"
+	cont "¡Ya hemos abierto!"
 	done
 
 OlivineCityBattleTowerSignText_NotYetOpen:
 ; unused; originally shown when the Battle Tower was closed
-	text "BATTLE TOWER AHEAD"
+	text "HACIA LA TORRE"
+	line "BATALLA"
 	done
 
 OlivineCity_MapEvents:

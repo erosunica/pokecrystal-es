@@ -1,10 +1,10 @@
-	db "FAIRY@" ; species name
-	dw 407, 1070 ; height, weight
+	db "HADA@" ; species name
+	dbw 14, 487 ; height, weight
 
-	db   "It can make most"
-	next "any #MON run"
-	next "away simply by"
+	db   "Con sólo enseñar"
+	next "las fauces, conse-"
+	next "guirá ahuyentar"
 
-	page "opening its mouth"
-	next "wide to reveal its"
-	next "big fangs.@"
+	page "prácticamente a"
+	next "todos los #MON"
+	next "que se cruce.@"

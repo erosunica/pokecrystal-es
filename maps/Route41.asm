@@ -133,210 +133,212 @@ Route41HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
 
 SwimmermCharlieSeenText:
-	text "The water's warm"
-	line "here. I'm loose"
-	cont "and limber."
+	text "Aquí el agua está"
+	line "templada. Estoy"
+	cont "muy a gusto."
 
-	para "Sure, I'll take"
-	line "you on!"
+	para "¡Claro que lucharé"
+	line "contigo!"
 	done
 
 SwimmermCharlieBeatenText:
-	text "Yikes! I've got"
-	line "prune skin!"
+	text "¡Vaya! ¡Estoy"
+	line "como una pasa!"
 	done
 
 SwimmermCharlieAfterBattleText:
-	text "Isn't it relaxing"
-	line "just floating like"
-	cont "this?"
+	text "¡Qué relajante es"
+	line "flotar así!"
 	done
 
 SwimmermGeorgeSeenText:
-	text "I'm a bit tired."
-	line "If I win, lend me"
-	cont "your #MON."
+	text "Estoy cansado. Si"
+	line "gano, ¿me prestas"
+	cont "tus #MON?"
 	done
 
 SwimmermGeorgeBeatenText:
-	text "Pant, pant…"
+	text "Uf, uf…"
 	done
 
 SwimmermGeorgeAfterBattleText:
-	text "It's so far to"
-	line "CIANWOOD."
+	text "CIUDAD ORQUÍDEA"
+	line "está muy lejos."
 
-	para "But it's no easy"
-	line "return trip to"
-	cont "OLIVINE either."
+	para "Pero tampoco es"
+	line "fácil volver a"
+	cont "CIUDAD OLIVO."
 
-	para "What should I do?"
+	para "¿Qué se puede"
+	line "hacer?"
 	done
 
 SwimmermBerkeSeenText:
-	text "See those islands"
-	line "that are blocked"
-	cont "by whirlpools?"
+	text "¿Ves esas islas"
+	line "aisladas por"
+	cont "torbellinos?"
 
-	para "There just has to"
-	line "be a secret!"
+	para "¡Tiene que haber"
+	line "un secreto!"
 	done
 
 SwimmermBerkeBeatenText:
-	text "What's the secret"
-	line "to your strength?"
+	text "¿Cuál es tu"
+	line "secreto?"
 	done
 
 SwimmermBerkeAfterBattleText:
-	text "It was a dark and"
-	line "stormy night…"
+	text "Era de noche"
+	line "y llovía…"
 
-	para "I saw this giant"
-	line "#MON flying"
-	cont "from the islands."
+	para "Vi un #MON"
+	line "gigante volando"
+	cont "desde las islas."
 
-	para "It was scattering"
-	line "feathers from its"
-	cont "silver wings."
+	para "Dejaba caer las"
+	line "plumas de sus"
+	cont "alas plateadas."
 	done
 
 SwimmermKirkSeenText:
-	text "The waves are wild"
-	line "here."
+	text "Aquí hay mucho"
+	line "oleaje."
 
-	para "They tire you out"
-	line "while you swim."
+	para "Cuesta mucho"
+	line "nadar."
 	done
 
 SwimmermKirkBeatenText:
-	text "I'm beat!"
+	text "¡Me has vencido!"
 	done
 
 SwimmermKirkAfterBattleText:
-	text "The currents keep"
-	line "me from reaching"
-	cont "that island."
+	text "La corriente me"
+	line "impide llegar"
+	cont "a las islas."
 	done
 
 SwimmermMathewSeenText:
-	text "Are you seeking"
-	line "the secrets of"
-	cont "WHIRL ISLANDS?"
+	text "¿Estás buscando el"
+	line "secreto de las"
+	cont "ISLAS REMOLINO?"
 	done
 
 SwimmermMathewBeatenText:
-	text "Ooh, you've got"
-	line "great endurance!"
+	text "¡Ooh, tienes una"
+	line "gran resistencia!"
 	done
 
 SwimmermMathewAfterBattleText:
-	text "A secret about"
-	line "WHIRL ISLANDS…"
+	text "Un secreto sobre"
+	line "ISLAS REMOLINO…"
 
-	para "It's pitch-black"
-	line "inside!"
+	para "¡Dentro está muy"
+	line "oscuro!"
 	done
 
 SwimmerfKayleeSeenText:
-	text "I'm on my way to"
-	line "WHIRL ISLANDS."
+	text "Voy hacia las"
+	line "ISLAS REMOLINO."
 
-	para "I'm going explor-"
-	line "ing with friends."
+	para "Voy a explorarlas"
+	line "con unos amigos."
 	done
 
 SwimmerfKayleeBeatenText:
-	text "Is that how you do"
-	line "it?"
+	text "¿Así es como lo"
+	line "haces?"
 	done
 
 SwimmerfKayleeAfterBattleText:
-	text "There's supposed"
-	line "to be a big #-"
-	cont "MON deep beneath"
-	cont "WHIRL ISLANDS."
+	text "Dicen que hay un"
+	line "gran #MON"
 
-	para "I wonder what it"
-	line "could be?"
+	para "bajo las"
+	line "ISLAS REMOLINO."
+
+	para "Me pregunto cómo"
+	line "será…"
 	done
 
 SwimmerfSusieSeenText:
-	text "You look so ele-"
-	line "gant, riding your"
-	cont "#MON."
+	text "Estás tan elegante"
+	line "sobre tu #MON."
 	done
 
 SwimmerfSusieBeatenText:
-	text "I'm crushed…"
+	text "He perdido…"
 	done
 
 SwimmerfSusieAfterBattleText:
-	text "Wasn't there a hit"
-	line "song about a boy"
-	cont "riding a LAPRAS?"
+	text "¿No había una"
+	line "canción famosa"
+
+	para "sobre un niño que"
+	line "montaba un LAPRAS?"
 	done
 
 SwimmerfDeniseSeenText:
-	text "The weather is so"
-	line "beautiful, I'm in"
-	cont "a daze!"
+	text "¡No me puedo creer"
+	line "el buen día que"
+	cont "hace!"
 	done
 
 SwimmerfDeniseBeatenText:
-	text "Ohhh!"
+	text "¡Oooh!"
 	done
 
 SwimmerfDeniseAfterBattleText:
-	text "A sunburn is the"
-	line "worst for skin."
+	text "El sol es muy malo"
+	line "para la piel."
 
-	para "But I don't use a"
-	line "sunblock."
+	para "Pero yo no uso"
+	line "protección solar."
 
-	para "I won't pollute"
-	line "the water."
+	para "No quiero ensuciar"
+	line "el agua."
 	done
 
 SwimmerfKaraSeenText:
-	text "If you need to"
-	line "rest, just tread"
-	cont "water."
+	text "Si necesitas"
+	line "descansar, flota"
+	cont "y déjate llevar"
 
-	para "You'll get your"
-	line "wind back, so you"
-
-	para "can keep on going"
-	line "strong."
+	para "por el viento, así"
+	line "no malgastarás tus"
+	cont "fuerzas."
 	done
 
 SwimmerfKaraBeatenText:
-	text "Oh! You have more"
-	line "energy than I do."
+	text "¡Oh! Tienes más"
+	line "energía que yo."
 	done
 
 SwimmerfKaraAfterBattleText:
-	text "I heard roars from"
-	line "deep inside the"
-	cont "ISLANDS."
+	text "He oído rugidos"
+	line "procedentes de"
+	cont "las ISLAS."
 	done
 
 SwimmerfWendySeenText:
-	text "At night, STARYU"
-	line "gather near the"
-	cont "water's surface."
+	text "Por la noche, los"
+	line "STARYU se reúnen"
+
+	para "cerca de la"
+	line "superficie."
 	done
 
 SwimmerfWendyBeatenText:
-	text "Oh, dear…"
+	text "¡Oh, vaya…!"
 	done
 
 SwimmerfWendyAfterBattleText:
-	text "The clusters of"
-	line "STARYU light up"
-	cont "at the same time."
+	text "Los grupos de"
+	line "STARYU se iluminan"
+	cont "al mismo tiempo."
 
-	para "It's so beautiful,"
-	line "it's scary."
+	para "Es muy bonito,"
+	line "pero da miedo."
 	done
 
 Route41_MapEvents:

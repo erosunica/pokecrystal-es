@@ -28,26 +28,30 @@ Route2NuggetHouseBookshelf:
 	jumpstd difficultbookshelf
 
 Route2NuggetHouseFisherText:
-	text "Hi! Wow, I'm glad"
-	line "to see you."
+	text "¡Hola! Me alegro"
+	line "de verte."
 
-	para "You're the first"
-	line "visitor I've had"
-	cont "in a long time."
+	para "Eres la primera"
+	line "visita que recibo"
 
-	para "I'm super-happy!"
-	line "Let me give you a"
-	cont "little present."
+	para "desde hace mucho"
+	line "tiempo."
+
+	para "¡Estoy muy"
+	line "contento! Te voy"
+
+	para "a hacer un"
+	line "pequeño regalo."
 	done
 
 Route2NuggetHouseFisherText_GotNugget:
-	text "That's a NUGGET."
+	text "Es una PEPITA."
 
-	para "I can't give you"
-	line "any nuggets of"
+	para "No puedo darte"
+	line "pepitas de la"
 
-	para "wisdom, so that'll"
-	line "have to do!"
+	para "sabiduría,"
+	line "¡sólo esto!"
 	done
 
 Route2NuggetHouse_MapEvents:

@@ -1,139 +1,142 @@
 AnthonyMonAteSomeBerriesText:
-	text "The other day, I"
-	line "was watching my"
-
-	para "@"
+	text "El otro día, vi"
+	line "como mi @"
 	text_ram wStringBuffer4
-	text " eat"
-	line "some BERRIES."
+	text_start
+	cont "comía BAYAS."
 
-	para "It looked like it"
-	line "was enjoying its"
+	para "Parecía que estaba"
+	line "disfrutando de su"
 
-	para "meal, so I decided"
-	line "to try some."
+	para "comida, así que"
+	line "decidí probarlas."
 
-	para "I'm not sure if"
-	line "people should eat"
+	para "¡No estoy seguro"
+	line "de que la gente"
 
-	para "that stuff, but it"
-	line "was delicious!"
+	para "pueda comerlas,"
+	line "pero estaban"
+	cont "deliciosas!"
 	done
 
 AnthonyDefeatedMonText:
-	text "Lately, I've been"
-	line "running across"
+	text "Últimamente, me he"
+	line "cruzado a menudo"
 
-	para "wild @"
+	para "con @"
 	text_ram wStringBuffer4
 	text_start
-	line "quite often."
+	line "salvajes."
 
-	para "They're easily"
-	line "taken care of."
+	para "Es fácil"
+	line "cuidarlos."
 	done
 
 AnthonyLostAMonText:
-	text "Oh yeah, I was"
-	line "battling this"
+	text "Oh, sí. Estuve"
+	line "luchando contra"
 
-	para "@"
+	para "este @"
 	text_ram wStringBuffer4
-	text " the"
-	line "other day…"
+	text_start
+	line "el otro día…"
 
-	para "It took off when I"
-	line "got distracted by"
-	cont "a passing BEAUTY."
+	para "Se escapó cuando"
+	line "me distraje mi-"
+	cont "rando a una BELLA"
+	cont "chica que pasaba."
 
-	para "Learn from my"
-	line "mistake--always"
+	para "Aprende de mi"
+	line "error. ¡Siempre"
 
-	para "stay focused on"
-	line "the job at hand!"
+	para "debes concentrarte"
+	line "en tu objetivo!"
 	done
 
 AnthonyBattleRematchText:
-	text "Come on--let's"
-	line "battle right now!"
+	text "Venga."
+	line "¡Luchemos!"
 
-	para "@"
+	para "Estoy en"
+	line "@"
 	text_ram wStringBuffer5
-	text " is"
-	line "where I am."
+	text "."
 
-	para "Come on down if"
-	line "you feel up to it!"
+	para "¡Ven hasta aquí si"
+	line "te apetece!"
 	done
 
 AnthonyHangUpText:
-	text "All right then!"
-	line "Be good!"
+	text "¡Entonces vale!"
+	line "¡Pórtate bien!"
 	done
 
 AnthonySwarmText:
-	text "<PLAYER>! It's"
-	line "mind-blowing!"
+	text "¡<PLAYER>!"
+	line "¡Es increíble!"
 
-	para "I took a hike in"
+	para "Fui a pasear a"
 	line "@"
 	text_ram wStringBuffer5
 	text_start
-	cont "yesterday, see?"
+	cont "ayer, ¿vale?"
 
-	para "Well, there were"
-	line "tons of @"
+	para "¡Pues había muchos"
+	line "@"
 	text_ram wStringBuffer4
 	text_start
-	para "around! You have"
-	line "to see it!"
 
-	para "I get this feeling"
-	line "that @"
+	para "por allí! ¡Tienes"
+	line "que verlo!"
+
+	para "Pensaba que los"
+	line "@"
 	text_ram wStringBuffer4
 	text_start
-	para "may be timid."
-	line "I didn't see any"
 
-	para "where there are"
-	line "strong #MON."
+	para "eran tímidos."
+	line "No los había visto"
+
+	para "nunca donde hay"
+	line "#MON fuertes."
 	done
 
 AnthonyWasntPayingAttentionText:
-	text "Rare #MON?"
+	text "¿#MON raros?"
 
-	para "Hey, sorry! I was"
-	line "too focused on my"
+	para "¡Lo siento! Estaba"
+	line "tan ensimismado en"
 
-	para "hike, so I wasn't"
-	line "paying attention."
+	para "el paseo que no"
+	line "he prestado aten-"
+	cont "ción."
 	done
 
 AnthonyReminderText:
-	text "Hello! You haven't"
-	line "forgotten about"
+	text "¡Hola! No te"
+	line "habrás olvidado de"
 
-	para "our battle, have"
-	line "you?"
+	para "nuestro combate,"
+	line "¿verdad?"
 
-	para "@"
+	para "¡@"
 	text_ram wStringBuffer5
 	text "!"
-	line "I'm waiting!"
+	line "¡Estoy esperando!"
 	done
 
 AnthonyHurryText:
-	text "Hello? What? Where"
-	line "is DUNSPARCE?"
+	text "¿Hola? ¿Qué?"
+	line "¿Que dónde hay"
+	cont "DUNSPARCE?"
 
-	para "DARK CAVE! Hurry!"
+	para "¡En CUEVA OSCURA!"
+	line "¡Deprisa!"
 
-	para "I know I've said"
-	line "it before, but"
+	para "Sé que ya lo he"
+	line "dicho antes, pero"
 
-	para "DUNSPARCE don't"
-	line "appear when there"
-
-	para "are strong #MON"
-	line "around."
+	para "DUNSPARCE no"
+	line "aparece donde hay"
+	cont "#MON fuertes."
 	done

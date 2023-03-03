@@ -1,67 +1,68 @@
 KenjiAskNumber1Text:
-	text "Our battle was"
-	line "remarkable!"
+	text "¡Nuestro combate"
+	line "fue notable!"
 
-	para "I wish for some-"
-	line "thing to remember"
-	cont "you by!"
+	para "¡Deseo algo con"
+	line "lo que poder"
+	cont "recordarte!"
 
-	para "Perhaps your phone"
-	line "number will do?"
+	para "¿Quizás tu número"
+	line "de teléfono?"
 
-	para "My training makes"
-	line "it impossible to"
-	cont "chat much, but…"
+	para "Mi entrenamiento"
+	line "no me permite"
+	cont "hablar mucho…"
 	done
 
 KenjiAskNumber2Text:
-	text "My training makes"
-	line "chatting tough,"
+	text "Mi entrenamiento"
+	line "no me permite"
 
-	para "but will you take"
-	line "down my number?"
+	para "hablar mucho, pero"
+	line "podrías apuntar mi"
+	cont "teléfono…"
 	done
 
 KenjiNumberAcceptedText:
-	text "I must train"
-	line "harder to become"
-	cont "the mightiest!"
+	text "¡Debo entrenarme"
+	line "más para ser el"
+	cont "más fuerte!"
 	done
 
 KenjiNumberDeclinedText:
-	text "If you decide you"
-	line "want my number,"
-	cont "come see me."
+	text "Si decides que"
+	line "quieres mi número,"
+	cont "ven a verme."
 	done
 
 KenjiPhoneFullText:
-	text "Your phone appears"
-	line "to be full."
+	text "Tu teléfono no"
+	line "admite más"
+	cont "números."
 
-	para "Come back later!"
+	para "¡Vuelve más tarde!"
 	done
 
 KenjiGiftText:
-	text "I wish to thank"
-	line "you, <PLAYER>!"
+	text "¡Quiero darte las"
+	line "gracias, <PLAYER>!"
 
-	para "I've been training"
-	line "all alone…"
+	para "He estado entre-"
+	line "nándome tan solo…"
 
-	para "I was happy that"
-	line "you cared to call…"
+	para "Me hizo muy feliz"
+	line "que llamases…"
 
-	para "I want you to have"
-	line "this!"
+	para "¡Quiero darte"
+	line "esto!"
 	done
 
 KenjiPackFullText:
-	text "Your strength will"
-	line "not let you carry"
+	text "¡No tienes fuerza"
+	line "para llevar ni"
+	cont "una cosa más!"
 
-	para "another thing!"
-	line "I will hold this"
-
-	para "till you lighten"
-	line "your PACK!"
+	para "¡Te guardaré esto"
+	line "hasta que aligeres"
+	cont "tu MOCHILA!"
 	done

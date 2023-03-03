@@ -1,10 +1,10 @@
-	db "FIRE MOUSE@" ; species name
-	dw 108, 170 ; height, weight
+	db "RATÓNFUEGO@" ; species name
+	dbw 5, 79 ; height, weight
 
-	db   "The fire that"
-	next "spouts from its"
-	next "back burns hottest"
+	db   "Cuando se enfada,"
+	next "el fuego que dis-"
+	next "para por el lomo"
 
-	page "when it is angry."
-	next "The flaring flames"
-	next "intimidate foes.@"
+	page "es infernal. Las"
+	next "llamaradas intimi-"
+	next "dan a sus rivales.@"

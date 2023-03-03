@@ -1,68 +1,74 @@
 ToddAskNumber1Text:
-	text "From here, I can"
-	line "see GOLDENROD's"
+	text "Desde aquí puedo"
+	line "ver el CENTRO"
 
-	para "DEPT.STORE. They"
-	line "have bargain sales"
+	para "COMERCIAL de"
+	line "CIUDAD TRIGAL."
 
-	para "up on the rooftop"
-	line "every so often."
+	para "Suelen tener"
+	line "rebajas en la"
 
-	para "Could I get your"
-	line "phone number?"
+	para "azotea muy a"
+	line "menudo."
 
-	para "I'll call you when"
-	line "they have a sale."
+	para "¿Me das tu número"
+	line "de teléfono?"
+
+	para "Te llamaré cuando"
+	line "vea alguna ganga."
 	done
 
 ToddAskNumber2Text:
-	text "If you give me"
-	line "your number, I'll"
+	text "Si me das tu"
+	line "número, te llamaré"
 
-	para "call you when they"
-	line "have a sale."
+	para "cuando tengan"
+	line "alguna ganga."
 	done
 
 ToddNumberAcceptedText:
-	text "I check GOLDENROD"
-	line "DEPT.STORE every"
+	text "Voy al CENTRO"
+	line "COMERCIAL de"
 
-	para "day, so I know"
-	line "when there's a"
-	cont "sale."
+	para "CIUDAD TRIGAL"
+	line "todos los días,"
+
+	para "así que sé cuándo"
+	line "hay rebajas."
 	done
 
 ToddNumberDeclinedText:
-	text "Anyway…"
+	text "De todos modos…"
 
-	para "If you're short on"
-	line "money, take down"
-	cont "my number."
+	para "Si no tienes mucho"
+	line "dinero, apunta mi"
+	cont "teléfono."
 
-	para "I'll call you when"
-	line "there's a sale."
+	para "Te llamaré si hay"
+	line "rebajas."
 	done
 
 ToddPhoneFullText:
-	text "Your phone doesn't"
-	line "have enough memory"
-	cont "for more numbers."
+	text "En tu teléfono"
+	line "no tienes espacio"
+	cont "para más números."
 	done
 
 ToddRematchText:
-	text "I waited for you!"
-	line "I even cut back my"
+	text "¡Te esperaba!"
+	line "¡Incluso he dejado"
 
-	para "shopping to raise"
-	line "my #MON better!"
+	para "de hacer compras"
+	line "para mejorar a mis"
+	cont "#MON!"
 	done
 
 UnusedText_0xa43ca:
 ; This is unused; Todd says this during the department store sale,
 ; but this is a duplicate of the actual string in the Route 34 scripts.
-	text "Shopping under the"
-	line "sky!"
+	text "¡Estoy de compras"
+	line "al aire libre!"
 
-	para "It feels so nice"
-	line "up on a rooftop."
+	para "Se está muy bien"
+	line "en la azotea."
 	done

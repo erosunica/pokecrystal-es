@@ -79,47 +79,48 @@ BrunosRoom_EnterMovement:
 	step_end
 
 BrunoScript_BrunoBeforeText:
-	text "I am BRUNO of the"
-	line "ELITE FOUR."
+	text "Soy BRUNO, del"
+	line "ALTO MANDO."
 
-	para "I always train to"
-	line "the extreme be-"
-	cont "cause I believe in"
-	cont "our potential."
+	para "Me entreno siempre"
+	line "al máximo porque"
 
-	para "That is how we"
-	line "became strong."
+	para "confío en nuestro"
+	line "potencial."
 
-	para "Can you withstand"
-	line "our power?"
+	para "Por eso somos tan"
+	line "fuertes."
 
-	para "Hm? I see no fear"
-	line "in you. You look"
+	para "¿Resistirás"
+	line "nuestro poder?"
 
-	para "determined. Per-"
-	line "fect for battle!"
+	para "¿Mmm? No veo que"
+	line "tengas miedo."
 
-	para "Ready, <PLAYER>?"
-	line "You will bow down"
+	para "Pareces audaz."
+	line "¡Perfecto!"
 
-	para "to our overwhelm-"
-	line "ing power!"
+	para "¿Vamos, <PLAYER>?"
+	line "¡Te doblegarás"
 
-	para "Hoo hah!"
+	para "ante nuestro"
+	line "inmenso poder!"
+
+	para "¡Ja, ja!"
 	done
 
 BrunoScript_BrunoBeatenText:
-	text "Why? How could we"
-	line "lose?"
+	text "¿Qué? ¿Cómo hemos"
+	line "podido perder?"
 	done
 
 BrunoScript_BrunoDefeatText:
-	text "Having lost, I"
-	line "have no right to"
-	cont "say anything…"
+	text "Como he perdido,"
+	line "no tengo derecho"
+	cont "a decir nada…"
 
-	para "Go face your next"
-	line "challenge!"
+	para "¡Enfréntate al"
+	line "siguiente desafío!"
 	done
 
 BrunosRoom_MapEvents:

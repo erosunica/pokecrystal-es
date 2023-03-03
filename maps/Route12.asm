@@ -71,97 +71,96 @@ Route12HiddenElixer:
 	hiddenitem ELIXER, EVENT_ROUTE_12_HIDDEN_ELIXER
 
 FisherMartinSeenText:
-	text "Patience is the"
-	line "key to both fish-"
-	cont "ing and #MON."
+	text "La paciencia es la"
+	line "clave para pescar"
+	cont "y criar #MON."
 	done
 
 FisherMartinBeatenText:
-	text "Gwaaah!"
+	text "¡Guaaa!"
 	done
 
 FisherMartinAfterBattleText:
-	text "I'm too impatient"
-	line "for fishing…"
+	text "No tengo paciencia"
+	line "para la pesca…"
 	done
 
 FisherStephenSeenText:
-	text "I feel so content,"
-	line "fishing while lis-"
-	cont "tening to some"
-	cont "tunes on my radio."
+	text "Me gusta pescar"
+	line "mientras escucho"
+
+	para "canciones por la"
+	line "radio."
 	done
 
 FisherStephenBeatenText:
-	text "My stupid radio"
-	line "distracted me!"
+	text "¡Mi estúpida radio"
+	line "me ha distraído!"
 	done
 
 FisherStephenAfterBattleText:
-	text "Have you checked"
-	line "out KANTO's radio"
+	text "¿Conoces las"
+	line "emisoras de"
 
-	para "programs? We get a"
-	line "good variety here."
+	para "radio de KANTO?"
+	line "Tenemos muchas."
 	done
 
 FisherBarneySeenText:
-	text "What's most impor-"
-	line "tant in our every-"
-	cont "day lives?"
+	text "¿Qué es lo más"
+	line "importante en"
+	cont "nuestras vidas?"
 	done
 
 FisherBarneyBeatenText:
-	text "The answer is"
-	line "coming up next!"
+	text "¡La respuesta"
+	line "vendrá luego!"
 	done
 
 FisherBarneyAfterBattleText:
-	text "I think electric-"
-	line "ity is the most"
+	text "Creo que la"
+	line "electricidad es lo"
 
-	para "important thing in"
-	line "our daily lives."
+	para "más importante en"
+	line "nuestras vidas."
 
-	para "If it weren't,"
-	line "people wouldn't"
+	para "Si no lo fuera, no"
+	line "se habría montado"
 
-	para "have made such a"
-	line "fuss when the"
+	para "tanto follón"
+	line "cuando se estropeó"
 
-	para "POWER PLANT went"
-	line "out of commission."
+	para "la CENTRAL"
+	line "ENERGÍA."
 	done
 
 FisherKyleSeenText:
-	text "Do you remember?"
+	text "¿Te acuerdas?"
 	done
 
 FisherKyleBeatenText:
-	text "You do remember?"
+	text "Te acuerdas, ¿no?"
 	done
 
 FisherKyleAfterBattleText:
-	text "The tug you feel"
-	line "on the ROD when"
+	text "El tirón de la"
+	line "CAÑA cuando ha"
+	cont "picado un #MON…"
 
-	para "you hook a #-"
-	line "MON…"
-
-	para "That's the best"
-	line "feeling ever for"
-	cont "an angler like me."
+	para "Ésa es la mejor"
+	line "sensación para un"
+	cont "pescador como yo."
 	done
 
 Route12SignText:
-	text "ROUTE 12"
+	text "RUTA 12"
 
-	para "NORTH TO LAVENDER"
-	line "TOWN"
+	para "PUEBLO LAVANDA"
+	line "HACIA EL NORTE"
 	done
 
 FishingSpotSignText:
-	text "FISHING SPOT"
+	text "COTO DE PESCA"
 	done
 
 Route12_MapEvents:

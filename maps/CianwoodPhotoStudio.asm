@@ -26,24 +26,23 @@ CianwoodPhotoStudioFishingGuruScript:
 	end
 
 CianwoodPhotoStudioFishingGuruText_Question:
-	text "You have magnifi-"
-	line "cent #MON with"
-	cont "you."
+	text "Tienes unos #-"
+	line "MON magníficos."
 
-	para "How about a photo"
-	line "for a souvenir?"
+	para "¿Quieres una foto"
+	line "de recuerdo?"
 	done
 
 CianwoodPhotoStudioFishingGuruText_Yes:
-	text "OK! Big smile now!"
+	text "¡Vale! ¡Sonríe!"
 	done
 
 CianwoodPhotoStudioFishingGuruText_No:
-	text "Oh, that's too"
-	line "bad. I thought it"
+	text "¡Oh! ¡Qué mal!"
+	line "Pensaba que sería"
 
-	para "would be a great"
-	line "memento…"
+	para "un maravilloso"
+	line "recuerdo…"
 	done
 
 CianwoodPhotoStudio_MapEvents:

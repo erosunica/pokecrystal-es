@@ -1,10 +1,10 @@
-	db "BAGWORM@" ; species name
-	dw 200, 160 ; height, weight
+	db "LARVA@" ; species name
+	dbw 6, 72 ; height, weight
 
-	db   "It spits out a"
-	next "fluid that it uses"
-	next "to glue tree bark"
+	db   "Libera un fluido"
+	next "con el que se pega"
+	next "cortezas de árbol."
 
-	page "to its body. The"
-	next "fluid hardens when"
-	next "it touches air.@"
+	page "Al contacto con el"
+	next "aire, el fluido se"
+	next "solidifica.@"

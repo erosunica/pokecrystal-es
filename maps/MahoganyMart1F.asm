@@ -155,67 +155,69 @@ MahoganyMart1FLanceGoDownStairsMovement:
 	step_end
 
 UnknownText_0x6c414:
-	text "Hello, kiddo!"
+	text "¡Hola, joven!"
 
-	para "How would you like"
-	line "some RAGECANDYBAR?"
+	para "¿Quieres un"
+	line "CARAMELO FURIA?"
 
-	para "It's the thing to"
-	line "eat in MAHOGANY!"
+	para "¡Es lo que comemos"
+	line "en PUEBLO CAOBA!"
 	done
 
 MahoganyMart1FPharmacistText_LanceEntered:
-	text "Arrgh… You found"
-	line "the secret stair-"
-	cont "way…"
+	text "¡Arrgh…!"
+	line "Has encontrado la"
+	cont "escalera secreta."
 	done
 
 MahoganyMart1FBlackBeltText:
-	text "Heheh! The experi-"
-	line "ment worked like a"
-	cont "charm."
+	text "El experimento"
+	line "funcionó a las mil"
+	cont "maravillas."
 
-	para "MAGIKARP are just"
-	line "worthless, but"
+	para "Los MAGIKARP no"
+	line "valen nada, pero"
 
-	para "GYARADOS are big"
-	line "moneymakers."
+	para "los GYARADOS son"
+	line "muy productivos."
 	done
 
 MahoganyMart1FBlackBeltText_LanceEntered:
-	text "Urrgh…"
+	text "¡Urrg…!"
 
-	para "That guy's dragon"
-	line "#MON are tough…"
+	para "Los #MON dragón"
+	line "de ese chico"
+	cont "son muy fuertes…"
 	done
 
 MahoganyMart1FLanceDragoniteHyperBeamText:
 	text "LANCE: DRAGONITE,"
-	line "HYPER BEAM."
+	line "HÍPER RAYO."
 	done
 
 MahoganyMart1FLanceRadioText:
-	text "What took you,"
-	line "<PLAY_G>?"
+	text "¡Ya estás aquí,"
+	line "<PLAY_G>!"
 
-	para "Just as I thought,"
-	line "that strange radio"
+	para "Tal y como creía,"
+	line "esa extraña señal"
 
-	para "signal is coming"
-	line "from here."
+	para "de radio proviene"
+	line "de aquí."
 	done
 
 MahoganyMart1FLanceStairsText:
-	text "The stairs are"
-	line "right here."
+	text "Las escaleras"
+	line "están justo aquí."
 	done
 
 MahoganyMart1FLanceSplitUpText:
-	text "LANCE: <PLAY_G>, we"
-	line "should split up to"
+	text "LANCE: <PLAY_G>,"
+	line "debemos separarnos"
 
-	para "check this place."
-	line "I'll go first."
+	para "para inspeccionar"
+	line "el lugar."
+	cont "Iré primero."
 	done
 
 MahoganyMart1F_MapEvents:

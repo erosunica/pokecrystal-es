@@ -1,66 +1,69 @@
 GinaAnswerPhoneText:
-	text "Hello? This is"
+	text "¿Hola? Soy"
 	line "@"
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>!"
-	line "Good morning!"
+	para "¡Oh, <PLAY_G>!"
+	line "¡Buenos días!"
 	done
 
 GinaAnswerPhoneDayText:
-	text "Hello? This is"
+	text "¿Hola? Soy"
 	line "@"
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>!"
-	line "Hi, how are you?"
+	para "¡Oh, <PLAY_G>!"
+	line "¿Qué tal estás?"
 	done
 
 GinaAnswerPhoneNiteText:
-	text "Hello? This is"
+	text "¿Hola? Soy"
 	line "@"
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>!"
-	line "Good evening!"
+	para "¡Oh, <PLAY_G>!"
+	line "¡Buenas noches!"
 	done
 
 GinaGreetText:
-	text "<PLAY_G>?"
+	text "¿<PLAY_G>?"
 
-	para "It's @"
+	para "Soy @"
 	text_ram wStringBuffer3
 	text "."
-	line "Good morning!"
+	line "¡Buenos días!"
 	done
 
 GinaGreetDayText:
-	text "<PLAY_G>?"
+	text "¿<PLAY_G>?"
 
-	para "It's @"
+	para "Soy @"
 	text_ram wStringBuffer3
-	text ". Is"
-	line "this a bad time?"
+	text "."
+	line "¿Te pillo en mal"
+	cont "momento?"
 	done
 
 GinaGreetNiteText:
-	text "<PLAY_G>?"
+	text "¿<PLAY_G>?"
 
-	para "It's @"
+	para "Soy @"
 	text_ram wStringBuffer3
 	text "."
-	line "Got time to chat?"
+	line "¿Tienes tiempo"
+	cont "para hablar?"
 	done
 
 GinaGenericText:
-	text "Are your #MON"
-	line "still tough?"
+	text "¿Tus #MON son"
+	line "duros?"
 
-	para "I train every day"
-	line "with @"
+	para "Yo me entreno"
+	line "todos los días con"
+	cont "@"
 	text_ram wStringBuffer4
 	text "."
 	done

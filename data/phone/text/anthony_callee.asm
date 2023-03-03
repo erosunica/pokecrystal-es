@@ -1,73 +1,71 @@
 AnthonyAnswerPhoneText:
-	text "Yeah, @"
+	text "Soy @"
 	text_ram wStringBuffer3
-	text " the"
-	line "HIKER here."
+	text ", el"
+	line "MONTAÑERO."
 
-	para "Ah, <PLAYER>!"
+	para "¡Ah, <PLAYER>!"
 	done
 
 AnthonyAnswerPhoneDayText:
-	text "Yeah, @"
+	text "Soy @"
 	text_ram wStringBuffer3
-	text " the"
-	line "HIKER here."
+	text ", el"
+	line "MONTAÑERO."
 
-	para "Ah, <PLAYER>,"
-	line "right?"
+	para "¡Ah, <PLAYER>!"
 	done
 
 AnthonyAnswerPhoneNiteText:
-	text "Yeah, @"
+	text "Soy @"
 	text_ram wStringBuffer3
-	text " the"
-	line "HIKER here."
+	text ", el"
+	line "MONTAÑERO."
 
-	para "Ah, <PLAYER>, isn't"
-	line "it?"
+	para "¡Ah, <PLAYER>!"
 	done
 
 AnthonyGreetText:
-	text "Yo, <PLAYER>?"
+	text "¿<PLAYER>?"
 
-	para "This is @"
+	para "¡Soy @"
 	text_ram wStringBuffer3
-	text_start
-	line "the HIKER!"
+	text ","
+	line "el MONTAÑERO!"
 	done
 
 AnthonyGreetDayText:
-	text "Hey, is this"
-	line "<PLAYER>?"
+	text "¿Eres <PLAYER>?"
 
-	para "This is @"
+	para "¡Soy @"
 	text_ram wStringBuffer3
-	text_start
-	line "the HIKER!"
+	text ","
+	line "el MONTAÑERO!"
 	done
 
 AnthonyGreetNiteText:
-	text "<PLAYER>, you still"
-	line "awake?"
+	text "¿No te has acos-"
+	line "tado, <PLAYER>?"
 
-	para "This is @"
+	para "¡Soy @"
 	text_ram wStringBuffer3
-	text_start
-	line "the HIKER!"
+	text ","
+	line "el MONTAÑERO!"
 	done
 
 AnthonyGenericText:
-	text "Are your #MON"
-	line "as feisty as ever?"
+	text "¿Están tus #MON"
+	line "tan animados como"
+	cont "siempre?"
 
-	para "My @"
+	para "Mi @"
 	text_ram wStringBuffer4
-	text " and"
-	line "me--we have energy"
+	text " y"
+	line "yo tenemos mucha"
 
-	para "to burn. We hike"
-	line "up mountains every"
+	para "energía. Escalamos"
+	line "montañas todos los"
 
-	para "day to work out"
-	line "all our energy."
+	para "días a modo de"
+	line "entrenamiento."
 	done

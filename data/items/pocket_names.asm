@@ -5,7 +5,7 @@ ItemPocketNames:
 	dw .Ball
 	dw .TM
 
-.Item: db "ITEM POCKET@"
-.Key:  db "KEY POCKET@"
-.Ball: db "BALL POCKET@"
-.TM:   db "TM POCKET@"
+.Item: db "CAJA OBJ@"
+.Key:  db "OBJ. CLAVE@"
+.Ball: db "CAJA-BALL@"
+.TM:   db "CAJA-MT@"

@@ -798,226 +798,235 @@ Pokecenter2FMovementData_ReceptionistStepsRightLooksLeft_2:
 	step_end
 
 Text_BattleReceptionistMobile:
-	text "Would you like to"
-	line "battle over a GAME"
+	text "¿Quieres luchar"
+	line "por el cable GAME"
 
-	para "LINK cable or by"
-	line "mobile phone?"
+	para "LINK o por"
+	line "teléfono móvil?"
 	done
 
 Text_TradeReceptionistMobile:
-	text "Would you like to"
-	line "trade over a GAME"
+	text "¿Quieres cambiar"
+	line "por cable GAME"
 
-	para "LINK cable or by"
-	line "mobile phone?"
+	para "LINK o por"
+	line "teléfono móvil?"
 	done
 
 Text_ThisWayToMobileRoom:
-	text "This way to the"
-	line "MOBILE ROOM."
+	text "Por aquí, a la"
+	line "SALA MÓVIL."
 	done
 
 Text_BattleReceptionistIntro:
-	text "Welcome to CABLE"
-	line "CLUB COLOSSEUM."
+	text "Éste es el COLISEO"
+	line "del CLUB DEL"
+	cont "CABLE."
 
-	para "You may battle a"
-	line "friend here."
+	para "Puedes luchar con"
+	line "un/a amigo/a aquí."
 
-	para "Would you like to"
-	line "battle?"
+	para "¿Quieres luchar"
+	line "ahora?"
 	done
 
 Text_TradeReceptionistIntro:
-	text "Welcome to CABLE"
-	line "TRADE CENTER."
+	text "Éste es el CENTRO"
+	line "DE CAMBIO del CLUB"
+	cont "DEL CABLE."
 
-	para "You may trade your"
-	line "#MON here with"
-	cont "a friend."
+	para "Puedes cambiar un"
+	line "#MON aquí"
+	cont "con un/a amigo/a."
 
-	para "Would you like to"
-	line "trade?"
+	para "¿Quieres"
+	line "intercambiar?"
 	done
 
 Text_TimeCapsuleReceptionistIntro:
-	text "Welcome to CABLE"
-	line "CLUB TIME CAPSULE."
+	text "Ésta es la CÁPSULA"
+	line "DEL TIEMPO del"
+	cont "CLUB DEL CABLE."
 
-	para "You can travel to"
-	line "the past and trade"
-	cont "your #MON."
+	para "Puedes viajar al"
+	line "pasado y cambiar"
+	cont "tu #MON."
 
-	para "Would you like to"
-	line "trade across time?"
+	para "¿Quieres viajar en"
+	line "el tiempo?"
 	done
 
 YourFriendIsNotReadyText:
-	text "Your friend is not"
-	line "ready."
+	text "Tu amigo/a no está"
+	line "preparado/a."
 	prompt
 
 Text_MustSaveGame:
-	text "Before opening the"
-	line "link, you must"
-	cont "save your game."
+	text "Antes de conectar"
+	line "las consolas,"
+	cont "guarda el juego."
 	done
 
 Text_PleaseWait:
-	text "Please wait."
+	text "Espera, por favor."
 	done
 
 Text_LinkTimedOut:
-	text "The link has been"
-	line "closed because of"
-	cont "inactivity."
+	text "La conexión se ha"
+	line "interrumpido por"
+	cont "inactividad."
 
-	para "Please contact"
-	line "your friend and"
-	cont "come again."
+	para "Habla con tu"
+	line "amigo/a y vuelve"
+	cont "cuando quieras."
 	prompt
 
 Text_PleaseComeAgain:
-	text "Please come again."
+	text "Vuelve algún día."
 	prompt
 
 Text_PleaseComeIn:
-	text "Please come in."
+	text "Entra, por favor."
 	prompt
 
 Text_TemporaryStagingInLinkRoom:
-	text "We'll put you in"
-	line "the link room for"
-	cont "the time being."
+	text "Por ahora, te"
+	line "pondremos en la"
+	cont "sala de conexión."
 	done
 
 Text_CantLinkToThePast:
-	text "You can't link to"
-	line "the past here."
+	text "Aquí no puedes"
+	line "conectarte con"
+	cont "el pasado."
 	prompt
 
 Text_IncompatibleRooms:
-	text "Incompatible rooms"
-	line "were chosen."
+	text "Tu amigo/a eligió"
+	line "una sala distinta."
 	prompt
 
 Text_PleaseComeIn2:
-	text "Please come in."
+	text "Entra, por favor."
 	done
 
 Text_PleaseEnter:
-	text "Please enter."
+	text "Entra, por favor."
 	prompt
 
 Text_RejectNewMon:
-	text "Sorry--@"
+	text "Perdona. No"
+	line "puedes llevar a"
+	cont "@"
 	text_ram wStringBuffer1
-	text_start
-	line "can't be taken."
+	text "."
 	prompt
 
 Text_RejectMonWithNewMove:
-	text "You can't take the"
+	text "No puedes llevar a"
 	line "@"
 	text_ram wStringBuffer1
-	text " with a"
+	text " con"
 	cont "@"
 	text_ram wStringBuffer2
 	text "."
 	prompt
 
 Text_RejectMonWithMail:
-	text "You can't take the"
-	line "@"
+	text "No puedes llevarte"
+	line "a @"
 	text_ram wStringBuffer1
-	text " that"
-	cont "has MAIL with you."
+	text_start
+	cont "con la CARTA."
 	prompt
 
 Text_TimeCapsuleClosed:
-	text "I'm sorry--the"
-	line "TIME CAPSULE is"
-	cont "being adjusted."
+	text "Lo siento. Estamos"
+	line "arreglando la"
+
+	para "CÁPSULA DEL"
+	line "TIEMPO."
 	done
 
 Text_TradeRoomClosed:
-	text "I'm sorry--the"
-	line "TRADE MACHINE is"
-	cont "being adjusted."
+	text "Lo siento. Estamos"
+	line "ajustando la"
+	cont "MÁQUINA DE CAMBIO."
 	done
 
 Text_BattleRoomClosed:
-	text "I'm sorry--the"
-	line "BATTLE MACHINE is"
-	cont "being adjusted."
+	text "Lo siento. Estamos"
+	line "ajustando la"
+	cont "MÁQUINA DE LUCHA."
 	done
 
 Text_MysteryGiftDeliveryGuy_Intro:
-	text "Hello! You're"
-	line "<PLAYER>, right?"
+	text "¡Hola! Tú eres"
+	line "<PLAYER>, ¿no?"
 
-	para "I have some-"
-	line "thing for you."
+	para "¿Quieres recoger"
+	line "lo que tengo para"
+	cont "ti?"
 	done
 
 Text_MysteryGiftDeliveryGuy_HereYouGo:
-	text "Here you go!"
+	text "¡Aquí tienes!"
 	done
 
 Text_MysteryGiftDeliveryGuy_Outro:
-	text "We hope to serve"
-	line "you again."
+	text "Esperamos poder"
+	line "ayudarte de nuevo."
 	done
 
 Text_MysteryGiftDeliveryGuy_NoRoom:
-	text "Oh, you have no"
-	line "space for this."
+	text "¡Oh! No tienes"
+	line "espacio para esto."
 
-	para "Stop in at any"
-	line "#MON CENTER"
+	para "Para en cualquier"
+	line "CENTRO #MON"
 
-	para "across the country"
-	line "to pick it up."
+	para "del país y podrás"
+	line "recogerlo."
 	done
 
 Text_MysteryGiftDeliveryGuy_SaidNo:
-	text "No? That's very"
-	line "strange…"
+	text "¿No? Es muy"
+	line "extraño…"
 	done
 
 Text_OhPleaseWait:
-	text "Oh, please wait."
+	text "Oh, espera."
 	done
 
 Text_ChangeTheLook:
-	text "We need to change"
-	line "the look here…"
+	text "Debemos cambiar"
+	line "el aspecto…"
 	done
 
 Text_LikeTheLook:
-	text "How does this"
-	line "style look to you?"
+	text "¿Qué te parece"
+	line "este estilo?"
 	done
 
 Text_BrokeStadiumRules:
-	text "Excuse me!"
+	text "¡Perdona!"
 
-	para "For STADIUM rules,"
-	line "please bring six"
+	para "Según las reglas"
+	line "de ESTADIO, trae"
 
-	para "different #MON,"
-	line "excluding EGGS."
+	para "seis #MON, que"
+	line "no sean HUEVOS."
 
-	para "The six #MON"
-	line "must be different."
+	para "Los 6 #MON"
+	line "deben ser"
+	cont "diferentes."
 
-	para "Also, they must"
-	line "not be holding"
-	cont "identical items."
+	para "Además, no pueden"
+	line "llevar objetos"
+	cont "idénticos."
 
-	para "Please come back"
-	line "when you're ready."
+	para "Vuelve cuando todo"
+	line "esté listo."
 	done
 
 Pokecenter2F_MapEvents:

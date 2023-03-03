@@ -151,655 +151,692 @@ GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromRightDoorwayTileMovement:
 
 ; unused
 UnknownText_0x61072:
-	text "Hello! Welcome to"
-	line "#COM CENTER"
-	cont "TRADE CORNER."
+	text "¡Hola! Éste es el"
+	line "CENTRO DE CAMBIO"
 
-	para "You can trade"
-	line "#MON with other"
-	cont "people far away."
+	para "del CENTRO"
+	line "#COM."
+
+	para "Puedes cambiar"
+	line "#MON con gente"
+	cont "que está lejos."
 	done
 
 UnknownText_0x610ce:
-	text "To make a trade,"
-	line "we must hold your"
-	cont "#MON."
+	text "Para hacer un"
+	line "intercambio,"
 
-	para "Would you like to"
-	line "trade?"
+	para "necesitamos tu"
+	line "#MON."
+
+	para "¿Quieres inter-"
+	line "cambiar alguno?"
 	done
 
 UnknownText_0x61111:
-	text "What kind of"
-	line "#MON do you"
-	cont "want in return?"
+	text "¿Qué tipo de"
+	line "#MON quieres"
+	cont "a cambio?"
 	done
 
 UnknownText_0x6113b:
-	text "Fine. We will try"
-	line "to trade your"
+	text "Bien. Intentaremos"
+	line "intercambiar un"
 
 	para "@"
 	text_ram wStringBuffer3
-	text " for"
+	text " por un"
 	line "@"
 	text_ram wStringBuffer4
 	text "."
 
-	para "We'll have to hold"
-	line "your #MON"
-	cont "during the trade."
+	para "Necesitamos tu"
+	line "#MON durante"
+	cont "el intercambio."
 
-	para "Please wait while"
-	line "we prepare the"
-	cont "room for it."
+	para "Por favor, espera"
+	line "mientras se"
+	cont "prepara la sala."
 	done
 
 UnknownText_0x611c9:
-	text "Fine. We will try"
-	line "to trade your"
+	text "Bien. Intentaremos"
+	line "intercambiar un"
 
 	para "@"
 	text_ram wStringBuffer3
-	text " for a"
-	line "#MON that you"
-	cont "have never seen."
+	text " por un"
+	line "#MON que no"
+	cont "hayas visto nunca."
 
-	para "We'll have to hold"
-	line "your #MON"
-	cont "during the trade."
+	para "Necesitamos tu"
+	line "#MON durante"
+	cont "el intercambio."
 
-	para "Please wait while"
-	line "we prepare the"
-	cont "room for it."
+	para "Por favor, espera"
+	line "mientras se"
+	cont "prepara la sala."
 	done
 
 UnknownText_0x61271:
-	text "Your trade #MON"
-	line "has been received."
+	text "Recibido tu"
+	line "#MON de"
+	cont "intercambio."
 
-	para "It will take time"
-	line "to find a trade"
+	para "Llevará tiempo"
+	line "encontrar un"
 
-	para "partner. Please"
-	line "come back later."
+	para "compañero de"
+	line "intercambio."
+
+	para "Vuelve luego."
 	done
 
 UnknownText_0x612d8:
-	text "Oh? You have only"
-	line "one #MON in"
-	cont "your party. "
+	text "¿Eh? Sólo tienes"
+	line "un #MON en tu"
+	cont "equipo."
 
-	para "Please come back"
-	line "once you've in-"
-	cont "creased the size"
-	cont "of your party."
+	para "Vuelve cuando"
+	line "hayas aumentado el"
+
+	para "número de miembros"
+	line "de tu equipo."
 	done
 
 UnknownText_0x61344:
-	text "We hope to see you"
-	line "again."
+	text "Esperamos verte"
+	line "pronto."
 	done
 
 UnknownText_0x6135f:
-	text "Communication"
-	line "error…"
+	text "Error de"
+	line "comunicación…"
 	done
 
 UnknownText_0x61375:
-	text "If we accept that"
-	line "#MON, what will"
-	cont "you battle with?"
+	text "Si aceptamos ese"
+	line "#MON, ¿con cuál"
+	cont "lucharás?"
 	done
 
 UnknownText_0x613a9:
-	text "Sorry. We can't"
-	line "accept an EGG."
+	text "Lo siento. No"
+	line "aceptamos HUEVOS."
 	done
 
 UnknownText_0x613c8:
-	text "Sorry, but your"
-	line "#MON appears to"
+	text "Lo siento, pero tu"
+	line "#MON no parece"
 
-	para "be abnormal. We"
-	line "can't accept it."
+	para "muy normal. No"
+	line "podemos aceptarlo."
 	done
 
 UnknownText_0x61409:
-	text "Oh? Aren't we"
-	line "already holding a"
-	cont "#MON of yours?"
+	text "¿Eh? ¿No tenemos"
+	line "ya un #MON"
+	cont "tuyo?"
 	done
 
 UnknownText_0x61438:
-	text "We'll check the"
-	line "rooms."
+	text "Veremos las salas."
 
-	para "Please wait."
+	para "Espera, por favor."
 	done
 
 UnknownText_0x6145c:
-	text "Thank you for your"
-	line "patience."
+	text "Disculpa la"
+	line "espera."
 
-	para "A trade partner"
-	line "has been found."
+	para "Se ha encontrado"
+	line "un compañero."
 	done
 
 UnknownText_0x6149a:
-	text "It's your new"
-	line "partner."
+	text "Es tu nuevo"
+	line "compañero."
 
-	para "Please take care"
-	line "of it with love."
+	para "Por favor, trátalo"
+	line "con cariño."
 
-	para "We hope to see you"
-	line "again."
+	para "Esperamos volver a"
+	line "verte."
 	done
 
 UnknownText_0x614ed:
-	text "Uh-oh. Your party"
-	line "is already full."
+	text "Oh, oh. Tu equipo"
+	line "está al completo."
 
-	para "Please come back"
-	line "when you have room"
-	cont "in your party."
+	para "Por favor, vuelve"
+	line "cuando haya sitio"
+	cont "en tu equipo."
 	done
 
 UnknownText_0x61544:
-	text "It's unfortunate,"
-	line "but no one has"
+	text "Es una pena, pero"
+	line "nadie se ha"
 
-	para "come forward as a"
-	line "trade partner."
+	para "presentado para"
+	line "ser tu compañero."
 
-	para "Would you like"
-	line "your #MON back?"
+	para "¿Quieres recuperar"
+	line "tu #MON?"
 	done
 
 UnknownText_0x615a5:
-	text "We have returned"
-	line "your #MON."
+	text "Te hemos devuelto"
+	line "tu #MON."
 	done
 
 UnknownText_0x615c2:
-	text "It's unfortunate,"
-	line "but no one has"
+	text "Es una pena, pero"
+	line "nadie se ha"
 
-	para "come forward as a"
-	line "trade partner."
+	para "presentado para"
+	line "ser tu compañero."
 
-	para "We've held your"
-	line "#MON for a long"
+	para "Tenemos tu #MON"
+	line "desde hace mucho."
 
-	para "time. As a result,"
-	line "it is very lonely."
+	para "Por ello, se"
+	line "siente solo."
 
-	para "Sorry, but we must"
-	line "return it to you."
+	para "Lo siento, pero"
+	line "debemos"
+	cont "devolvértelo."
 	done
 
 UnknownText_0x6166e:
-	text "We hope to see you"
-	line "again."
+	text "Esperamos verte"
+	line "pronto."
 	done
 
 UnknownText_0x61689:
-	text "Fine. We will"
-	line "continue to hold"
-	cont "your #MON."
+	text "Bien. Seguiremos"
+	line "teniendo tu"
+
+	para "#MON con"
+	line "nosotros."
 	done
 
 UnknownText_0x616b4:
-	text "Oh? You left your"
-	line "#MON with us"
-	cont "only recently."
+	text "¿Eh? Dejaste tu"
+	line "#MON con"
 
-	para "Please come back"
-	line "later."
+	para "nosotros hace muy"
+	line "poco."
+
+	para "Por favor, vuelve"
+	line "más tarde."
 	done
 
 UnknownText_0x616fb:
-	text "We'll SAVE before"
-	line "connecting to the"
-	cont "CENTER."
+	text "Vamos a GUARDAR"
+	line "antes de conectar"
+	cont "con el CENTRO."
 	done
 
 UnknownText_0x61727:
-	text "Which #MON do"
-	line "you want to trade?"
+	text "¿Qué #MON"
+	line "quieres cambiar?"
 	done
 
 UnknownText_0x61749:
-	text "Sorry, but we must"
-	line "cancel the trade."
+	text "Lo siento, pero"
+	line "debemos cancelar"
+	cont "el intercambio."
 	done
 
 UnknownText_0x6176f:
-	text "Oh!"
+	text "¡Oh!"
 
-	para "I see you have an"
-	line "EGG TICKET!"
+	para "¡Veo que tienes un"
+	line "TICKET HUEVO!"
 
-	para "It's a coupon that"
-	line "special people can"
+	para "¡Es un cupón para"
+	line "gente especial que"
 
-	para "redeem for a"
-	line "special #MON!"
+	para "puede cambiarse"
+	line "por un #MON"
+	cont "especial!"
 	done
 
 UnknownText_0x617d2:
-	text "Let me give you a"
-	line "quick briefing."
+	text "Déjame darte una"
+	line "pequeña"
+	cont "explicación."
 
-	para "Trades held at the"
-	line "TRADE CORNER are"
+	para "Los cambios hechos"
+	line "en el CENTRO DE"
 
-	para "between two"
-	line "trainers who don't"
+	para "CAMBIO se hacen"
+	line "entre dos entrena-"
+	cont "dores que no se"
+	line "conocen."
 
-	para "know each other's"
-	line "identity."
+	para "Por eso, puede que"
+	line "lleve tiempo."
 
-	para "As a result, it"
-	line "may take time."
+	para "De todas formas,"
+	line "tienes un HUEVO"
+	cont "RARO."
 
-	para "However, an ODD"
-	line "EGG is available"
-	cont "just for you."
+	para "Enseguida lo"
+	line "recibirás."
 
-	para "It will be sent to"
-	line "you right away."
+	para "Por favor, elige"
+	line "una de las salas"
 
-	para "Please choose one"
-	line "of the rooms in"
+	para "del CENTRO para"
+	line "que podamos"
 
-	para "the CENTER."
-	line "An ODD EGG will be"
-
-	para "sent from the"
-	line "chosen room."
+	para "enviarte el"
+	line "HUEVO RARO."
 	done
 
 UnknownText_0x6191f:
-	text "Please wait a"
-	line "moment."
+	text "Por favor, espera"
+	line "un momento."
 	done
 
 UnknownText_0x61936:
-	text "Thank you for"
-	line "waiting."
+	text "Gracias por"
+	line "esperar."
 
-	para "We received your"
-	line "ODD EGG."
+	para "Hemos recibido tu"
+	line "HUEVO RARO."
 
-	para "Here it is!"
+	para "¡Aquí lo tienes!"
 
-	para "Please raise it"
-	line "with loving care."
+	para "Por favor, cuídalo"
+	line "con cariño."
 	done
 
 UnknownText_0x61996:
-	text "I'm awfully sorry."
+	text "Lo siento mucho."
 
-	para "The EGG TICKET"
-	line "exchange service"
-	cont "isn't running now."
+	para "El servicio de"
+	line "intercambio TICKET"
+
+	para "HUEVO no funciona"
+	line "ahora."
 	done
 
 UnknownText_0x619db:
-	text "It's a #MON"
-	line "NEWS MACHINE."
+	text "Es una MÁQUINA de"
+	line "NOTICIAS #MON."
 	done
 
 UnknownText_0x619f5:
-	text "What would you"
-	line "like to do?"
+	text "¿Qué deseas hacer?"
 	done
 
 UnknownText_0x61a11:
-	text "#MON NEWS is"
-	line "news compiled from"
+	text "Las NOTICIAS"
+	line "#MON se"
 
-	para "the SAVE files of"
-	line "#MON trainers."
+	para "obtienen de los"
+	line "archivos GUARDADOS"
 
-	para "When reading the"
-	line "NEWS, your SAVE"
+	para "de entrenadores"
+	cont "#MON."
 
-	para "file may be sent"
-	line "out."
+	para "Cuando leas las"
+	line "NOTICIAS, tu"
 
-	para "The SAVE file data"
-	line "will contain your"
+	para "archivo GUARDADO"
+	line "será enviado."
 
-	para "adventure log and"
-	line "mobile profile."
+	para "El archivo de"
+	line "datos GUARDADOS"
 
-	para "Your phone number"
-	line "will not be sent."
+	para "contiene tu"
+	line "progreso y tu"
+	cont "perfil de móvil."
 
-	para "The contents of"
-	line "the NEWS will vary"
+	para "No se enviará tu"
+	line "número de móvil."
 
-	para "depending on the"
-	line "SAVE files sent by"
+	para "El contenido de"
+	line "las NOTICIAS"
 
-	para "you and the other"
-	line "#MON trainers."
+	para "variará dependien-"
+	line "do de los archivos"
 
-	para "You might even be"
-	line "in the NEWS!"
+	para "GUARDADOS enviados"
+	line "por ti y por otros"
+
+	para "entrenadores"
+	line "#MON."
+
+	para "¡Es posible que"
+	line "salgas en las"
+	cont "NOTICIAS!"
 	done
 
 UnknownText_0x61b7c:
-	text "Would you like to"
-	line "get the NEWS?"
+	text "¿Quieres leer las"
+	line "NOTICIAS?"
 	done
 
 UnknownText_0x61b9d:
-	text "Reading the latest"
-	line "NEWS… Please wait."
+	text "Leyendo las"
+	line "últimas NOTICIAS…"
+	cont "Espera, por favor."
 	done
 
 UnknownText_0x61bc4:
-	text "There is no old"
-	line "NEWS…"
+	text "No hay NOTICIAS"
+	line "antiguas…"
 	done
 
 UnknownText_0x61bdb:
-	text "The NEWS data is"
-	line "corrupted."
+	text "Los datos de las"
+	line "NOTICIAS están"
+	cont "dañados."
 
-	para "Please download"
-	line "the NEWS again."
+	para "Por favor, baja"
+	line "las NOTICIAS otra"
+	cont "vez."
 	done
 
 UnknownText_0x61c18:
-	text "We're making"
-	line "preparations."
+	text "Estamos en los"
+	line "preparativos."
 
-	para "Please come back"
-	line "later."
+	para "Por favor, vuelve"
+	line "más tarde."
 	done
 
 UnknownText_0x61c4b:
-	text "We will SAVE your"
-	line "progress before"
+	text "GUARDAREMOS tu"
+	line "progreso antes de"
 
-	para "starting the NEWS"
-	line "MACHINE."
+	para "poner en marcha la"
+	line "MÁQUINA de las"
+	cont "NOTICIAS."
 	done
 
 UnknownText_0x61c89:
-	text "Whoa, this #MON"
-	line "CENTER is huge."
+	text "Uau, este CENTRO"
+	line "#MON es enorme."
 
-	para "They just built"
-	line "this place. They"
+	para "Lo acaban de"
+	line "construir. También"
 
-	para "installed lots of"
-	line "new machines too."
+	para "han instalado"
+	line "muchas máquinas"
+	cont "nuevas."
 	done
 
 UnknownText_0x61cef:
-	text "I thought up a fun"
-	line "new thing for the"
-	cont "TRADE CORNER!"
+	text "¡Ideé algo nuevo"
+	line "para el CENTRO DE"
+	cont "CAMBIO!"
 
-	para "I make a PIDGEY"
-	line "hold MAIL, then"
+	para "¡Equipo a PIDGEY"
+	line "con una CARTA y"
 
-	para "put it up for"
-	line "trade for another"
-	cont "one!"
+	para "después preparo el"
+	line "intercambio con"
+	cont "otro #MON!"
 
-	para "If everyone did"
-	line "that, MAIL could"
+	para "¡Si todo el mundo"
+	line "lo hiciera, la"
 
-	para "be traded with all"
-	line "sorts of people!"
+	para "CARTA llegaría a"
+	line "todo tipo de"
+	cont "gente!"
 
-	para "I call it PIDGEY"
-	line "MAIL!"
+	para "¡Lo llamo CARTA"
+	line "PIDGEY!"
 
-	para "If it becomes"
-	line "popular, I might"
+	para "¡Si se vuelve"
+	line "popular, voy a"
 
-	para "make lots of new"
-	line "friends!"
+	para "hacer un montón de"
+	line "nuevos amigos!"
 	done
 
 UnknownText_0x61dfd:
-	text "They said you can"
-	line "trade #MON with"
+	text "Se dice que puedes"
+	line "cambiar #MON"
 
-	para "total strangers up"
-	line "here."
+	para "hasta con"
+	line "desconocidos."
 
-	para "But they're still"
-	line "adjusting things."
+	para "Pero todavía están"
+	line "con preparativos."
 	done
 
 UnknownText_0x61e5c:
-	text "Some girl I don't"
-	line "know sent me her"
+	text "Una chica que no"
+	line "conozco me envió"
 
-	para "HOPPIP."
-	line "You should trade"
+	para "su HOPPIP."
+	line "Deberías cambiar"
 
-	para "for a #MON that"
-	line "you want."
+	para "un #MON por"
+	line "otro que quieras."
 	done
 
 UnknownText_0x61eb2:
-	text "I received a"
-	line "female HOPPIP, but"
-	cont "its named STANLEY!"
+	text "¡Recibí un HOPPIP"
+	line "hembra, pero se"
+	cont "llama STANLEY!"
 
-	para "That's my dad's"
-	line "name!"
+	para "¡Así se llama mi"
+	line "padre!"
 	done
 
 UnknownText_0x61efa:
-	text "What is the NEWS"
-	line "MACHINE?"
+	text "¿Qué es la MÁQUINA"
+	line "de las NOTICIAS?"
 
-	para "Does it get news"
-	line "from a wider area"
-	cont "than the radio?"
+	para "¿Recoge noticias"
+	line "de un área más"
+
+	para "amplia que la"
+	line "radio?"
 	done
 
 UnknownText_0x61f48:
-	text "The #COM CENTER"
-	line "will link with all"
+	text "El CENTRO #COM"
+	line "se enlazará con"
 
-	para "#MON CENTERS in"
-	line "a wireless net."
+	para "los otros CENTROS"
+	line "#MON por"
 
-	para "That must mean"
-	line "I'll be able to"
+	para "medio de una red"
+	line "inalámbrica."
 
-	para "link with all"
-	line "sorts of people."
+	para "Lo que significa"
+	line "que podré conec-"
+	cont "tarme con todo"
+	line "tipo de gente."
 	done
 
 UnknownText_0x61fc9:
-	text "The machines here"
-	line "can't be used yet."
+	text "Las máquinas no"
+	line "están en uso"
+	cont "todavía."
 
-	para "Still, it's nice"
-	line "coming to a trendy"
+	para "Aunque mola venir"
+	line "a un sitio tan"
 
-	para "place before other"
-	line "people."
+	para "chulo antes que"
+	line "nadie."
 	done
 
 UnknownText_0x6202c:
-	text "My friend was in"
-	line "the NEWS a while"
+	text "Mi amigo salió en"
+	line "las NOTICIAS hace"
 
-	para "back. I was really"
-	line "surprised!"
+	para "poco. ¡No me lo"
+	line "podía creer!"
 	done
 
 UnknownText_0x6206d:
-	text "I get anxious if I"
-	line "don't check out"
-	cont "the latest NEWS!"
+	text "¡No puedo dejar de"
+	line "leer las últimas"
+	cont "NOTICIAS!"
 	done
 
 UnknownText_0x620a1:
-	text "If I get in the"
-	line "NEWS and become"
+	text "Si aparezco en las"
+	line "NOTICIAS y me hago"
 
-	para "famous, I bet I'll"
-	line "be adored."
+	para "famoso, supongo"
+	line "que me adorarán."
 
-	para "I wonder how I"
-	line "could get in the"
-	cont "NEWS?"
+	para "Estoy tramando"
+	line "cómo podría salir"
+	cont "en las NOTICIAS…"
 	done
 
 GoldenrodPokecenter1FGameboyKidText:
-	text "The COLOSSEUM"
-	line "upstairs is for"
-	cont "link battles."
+	text "En el COLISEO de"
+	line "arriba se lucha"
+	cont "enlazado."
 
-	para "Battle records are"
-	line "posted on the"
+	para "Los récords se"
+	line "apuntan en la"
 
-	para "wall, so I can't"
-	line "afford to lose."
+	para "pared, así que no"
+	line "puedo perder."
 	done
 
 UnknownText_0x62173:
-	text "I came over here"
-	line "when I got word"
+	text "Vine por aquí"
+	line "cuando me enteré"
 
-	para "that GOLDENROD's"
-	line "#MON CENTER has"
+	para "de que el CENTRO"
+	line "#MON de TRIGAL"
 
-	para "new machines that"
-	line "no one's ever seen"
-	cont "before."
+	para "tenía máquinas"
+	line "nuevas que nadie"
+	cont "había visto antes."
 
-	para "But it looks like"
-	line "they're still busy"
+	para "Pero parece que"
+	line "siguen ocupados"
 
-	para "with all their"
-	line "preparations…"
+	para "con todos los"
+	line "preparativos…"
 	done
 
 UnknownText_0x62222:
-	text "Just seeing all"
-	line "these new things"
+	text "¡Sólo de ver todas"
+	line "estas cosas nuevas"
 
-	para "here makes me feel"
-	line "younger!"
+	para "me siento mucho"
+	line "más joven!"
 	done
 
 GoldenrodPokecenter1FLassText:
-	text "A higher level"
-	line "#MON doesn't"
-	cont "always win."
+	text "Un #MON de"
+	line "nivel superior no"
+	cont "siempre gana."
 
-	para "After all, it may"
-	line "have a type dis-"
-	cont "advantage."
+	para "Aun así, su tipo"
+	line "puede tener alguna"
+	cont "desventaja."
 
-	para "I don't think"
-	line "there is a single"
+	para "No creo que haya"
+	line "un único #MON"
 
-	para "#MON that is"
-	line "the toughest."
+	para "que sea el más"
+	line "fuerte."
 	done
 
 GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptGSBallText:
-	text "<PLAYER>, isn't it?"
+	text "<PLAYER>, ¿no?"
 
-	para "Congratulations!"
+	para "¡Felicidades!"
 
-	para "As a special deal,"
-	line "a GS BALL has been"
-	cont "sent just for you!"
+	para "¡Estamos de"
+	line "promoción, hemos"
 
-	para "Please accept it!"
+	para "recibido una GS"
+	line "BALL para ti!"
+
+	para "¡Por favor,"
+	line "acéptala!"
 	done
 
 GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText:
-	text "Please do come"
-	line "again!"
+	text "¡Vuelve cuando"
+	line "quieras!"
 	done
 
 UnknownText_0x62370:
-	text "#COM CENTER"
-	line "1F INFORMATION"
+	text "CENTRO #COM"
+	line "PB INFORMACIÓN"
 
-	para "Left:"
-	line "ADMINISTRATION"
+	para "Izquierda:"
+	line "ADMINISTRACIÓN"
 
-	para "Center:"
-	line "TRADE CORNER"
+	para "Centro:"
+	line "CENTRO DE CAMBIO"
 
-	para "Right:"
-	line "#MON NEWS"
+	para "Derecha:"
+	line "NOTICIAS #MON"
 	done
 
 UnknownText_0x623c7:
-	text "It's a #MON"
-	line "NEWS MACHINE!"
+	text "¡Es una MÁQUINA de"
+	line "NOTICIAS #MON!"
 
-	para "It's not in"
-	line "operation yet…"
+	para "No está operativa"
+	line "todavía…"
 	done
 
 GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText:
-	text "Oh my, your pack"
-	line "looks so heavy!"
+	text "¡Llevas mucho peso"
+	line "en la mochila!"
 
-	para "Oh! Do you happen"
-	line "to have something"
-	cont "named EON MAIL?"
+	para "¡Oye! ¿No tendrás"
+	line "algo llamado"
+	cont "CARTA EÓN?"
 
-	para "My daughter is"
-	line "after one."
+	para "Mi hija está"
+	line "buscando una."
 
-	para "You can part with"
-	line "one, can't you?"
+	para "Puedes darme una,"
+	line "¿verdad?"
 	done
 
 GoldenrodPokecenter1FAskGiveAwayAnEonMailText:
-	text "Give away an EON"
-	line "MAIL?"
+	text "¿Entregas una"
+	line "CARTA EÓN?"
 	done
 
 GoldenrodPokecenter1FPokefanFThisIsForYouText:
-	text "Oh, that's great!"
-	line "Thank you, honey!"
+	text "¡Oh, genial!"
+	line "¡Gracias, cariño!"
 
-	para "Here, this is for"
-	line "you in return!"
+	para "¡Toma esto en"
+	line "agradecimiento!"
 	done
 
 GoldenrodPokecenter1FPokefanFDaughterWillBeDelightedText:
-	text "My daughter will"
-	line "be delighted!"
+	text "¡A mi hija le"
+	line "encantará!"
 	done
 
 GoldenrodPokecenter1FPokefanFTooBadText:
-	text "Oh? You don't have"
-	line "one? Too bad."
+	text "¿Oh? ¿No tienes?"
+	line "Qué lástima…"
 	done
 
 GoldenrodPokecenter1FPokefanFAnotherTimeThenText:
-	text "Oh… Well, another"
-	line "time, then."
+	text "Oh… Bueno, en otra"
+	line "ocasión será."
 	done
 
 GoldenrodPokecenter1FPlayerGaveAwayTheEonMailText:
-	text "<PLAYER> gave away"
-	line "the EON MAIL."
+	text "<PLAYER> entrega"
+	line "la CARTA EÓN."
 	done
 
 GoldenrodPokecenter1F_MapEvents:

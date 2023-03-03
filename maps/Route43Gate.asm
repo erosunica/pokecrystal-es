@@ -193,56 +193,53 @@ Rocket2Script_LetsYouPassNorth:
 	step_end
 
 RocketText_TollFee:
-	text "Hold it there,"
-	line "kiddo!"
+	text "¡Alto ahí, joven!"
 
-	para "The toll is ¥1000"
-	line "to go through."
+	para "El precio por"
+	line "pasar es 1.000¥."
 	done
 
 RocketText_ThankYou:
-	text "Thank you very"
-	line "much!"
+	text "¡Gracias, joven!"
 	done
 
 RocketText_AllYouGot:
-	text "Then pay what you"
-	line "have, please."
+	text "Entonces paga lo"
+	line "que tengas."
 	done
 
 RocketText_MakingABundle:
-	text "He-he-he. We're"
-	line "making a bundle."
+	text "¡Je, je! Nos"
+	line "estamos forrando."
 
-	para "Everyone wants to"
-	line "see what's going"
+	para "Todo el mundo"
+	line "quiere ver lo que"
 
-	para "on up at LAKE OF"
-	line "RAGE."
+	para "ocurre en el LAGO"
+	line "DE LA FURIA."
 	done
 
 OfficerText_FoundTM:
-	text "I got chased from"
-	line "my post by these"
-	cont "thugs in black."
+	text "Esos gamberros de"
+	line "negro me echaron"
+	cont "de mi puesto."
 
-	para "They left this"
-	line "behind."
+	para "Se dejaron esto."
+	line "Me molesta."
 
-	para "It makes me uncom-"
-	line "fortable. Could"
-	cont "you take it away?"
+	para "¿Podrías"
+	line "llevártelo?"
 	done
 
 Text_ReceivedTM30:
-	text "<PLAYER> received"
-	line "TM30."
+	text "<PLAYER> recibió"
+	line "MT30."
 	done
 
 OfficerText_AvoidGrass:
-	text "Use this gate to"
-	line "avoid walking in"
-	cont "the grass."
+	text "Usa esta puerta"
+	line "para no andar por"
+	cont "la hierba."
 	done
 
 Route43Gate_MapEvents:

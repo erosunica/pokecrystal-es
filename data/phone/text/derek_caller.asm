@@ -1,105 +1,108 @@
 DerekCheekPinchingText:
-	text "Listen to this."
-	line "My @"
+	text "Escucha esto. Mi"
+	line "@"
 	text_ram wStringBuffer4
-	text_start
-	para "grins happily when"
-	line "I pinch its cheek."
+	text " sonríe"
 
-	para "But it never grins"
-	line "for anyone else."
+	para "alegre si le pe-"
+	line "llizco el moflete."
 
-	para "I must be special."
+	para "Pero sólo si lo"
+	line "hago yo."
+
+	para "Debo de ser"
+	line "especial."
 	done
 
 DerekDefeatedMonText:
-	text "Oh, and recently,"
-	line "my PIKACHU beat a"
-	cont "wild @"
+	text "¡Oh, hace poco mi"
+	line "PIKACHU venció a"
+
+	para "un @"
 	text_ram wStringBuffer4
-	text "!"
+	text_start
+	line "salvaje!"
 
-	para "A wild @"
+	para "¡Un @"
 	text_ram wStringBuffer4
-	text ","
-	line "I tell you!"
+	text_start
+	line "salvaje!"
 
-	para "Don't you think"
-	line "that's astounding?"
+	para "¿No crees que es"
+	line "impresionante?"
 
-	para "My PIKACHU is"
-	line "awesome!"
+	para "¡Mi PIKACHU es"
+	line "asombroso!"
 
-	para "My PIKACHU is the"
-	line "greatest!"
+	para "¡Mi PIKACHU es el"
+	line "mejor!"
 	done
 
 DerekLostAMonText:
-	text "Oh, and I saw a"
-	line "wild @"
+	text "Oh, vi a un"
+	line "@"
 	text_ram wStringBuffer4
-	text " a"
-	cont "little while ago."
+	text " salvaje"
+	cont "hace un tiempo."
 
-	para "But it wasn't very"
-	line "cute, so I left"
+	para "Pero no era muy"
+	line "bonito, así que lo"
 
-	para "it…"
-	line "#MON have to be"
+	para "dejé…"
+	line "Los #MON han de"
 
-	para "cute. They're no"
-	line "good otherwise."
+	para "ser bonitos, si"
+	line "no, no sirven."
 	done
 
 DerekHangUpText:
-	text "Well, let's talk"
-	line "again!"
+	text "¡Bien, volvamos"
+	line "a hablar!"
 	done
 
 DerekBugCatchingContestText:
-	text "Did you remember?"
-	line "The Bug-Catching"
-	cont "Contest is today."
+	text "¿Recuerdas? Hoy es"
+	line "el Concurso de"
+	cont "Captura de Bichos."
 
-	para "You're going to"
-	line "go, aren't you?"
+	para "¿Vas a ir, no?"
 
-	para "I think I'll"
-	line "participate with"
+	para "Creo que"
+	line "participaré con"
 
-	para "PIKACHU to show"
-	line "off its cuteness."
+	para "PIKACHU para que"
+	line "todos lo admiren."
 	done
 
 DerekFoundItemText:
-	text "I'd like you to"
-	line "have a NUGGET."
+	text "Quiero darte"
+	line "una PEPITA."
 
-	para "My PIKACHU just"
-	line "loves it."
+	para "A mi PIKACHU"
+	line "le encanta."
 
-	para "I'm certain your"
-	line "PIKACHU will love"
-	cont "it too!"
+	para "¡Seguro que"
+	line "a tu PIKACHU"
+	cont "también!"
 	done
 
 DerekLetsGetTogetherText:
-	text "How is your"
-	line "PIKACHU doing?"
+	text "¿Cómo está tu"
+	line "PIKACHU?"
 
-	para "Let's get together"
-	line "and brag about our"
-	cont "PIKACHU!"
+	para "¡Reunámonos para"
+	line "presumir de"
+	cont "nuestros PIKACHU!"
 	done
 
 DerekComePickUpText:
-	text "What's wrong?"
+	text "¿Qué ocurre?"
 
-	para "I'm waiting on"
+	para "Te espero en"
 	line "@"
 	text_ram wStringBuffer5
 	text "."
 
-	para "Come pick this up"
-	line "anytime."
+	para "Ven a recoger esto"
+	line "cuando quieras."
 	done

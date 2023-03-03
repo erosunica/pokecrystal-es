@@ -1,117 +1,122 @@
 ToddLooksCuteLikeMeText:
-	text "My @"
+	text "Mi @"
 	text_ram wStringBuffer4
-	text " is"
-	line "looking more and"
+	text " se"
+	line "parece cada vez"
 
-	para "more like me. It's"
-	line "getting cuter!"
+	para "más a mí."
+	line "¡Está muy bonito!"
 	done
 
 ToddDefeatedMonText:
-	text "And, you know?"
+	text "¿Sabes?"
 
-	para "Now we can KO"
-	line "@"
+	para "Ahora podemos"
+	line "acabar fácilmente"
+	cont "con los @"
 	text_ram wStringBuffer4
-	text " easily."
+	text "."
 
-	para "I should challenge"
-	line "the GOLDENROD GYM."
+	para "Debo visitar el"
+	line "GIMNASIO TRIGAL."
 	done
 
 ToddLostAMonText:
-	text "And, you know?"
-	line "We just failed to"
+	text "¿Sabes?"
+	line "Por muy poco no"
 
-	para "beat @"
+	para "conseguimos acabar"
+	line "con @"
 	text_ram wStringBuffer4
-	text " by"
-	line "a tiny margin."
+	text "."
 
-	para "I'm guessing my"
-	line "#MON's levels"
+	para "Creo que el nivel"
+	line "de mis #MON aún"
 
-	para "aren't high enough"
-	line "yet…"
+	para "no es lo suficien-"
+	line "temente alto…"
 	done
 
 ToddBattleRematchText:
-	text "You must be a lot"
-	line "better now, huh?"
+	text "Ahora debes de ser"
+	line "mucho mejor…"
 
-	para "How about showing"
-	line "me your technique"
+	para "¿Por qué no me"
+	line "enseñas tus"
 
-	para "in a real battle"
-	line "with me?"
+	para "técnicas en un"
+	line "combate real"
+	cont "conmigo?"
 
-	para "I'll be waiting on"
+	para "Te esperaré en"
 	line "@"
 	text_ram wStringBuffer5
 	text "."
 	done
 
 ToddHangUpText:
-	text "See you later!"
+	text "¡Hasta luego!"
 	done
 
 ToddDepartmentStoreBargainSaleText:
-	text "This is it--the"
-	line "one we've all been"
-	cont "waiting for!"
+	text "Eso es. ¡Justo lo"
+	line "que esperábamos!"
 
-	para "GOLDENROD DEPT."
-	line "STORE's bargain"
-	cont "sale is on now!"
+	para "¡Las rebajas del"
+	line "CENTRO COMERCIAL"
 
-	para "Want it cheap?"
-	line "Want it lots?"
+	para "de TRIGAL han"
+	line "comenzado!"
 
-	para "Don't miss this"
-	line "GOLDENROD chance!"
+	para "¿Bueno? ¿Bonito,"
+	line "barato?"
 
-	para "Huh? I sound like"
-	line "a huckster?"
+	para "¡No pierdas esta"
+	line "oportunidad!"
 
-	para "Well, yeah. I was"
-	line "mimicking them…"
+	para "¿Parezco un vende-"
+	line "dor ambulante?"
 
-	para "Anyway, you've got"
-	line "to get there as"
-	cont "soon as you can!"
+	para "Bueno, sí… Los"
+	line "estaba imitando…"
+
+	para "¡De todos modos,"
+	line "tienes que ir allí"
+
+	para "tan pronto como te"
+	line "sea posible!"
 	done
 
 ToddSavingUpForBargainSaleText:
-	text "I'm saving up for"
-	line "the next bargain"
+	text "Estoy ahorrando"
+	line "para las próximas"
 
-	para "sale. When's the"
-	line "next one?"
+	para "rebajas. ¿Cuándo"
+	line "habrá rebajas otra"
+	cont "vez?"
 	done
 
 ToddLookingForwardToBattleText:
-	text "Where are you?"
+	text "¿Dónde estás?"
 
-	para "Let's have our"
-	line "battle soon!"
+	para "¡Luchemos pronto!"
 
-	para "I'll be waiting on"
+	para "Te esperaré en"
 	line "@"
 	text_ram wStringBuffer5
 	text "."
 	done
 
 ToddHaveYouGoneToDepartmentStoreText:
-	text "Haven't you gone"
-	line "to GOLDENROD DEPT."
+	text "¿Has ido al CENTRO"
+	line "COMERCIAL de"
 
-	para "STORE? I've scoped"
-	line "it out already!"
+	para "CIUDAD TRIGAL?"
+	line "¡Yo ya fui!"
 
-	para "They had some real"
-	line "bargains."
+	para "Tiene muy buenas"
+	line "gangas."
 
-	para "You should get"
-	line "there quickly."
+	para "Debes ir allí"
+	line "rápidamente."
 	done

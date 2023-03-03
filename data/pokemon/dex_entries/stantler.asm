@@ -1,10 +1,10 @@
-	db "BIG HORN@" ; species name
-	dw 407, 1570 ; height, weight
+	db "GRANCUERNO@" ; species name
+	dbw 14, 712 ; height, weight
 
-	db   "The round balls"
-	next "found on the"
-	next "fallen antlers can"
+	db   "Las redondas bolas"
+	next "de su cornamenta"
+	next "pueden ser usadas"
 
-	page "be ground into a"
-	next "powder that aids"
-	next "in sleeping.@"
+	page "para crear unos"
+	next "polvos que ayudan"
+	next "a dormir.@"

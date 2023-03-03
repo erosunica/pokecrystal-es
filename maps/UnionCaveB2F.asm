@@ -75,68 +75,70 @@ UnionCaveB2FHyperPotion:
 	itemball HYPER_POTION
 
 CooltrainermNickSeenText:
-	text "There are two"
-	line "kinds of people."
+	text "Hay dos tipos de"
+	line "personas."
 
-	para "Those who have"
-	line "style, and those"
-	cont "who don't."
+	para "Las que tienen"
+	line "estilo y las que"
+	cont "no lo tienen."
 
-	para "What kind of"
-	line "person are you?"
+	para "¿A qué tipo"
+	line "perteneces tú?"
 	done
 
 CooltrainermNickBeatenText:
-	text "You've got"
-	line "dazzling style!"
+	text "¡Tu estilo es"
+	line "deslumbrante!"
 	done
 
 CooltrainermNickAfterBattleText:
-	text "Your #MON style"
-	line "is stunning and"
-	cont "colorful, I admit."
+	text "El estilo de tus"
+	line "#MON es"
+	cont "sorprendente."
 
-	para "You'll just keep"
-	line "getting better!"
+	para "¡Seguirás"
+	line "mejorando!"
 	done
 
 CooltrainerfGwenSeenText:
-	text "I'm in training."
-	line "Care for a round?"
+	text "Estoy entrenando."
+	line "¿Quieres luchar?"
 	done
 
 CooltrainerfGwenBeatenText:
-	text "Aww, no! You're"
-	line "too good for me."
+	text "No, eres demasiado"
+	line "para mí."
 	done
 
 CooltrainerfGwenAfterBattleText:
-	text "I'm going to train"
-	line "by myself until I"
-	cont "improve."
+	text "Seguiré"
+	line "entrenándome"
+	cont "hasta que mejore."
 	done
 
 CooltrainerfEmmaSeenText:
-	text "If the #MON I"
-	line "liked were there,"
-	cont "I'd go anywhere."
+	text "Si los #MON"
+	line "que me gustan"
 
-	para "That's what a real"
-	line "trainer does."
+	para "estuvieran ahí,"
+	line "iría sin pensarlo."
+
+	para "Eso haría un"
+	line "buen entrenador."
 	done
 
 CooltrainerfEmmaBeatenText:
-	text "I'd rather pet my"
-	line "babies than this!"
+	text "¡Preferiría cuidar"
+	line "de mis niños!"
 	done
 
 CooltrainerfEmmaAfterBattleText:
-	text "Just once a week,"
-	line "a #MON comes to"
-	cont "the water's edge."
+	text "Cada semana viene"
+	line "un #MON hasta"
+	cont "la orilla."
 
-	para "I wanted to see"
-	line "that #MON…"
+	para "Quería ver a ese"
+	line "#MON…"
 	done
 
 UnionCaveB2F_MapEvents:

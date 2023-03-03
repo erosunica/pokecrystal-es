@@ -321,153 +321,155 @@ Route38FruitTree:
 	fruittree FRUITTREE_ROUTE_38
 
 BirdKeeperTobySeenText:
-	text "Fly high into the"
-	line "sky, my beloved"
-	cont "bird #MON!"
+	text "¡Vuela alto hacia"
+	line "el cielo, querido"
+	cont "pájaro #MON!"
 	done
 
 BirdKeeperTobyBeatenText:
-	text "I feel like just"
-	line "flying away now."
+	text "¡Me apetece salir"
+	line "volando ahora!"
 	done
 
 BirdKeeperTobyAfterBattleText:
-	text "I plan to train in"
-	line "CIANWOOD CITY to"
+	text "Pienso entrenarme"
+	line "en CIUDAD ORQUÍDEA"
 
-	para "teach my #MON"
-	line "how to FLY."
+	para "y enseñar a volar"
+	line "a mis #MON."
 	done
 
 SchoolboyChad1SeenText:
-	text "Let me try some-"
-	line "thing I learned"
-	cont "today."
+	text "Déjame probar algo"
+	line "que he aprendido"
+	cont "hoy."
 	done
 
 SchoolboyChad1BeatenText:
-	text "I didn't study"
-	line "enough, I guess."
+	text "Creo que no"
+	line "estudié bastante."
 	done
 
 SchoolboyChadSoManyTestsText:
-	text "I have to take so"
-	line "many tests, I"
+	text "Tengo que hacer"
+	line "muchos exámenes y"
 
-	para "don't have much"
-	line "time for #MON."
+	para "no tengo tiempo"
+	line "para los #MON."
 
-	para "So when I do get"
-	line "to play, I really"
-	cont "concentrate."
+	para "Así que, cuando"
+	line "puedo jugar, me"
+	cont "concentro mucho."
 	done
 
 LassDana1SeenText:
-	text "You seem to be"
-	line "good at #MON."
+	text "Parece que sabes"
+	line "de #MON."
 
-	para "If you are, how"
-	line "about giving me"
-	cont "some advice?"
+	para "Si es así, ¿por"
+	line "qué no me das"
+	cont "algún consejo?"
 	done
 
 LassDana1BeatenText:
-	text "I see. So you can"
-	line "battle that way."
+	text "Ya veo. De modo"
+	line "que luchas así."
 	done
 
 LassDanaMoomooMilkText:
-	text "I know something"
-	line "good!"
+	text "¡Tengo una buena"
+	line "noticia!"
 
-	para "MOOMOO FARM's milk"
-	line "is famous for its"
-	cont "flavor."
+	para "La leche de la"
+	line "GRANJA MUU-MUU"
+
+	para "es famosa por su"
+	line "sabor."
 	done
 
 BeautyValerieSeenText:
-	text "Hi! Aren't you a"
-	line "cute trainer!"
+	text "¡Hola! ¡Tienes"
+	line "buen aspecto!"
 
-	para "May I see your"
-	line "#MON?"
+	para "¿Me dejas ver a"
+	line "tus #MON?"
 	done
 
 BeautyValerieBeatenText:
-	text "I'm glad I got to"
-	line "see your #MON!"
+	text "Encantada de haber"
+	line "visto a tus"
+	cont "#MON."
 	done
 
 BeautyValerieAfterBattleText:
-	text "When I see #-"
-	line "MON, it seems to"
-	cont "soothe my nerves."
+	text "Cuando veo #MON"
+	line "me tranquilizo."
 	done
 
 SailorHarrySeenText:
-	text "I've been over-"
-	line "seas, so I know"
+	text "He estado en el"
+	line "extranjero. ¡Así"
 
-	para "about all sorts of"
-	line "#MON!"
+	para "que conozco todo"
+	line "tipo de #MON!"
 	done
 
 SailorHarryBeatenText:
-	text "Your skill is"
-	line "world class!"
+	text "¡Tu destreza es de"
+	line "categoría mundial!"
 	done
 
 SailorHarryAfterBattleText:
-	text "All kinds of peo-"
-	line "ple around the"
+	text "Gentes de todo el"
+	line "mundo viven"
 
-	para "world live happily"
-	line "with #MON."
+	para "felices con los"
+	line "#MON."
 	done
 
 BeautyOliviaSeenText:
-	text "Don't you think my"
-	line "#MON and I are"
-	cont "beautiful?"
+	text "¿No crees que mis"
+	line "#MON y yo"
+	cont "somos bonitos?"
 	done
 
 BeautyOliviaBeatenText:
-	text "We drink MOOMOO"
-	line "MILK every day."
+	text "Bebemos LECHE"
+	line "MU-MU a diario."
 	done
 
 BeautyOliviaAfterBattleText:
-	text "MOOMOO MILK is"
-	line "good for beauty"
+	text "La LECHE MU-MU"
+	line "embellece y es"
 
-	para "and health, but"
-	line "inconveniently,"
+	para "saludable, pero es"
+	line "una pena que sólo"
 
-	para "they only sell a"
-	line "bottle at a time."
+	para "vendan una botella"
+	line "cada vez."
 	done
 
 Route38SignText:
-	text "ROUTE 38"
+	text "RUTA 38"
 
-	para "OLIVINE CITY -"
-	line "ECRUTEAK CITY"
+	para "CIUDAD OLIVO -"
+	line "CIUDAD IRIS"
 	done
 
 Route38TrainerTipsText:
-	text "TRAINER TIPS"
+	text "PISTAS ENTRENADOR"
 
-	para "If a #MON is"
-	line "trying to evolve,"
-	cont "you can stop it."
+	para "Si un #MON"
+	line "va a evolucionar,"
+	cont "puedes pararlo."
 
-	para "Press the B But-"
-	line "ton during evolu-"
-	cont "tion."
+	para "Pulsa el Botón B"
+	line "mientras intenta"
+	cont "evolucionar."
 
-	para "That startles the"
-	line "#MON and stops"
-	cont "its evolution."
+	para "Esto asusta al"
+	line "#MON y detiene"
+	cont "su evolución"
 	done
 
 Route38_MapEvents:

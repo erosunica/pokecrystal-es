@@ -205,134 +205,134 @@ LancesRoomMovementData_MaryRunsBackAndForth:
 	step_end
 
 LanceBattleIntroText:
-	text "LANCE: I've been"
-	line "waiting for you."
+	text "LANCE: Te estaba"
+	line "esperando."
 
-	para "<PLAY_G>!"
+	para "¡<PLAY_G>!"
 
-	para "I knew that you,"
-	line "with your skills,"
+	para "Sabía que tú, con"
+	line "tu habilidad,"
 
-	para "would eventually"
-	line "reach me here."
+	para "finalmente serías"
+	line "capaz de llegar"
+	cont "hasta mí."
 
-	para "There's no need"
-	line "for words now."
+	para "No necesitamos"
+	line "más palabras."
 
-	para "We will battle to"
-	line "determine who is"
+	para "Debemos luchar"
+	line "para determinar"
 
-	para "the stronger of"
-	line "the two of us."
+	para "quién es más"
+	line "fuerte de los dos."
 
-	para "As the most power-"
-	line "ful trainer and as"
+	para "Como el entrenador"
+	line "más poderoso y el"
 
-	para "the #MON LEAGUE"
-	line "CHAMPION…"
+	para "CAMPEÓN de la LIGA"
+	line "#MON…"
 
-	para "I, LANCE the drag-"
-	line "on master, accept"
-	cont "your challenge!"
+	para "¡Yo, LANCE, el"
+	line "maestro dragón,"
+	cont "acepto tu desafío!"
 	done
 
 LanceBattleWinText:
-	text "…It's over."
+	text "Se acabó…"
 
-	para "But it's an odd"
-	line "feeling."
+	para "Pero es extraño."
 
-	para "I'm not angry that"
-	line "I lost. In fact, I"
-	cont "feel happy."
+	para "No estoy enfadado"
+	line "por perder."
 
-	para "Happy that I"
-	line "witnessed the rise"
+	para "De hecho, estoy"
+	line "contento."
 
-	para "of a great new"
-	line "CHAMPION!"
+	para "Estoy contento por"
+	line "haber presenciado"
+
+	para "tu triunfo."
+	line "¡No tienes igual!"
 	done
 
 LanceBattleAfterText:
-	text "…Whew."
+	text "Fiuuu…"
 
-	para "You have become"
-	line "truly powerful,"
-	cont "<PLAY_G>."
+	para "Eres realmente"
+	line "fuerte, <PLAY_G>."
 
-	para "Your #MON have"
-	line "responded to your"
+	para "Tus #MON han"
+	line "respondido a tu"
+	cont "fuerte naturaleza."
 
-	para "strong and up-"
-	line "standing nature."
-
-	para "As a trainer, you"
-	line "will continue to"
-
-	para "grow strong with"
-	line "your #MON."
+	para "Debes continuar"
+	line "fortaleciéndote"
+	cont "con tus #MON."
 	done
 
 LancesRoomMaryOhNoOakText:
-	text "MARY: Oh, no!"
-	line "It's all over!"
+	text "ROSA: ¡Oh, no!"
+	line "¡Todo ha acabado!"
 
-	para "PROF.OAK, if you"
-	line "weren't so slow…"
+	para "PROF. OAK, si no"
+	line "fuera tan lento…"
 	done
 
 LancesRoomOakCongratulationsText:
-	text "PROF.OAK: Ah,"
+	text "PROF. OAK: ¡Ah,"
 	line "<PLAY_G>!"
 
-	para "It's been a long"
-	line "while."
+	para "Ha pasado mucho"
+	line "tiempo."
 
-	para "You certainly look"
-	line "more impressive."
+	para "Cada día eres más"
+	line "impresionante."
 
-	para "Your conquest of"
-	line "the LEAGUE is just"
-	cont "fantastic!"
+	para "¡Tu conquista de"
+	line "la LIGA ha sido"
+	cont "fantástica!"
 
-	para "Your dedication,"
-	line "trust and love for"
+	para "Tu dedicación,"
+	line "confianza y amor"
 
-	para "your #MON made"
-	line "this happen."
+	para "por tus #MON lo"
+	line "han conseguido."
 
-	para "Your #MON were"
-	line "outstanding too."
+	para "Tus #MON"
+	line "también han estado"
+	cont "increíbles."
 
-	para "Because they be-"
-	line "lieved in you as a"
+	para "Han perseverado"
+	line "porque han creído"
 
-	para "trainer, they per-"
-	line "severed."
+	para "en ti y en tu"
+	line "entrenamiento."
 
-	para "Congratulations,"
+	para "¡Felicidades,"
 	line "<PLAY_G>!"
 	done
 
 LancesRoomMaryInterviewText:
-	text "MARY: Let's inter-"
-	line "view the brand new"
-	cont "CHAMPION!"
+	text "ROSA: ¡Vamos a"
+	line "entrevistar a la"
+
+	para "persona que ha"
+	line "ganado la LIGA!"
 	done
 
 LancesRoomNoisyText:
-	text "LANCE: This is"
-	line "getting to be a"
-	cont "bit too noisy…"
+	text "LANCE: Esto va a"
+	line "ponerse demasiado"
+	cont "feo…"
 
-	para "<PLAY_G>, could you"
-	line "come with me?"
+	para "¿<PLAY_G>, puedes"
+	line "venir conmigo?"
 	done
 
 LancesRoomMaryNoInterviewText:
-	text "MARY: Oh, wait!"
-	line "We haven't done"
-	cont "the interview!"
+	text "ROSA: ¡Espera!"
+	line "¡No hemos hecho"
+	cont "la entrevista!"
 	done
 
 LancesRoom_MapEvents:

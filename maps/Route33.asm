@@ -143,53 +143,49 @@ Route33FruitTree:
 	fruittree FRUITTREE_ROUTE_33
 
 HikerAnthony2SeenText:
-	text "I came through the"
-	line "tunnel, but I"
-
-	para "still have plenty"
-	line "of energy left."
+	text "Crucé el túnel y"
+	line "todavía me queda"
+	cont "mucha energía."
 	done
 
 HikerAnthony2BeatenText:
-	text "Whoa! You've got"
-	line "more zip than me!"
+	text "¡Guau! ¡Tienes más"
+	line "fuerza que yo!"
 	done
 
 HikerAnthony2AfterText:
-	text "We HIKERS are at"
-	line "our best in the"
-	cont "mountains."
+	text "Los MONTAÑEROS"
+	line "somos felices en"
+	cont "las montañas."
 	done
 
 HikerAnthonyDunsparceText:
-	text "Hey, did you get a"
+	text "¿Conseguiste un"
 	line "DUNSPARCE?"
 
-	para "I caught one too."
+	para "Yo también."
 
-	para "Take a look at it"
-	line "in the light. It's"
-	cont "got a funny face!"
+	para "Míralo a la luz."
+	line "¡Pone una cara muy"
+	cont "divertida!"
 	done
 
 Route33LassText:
-	text "Pant, pant…"
+	text "Uff, uff…"
 
-	para "I finally got"
-	line "through that cave."
+	para "Por fin he atrave-"
+	line "sado esa cueva."
 
-	para "It was much bigger"
-	line "than I'd expected."
+	para "Era más grande de"
+	line "lo que esperaba."
 
-	para "I got too tired to"
-	line "explore the whole"
-
-	para "thing, so I came"
-	line "outside."
+	para "Estaba tan cansada"
+	line "de explorarla, que"
+	cont "he salido fuera."
 	done
 
 Route33SignText:
-	text "ROUTE 33"
+	text "RUTA 33"
 	done
 
 Route33_MapEvents:

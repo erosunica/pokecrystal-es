@@ -112,112 +112,119 @@ FastShipCabinsNorthwestCabinTrashcan:
 	jumpstd trashcan
 
 FirebreatherLyleSeenText:
-	text "I'm going to KANTO"
-	line "to put on fire-"
-	cont "breathing shows!"
+	text "¡Voy a KANTO para"
+	line "actuar en un"
+
+	para "espectáculo de"
+	line "comefuegos!"
 	done
 
 FirebreatherLyleBeatenText:
-	text "Fizzle… The"
-	line "flame's tiny…"
+	text "La débil llama"
+	line "pierde fuerza."
 	done
 
 FirebreatherLyleAfterBattleText:
-	text "I guess fire is"
-	line "weak on the sea."
+	text "El fuego es débil"
+	line "contra el agua."
 
-	para "It doesn't matter?"
-	line "Really?"
+	para "No te importa,"
+	line "¿verdad?"
 	done
 
 BugCatcherKenSeenText:
-	text "I'm visiting my"
-	line "grandma to catch"
-	cont "me some bugs!"
+	text "¡Voy a ver a mi"
+	line "abuela para que me"
+
+	para "atrape unos"
+	line "cuantos bichos!"
 	done
 
 BugCatcherKenBeatenText:
-	text "Ooh, wow."
-	line "You're tough!"
+	text "Ooooh, guau."
+	line "¡Qué fuerte!"
 	done
 
 BugCatcherKenAfterBattleText:
-	text "You can find lots"
-	line "of #MON in the"
-	cont "trees of JOHTO!"
+	text "Encontrarás muchos"
+	line "#MON en los"
+	cont "árboles de JOHTO."
 	done
 
 BeautyCassieSeenText:
-	text "I'm trying to"
-	line "forget my woes."
-	cont "Let's battle!"
+	text "Intento olvidar a"
+	line "mis enemigos."
+	cont "¡Luchemos!"
 	done
 
 BeautyCassieBeatenText:
-	text "My heart weeps…"
+	text "Estoy desolada…"
 	done
 
 BeautyCassieAfterBattleText:
-	text "A voyage is best"
-	line "for getting over"
-	cont "a broken heart."
+	text "Lo mejor para"
+	line "curar las penas es"
 
-	para "But a FAST SHIP"
-	line "trip is too short"
-	cont "for grieving."
+	para "hacer un viaje en"
+	line "barco."
+
+	para "Pero los viajes en"
+	line "FERRY son muy"
+	cont "cortos."
 	done
 
 GuitaristClydeSeenText:
-	text "I'm going to audi-"
-	line "tion my songs at"
+	text "Voy a una audición"
+	line "de mis canciones"
 
-	para "GOLDENROD's RADIO"
-	line "STATION."
+	para "en la EMISORA de"
+	line "CIUDAD TRIGAL."
 	done
 
 GuitaristClydeBeatenText:
-	text "Yowza!"
-	line "Total distortion!"
+	text "¡Uauu!"
+	line "¡Distorsión total!"
 	done
 
 GuitaristClydeAfterBattleMobileText:
-	text "I was going to"
-	line "make my debut at"
-	cont "the BATTLE TOWER…"
+	text "Iba a hacer mi"
+	line "debut en la"
+	cont "TORRE BATALLA…"
 
-	para "I should go back"
-	line "to VERMILION and"
-	cont "redo my training…"
+	para "Debo regresar a"
+	line "CIUDAD CARMÍN para"
+	cont "volver a entrenar…"
 	done
 
 GuitaristClydeAfterBattleText:
-	text "Speaking of the"
-	line "RADIO STATION,"
+	text "Hablando de la"
+	line "ESTACIÓN de RADIO,"
 
-	para "what's this week's"
-	line "lucky number?"
+	para "¿cuál es el número"
+	line "de la suerte de"
+	cont "esta semana?"
 	done
 
 FastShipBedText1:
-	text "A comfy bed!"
-	line "Time to sleep…"
+	text "¡Una buena cama!"
+	line "A dormir…"
 	done
 
 FastShipBedText2:
-	text "Ah, refreshed and"
-	line "restored!"
+	text "¡Ah! Vuelvo a"
+	line "estar en forma."
 	done
 
 FastShipArrivedOlivineText:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "OLIVINE CITY."
+	text "El FERRY S.S. AQUA"
+	line "ha llegado a"
+	cont "CIUDAD OLIVO."
 	done
 
 FastShipArrivedVermilionText:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "VERMILION CITY."
+	text "El FERRY S.S. AQUA"
+	line "ha llegado a"
+	cont "CIUDAD CARMÍN."
 	done
 
 FastShipCabins_SW_SSW_NW_MapEvents:

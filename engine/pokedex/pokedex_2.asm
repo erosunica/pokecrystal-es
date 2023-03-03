@@ -112,28 +112,19 @@ DisplayDexEntry:
 	inc hl
 	ld a, b
 	push af
-	push hl
-	call GetFarHalfword
-	ld d, l
-	ld e, h
-	pop hl
+	call GetFarByte
 	inc hl
-	inc hl
-	ld a, d
-	or e
+	and a
 	jr z, .skip_height
-	push hl
-	push de
 ; Print the height, with two of the four digits in front of the decimal point
-	ld hl, sp+$0
+	push hl
+	push af
+	ld hl, sp+$1
 	ld d, h
 	ld e, l
-	hlcoord 12, 7
-	lb bc, 2, (2 << 4) | 4
+	hlcoord 13, 7
+	lb bc, 1, (2 << 4) | 3
 	call PrintNum
-; Replace the decimal point with a ft symbol
-	hlcoord 14, 7
-	ld [hl], $5e
 	pop af
 	pop hl
 
@@ -154,8 +145,8 @@ DisplayDexEntry:
 	ld hl, sp+$0
 	ld d, h
 	ld e, l
-	hlcoord 11, 9
-	lb bc, 2, (4 << 4) | 5
+	hlcoord 12, 9
+	lb bc, 2, (3 << 4) | 4
 	call PrintNum
 	pop de
 
@@ -263,7 +254,7 @@ GetDexEntryPagePointer:
 	cp "@"
 	jr nz, .loop1
 ; skip height and weight
-rept 4
+rept 3
 	inc hl
 endr
 ; if c != 1: skip entry

@@ -1,97 +1,99 @@
 AlanGettingStrongerText:
-	text "My @"
+	text "Mi @"
 	text_ram wStringBuffer4
-	text "'s"
-	line "getting stronger,"
+	text " está"
+	line "cada vez más"
 
-	para "exactly as I"
-	line "calculated!"
+	para "fuerte, ¡justo"
+	line "como calculé!"
 	done
 
 AlanDefeatedMonText:
-	text "By the way, we"
-	line "knocked out a wild"
+	text "Por cierto, el"
+	line "otro día noqueamos"
 
-	para "@"
+	para "a un @"
 	text_ram wStringBuffer4
-	text " just"
-	line "the other day."
+	text_start
+	line "salvaje."
 
-	para "Studying up in"
-	line "advance worked!"
+	para "¡Estudiar"
+	line "funciona!"
 	done
 
 AlanLostAMonText:
-	text "By the way, a wild"
-	line "@"
-	text_ram wStringBuffer4
-	text " escaped"
-	cont "on me yesterday."
+	text "Por cierto, ayer"
+	line "se me escapó un"
 
-	para "A computational"
-	line "error on my part…"
+	para "@"
+	text_ram wStringBuffer4
+	text_start
+	line "salvaje."
+
+	para "Ha sido un error"
+	line "de cálculo mío…"
 	done
 
 AlanBattleRematchText:
-	text "I've studied quite"
-	line "a bit since then,"
+	text "¡He estado"
+	line "estudiando este"
 
-	para "and I've gotten a"
-	line "lot better!"
+	para "tiempo y he"
+	line "mejorado mucho!"
 
-	para "I'm hanging out on"
+	para "Estoy en"
 	line "@"
 	text_ram wStringBuffer5
 	text "."
 
-	para "Can you come down"
-	line "for a battle?"
+	para "¿Te puedes pasar"
+	line "para luchar?"
 	done
 
 AlanHangUpText:
-	text "See you later!"
+	text "¡Hasta luego!"
 	done
 
 AlanFoundItemText:
-	text "Hehehe, I picked"
-	line "up something nice!"
+	text "¡Je, je, he cogido"
+	line "algo interesante!"
 
-	para "You can have it!"
-	line "Why don't you come"
+	para "¡Es tuyo!"
+	line "¿Por qué no vienes"
 
-	para "to @"
+	para "a @"
 	text_ram wStringBuffer5
 	text_start
-	line "and pick it up?"
+	line "y te lo llevas?"
 	done
 
 AlanHaventPickedUpAnythingText:
-	text "I haven't picked"
-	line "up anything yet."
+	text "Todavía no he"
+	line "cogido nada."
 
-	para "I'll call you if I"
-	line "find something."
+	para "Te llamaré si"
+	line "encuentro algo."
 	done
 
 AlanReminderText:
-	text "If we don't battle"
-	line "soon, I'll forget"
-	cont "my strategy!"
+	text "¡Si no luchamos"
+	line "pronto, olvidaré"
+	cont "mis estrategias!"
 
-	para "I'm waiting on"
+	para "¡Te espero en"
 	line "@"
 	text_ram wStringBuffer5
 	text "!"
 	done
 
 AlanComePickUpGiftText:
-	text "I have to do my"
-	line "homework, so can"
+	text "Tengo que hacer"
+	line "los deberes,"
 
-	para "you come get your"
-	line "gift right away?"
+	para "¿vienes ahora a"
+	line "por tu regalo?"
 
-	para "I'm waiting on"
+	para "¡Te espero en"
 	line "@"
 	text_ram wStringBuffer5
 	text "!"

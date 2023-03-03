@@ -737,202 +737,208 @@ MovementData_0x6ef58:
 	step_end
 
 IlexForestApprenticeIntroText:
-	text "Oh, man… My boss"
-	line "is going to be"
-	cont "steaming…"
+	text "¡Vaya…! Mi jefe"
+	line "se va a poner"
+	cont "furioso…"
 
-	para "The FARFETCH'D"
-	line "that CUTS trees"
+	para "Se me escapó el"
+	line "FARFETCH'D que"
 
-	para "for charcoal took"
-	line "off on me."
+	para "CORTA árboles para"
+	line "conseguir carbón."
 
-	para "I can't go looking"
-	line "for it here in the"
-	cont "ILEX FOREST."
+	para "No puedo ir a"
+	line "buscarlo al"
+	cont "ENCINAR."
 
-	para "It's too big, dark"
-	line "and scary for me…"
+	para "Demasiado grande y"
+	line "oscuro para mí…"
 	done
 
 IlexForestApprenticeAfterText:
-	text "Wow! Thanks a"
-	line "whole bunch!"
+	text "¡Uauu! ¡Muchísimas"
+	line "gracias!"
 
-	para "My boss's #MON"
-	line "won't obey me be-"
-	cont "cause I don't have"
-	cont "a BADGE."
+	para "El #MON de"
+	line "mi jefe no me"
+
+	para "obedecía porque"
+	line "no tengo MEDALLAS."
 	done
 
 Text_ItsTheMissingPokemon:
-	text "It's the missing"
-	line "#MON!"
+	text "¡Es el #MON"
+	line "perdido!"
 	done
 
 Text_Kwaaaa:
-	text "FARFETCH'D: Kwaa!"
+	text "FARFETCH'D: ¡Farf!"
 	done
 
 Text_CharcoalMasterIntro:
-	text "Ah! My FARFETCH'D!"
+	text "¡Ah!"
+	line "¡Mi FARFETCH'D!"
 
-	para "You found it for"
-	line "us, kid?"
+	para "¿Lo encontraste"
+	line "para nosotros?"
 
-	para "Without it, we"
-	line "wouldn't be able"
+	para "Sin su ayuda, no"
+	line "podríamos CORTAR"
 
-	para "to CUT trees for"
-	line "charcoal."
+	para "árboles para hacer"
+	line "carbón vegetal."
 
-	para "Thanks, kid!"
+	para "¡Gracias!"
 
-	para "Now, how can I"
-	line "thank you…"
+	para "¿Cómo podría"
+	line "agradecértelo…?"
 
-	para "I know! Here, take"
-	line "this."
+	para "¡Ya sé!"
+	line "Coge esto."
 	done
 
 Text_CharcoalMasterOutro:
-	text "That's the CUT HM."
-	line "Teach that to a"
+	text "Es la MO CORTE."
+	line "¡Enséñasela a un"
 
-	para "#MON to clear"
-	line "small trees."
+	para "#MON para"
+	line "cortar arbustos!"
 
-	para "Of course, you"
-	line "have to have the"
+	para "Pero necesitarás"
+	line "la MEDALLA del"
 
-	para "GYM BADGE from"
-	line "AZALEA to use it."
+	para "GIMNASIO AZALEA"
+	line "para usarla."
 	done
 
 Text_CharcoalMasterTalkAfter:
-	text "Do you want to"
-	line "apprentice as a"
+	text "¿Quieres que te"
+	line "enseñe a trabajar"
+	cont "con el carbón?"
 
-	para "charcoal maker"
-	line "with me?"
-
-	para "You'll be first-"
-	line "rate in ten years!"
+	para "¡En diez años"
+	line "serás imparable!"
 	done
 
 Text_HeadbuttIntro:
-	text "What am I doing?"
+	text "¿Que qué hago?"
 
-	para "I'm shaking trees"
-	line "using HEADBUTT."
+	para "Agitar los árboles"
+	line "con GOLPE CABEZA."
 
-	para "It's fun. Here,"
-	line "you try it too!"
+	para "Es muy divertido."
+	line "¡Toma, pruébalo!"
 	done
 
 Text_HeadbuttOutro:
-	text "Rattle trees with"
-	line "HEADBUTT. Some-"
-	cont "times, sleeping"
-	cont "#MON fall out."
+	text "Agita los árboles"
+	line "con GOLPE CABEZA."
+
+	para "A veces caen"
+	line "#MON dormidos."
 	done
 
 Text_IlexForestLass:
-	text "Did something"
-	line "happen to the"
-	cont "forest's guardian?"
+	text "¿Le ha pasado algo"
+	line "al guardián del"
+	cont "bosque?"
 	done
 
 IlexForestSignpostText:
-	text "ILEX FOREST is"
-	line "so overgrown with"
+	text "Hay tantos árboles"
+	line "en el ENCINAR que"
 
-	para "trees that you"
-	line "can't see the sky."
+	para "no se ve ni el"
+	line "cielo."
 
-	para "Please watch out"
-	line "for items that may"
-	cont "have been dropped."
+	para "Por favor, busca"
+	line "objetos que puedan"
+	cont "haber caído."
 	done
 
 Text_IlexForestShrine:
-	text "ILEX FOREST"
-	line "SHRINE…"
+	text "SANTUARIO del"
+	line "ENCINAR…"
 
-	para "It's in honor of"
-	line "the forest's"
-	cont "protector…"
+	para "Construido en"
+	line "honor del guardián"
+	cont "del bosque…"
 	done
 
 Text_ShrineCelebiEvent:
-	text "ILEX FOREST"
-	line "SHRINE…"
+	text "SANTUARIO del"
+	line "ENCINAR…"
 
-	para "It's in honor of"
-	line "the forest's"
-	cont "protector…"
+	para "Construido en"
+	line "honor del guardián"
+	cont "del bosque…"
 
-	para "Oh? What is this?"
+	para "¿Oh? ¿Qué es esto?"
 
-	para "It's a hole."
-	line "It looks like the"
+	para "Es un agujero."
+	line "Parece que la"
 
-	para "GS BALL would fit"
-	line "inside it."
+	para "GS BALL cabe"
+	line "dentro."
 
-	para "Want to put the GS"
-	line "BALL here?"
+	para "¿Quieres colocar"
+	line "la GS BALL aquí?"
 	done
 
 Text_InsertGSBall:
-	text "<PLAYER> put in the"
+	text "<PLAYER> coloca la"
 	line "GS BALL."
 	done
 
 Text_KurtCaughtCelebi:
-	text "Whew, wasn't that"
-	line "something!"
+	text "¡Fiuuu, increíble!"
 
-	para "<PLAYER>, that was"
-	line "fantastic. Thanks!"
+	para "<PLAYER>, ha sido"
+	line "fantástico."
+	cont "¡Gracias!"
 
-	para "The legends about"
-	line "that SHRINE were"
-	cont "real after all."
+	para "Las leyendas sobre"
+	line "este SANTUARIO"
 
-	para "I feel inspired by"
-	line "what I just saw."
+	para "eran ciertas"
+	line "después de todo."
 
-	para "It motivates me to"
-	line "make better BALLS!"
+	para "Me ha inspirado"
+	line "lo que acabo de"
+	cont "ver."
 
-	para "I'm going!"
+	para "¡Me motiva para"
+	line "hacer mejores"
+	cont "BALL!"
+
+	para "¡Voy a ello!"
 	done
 
 BugCatcherWayneSeenText:
-	text "Don't sneak up on"
-	line "me like that!"
+	text "¡No me des estos"
+	line "sustos!"
 
-	para "You frightened a"
-	line "#MON away!"
+	para "¡Un #MON ha"
+	line "escapado asustado!"
 	done
 
 BugCatcherWayneBeatenText:
-	text "I hadn't seen that"
-	line "#MON before…"
+	text "Nunca antes había"
+	line "visto a ese"
+	cont "#MON…"
 	done
 
 BugCatcherWayneAfterBattleText:
-	text "A #MON I've"
-	line "never seen before"
+	text "Al usar GOLPE CA-"
+	line "BEZA en ese árbol,"
 
-	para "fell out of the"
-	line "tree when I used"
-	cont "HEADBUTT."
+	para "cayó un #MON"
+	line "que no había visto"
+	cont "en mi vida."
 
-	para "I ought to use"
-	line "HEADBUTT in other"
-	cont "places too."
+	para "Creo que debo usar"
+	line "GOLPE CABEZA en"
+	cont "más sitios."
 	done
 
 IlexForest_MapEvents:

@@ -1,85 +1,90 @@
 GavenMonGreaterThanImaginedText:
-	text "My @"
+	text "Mi @"
 	text_ram wStringBuffer4
 	text_start
-	line "might be greater"
-	cont "than I imagined."
+	line "puede ser mejor de"
+	cont "lo que imaginaba."
 
-	para "I doubt I'll see a"
+	para "Dudo que vea a un"
 	line "@"
 	text_ram wStringBuffer4
-	text " that's"
-	cont "better than mine."
+	text " mejor"
+	cont "que el mío."
 	done
 
 GavenDefeatedMonText:
-	text "Oh, and I managed"
-	line "to barely defeat"
+	text "Oh, el otro día"
+	line "conseguí derrotar"
 
-	para "@"
-	text_ram wStringBuffer4
-	text " the"
-	line "other day."
-
-	para "I've never seen a"
+	para "a duras penas a un"
 	line "@"
-	text_ram wStringBuffer4
-	text " get"
-	cont "that strong…"
-
-	para "You shouldn't let"
-	line "your guard down,"
-
-	para "even against a"
-	line "#MON you're"
-	cont "used to seeing."
-	done
-
-GavenLostAMonText:
-	text "And a while back,"
-	line "I tried to catch a"
-	cont "wild @"
 	text_ram wStringBuffer4
 	text "."
 
-	para "But it managed to"
-	line "elude me."
+	para "Nunca había visto"
+	line "a un @"
+	text_ram wStringBuffer4
+	text_start
+	cont "tan fuerte…"
 
-	para "One wrong decision"
-	line "could mean total"
+	para "No debes bajar la"
+	line "guardia, ni"
 
-	para "failure… You ought"
-	line "to be careful too."
+	para "siquiera ante los"
+	line "#MON que te"
+	cont "sueles encontrar."
+	done
+
+GavenLostAMonText:
+	text "Hace un rato,"
+	line "intenté atrapar a"
+
+	para "un @"
+	text_ram wStringBuffer4
+	text_start
+	line "salvaje."
+
+	para "Pero consiguió"
+	line "eludirme."
+
+	para "Una decisión"
+	line "equivocada puede"
+
+	para "hacer fracasar"
+	line "todo…"
+
+	para "Tú también debes"
+	line "tener cuidado."
 	done
 
 GavenBattleRematchText:
-	text "Let's battle!"
+	text "¡Luchemos!"
 
-	para "I'll be waiting on"
+	para "Te esperaré en"
 	line "@"
 	text_ram wStringBuffer5
 	text "."
 
-	para "Give me a shout"
-	line "when you're close."
+	para "Llámame cuando"
+	line "estés cerca."
 	done
 
 GavenHangUpText:
-	text "OK, I'll talk to"
-	line "you soon!"
+	text "Vale, ¡hablaremos"
+	line "muy pronto!"
 	done
 
 GavenHangUpNotThursdayText:
-	text "I obsess over how"
-	line "to beat you."
+	text "Me obsesiona la"
+	line "idea de vencerte."
 	done
 
 GavenReminderText:
-	text "<PLAY_G>, why"
-	line "aren't you here?"
+	text "<PLAY_G>, ¿por qué"
+	line "no estás aquí?"
 
-	para "I'll take you down"
-	line "with @"
+	para "¡Te haré polvo con"
+	line "@"
 	text_ram wStringBuffer5
 	text "!"
 	done

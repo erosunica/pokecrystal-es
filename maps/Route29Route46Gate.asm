@@ -14,24 +14,24 @@ Route29Route46GateYoungsterScript:
 	jumptextfaceplayer Route29Route46GateYoungsterText
 
 Route29Route46GateOfficerText:
-	text "You can't climb"
-	line "ledges."
+	text "No puedes cruzar"
+	line "setos."
 
-	para "But you can jump"
-	line "down from them to"
-	cont "take a shortcut."
+	para "Pero puedes saltar"
+	line "por encima de"
+	cont "ellos para atajar."
 	done
 
 Route29Route46GateYoungsterText:
-	text "Different kinds of"
-	line "#MON appear"
-	cont "past here."
+	text "Más adelante"
+	line "aparecen muchos"
+	cont "tipos de #MON."
 
-	para "If you want to"
-	line "catch them all,"
+	para "Si quieres hacerte"
+	line "con todos, tendrás"
 
-	para "you have to look"
-	line "everywhere."
+	para "que buscar por"
+	line "todas partes."
 	done
 
 Route29Route46Gate_MapEvents:

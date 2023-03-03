@@ -313,220 +313,223 @@ Route45HiddenPpUp:
 	hiddenitem PP_UP, EVENT_ROUTE_45_HIDDEN_PP_UP
 
 HikerErikSeenText:
-	text "Be prepared for"
-	line "anything!"
+	text "¡Prepárate para"
+	line "cualquier cosa!"
 
-	para "Let me see if your"
-	line "#MON have been"
-	cont "raised properly!"
+	para "¡Déjame ver si has"
+	line "entrenado bien a"
+	cont "tus #MON!"
 	done
 
 HikerErikBeatenText:
-	text "Oh, I lost that!"
+	text "¡Oh, he perdido!"
 	done
 
 HikerErikAfterBattleText:
-	text "I'll head back to"
-	line "BLACKTHORN's ICE"
+	text "Volveré a la RUTA"
+	line "HELADA de CIUDAD"
 
-	para "PATH and train"
-	line "some more."
+	para "ENDRINO y seguiré"
+	line "entrenándome."
 	done
 
 HikerMichaelSeenText:
-	text "Yo! You're spunky!"
-	line "But you know what?"
+	text "¡Eres valiente!"
+	line "Pero…"
 
-	para "When it comes to"
-	line "sheer spunkiness,"
-	cont "I'm the man!"
+	para "¿Sabes qué?"
+	line "Para valiente,"
+	cont "¡yo!"
 	done
 
 HikerMichaelBeatenText:
-	text "My #MON weren't"
-	line "spunky enough!"
+	text "¡A mis #MON les"
+	line "faltaron agallas!"
 	done
 
 HikerMichaelAfterBattleText:
-	text "Boy, do I love"
-	line "HP UP! Mmmm, yum!"
+	text "¡Cómo me gusta"
+	line "MÁS PS! ¡Mmmm!"
 
-	para "I keep drinking my"
-	line "#MON's!"
+	para "¡Me bebo la de mis"
+	line "#MON!"
 
-	para "I can't help it!"
+	para "No puedo evitarlo."
 	done
 
 HikerParry3SeenText:
-	text "My #MON are"
-	line "power packed!"
+	text "¡Mis #MON son"
+	line "muy poderosos!"
 	done
 
 HikerParry3BeatenText:
-	text "Wahahah! I'm the"
-	line "big loser!"
+	text "¡Buaaaaa! ¡Soy un"
+	line "perdedor!"
 	done
 
 HikerParryAfterBattleText:
-	text "I'm not much good"
-	line "at thinking, see?"
+	text "No se me da muy"
+	line "bien pensar."
 
-	para "So, I just plow"
-	line "ahead with power!"
+	para "¡Así que utilizo"
+	line "sólo la fuerza!"
 	done
 
 HikerTimothySeenText:
-	text "Why do I climb"
-	line "mountains?"
+	text "¿Que por qué"
+	line "escalo montañas?"
 
-	para "Because they're"
-	line "there."
+	para "Porque están ahí."
 
-	para "Why do I train"
-	line "#MON?"
+	para "¿Que por qué"
+	line "entreno #MON?"
 
-	para "Because they're"
-	line "there!"
+	para "¡Porque están ahí!"
 	done
 
 HikerTimothyBeatenText:
-	text "Losses…"
-	line "They're there too!"
+	text "Las derrotas…"
+	line "¡son inevitables!"
 	done
 
 HikerTimothyAfterBattleText:
-	text "The best thing to"
-	line "ever happen to me"
+	text "Lo mejor que me ha"
+	line "pasado nunca fue"
 
-	para "was discovering"
+	para "descubrir a los"
 	line "#MON."
 	done
 
 HikerParryGivesIronText:
-	text "I just can't find"
-	line "a way to win!"
+	text "¡No encuentro la"
+	line "manera de ganar!"
 
-	para "Keep it up!"
+	para "¡Sigue así!"
 
-	para "Oh, and take this"
-	line "--it's the gift"
+	para "Oh, y toma esto:"
+	line "es el regalo que"
 
-	para "you couldn't take"
-	line "when we last met."
+	para "no pudiste llevar"
+	line "la última vez."
 	done
 
 BlackbeltKenji3SeenText:
-	text "I was training"
-	line "here alone."
+	text "Estaba entrenando"
+	line "aquí solo."
 
-	para "Behold the fruits"
-	line "of my labor!"
+	para "¡Observa el fruto"
+	line "de mi trabajo!"
 	done
 
 BlackbeltKenji3BeatenText:
-	text "Waaaargh!"
+	text "¡Waaaargh!"
 	done
 
 BlackbeltKenjiAfterBattleText:
-	text "This calls for"
-	line "extreme measures."
+	text "Esto requiere"
+	line "medidas extremas."
 
-	para "I must take to the"
-	line "hills and train in"
-	cont "solitude."
+	para "Debo ir a los mon-"
+	line "tes y entrenarme"
+	cont "allí, en soledad."
 	done
 
 BlackbeltKenjiMorningText:
-	text "I'm going to train"
-	line "a bit more before"
-	cont "I break for lunch."
+	text "Voy a entrenar un"
+	line "poco más antes de"
+	cont "parar a comer."
 	done
 
 BlackbeltKenjiNightText:
-	text "We had plenty of"
-	line "rest at lunch, so"
+	text "¡Descansamos mucho"
+	line "durante la comida,"
 
-	para "now we're all"
-	line "ready to go again!"
+	para "así que ya estamos"
+	line "todos listos!"
 
-	para "We're going to"
-	line "train again!"
+	para "¡Volvemos al"
+	line "entrenamiento!"
 	done
 
 CooltrainermRyanSeenText:
-	text "What are your"
-	line "thoughts on rais-"
-	cont "ing #MON?"
+	text "¿Qué piensas sobre"
+	line "la educación de"
+	cont "los #MON?"
 	done
 
 CooltrainermRyanBeatenText:
-	text "You've won my"
-	line "respect."
+	text "Te has ganado mi"
+	line "respeto."
 	done
 
 CooltrainermRyanAfterBattleText:
-	text "I see you're rais-"
-	line "ing your #MON"
-	cont "with care."
+	text "Veo que estás"
+	line "educando a tus"
 
-	para "The bond you build"
-	line "will save you in"
-	cont "tough situations."
+	para "#MON con"
+	line "cariño."
+
+	para "El vínculo que os"
+	line "une os salvará en"
+
+	para "las situaciones"
+	line "difíciles."
 	done
 
 CooltrainerfKellySeenText:
-	text "What is your"
-	line "battle strategy?"
+	text "¿Cuál es tu"
+	line "estrategia?"
 
-	para "It is foolish to"
-	line "use strong moves"
-	cont "indiscriminately."
+	para "Es de tontos usar"
+	line "movimientos fuer-"
+	cont "tes de forma"
+	cont "indiscriminada."
 	done
 
 CooltrainerfKellyBeatenText:
-	text "Fine. I lost."
+	text "Vale. He perdido."
 	done
 
 CooltrainerfKellyAfterBattleText:
-	text "I'm not in favor"
-	line "of overly power-"
-	cont "ful moves."
+	text "No soy partidaria"
+	line "de los ataques"
+	cont "demasiado fuertes."
 
-	para "I want to win, but"
-	line "I also don't want"
-	cont "to harm #MON."
+	para "Quiero ganar, pero"
+	line "no quiero herir a"
+	cont "los #MON."
 	done
 
 Route45DummyText:
-	text "I'm really, really"
-	line "tough!"
+	text "¡Soy muy, muy"
+	line "fuerte!"
 
-	para "Is there anywhere"
-	line "I can prove how"
-	cont "tough I really am?"
+	para "¿Hay algún lugar"
+	line "en el que pueda"
+	cont "probar mi fuerza?"
 	done
 
 CamperQuentinSeenText:
-	text "I'm really, really"
-	line "tough!"
+	text "¡Soy muy, muy"
+	line "fuerte!"
 	done
 
 CamperQuentinBeatenText:
-	text "I was tough at the"
-	line "BATTLE TOWER…"
+	text "Era fuerte en la"
+	line "TORRE BATALLA…"
 	done
 
 CamperQuentinAfterBattleText:
-	text "Have you been to"
-	line "the BATTLE TOWER?"
+	text "¿Has estado en la"
+	line "TORRE BATALLA?"
 
-	para "I never, ever lose"
-	line "there, but…"
+	para "Nunca llegué a"
+	line "perder allí, pero…"
 	done
 
 Route45SignText:
-	text "ROUTE 45"
-	line "MOUNTAIN RD. AHEAD"
+	text "RUTA 45"
+	line "CAMINO MONTAÑA"
 	done
 
 Route45_MapEvents:

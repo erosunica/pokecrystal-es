@@ -76,173 +76,165 @@ CeladonCityHiddenPpUp:
 	hiddenitem PP_UP, EVENT_CELADON_CITY_HIDDEN_PP_UP
 
 CeladonCityFisherText:
-	text "This POLIWRATH is"
-	line "my partner."
+	text "Este POLIWRATH es"
+	line "mi compañero."
 
-	para "I wonder if it'll"
-	line "ever evolve into a"
-	cont "frog #MON."
+	para "Me pregunto si"
+	line "algún día"
+
+	para "evolucionará en"
+	line "una rana #MON."
 	done
 
 CeladonCityPoliwrathText:
-	text "POLIWRATH: Croak!"
+	text "POLIWRATH: ¡Polii!"
 	done
 
 CeladonCityTeacher1Text:
-if DEF(_CRYSTAL_AU)
-	text "I lost at the"
-	line "machines."
-	done
-else
-	text "I lost at the slot"
-	line "machines again…"
+	text "Volví a perder en"
+	line "las tragaperras."
 
-	para "We girls also play"
-	line "the slots now."
+	para "Las chicas también"
+	line "jugamos a las"
 
-	para "You should check"
-	line "them out too."
+	para "tragaperras."
+	line "Prueba tú también."
 	done
-endc
 
 CeladonCityGramps1Text:
-	text "GRIMER have been"
-	line "appearing lately."
+	text "Últimamente han"
+	line "aparecido GRIMER."
 
-	para "See that pond out"
-	line "in front of the"
+	para "¿Ves esa charca"
+	line "que hay delante de"
 
-	para "house? GRIMER live"
-	line "there now."
+	para "la casa? Ahí viven"
+	line "GRIMER."
 
-	para "Where did they"
-	line "come from? This is"
-	cont "a serious problem…"
+	para "¿De dónde han"
+	line "venido? Es un"
+	cont "grave problema…"
 	done
 
 CeladonCityGramps2Text:
-	text "Nihihi! This GYM"
-	line "is great! Only"
+	text "¡Bravo! ¡Este"
+	line "GIMNASIO es"
 
-	para "girls are allowed"
-	line "here!"
+	para "genial! ¡Es sólo"
+	line "para chicas!"
 	done
 
 CeladonCityYoungster1Text:
-	text "Want to know a"
-	line "secret?"
+	text "¿Te cuento un"
+	line "secreto?"
 
-	para "CELADON MANSION"
-	line "has a hidden back"
-	cont "door."
+	para "La MANSIÓN AZULONA"
+	line "tiene una puerta"
+	cont "trasera secreta."
 	done
 
 CeladonCityYoungster2Text:
-	text "They're holding an"
-	line "eating contest at"
-	cont "the restaurant."
+	text "Hay un concurso"
+	line "de tragones en el"
+	cont "restaurante."
 
-	para "Just watching them"
-	line "go at it makes me"
-	cont "feel bloated…"
+	para "Sólo verlo hace"
+	line "que me sienta"
+	cont "lleno…"
 	done
 
 CeladonCityTeacher2Text:
-	text "CELADON DEPT.STORE"
-	line "has the biggest"
+	text "El C. COMERCIAL"
+	line "de CIUDAD AZULONA"
 
-	para "and best selection"
-	line "of merchandise."
+	para "dispone de los"
+	line "mejores artículos."
 
-	para "If you can't get"
-	line "it there, you"
+	para "Si no encuentras"
+	line "algo aquí, no lo"
 
-	para "can't get it any-"
-	line "where."
+	para "encontrarás en"
+	line "ningún otro sitio."
 
-	para "Gee… I sound like"
-	line "a sales clerk."
+	para "¡Vaya…! Parezco"
+	line "una vendedora."
 	done
 
 CeladonCityLassText_Mobile:
 ; unused
-	text "I love being"
-	line "surrounded by tall"
-	cont "buildings!"
+	text "¡Me encanta estar"
+	line "rodeada de grandes"
+	cont "edificios!"
 
-	para "Isn't it true that"
-	line "GOLDENROD #MON"
+	para "¿No es cierto que"
+	line "el CENTRO #MON"
 
-	para "CENTER was made"
-	line "much, much bigger?"
+	para "de TRIGAL es ahora"
+	line "mucho más grande?"
 
-	para "That is so neat!"
-	line "I wish we had a"
+	para "¡Está tan cuidado!"
+	line "Ojalá tuviéramos"
 
-	para "place like that in"
+	para "un lugar igual en"
 	line "KANTO…"
 	done
 
 CeladonCityLassText:
-	text "Looking at the"
-	line "ground while I was"
-
-	para "walking made me"
-	line "dizzy."
+	text "Mirar al suelo"
+	line "mientras camino"
+	cont "me marea."
 	done
 
 CeladonCitySignText:
-	text "CELADON CITY"
+	text "CIUDAD AZULONA"
 
-	para "The City of"
-	line "Rainbow Dreams"
+	para "La ciudad de los"
+	line "sueños de arco"
+	cont "iris"
 	done
 
 CeladonGymSignText:
-	text "CELADON CITY"
-	line "#MON GYM"
-	cont "LEADER: ERIKA"
+	text "LÍDER DEL GIMNASIO"
+	line "#MON DE CIUDAD"
+	cont "AZULONA: ERIKA"
 
-	para "The Nature-Loving"
-	line "Princess"
+	para "La princesa amante"
+	line "de la naturaleza"
 	done
 
 CeladonCityDeptStoreSignText:
-	text "Find What You"
-	line "Need at CELADON"
-	cont "DEPT.STORE!"
+	text "¡Encuentra lo que"
+	line "necesitas en el"
+
+	para "CENTRO COMERCIAL"
+	line "de CIUDAD AZULONA!"
 	done
 
 CeladonCityMansionSignText:
-	text "CELADON MANSION"
+	text "MANSIÓN AZULONA"
 	done
 
 CeladonCityGameCornerSignText:
-if DEF(_CRYSTAL_AU)
-	text "The Game Area for"
-	line "Grown-ups--CELADON"
-	cont "GAME CORNER"
+	text "CASINO DE CIUDAD"
+	line "AZULONA: Zona de"
+	cont "juego para todos"
 	done
-else
-	text "The Playground for"
-	line "Everybody--CELADON"
-	cont "GAME CORNER"
-	done
-endc
 
 CeladonCityTrainerTipsText:
-	text "TRAINER TIPS"
+	text "PISTAS ENTRENADOR"
 
-	para "GUARD SPEC."
-	line "protects #MON"
+	para "PROTEC. ESP"
+	line "protege a los"
 
-	para "against SPECIAL"
-	line "attacks such as"
-	cont "fire and water."
+	para "#MON de"
+	line "ATAQUES ESPECIALES"
+	cont "como fuego y agua."
 
-	para "Get your items at"
-	line "CELADON DEPT."
-	cont "STORE!"
+	para "¡Consigue los"
+	line "objetos en el"
+
+	para "CENTRO COMERCIAL"
+	line "de CIUDAD AZULONA!"
 	done
 
 CeladonCity_MapEvents:

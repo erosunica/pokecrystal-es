@@ -1,10 +1,10 @@
-	db "MOLD@" ; species name
-	dw 200, 450 ; height, weight
+	db "MOHO@" ; species name
+	dbw 6, 205 ; height, weight
 
-	db   "The fluid secreted"
-	next "by its toes carves"
-	next "holes in rocks for"
+	db   "El fluido que po-"
+	next "see sirve para ha-"
+	next "cer una bebida con"
 
-	page "nesting and can be"
-	next "mixed with BERRIES"
-	next "to make a drink.@"
+	page "BAYAS, para abrir"
+	next "agujeros en rocas"
+	next "y construir nidos.@"

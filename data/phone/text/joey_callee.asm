@@ -1,73 +1,78 @@
 JoeyAnswerPhoneText:
-	text "Hi, @"
+	text "¡Hola, soy"
+	line "@"
 	text_ram wStringBuffer3
-	text " here!"
+	text "!"
 
-	para "Oh, <PLAYER>? You"
-	line "doing well?"
+	para "Oh, ¿<PLAYER>?"
+	line "¿Qué tal estás?"
 	done
 
 JoeyAnswerPhoneDayText:
-	text "Hi, @"
+	text "¡Hola, soy"
+	line "@"
 	text_ram wStringBuffer3
-	text " here!"
+	text "!"
 
-	para "Oh, <PLAYER>? You"
-	line "doing well?"
+	para "Oh, ¿<PLAYER>?"
+	line "¿Qué tal estás?"
 	done
 
 JoeyAnswerPhoneNiteText:
-	text "Hi, @"
+	text "¡Hola, soy"
+	line "@"
 	text_ram wStringBuffer3
-	text " here!"
+	text "!"
 
-	para "Oh, <PLAYER>? You"
-	line "doing well?"
+	para "Oh, ¿<PLAYER>?"
+	line "¿Qué tal estás?"
 	done
 
 JoeyGreetText:
-	text "Yo, <PLAYER>!"
-	line "How're you doing?"
+	text "¡Hola, <PLAYER>!"
+	line "¿Qué tal estás?"
 
-	para "This is @"
+	para "Soy @"
 	text_ram wStringBuffer3
-	text ","
-	line "got a minute?"
+	text "."
+	line "¿Tienes un minuto?"
 	done
 
 JoeyGreetDayText:
-	text "Yo, <PLAYER>! How's"
-	line "it going?"
+	text "¡Hola, <PLAYER>!"
+	line "¿Qué tal estás?"
 
-	para "This is @"
+	para "Soy @"
 	text_ram wStringBuffer3
 	text "."
-	line "Got a minute?"
+	line "¿Tienes un minuto?"
 	done
 
 JoeyGreetNiteText:
-	text "Yo, <PLAYER>!"
-	line "How're you doing?"
+	text "¡Hola, <PLAYER>!"
+	line "¿Qué tal estás?"
 
-	para "This is @"
+	para "Soy @"
 	text_ram wStringBuffer3
-	text ","
-	line "got a minute?"
+	text "."
+	line "¿Tienes un minuto?"
 	done
 
 JoeyGenericText:
-	text "How are your"
-	line "#MON doing?"
+	text "¿Qué tal van tus"
+	line "#MON?"
 
-	para "My @"
+	para "Mi @"
 	text_ram wStringBuffer4
-	text "'s"
-	line "raring to go, just"
-	cont "like always."
+	text_start
+	line "está ansioso por"
 
-	para "It's the only one"
-	line "I have. I'm going"
+	para "luchar, como"
+	line "siempre."
 
-	para "to become a great"
-	line "trainer with it!"
+	para "Es el único que"
+	line "tengo. ¡Con él,"
+
+	para "llegaré a ser un"
+	line "gran entrenador!"
 	done

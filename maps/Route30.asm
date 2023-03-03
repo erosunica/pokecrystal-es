@@ -261,147 +261,154 @@ Route30_MikeysRattataAttacksMovement:
 	step_end
 
 Text_UseTackle:
-	text "Go, RATTATA!"
+	text "¡Ve, RATTATA!"
 
-	para "TACKLE!"
+	para "¡PLACAJE!"
 	done
 
 Text_ThisIsABigBattle:
-	text "What? This is a"
-	line "big battle!"
-	cont "Leave me alone!"
+	text "¿Qué? ¡Es un gran"
+	line "combate!"
+	cont "¡Déjame en paz!"
 	done
 
 YoungsterJoey1SeenText:
-	text "I just lost, so"
-	line "I'm trying to find"
-	cont "more #MON."
+	text "Perdí, así que"
+	line "estoy buscando más"
+	cont "#MON."
 
-	para "Wait! You look"
-	line "weak! Come on,"
-	cont "let's battle!"
+	para "¡Espera! ¡Pareces"
+	line "débil! ¡Venga,"
+	cont "luchemos!"
 	done
 
 YoungsterJoey1BeatenText:
-	text "Ack! I lost again!"
-	line "Doggone it!"
+	text "¡Argh! ¡He perdido"
+	line "de nuevo!"
 	done
 
 YoungsterJoey1AfterText:
-	text "Do I have to have"
-	line "more #MON in"
+	text "¿Debo tener más"
+	line "#MON para poder"
+	cont "luchar mejor?"
 
-	para "order to battle"
-	line "better?"
-
-	para "No! I'm sticking"
-	line "with this one no"
-	cont "matter what!"
+	para "¡No! ¡Continuaré"
+	line "sólo con éste,"
+	cont "pase lo que pase!"
 	done
 
 YoungsterMikeySeenText:
-	text "You're a #MON"
-	line "trainer, right?"
+	text "Entrenas #MON,"
+	line "¿verdad?"
 
-	para "Then you have to"
-	line "battle!"
+	para "¡Pues entonces"
+	line "luchemos!"
 	done
 
 YoungsterMikeyBeatenText:
-	text "That's strange."
-	line "I won before."
+	text "¡Qué extraño!"
+	line "¡Creí que ganaría!"
 	done
 
 YoungsterMikeyAfterText:
-	text "Becoming a good"
-	line "trainer is really"
-	cont "tough."
+	text "Es muy duro llegar"
+	line "a ser un buen"
+	cont "entrenador."
 
-	para "I'm going to bat-"
-	line "tle other people"
-	cont "to get better."
+	para "Tengo que luchar"
+	line "contra más gente"
+	cont "para mejorar."
 	done
 
 BugCatcherDonSeenText:
-	text "Instead of a bug"
-	line "#MON, I found"
-	cont "a trainer!"
+	text "¡En lugar de un"
+	line "#MON bicho,"
+
+	para "he encontrado a"
+	line "alguien que los"
+	cont "entrena!"
 	done
 
 BugCatcherDonBeatenText:
-	text "Argh! You're too"
-	line "strong!"
+	text "¡Arg! ¡Eres muy"
+	line "fuerte!"
 	done
 
 BugCatcherDonAfterText:
-	text "I ran out of #"
-	line "BALLS while I was"
-	cont "catching #MON."
+	text "Me quedé sin #"
+	line "BALL mientras"
+	cont "atrapaba #MON."
 
-	para "I should've bought"
-	line "some more…"
+	para "Debería haber"
+	line "comprado más…"
 	done
 
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
-	text "MR.#MON's"
-	line "house? It's a bit"
-	cont "farther ahead."
+	text "¿La casa del SR."
+	line "#MON? Está un"
+	cont "poco más adelante."
 	done
 
 Route30YoungsterText_EveryoneIsBattling:
-	text "Everyone's having"
-	line "fun battling!"
-	cont "You should too!"
+	text "¡Todo el mundo se"
+	line "divierte luchando!"
+
+	para "¡Tú también"
+	line "deberías hacerlo!"
 	done
 
 Route30CooltrainerFText:
-	text "I'm not a trainer."
+	text "No soy una"
+	line "entrenadora."
 
-	para "But if you look"
-	line "one in the eyes,"
-	cont "prepare to battle."
+	para "Pero si miras a"
+	line "uno a los ojos,"
+
+	para "prepárate para"
+	line "luchar."
 	done
 
 Route30SignText:
-	text "ROUTE 30"
+	text "RUTA 30"
 
-	para "VIOLET CITY -"
-	line "CHERRYGROVE CITY"
+	para "CIUDAD MALVA -"
+	line "CIUDAD CEREZO"
 	done
 
 MrPokemonsHouseDirectionsSignText:
-	text "MR.#MON'S HOUSE"
-	line "STRAIGHT AHEAD!"
+	text "CASA SR. #MON"
+	line "¡Todo recto!"
 	done
 
 MrPokemonsHouseSignText:
-	text "MR.#MON'S HOUSE"
+	text "CASA SR. #MON"
 	done
 
 Route30TrainerTipsText:
-	text "TRAINER TIPS"
+	text "PISTAS ENTRENADOR"
 
-	para "No stealing other"
-	line "people's #MON!"
+	para "¡No robes los"
+	line "#MON de otros!"
 
-	para "# BALLS are to"
-	line "be thrown only at"
-	cont "wild #MON!"
+	para "¡Las # BALL"
+	line "sólo se lanzan a"
+	cont "#MON salvajes!"
 	done
 
 YoungsterJoeyText_GiveHPUpAfterBattle:
-	text "I lost again…"
-	line "Gee, you're tough!"
+	text "Perdí otra vez…"
+	line "¡Eres fuerte!"
 
-	para "Oh yeah, I almost"
-	line "forgot that I had"
-	cont "to give you this."
+	para "Oh. Casi olvido"
+	line "que tenía que"
+	cont "darte esto."
 
-	para "Use it to get even"
-	line "tougher, OK?"
+	para "Úsalo para hacerte"
+	line "aún más fuerte,"
+	cont "¿vale?"
 
-	para "I'm going to get"
-	line "tougher too."
+	para "Yo también seré"
+	line "más fuerte."
 	done
 
 Route30_MapEvents:

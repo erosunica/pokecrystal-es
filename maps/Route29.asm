@@ -247,170 +247,166 @@ DudeMovementData2b:
 	step_end
 
 CatchingTutorialBoxFullText:
-	text "#MON hide in"
-	line "the grass. Who"
+	text "Los #MON se"
+	line "esconden en la"
 
-	para "knows when they'll"
-	line "pop out…"
+	para "hierba. Nadie sabe"
+	line "cuándo salen…"
 	done
 
 CatchingTutorialIntroText:
-	text "I've seen you a"
-	line "couple times. How"
+	text "Te he visto un par"
+	line "de veces."
 
-	para "many #MON have"
-	line "you caught?"
+	para "¿Cuántos #MON"
+	line "has cogido?"
 
-	para "Would you like me"
-	line "to show you how to"
-	cont "catch #MON?"
+	para "¿Quieres que te"
+	line "enseñe cómo"
+	cont "atrapar #MON?"
 	done
 
 CatchingTutorialDebriefText:
-	text "That's how you do"
-	line "it."
+	text "Así es como se"
+	line "hace."
 
-	para "If you weaken them"
-	line "first, #MON are"
-	cont "easier to catch."
+	para "Si los #MON"
+	line "están débiles, son"
+
+	para "más fáciles de"
+	line "atrapar."
 	done
 
 CatchingTutorialDeclinedText:
-	text "Oh. Fine, then."
+	text "¡Ah! ¡Muy bien!"
 
-	para "Anyway, if you"
-	line "want to catch"
+	para "Pero si quieres"
+	line "atrapar #MON,"
 
-	para "#MON, you have"
-	line "to walk a lot."
+	para "tendrás que"
+	line "caminar mucho."
 	done
 
 CatchingTutorialRepeatText:
-	text "Huh? You want me"
-	line "to show you how to"
-	cont "catch #MON?"
+	text "¿Qué? ¿Quieres que"
+	line "te enseñe a"
+	cont "atrapar #MON?"
 	done
 
 Route29YoungsterText:
-	text "Yo. How are your"
+	text "¿Cómo están tus"
 	line "#MON?"
 
-	para "If they're weak"
-	line "and not ready for"
+	para "Si están débiles y"
+	line "no pueden luchar,"
 
-	para "battle, keep out"
-	line "of the grass."
+	para "no entres en la"
+	line "hierba."
 	done
 
 Route29TeacherText:
-	text "See those ledges?"
-	line "It's scary to jump"
-	cont "off them."
+	text "¿Ves esos setos?"
+	line "Da miedo"
+	cont "saltarlos."
 
-	para "But you can go to"
-	line "NEW BARK without"
+	para "Pero puedes ir a"
+	line "PUEBLO PRIMAVERA"
 
-	para "walking through"
-	line "the grass."
+	para "sin pasar por la"
+	line "hierba."
 	done
 
 Route29FisherText:
-	text "I wanted to take a"
-	line "break, so I saved"
-
-	para "to record my"
-	line "progress."
+	text "Quería descansar"
+	line "un poco, así que"
+	cont "guardé la partida."
 	done
 
 ; unused
 Text_WaitingForDay:
-	text "I'm waiting for"
-	line "#MON that"
+	text "Estoy esperando a"
+	line "los #MON que"
 
-	para "appear only in the"
-	line "daytime."
+	para "aparecen sólo por"
+	line "el día."
 	done
 
 Route29CooltrainerMText_WaitingForNight:
-	text "I'm waiting for"
-	line "#MON that"
+	text "Estoy esperando a"
+	line "los #MON que"
 
-	para "appear only at"
-	line "night."
+	para "aparecen sólo por"
+	line "la noche."
 	done
 
 Route29CooltrainerMText_WaitingForMorning:
-	text "I'm waiting for"
-	line "#MON that"
+	text "Estoy esperando a"
+	line "los #MON que"
 
-	para "appear only in the"
-	line "morning."
+	para "aparecen sólo por"
+	line "la mañana."
 	done
 
 MeetTuscanyText:
-	text "TUSCANY: I do be-"
-	line "lieve that this is"
+	text "MARTA: Creo que es"
+	line "la primera vez que"
+	cont "nos vemos."
 
-	para "the first time"
-	line "we've met?"
-
-	para "Please allow me to"
-	line "introduce myself."
-
-	para "I am TUSCANY of"
-	line "Tuesday."
+	para "Déjame que me"
+	line "presente. Soy"
+	cont "MARTA, por martes."
 	done
 
 TuscanyGivesGiftText:
-	text "By way of intro-"
-	line "duction, please"
+	text "Como presentación,"
+	line "por favor, toma"
 
-	para "accept this gift,"
-	line "a PINK BOW."
+	para "este regalo:"
+	line "un LAZO ROSA."
 	done
 
 TuscanyGaveGiftText:
-	text "TUSCANY: Wouldn't"
-	line "you agree that it"
-	cont "is most adorable?"
+	text "MARTA: ¿No crees"
+	line "que es adorable?"
 
-	para "It strengthens"
-	line "normal-type moves."
+	para "Fortalece los"
+	line "movimientos de"
+	cont "tipo normal."
 
-	para "I am certain it"
-	line "will be of use."
+	para "Seguro que te"
+	line "será muy útil."
 	done
 
 TuscanyTuesdayText:
-	text "TUSCANY: Have you"
-	line "met MONICA, my"
-	cont "older sister?"
+	text "MARTA: ¿Has visto"
+	line "a LUNA, mi hermana"
+	cont "mayor?"
 
-	para "Or my younger"
-	line "brother, WESLEY?"
+	para "¿O a mi hermano"
+	line "pequeño, MIGUEL?"
 
-	para "I am the second of"
-	line "seven children."
+	para "Soy la segunda de"
+	line "siete hermanos."
 	done
 
 TuscanyNotTuesdayText:
-	text "TUSCANY: Today is"
-	line "not Tuesday. That"
-	cont "is unfortunate…"
+	text "MARTA: Hoy no es"
+	line "martes."
+	cont "¡Qué pena…!"
 	done
 
 Route29Sign1Text:
-	text "ROUTE 29"
+	text "RUTA 29"
 
-	para "CHERRYGROVE CITY -"
-	line "NEW BARK TOWN"
+	para "CIUDAD CEREZO -"
+	line "PUEBLO PRIMAVERA"
 	done
 
 Route29Sign2Text:
-	text "ROUTE 29"
+	text "RUTA 29"
 
-	para "CHERRYGROVE CITY -"
-	line "NEW BARK TOWN"
+	para "CIUDAD CEREZO -"
+	line "PUEBLO PRIMAVERA"
 	done
 
 Route29_MapEvents:

@@ -227,73 +227,72 @@ MovementData_0x74efe:
 	step_end
 
 VermilionPortDepartingText:
-	text "We're departing"
-	line "soon. Please get"
-	cont "on board."
+	text "El barco va a"
+	line "zarpar. Por favor,"
+	cont "sube a bordo."
 	done
 
 VermilionPortCantBoardText:
-	text "Sorry. You can't"
-	line "board now."
+	text "Lo siento. No"
+	line "puedes embarcar."
 	done
 
 VermilionPortAskBoardingText:
-	text "Welcome to FAST"
-	line "SHIP S.S.AQUA."
+	text "Éste es el"
+	line "FERRY S.S. AQUA."
 
-	para "Will you be board-"
-	line "ing today?"
+	para "¿Vas a embarcar"
+	line "hoy?"
 	done
 
 VermilionPortAskTicketText:
-	text "May I see your"
-	line "S.S.TICKET?"
+	text "¿Puedo ver tu"
+	line "TICKET BARCO?"
 	done
 
 VermilionPortComeAgainText:
-	text "We hope to see you"
-	line "again!"
+	text "¡Esperamos volver"
+	line "a verte!"
 	done
 
 VermilionPortSSTicketText:
-	text "<PLAYER> flashed"
-	line "the S.S.TICKET."
+	text "<PLAYER> enseña"
+	line "el TICKET BARCO."
 
-	para "That's it."
-	line "Thank you!"
+	para "Muy bien."
+	line "¡Gracias, joven!"
 	done
 
 VermilionPortNoTicketText:
-	text "<PLAYER> tried to"
-	line "show the S.S."
-	cont "TICKET…"
+	text "<PLAYER> intenta"
+	line "enseñar el TICKET"
+	cont "BARCO…"
 
-	para "…But no TICKET!"
+	para "¡Pero no lo tiene!"
 
-	para "Sorry!"
-	line "You may board only"
+	para "¡Lo siento!"
+	line "Sólo puedes subir"
 
-	para "if you have an"
-	line "S.S.TICKET."
+	para "si tienes un"
+	line "TICKET BARCO."
 	done
 
 VermilionPortSailMondayText:
-	text "The FAST SHIP will"
-	line "sail on Wednesday."
+	text "El FERRY zarpará"
+	line "el miércoles."
 	done
 
 VermilionPortSailSundayText:
-	text "The FAST SHIP will"
-	line "sail next Sunday."
+	text "El FERRY zarpará"
+	line "el domingo."
 	done
 
 VermilionPortSuperNerdText:
-	text "You came from"
-	line "JOHTO?"
+	text "¿Vienes de JOHTO?"
 
-	para "I hear many rare"
-	line "#MON live over"
-	cont "there."
+	para "Dicen que allí"
+	line "viven muchos"
+	cont "#MON raros."
 	done
 
 VermilionPort_MapEvents:

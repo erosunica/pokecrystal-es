@@ -1,10 +1,10 @@
-	db "DIVING@" ; species name
-	dw 1701, 4760 ; height, weight
+	db "BUCEO@" ; species name
+	dbw 52, 2160 ; height, weight
 
-	db   "It has an incred-"
-	next "ible ability to"
-	next "calm raging sto-"
+	db   "Tiene la increíble"
+	next "habilidad de"
+	next "calmar tormentas."
 
-	page "rms. It is said"
-	next "that LUGIA appears"
-	next "when storms start.@"
+	page "Se dice que LUGIA"
+	next "aparece cuando"
+	next "éstas empiezan.@"

@@ -1,10 +1,10 @@
-	db "VOLCANO@" ; species name
-	dw 507, 1750 ; height, weight
+	db "VOLCÁN@" ; species name
+	dbw 17, 795 ; height, weight
 
-	db   "When heat from its"
-	next "body causes the"
-	next "air around it to"
+	db   "Cuando el calor"
+	next "que libera supera"
+	next "los límites, crea"
 
-	page "shimmer, this is a"
-	next "sign that it is"
-	next "ready to battle.@"
+	page "una nube a su"
+	next "alrededor: está"
+	next "listo para luchar.@"

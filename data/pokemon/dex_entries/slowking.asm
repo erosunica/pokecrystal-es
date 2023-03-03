@@ -1,10 +1,10 @@
-	db "ROYAL@" ; species name
-	dw 607, 1750 ; height, weight
+	db "REGIO@" ; species name
+	dbw 20, 795 ; height, weight
 
-	db   "Every time it ya-"
-	next "wns, SHELLDER"
-	next "injects more poi-"
+	db   "Cada vez que"
+	next "bosteza, SHELLDER "
+	next "le inyecta veneno."
 
-	page "son into it. The"
-	next "poison makes it"
-	next "more intelligent.@"
+	page "Así, se vuelve"
+	next "cada vez más"
+	next "inteligente.@"

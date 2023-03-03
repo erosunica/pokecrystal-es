@@ -27,22 +27,22 @@ BlackthornDragonSpeechHouseMagazineBookshelf:
 	jumpstd magazinebookshelf
 
 BlackthornDragonSpeechHouseGrannyText:
-	text "A clan of trainers"
-	line "who can freely"
+	text "En CIUDAD ENDRINO"
+	line "vive un clan que"
 
-	para "command dragons"
-	line "live right here in"
-	cont "BLACKTHORN."
+	para "puede controlar a"
+	line "los dragones"
+	cont "a su antojo."
 
-	para "As a result, there"
-	line "are many legends"
+	para "Por ello, hay"
+	line "muchas leyendas"
 
-	para "about dragons in"
-	line "this town."
+	para "acerca de dragones"
+	line "en esta ciudad."
 	done
 
 BlackthornDragonSpeechHouseDratiniText:
-	text "DRATINI: Draa!"
+	text "DRATINI: ¡Draa!"
 	done
 
 BlackthornDragonSpeechHouse_MapEvents:

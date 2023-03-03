@@ -41,61 +41,60 @@ GoldenrodDeptStore2FElevatorButton:
 
 GoldenrodDeptStore2FUnusedText1:
 ; unused
-	text "We intend to sell"
-	line "items for #MON"
-	cont "to hold."
+	text "Vendemos objetos"
+	line "para los #MON."
 
-	para "This is a free"
-	line "gift. Have a #-"
-	cont "MON hold it."
+	para "Esto es un regalo."
+	line "Dáselo a un"
+	cont "#MON."
 	done
 
 GoldenrodDeptStore2FUnusedText2:
 ; unused
-	text "By giving #MON"
-	line "items to hold, I"
+	text "Si equipas a tus"
+	line "#MON con"
 
-	para "bet trainers will"
-	line "develop new battle"
-	cont "techniques."
+	para "objetos, podrías"
+	line "salir ganando en"
+	cont "el combate."
 	done
 
 GoldenrodDeptStore2FYoungsterText:
-	text "#GEAR can store"
-	line "up to ten phone"
-	cont "numbers."
+	text "El #GEAR puede"
+	line "almacenar hasta"
+	cont "diez números."
 
-	para "It's hard to de-"
-	line "cide which numbers"
-	cont "to keep."
+	para "Es difícil decidir"
+	line "qué números debes"
+	cont "guardar."
 	done
 
 GoldenrodDeptStore2FCooltrainerFText:
-	text "I got my ABRA at"
-	line "the GAME CORNER."
+	text "Conseguí mi ABRA"
+	line "en el CASINO."
 
-	para "Now it's my best"
-	line "partner."
+	para "Ahora es mi mejor"
+	line "compañero."
 	done
 
 GoldenrodDeptStore2FGentlemanText:
-	text "This DEPT.STORE"
-	line "makes me realize"
+	text "Este CENTRO"
+	line "COMERCIAL indica"
 
-	para "that GOLDENROD is"
-	line "a big city."
+	para "que CIUDAD TRIGAL"
+	line "es muy grande."
 
-	para "The selection here"
-	line "is unmatched any-"
-	cont "where else."
+	para "Su gama de"
+	line "productos no tiene"
+	cont "rival."
 	done
 
 GoldenrodDeptStore2FDirectoryText:
-	text "Your Travel"
-	line "Companion"
+	text "Tu Compañero"
+	line "de Viaje"
 
-	para "2F TRAINER'S"
-	line "   MARKET"
+	para "P1 TIENDA DE"
+	line "   ENTRENADORES"
 	done
 
 GoldenrodDeptStore2F_MapEvents:

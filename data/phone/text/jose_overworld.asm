@@ -1,73 +1,77 @@
 JoseAskNumber1Text:
-	text "If my @"
+	text "Si mi @"
 	text_ram wStringBuffer4
 	text_start
-	line "sees anything"
+	line "ve algo bonito,"
+	cont "va y lo coge."
 
-	para "pretty, it goes"
-	line "and gets it."
+	para "¿Te gustan las"
+	line "cosas bonitas?"
 
-	para "Do you like pretty"
-	line "things?"
+	para "Puedo intercambiar"
+	line "objetos si"
+	cont "trae alguna más."
 
-	para "I could share if"
-	line "it gets some more."
+	para "¿Cuál es tu número"
+	line "de teléfono?"
+	cont "Te llamaré."
 
-	para "What's your phone"
-	line "number? I'll call."
-
-	para "Don't expect a"
-	line "whole lot, OK?"
+	para "Tampoco esperes"
+	line "nada especial…"
 	done
 
 JoseAskNumber2Text:
-	text "Do you like pretty"
-	line "things?"
+	text "¿Te gustan las"
+	line "cosas bonitas?"
 
-	para "I could share if"
-	line "FARFETCH'D goes"
-	cont "and gets more."
+	para "Puedo intercambiar"
+	line "si FARFETCH'D"
+	cont "trae alguna más."
 
-	para "What's your phone"
-	line "number? I'll call."
+	para "¿Cuál es tu número"
+	line "de teléfono?"
+	cont "Te llamaré."
 	done
 
 JoseNumberAcceptedText:
-	text "I'll call you as"
-	line "soon as I get"
-	cont "something pretty."
+	text "Te llamaré tan"
+	line "pronto como"
+
+	para "consiga algo"
+	line "bonito."
 	done
 
 JoseNumberDeclinedText:
-	text "You sure? Well,"
-	line "tell me if you"
-	cont "change your mind."
+	text "¿Sí? Bueno, dímelo"
+	line "si cambias de"
+	cont "opinión."
 	done
 
 JosePhoneFullText:
-	text "Huh? Your phone"
-	line "list is full."
+	text "¿Eh? La agenda de"
+	line "tu teléfono está"
+	cont "llena."
 	done
 
 JoseRematchText:
-	text "Tweet! Tweeeet!"
+	text "¡Farf! ¡Farf!"
 
-	para "Kept me waiting!"
-	line "Go, FARFETCH'D!"
+	para "¡Te esperaba…!"
+	line "¡Ve, FARFETCH'D!"
 	done
 
 JoseGiftText:
-	text "Kept me waiting!"
-	line "Look, this is it!"
+	text "¡Hacerme esperar…!"
+	line "Mira…"
 
-	para "See? Isn't it some"
-	line "kind of pretty?"
+	para "¿Qué? ¿A que es"
+	line "muy bonito?"
 	done
 
 JosePackFullText:
-	text "Huh? You don't"
-	line "have anywhere to"
+	text "¿Eh? No tienes"
+	line "dónde ponerlo."
 
-	para "put this. Better"
-	line "come back for it."
+	para "Vuelve más tarde"
+	line "a por ello."
 	done

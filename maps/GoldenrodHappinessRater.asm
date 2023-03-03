@@ -70,68 +70,66 @@ HappinessRatersHouseRadio:
 	jumpstd radio2
 
 GoldenrodHappinessRaterTeacherText:
-	text "If you treat your"
-	line "#MON nicely,"
+	text "Si tratas bien a"
+	line "tus #MON,"
+	cont "ellos te querrán."
 
-	para "they will love you"
-	line "in return."
-
-	para "Oh? Let me see"
-	line "your @"
+	para "¿Eh? Déjame ver tu"
+	line "@"
 	text_ram wStringBuffer3
 	text "…"
 	done
 
 GoldenrodHappinessRatingText_LovesYouALot:
-	text "It looks really"
-	line "happy! It must"
-	cont "love you a lot."
+	text "¡Parece muy feliz!"
+	line "Te debe de querer"
+	cont "mucho."
 	done
 
 GoldenrodHappinessRatingText_ReallyTrustsYou:
-	text "I get the feeling"
-	line "that it really"
-	cont "trusts you."
+	text "Me parece que"
+	line "confía mucho"
+	cont "en ti."
 	done
 
 GoldenrodHappinessRatingText_SortOfHappy:
-	text "It's friendly to-"
-	line "ward you. It looks"
-	cont "sort of happy."
+	text "Es cariñoso"
+	line "contigo. Parece"
+	cont "feliz."
 	done
 
 GoldenrodHappinessRatingText_QuiteCute:
-	text "It's quite cute."
+	text "Es bastante mono."
 	done
 
 GoldenrodHappinessRatingText_NotUsedToYou:
-	text "You should treat"
-	line "it better. It's"
-	cont "not used to you."
+	text "Deberías tratarlo"
+	line "mejor. No está"
+	cont "acostumbrado a ti."
 	done
 
 GoldenrodHappinessRatingText_LooksMean:
-	text "It doesn't seem to"
-	line "like you at all."
-	cont "It looks mean."
+	text "Da la impresión de"
+	line "que no le gustas."
+	cont "Parece malvado."
 	done
 
 GoldenrodHappinessRaterPokefanMText:
-	text "I keep losing in"
-	line "battles, and my"
+	text "No dejo de perder"
+	line "en los combates y"
 
-	para "#MON end up"
-	line "fainting…"
+	para "mis #MON acaban"
+	line "desmayándose…"
 
-	para "Maybe that's why"
-	line "my #MON don't"
-	cont "like me much…"
+	para "Quizá sea ésa la"
+	line "razón por la que"
+	cont "no les gusto…"
 	done
 
 GoldenrodHappinessRaterTwinText:
-	text "When I use an item"
-	line "on my #MON, it"
-	cont "acts really glad!"
+	text "¡Si uso un objeto"
+	line "con mi #MON,"
+	cont "se pone contento!"
 	done
 
 GoldenrodHappinessRater_MapEvents:

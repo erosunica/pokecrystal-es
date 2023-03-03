@@ -18,18 +18,18 @@ CinnabarPokecenter1FFisherScript:
 	jumptextfaceplayer CinnabarPokecenter1FFisherText
 
 CinnabarPokecenter1FCooltrainerFText:
-	text "CINNABAR GYM's"
-	line "BLAINE apparently"
+	text "Parece que BLAINE,"
+	line "del GIMNASIO de"
 
-	para "lives alone in the"
-	line "SEAFOAM ISLANDS"
-	cont "cave…"
+	para "ISLA CANELA, vive"
+	line "solo en la cueva"
+	cont "de ISLAS ESPUMA…"
 	done
 
 CinnabarPokecenter1FFisherText:
-	text "It's been a year"
-	line "since the volcano"
-	cont "erupted."
+	text "El volcán hizo"
+	line "erupción hace un"
+	cont "año."
 	done
 
 CinnabarPokecenter1F_MapEvents:

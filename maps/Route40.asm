@@ -161,178 +161,178 @@ MovementData_0x1a622a:
 	step_end
 
 SwimmermSimonSeenText:
-	text "You have to warm"
-	line "up before going"
-	cont "into the water."
+	text "Debes calentar"
+	line "antes de entrar en"
+	cont "el agua."
 
-	para "That's basic."
+	para "Es imprescindible."
 	done
 
 SwimmermSimonBeatenText:
-	text "OK! Uncle! I give!"
+	text "¡Vale! ¡Me rindo!"
 	done
 
 SwimmermSimonAfterBattleText:
-	text "CIANWOOD CITY is"
-	line "a good distance"
-	cont "away from here."
+	text "CIUDAD ORQUÍDEA"
+	line "está bastante"
+	cont "lejos de aquí."
 	done
 
 SwimmermRandallSeenText:
-	text "Hey, you're young"
-	line "and fit!"
+	text "¡Eres joven y"
+	line "estás en forma!"
 
-	para "Don't ride your"
-	line "#MON! Swim!"
+	para "¡No vayas sobre tu"
+	line "#MON! ¡Nada!"
 	done
 
 SwimmermRandallBeatenText:
-	text "Uh-oh. I lost…"
+	text "¡Oh, he perdido…!"
 	done
 
 SwimmermRandallAfterBattleText:
-	text "Swimming exercises"
-	line "your entire body."
-	cont "It's healthy."
+	text "La natación"
+	line "fortalece tu"
+	cont "cuerpo. Es sana."
 	done
 
 SwimmerfElaineSeenText:
-	text "Are you going to"
-	line "CIANWOOD?"
+	text "¿Vas a CIUDAD"
+	line "ORQUÍDEA?"
 
-	para "How about a quick"
-	line "battle first?"
+	para "¿Te apetece luchar"
+	line "antes?"
 	done
 
 SwimmerfElaineBeatenText:
-	text "I lost that one!"
+	text "¡He perdido!"
 	done
 
 SwimmerfElaineAfterBattleText:
-	text "I'd say I'm a bet-"
-	line "ter swimmer than"
-	cont "you. Yeah!"
+	text "Creo que nado"
+	line "mejor que tú."
+	cont "¡Sin duda!"
 	done
 
 SwimmerfPaulaSeenText:
-	text "No inner tube for"
-	line "me."
+	text "Yo no necesito"
+	line "flotador."
 
-	para "I'm hanging on to"
-	line "a sea #MON!"
+	para "¡Voy agarrada a un"
+	line "#MON de mar!"
 	done
 
 SwimmerfPaulaBeatenText:
-	text "Ooh, I'm feeling"
-	line "dizzy!"
+	text "¡Ooh, estoy"
+	line "mareada!"
 	done
 
 SwimmerfPaulaAfterBattleText:
-	text "While I float like"
-	line "this, the waves"
-	cont "carry me along."
+	text "Mientras flote"
+	line "así, las olas me"
+	cont "llevarán."
 	done
 
 Route40Lass1Text:
-	text "Although you can't"
-	line "see it from here,"
+	text "Aunque no se ve"
+	line "desde aquí, CIUDAD"
 
-	para "CIANWOOD is across"
-	line "the sea."
+	para "ORQUÍDEA está al"
+	line "otro lado del mar."
 	done
 
 Route40PokefanMText:
-	text "Hm! There's a big"
-	line "building up ahead!"
+	text "¡Mira! ¡Hay un"
+	line "gran edificio ahí!"
 
-	para "What is it?"
+	para "¿Qué será?"
 	done
 
 Route40PokefanMText_Mobile:
-	text "Hm! Look at all"
-	line "those serious-"
-	cont "looking trainers"
-	cont "streaming in."
+	text "¡Mmmmm! Mira cómo"
+	line "entran todos esos"
 
-	para "What? What?"
+	para "entrenadores tan"
+	line "preparados."
+
+	para "¿Qué? ¿Qué?"
 	done
 
 Route40Lass2Text:
-	text "I came to OLIVINE"
-	line "by ship to see the"
+	text "Vine en barco a"
+	line "C. OLIVO por las"
 
-	para "sights and soak up"
-	line "the atmosphere."
+	para "vistas y el aire"
+	line "que se respira."
 
-	para "Being a port, it"
-	line "feels so different"
-	cont "from a big city."
+	para "Como es un puerto,"
+	line "parece diferente"
+	cont "de la gran ciudad."
 	done
 
 Route40StandingYoungsterText:
-	text "Have you gone to"
-	line "the BATTLE TOWER?"
+	text "¿Has estado en la"
+	line "TORRE BATALLA?"
 
-	para "I think a lot of"
-	line "tough trainers"
+	para "Creo que en ella"
+	line "se han reunido mu-"
+	cont "chos entrenadores"
+	cont "muy fuertes."
 
-	para "have gathered"
-	line "there already."
+	para "Aunque, teniendo"
+	line "tantas MEDALLAS,"
 
-	para "But since you have"
-	line "so many BADGES,"
-
-	para "you shouldn't do"
-	line "badly at all."
+	para "no debería resul-"
+	line "tarte difícil."
 	done
 
 MeetMonicaText:
-	text "MONICA: Glad to"
-	line "meet you. I'm"
-
-	para "MONICA of Monday."
+	text "LUNA: Encantada de"
+	line "conocerte. Soy"
+	cont "LUNA, por lunes."
 	done
 
 MonicaGivesGiftText:
-	text "As a token of our"
-	line "friendship, I have"
-	cont "a gift for you!"
+	text "¡Como prueba de"
+	line "nuestra amistad,"
+
+	para "tengo un regalo"
+	line "para ti!"
 	done
 
 MonicaGaveGiftText:
-	text "MONICA: It's an"
-	line "item that raises"
+	text "LUNA: Es un objeto"
+	line "que aumenta el"
 
-	para "the power of fly-"
-	line "ing-type moves."
+	para "poder de los"
+	line "movimientos de"
+	cont "tipo volador."
 
-	para "You should equip a"
-	line "bird #MON with"
-	cont "that item."
+	para "Deberías dar este"
+	line "objeto a un"
+	cont "#MON pájaro."
 	done
 
 MonicaMondayText:
-	text "MONICA: My broth-"
-	line "ers and sisters"
+	text "LUNA: Mis hermanos"
+	line "y hermanas están"
+	cont "por todas partes."
 
-	para "are all over the"
-	line "place."
-
-	para "See if you could"
-	line "find them all!"
+	para "¡A ver si los"
+	line "encuentras!"
 	done
 
 MonicaNotMondayText:
-	text "MONICA: I don't"
-	line "think today is"
-	cont "Monday. How sad…"
+	text "LUNA: No creo que"
+	line "hoy sea lunes."
+	cont "¡Qué pena…!"
 	done
 
 Route40SignText:
-	text "ROUTE 40"
+	text "RUTA 40"
 
-	para "CIANWOOD CITY -"
-	line "OLIVINE CITY"
+	para "CIUDAD ORQUÍDEA -"
+	line "CIUDAD OLIVO"
 	done
 
 Route40_MapEvents:
@@ -348,7 +348,7 @@ Route40_MapEvents:
 	bg_event  7,  8, BGEVENT_ITEM, Route40HiddenHyperPotion
 
 	db 12 ; object events
-	object_event 14, 15, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermSimon, -1
+	object_event 14, 18, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermSimon, -1
 	object_event 18, 30, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TrainerSwimmermRandall, -1
 	object_event  3, 19, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerfElaine, -1
 	object_event 10, 25, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfPaula, -1
@@ -359,4 +359,4 @@ Route40_MapEvents:
 	object_event  8, 10, SPRITE_BUENA, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MonicaScript, EVENT_ROUTE_40_MONICA_OF_MONDAY
 	object_event  7,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route40PokefanMScript, -1
 	object_event 13,  4, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40Lass2Script, -1
-	object_event 16,  9, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route40StandingYoungsterScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
+	object_event 12,  9, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route40StandingYoungsterScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR

@@ -1,10 +1,10 @@
-	db "BAGWORM@" ; species name
-	dw 311, 2770 ; height, weight
+	db "LARVA@" ; species name
+	dbw 12, 1258 ; height, weight
 
-	db   "Usually found"
-	next "hanging on to a"
-	next "fat tree trunk. It"
+	db   "Suele vérsele en-"
+	next "ganchado al tronco"
+	next "de un árbol."
 
-	page "shoots out bits of"
-	next "its shell when it"
-	next "sees action.@"
+	page "Cuando comienza la"
+	next "acción, dispara"
+	next "trozos de concha.@"

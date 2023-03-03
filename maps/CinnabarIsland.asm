@@ -40,89 +40,88 @@ CinnabarIslandBlueTeleport:
 	step_end
 
 CinnabarIslandBlueText:
-	text "Who are you?"
+	text "¿Quién eres tú?"
 
-	para "Well, it's plain"
-	line "to see that you're"
-	cont "a trainer…"
+	para "Es evidente que"
+	line "entrenas #MON…"
 
-	para "My name's BLUE."
+	para "Me llamo AZUL."
 
-	para "I was once the"
-	line "CHAMPION, although"
+	para "Y una vez fui el"
+	line "CAMPEÓN, pero sólo"
 
-	para "it was for only a"
-	line "short time…"
+	para "durante poco"
+	line "tiempo…"
 
-	para "That meddling RED"
-	line "did me in…"
+	para "El entrometido de"
+	line "ROJO me ganó…"
 
-	para "Anyway, what do"
-	line "you want? You want"
+	para "¡Pero qué más da!"
+	line "¿Y tú qué quieres?"
 
-	para "to challenge me or"
-	line "something?"
+	para "¿Has venido a"
+	line "desafiarme?"
 
-	para "…I hate to say"
-	line "it, but I'm not in"
+	para "Lo siento, pero"
+	line "no, ahora no tengo"
+	cont "ganas de luchar."
 
-	para "the mood for a"
-	line "battle now."
+	para "Echa un vistazo a"
+	line "tu alrededor…"
 
-	para "Take a good look"
-	line "around you…"
+	para "Un volcán entra en"
+	line "erupción y una"
 
-	para "A volcano erupts,"
-	line "and just like"
+	para "ciudad entera"
+	line "desaparece."
 
-	para "that, a whole town"
-	line "disappears."
+	para "En #MON se"
+	line "puede ganar o"
 
-	para "We can go on win-"
-	line "ning and losing in"
+	para "perder, pero si se"
+	line "tuercen las cosas"
 
-	para "#MON. But if"
-	line "nature so much as"
-
-	para "twitches, we can"
-	line "lose in a second."
+	para "se puede perder"
+	line "enseguida."
 
 	para "…"
 
-	para "That's the way it"
-	line "is…"
+	para "Así son las cosas…"
 
-	para "But, anyway, I'm"
-	line "still a trainer."
+	para "Sin embargo, sigo"
+	line "siendo entrenador."
 
-	para "If I see a strong"
-	line "opponent, it makes"
-	cont "me want to battle."
+	para "Y encontrarme con"
+	line "un rival fuerte me"
+	cont "anima a luchar."
 
-	para "If you want to"
-	line "battle me, come to"
-	cont "the VIRIDIAN GYM."
+	para "Si quieres luchar"
+	line "contra mí, ven al"
 
-	para "I'll take you on"
-	line "then."
+	para "GIMNASIO de la"
+	line "CIUDAD VERDE."
+
+	para "Y aceptaré tu"
+	line "desafío…"
 	done
 
 CinnabarIslandGymSignText:
-	text "There's a notice"
-	line "here…"
+	text "Aquí hay una nota…"
 
-	para "CINNABAR GYM has"
-	line "relocated to SEA-"
-	cont "FOAM ISLANDS."
+	para "El GIMNASIO DE"
+	line "ISLA CANELA se ha"
+
+	para "trasladado a ISLAS"
+	line "ESPUMA."
 
 	para "BLAINE"
 	done
 
 CinnabarIslandSignText:
-	text "CINNABAR ISLAND"
+	text "ISLA CANELA"
 
-	para "The Fiery Town of"
-	line "Burning Desire"
+	para "La abrasadora isla"
+	line "del ardiente deseo"
 	done
 
 CinnabarIsland_MapEvents:

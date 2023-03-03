@@ -73,63 +73,64 @@ MountMortarB1FHiddenMaxRevive:
 	hiddenitem MAX_REVIVE, EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE
 
 MountMortarB1FKiyoIntroText:
-	text "Hey!"
+	text "¡Hola!"
 
-	para "I am the KARATE"
-	line "KING!"
+	para "¡Soy el REY del"
+	line "KARATE!"
 
-	para "I train alone here"
-	line "in the dark!"
+	para "¡Me entreno solo"
+	line "en la oscuridad!"
 
-	para "You!"
-	line "Battle with me!"
+	para "¡Tú!"
+	line "¡Lucha conmigo!"
 
-	para "Hwaaarggh!"
+	para "¡Uaaarggh!"
 	done
 
 MountMortarB1FKiyoWinText:
-	text "Waaaarggh!"
-	line "I'm beaten!"
+	text "¡Aaaargg!"
+	line "¡He perdido!"
 	done
 
 MountMortarB1FTyrogueRewardText:
-	text "I… I'm crushed…"
+	text "He… perdido…"
 
-	para "My training is"
-	line "still not enough…"
+	para "Tendré que seguir"
+	line "entrenándome…"
 
-	para "But a loss is a"
-	line "loss. I admit it."
+	para "Pero una derrota"
+	line "es una derrota."
 
-	para "As proof that you"
-	line "defeated me, I'll"
+	para "Como prueba de tu"
+	line "victoria, te voy"
 
-	para "give you a rare"
-	line "fighting #MON."
+	para "a dar un raro"
+	line "#MON de lucha."
 	done
 
 MountMortarB1FReceiveMonText:
-	text "<PLAYER> received"
-	line "TYROGUE."
+	text "<PLAYER> recibió"
+	line "a TYROGUE."
 	done
 
 MountMortarB1FKiyoGotTyrogueText:
-	text "TYROGUE is a"
-	line "fighting-type."
+	text "TYROGUE es del"
+	line "tipo lucha."
 
-	para "It evolves into a"
-	line "tougher #MON."
+	para "Evoluciona en un"
+	line "#MON más"
+	cont "fuerte."
 
-	para "Keep up the hard"
-	line "work. I'll keep"
-	cont "training too."
+	para "Sigue así."
+	line "Yo también seguiré"
+	cont "entrenándome."
 
-	para "Farewell!"
+	para "¡Adiós!"
 	done
 
 MountMortarB1FKiyoFullPartyText:
-	text "You have no room"
-	line "in your party!"
+	text "¡No tienes sitio"
+	line "en tu equipo!"
 	done
 
 MountMortarB1F_MapEvents:

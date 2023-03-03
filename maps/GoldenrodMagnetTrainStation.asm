@@ -104,62 +104,62 @@ GoldenrodMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement:
 	step_end
 
 GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText:
-	text "The train hasn't"
-	line "come in…"
+	text "El tren no ha"
+	line "llegado…"
 
-	para "I know! I'll carry"
-	line "the passengers on"
-	cont "my back!"
+	para "¡Tengo una idea!"
+	line "¡Llevaré a cuestas"
+	cont "a los pasajeros!"
 
-	para "That won't work."
+	para "Aunque no creo que"
+	line "funcione."
 	done
 
 GoldenrodMagnetTrainStationOfficerAreYouComingAboardText:
-	text "We'll soon depart"
-	line "for SAFFRON."
+	text "Pronto saldremos"
+	line "para C. AZAFRÁN."
 
-	para "Are you coming"
-	line "aboard?"
+	para "¿Quiere subir?"
 	done
 
 GoldenrodMagnetTrainStationOfficerRightThisWayText:
-	text "May I see your"
-	line "rail PASS, please?"
+	text "Por favor, ¿puedo"
+	line "ver su PASE?"
 
-	para "OK. Right this"
-	line "way, please."
+	para "Muy bien. Pase por"
+	line "aquí, por favor."
 	done
 
 GoldenrodMagnetTrainStationOfficerYouDontHaveARailPassText:
-	text "Sorry. You don't"
-	line "have a rail PASS."
+	text "Lo siento, pero no"
+	line "tiene PASE."
 	done
 
 GoldenrodMagnetTrainStationOfficerHopeToSeeYouAgainText:
-	text "We hope to see you"
-	line "again!"
+	text "Siempre a su"
+	line "servicio."
 	done
 
 GoldenrodMagnetTrainStationOfficerArrivedInGoldenrodText:
-	text "We have arrived in"
-	line "GOLDENROD."
+	text "Hemos llegado a"
+	line "CIUDAD TRIGAL."
 
-	para "We hope to see you"
-	line "again."
+	para "Siempre a su"
+	line "servicio."
 	done
 
 GoldenrodMagnetTrainStationGentlemanText:
-	text "I'm the PRESIDENT."
+	text "Soy el PRESIDENTE."
 
-	para "My dream was to"
-	line "build a train that"
+	para "Mi sueño era crear"
+	line "un tren que fuera"
 
-	para "is faster than any"
-	line "#MON."
+	para "más rápido que"
+	line "cualquier #MON."
 
-	para "It really brings"
-	line "JOHTO much closer"
-	cont "to KANTO."
+	para "Hace que JOHTO"
+	line "esté mucho más"
+	cont "cerca de KANTO."
 	done
 
 GoldenrodMagnetTrainStation_MapEvents:

@@ -1,10 +1,10 @@
-	db "LEAF@" ; species name
-	dw 311, 350 ; height, weight
+	db "HOJA@" ; species name
+	dbw 12, 158 ; height, weight
 
-	db   "The scent that"
-	next "wafts from the"
-	next "leaves on its neck"
+	db   "Las hojas que le"
+	next "adornan el cuello"
+	next "emiten un aroma"
 
-	page "causes anyone who"
-	next "smells it to"
-	next "become energetic.@"
+	page "que resulta"
+	next "vigorizante para"
+	next "quien lo perciba.@"

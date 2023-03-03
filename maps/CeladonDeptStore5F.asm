@@ -40,33 +40,36 @@ CeladonDeptStore5FElevatorButton:
 	jumpstd elevatorbutton
 
 CeladonDeptStore5FGentlemanText:
-	text "I want to buy some"
-	line "items that raise"
+	text "Quiero comprar"
+	line "objetos que"
 
-	para "#MON stats, but"
-	line "I don't have"
-	cont "enough money…"
+	para "aumenten las"
+	line "habilidades de"
+
+	para "mis #MON. ¡Pero"
+	line "no tengo dinero!"
 	done
 
 CeladonDeptStore5FSailorText:
-	text "I want PP UP, so I"
-	line "can raise the PP"
+	text "Quiero MÁS PP,"
+	line "para aumentar los"
 
-	para "of moves. But you"
-	line "can't buy it…"
+	para "PP de los movi-"
+	line "mientos. ¡Pero no"
+	cont "se vende!"
 	done
 
 CeladonDeptStore5FTeacherText:
-	text "Using items on"
-	line "them makes #-"
-	cont "MON happy."
+	text "Si usas objetos en"
+	line "tus #MON, se"
+	cont "pondrán contentos."
 
-	para "They hate certain"
-	line "items, though…"
+	para "Aunque hay algunos"
+	line "que no les gustan."
 	done
 
 CeladonDeptStore5FDirectoryText:
-	text "5F: DRUG STORE"
+	text "P4: FARMACIA"
 	done
 
 CeladonDeptStore5F_MapEvents:

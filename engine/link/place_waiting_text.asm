@@ -1,7 +1,7 @@
 PlaceWaitingText::
-	hlcoord 3, 10
+	hlcoord 4, 10
 	ld b, 1
-	ld c, 11
+	ld c, 10
 
 	ld a, [wBattleMode]
 	and a
@@ -14,11 +14,11 @@ PlaceWaitingText::
 	predef LinkTextboxAtHL
 
 .proceed
-	hlcoord 4, 11
+	hlcoord 5, 11
 	ld de, .Waiting
 	call PlaceString
 	ld c, 50
 	jp DelayFrames
 
 .Waiting:
-	db "Waiting...!@"
+	db "¡ESPERA.…!@"

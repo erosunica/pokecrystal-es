@@ -243,252 +243,256 @@ LakeOfRageLanceTeleportIntoSkyMovement:
 	step_end
 
 LakeOfRageLanceForcedToEvolveText:
-	text "This lake is full"
-	line "of GYARADOS but"
-	cont "nothing else…"
+	text "Este LAGO está"
+	line "lleno de GYARADOS…"
 
-	para "So the MAGIKARP"
-	line "are being forced"
-	cont "to evolve…"
+	para "Así que los"
+	line "MAGIKARP deben ha-"
+	cont "ber evolucionado."
 	done
 
 LakeOfRageLanceIntroText:
-	text "Did you come here"
-	line "because of the"
-	cont "rumors?"
+	text "¿Viniste por los"
+	line "rumores?"
 
-	para "You're <PLAYER>?"
-	line "I'm LANCE, a"
-	cont "trainer like you."
+	para "¿Eres <PLAYER>?"
+	line "Me llamo LANCE y"
 
-	para "I heard some ru-"
-	line "mors, so I came to"
-	cont "investigate…"
+	para "soy entrenador"
+	line "como tú."
 
-	para "I saw the way you"
-	line "battled earlier,"
-	cont "<PLAY_G>."
+	para "Oí rumores y por"
+	line "eso vine a"
+	cont "investigar…"
 
-	para "I can tell that"
-	line "you're a trainer"
+	para "Te vi luchar"
+	line "antes, <PLAY_G>."
 
-	para "with considerable"
-	line "skill."
+	para "Creo que tienes"
+	line "una habilidad"
+	cont "considerable."
 
-	para "If you don't mind,"
-	line "could you help me"
-	cont "investigate?"
+	para "Si no te importa,"
+	line "¿podrías ayudarme"
+	cont "a investigar?"
 	done
 
 LakeOfRageLanceRadioSignalText:
-	text "LANCE: Excellent!"
+	text "LANCE: ¡Excelente!"
 
-	para "It seems that the"
-	line "LAKE's MAGIKARP"
+	para "Parece que los"
+	line "MAGIKARP del LAGO"
 
-	para "are being forced"
-	line "to evolve."
+	para "están siendo"
+	line "forzados a"
+	cont "evolucionar."
 
-	para "A mysterious radio"
-	line "broadcast coming"
+	para "Un misterioso"
+	line "programa de radio"
 
-	para "from MAHOGANY is"
-	line "the cause."
+	para "que viene de CAOBA"
+	line "tiene la culpa."
 
-	para "I'll be waiting"
-	line "for you, <PLAY_G>."
+	para "Te estaré esperan-"
+	line "do, <PLAY_G>."
 	done
 
 LakeOfRageLanceRefusedText:
-	text "Oh… Well, if you"
-	line "change your mind,"
-	cont "please help me."
+	text "¡Oh…! Si"
+	line "cambias de opinión"
+
+	para "agradecería tu"
+	line "ayuda."
 	done
 
 LakeOfRageLanceAskHelpText:
-	text "LANCE: Hm? Are you"
-	line "going to help me?"
+	text "LANCE: ¿Qué?"
+	line "¿Me vas a ayudar?"
 	done
 
 LakeOfRageGyaradosCryText:
-	text "GYARADOS: Gyashaa!"
+	text "GYARADOS: ¡Gyaraa!"
 	done
 
 LakeOfRageGotRedScaleText:
-	text "<PLAYER> obtained a"
-	line "RED SCALE."
+	text "<PLAYER> obtuvo una"
+	line "ESCAMA ROJA."
 	done
 
 LakeOfRageGrampsText:
-	text "The GYARADOS are"
-	line "angry!"
+	text "¡Los GYARADOS"
+	line "están enfadados!"
 
-	para "It's a bad omen!"
+	para "¡Mal presagio!"
 	done
 
 LakeOfRageGrampsText_ClearedRocketHideout:
-	text "Hahah! The MAGI-"
-	line "KARP are biting!"
+	text "¡Ajá! ¡Los"
+	line "MAGIKARP pican!"
 	done
 
 LakeOfRageSuperNerdText:
-	text "I heard this lake"
-	line "was made by ram-"
-	cont "paging GYARADOS."
+	text "Dicen que este"
+	line "lago fue obra de"
 
-	para "I wonder if there"
-	line "is any connection"
+	para "violentos"
+	line "GYARADOS."
 
-	para "to their mass out-"
-	line "break now?"
+	para "Me pregunto si eso"
+	line "estará relacionado"
+
+	para "con su aparición"
+	line "masiva."
 	done
 
 LakeOfRageCooltrainerFText:
-	text "Did my eyes de-"
-	line "ceive me? I saw a"
+	text "¿Me han engañado"
+	line "mis ojos? He visto"
 
-	para "red GYARADOS in"
-	line "the LAKE…"
+	para "un GYARADOS rojo"
+	line "en el LAGO…"
 
-	para "But I thought"
-	line "GYARADOS were"
-	cont "usually blue?"
+	para "Yo pensaba que los"
+	line "GYARADOS eran"
+	cont "azules."
 	done
 
 FisherAndreSeenText:
-	text "Let me battle with"
-	line "the #MON I just"
-	cont "caught!"
+	text "¡Déjame luchar con"
+	line "el #MON que"
+	cont "acabo de atrapar!"
 	done
 
 FisherAndreBeatenText:
-	text "I might be an ex-"
-	line "pert angler, but"
+	text "Puede que sea un"
+	line "pescador experto,"
 
-	para "I stink as a #-"
-	line "MON trainer…"
+	para "pero soy un mal"
+	line "entrenador…"
 	done
 
 FisherAndreAfterBattleText:
-	text "I won't lose as an"
-	line "angler! I catch"
-	cont "#MON all day."
+	text "¡No perderé como"
+	line "pescador! Me paso"
+
+	para "el día capturando"
+	line "#MON."
 	done
 
 FisherRaymondSeenText:
-	text "No matter what I"
-	line "do, all I catch"
+	text "Haga lo que haga,"
+	line "siempre capturo"
 
-	para "are the same #-"
-	line "MON…"
+	para "los mismos"
+	line "#MON…"
 	done
 
 FisherRaymondBeatenText:
-	text "My line's all"
-	line "tangled up…"
+	text "Mi caña se ha"
+	line "enredado…"
 	done
 
 FisherRaymondAfterBattleText:
-	text "Why can't I catch"
-	line "any good #MON?"
+	text "¿Por qué no atrapo"
+	line "buenos #MON?"
 	done
 
 CooltrainermAaronSeenText:
-	text "If a trainer spots"
-	line "another trainer,"
+	text "Si un entrenador"
+	line "se encuentra con"
 
-	para "he has to make a"
-	line "challenge."
+	para "otro entrenador,"
+	line "debe desafiarle."
 
-	para "That is our"
-	line "destiny."
+	para "Ése es nuestro"
+	line "destino."
 	done
 
 CooltrainermAaronBeatenText:
-	text "Whew…"
-	line "Good battle."
+	text "¡Uauu…!"
+	line "Buen combate."
 	done
 
 CooltrainermAaronAfterBattleText:
-	text "#MON and their"
-	line "trainer become"
+	text "Los #MON y su"
+	line "entrenador se"
 
-	para "powerful through"
-	line "constant battling."
+	para "hacen más fuertes"
+	line "cuanto más luchan."
 	done
 
 CooltrainerfLoisSeenText:
-	text "What happened to"
-	line "the red GYARADOS?"
+	text "¿Qué ocurrió con"
+	line "el GYARADOS rojo?"
 
-	para "It's gone?"
+	para "¿Se ha ido?"
 
-	para "Oh, darn. I came"
-	line "here for nothing?"
+	para "¡Maldición! ¿He"
+	line "venido para nada?"
 
-	para "I know--let's"
-	line "battle!"
+	para "Ya sé."
+	line "¡Luchemos!"
 	done
 
 CooltrainerfLoisBeatenText:
-	text "Good going!"
+	text "¡Muy bien!"
 	done
 
 CooltrainerfLoisAfterBattleText:
-	text "Come to think of"
-	line "it, I've seen a"
-	cont "pink BUTTERFREE."
+	text "Pensándolo bien,"
+	line "creo que vi un"
+	cont "BUTTERFREE rosa."
 	done
 
 MeetWesleyText:
-	text "WESLEY: Well, how"
-	line "do you do?"
+	text "MIGUEL: Hola,"
+	line "¿qué tal estás?"
 
-	para "Seeing as how it's"
-	line "Wednesday today,"
+	para "Hoy es miércoles"
+	line "y yo soy MIGUEL,"
 
-	para "I'm WESLEY of"
-	line "Wednesday."
+	para "por lo de"
+	line "miércoles."
 	done
 
 WesleyGivesGiftText:
-	text "Pleased to meet"
-	line "you. Please take a"
-	cont "souvenir."
+	text "Encantado de"
+	line "conocerte. Toma"
+	cont "un recuerdo."
 	done
 
 WesleyGaveGiftText:
-	text "WESLEY: BLACKBELT"
-	line "beefs up the power"
-	cont "of fighting moves."
+	text "MIGUEL: CINTURÓN"
+	line "NEGRO potencia los"
+	cont "ataques de lucha."
 	done
 
 WesleyWednesdayText:
-	text "WESLEY: Since you"
-	line "found me, you must"
+	text "MIGUEL: Si me"
+	line "has encontrado,"
 
-	para "have met my broth-"
-	line "ers and sisters."
+	para "habrás visto a"
+	line "mis hermanos."
 
-	para "Or did you just"
-	line "get lucky?"
+	para "¿O es que has"
+	line "tenido suerte?"
 	done
 
 WesleyNotWednesdayText:
-	text "WESLEY: Today's"
-	line "not Wednesday."
-	cont "That's too bad."
+	text "MIGUEL: Hoy no es"
+	line "miércoles."
+	cont "¡Qué pena!"
 	done
 
 LakeOfRageSignText:
-	text "LAKE OF RAGE,"
-	line "also known as"
-	cont "GYARADOS LAKE."
+	text "LAGO DE LA FURIA,"
+	line "conocido como"
+	cont "LAGO DE GYARADOS"
 	done
 
 FishingGurusHouseSignText:
-	text "FISHING GURU'S"
-	line "HOUSE"
+	text "CASA DEL GURÚ"
+	line "PESCADOR"
 	done
 
 LakeOfRage_MapEvents:

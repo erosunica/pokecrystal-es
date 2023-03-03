@@ -13,9 +13,9 @@ PewterSnoozeSpeechHouseBookshelf:
 	jumpstd picturebookshelf
 
 PewterSnoozeSpeechHouseGrampsText:
-	text "I like snoozing"
-	line "with the radio on…"
-	cont "…Zzzz…"
+	text "Me gusta dormirme"
+	line "con la radio en…"
+	cont "¡Zzzz…!"
 	done
 
 PewterSnoozeSpeechHouse_MapEvents:

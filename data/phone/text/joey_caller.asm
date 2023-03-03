@@ -1,90 +1,90 @@
 JoeyMonLookingSharperText:
-	text "My @"
+	text "¡Mi @"
 	text_ram wStringBuffer4
-	text "'s"
-	line "looking sharper"
-	cont "than before!"
+	text_start
+	line "parece más listo"
+	cont "que antes!"
 
-	para "I doubt there's a"
-	line "#MON as cool as"
+	para "¡Dudo que tengas"
+	line "un #MON tan"
 
-	para "this guy in your"
-	line "party!"
+	para "guay como éste en"
+	line "tu equipo!"
 	done
 
 JoeyDefeatedMonText:
-	text "Oh yeah, I took"
-	line "down a @"
+	text "Sí, atrapé a un"
+	line "@"
 	text_ram wStringBuffer4
-	text_start
-	para "in the wild the"
-	line "other day."
+	text " salvaje"
+	cont "el otro día."
 
-	para "It was a cakewalk."
-	line "Well, I guess it"
+	para "Estuvo chupado."
+	line "En fin, ¿qué se"
 
-	para "can't be helped,"
-	line "us being so tough."
+	para "puede hacer si"
+	line "somos tan fuertes?"
 	done
 
 JoeyLostAMonText:
-	text "Oh yeah, I saw a"
-	line "wild @"
+	text "¡Sí, vi a un"
+	line "@"
 	text_ram wStringBuffer4
-	text "!"
+	text_start
+	cont "salvaje!"
 
-	para "I thought about"
-	line "going for it, but"
+	para "Pensé en ir a por"
+	line "él, pero decidí"
 
-	para "I decided to work"
-	line "with my one-and-"
+	para "seguir entrenando"
+	line "a mi único y amado"
 
-	para "only right to the"
-	line "extreme end."
+	para "#MON hasta el"
+	line "final."
 	done
 
 JoeyBattleRematchText:
-	text "Let's get together"
-	line "and battle!"
+	text "¡Reunámonos para"
+	line "luchar!"
 
-	para "I promise things"
-	line "will be different!"
+	para "¡Esta vez no lo"
+	line "tendrás tan fácil!"
 
-	para "@"
+	para "Estaré en"
+	line "@"
 	text_ram wStringBuffer5
-	text "'s"
-	line "where I'll be."
+	text "."
 
-	para "Give me a shout"
-	line "when you come."
+	para "Avísame cuando"
+	line "llegues."
 	done
 
 JoeyHangUpText:
-	text "All right. Later!"
+	text "¡Hasta luego!"
 	done
 
 JoeyDevisingStrategiesText:
-	text "I'm checking out"
-	line "@"
+	text "Estoy estudiando"
+	line "los movimientos de"
+
+	para "@"
 	text_ram wStringBuffer4
-	text "'s moves"
+	text " y pen-"
+	line "sando estrategias."
 
-	para "and devising some"
-	line "strategies."
-
-	para "When I come up"
-	line "with a good one,"
-	cont "let's battle!"
+	para "Cuando encuentre"
+	line "una buena,"
+	cont "¡lucharemos!"
 	done
 
 JoeyReminderText:
-	text "What's keeping"
-	line "you, <PLAYER>!"
+	text "¿Qué esperas,"
+	line "<PLAYER>?"
 
-	para "Let's get down and"
-	line "battle already!"
+	para "¡Enfrentémonos"
+	line "en un combate!"
 
-	para "I'm waiting on"
+	para "¡Te espero en"
 	line "@"
 	text_ram wStringBuffer5
 	text "!"

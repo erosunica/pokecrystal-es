@@ -109,37 +109,39 @@ RuinsOfAlphOmanyteChamberSkyfallTopMovement:
 	step_end
 
 RuinsOfAlphOmanyteChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "Aparecieron"
+	line "dibujos en las"
+	cont "paredes…"
 	done
 
 RuinsOfAlphOmanyteChamberUnownText:
 ; unused
-	text "It's UNOWN text!"
+	text "¡Es texto UNOWN!"
 	done
 
 RuinsOfAlphOmanyteChamberWallPatternRightText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "Aparecieron"
+	line "dibujos en las"
+	cont "paredes…"
 	done
 
 RuinsOfAlphOmanyteChamberWallHoleText:
-	text "There's a big hole"
-	line "in the wall!"
+	text "¡Hay un gran agu-"
+	line "jero en la pared!"
 	done
 
 RuinsOfAlphOmanyteChamberAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "Es una réplica de"
+	line "un #MON"
+	cont "antiguo."
 	done
 
 RuinsOfAlphOmanyteChamberDescriptionText:
-	text "This #MON"
-	line "drifted in the"
+	text "Este #MON"
+	line "se desplazaba por"
 
-	para "sea by twisting"
-	line "its ten tentacles."
+	para "el mar con sus"
+	line "diez tentáculos."
 	done
 
 RuinsOfAlphOmanyteChamber_MapEvents:

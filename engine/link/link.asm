@@ -16,13 +16,13 @@ LinkCommunications:
 	call LoadFontsBattleExtra
 	farcall LinkComms_LoadPleaseWaitTextboxBorderGFX
 	call WaitBGMap2
-	hlcoord 3, 8
+	hlcoord 4, 8
 	ld b, 2
-	ld c, 12
+	ld c, 10
 	ld d, h
 	ld e, l
 	farcall LinkTextbox2
-	hlcoord 4, 10
+	hlcoord 5, 10
 	ld de, String_PleaseWait
 	call PlaceString
 	call SetTradeRoomBGPals
@@ -543,7 +543,7 @@ ExchangeBytes:
 	ret
 
 String_PleaseWait:
-	db "PLEASE WAIT!@"
+	db "¡ESPERA.…!@"
 
 ClearLinkData:
 	ld hl, wLinkData
@@ -1491,7 +1491,7 @@ Function28926:
 	text_end
 
 .String_Stats_Trade:
-	db "STATS     TRADE@"
+	db "ESTAD.    TRATO@"
 
 .LinkAbnormalMonText:
 	text_far _LinkAbnormalMonText
@@ -1575,14 +1575,17 @@ Unreferenced_Function28b42:
 	jp PlaceString
 
 .Cancel:
-	db "CANCEL@"
+	db "CANCELAR@"
 
 Function28b68:
 	ld a, [wOtherPlayerLinkMode]
 	hlcoord 6, 9
 	ld bc, SCREEN_WIDTH
 	call AddNTimes
-	ld [hl], "▷"
+	ld [hl], "¯"
+	ld bc, MON_NAME_LENGTH
+	add hl, bc
+	ld [hl], "¯"
 	ret
 
 LinkEngine_FillBox:
@@ -1634,16 +1637,16 @@ LinkTrade:
 	bccoord 1, 14
 	call PlaceHLTextAtBC
 	call LoadStandardMenuHeader
-	hlcoord 10, 7
+	hlcoord 7, 7
 	ld b, 3
-	ld c, 7
+	ld c, 10
 	call LinkTextboxAtHL
 	ld de, String28eab
-	hlcoord 12, 8
+	hlcoord 9, 8
 	call PlaceString
 	ld a, 8
 	ld [w2DMenuCursorInitY], a
-	ld a, 11
+	ld a, 8
 	ld [w2DMenuCursorInitX], a
 	ld a, 1
 	ld [w2DMenuNumCols], a
@@ -1942,19 +1945,19 @@ Function28ea3:
 	jp InitTradeMenuDisplay
 
 String28eab:
-	db   "TRADE"
-	next "CANCEL@"
+	db   "TRATO"
+	next "CANCELAR@"
 
 LinkAskTradeForText:
 	text_far _LinkAskTradeForText
 	text_end
 
 String28ebd:
-	db   "Trade completed!@"
+	db   "TRATO COMPLETADO@"
 
 String_TooBadTheTradeWasCanceled:
-	db   "Too bad! The trade"
-	next "was canceled!@"
+	db   "¡Mal! ¡El trato"
+	next "está cancelado!@"
 
 LinkTextboxAtHL:
 	ld d, h

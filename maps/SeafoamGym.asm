@@ -61,98 +61,97 @@ SeafoamGymGuyScript:
 	end
 
 BlaineIntroText:
-	text "BLAINE: Waaah!"
+	text "BLAINE: ¡Buaaa!"
 
-	para "My GYM in CINNABAR"
-	line "burned down."
+	para "Mi GIMNASIO de"
+	line "ISLA CANELA se ha"
+	cont "quemado."
 
-	para "My fire-breathing"
-	line "#MON and I are"
+	para "El volcán nos ha"
+	line "dejado sin casa a"
 
-	para "homeless because"
-	line "of the volcano."
+	para "mis #MON"
+	line "comefuego y a mí."
 
-	para "Waaah!"
+	para "¡Buaaaa!"
 
-	para "But I'm back in"
-	line "business as a GYM"
+	para "Pero sigo haciendo"
+	line "mi trabajo de"
 
-	para "LEADER here in"
-	line "this cave."
+	para "LÍDER de GIMNASIO"
+	line "en esta cueva."
 
-	para "If you can beat"
-	line "me, I'll give you"
-	cont "a BADGE."
+	para "Si me vences, te"
+	line "daré una MEDALLA."
 
-	para "Ha! You'd better"
-	line "have BURN HEAL!"
+	para "¡Ja! Espero que"
+	line "tengas ANTIQUEMAR."
 	done
 
 BlaineWinLossText:
-	text "BLAINE: Awesome."
-	line "I've burned out…"
+	text "BLAINE: Increíble."
+	line "Me consumí…"
 
-	para "You've earned"
-	line "VOLCANOBADGE!"
+	para "¡Has ganado la"
+	line "MEDALLA VOLCÁN!"
 	done
 
 ReceivedVolcanoBadgeText:
-	text "<PLAYER> received"
-	line "VOLCANOBADGE."
+	text "<PLAYER> recibió"
+	line "la MED. VOLCÁN."
 	done
 
 BlaineAfterBattleText:
-	text "BLAINE: I did lose"
-	line "this time, but I'm"
+	text "BLAINE: Esta vez"
+	line "he perdido, pero"
 
-	para "going to win the"
-	line "next time."
+	para "la próxima te"
+	line "ganaré."
 
-	para "When I rebuild my"
-	line "CINNABAR GYM,"
-
-	para "we'll have to have"
-	line "a rematch."
+	para "Cuando reconstruya"
+	line "mi GIMNASIO de I."
+	cont "CANELA, tendremos"
+	cont "la revancha."
 	done
 
 BlaineFightDoneText:
-	text "BLAINE: My fire"
-	line "#MON will be"
+	text "BLAINE: Mis"
+	line "#MON de fuego"
 
-	para "even stronger."
-	line "Just you watch!"
+	para "serán más fuertes."
+	line "¡Ya lo verás!"
 	done
 
 SeafoamGymGuyWinText:
-	text "Yo!"
+	text "¡Vaya!"
 
-	para "… Huh? It's over"
-	line "already?"
+	para "¿Eh…?"
+	line "¿Ya ha acabado?"
 
-	para "Sorry, sorry!"
+	para "¡Lo siento!"
 
-	para "CINNABAR GYM was"
-	line "gone, so I didn't"
+	para "El GIMNASIO de"
+	line "ISLA CANELA ya no"
 
-	para "know where to find"
-	line "you."
+	para "existe y no sabía"
+	line "dónde encontrarte."
 
-	para "But, hey, you're"
-	line "plenty strong even"
+	para "Pero eres fuerte"
+	line "hasta sin mis"
 
-	para "without my advice."
-	line "I knew you'd win!"
+	para "consejos. ¡Sabía"
+	line "que ganarías!"
 	done
 
 SeafoamGymGuyWinText2:
-	text "A #MON GYM can"
-	line "be anywhere as"
+	text "Los GIMNASIOS"
+	line "#MON están allí"
 
-	para "long as the GYM"
-	line "LEADER is there."
+	para "donde se encuentre"
+	line "su LÍDER."
 
-	para "There's no need"
-	line "for a building."
+	para "No es necesario"
+	line "un edificio."
 	done
 
 SeafoamGym_MapEvents:

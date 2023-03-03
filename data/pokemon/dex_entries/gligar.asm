@@ -1,10 +1,10 @@
-	db "FLYSCORPIO@" ; species name
-	dw 307, 1430 ; height, weight
+	db "ESCORPIALA@" ; species name
+	dbw 11, 648 ; height, weight
 
-	db   "It builds its nest"
-	next "on a steep cliff."
-	next "When it is done"
+	db   "Crea su nido en"
+	next "precipicios escar-"
+	next "pados. Después de"
 
-	page "gliding, it hops"
-	next "along the ground"
-	next "back to its nest.@"
+	page "planear, va dando"
+	next "saltitos hasta"
+	next "llegar a su nido.@"

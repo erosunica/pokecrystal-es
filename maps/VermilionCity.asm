@@ -124,145 +124,156 @@ VermilionCityHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_VERMILION_CITY_HIDDEN_FULL_HEAL
 
 VermilionCityTeacherText:
-	text "VERMILION PORT is"
-	line "KANTO's seaside"
-	cont "gateway."
+	text "CIUDAD CARMÍN es"
+	line "el puerto más"
 
-	para "Luxury liners from"
-	line "around the world"
-	cont "dock here."
+	para "importante de"
+	line "KANTO."
+
+	para "En él atracan"
+	line "lujosos"
+
+	para "transatlánticos"
+	line "de todo el mundo."
 	done
 
 VermilionMachopOwnerText:
-	text "My #MON is"
-	line "preparing the land"
-	cont "for construction."
+	text "Mi #MON está"
+	line "preparando el"
 
-	para "But I have no"
-	line "money to start the"
-	cont "project…"
+	para "terreno donde"
+	line "edificar."
+
+	para "Pero no tengo"
+	line "dinero para el"
+	cont "proyecto…"
 	done
 
 VermilionMachopText1:
-	text "MACHOP: Guooh"
-	line "gogogoh!"
+	text "MACHOP: ¡Machop,"
+	line "machop!"
 	done
 
 VermilionMachopText2:
-	text "A MACHOP is growl-"
-	line "ing while stomping"
-	cont "the ground flat."
+	text "Un MACHOP gruñe"
+	line "mientras pisotea"
+	cont "el suelo."
 	done
 
 VermilionCitySuperNerdText:
-	text "There are eight"
-	line "GYMS in KANTO."
+	text "En KANTO hay ocho"
+	line "GIMNASIOS."
 
-	para "That big building"
-	line "is VERMILION's"
-	cont "#MON GYM."
+	para "Ese gran edificio"
+	line "es el GIMNASIO"
+
+	para "#MON de CIUDAD"
+	line "CARMÍN."
 	done
 
 VermilionCitySnorlaxSleepingText:
-	text "SNORLAX is snoring"
-	line "peacefully…"
+	text "SNORLAX duerme"
+	line "plácidamente…"
 	done
 
 VermilionCityRadioNearSnorlaxText:
-	text "The #GEAR was"
-	line "placed near the"
-	cont "sleeping SNORLAX…"
+	text "El #GEAR está"
+	line "cerca del SNORLAX"
+	cont "dormido."
 
 	para "…"
 
-	para "SNORLAX woke up!"
+	para "¡SNORLAX se"
+	line "despertó!"
 	done
 
 VermilionCityBadgeGuyTrainerText:
-	text "Skilled trainers"
-	line "gather in KANTO."
+	text "Los entrenadores"
+	line "expertos se reúnen"
+	cont "en KANTO."
 
-	para "GYM LEADERS are"
-	line "especially strong."
+	para "Los LÍDERES de"
+	line "GIMNASIO son muy"
+	cont "fuertes."
 
-	para "They won't be easy"
-	line "to defeat."
+	para "No serán fáciles"
+	line "de vencer."
 	done
 
 VermilionCityBadgeGuySomeBadgesText:
-	text "You've started to"
-	line "collect KANTO GYM"
-	cont "BADGES?"
+	text "¿Has conseguido ya"
+	line "alguna MEDALLA de"
+	cont "GIMNASIO de KANTO?"
 
-	para "Don't you agree"
-	line "that the trainers"
-	cont "here are tough?"
+	para "¿A que los"
+	line "entrenadores de"
+
+	para "KANTO son muy"
+	line "fuertes?"
 	done
 
 VermilionCityBadgeGuyMostBadgesText:
-	text "I guess you'll be"
-	line "finished with your"
+	text "Supongo que pronto"
+	line "habrás conseguido"
 
-	para "conquest of KANTO"
-	line "GYMS soon."
+	para "todas las MEDALLAS"
+	line "de KANTO."
 
-	para "Let me know if"
-	line "you get all eight"
-	cont "BADGES."
+	para "Cuando tengas las"
+	line "ocho MEDALLAS,"
+	cont "dímelo."
 	done
 
 VermilionCityBadgeGuyAllBadgesText:
-	text "Congratulations!"
+	text "¡Enhorabuena!"
 
-	para "You got all the"
-	line "KANTO GYM BADGES."
+	para "Tienes todas las"
+	line "MEDALLAS de KANTO."
 
-	para "I've got a reward"
-	line "for your efforts."
+	para "Te recompensaré"
+	line "por tu esfuerzo."
 	done
 
 VermilionCityBadgeGuyBattleEdgeText:
-	text "Having a variety"
-	line "of #MON types"
+	text "Llevar distintos"
+	line "tipos de #MON"
 
-	para "should give you an"
-	line "edge in battle."
+	para "te debería ayudar"
+	line "en el combate."
 
-	para "I'm sure the KANTO"
-	line "GYM BADGES will"
-	cont "help you."
+	para "Seguro que las"
+	line "MEDALLAS de KANTO"
+	cont "te ayudarán."
 	done
 
 VermilionCitySignText:
-	text "VERMILION CITY"
+	text "CIUDAD CARMÍN"
 
-	para "The Port of"
-	line "Exquisite Sunsets"
+	para "El puerto de los"
+	line "ocasos exquisitos"
 	done
 
 VermilionGymSignText:
-	text "VERMILION CITY"
-	line "#MON GYM"
-	cont "LEADER: LT.SURGE"
+	text "LÍDER DEL GIMNASIO"
+	line "#MON DE CIUDAD"
+	cont "CARMÍN: LT. SURGE"
 
-	para "The Lightning"
-	line "American"
+	para "El rayo americano"
 	done
 
 PokemonFanClubSignText:
-	text "#MON FAN CLUB"
-
-	para "All #MON Fans"
-	line "Welcome!"
+	text "CLUB DE FANS"
+	line "DE #MON"
+	cont "¡Bienvenidos!"
 	done
 
 VermilionCityDiglettsCaveSignText:
-	text "DIGLETT'S CAVE"
+	text "CUEVA DIGLETT"
 	done
 
 VermilionCityPortSignText:
-	text "VERMILION PORT"
-	line "ENTRANCE"
+	text "ENTRADA AL PUERTO"
+	line "CARMÍN"
 	done
 
 VermilionCity_MapEvents:

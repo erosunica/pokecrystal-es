@@ -181,164 +181,170 @@ Route39HiddenNugget:
 	hiddenitem NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET
 
 Route39MiltankText:
-	text "MILTANK: Mooo!"
+	text "MUU-MUU: ¡Muu!"
 	done
 
 SailorEugeneSeenText:
-	text "I just got back to"
-	line "OLIVINE."
+	text "Acabo de volver a"
+	line "CIUDAD OLIVO."
 
-	para "So how about a"
-	line "#MON battle?"
+	para "¿Te apetece luchar"
+	line "con los #MON?"
 	done
 
 SailorEugeneBeatenText:
-	text "Awaaargh!"
+	text "¡Awaaargh!"
 	done
 
 SailorEugeneAfterBattleText:
-	text "My #MON were"
-	line "caught and raised"
-	cont "overseas."
+	text "Mis #MON han"
+	line "sido atrapados y"
 
-	para "They're my compan-"
-	line "ions on those long"
-	cont "voyages."
+	para "entrenados en el"
+	line "extranjero."
+
+	para "Me han acompañado"
+	line "en esos largos"
+	cont "viajes."
 	done
 
 PokefanmDerekSeenText:
-	text "This is a good"
-	line "time to brag about"
-	cont "my PIKACHU!"
+	text "¡Es buen momento"
+	line "para alardear de"
+	cont "mi PIKACHU!"
 	done
 
 PokefanmDerekBeatenText:
-	text "I had no time to"
-	line "show off PIKACHU…"
+	text "No tuve tiempo de"
+	line "presumir de mi"
+	cont "PIKACHU…"
 	done
 
 PokefanMDerekText_NotBragging:
-	text "I'm not listening"
-	line "to your bragging!"
+	text "¡No te estoy"
+	line "escuchando!"
 
-	para "We # FANS have"
-	line "a policy of not"
+	para "¡Los #FANS"
+	line "tenemos por norma"
 
-	para "listening to other"
-	line "people brag!"
+	para "no escuchar a la"
+	line "gente presumida!"
 	done
 
 PokefanfRuthSeenText:
-	text "Such darling"
-	line "#MON."
+	text "¡Qué #MON más"
+	line "encantadores!"
 
-	para "Let's show our"
-	line "#MON together"
-	cont "at the same time."
+	para "Enseñemos nuestros"
+	line "#MON al mismo"
+	cont "tiempo."
 	done
 
 PokefanfRuthBeatenText:
-	text "I don't mind"
-	line "losing."
+	text "No me importa"
+	line "perder."
 	done
 
 PokefanfRuthAfterBattleText:
-	text "Do you know about"
-	line "baby #MON?"
+	text "¿Sabes algo sobre"
+	line "los #MON bebés?"
 
-	para "I bet they're just"
-	line "adorable!"
+	para "¡Seguro que son"
+	line "adorables!"
 	done
 
 PokefanMDerekPikachuIsItText:
-	text "PIKACHU is it!"
-	line "Don't you agree?"
+	text "¡PIKACHU es lo"
+	line "más! ¿No crees?"
 	done
 
 PsychicNormanSeenText:
-	text "Let me see what"
-	line "your #MON are"
-	cont "capable of."
+	text "Déjame ver de qué"
+	line "son capaces tus"
+	cont "#MON."
 	done
 
 PsychicNormanBeatenText:
-	text "Ooh, your #MON"
-	line "have potential."
+	text "¡Ooh! Tus #MON"
+	line "tienen potencial."
 	done
 
 PsychicNormanAfterBattleText:
-	text "You know how #-"
-	line "MON have different"
-	cont "abilities?"
+	text "¿Sabes que los"
+	line "#MON tienen"
 
-	para "People are like"
-	line "that too. Every-"
-	cont "one has different"
-	cont "potential."
+	para "distintas"
+	line "habilidades?"
+
+	para "Son como las"
+	line "personas. Cada uno"
+
+	para "tiene su propio"
+	line "potencial."
 	done
 
 PokefanfJaimeHopeItGetsDarkText:
-	text "Ufufufu… I hope it"
-	line "gets dark soon."
+	text "Ufufufu… Espero"
+	line "que oscurezca"
+	cont "pronto."
 	done
 
 PokefanfJaimeSeenText:
-	text "You came at just"
-	line "the right time."
+	text "Llegas justo a"
+	line "tiempo."
 
-	para "Let's battle."
+	para "Luchemos."
 	done
 
 PokefanfJaimeBeatenText:
-	text "Oh, how disap-"
-	line "pointing…"
+	text "Oh, qué"
+	line "decepcionante…"
 	done
 
 PokefanfJaimeAfterBattleText:
-	text "I met my MEOWTH at"
-	line "night, right here"
-	cont "on ROUTE 39."
+	text "Encontré mi MEOWTH"
+	line "aquí por la noche,"
+	cont "en la RUTA 39."
 
-	para "I'm not sure why,"
-	line "but it seems to"
+	para "No estoy segura,"
+	line "pero parece que"
 
-	para "like it when I"
-	line "train here."
+	para "le gusta que me"
+	line "entrene aquí."
 
-	para "It seems to become"
-	line "friendlier by"
+	para "Cuando estamos por"
+	line "esta zona, se"
 
-	para "training here than"
-	line "anywhere else."
+	para "vuelve más cari-"
+	line "ñoso."
 	done
 
 Route39SignText:
-	text "ROUTE 39"
+	text "RUTA 39"
 
-	para "OLIVINE CITY -"
-	line "ECRUTEAK CITY"
+	para "CIUDAD OLIVO -"
+	line "CIUDAD IRIS"
 	done
 
 MoomooFarmSignText:
-	text "MOOMOO FARM"
+	text "GRANJA MUU-MUU"
 
-	para "Enjoy Our Fresh"
-	line "and Tasty Milk"
+	para "Prueba nuestra"
+	line "rica leche fresca"
 	done
 
 Route39TrainerTipsText:
-	text "TRAINER TIPS"
+	text "PISTAS ENTRENADOR"
 
-	para "Use HEADBUTT on"
-	line "trees to shake"
-	cont "#MON out."
+	para "Usa GOLPE CABEZA"
+	line "en los árboles"
 
-	para "Different kinds of"
-	line "#MON drop out"
-	cont "of trees."
+	para "para que salgan"
+	line "#MON."
 
-	para "Use HEADBUTT on"
-	line "any tree you see!"
+	para "De los árboles"
+	line "pueden caer varios"
+	cont "tipos de #MON"
 	done
 
 Route39_MapEvents:

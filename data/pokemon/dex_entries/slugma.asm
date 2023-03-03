@@ -1,10 +1,10 @@
 	db "LAVA@" ; species name
-	dw 204, 770 ; height, weight
+	dbw 7, 350 ; height, weight
 
-	db   "These group to-"
-	next "gether in areas"
-	next "that are hotter"
+	db   "Suele ir en grupo"
+	next "por zonas"
+	next "demasiado cálidas."
 
-	page "than normal. If it"
-	next "cools off, its"
-	next "skin hardens.@"
+	page "Si se enfriara, se"
+	next "le endurecería la"
+	next "piel.@"

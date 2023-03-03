@@ -53,7 +53,7 @@ OddEggs:
 	bigdw 11 ; Spd
 	bigdw 8 ; SAtk
 	bigdw 8 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db PICHU
 	db NO_ITEM
@@ -79,7 +79,7 @@ OddEggs:
 	bigdw 12 ; Spd
 	bigdw 9 ; SAtk
 	bigdw 9 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db CLEFFA
 	db NO_ITEM
@@ -105,7 +105,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 9 ; SAtk
 	bigdw 10 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db CLEFFA
 	db NO_ITEM
@@ -131,7 +131,7 @@ OddEggs:
 	bigdw 7 ; Spd
 	bigdw 10 ; SAtk
 	bigdw 11 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db IGGLYBUFF
 	db NO_ITEM
@@ -157,7 +157,7 @@ OddEggs:
 	bigdw 6 ; Spd
 	bigdw 9 ; SAtk
 	bigdw 7 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db IGGLYBUFF
 	db NO_ITEM
@@ -183,7 +183,7 @@ OddEggs:
 	bigdw 7 ; Spd
 	bigdw 10 ; SAtk
 	bigdw 8 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db SMOOCHUM
 	db NO_ITEM
@@ -209,7 +209,7 @@ OddEggs:
 	bigdw 11 ; Spd
 	bigdw 13 ; SAtk
 	bigdw 11 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db SMOOCHUM
 	db NO_ITEM
@@ -235,7 +235,7 @@ OddEggs:
 	bigdw 12 ; Spd
 	bigdw 14 ; SAtk
 	bigdw 12 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db MAGBY
 	db NO_ITEM
@@ -261,7 +261,7 @@ OddEggs:
 	bigdw 13 ; Spd
 	bigdw 12 ; SAtk
 	bigdw 10 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db MAGBY
 	db NO_ITEM
@@ -287,7 +287,7 @@ OddEggs:
 	bigdw 14 ; Spd
 	bigdw 13 ; SAtk
 	bigdw 11 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db ELEKID
 	db NO_ITEM
@@ -313,7 +313,7 @@ OddEggs:
 	bigdw 14 ; Spd
 	bigdw 11 ; SAtk
 	bigdw 10 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db ELEKID
 	db NO_ITEM
@@ -339,7 +339,7 @@ OddEggs:
 	bigdw 15 ; Spd
 	bigdw 12 ; SAtk
 	bigdw 11 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db TYROGUE
 	db NO_ITEM
@@ -365,7 +365,7 @@ OddEggs:
 	bigdw 8 ; Spd
 	bigdw 8 ; SAtk
 	bigdw 8 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"
 
 	db TYROGUE
 	db NO_ITEM
@@ -391,4 +391,4 @@ OddEggs:
 	bigdw 9 ; Spd
 	bigdw 9 ; SAtk
 	bigdw 9 ; SDef
-	db "EGG@@@@@@@@"
+	db "HUEVO@@@@@@"

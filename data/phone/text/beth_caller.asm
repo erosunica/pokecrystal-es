@@ -1,98 +1,96 @@
 BethExhilaratingRideText:
-	text "Do you remember my"
-	line "sweet @"
+	text "¿Recuerdas a mi"
+	line "dulce @"
 	text_ram wStringBuffer4
 	text "?"
 
 	para "@"
 	text_ram wStringBuffer4
-	text " runs"
-	line "very fast."
+	text_start
+	line "corre muy rápido."
 
-	para "It's exhilarating"
-	line "to ride on its"
+	para "Montar sobre su"
+	line "espalda cuando se"
 
-	para "back when it"
-	line "really gets going."
+	para "pone en marcha es"
+	line "muy emocionante."
 	done
 
 BethDefeatedMonText:
-	text "Oh, have you ever"
-	line "seen a @"
+	text "Oh, ¿has visto a"
+	line "un @"
 	text_ram wStringBuffer4
 	text_start
-	cont "before?"
+	cont "alguna vez?"
 
-	para "I just battled"
-	line "one…"
+	para "Acabo de luchar"
+	line "contra uno…"
 
-	para "It was much faster"
-	line "than I expected."
+	para "No pensaba que"
+	line "fuera tan veloz."
 
-	para "I was a little"
-	line "shocked."
+	para "Me sorprendió un"
+	line "poco."
 
-	para "I still won, of"
-	line "course."
+	para "Aun así gané, por"
+	line "supuesto."
 	done
 
 BethLostAMonText:
-	text "Oh, I just saw a"
-	line "wild @"
+	text "Oh, acabo de ver a"
+	line "un @"
 	text_ram wStringBuffer4
-	text "."
+	text_start
+	cont "salvaje."
 
-	para "I was trying to"
-	line "catch it when I"
+	para "Estaba intentando"
+	line "cogerlo cuando me"
 
-	para "noticed that I was"
-	line "all out of #"
-	cont "BALLS."
+	para "di cuenta de que"
+	line "no me quedaban"
+	cont "# BALL."
 
-	para "If you don't check"
-	line "your items, you"
+	para "Comprueba qué ob-"
+	line "jetos tienes y no"
 
-	para "may run out at the"
-	line "worst time."
+	para "los echarás de me-"
+	line "nos cuando más los"
 
-	para "I hope you learn"
-	line "from my mistake."
+	para "necesites. Aprende"
+	line "de mi error."
 	done
 
 BethBattleRematchText:
-	text "Do you want to"
-	line "battle? I'm going"
-	cont "to win this time!"
+	text "¿Quieres luchar?"
+	line "¡Esta vez no"
+	cont "podrás conmigo!"
 
-	para "I'll be waiting"
-	line "for you around"
-
-	para "@"
+	para "Te esperaré cerca"
+	line "de @"
 	text_ram wStringBuffer5
 	text "."
-	line "Look for me, OK?"
+	cont "Búscame, ¿vale?"
 	done
 
 BethHangUpText:
-	text "OK, bye-bye!"
+	text "Bueno, ¡adiós!"
 	done
 
 BethLetsBattleAgainSometimeText:
-	text "Let's battle again"
-	line "sometime!"
+	text "¡Volvamos a luchar"
+	line "algún otro día!"
 	done
 
 BethReminderText:
-	text "Um… <PLAY_G>?"
-	line "What's wrong?"
+	text "Mmm… ¿<PLAY_G>?"
+	line "¿Qué ocurre?"
 
-	para "Did you forget our"
-	line "deal?"
+	para "¿Olvidaste nuestro"
+	line "trato?"
 
 	para "@"
 	text_ram wStringBuffer5
 	text "."
 
-	para "That's where I'm"
-	line "waiting."
+	para "Allí te espero."
 	done

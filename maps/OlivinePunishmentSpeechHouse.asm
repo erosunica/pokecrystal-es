@@ -20,21 +20,21 @@ OlivinePunishmentSpeechHouseBookshelf1:
 	jumpstd magazinebookshelf
 
 OlivinePunishmentSpeechHouseDadText:
-	text "Along the way to"
-	line "CIANWOOD, there"
+	text "De camino a CIUDAD"
+	line "ORQUÍDEA, hay"
 
-	para "are four deserted"
-	line "islands."
+	para "cuatro islas"
+	line "desiertas."
 
-	para "Bad kids are taken"
-	line "to the islands as"
-	cont "punishment!"
+	para "¡Los niños malos"
+	line "van a las islas"
+	cont "como castigo!"
 	done
 
 OlivinePunishmentSpeechHouseDaughterText:
-	text "Whenever I get in"
-	line "trouble, Daddy"
-	cont "always scares me."
+	text "Cuando me meto en"
+	line "líos, papá siempre"
+	cont "se enfada."
 	done
 
 OlivinePunishmentSpeechHouse_MapEvents:

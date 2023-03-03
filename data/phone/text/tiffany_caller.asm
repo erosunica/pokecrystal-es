@@ -1,137 +1,142 @@
 TiffanyMonIsAdorableText:
-	text "My @"
+	text "Mi @"
 	text_ram wStringBuffer4
-	text "'s"
-	line "adorable, don't"
+	text " es"
+	line "adorable, ¿no"
 
-	para "you think so?"
-	line "I always sleep"
+	para "crees?"
+	line "Siempre duermo"
 
-	para "with it--it's so"
-	line "fluffy and warm!"
+	para "con él, ¡es blando"
+	line "y calentito!"
 	done
 
 TiffanyDefeatedMonText:
-	text "Oh, and we had to"
-	line "battle a wild"
+	text "Oh, y teníamos"
+	line "que luchar contra"
 
-	para "@"
+	para "un @"
 	text_ram wStringBuffer4
-	text " a while"
-	line "ago…"
+	text " sal-"
+	line "vaje hace un rato…"
 
-	para "My CLEFAIRY came"
-	line "close to fainting!"
+	para "¡Mi CLEFAIRY casi"
+	line "se desmaya!"
 
-	para "Isn't that awful?"
+	para "¿No es horrible?"
 
-	para "I hate those nasty"
+	para "¡Odio a los"
 	line "@"
 	text_ram wStringBuffer4
 	text "!"
 	done
 
 TiffanyLostAMonText:
-	text "Oh, and we had to"
-	line "battle a wild"
+	text "Oh, y teníamos que"
+	line "luchar contra un"
 
 	para "@"
 	text_ram wStringBuffer4
-	text " a while"
-	line "ago…"
+	text " sal-"
+	line "vaje hace un rato…"
 
-	para "My CLEFAIRY got"
-	line "frightened, so we"
+	para "¡Mi CLEFAIRY se"
+	line "asustó, así que"
 
-	para "ran away as fast"
-	line "as we could!"
+	para "huimos tan rápido"
+	line "como pudimos!"
 
-	para "I just can't help"
-	line "feeling protective"
-	cont "of my CLEFAIRY."
+	para "No puedo evitar"
+	line "ser protectora"
+	cont "con mi CLEFAIRY."
 	done
 
 TiffanyBattleRematchText:
-	text "I know this might"
-	line "surprise you, but"
+	text "Sé que esto puede"
+	line "sorprenderte, pero"
 
-	para "would you like to"
-	line "battle?"
+	para "¿querrías luchar"
+	line "conmigo?"
 
-	para "I'll be waiting"
-	line "with CLEFAIRY on"
+	para "Te espero con"
+	line "CLEFAIRY en"
 	cont "@"
 	text_ram wStringBuffer5
 	text "."
 	done
 
 TiffanyItsAwfulText:
+	text "¡@"
 	text_ram wStringBuffer4
 	text "!"
 
-	para "It's awful."
-	line "My CLEFAIRY…"
+	para "Es horrible."
+	line "Mi CLEFAIRY…"
 
-	para "Huh? <PLAY_G>?"
+	para "¿Eh? ¿<PLAY_G>?"
 
-	para "Oh, sorry! I was"
-	line "in a hurry, and I…"
+	para "¡Oh, lo siento!"
+	line "Tenía prisa y…"
 
-	para "I have to go!"
-	line "Bye-bye!"
+	para "¡Debo irme!"
+	line "¡Adiós!"
 	done
 
 TiffanyHangUpText:
-	text "Bye-bye!"
+	text "¡Adiós!"
 	done
 
 TiffanyFoundItemText:
-	text "I bought some PINK"
-	line "BOWS at GOLDENROD"
+	text "Compré unos LAZOS"
+	line "ROSA en el CENTRO"
 
-	para "DEPT.STORE for my"
-	line "CLEFAIRY."
+	para "COMERCIAL de"
+	line "CIUDAD TRIGAL"
+	cont "para mi CLEFAIRY."
 
-	para "I got too many, so"
-	line "I'll give you one!"
+	para "¡Como tengo muchos"
+	line "te puedo dar uno!"
 
-	para "Come collect it on"
+	para "Recógelo en"
 	line "@"
 	text_ram wStringBuffer5
 	text "."
 	done
 
 TiffanyNoItemText:
-	text "I love dressing up"
-	line "my CLEFAIRY!"
+	text "¡Me encanta"
+	line "disfrazar a mi"
+	cont "CLEFAIRY!"
 	done
 
 TiffanyAsleepText:
-	text "What's wrong?"
-	line "Can't you visit?"
+	text "¿Qué ocurre?"
+	line "¿No puedes venir?"
 
-	para "CLEFAIRY got tired"
-	line "and fell asleep."
+	para "CLEFAIRY se cansó"
+	line "y se durmió."
 
-	para "I'm not sure if I"
-	line "can wake it up…"
+	para "No sé si podré"
+	line "despertarle…"
 
-	para "Please hurry to"
-	line "@"
+	para "¡Date prisa en"
+	line "venir a"
+	cont "@"
 	text_ram wStringBuffer5
 	text "!"
 	done
 
 TiffanyHurryText:
-	text "What's wrong?"
-	line "Can't you visit?"
+	text "¿Qué ocurre?"
+	line "¿No puedes venir?"
 
-	para "I'm sure this will"
-	line "look good on your"
-	cont "CLEFAIRY."
+	para "Seguro que esto"
+	line "le sienta bien a"
+	cont "tu CLEFAIRY."
 
-	para "Please hurry to"
-	line "@"
+	para "¡Date prisa en"
+	line "venir a"
+	cont "@"
 	text_ram wStringBuffer5
 	text "!"
 	done

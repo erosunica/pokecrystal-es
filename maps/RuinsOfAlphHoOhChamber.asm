@@ -109,37 +109,39 @@ RuinsOfAlphHoOhChamberSkyfallTopMovement:
 	step_end
 
 RuinsOfAlphHoOhChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "Aparecieron"
+	line "dibujos en las"
+	cont "paredes…"
 	done
 
 RuinsOfAlphHoOhChamberUnownText:
 ; unused
-	text "It's UNOWN text!"
+	text "¡Es texto UNOWN!"
 	done
 
 RuinsOfAlphHoOhChamberWallPatternRightText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "Aparecieron"
+	line "dibujos en las"
+	cont "paredes…"
 	done
 
 RuinsOfAlphHoOhChamberWallHoleText:
-	text "There's a big hole"
-	line "in the wall!"
+	text "¡Hay un gran agu-"
+	line "jero en la pared!"
 	done
 
 RuinsOfAlphHoOhChamberAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "Es una réplica de"
+	line "un antiguo"
+	cont "#MON."
 	done
 
 RuinsOfAlphHoOhChamberDescriptionText:
-	text "A #MON that"
-	line "flew gracefully on"
+	text "Un #MON que mo-"
+	line "vía con gracia sus"
 
-	para "rainbow-colored"
-	line "wings."
+	para "alas de los colo-"
+	line "res del arco iris."
 	done
 
 RuinsOfAlphHoOhChamber_MapEvents:

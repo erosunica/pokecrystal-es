@@ -3,73 +3,73 @@ BattleTowerTrainers:
 ; Instead, the sixth character in the trainer's name is used.
 ; See BattleTowerText in engine/events/battle_tower/trainer_text.asm.
 	db "HANSON@@@@", FISHER
-	db "SAWYER@@@@", POKEMANIAC
-	db "MASUDA@@@@", GUITARIST
-	db "NICKEL@@@@", SCIENTIST
+	db "SOYA@@@@@@", POKEMANIAC
+	db "MASU@@@@@@", GUITARIST
+	db "NICKY@@@@@", SCIENTIST
 	db "OLSON@@@@@", POKEFANM
-	db "ZABOROWSKI", LASS
-	db "WRIGHT@@@@", YOUNGSTER
-	db "ALEXANDER@", HIKER
+	db "ZABORA@@@@", LASS
+	db "RUPERTO@@@", YOUNGSTER
+	db "ALEJO@@@@@", HIKER
 	db "KAWAKAMI@@", TEACHER
-	db "BICKETT@@@", POKEFANM
-	db "SAITO@@@@@", KIMONO_GIRL
-	db "CRAWFORD@@", BOARDER
-	db "DIAZ@@@@@@", PICNICKER
-	db "ERICKSON@@", BIKER
-	db "FAIRFIELD@", JUGGLER
-	db "HUNTER@@@@", POKEFANF
-	db "HILL@@@@@@", FIREBREATHER
-	db "JAVIER@@@@", SWIMMERF
+	db "VOLDO@@@@@", POKEFANM
+	db "KIM@@@@@@@", KIMONO_GIRL
+	db "PAN@@@@@@@", BOARDER
+	db "DÍAZ@@@@@@", PICNICKER
+	db "ERICK@@@@@", BIKER
+	db "FAIR@@@@@@", JUGGLER
+	db "MUFFY@@@@@", POKEFANF
+	db "JUNI@@@@@@", FIREBREATHER
+	db "JÁVEA@@@@@", SWIMMERF
 	db "KAUFMAN@@@", SWIMMERM
-	db "LANCASTER@", SKIER
-	db "McMAHILL@@", CAMPER
+	db "CASTA@@@@@", SKIER
+	db "JUNIOR@@@@", CAMPER
 ; The following can only be sampled in Crystal 1.1.
-	db "OBRIEN@@@@", GENTLEMAN
+	db "OCÓN@@@@@@", GENTLEMAN
 	db "FROST@@@@@", BEAUTY
-	db "MORSE@@@@@", SUPER_NERD
+	db "MORS@@@@@@", SUPER_NERD
 	db "YUFUNE@@@@", BLACKBELT_T
-	db "RAJAN@@@@@", COOLTRAINERF
-	db "RODRIGUEZ@", OFFICER
+	db "RAYA@@@@@@", COOLTRAINERF
+	db "RODRI@@@@@", OFFICER
 	db "SANTIAGO@@", PSYCHIC_T
-	db "STOCK@@@@@", POKEFANM
-	db "THURMAN@@@", SCIENTIST
-	db "VALENTINO@", BEAUTY
+	db "CASCABEL@@", POKEFANM
+	db "THURM@@@@@", SCIENTIST
+	db "VALENTINA@", BEAUTY
 	db "WAGNER@@@@", CAMPER
 	db "YATES@@@@@", BIRD_KEEPER
-	db "ANDREWS@@@", PICNICKER
-	db "BAHN@@@@@@", POKEMANIAC
+	db "LÓPEZ@@@@@", PICNICKER
+	db "BAR@@@@@@@", POKEMANIAC
 	db "MORI@@@@@@", SCIENTIST
-	db "BUCKMAN@@@", SAGE
-	db "COBB@@@@@@", SCHOOLBOY
-	db "HUGHES@@@@", FISHER
-	db "ARITA@@@@@", KIMONO_GIRL
-	db "EASTON@@@@", PSYCHIC_T
+	db "KONDO@@@@@", SAGE
+	db "MINI@@@@@@", SCHOOLBOY
+	db "PÉREZ@@@@@", FISHER
+	db "ARI@@@@@@@", KIMONO_GIRL
+	db "CAMP@@@@@@", PSYCHIC_T
 	db "FREEMAN@@@", CAMPER
-	db "GIESE@@@@@", LASS
-	db "HATCHER@@@", GENTLEMAN
+	db "GERTRU@@@@", LASS
+	db "DINER@@@@@", GENTLEMAN
 	db "JACKSON@@@", POKEFANF
-	db "KAHN@@@@@@", POKEMANIAC
-	db "LEONG@@@@@", YOUNGSTER
-	db "MARINO@@@@", TEACHER
-	db "NEWMAN@@@@", SAILOR
-	db "NGUYEN@@@@", BLACKBELT_T
-	db "OGDEN@@@@@", SUPER_NERD
-	db "PARK@@@@@@", COOLTRAINERF
-	db "RAINE@@@@@", SWIMMERM
-	db "SELLS@@@@@", BIRD_KEEPER
-	db "ROCKWELL@@", BOARDER
-	db "THORNTON@@", LASS
-	db "TURNER@@@@", OFFICER
-	db "VAN DYKE@@", SKIER
-	db "WALKER@@@@", SCHOOLBOY
-	db "MEYER@@@@@", SWIMMERF
-	db "JOHNSON@@@", YOUNGSTER
-	db "ADAMS@@@@@", GUITARIST
-	db "SMITH@@@@@", BUG_CATCHER
-	db "TAJIRI@@@@", BUG_CATCHER
-	db "BAKER@@@@@", POKEMANIAC
-	db "COLLINS@@@", SCIENTIST
-	db "SMART@@@@@", SUPER_NERD
-	db "DYKSTRA@@@", SWIMMERF
-	db "EATON@@@@@", BIKER
-	db "WONG@@@@@@", FIREBREATHER
+	db "COBU@@@@@@", POKEMANIAC
+	db "LEÓN@@@@@@", YOUNGSTER
+	db "MARINA@@@@", TEACHER
+	db "WILLY@@@@@", SAILOR
+	db "ARRÁS@@@@@", BLACKBELT_T
+	db "OJÉN@@@@@@", SUPER_NERD
+	db "SONIA@@@@@", COOLTRAINERF
+	db "AGUAS@@@@@", SWIMMERM
+	db "SERES@@@@@", BIRD_KEEPER
+	db "ROC@@@@@@@", BOARDER
+	db "TURNER@@@@", LASS
+	db "VICENT@@@@", OFFICER
+	db "VANDY@@@@@", SKIER
+	db "RANGO@@@@@", SCHOOLBOY
+	db "CAMINO@@@@", SWIMMERF
+	db "JUANITO@@@", YOUNGSTER
+	db "ADÁN@@@@@@", GUITARIST
+	db "SATOS@@@@@", BUG_CATCHER
+	db "TAJIR@@@@@", BUG_CATCHER
+	db "VACA@@@@@@", POKEMANIAC
+	db "COLÍN@@@@@", SCIENTIST
+	db "MORT@@@@@@", SUPER_NERD
+	db "RAMONA@@@@", SWIMMERF
+	db "RULI@@@@@@", BIKER
+	db "ÍGNEO@@@@@", FIREBREATHER

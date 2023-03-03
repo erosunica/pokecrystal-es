@@ -19,14 +19,14 @@ ENDM
 
 UnownWalls:
 ; UNOWNWORDS_ESCAPE
-	; db      $08, $44, $04, $00, $2e, $08, -1
-	unownwall "E", "S", "C", "A", "P", "E"
+	; db      $0e, $48, $20, $06, $00, -1
+	unownwall "H", "U", "I", "D", "A"
 ; UNOWNWORDS_LIGHT
-	; db      $26, $20, $0c, $0e, $46, -1
-	unownwall "L", "I", "G", "H", "T"
+	; db      $64, $26, $48, $62, $64, -1
+	unownwall "-", "L", "U", "Z", "-"
 ; UNOWNWORDS_WATER
-	; db      $4c, $00, $46, $08, $42, -1
-	unownwall "W", "A", "T", "E", "R"
+	; db      $00, $0c, $48, $00, -1
+	unownwall "A", "G", "U", "A"
 ; UNOWNWORDS_HO_OH
 	; db      $0e, $2c, $64, $2c, $0e, -1
 	unownwall "H", "O", "-", "O", "H"
@@ -34,13 +34,13 @@ UnownWalls:
 MenuHeaders_UnownWalls:
 ; UNOWNWORDS_ESCAPE
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 3, 4, 16, 9
+	menu_coords 4, 4, 15, 9
 ; UNOWNWORDS_LIGHT
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 4, 4, 15, 9
 ; UNOWNWORDS_WATER
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 4, 4, 15, 9
+	menu_coords 5, 4, 14, 9
 ; UNOWNWORDS_HO_OH
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 4, 4, 15, 9

@@ -1,10 +1,10 @@
-	db "ROCK SKIN@" ; species name
-	dw 200, 1590 ; height, weight
+	db "PIEL ROCA@" ; species name
+	dbw 6, 720 ; height, weight
 
-	db   "Born deep under-"
-	next "ground, this"
-	next "#MON becomes a"
+	db   "Nacido en las"
+	next "profundidades"
+	next "subterráneas, este"
 
-	page "pupa after eating"
-	next "enough dirt to"
-	next "make a mountain.@"
+	page "#MON come tanta"
+	next "basura como para"
+	next "hacer una montaña.@"

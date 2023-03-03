@@ -1,10 +1,10 @@
-	db "SWINE@" ; species name
-	dw 307, 1230 ; height, weight
+	db "PUERCO@" ; species name
+	dbw 11, 558 ; height, weight
 
-	db   "Although its legs"
-	next "are short, its"
-	next "rugged hooves"
+	db   "Aunque tiene las"
+	next "patas cortas, las"
+	next "fuertes pezuñas le"
 
-	page "prevent it from"
-	next "slipping, even on"
-	next "icy ground.@"
+	page "permiten agarrarse"
+	next "bien al suelo, a"
+	next "pesar del hielo.@"

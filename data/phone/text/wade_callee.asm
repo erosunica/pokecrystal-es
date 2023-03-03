@@ -1,77 +1,82 @@
 WadeAnswerPhoneText:
-	text "Hello? This is"
+	text "¿Diga? Al habla"
 	line "@"
 	text_ram wStringBuffer3
-	text " speaking."
+	text "."
 
-	para "Oh. Hi, <PLAY_G>!"
-	line "Good morning!"
+	para "¡Hola, <PLAY_G>!"
+	line "¡Buenos días!"
 	done
 
 WadeAnswerPhoneDayText:
-	text "Hello? This is"
+	text "¿Diga? Al habla"
 	line "@"
 	text_ram wStringBuffer3
-	text " speaking."
+	text "."
 
-	para "Oh, hi, <PLAY_G>!"
+	para "¡Hola, <PLAY_G>!"
 	done
 
 WadeAnswerPhoneNiteText:
-	text "Hello? This is"
+	text "¿Hola? Al habla"
 	line "@"
 	text_ram wStringBuffer3
-	text " speaking."
+	text "."
 
-	para "Oh, hi, <PLAY_G>!"
-	line "Good evening!"
+	para "¡Hola, <PLAY_G>!"
+	line "¡Buenas noches!"
 	done
 
 WadeGreetText:
-	text "<PLAY_G>, good"
-	line "morning!"
+	text "¡<PLAY_G>, buenos"
+	line "días!"
 
-	para "It's me, @"
+	para "Soy yo, @"
 	text_ram wStringBuffer3
 	text "."
-	line "Isn't it nice out?"
+	line "¿A que hace un día"
+	cont "estupendo?"
 	done
 
 WadeGreetDayText:
-	text "<PLAY_G>, howdy!"
+	text "¡Hola, <PLAY_G>!"
 
-	para "It's me, @"
+	para "Soy yo, @"
 	text_ram wStringBuffer3
 	text "."
-	line "Isn't it nice out?"
+	line "¿A que hace un día"
+	cont "estupendo?"
 	done
 
 WadeGreetNiteText:
-	text "Good evening,"
+	text "¡Buenas noches,"
 	line "<PLAY_G>!"
 
-	para "It's me, @"
+	para "Soy yo, @"
 	text_ram wStringBuffer3
 	text "."
-	line "Were you awake?"
+	line "¿Estabas"
+	cont "durmiendo?"
 	done
 
 WadeGenericText:
-	text "How are your"
-	line "#MON doing?"
+	text "¿Qué tal están tus"
+	line "#MON?"
 
-	para "My #MON have"
-	line "too much energy to"
+	para "Mis #MON tienen"
+	line "demasiada energía."
 
-	para "burn. It gets to"
-	line "be a problem."
+	para "Puede llegar a ser"
+	line "un problema."
 
-	para "Of all my #MON,"
-	line "@"
+	para "De todos mis #-"
+	line "MON, @"
 	text_ram wStringBuffer4
-	text " is the"
-	cont "hardest to handle."
+	text " es"
 
-	para "Working with it is"
-	line "exhausting."
+	para "el más difícil de"
+	line "controlar."
+
+	para "Trabajar con él"
+	line "cansa mucho."
 	done

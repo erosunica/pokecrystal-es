@@ -66,68 +66,70 @@ Route17HiddenMaxElixer:
 	hiddenitem MAX_ELIXER, EVENT_ROUTE_17_HIDDEN_MAX_ELIXER
 
 BikerRileySeenText:
-	text "Hey, you! You're"
-	line "from JOHTO, huh?"
+	text "¡Eh, tú! Eres de"
+	line "JOHTO, ¿verdad?"
 	done
 
 BikerRileyBeatenText:
-	text "Whoa, you kick!"
+	text "¡Venga, golpea!"
 	done
 
 BikerRileyAfterBattleText:
-	text "Don't get cocky,"
-	line "you JOHTO punk!"
+	text "¡No te pases, que"
+	line "esto no es JOHTO!"
 	done
 
 BikerJoelSeenText:
-	text "Wow. That's a cool"
-	line "BICYCLE!"
+	text "¡Uau! ¡Qué BICI"
+	line "más guay!"
 	done
 
 BikerJoelBeatenText:
-	text "But you don't just"
-	line "look cool…"
+	text "Pero tú no"
+	line "pareces guay…"
 	done
 
 BikerJoelAfterBattleText:
-	text "I look cool, but"
-	line "I'm weak, so I'm"
-	cont "not really cool."
+	text "Soy guay, pero"
+	line "estoy débil. Por"
+	cont "eso no lo parezco."
 
-	para "I have to train"
-	line "harder…"
+	para "Debería entrenar"
+	line "mucho más…"
 	done
 
 BikerGlennSeenText:
-	text "Hey! Want to have"
-	line "a speed battle?"
+	text "¡Eh! ¿Un combate"
+	line "rapidito?"
 	done
 
 BikerGlennBeatenText:
-	text "Yikes! You've got"
-	line "awesome torque!"
+	text "¡Vaya!"
+	line "¡Qué vitalidad!"
 	done
 
 BikerGlennAfterBattleText:
-	text "Hands-free riding"
-	line "is considered cool"
-	cont "on CYCLING ROAD."
+	text "Montar sin manos"
+	line "en el CAMINO de"
+	cont "BICIS es muy guay."
 	done
 
 BikerCharlesSeenText:
-	text "We're fearless"
-	line "highway stars!"
+	text "¡Somos estrellas"
+	line "de la carretera!"
 	done
 
 BikerCharlesBeatenText:
-	text "Arrrgh! Crash and"
-	line "burn!"
+	text "¡Arrrg! ¡Chocar y"
+	line "arder!"
 	done
 
 BikerCharlesAfterBattleText:
-	text "Reckless driving"
-	line "causes accidents!"
-	cont "Take it easy!"
+	text "¡Conducir de forma"
+	line "imprudente causa"
+
+	para "accidentes! ¡Ten"
+	line "cuidado!"
 	done
 
 Route17_MapEvents:

@@ -32,103 +32,105 @@ BattleTowerOutsideSign:
 
 BattleTowerOutsideYoungsterText_NotYetOpen:
 ; unreferenced
-	text "Wow, the BATTLE"
-	line "TOWER is huge! My"
+	text "¡Guau, la TORRE es"
+	line "inmensa!"
 
-	para "neck is tired from"
-	line "looking up at it."
+	para "Me duele el cuello"
+	line "de alzar la vista."
 	done
 
 BattleTowerOutsideYoungsterText_Mobile:
 ; unreferenced
-	text "Wow, the BATTLE"
-	line "TOWER is huge!"
+	text "¡Guau, la TORRE"
+	line "BATALLA es enorme!"
 
-	para "Since there are a"
-	line "whole bunch of"
+	para "Habiendo tanto"
+	line "entrenador ahí"
 
-	para "trainers inside,"
-	line "there must also be"
+	para "dentro, también"
+	line "debe de haber una"
 
-	para "a wide variety of"
+	para "gran variedad de"
 	line "#MON."
 	done
 
 BattleTowerOutsideYoungsterText:
-	text "Wow, the BATTLE"
-	line "TOWER is huge!"
+	text "¡Guau, la TORRE"
+	line "BATALLA es enorme!"
 
-	para "There must be many"
-	line "kinds of #MON"
-	cont "in there!"
+	para "¡Debe de haber"
+	line "muchas clases de "
+	cont "#MON dentro!"
 	done
 
 BattleTowerOutsideBuenaText_NotYetOpen:
 ; unreferenced
-	text "What on earth do"
-	line "they do here?"
+	text "¿Pero qué es lo"
+	line "que hacen aquí?"
 
-	para "If the name says"
-	line "anything, I guess"
+	para "Si es lo que dice"
+	line "el nombre, me"
 
-	para "it must be for"
-	line "#MON battles."
+	para "imagino que serán"
+	line "batallas #MON."
 	done
 
 BattleTowerOutsideBuenaText:
-	text "You can use only"
-	line "three #MON."
+	text "Sólo puedes usar"
+	line "tres #MON."
 
-	para "It's so hard to"
-	line "decide which three"
+	para "Es tan difícil"
+	line "decidir qué tres"
 
-	para "should go into"
-	line "battle…"
+	para "deberían ir a la"
+	line "batalla…"
 	done
 
 BattleTowerOutsideSailorText_Mobile:
 ; unreferenced
-	text "Ehehehe…"
-	line "I sneaked out of"
-	cont "work to come here."
+	text "Jejeje… Me"
+	line "escapé del trabajo"
+	cont "para venir."
 
-	para "I'm never giving"
-	line "up until I become"
-	cont "a LEADER!"
+	para "¡No abandonaré"
+	line "hasta que consiga"
+	cont "ser LÍDER!"
 	done
 
 BattleTowerOutsideSailorText:
-	text "Hehehe, I snuck"
-	line "out from work."
+	text "Je, je… Me escapé"
+	line "del trabajo."
 
-	para "I can't bail out"
-	line "until I've won!"
+	para "¡No puedo achicar"
+	line "agua hasta que"
+	cont "haya ganado!"
 
-	para "I have to win it"
-	line "all. That I must!"
+	para "Tengo que ganarlo"
+	line "todo. ¡Debo"
+	cont "ganarlo!"
 	done
 
 BattleTowerOutsideSignText_NotYetOpen:
 ; unused; originally shown when the Battle Tower was closed
-	text "BATTLE TOWER"
+	text "TORRE BATALLA"
 	done
 
 BattleTowerOutsideSignText:
-	text "BATTLE TOWER"
+	text "TORRE BATALLA"
 
-	para "Take the Ultimate"
-	line "Trainer Challenge!"
+	para "¡Acepta el desafío"
+	line "definitivo!"
 	done
 
 BattleTowerOutsideText_DoorsClosed:
 ; unused; originally shown when the Battle Tower was closed
-	text "The BATTLE TOWER's"
-	line "doors are closed…"
+	text "La TORRE BATALLA"
+	line "está cerrada…"
 	done
 
 BattleTowerOutsideText_DoorsOpen:
 ; unused; originally shown after the Battle Tower opened
-	text "It's open!"
+	text "¡Está abierta!"
 	done
 
 BattleTowerOutside_MapEvents:

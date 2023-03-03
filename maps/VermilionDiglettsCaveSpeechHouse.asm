@@ -10,12 +10,14 @@ VermilionDiglettsCaveSpeechHouseGentlemanScript:
 	jumptextfaceplayer VermilionDiglettsCaveSpeechHouseGentlemanText
 
 VermilionDiglettsCaveSpeechHouseGentlemanText:
-	text "Over many years,"
-	line "DIGLETT dug a"
-	cont "large tunnel."
+	text "Durante años,"
+	line "DIGLETT ha estado"
 
-	para "That tunnel goes"
-	line "to a distant town."
+	para "excavando un gran"
+	line "túnel."
+
+	para "El túnel lleva a"
+	line "una ciudad lejana."
 	done
 
 VermilionDiglettsCaveSpeechHouse_MapEvents:

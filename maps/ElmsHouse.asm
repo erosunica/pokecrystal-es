@@ -20,65 +20,67 @@ ElmsHouseBookshelf:
 	jumpstd difficultbookshelf
 
 ElmsWifeText:
-	text "Hi, <PLAY_G>! My"
-	line "husband's always"
+	text "¡Hola, <PLAY_G>!"
+	line "Mi marido siempre"
 
-	para "so busy--I hope"
-	line "he's OK."
+	para "está muy ocupado."
+	line "Espero que esté"
+	cont "bien."
 
-	para "When he's caught"
-	line "up in his #MON"
+	para "Cuando está"
+	line "embebido en la"
 
-	para "research, he even"
-	line "forgets to eat."
+	para "investigación"
+	line "#MON, se olvida"
+	cont "hasta de comer."
 	done
 
 ElmsSonText:
-	text "When I grow up,"
-	line "I'm going to help"
-	cont "my dad!"
+	text "¡Cuando sea mayor,"
+	line "ayudaré a mi"
+	cont "padre!"
 
-	para "I'm going to be a"
-	line "great #MON"
-	cont "professor!"
+	para "¡Voy a ser un gran"
+	line "profesor #MON!"
 	done
 
 ElmsHouseLabFoodText:
 ; unused
-	text "There's some food"
-	line "here. It must be"
-	cont "for the LAB."
+	text "Aquí hay comida."
+	line "Debe de ser para"
+	cont "el LABORATORIO."
 	done
 
 ElmsHousePokemonFoodText:
 ; unused
-	text "There's some food"
-	line "here. This must be"
-	cont "for #MON."
+	text "Aquí hay comida."
+	line "Debe de ser para"
+	cont "los #MON."
 	done
 
 ElmsHousePCText:
-	text "#MON. Where do"
-	line "they come from? "
+	text "#MON… ¿De"
+	line "dónde vienen?"
 
-	para "Where are they"
-	line "going?"
+	para "¿Adónde van?"
 
-	para "Why has no one"
-	line "ever witnessed a"
-	cont "#MON's birth?"
+	para "¿Por qué nadie ha"
+	line "visto un #MON"
+	cont "nacer?"
 
-	para "I want to know! I"
-	line "will dedicate my"
+	para "¡Quiero saberlo!"
+	line "¡Dedicaré mi vida"
 
-	para "life to the study"
-	line "of #MON!"
+	para "al estudio de"
+	line "los #MON!"
 
 	para "…"
 
-	para "It's a part of"
-	line "PROF.ELM's re-"
-	cont "search papers."
+	para "Es parte de los"
+	line "papeles de la"
+
+	para "investigación del"
+	line "PROF. ELM."
 	done
 
 ElmsHouse_MapEvents:

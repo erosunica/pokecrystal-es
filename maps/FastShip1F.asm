@@ -206,81 +206,81 @@ MovementData_0x75238:
 	step_end
 
 FastShip1FSailor1Text_ToVermilion:
-	text "FAST SHIP S.S.AQUA"
-	line "is en route to"
-	cont "VERMILION CITY."
+	text "El FERRY S.S. AQUA"
+	line "se dirige a"
+	cont "CIUDAD CARMÍN."
 
-	para "We will make an"
-	line "announcement when"
-	cont "we arrive."
+	para "Daremos un aviso"
+	line "cuando lleguemos."
 	done
 
 FastShip1FSailor1Text_ToOlivine:
-	text "FAST SHIP S.S.AQUA"
-	line "is en route to"
-	cont "OLIVINE CITY."
+	text "El FERRY S.S. AQUA"
+	line "se dirige a"
+	cont "CIUDAD OLIVO."
 
-	para "We will make an"
-	line "announcement when"
-	cont "we arrive."
+	para "Daremos un aviso"
+	line "cuando lleguemos."
 	done
 
 FastShip1FSailor2Text_FirstTime:
-	text "Here's your cabin."
+	text "Éste es tu"
+	line "camarote."
 
-	para "If your #MON"
-	line "are hurt, take a"
-	cont "nap in the bed."
+	para "Si están cansados"
+	line "tus #MON,"
 
-	para "That will heal"
-	line "them."
+	para "échate una"
+	line "siestecita."
+
+	para "Eso los curará."
 	done
 
 FastShip1FSailor2Text:
-	text "Here's your cabin."
+	text "Es tu camarote."
 
-	para "You can heal your"
-	line "#MON by taking"
-	cont "a nap in the bed."
+	para "Puedes curar a tus"
+	line "#MON durmiendo"
+	cont "una siesta."
 
-	para "The ship will"
-	line "arrive while"
-	cont "you're sleeping."
+	para "El barco llegará"
+	line "a su destino"
+	cont "mientras duermes."
 	done
 
 FastShip1FSailor3Text:
-	text "The passengers are"
-	line "all trainers."
+	text "Los pasajeros son"
+	line "entrenadores."
 
-	para "They're all itch-"
-	line "ing to battle in"
-	cont "their cabins."
+	para "Están deseando"
+	line "luchar en sus"
+	cont "camarotes."
 	done
 
 FastShip1FGrandpaText:
-	text "Whoa! Excuse me."
-	line "I was in a hurry!"
+	text "¡Auuu! Perdóname."
+	line "¡Tengo prisa!"
 
-	para "My granddaughter"
-	line "is missing!"
+	para "¡Mi nieta ha"
+	line "desaparecido!"
 
-	para "She's just a wee"
-	line "girl. If you see"
+	para "Es muy pequeña."
+	line "¡Si la ves, por"
 
-	para "her, please let me"
-	line "know!"
+	para "favor, házmelo"
+	line "saber!"
 	done
 
 FastShip1FSailor1Text_InOlivine:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "OLIVINE CITY."
+	text "El FERRY S.S. AQUA"
+	line "ha llegado a"
+	cont "CIUDAD OLIVO."
 	done
 
 FastShip1FSailor1Text_InVermilion:
-	text "FAST SHIP S.S.AQUA"
-	line "has arrived in"
-	cont "VERMILION CITY."
+	text "El FERRY S.S. AQUA"
+	line "ha llegado a"
+	cont "CIUDAD CARMÍN."
 	done
 
 FastShip1F_MapEvents:

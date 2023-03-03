@@ -1,212 +1,218 @@
 ElmPhoneHealYourMonText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "Try not to overdo"
-	line "it."
+	para "Intenta no"
+	line "pasarte."
 
-	para "Be sure to heal"
-	line "your #MON if"
-	cont "they are hurt."
+	para "Asegúrate de curar"
+	line "a tus #MON"
+	cont "si están heridos."
 	done
 
 ElmPhoneSawMrPokemonText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "Did you meet MR."
-	line "#MON? Great!"
-	cont "Come back safely!"
+	para "¿Conociste al SR."
+	line "#MON? ¡Genial!"
+	cont "¡Ve con cuidado!"
 	done
 
 ElmPhonePokemonStolenText:
-	text "<PLAY_G>? I'm very"
-	line "upset now."
+	text "¿<PLAY_G>? Estoy"
+	line "muy enfadado."
 
-	para "We had a #MON"
-	line "stolen from here."
+	para "Nos acaban de"
+	line "robar un #MON."
 
-	para "How could anyone"
-	line "do that?"
+	para "¿Quién podría"
+	line "hacer algo así?"
 	done
 
 ElmPhoneCheckingTheEggText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "We're checking the"
-	line "EGG now. It does"
+	para "Estamos examinando"
+	line "el HUEVO."
 
-	para "appear to be a"
-	line "#MON EGG."
+	para "Parece ser un"
+	line "HUEVO #MON."
 	done
 
 ElmPhoneAssistantText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "Did you see my"
-	line "assistant? He's at"
+	para "¿Has visto a mi"
+	line "ayudante? Está en"
 
-	para "the #MON CENTER"
-	line "in VIOLET CITY."
+	para "el CENTRO #MON"
+	line "de CIUDAD MALVA."
 	done
 
 ElmPhoneHowIsTheEggText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "How's the EGG? Has"
-	line "anything changed?"
+	para "¿Cómo está el"
+	line "HUEVO?"
+	cont "¿Ha cambiado algo?"
 
-	para "If anything hap-"
-	line "pens, please call."
+	para "Si pasa algo, por"
+	line "favor, llámame."
 	done
 
 ElmPhoneEggHatchedText:
-	text "Hello, <PLAY_G>?"
-	line "How is the EGG?"
+	text "Hola. ¿<PLAY_G>?"
+	line "¿Cómo está el"
+	cont "HUEVO?"
 
-	para "What? It hatched?"
-	line "Wow! What kind of"
-	cont "#MON is it?"
+	para "¿Qué…? "
+	line "¿Ha eclosionado?"
 
-	para "Please come show"
-	line "me now!"
+	para "¡Uau! ¿Qué clase"
+	line "de #MON es?"
+
+	para "¡Por favor, ven a"
+	line "enseñármelo!"
 	done
 
 ElmPhoneDiscoveredHatchTimeText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "I just made a new"
-	line "discovery."
+	para "He hecho un nuevo"
+	line "descubrimiento."
 
-	para "The time it takes"
-	line "for an EGG to"
+	para "El tiempo que"
+	line "tarda un HUEVO en"
 
-	para "hatch depends on"
-	line "the #MON."
+	para "eclosionar, depen-"
+	line "de del #MON."
 	done
 
 ElmPhoneInvestigatingEggMovesText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "It's still a"
-	line "mystery what kinds"
+	para "Todavía son un"
+	line "misterio los"
 
-	para "of moves hatched"
-	line "#MON have."
+	para "movimientos que"
+	line "tendrá un #MON"
+	cont "al eclosionar."
 
-	para "We're investigat-"
-	line "ing that now."
+	para "Ahora lo estamos"
+	line "investigando."
 	done
 
 ElmPhoneDiscoveredPokerusText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "I discovered an"
-	line "odd thing."
+	para "He descubierto una"
+	line "cosa muy rara."
 
-	para "Apparently there's"
-	line "something called"
+	para "Aparentemente, hay"
+	line "una cosa llamada"
 
-	para "#RUS that in-"
-	line "fects #MON."
+	para "#RUS que infec-"
+	line "ta a los #MON."
 
-	para "Yes, it's like a"
-	line "virus, so it's"
-	cont "called #RUS."
+	para "Sí, es como un"
+	line "virus, así que se"
+	cont "llama #RUS."
 
-	para "It multiplies fast"
-	line "and infects other"
+	para "Se multiplica muy"
+	line "rápido e infecta a"
 
-	para "#MON too. But"
-	line "that's all."
+	para "los #MON."
+	line "Pero eso es todo."
 
-	para "It doesn't seem to"
-	line "do anything, and"
+	para "No parece que haga"
+	line "nada y se pasa con"
+	cont "el tiempo."
 
-	para "it goes away over"
-	line "time."
-
-	para "I guess it's"
-	line "nothing to worry"
-	cont "about. Bye!"
+	para "Creo que no hay"
+	line "por qué preocu-"
+	cont "parse. ¡Adiós!"
 	done
 
 ElmPhoneDisasterText:
-	text "H-hello? <PLAY_G>?"
-	line "It's a disaster!"
+	text "¿Hola? ¿<PLAY_G>?"
+	line "¡Menudo desastre!"
 
-	para "Uh, um, it's just"
-	line "terrible!"
+	para "Sí, sí… "
+	line "¡Es terrible!"
 
-	para "What should I do?"
-	line "It… Oh, no…"
+	para "¿Qué debo hacer?"
+	line "Es… Oh, no…"
 
-	para "Please get back"
-	line "here now!"
+	para "¡Por favor, vuelve"
+	line "cuanto antes!"
 	done
 
 ElmPhoneEggAssistantText:
-	text "Hello, <PLAY_G>? We"
-	line "discovered some-"
+	text "Hola. ¿<PLAY_G>?"
+	line "¡Hemos descubierto"
 
-	para "thing about the"
-	line "EGG!"
+	para "algo acerca de los"
+	line "HUEVOS!"
 
-	para "My assistant is at"
-	line "the #MON CENTER"
+	para "Mi ayudante está"
+	line "en el CENTRO"
 
-	para "in VIOLET CITY. "
-	line "Could you talk to"
-	cont "him?"
+	para "#MON de"
+	line "CIUDAD MALVA."
+
+	para "¿Puedes hablar con"
+	line "él?"
 	done
 
 ElmPhoneRadioTowerRocketTakeoverText:
-	text "<PLAY_G>, how are"
-	line "things going?"
+	text "¿<PLAY_G>, qué tal"
+	line "van las cosas?"
 
-	para "I called because"
-	line "something weird is"
+	para "Te llamo porque"
+	line "pasa algo raro"
 
-	para "happening with the"
-	line "radio broadcasts."
+	para "con las emisiones"
+	line "de radio."
 
-	para "They were talking"
-	line "about TEAM ROCKET."
+	para "Están hablando del"
+	line "TEAM ROCKET."
 
-	para "<PLAY_G>, do you"
-	line "know anything"
-	cont "about it?"
+	para "<PLAY_G>, ¿sabes"
+	line "algo acerca de"
+	cont "ellos?"
 
-	para "Maybe TEAM ROCKET"
-	line "has returned. No,"
+	para "Quizá ha regresado"
+	line "el TEAM ROCKET."
 
-	para "that just can't"
-	line "be true."
+	para "No, no puede ser"
+	line "verdad."
 
-	para "Sorry to bug you."
-	line "Take care!"
+	para "Siento molestarte."
+	line "¡Ten cuidado!"
 	done
 
 ElmPhoneGiftText:
-	text "Hello, <PLAY_G>?"
+	text "Hola. ¿<PLAY_G>?"
 
-	para "I have something"
-	line "here for you."
+	para "Tengo aquí algo"
+	line "para ti."
 
-	para "Could you swing by"
-	line "my LAB?"
+	para "¿Puedes venir a mi"
+	line "LABORATORIO?"
 
-	para "See you later!"
+	para "¡Hasta luego!"
 	done
 
 ; unused
 ElmPhoneGotAholdOfSomethingNeatText:
-	text "Hello, <PLAY_G>?"
-	line "How's it going?"
+	text "Hola. ¿<PLAY_G>?"
+	line "¿Qué tal estás?"
 
-	para "I got ahold of"
-	line "something neat."
+	para "He conseguido"
+	line "algo estupendo."
 
-	para "Swing by my LAB"
-	line "and pick it up!"
+	para "¡Pásate por mi"
+	line "LABORATORIO para"
+	cont "recogerlo!"
 
-	para "See you later!"
+	para "¡Hasta luego!"
 	done

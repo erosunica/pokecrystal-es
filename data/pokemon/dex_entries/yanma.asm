@@ -1,10 +1,10 @@
-	db "CLEAR WING@" ; species name
-	dw 311, 840 ; height, weight
+	db "ALA CLARA@" ; species name
+	dbw 12, 380 ; height, weight
 
-	db   "It can see in all"
-	next "directions without"
-	next "moving its big"
+	db   "Puede ver en todas"
+	next "direcciones sin"
+	next "mover los ojos."
 
-	page "eyes, helping it"
-	next "spot attackers and"
-	next "food right away.@"
+	page "Así localiza a sus"
+	next "rivales y la comi-"
+	next "da que necesite.@"

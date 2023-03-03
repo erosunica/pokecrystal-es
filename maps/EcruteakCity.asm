@@ -90,171 +90,175 @@ EcruteakCityHiddenHyperPotion:
 
 UnusedMissingDaughterText:
 ; unused
-	text "Oh, no. Oh, no…"
+	text "¡Oh, no! ¡Oh, no!"
 
-	para "My daughter is"
-	line "missing."
+	para "Mi hija se ha"
+	line "perdido."
 
-	para "No… She couldn't"
-	line "have gone to the"
-	cont "BURNED TOWER."
+	para "No… No ha ido"
+	line "a TORRE QUEMADA."
 
-	para "I told her not to"
-	line "go near it…"
+	para "Le dije que no se"
+	line "acercara…"
 
-	para "People seem to"
-	line "disappear there…"
+	para "Dicen que la gente"
+	line "desaparece…"
 
-	para "Oh, what should I"
-	line "do…?"
+	para "¡Oh! ¿Qué puedo"
+	line "hacer…?"
 	done
 
 EcruteakCityGramps1Text:
-	text "ECRUTEAK used to"
-	line "have two towers:"
+	text "En CIUDAD IRIS"
+	line "había dos torres:"
 
-	para "one each in the"
-	line "east and west."
+	para "una en el Este y"
+	line "otra en el Oeste."
 	done
 
 EcruteakCityGramps2Text:
-	text "Ah, child."
-	line "Have you learned"
+	text "¡Ah, tú!"
+	line "¿Has aprendido a"
 
-	para "to dance like the"
-	line "KIMONO GIRLS?"
+	para "bailar como las"
+	line "CHICAS KIMONO?"
 
-	para "If you go to their"
-	line "DANCE THEATER, an"
+	para "Si vas a su TEATRO"
+	line "de DANZA, un raro"
 
-	para "odd old man will"
-	line "give you something"
-	cont "nice, I hear."
+	para "anciano te dará"
+	line "algo bonito."
+
+	para "Eso me han dicho."
 	done
 
 EcruteakCityLass1Text:
-	text "I'm going to prac-"
-	line "tice at the DANCE"
+	text "Voy a practicar en"
+	line "el TEATRO de"
+	cont "DANZA."
 
-	para "THEATER. Care to"
-	line "join me?"
+	para "¿Vienes conmigo?"
 	done
 
 EcruteakCityLass2Text:
-	text "The tower that"
-	line "used to be here…"
+	text "La torre que"
+	line "había aquí…"
 
-	para "My grandma told me"
-	line "it used to be much"
-	cont "taller."
+	para "Mi abuela me dijo"
+	line "que era mucho"
+	cont "más alta."
 	done
 
 EcruteakCityLass2Text_ReleasedBeasts:
-	text "Three big #MON"
-	line "ran off in differ-"
-	cont "ent directions."
-	cont "What were they?"
+	text "Tres #MON"
+	line "huyeron en tres"
+
+	para "direcciones."
+	line "¿Qué eran?"
 	done
 
 EcruteakCityFisherText:
-	text "I heard a rumor"
-	line "about OLIVINE"
-	cont "LIGHTHOUSE."
+	text "He oído un rumor"
+	line "sobre el FARO"
+	cont "de C. OLIVO."
 
-	para "The #MON that"
-	line "serves as the"
+	para "El #MON que"
+	line "usan como luz ha"
+	cont "caído enfermo."
 
-	para "beacon fell ill."
-	line "Sounds like they"
-	cont "are in trouble."
+	para "Parece que tienen"
+	line "problemas."
 	done
 
 EcruteakCityFisherText_JasmineReturned:
-	text "The #MON at"
-	line "OLIVINE LIGHTHOUSE"
-	cont "has been cured."
+	text "El #MON de"
+	line "FARO OLIVO se ha"
+	cont "curado."
 
-	para "Boats can safely"
-	line "sail out to sea at"
-	cont "night again."
+	para "Los barcos pueden"
+	line "volver a navegar"
+	cont "seguros de noche."
 	done
 
 EcruteakCityYoungsterText:
-	text "I hear #MON are"
-	line "rampaging at the"
+	text "Los #MON están"
+	line "causando estragos"
 
-	para "LAKE OF RAGE. I'd"
-	line "like to see that."
+	para "en el LAGO DE LA"
+	line "FURIA. Me gustaría"
+	cont "verlo."
 	done
 
 EcruteakCityGramps3Text:
-	text "In the distant"
-	line "past…"
+	text "Hace mucho, mucho"
+	line "tiempo…"
 
-	para "This tower burned"
-	line "in a fire. Three"
+	para "Esta torre ardió"
+	line "por el fuego. Tres"
 
-	para "nameless #MON"
-	line "perished in it."
+	para "#MON descono-"
+	line "cidos perecieron"
+	cont "en ella."
 
-	para "A rainbow-colored"
-	line "#MON descended"
+	para "Un #MON con los"
+	line "colores del arco"
 
-	para "from the sky and"
-	line "resurrected them…"
+	para "iris bajó del"
+	line "cielo y los"
+	cont "resucitó…"
 
-	para "It's a legend that"
-	line "has been passed"
+	para "Es una leyenda que"
+	line "ha ido pasando de"
 
-	para "down by ECRUTEAK"
-	line "GYM LEADERS."
+	para "LÍDER a LÍDER en"
+	line "el GIMNASIO IRIS."
 
-	para "Me?"
+	para "¿Yo?"
 
-	para "I was a trainer"
-	line "way back when."
-	cont "Hohoho!"
+	para "Yo sólo soy un"
+	line "entrenador."
+	cont "¡Jo, jo, jo!"
 	done
 
 EcruteakCitySignText:
-	text "ECRUTEAK CITY"
-	line "A Historical City"
+	text "CIUDAD IRIS"
+	line "Una ciudad donde"
 
-	para "Where the Past"
-	line "Meets the Present"
+	para "conviven el pasado"
+	line "y el presente"
 	done
 
 TinTowerSignText:
-	text "TIN TOWER"
+	text "TORRE HOJALATA"
 
-	para "A legendary #-"
-	line "MON is said to"
-	cont "roost here."
+	para "Aquí duerme un"
+	line "#MON"
+	cont "legendario."
 	done
 
 EcruteakGymSignText:
-	text "ECRUTEAK CITY"
-	line "#MON GYM"
-	cont "LEADER: MORTY"
+	text "LÍDER DEL GIMNASIO"
+	line "#MON DE CIUDAD"
+	cont "IRIS: MORTI"
 
-	para "The Mystic Seer of"
-	line "the Future"
+	para "El místico adivino"
+	line "del futuro"
 	done
 
 EcruteakDanceTheaterSignText:
-	text "ECRUTEAK DANCE"
-	line "THEATER"
+	text "TEATRO DE DANZA DE"
+	line "CIUDAD IRIS"
 	done
 
 BurnedTowerSignText:
-	text "BURNED TOWER"
+	text "TORRE QUEMADA"
 
-	para "It was destroyed"
-	line "by a mysterious"
-	cont "fire."
+	para "Destruida por un"
+	line "misterioso"
+	cont "incendio"
 
-	para "Please stay away,"
-	line "as it is unsafe."
+	para "¡Atención!"
+	line "¡Peligro!"
 	done
 
 EcruteakCity_MapEvents:

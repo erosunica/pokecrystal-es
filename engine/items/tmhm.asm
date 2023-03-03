@@ -368,7 +368,7 @@ TMHM_DisplayPocketItems:
 	push af
 	sub NUM_TMS
 	ld [wTempTMHM], a
-	ld [hl], "H"
+	ld [hl], "O"
 	inc hl
 	ld de, wTempTMHM
 	lb bc, PRINTNUM_LEFTALIGN | 1, 2
@@ -450,7 +450,7 @@ Unreferenced_Function2ca95:
 	ret
 
 TMHM_String_Cancel:
-	db "CANCEL@"
+	db "SALIR@"
 
 TMHM_GetCurrentPocketPosition:
 	ld hl, wTMsHMs

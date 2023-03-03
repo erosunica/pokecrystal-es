@@ -20,7 +20,7 @@ MonSubmenu:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 6, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+	menu_coords 5, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw 0
 	db 1 ; default option
 
@@ -285,6 +285,6 @@ MenuHeader_0x24ed4:
 MenuData_0x24edc:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 3 ; items
-	db "SWITCH@"
-	db "STATS@"
-	db "CANCEL@"
+	db "CAMBIO@"
+	db "ESTAD.@"
+	db "SALIR@"

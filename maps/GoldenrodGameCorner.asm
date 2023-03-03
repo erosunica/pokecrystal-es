@@ -152,10 +152,10 @@ GoldenrodGameCornerTMVendorMenuHeader:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "TM25    5500@"
-	db "TM14    5500@"
-	db "TM38    5500@"
-	db "CANCEL@"
+	db "MT25    5500@"
+	db "MT14    5500@"
+	db "MT38    5500@"
+	db "SALIR@"
 
 GoldenrodGameCornerPrizeMonVendorScript:
 	faceplayer
@@ -241,7 +241,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	db "ABRA        100@"
 	db "CUBONE      800@"
 	db "WOBBUFFET  1500@"
-	db "CANCEL@"
+	db "SALIR@"
 
 GoldenrodGameCornerPharmacistScript:
 	faceplayer
@@ -320,160 +320,123 @@ GoldenrodGameCornerCardFlipMachineScript:
 	end
 
 GoldenrodGameCornerPrizeVendorIntroText:
-	text "Welcome!"
+	text "¡Hola!"
+	line "¡Aquí cambiamos"
 
-	para "We exchange your"
-	line "game coins for"
-	cont "fabulous prizes!"
+	para "tus fichas por"
+	line "premios fabulosos!"
 	done
 
 GoldenrodGameCornerPrizeVendorWhichPrizeText:
-	text "Which prize would"
-	line "you like?"
+	text "¿Qué premio"
+	line "quieres?"
 	done
 
 GoldenrodGameCornerPrizeVendorConfirmPrizeText:
 	text_ram wStringBuffer3
 	text "."
-	line "Is that right?"
+	line "¿De acuerdo?"
 	done
 
 GoldenrodGameCornerPrizeVendorHereYouGoText:
-	text "Here you go!"
+	text "¡Aquí tienes!"
 	done
 
 GoldenrodGameCornerPrizeVendorNeedMoreCoinsText:
-	text "Sorry! You need"
-	line "more coins."
+	text "¡Vaya! ¡Necesitas"
+	line "más fichas!"
 	done
 
 GoldenrodGameCornerPrizeVendorNoMoreRoomText:
-	text "Sorry. You can't"
-	line "carry any more."
+	text "Lo siento. No"
+	line "tienes más sitio."
 	done
 
 GoldenrodGameCornerPrizeVendorQuitText:
-	text "OK. Please save"
-	line "your coins and"
-	cont "come again!"
+	text "Vale. ¡Guarda tus"
+	line "fichas y vuelve"
+	cont "cuando quieras!"
 	done
 
 GoldenrodGameCornerPrizeVendorNoCoinCaseText:
-	text "Oh? You don't have"
-	line "a COIN CASE."
+	text "¡Vaya! No tienes"
+	line "MONEDERO."
 	done
 
 GoldenrodGameCornerPharmacistText:
-if DEF(_CRYSTAL_AU)
-	text "This machine looks"
-	line "the same as the"
-	cont "others."
-	done
-else
-	text "I always play this"
-	line "slot machine. It"
+	text "Yo siempre juego"
+	line "en esta máquina."
 
-	para "pays out more than"
-	line "others, I think."
+	para "Gano más fichas"
+	line "que en otras."
 	done
-endc
 
 GoldenrodGameCornerPokefanM1Text:
-if DEF(_CRYSTAL_AU)
-	text "These machines"
-	line "seem different"
+	text "Me encanta esta"
+	line "nueva tragaperras."
 
-	para "from the ones at"
-	line "CELADON CITY!"
+	para "Es más difícil que"
+	line "las de C. AZULONA."
 	done
-else
-	text "I just love this"
-	line "new slot machine."
-
-	para "It's more of a"
-	line "challenge than the"
-	cont "ones in CELADON."
-	done
-endc
 
 GoldenrodGameCornerCooltrainerMText:
-if DEF(_CRYSTAL_AU)
-	text "Nothing is certain"
-	line "in this area."
+	text "Vivir es un juego"
+	line "y yo jugaré hasta"
+	cont "el final."
 	done
-else
-	text "Life is a gamble."
-	line "I'm going to flip"
-	cont "cards till I drop!"
-	done
-endc
 
 GoldenrodGameCornerPokefanFText:
-	text "Card flip…"
+	text "Las cartas…"
+	line "Las prefiero a las"
 
-if DEF(_CRYSTAL_AU)
-	para "Different from the"
-	line "other machines."
+	para "tragaperras porque"
+	line "son más fáciles de"
+	cont "acertar."
+
+	para "Pero se gana mucho"
+	line "menos."
 	done
-else
-	para "I prefer it over"
-	line "the slots because"
-
-	para "it's easier to"
-	line "figure the odds."
-
-	para "But the payout is"
-	line "much lower."
-	done
-endc
 
 GoldenrodGameCornerCooltrainerFText:
-	text "I won't quit until"
-	line "I win!"
+	text "¡No pararé hasta"
+	line "que gane!"
 	done
 
 GoldenrodGameCornerGentlemanText:
-	text "I taught BLIZZARD"
-	line "to my #MON."
+	text "Enseñé VENTISCA a"
+	line "mi #MON."
 
-	para "It was hard to get"
-	line "enough coins for"
+	para "Ha sido difícil"
+	line "ganar bastantes"
 
-	para "it, but it was"
-	line "worth it."
+	para "fichas, pero ha"
+	line "merecido la pena."
 	done
 
 GoldenrodGameCornerPokefanM2Text:
-if DEF(_CRYSTAL_AU)
-	text "COIN CASE? I threw"
-	line "it away in the"
-	cont "UNDERGROUND."
+	text "No gané en las"
+	line "tragaperras y lo"
+
+	para "perdí todo en las"
+	line "cartas…"
+
+	para "Me enfadé tanto"
+	line "que tiré mi"
+
+	para "MONEDERO al"
+	line "SUBTERRÁNEO."
 	done
-else
-	text "I couldn't win at"
-	line "the slots, and I"
-
-	para "blew it on card"
-	line "flipping…"
-
-	para "I got so furious,"
-	line "I tossed out my"
-
-	para "COIN CASE in the"
-	line "UNDERGROUND."
-	done
-endc
 
 MoveTutorInsideText:
-	text "Wahahah! The coins"
-	line "keep rolling in!"
+	text "¡Uajaja! ¡Más fi-"
+	line "chas, más fichas!"
 	done
 
 GoldenrodGameCornerLeftTheirDrinkText:
-	text "Someone left their"
-	line "drink."
+	text "Alguien se dejó la"
+	line "bebida."
 
-	para "It smells sweet."
+	para "Huele dulce."
 	done
 
 GoldenrodGameCorner_MapEvents:

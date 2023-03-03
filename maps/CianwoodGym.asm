@@ -148,134 +148,134 @@ CianwoodGymMovement_ChuckChucksBoulder:
 	step_end
 
 ChuckIntroText1:
-	text "WAHAHAH!"
+	text "¡UAUUUU!"
 
-	para "So you've come"
-	line "this far!"
+	para "¡Has llegado hasta"
+	line "aquí!"
 
-	para "Let me tell you,"
-	line "I'm tough!"
+	para "¡Que sepas que soy"
+	line "muy fuerte!"
 
-	para "My #MON will"
-	line "crush stones and"
-	cont "shatter bones!"
+	para "¡Mis #MON"
+	line "aplastarán piedras"
+	cont "y romperán huesos!"
 
-	para "Watch this!"
+	para "¡Atención!"
 	done
 
 ChuckIntroText2:
-	text "CHUCK: Urggh!"
-	line "…"
+	text "ANÍBAL: ¡Urgg!"
+	line "¡Urgg…!"
 
-	para "Oooarrgh!"
+	para "¡Oooarrg!"
 	done
 
 ChuckIntroText3:
-	text "There! Scared now,"
-	line "are you?"
+	text "¿Qué? Ahora tienes"
+	line "miedo, ¿no?"
 
-	para "What?"
-	line "It has nothing to"
+	para "¿Qué? ¿No tiene"
+	line "nada que ver con"
 
-	para "do with #MON?"
-	line "That's true!"
+	para "los #MON?"
+	line "¡Es cierto!"
 
-	para "Come on. We shall"
-	line "do battle!"
+	para "Venga. ¡Luchemos!"
 	done
 
 ChuckLossText:
-	text "Wha? Huh?"
-	line "I lost?"
+	text "¿Qué? ¿Cómo?"
+	line "¿He perdido?"
 
-	para "How about that!"
-	line "You're worthy of"
-	cont "STORMBADGE!"
+	para "¡Muy bien!"
+	line "¡Te mereces la"
+	cont "MEDALLA TORMENTA!"
 	done
 
 GetStormBadgeText:
-	text "<PLAYER> received"
-	line "STORMBADGE."
+	text "<PLAYER> recibió la"
+	line "MEDALLA TORMENTA."
 	done
 
 ChuckExplainBadgeText:
-	text "STORMBADGE makes"
-	line "all #MON up to"
+	text "Con MED. TORMENTA,"
+	line "te obedecerán los"
 
-	para "L70 obey, even"
-	line "traded ones."
+	para "#MON hasta el"
+	line "nivel 70."
 
-	para "It also lets your"
-	line "#MON use FLY"
+	para "Y permitirá a tus"
+	line "#MON usar VUELO"
 
-	para "when you're not in"
-	line "a battle."
+	para "cuando no estén"
+	line "luchando."
 
-	para "Here, take this"
-	line "too!"
+	para "¡Toma esto"
+	line "también!"
 	done
 
 ChuckExplainTMText:
-	text "That is DYNAMIC-"
-	line "PUNCH."
+	text "Se trata de"
+	line "PUÑODINÁMICO."
 
-	para "It doesn't always"
-	line "hit, but when it"
+	para "¡No siempre golpea"
+	line "pero cuando lo"
 
-	para "does, it causes"
-	line "confusion!"
+	para "hace produce"
+	line "confusión!"
 	done
 
 ChuckAfterText:
-	text "WAHAHAH! I enjoyed"
-	line "battling you!"
+	text "¡UAJAJAA! ¡Ha sido"
+	line "muy divertido!"
 
-	para "But a loss is a"
-	line "loss!"
+	para "¡Pero una derrota"
+	line "es una derrota!"
 
-	para "From now on, I'm"
-	line "going to train 24"
-	cont "hours a day!"
+	para "¡Desde ahora, voy"
+	line "a entrenarme 24"
+	cont "horas al día!"
 	done
 
 BlackbeltYoshiSeenText:
-	text "My #MON and I"
-	line "are bound togeth-"
-	cont "er by friendship."
+	text "A mis #MON y"
+	line "a mí nos une una"
+	cont "gran amistad."
 
-	para "Our bond will"
-	line "never be broken!"
+	para "¡Nuestro vínculo"
+	line "nunca se romperá!"
 	done
 
 BlackbeltYoshiBeatenText:
-	text "This isn't real!"
+	text "¡No puede ser!"
 	done
 
 BlackbeltYoshiAfterText:
-	text "You seem to have a"
-	line "strong bond with"
-	cont "your #MON too!"
+	text "¡Parece que tú y"
+	line "tus #MON estáis"
+	cont "muy unidos!"
 	done
 
 BlackbeltLaoSeenText:
-	text "We martial artists"
-	line "fear nothing!"
+	text "¡Los expertos en"
+	line "artes marciales no"
+	cont "tememos a nada!"
 	done
 
 BlackbeltLaoBeatenText:
-	text "That's shocking!"
+	text "¡Es increíble!"
 	done
 
 BlackbeltLaoAfterText:
-	text "Fighting #MON"
-	line "are afraid of psy-"
-	cont "chics…"
+	text "Los #MON de"
+	line "lucha temen a los"
+	cont "psíquicos…"
 	done
 
 BlackbeltNobSeenText:
-	text "Words are useless."
-	line "Let your fists do"
-	cont "the talking!"
+	text "Las palabras no"
+	line "sirven. ¡Deja que"
+	cont "hablen tus puños!"
 	done
 
 BlackbeltNobBeatenText:
@@ -283,24 +283,24 @@ BlackbeltNobBeatenText:
 	done
 
 BlackbeltNobAfterText:
-	text "I lost! "
-	line "I'm speechless!"
+	text "¡He perdido!"
+	line "¡No sé qué decir!"
 	done
 
 BlackbeltLungSeenText:
-	text "My raging fists"
-	line "will shatter your"
-	cont "#MON!"
+	text "¡Mis furiosos"
+	line "puños destrozarán"
+	cont "a tus #MON!"
 	done
 
 BlackbeltLungBeatenText:
-	text "I got shattered!"
+	text "¡Me has aplastado!"
 	done
 
 BlackbeltLungAfterText:
-	text "My #MON lost…"
-	line "My… my pride is"
-	cont "shattered…"
+	text "¡Mis #MON han"
+	line "perdido! Has"
+	cont "herido mi orgullo."
 	done
 
 CianwoodGym_MapEvents:

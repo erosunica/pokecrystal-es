@@ -169,83 +169,87 @@ Route46FruitTree2:
 	fruittree FRUITTREE_ROUTE_46_2
 
 HikerBaileySeenText:
-	text "Awright! I'll show"
-	line "you the power of"
-	cont "mountain #MON!"
+	text "De acuerdo. ¡Te"
+	line "enseñaré el poder"
+
+	para "de los #MON"
+	line "de montaña!"
 	done
 
 HikerBaileyBeatenText:
-	text "Mercy! You showed"
-	line "me your power!"
+	text "¡Me has demostrado"
+	line "tu poder!"
 	done
 
 HikerBaileyAfterBattleText:
-	text "It's over. I don't"
-	line "mind. We HIKERS"
-	cont "are like that."
+	text "Se acabó, pero no"
+	line "me importa."
+
+	para "Los MONTAÑEROS"
+	line "somos así."
 	done
 
 CamperTedSeenText:
-	text "I'm raising #-"
-	line "MON too!"
+	text "¡Yo también"
+	line "entreno #MON!"
 
-	para "Will you battle"
-	line "with me?"
+	para "¿Quieres luchar"
+	line "contra mí?"
 	done
 
 CamperTedBeatenText:
-	text "Wha…?"
+	text "¿Qué…?"
 	done
 
 CamperTedAfterBattleText:
-	text "I did my best but"
-	line "came up short."
+	text "Hice lo que pude"
+	line "pero no sirvió."
 
-	para "No excuses--I"
-	line "admit I lost."
+	para "No hay excusa que"
+	line "valga. He perdido."
 	done
 
 PicnickerErin1SeenText:
-	text "I raise #MON"
-	line "too!"
+	text "¡Yo también"
+	line "entreno #MON!"
 
-	para "Will you battle"
-	line "with me?"
+	para "¿Quieres luchar"
+	line "contra mí?"
 	done
 
 PicnickerErin1BeatenText:
-	text "Oh, rats!"
+	text "¡Oh, narices!"
 	done
 
 PicnickerErinAfterBattleText:
-	text "I've been to many"
-	line "GYMS, but the GYM"
+	text "He estado en"
+	line "muchos GIMNASIOS,"
 
-	para "in GOLDENROD is my"
-	line "favorite."
+	para "pero el de TRIGAL"
+	line "es mi favorito."
 
-	para "It's filled with"
-	line "pretty flowers!"
+	para "¡Está lleno de"
+	line "flores preciosas!"
 	done
 
 PicnickerErin2BeatenText:
-	text "Aww… I keep losing"
-	line "all the time!"
+	text "Auuuu… ¡Pierdo"
+	line "siempre! ¡Sólo"
 
-	para "I'll just have to"
-	line "try harder!"
+	para "tengo que seguir"
+	line "intentándolo!"
 
-	para "Anyway, thanks for"
-	line "battling me again"
+	para "Bueno, gracias por"
+	line "luchar conmigo una"
 
-	para "and again. Here's"
-	line "that present from"
-	cont "the other time."
+	para "y otra vez. Toma"
+	line "este regalo de la"
+	cont "última vez."
 	done
 
 Route46SignText:
-	text "ROUTE 46"
-	line "MOUNTAIN RD. AHEAD"
+	text "RUTA 46"
+	line "CAMINO MONTAÑA"
 	done
 
 Route46_MapEvents:

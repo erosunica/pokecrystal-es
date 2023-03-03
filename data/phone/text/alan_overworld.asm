@@ -1,71 +1,75 @@
 AlanAskNumber1Text:
-	text "Reading textbooks"
-	line "is worthwhile"
-	cont "every so often."
+	text "Leer libros de"
+	line "texto a menudo"
+	cont "merece la pena."
 
-	para "When I'm reading"
-	line "and walking, I"
-	cont "have to look down."
+	para "Cuando camino y"
+	line "leo a la vez,"
 
-	para "So I notice items"
-	line "on the ground."
+	para "tengo que mirar"
+	line "hacia abajo."
 
-	para "Next time I find"
-	line "something, I'll"
-	cont "give it to you."
+	para "Así que a veces"
+	line "encuentro objetos"
+	cont "en el suelo."
 
-	para "May I have your"
-	line "phone number?"
+	para "La próxima vez que"
+	line "encuentre algo,"
+	cont "puedo dártelo."
+
+	para "¿Me das tu número"
+	line "de teléfono?"
 	done
 
 AlanAskNumber2Text:
-	text "If I find some-"
-	line "thing, it's yours."
+	text "Si encuentro algo,"
+	line "es tuyo."
 
-	para "So may I have your"
-	line "phone number?"
+	para "¿Me das tu número"
+	line "de teléfono?"
 	done
 
 AlanNumberAcceptedText:
-	text "I'll call you as"
-	line "soon as I find"
+	text "Te llamaré tan"
+	line "pronto como"
+	cont "encuentre algo."
 
-	para "something. You can"
-	line "count on it!"
+	para "¡Puedes contar con"
+	line "ello!"
 	done
 
 AlanNumberDeclinedText:
-	text "Oh… I thought it"
-	line "would be a good"
+	text "Oh… Pensaba que"
+	line "sería una buena"
 
-	para "break to call you"
-	line "when I'm studying…"
+	para "idea llamarte"
+	line "mientras estudio…"
 	done
 
 AlanPhoneFullText:
-	text "There's no room"
-	line "for my number."
+	text "No hay espacio"
+	line "para mi número."
 	done
 
 AlanRematchText:
-	text "I waited around"
-	line "for you!"
+	text "¡Estaba"
+	line "esperándote!"
 
-	para "I'm thoroughly"
-	line "prepared today!"
+	para "¡Hoy estoy"
+	line "preparado a fondo!"
 	done
 
 AlanGiftText:
-	text "This, this! This"
-	line "is yours! Ta-da!"
+	text "Esto, esto…"
+	line "¡Esto es para ti!"
 	done
 
 AlanPackFullText:
-	text "Whoops!"
+	text "¡Lástima!"
 
-	para "You can't carry"
-	line "any more items!"
+	para "¡No puedes llevar"
+	line "más objetos!"
 
-	para "I'll hold it until"
-	line "next time."
+	para "Lo guardaré hasta"
+	line "que vuelvas."
 	done

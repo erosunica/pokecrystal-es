@@ -319,189 +319,191 @@ Route44HiddenElixer:
 	hiddenitem ELIXER, EVENT_ROUTE_44_HIDDEN_ELIXER
 
 FisherWilton1SeenText:
-	text "Aack! You made me"
-	line "lose a POLIWAG!"
+	text "¡Me has hecho"
+	line "perder a POLIWAG!"
 
-	para "What are you going"
-	line "to do about it?"
+	para "¿Qué vas a hacer"
+	line "para remediarlo?"
 	done
 
 FisherWilton1BeatenText:
-	text "Just forget about"
-	line "it."
+	text "Simplemente"
+	line "olvídalo."
 	done
 
 FisherWiltonHugePoliwagText:
-	text "That POLIWAG that"
-	line "got away…"
-	cont "It was huge."
+	text "Ese POLIWAG que"
+	line "escapó…"
+	cont "Era enorme."
 
-	para "I swear it must've"
-	line "been 16 feet long!"
+	para "¡Juraría que medía"
+	line "unos 5 metros!"
 	done
 
 FisherEdgarSeenText:
-	text "I fish until I"
-	line "can't anymore."
+	text "Pesco hasta que no"
+	line "puedo más, y lucho"
+	cont "hasta desfallecer."
 
-	para "I also battle"
-	line "until I drop."
-
-	para "That's my"
-	line "relationship"
-	cont "with my #MON."
+	para "Ésta es la"
+	line "relación que tengo"
+	cont "con mis #MON."
 	done
 
 FisherEdgarBeatenText:
-	text "Hmmmm… "
-	line "This isn't right."
+	text "¡Mmmmm…!"
+	line "Eso no está bien."
 	done
 
 FisherEdgarAfterBattleText:
-	text "That's 100 wins"
-	line "to 101 losses."
+	text "Son 100 victorias"
+	line "y 101 derrotas."
 
-	para "I won't battle"
-	line "again for a while."
+	para "No lucharé en un"
+	line "rato."
 	done
 
 BirdKeeperVance1SeenText:
-	text "Do you know about"
-	line "the legendary bird"
-	cont "#MON?"
+	text "¿Sabes algo sobre"
+	line "el #MON pájaro"
+	cont "legendario?"
 	done
 
 BirdKeeperVance1BeatenText:
-	text "Whew! You're hot"
-	line "stuff."
+	text "¡Uauu! Eres el no"
+	line "va más."
 	done
 
 BirdKeeperVanceLegendaryBirdsText:
-	text "ARTICUNO, ZAPDOS"
-	line "and MOLTRES are"
+	text "ARTICUNO, ZAPDOS y"
+	line "MOLTRES son los"
 
-	para "the three legend-"
-	line "ary bird #MON."
+	para "#MON pájaro"
+	line "legendarios,"
 
-	para "I heard there are"
-	line "other legendary"
-	cont "birds, though."
+	para "aunque dicen que"
+	line "hay otros pájaros"
+	cont "legendarios."
 	done
 
 BirdKeeperVance2BeatenText:
-	text "Why can't I ever"
-	line "beat you?"
+	text "¿Por qué no"
+	line "pude vencerte?"
 
-	para "Oh yeah, here you"
-	line "go. It's that gift"
+	para "Ah, sí, aquí"
+	line "tienes. Es el"
 
-	para "I couldn't give"
-	line "you last time."
+	para "regalo que no te"
+	line "pude dar antes."
 	done
 
 PsychicPhilSeenText:
-	text "I'm gonna win,"
-	line "for sure!"
+	text "¡Voy a ganar!"
+	line "¡Seguro!"
 	done
 
 PsychicPhilBeatenText:
-	text "Arrgh… That's a"
-	line "shocking loss…"
+	text "¡Arrgh…! No"
+	line "esperaba perder."
 	done
 
 PsychicPhilAfterBattleText:
-	text "It's important to"
-	line "have conviction"
-	cont "on your side."
+	text "Es importante"
+	line "tener confianza en"
+	cont "uno mismo."
 	done
 
 PokemaniacZachSeenText:
-	text "I'll do anything"
-	line "to get my hands on"
-	cont "rare #MON!"
+	text "¡Haré lo que sea"
+	line "para conseguir"
+	cont "#MON raros!"
 	done
 
 PokemaniacZachBeatenText:
-	text "Oooh, your #MON"
-	line "are so appealing."
+	text "Oooh, tus #MON"
+	line "son muy bonitos."
 	done
 
 PokemaniacZachAfterBattleText:
-	text "If a #MON has"
-	line "different colors"
+	text "Los #MON de"
+	line "colores poco"
 
-	para "from usual, it's"
-	line "more valuable."
+	para "habituales"
+	line "tienen más valor."
 
-	para "What? You mean"
-	line "that's not true?"
+	para "¿Qué? ¿Insinúas"
+	line "que no es cierto?"
 	done
 
 CooltrainermAllenSeenText:
-	text "I can tell you're"
-	line "a good trainer by"
-	cont "looking at you."
+	text "Con sólo mirarte"
+	line "sé cuál es tu"
+	cont "nivel."
 
-	para "I'm good at #-"
-	line "MON, and I can see"
-	cont "that you are too."
+	para "Yo soy bueno con"
+	line "los #MON y veo"
+	cont "que tú también."
 	done
 
 CooltrainermAllenBeatenText:
-	text "Tch! It's a total"
-	line "loss on my part."
+	text "¡Vaya! Ha sido una"
+	line "auténtica derrota."
 	done
 
 CooltrainermAllenAfterBattleText:
-	text "Wow. You have a"
-	line "lot of BADGES."
+	text "¡Uauu! Tienes"
+	line "muchas MEDALLAS."
 
-	para "No wonder you're"
-	line "so tough."
+	para "No me extraña que"
+	line "seas tan fuerte."
 
-	para "I wonder if"
-	line "ECRUTEAK GYM's"
+	para "Me pregunto si"
+	line "MORTI, de GIMNASIO"
 
-	para "MORTY is still in"
-	line "training?"
+	para "IRIS, estará"
+	line "aún entrenándose."
 
-	para "He really hammered"
-	line "me."
+	para "Él sí que me dio"
+	line "una paliza."
 	done
 
 CooltrainerfCybilSeenText:
-	text "You look strong."
+	text "Pareces fuerte."
 
-	para "Good trainers seek"
-	line "tough opponents"
-	cont "instinctively."
+	para "Los buenos"
+	line "entrenadores"
+
+	para "siempre buscan"
+	line "buenos rivales."
 	done
 
 CooltrainerfCybilBeatenText:
-	text "Nope! This won't"
-	line "do at all."
+	text "¡No! Esto no"
+	line "servirá para nada."
 	done
 
 CooltrainerfCybilAfterBattleText:
-	text "We all get better"
-	line "by experiencing"
-	cont "many battles."
+	text "Todos mejoramos"
+	line "luchando muchas"
+	cont "veces."
 
-	para "I battled a lot to"
-	line "become what I am"
-	cont "today--an elite."
+	para "He luchado mucho"
+	line "para llegar a ser"
+
+	para "lo que soy hoy:"
+	line "una campeona."
 	done
 
 Route44Sign1Text:
-	text "ROUTE 44"
-	line "ICE PATH AHEAD"
+	text "RUTA 44"
+	line "HACIA RUTA HELADA"
 	done
 
 Route44Sign2Text:
-	text "ROUTE 44"
+	text "RUTA 44"
 
-	para "MAHOGANY TOWN -"
-	line "BLACKTHORN CITY"
+	para "PUEBLO CAOBA -"
+	line "CIUDAD ENDRINO"
 	done
 
 Route44_MapEvents:

@@ -107,137 +107,137 @@ BillsHouseRadio:
 	jumpstd radio2
 
 BillTakeThisEeveeText:
-	text "BILL: Hi, <PLAYER>!"
-	line "Do us a favor and"
-	cont "take this EEVEE."
+	text "BILL: ¡Hola,"
+	line "<PLAYER>! Haznos"
 
-	para "It came over when"
-	line "I was adjusting"
-	cont "the TIME CAPSULE."
+	para "un favor y acepta"
+	line "este EEVEE."
 
-	para "Someone has to"
-	line "take care of it,"
+	para "Apareció cuando"
+	line "ajustaba la"
 
-	para "but I don't like"
-	line "being outside."
+	para "CÁPSULA DEL"
+	line "TIEMPO."
 
-	para "Can I count on you"
-	line "to play with it,"
-	cont "<PLAYER>?"
+	para "Alguien tiene que"
+	line "cuidarlo y a mí no"
+	cont "me gusta salir."
+
+	para "¿Puedo confiar en"
+	line "ti para jugar con"
+	cont "él, <PLAYER>?"
 	done
 
 BillImCountingOnYouText:
-	text "BILL: I knew you'd"
-	line "come through!"
+	text "BILL: ¡Sabía que"
+	line "aceptarías!"
 
-	para "Way to go! You're"
-	line "the real deal!"
+	para "¡Vamos! ¡Tú sí"
+	line "que vales!"
 
-	para "OK, I'm counting"
-	line "on you."
+	para "Bueno, cuento"
+	line "contigo."
 
-	para "Take good care of"
-	line "it!"
+	para "¡Cuídalo bien!"
 	done
 
 ReceivedEeveeText:
-	text "<PLAYER> received"
-	line "EEVEE!"
+	text "¡<PLAYER> recibió"
+	line "a EEVEE!"
 	done
 
 BillEeveeMayEvolveText:
-	text "BILL: PROF.ELM"
-	line "claims EEVEE may"
+	text "BILL: ELM dice que"
+	line "EEVEE evoluciona"
 
-	para "evolve in new and"
-	line "unknown ways."
+	para "en formas nuevas y"
+	line "desconocidas."
 	done
 
 BillPartyFullText:
-	text "Whoa, wait. You"
-	line "can't carry any"
-	cont "more #MON."
+	text "No, espera."
+	line "No puedes llevar"
+	cont "más #MON."
 	done
 
 BillNoEeveeText:
-	text "Oh… Now what to"
-	line "do?"
+	text "¡Oh…! ¿Qué podemos"
+	line "hacer ahora?"
 	done
 
 BillPopWontWorkText:
-	text "BILL: My pop, he"
-	line "won't work. All he"
+	text "BILL: Mi padre no"
+	line "trabaja. Lo único"
 
-	para "does is goof off"
-	line "all day long."
+	para "que hace es"
+	line "holgazanear."
 
-	para "He's getting to be"
-	line "a real headache…"
+	para "Es que no da ni"
+	line "golpe…"
 	done
 
 BillsMomText_BeforeEcruteak:
-	text "Oh, you collect"
-	line "#MON? My son"
-	cont "BILL is an expert."
+	text "Anda, ¿coleccionas"
+	line "#MON? Mi hijo"
 
-	para "He just got called"
-	line "to the #MON"
+	para "BILL es todo un"
+	line "experto."
 
-	para "CENTER in ECRUTEAK"
-	line "CITY."
+	para "Le han llamado del"
+	line "CENTRO #MON de"
+	cont "CIUDAD IRIS."
 
-	para "My husband went"
-	line "off to the GAME"
-
-	para "CORNER without"
-	line "being called…"
+	para "Mi marido fue al"
+	line "CASINO sin que le"
+	cont "llamara nadie…"
 	done
 
 BillsMomText_AfterEcruteak:
-	text "My husband was"
-	line "once known as a"
+	text "Mi marido era"
+	line "conocido como un"
 
-	para "#MANIAC."
-	line "BILL must have"
+	para "#MANÍACO."
+	line "BILL ha debido de"
 
-	para "taken after his"
-	line "father."
+	para "seguir los pasos"
+	line "de su padre."
 	done
 
 BillsSisterUsefulNumberText:
-	text "Are you a trainer?"
+	text "¿Entrenas #MON?"
+	line "Tengo un número de"
 
-	para "I've got a useful"
-	line "phone number for"
-	cont "you."
+	para "teléfono que te"
+	line "será útil."
 	done
 
 RecordedBillsNumberText:
-	text "<PLAYER> recorded"
-	line "BILL's number."
+	text "<PLAYER> grabó el"
+	line "n.° de BILL."
 	done
 
 BillsSisterRefusedNumberText:
-	text "My brother made"
-	line "the PC #MON"
-	cont "storage system."
+	text "Mi hermano creó el"
+	line "Sistema de"
 
-	para "I was going to"
-	line "give you BILL's"
-	cont "number…"
+	para "Almacenamiento de"
+	line "#MON del PC."
+
+	para "Te iba a dar el"
+	line "teléfono de BILL…"
 	done
 
 BillsSisterPhoneFullText:
-	text "You can't record"
-	line "any more numbers."
+	text "No puedes grabar"
+	line "ningún número más."
 	done
 
 BillsSisterStorageSystemText:
-	text "My big brother"
-	line "BILL made the PC"
+	text "Mi hermano BILL"
+	line "creó el Sistema de"
 
-	para "#MON storage"
-	line "system."
+	para "Almacenamiento de"
+	line "los #MON."
 	done
 
 BillsFamilysHouse_MapEvents:

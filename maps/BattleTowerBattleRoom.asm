@@ -132,8 +132,8 @@ UnreferencedScript_0x9f4f7:
 	end
 
 Text_ReturnedAfterSave_Mobile:
-	text "You'll be returned"
-	line "after you SAVE."
+	text "Regresarás después"
+	line "de GUARDAR."
 	done
 
 BattleTowerBattleRoom_MapEvents:

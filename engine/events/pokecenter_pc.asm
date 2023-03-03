@@ -53,11 +53,11 @@ PCPC_TURN_OFF     EQU 4
 	dw HallOfFamePC, .String_HallOfFame
 	dw TurnOffPC,    .String_TurnOff
 
-.String_PlayersPC:  db "<PLAYER>'s PC@"
-.String_BillsPC:    db "BILL's PC@"
-.String_OaksPC:     db "PROF.OAK's PC@"
-.String_HallOfFame: db "HALL OF FAME@"
-.String_TurnOff:    db "TURN OFF@"
+.String_PlayersPC:  db "PC DE <PLAYER>@"
+.String_BillsPC:    db "PC DE BILL@"
+.String_OaksPC:     db "PC PROF. OAK@"
+.String_HallOfFame: db "HALL DE FAMA@"
+.String_TurnOff:    db "DESCONEXIÓN@"
 
 .WhichPC:
 	; before Pokédex
@@ -234,7 +234,7 @@ Function15715:
 
 PlayersPCMenuData:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 12
+	menu_coords 0, 0, 14, 12
 	dw .PlayersPCMenuData
 	db 1 ; default selected option
 
@@ -263,13 +263,13 @@ PLAYERSPC_LOG_OFF       EQU 6
 	dw PlayerLogOffMenu,       .LogOff
 	dw PlayerLogOffMenu,       .TurnOff
 
-.WithdrawItem: db "WITHDRAW ITEM@"
-.DepositItem:  db "DEPOSIT ITEM@"
-.TossItem:     db "TOSS ITEM@"
-.MailBox:      db "MAIL BOX@"
-.Decoration:   db "DECORATION@"
-.TurnOff:      db "TURN OFF@"
-.LogOff:       db "LOG OFF@"
+.WithdrawItem: db "SACAR OBJETO@"
+.DepositItem:  db "DEJAR OBJETO@"
+.TossItem:     db "TIRAR OBJETO@"
+.MailBox:      db "BUZÓN@"
+.Decoration:   db "DECORACIÓN@"
+.TurnOff:      db "DESCONEXIÓN@"
+.LogOff:       db "DESCONEXIÓN@"
 
 .PlayersPCMenuList1:
 	db 5

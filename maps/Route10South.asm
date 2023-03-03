@@ -33,44 +33,44 @@ Route10Sign:
 	jumptext Route10SignText
 
 HikerJimSeenText:
-	text "Hahahah!"
+	text "¡Ja, ja, ja!"
 	done
 
 HikerJimBeatenText:
-	text "Hahaha-hachoo!"
+	text "¡Aaaaaaachís!"
 	done
 
 HikerJimAfterBattleText:
-	text "Hay fever is"
-	line "making me sneeze!"
-	cont "Ahahah-CHOO!"
+	text "¡La alergia me"
+	line "hace estornudar!"
+	cont "¡AAACHÚS!"
 	done
 
 PokefanmRobertSeenText:
-	text "You like #MON,"
-	line "don't you?"
+	text "Te gustan los"
+	line "#MON, ¿verdad?"
 
-	para "Me too!"
+	para "¡A mí también!"
 	done
 
 PokefanmRobertBeatenText:
-	text "I'd have to say"
-	line "that's my loss."
+	text "Debo admitir mi"
+	line "derrota."
 	done
 
 PokefanmRobertAfterBattleText:
-	text "Look what you did"
-	line "to my #MON…"
+	text "Mira lo que le has"
+	line "hecho a mi"
+	cont "#MON."
 
-	para "I won't forget"
-	line "this…"
+	para "No lo olvidaré…"
 	done
 
 Route10SignText:
-	text "ROUTE 10"
+	text "RUTA 10"
 
-	para "CERULEAN CITY -"
-	line "LAVENDER TOWN"
+	para "CIUDAD CELESTE -"
+	line "PUEBLO LAVANDA"
 	done
 
 Route10South_MapEvents:

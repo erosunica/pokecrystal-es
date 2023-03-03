@@ -86,74 +86,71 @@ FlowerShopRadio:
 	jumpstd radio2
 
 GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text:
-	text "Have you seen that"
-	line "wiggly tree that's"
+	text "¿Has visto ese"
+	line "extraño árbol que"
 
-	para "growing on ROUTE"
+	para "crece en la RUTA"
 	line "36?"
 
-	para "My little sister"
-	line "got all excited"
+	para "Mi hermana sintió"
+	line "curiosidad y salió"
+	cont "a verlo…"
 
-	para "and went to see"
-	line "it…"
-
-	para "I'm worried… Isn't"
-	line "it dangerous?"
+	para "Estoy preocupada…"
+	line "¿No es peligroso?"
 	done
 
 GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText:
-	text "Do you want to"
-	line "borrow the water"
+	text "¿Quieres llevarte"
+	line "la REGADERA? No"
 
-	para "bottle too?"
-	line "I don't want you"
-
-	para "doing anything"
-	line "dangerous with it."
+	para "quiero que cometas"
+	line "ninguna impruden-"
+	cont "cia con ella."
 	done
 
 GoldenrodFlowerShopTeacherHeresTheSquirtbottleText:
-	text "Oh, you're better"
-	line "than WHITNEY…"
+	text "Oh, eres mejor que"
+	line "BLANCA…"
 
-	para "You'll be OK,"
-	line "then. Here's the"
-	cont "SQUIRTBOTTLE!"
+	para "Entonces vale."
+	line "¡Aquí tienes la"
+	cont "REGADERA!"
 	done
 
 GoldenrodFlowerShopTeacherDontDoAnythingDangerousText:
-	text "Don't do anything"
-	line "too dangerous!"
+	text "¡No hagas nada"
+	line "peligroso!"
 	done
 
 GoldenrodFlowerShopTeacherLalalaHavePlentyOfWaterText:
-	text "Lalala lalalala."
-	line "Have plenty of"
-	cont "water, my lovely!"
+	text "Lalala, lalalala."
+	line "¡Échale mucha"
+	cont "agua, cariño!"
 	done
 
 GoldenrodFlowerShopFloriaWonderIfSisWillLendWaterBottleText:
-	text "When I told my sis"
-	line "about the jiggly"
+	text "Cuando le conté a"
+	line "mi hermana lo del"
 
-	para "tree, she told me"
-	line "it's dangerous."
+	para "extraño árbol, me"
+	line "dijo que era"
+	cont "peligroso."
 
-	para "If I beat WHITNEY,"
-	line "I wonder if she'll"
+	para "Si venzo a BLANCA,"
+	line "es posible que me"
 
-	para "lend me her water"
-	line "bottle…"
+	para "preste su"
+	line "REGADERA…"
 	done
 
 GoldenrodFlowerShopFloriaYouBeatWhitneyText:
-	text "Wow, you beat"
-	line "WHITNEY? Cool!"
+	text "Uuau, ¿venciste a"
+	line "BLANCA? ¡Genial!"
 	done
 
 GoldenrodFlowerShopFloriaItReallyWasAMonText:
-	text "So it really was a"
+	text "¡Entonces era un"
 	line "#MON!"
 	done
 

@@ -79,10 +79,10 @@ GoldenrodVendingMachine:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "FRESH WATER  ¥200@"
-	db "SODA POP     ¥300@"
-	db "LEMONADE     ¥350@"
-	db "CANCEL@"
+	db "AGUA FRESCA  200¥@"
+	db "REFRESCO     300¥@"
+	db "LIMONADA     350¥@"
+	db "SALIR@"
 
 GoldenrodDeptStore6FLassScript:
 	jumptextfaceplayer GoldenrodDeptStore6FLassText
@@ -97,56 +97,54 @@ GoldenrodDeptStore6FElevatorButton:
 	jumpstd elevatorbutton
 
 GoldenrodVendingText:
-	text "A vending machine!"
-	line "Here's the menu."
+	text "¡Una máquina"
+	line "expendedora!"
 	done
 
 GoldenrodClangText:
-	text "Clang! A can of"
-	line "@"
+	text "¡Clang! ¡Salió"
+	line "una lata de"
+	cont "@"
 	text_ram wStringBuffer3
-	text_start
-	cont "popped out!"
+	text "!"
 	done
 
 GoldenrodVendingNoMoneyText:
-	text "Oops, not enough"
-	line "money."
+	text "¡Uups! No tienes"
+	line "bastante dinero."
 	done
 
 GoldenrodVendingNoSpaceText:
-	text "There's no more"
-	line "room for stuff."
+	text "No hay sitio para"
+	line "nada más."
 	done
 
 GoldenrodDeptStore6FLassText:
-	text "Do you listen to"
-	line "LUCKY CHANNEL?"
+	text "¿Escuchas el CANAL"
+	line "de la SUERTE?"
 
-	para "If you want to"
-	line "win, trade #MON"
+	para "Si quieres ganar,"
+	line "cambia #MON con"
 
-	para "with as many peo-"
-	line "ple as possible to"
-
-	para "get different ID"
-	line "numbers."
+	para "mucha gente para"
+	line "conseguir muchos"
+	cont "números ID."
 	done
 
 GoldenrodDeptStore6FSuperNerdText:
-	text "If you're tired,"
-	line "try the vending"
-	cont "machine's drinks."
+	text "Si te cansas,"
+	line "prueba las bebidas"
+	cont "de las máquinas."
 
-	para "Your #MON will"
-	line "love them too."
+	para "A tus #MON les"
+	line "gustarán."
 	done
 
 GoldenrodDeptStore6FDirectoryText:
-	text "Take a Break from"
-	line "Shopping!"
+	text "¡Descansa de las"
+	line "compras!"
 
-	para "6F TRANQUIL SQUARE"
+	para "P5 PLAZA TRANQUILA"
 	done
 
 GoldenrodDeptStore6F_MapEvents:

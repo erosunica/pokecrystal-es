@@ -36,99 +36,103 @@ CianwoodPokecenter1FSuperNerdScript:
 	jumptextfaceplayer CianwoodPokecenter1FSuperNerdText
 
 CianwoodPokecenter1FLassText:
-	text "Did you meet the"
-	line "#MANIAC?"
+	text "¿Conoces al"
+	line "#MANÍACO?"
 
-	para "He's always brag-"
-	line "ging about his"
-	cont "rare #MON."
+	para "Siempre está"
+	line "presumiendo de sus"
+	cont "raros #MON."
 	done
 
 CianwoodGymGuyText:
-	text "The #MON GYM"
-	line "trainers here are"
-	cont "macho bullies."
+	text "Los entrenadores"
+	line "del GIMNASIO"
 
-	para "If I stick around,"
-	line "they might come"
-	cont "after me."
+	para "#MON de aquí"
+	line "son muy"
+	cont "agresivos."
 
-	para "Here's some ad-"
-	line "vice: the GYM"
+	para "Si me ven, seguro"
+	line "que vienen a por"
+	cont "mí."
 
-	para "LEADER uses the"
-	line "fighting-type."
+	para "Escucha este"
+	line "consejo: el LÍDER"
 
-	para "So you should"
-	line "confound him with"
-	cont "psychic #MON."
+	para "del GIMNASIO usa"
+	line "#MON del tipo"
+	cont "lucha."
 
-	para "Wipe out his #-"
-	line "MON before they"
+	para "Así que deberías"
+	line "retarle con"
 
-	para "can use their"
-	line "physical strength."
+	para "#MON de tipo"
+	line "psíquico."
 
-	para "And those boulders"
-	line "in the middle of"
-	cont "the GYM?"
+	para "Elimina sus #-"
+	line "MON antes de que"
 
-	para "If you don't move"
-	line "them correctly,"
+	para "puedan usar su"
+	line "fuerza física."
 
-	para "you won't reach"
-	line "the GYM LEADER."
+	para "¿Y esas rocas en"
+	line "mitad del"
+	cont "GIMNASIO?"
 
-	para "If you get stuck,"
-	line "go outside."
+	para "Si no las mueves"
+	line "adecuadamente,"
+
+	para "no llegarás hasta"
+	line "el LÍDER del"
+	cont "GIMNASIO."
+
+	para "Si te atascas,"
+	line "salte."
 	done
 
 CianwoodGymGuyWinText:
-	text "<PLAYER>! You won!"
-	line "I could tell by"
-	cont "looking at you!"
+	text "¡<PLAYER>! ¡Has"
+	line "ganado! ¡Con sólo"
+	cont "mirarte, lo sé!"
 	done
 
 CianwoodPokecenter1FUnusedText1:
 ; unreferenced
-	text "Don't you get the"
-	line "urge to show off"
+	text "¿No te gusta mos-"
+	line "trar tus #MON a"
+	cont "tus amigos?"
 
-	para "your #MON to"
-	line "friends?"
+	para "Ojalá pudiera"
+	line "mostrarle mis"
 
-	para "I wish I could"
-	line "show the #MON I"
-
-	para "raised to my pal"
-	line "in VIOLET."
+	para "#MON a mi amigo"
+	line "que vive en MALVA."
 	done
 
 CianwoodPokecenter1FUnusedText2:
 ; unreferenced
-	text "I've been battling"
-	line "my pal in VIOLET"
+	text "He luchado con mi"
+	line "amigo de MALVA"
 
-	para "using a MOBILE"
-	line "ADAPTER link."
+	para "usando un ADAPTA-"
+	line "DOR de MÓVIL."
 
-	para "I'm down 5-7"
-	line "against him. I've"
-	cont "gotta crank it up!"
+	para "Voy perdiendo 5"
+	line "a 7 contra él."
+	cont "¡Tengo que ganar!"
 	done
 
 CianwoodPokecenter1FSuperNerdText:
-	text "I love showing off"
-	line "the #MON that"
+	text "Me encanta fardar"
+	line "de los #MON"
 
-	para "I've raised."
-	line "Don't you?"
+	para "que he mejorado."
+	line "¿A ti no?"
 
-	para "I'm going to get"
-	line "into a bunch of"
-
-	para "battles, and show"
-	line "off my #MON!"
+	para "¡Voy a enfrentarme"
+	line "a otros entrenado-"
+	cont "res para mostrar"
+	cont "mis #MON!"
 	done
 
 CianwoodPokecenter1F_MapEvents:

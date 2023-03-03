@@ -64,83 +64,82 @@ Route11HiddenRevive:
 	hiddenitem REVIVE, EVENT_ROUTE_11_HIDDEN_REVIVE
 
 YoungsterOwenSeenText:
-	text "There's no cheat-"
-	line "ing in #MON."
+	text "No se puede hacer"
+	line "trampa en #MON."
 
-	para "Let's keep it fair"
-	line "and square!"
+	para "¡Que quede bien"
+	line "claro!"
 	done
 
 YoungsterOwenBeatenText:
-	text "Huh? How did this"
-	line "happen?"
+	text "¿Qué? ¿Cómo ha"
+	line "podido ocurrir?"
 	done
 
 YoungsterOwenAfterBattleText:
-	text "I fought fair and"
-	line "square with honor."
+	text "He luchado con"
+	line "honor."
 
-	para "I don't regret"
-	line "this at all."
+	para "No me avergüenzo."
 	done
 
 YoungsterJasonSeenText:
-	text "It itches and"
-	line "tickles a bit when"
+	text "Cuando llevo"
+	line "pantalones cortos"
 
-	para "I wear shorts in"
-	line "the grass."
+	para "por la hierba, me"
+	line "pican las piernas."
 	done
 
 YoungsterJasonBeatenText:
-	text "Aiyaaah!"
-	line "I got stomped!"
+	text "¡Ayyyy!"
+	line "¡Me han pisado!"
 	done
 
 YoungsterJasonAfterBattleText:
-	text "I'm going to catch"
-	line "more #MON in"
-	cont "the grass."
+	text "Voy a capturar más"
+	line "#MON en la"
+	cont "hierba."
 	done
 
 PsychicHermanSeenText:
-	text "…"
+	text "<……>"
 	done
 
 PsychicHermanBeatenText:
-	text "…"
+	text "<……>"
 	done
 
 PsychicHermanAfterBattleText:
 	text "…"
 
-	para "I lost while I had"
-	line "my eyes closed…"
+	para "Perdí cuando tenía"
+	line "los ojos cerrados."
 	done
 
 PsychicFidelSeenText:
-	text "I can see it…"
+	text "Ya veo…"
 
-	para "Everything to see"
-	line "about you…"
+	para "Todo lo que hay"
+	line "que ver de ti…"
 	done
 
 PsychicFidelBeatenText:
-	text "I couldn't foresee"
-	line "your power…"
+	text "No me imaginaba tu"
+	line "poder…"
 	done
 
 PsychicFidelAfterBattleText:
-	text "Strength in con-"
-	line "viction…"
+	text "Fuerza de"
+	line "convicción…"
 
-	para "You're strong be-"
-	line "cause you believe"
-	cont "in your #MON."
+	para "Eres fuerte porque"
+	line "confías en tus"
+	cont "#MON."
 	done
 
 Route11SignText:
-	text "ROUTE 11"
+	text "RUTA 11"
 	done
 
 Route11_MapEvents:

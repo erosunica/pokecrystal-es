@@ -13,6 +13,40 @@ Unreferenced_Function1dd6a9:
 	pop bc
 	ret
 
+StripString::
+; Strips leading and trailing whitespace from string provided in de
+
+	push bc
+	ld h, d
+	ld l, e
+
+.strip_front
+	ld a, [hli]
+	cp " "
+	jr z, .strip_front
+	dec hl
+
+	ld b, d
+	ld c, e
+.copy
+	ld a, [hli]
+	ld [de], a
+	cp "@"
+	jr z, .done
+	inc de
+
+	cp " "
+	jr z, .copy
+	ld b, d
+	ld c, e
+	jr .copy
+
+.done
+	ld a, "@"
+	ld [bc], a
+	pop bc
+	ret
+
 PrintHoursMins:
 ; Hours in b, minutes in c
 	ld a, b

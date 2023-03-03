@@ -34,84 +34,82 @@ CeladonMansionRoofHousePharmacistScript:
 	end
 
 CeladonMansionRoofHousePharmacistIntroText:
-	text "Let me recount a"
-	line "terrifying tale…"
+	text "Te contaré una"
+	line "historia de miedo."
 	done
 
 CeladonMansionRoofHousePharmacistNotNightText:
-	text "Then again, it's"
-	line "not as scary while"
+	text "Pero no te dará"
+	line "tanto miedo si aún"
+	cont "es de día."
 
-	para "it's still light"
-	line "outside."
-
-	para "Come back after"
-	line "sunset, OK?"
+	para "Vuelve cuando"
+	line "anochezca, ¿vale?"
 	done
 
 CeladonMansionRoofHousePharmacistStoryText:
-	text "Once upon a time,"
-	line "there was a little"
+	text "Érase una vez un"
+	line "niño pequeño al"
 
-	para "boy who was given"
-	line "a new BICYCLE…"
+	para "que le regalaron"
+	line "una BICICLETA…"
 
-	para "He wanted to try"
-	line "it right away…"
+	para "Quería probarla"
+	line "enseguida…"
 
-	para "He was having so"
-	line "much fun that he"
+	para "Se lo estaba"
+	line "pasando tan bien"
 
-	para "didn't notice the"
-	line "sun had set…"
+	para "que olvidó que"
+	line "anochecía…"
 
-	para "While riding home"
-	line "in the pitch-black"
+	para "De vuelta a casa,"
+	line "en plena noche,"
 
-	para "night, the bike"
-	line "suddenly slowed!"
+	para "¡la bici empezó"
+	line "a frenarse!"
 
-	para "The pedals became"
-	line "heavy!"
+	para "¡Cada vez era más"
+	line "difícil pedalear!"
 
-	para "When he stopped"
-	line "pedaling, the bike"
+	para "Y cuando dejó de"
+	line "pedalear, ¡la bici"
 
-	para "began slipping"
-	line "backwards!"
+	para "empezó a moverse"
+	line "hacia atrás!"
 
-	para "It was as if the"
-	line "bike were cursed"
+	para "Era como si la"
+	line "bici tuviera vida"
 
-	para "and trying to drag"
-	line "him into oblivion!"
-
-	para "…"
+	para "y quisiera llevár-"
+	line "selo con ella."
 
 	para "…"
 
-	para "SHRIEEEEK!"
+	para "<……>"
 
-	para "The boy had been"
-	line "riding uphill on"
-	cont "CYCLING ROAD!"
+	para "(¡CHILLIDO!)"
 
-	para "…"
-	line "Ba-dum ba-dum!"
+	para "¡Y el niño siguió"
+	line "subiendo por el"
+	cont "CAMINO de BICIS!"
 
-	para "For listening so"
-	line "patiently, you may"
-	cont "take this--TM03!"
+	para "¡Ba-dum!"
+	line "¡Ba-dum, ba-dum!"
+
+	para "Por haberme"
+	line "escuchado, ¡aquí"
+	cont "tienes esta MT03!"
 	done
 
 CeladonMansionRoofHousePharmacistCurseText:
-	text "TM03 is CURSE."
+	text "MT03 es MALDICIÓN."
 
-	para "It's a terrifying"
-	line "move that slowly"
+	para "Es un movimiento"
+	line "terrible que redu-"
+	cont "ce poco a poco los"
 
-	para "whittles down the"
-	line "victim's HP."
+	para "PS de la víctima."
 	done
 
 CeladonMansionRoofHouse_MapEvents:

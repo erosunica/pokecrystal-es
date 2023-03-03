@@ -1,10 +1,10 @@
 	db "LAVA@" ; species name
-	dw 207, 1210 ; height, weight
+	dbw 8, 550 ; height, weight
 
-	db   "Its body is as hot"
-	next "as lava and is"
-	next "always billowing."
+	db   "Tiene un cuerpo"
+	next "que no deja de"
+	next "hincharse y tan"
 
-	page "Flames will"
-	next "occasionally burst"
-	next "from its shell.@"
+	page "caliente como la"
+	next "lava. La concha"
+	next "suelta llamas.@"

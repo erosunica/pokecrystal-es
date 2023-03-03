@@ -523,407 +523,416 @@ Movement_Route32CooltrainerMReset2:
 	step_end
 
 Route32CooltrainerMText_WhatsTheHurry:
-	text "Wait up!"
-	line "What's the hurry?"
+	text "¡Espera!"
+	line "¿Por qué corres?"
 	done
 
 Route32CooltrainerMText_AideIsWaiting:
-	text "<PLAYER>, right?"
-	line "Some guy wearing"
+	text "<PLAYER>, ¿verdad?"
 
-	para "glasses was look-"
-	line "ing for you."
+	para "Un tipo con gafas"
+	line "te buscaba."
 
-	para "See for yourself."
-	line "He's waiting for"
-
-	para "you at the #MON"
-	line "CENTER."
+	para "Compruébalo. Te"
+	line "está esperando en"
+	cont "el CENTRO #MON."
 	done
 
 Route32CooltrainerMText_UnusedSproutTower:
 ; unused
-	text "Have you gone to"
-	line "SPROUT TOWER?"
+	text "¿Has ido a la"
+	line "TORRE BELLSPROUT?"
 
-	para "If you ever visit"
-	line "VIOLET CITY, "
+	para "Si pasas por"
+	line "CIUDAD MALVA,"
 
-	para "they'll expect you"
-	line "to train there."
+	para "deberías"
+	line "entrenarte allí."
 
-	para "That's basic for"
-	line "trainers. Go to"
-	cont "SPROUT TOWER!"
+	para "Es crucial para"
+	line "los entrenadores."
+
+	para "¡Ve a la TORRE"
+	line "BELLSPROUT!"
 	done
 
 Route32CooltrainerMText_VioletGym:
-	text "Have you gone to"
-	line "the #MON GYM?"
+	text "¿Has ido al"
+	line "GIMNASIO #MON?"
 
-	para "You can test your"
-	line "#MON and your-"
-	cont "self there."
+	para "Allí puedes probar"
+	line "a tus #MON y"
+	cont "a ti mismo."
 
-	para "It's a rite of"
-	line "passage for all"
-	cont "trainers!"
+	para "¡Es un rito para"
+	line "todos los"
+	cont "entrenadores!"
 	done
 
 Route32CooltrainerMText_HaveThisSeed:
-	text "You have some good"
-	line "#MON there."
+	text "Tienes #MON muy"
+	line "buenos."
 
-	para "It must be from"
-	line "the training you"
+	para "Seguro que es por"
+	line "haberlos entrenado"
 
-	para "gave them around"
-	line "VIOLET CITY."
+	para "en los alrededores"
+	line "de CIUDAD MALVA."
 
-	para "The training at"
-	line "the GYM must have"
+	para "El entrenamiento"
+	line "en el GIMNASIO ha"
 
-	para "been especially"
-	line "helpful."
+	para "debido de ser de"
+	line "gran ayuda."
 
-	para "As a souvenir of"
-	line "VIOLET CITY, take"
-	cont "this."
+	para "Toma esto como"
+	line "recuerdo de"
+	cont "CIUDAD MALVA."
 
-	para "It increases the"
-	line "power of grass-"
-	cont "type moves."
+	para "Aumenta el poder"
+	line "de los movimientos"
+	cont "de tipo planta."
 	done
 
 Route32CooltrainerMText_ExperiencesShouldBeUseful:
-	text "Your experiences"
-	line "in VIOLET CITY"
+	text "Tu experiencia en"
+	line "CIUDAD MALVA"
 
-	para "should be useful"
-	line "for your journey."
+	para "debería ayudarte"
+	line "en tu viaje."
 	done
 
 Text_MillionDollarSlowpokeTail:
-	text "How would you like"
-	line "to have this"
+	text "¿Te gustaría tener"
+	line "esta sabrosa y"
 
-	para "tasty, nutritious"
-	line "SLOWPOKETAIL?"
+	para "nutritiva"
+	line "COLASLOWPOKE?"
 
-	para "For you right now,"
-	line "just ¥1,000,000!"
+	para "¡Sólo te costará"
+	line "1.000.000¥!"
 
-	para "You'll want this!"
+	para "¡Te gustará!"
 	done
 
 Text_ThoughtKidsWereLoaded:
-	text "Tch! I thought"
-	line "kids these days"
-	cont "were loaded…"
+	text "¡Vaya! Pensaba que"
+	line "los niños de hoy"
+
+	para "en día estaban"
+	line "forrados…"
 	done
 
 Text_RefusedToBuySlowpokeTail:
-	text "You don't want it?"
-	line "Then scram. Shoo!"
+	text "¿No la quieres?"
+	line "Pues lárgate."
 	done
 
 FisherJustinSeenText:
-	text "Whoa!"
+	text "¡Vaya!"
 
-	para "You made me lose"
-	line "that fish!"
+	para "¡Se me escapó ese"
+	line "pez por tu culpa!"
 	done
 
 FisherJustinBeatenText:
-	text "Sploosh!"
+	text "¡Splash!"
 	done
 
 FisherJustinAfterText:
-	text "Calm, collected…"
-	line "The essence of"
+	text "Paciencia… La"
+	line "base de la pesca"
 
-	para "fishing and #-"
-	line "MON is the same."
+	para "y de los #MON"
+	line "es la misma."
 	done
 
 FisherRalph1SeenText:
-	text "I'm really good at"
-	line "both fishing and"
-	cont "#MON."
+	text "Soy muy bueno,"
+	line "tanto pescando"
 
-	para "I'm not about to"
-	line "lose to any kid!"
+	para "como con los"
+	line "#MON."
+
+	para "¡No voy a perder"
+	line "con alguien tan"
+	cont "joven!"
 	done
 
 FisherRalph1BeatenText:
-	text "Tch! I tried to"
-	line "rush things…"
+	text "Intenté acelerar"
+	line "las cosas…"
 	done
 
 FisherRalphAfterText:
-	text "Fishing is a life-"
-	line "long passion."
+	text "¡Pescar es una"
+	line "pasión eterna y"
 
-	para "#MON are life-"
-	line "long friends!"
+	para "los #MON son"
+	line "amigos eternos!"
 	done
 
 FisherRalphSwarmText:
-	text "One, two, three…"
-	line "Muahahaha, what a"
+	text "Uno, dos, tres…"
+	line "¡Jajajajaja!"
 
-	para "great haul!"
-	line "I'm done! Go ahead"
+	para "¡Qué gran botín!"
 
-	para "and catch as many"
-	line "as you can, kid!"
+	para "¡Vale! ¡Sigue y"
+	line "atrapa tantos como"
+	cont "puedas!"
 	done
 
 ; --- start a segment of unused text
 
 Route32UnusedFisher1SeenText:
-	text "I keep catching"
-	line "the same #MON…"
+	text "Siempre atrapo los"
+	line "mismos #MON…"
 
-	para "Maybe a battle"
-	line "will turn things"
-	cont "around for me."
+	para "Quizá con un"
+	line "combate cambien"
+	cont "las cosas."
 	done
 
 Route32UnusedFisher1BeatenText:
-	text "Nothing ever goes"
-	line "right for me now…"
+	text "Ahora ya nada me"
+	line "sale bien…"
 	done
 
 Route32UnusedFisher1AfterText:
-	text "How come the guy"
-	line "next to me catches"
-	cont "good #MON?"
+	text "¿Cómo es posible"
+	line "que el tipo de al"
+
+	para "lado pesque buenos"
+	line "#MON?"
 	done
 
 Route32UnusedFisher2SeenText:
-	text "Heh, I'm on a roll"
-	line "today. How about a"
-	cont "battle, kid?"
+	text "¡Oye! Hoy estoy de"
+	line "suerte. ¿Quieres"
+	cont "luchar, joven?"
 	done
 
 Route32UnusedFisher2BeatenText:
-	text "Oof. I wasn't"
-	line "lucky that time."
+	text "¡Uf! Esta vez no"
+	line "tuve suerte."
 	done
 
 Route32UnusedFisher2AfterText:
-	text "You have to have a"
-	line "good ROD if you"
+	text "Si quieres atrapar"
+	line "buenos #MON,"
 
-	para "want to catch good"
-	line "#MON."
+	para "tienes que tener"
+	line "una buena CAÑA."
 	done
 
 ; --- end a segment of unused texts
 
 FisherHenrySeenText:
-	text "My #MON?"
-	line "Freshly caught!"
+	text "¿Mi #MON?"
+	line "¡Recién pescado!"
 	done
 
 FisherHenryBeatenText:
-	text "SPLASH?"
+	text "¡Splash!"
 	done
 
 FisherHenryAfterText:
-	text "Freshly caught"
-	line "#MON are no"
+	text "Los #MON"
+	line "recién atrapados"
 
-	para "match for properly"
-	line "raised ones."
+	para "no son comparables"
+	line "con los criados."
 	done
 
 YoungsterAlbertSeenText:
-	text "I haven't seen you"
-	line "around before."
+	text "No te había visto"
+	line "antes."
 
-	para "So you think you"
-	line "are pretty tough?"
+	para "¿Te crees muy"
+	line "fuerte?"
 	done
 
 YoungsterAlbertBeatenText:
-	text "You're strong!"
+	text "¡Eres fuerte!"
 	done
 
 YoungsterAlbertAfterText:
-	text "I'm going to try"
-	line "to be the best"
-	cont "with my favorites."
+	text "Intentaré ser el"
+	line "mejor con mis"
+	cont "favoritos."
 
-	para "I'm not using the"
-	line "same tough #MON"
-	cont "as everyone else."
+	para "No uso los mismos"
+	line "#MON que"
+	cont "todo el mundo."
 	done
 
 YoungsterGordonSeenText:
-	text "I found some good"
-	line "#MON in the"
-	cont "grass!"
+	text "¡He encontrado"
+	line "#MON muy buenos"
+	cont "en la hierba!"
 
-	para "I think they'll do"
-	line "it for me!"
+	para "¡Creo que me"
+	line "servirán!"
 	done
 
 YoungsterGordonBeatenText:
-	text "Darn. I thought I"
-	line "could win."
+	text "¡Maldición! Creía"
+	line "que podía ganar."
 	done
 
 YoungsterGordonAfterText:
-	text "The grass is full"
-	line "of clingy things."
+	text "En la hierba hay"
+	line "cosas pegajosas."
 	done
 
 CamperRolandSeenText:
-	text "That glance…"
-	line "It's intriguing."
+	text "Esa mirada…"
+	line "Me intriga."
 	done
 
 CamperRolandBeatenText:
-	text "Hmmm. This is"
-	line "disappointing."
+	text "¡Mmmm!"
+	line "¡Qué decepción!"
 	done
 
 CamperRolandAfterText:
-	text "If you don't want"
-	line "to battle, just"
-	cont "avoid eye contact."
+	text "Si no quieres"
+	line "luchar, evita el"
+	cont "contacto visual."
 	done
 
 PicnickerLiz1SeenText:
-	text "Uh-huh. Yeah, and"
-	line "you know…"
+	text "Sí. Y sabes que…"
 
-	para "Pardon? Battle?"
-	line "I'm on the phone."
+	para "¿Luchar? ¡Estoy"
+	line "al teléfono!"
 
-	para "Oh, all right. But"
-	line "make it fast."
+	para "Vale. Pero que sea"
+	line "rápido."
 	done
 
 PicnickerLiz1BeatenText:
-	text "Oh! I've got to"
-	line "relieve my anger!"
+	text "¡Oh! ¡Tengo que"
+	line "aliviar mi enfado!"
 	done
 
 PicnickerLiz1AfterText:
-	text "I was having a"
-	line "nice chat too."
+	text "Yo también estaba"
+	line "charlando."
 	done
 
 BirdKeeperPeterSeenText:
-	text "That BADGE! It's"
-	line "from VIOLET CITY!"
+	text "¡Esa MEDALLA! ¡Es"
+	line "de CIUDAD MALVA!"
 
-	para "You beat FALKNER?"
+	para "¿Ganaste a PEGASO?"
 	done
 
 BirdKeeperPeterBeatenText:
-	text "I know what my"
-	line "weaknesses are."
+	text "Conozco mis"
+	line "debilidades."
 	done
 
 BirdKeeperPeterAfterText:
-	text "I should train"
-	line "again at the GYM"
-	cont "in VIOLET CITY."
+	text "Debería volver a"
+	line "entrenarme en el"
+
+	para "GIMNASIO de"
+	line "CIUDAD MALVA."
 	done
 
 Route32UnusedText:
 ; unused
-	text "The fishermen"
-	line "yelled at me for"
-	cont "bugging them…"
+	text "Los pescadores me"
+	line "han insultado por"
+	cont "molestarles…"
 	done
 
 Text_RoarIntro:
-	text "WROOOOAR!"
-	line "PEOPLE RUN WHEN I"
+	text "¡GRRRRRR!"
+	line "¡TODOS HUYEN"
 
-	para "ROAR! BUT YOU"
-	line "CAME LOOKING!"
+	para "CUANDO RUJO! ¡PERO"
+	line "TÚ HAS VENIDO!"
 
-	para "THAT PLEASES ME!"
-	line "NOW TAKE THIS!"
+	para "¡ESO ME GUSTA!"
+	line "¡TOMA ESTO!"
 	done
 
 Text_RoarOutro:
-	text "WROOOAR!"
-	line "IT'S ROAR!"
+	text "¡GRRRRRR!"
+	line "¡ES RUGIDO! HASTA"
 
-	para "EVEN #MON RUN"
-	line "FROM A GOOD ROAR!"
+	para "LOS #MON HUYEN"
+	line "CON UN RUGIDO."
 	done
 
 MeetFriedaText:
-	text "FRIEDA: Yahoo!"
-	line "It's Friday!"
+	text "VICKI: ¡Yuju!"
+	line "¡Es viernes!"
 
-	para "I'm FRIEDA of"
-	line "Friday!"
+	para "Soy VICKI, por"
+	line "viernes."
 
-	para "Nice to meet you!"
+	para "¡Mucho gusto!"
 	done
 
 FriedaGivesGiftText:
-	text "Here's a POISON"
-	line "BARB for you!"
+	text "¡Toma una FLECHA"
+	line "VENENOSA!"
 	done
 
 FriedaGaveGiftText:
-	text "FRIEDA: Give it to"
-	line "a #MON that has"
-	cont "poison-type moves."
+	text "VICKI: Dásela a un"
+	line "#MON de tipo"
+	cont "veneno."
 
-	para "Oh!"
+	para "¡Oh!"
 
-	para "It's wicked!"
+	para "¡Es terrible!"
 
-	para "You'll be shocked"
-	line "how good it makes"
-	cont "poison moves!"
+	para "¡Te sorprenderá"
+	line "ver cómo mejora"
+
+	para "los movimientos"
+	line "de tipo veneno!"
 	done
 
 FriedaFridayText:
-	text "FRIEDA: Hiya! What"
-	line "day do you like?"
+	text "VICKI: ¡Hola! ¿Qué"
+	line "día prefieres?"
 
-	para "I love Friday. No"
-	line "doubt about it!"
+	para "A mí me gusta el"
+	line "viernes. Sin duda."
 
-	para "Don't you think"
-	line "it's great too?"
+	para "¿No crees que es"
+	line "genial?"
 	done
 
 FriedaNotFridayText:
-	text "FRIEDA: Isn't it"
-	line "Friday today?"
+	text "VICKI: ¿Hoy no es"
+	line "viernes?"
 
-	para "It's so boring"
-	line "when it's not!"
+	para "¡Me aburro cuando"
+	line "no lo es!"
 	done
 
 Route32SignText:
-	text "ROUTE 32"
+	text "RUTA 32"
 
-	para "VIOLET CITY -"
-	line "AZALEA TOWN"
+	para "CIUDAD MALVA -"
+	line "PUEBLO AZALEA"
 	done
 
 Route32RuinsSignText:
-	text "RUINS OF ALPH"
-	line "EAST ENTRANCE"
+	text "RUINAS ALFA"
+	line "ENTRADA ESTE"
 	done
 
 Route32UnionCaveSignText:
-	text "UNION CAVE"
-	line "AHEAD"
+	text "Hacia la"
+	line "CUEVA UNIÓN"
 	done
 
 Route32_MapEvents:

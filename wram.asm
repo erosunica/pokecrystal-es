@@ -798,12 +798,8 @@ wDexListingCursorBackup:: db
 wBackupDexListingCursor:: db
 wBackupDexListingPage:: db
 wDexCurLocation:: db
-if DEF(_CRYSTAL11)
 wPokedexStatus:: db
 wPokedexDataEnd::
-else
-wPokedexDataEnd:: ds 1
-endc
 	ds 2
 
 NEXTU ; c6d0
@@ -1396,12 +1392,7 @@ wCreditsLYOverride:: db
 NEXTU ; cf64
 ; pokedex
 wPrevDexEntryJumptableIndex:: db
-if DEF(_CRYSTAL11)
 wPrevDexEntryBackup:: db
-else
-wPrevDexEntryBackup::
-wPokedexStatus:: db
-endc
 
 NEXTU ; cf64
 ; pokegear
@@ -1651,7 +1642,7 @@ NEXTU ; d002
 ; poke seer
 wSeerAction:: db
 wSeerNickname:: ds MON_NAME_LENGTH
-wSeerCaughtLocation:: ds 17
+wSeerCaughtLocation:: ds 18
 wSeerTimeOfDay:: ds NAME_LENGTH
 wSeerOTName:: ds NAME_LENGTH
 wSeerOTNameGrammar:: db

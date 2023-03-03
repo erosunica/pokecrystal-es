@@ -1,45 +1,45 @@
 ReenaAskNumber1Text:
-	text "Not bad…"
-	line "It's something to"
+	text "No está mal…"
+	line "Ganarme ya es"
 
-	para "beat me, even by"
-	line "an unlikely fluke…"
+	para "algo, aunque haya"
+	line "sido de chiripa…"
 
-	para "I like you! Give"
-	line "me your number!"
+	para "¡Me gustas! ¡Dame"
+	line "tu teléfono!"
 
-	para "You can be my"
-	line "practice partner!"
+	para "¡Puedes practicar"
+	line "conmigo!"
 	done
 
 ReenaAskNumber2Text:
-	text "Give me your phone"
-	line "number!"
+	text "¡Dame tu número de"
+	line "teléfono!"
 
-	para "You are going to"
-	line "be my practice"
-	cont "partner!"
+	para "¡Vas a practicar"
+	line "conmigo!"
 	done
 
 ReenaNumberAcceptedText:
-	text "Don't be too proud"
-	line "about beating me!"
+	text "¡Que no se te"
+	line "suban los humos!"
 
-	para "It was a fluke!"
+	para "¡Ha sido chiripa!"
 	done
 
 ReenaNumberDeclinedText:
-	text "I don't believe"
-	line "it! You're going"
-	cont "to regret this!"
+	text "¡No me lo creo!"
+	line "¡Te vas a"
+	cont "arrepentir!"
 	done
 
 ReenaPhoneFullText:
-	text "What? Your phone"
-	line "list has no room!"
+	text "¿Qué? ¡No queda"
+	line "espacio en la"
+	cont "agenda!"
 	done
 
 ReenaRematchText:
-	text "What took you?"
-	line "Start right away!"
+	text "¿Qué quieres?"
+	line "¡Empecemos!"
 	done

@@ -80,68 +80,72 @@ Route2HiddenRevive:
 	hiddenitem REVIVE, EVENT_ROUTE_2_HIDDEN_REVIVE
 
 BugCatcherRobSeenText:
-	text "My bug #MON are"
-	line "tough. Prepare to"
-	cont "lose!"
+	text "Mis #MON bicho"
+	line "son muy fuertes."
+
+	para "¡Prepárate para"
+	line "perder!"
 	done
 
 BugCatcherRobBeatenText:
-	text "I was whipped…"
+	text "Me vencieron…"
 	done
 
 BugCatcherRobAfterBattleText:
-	text "I'm going to look"
-	line "for stronger bug"
-	cont "#MON."
+	text "Voy a buscar"
+	line "#MON bicho"
+	cont "más fuertes."
 	done
 
 BugCatcherEdSeenText:
-	text "If you walk in"
-	line "tall grass wearing"
+	text "Si caminas por la"
+	line "hierba alta con"
 
-	para "shorts, do you get"
-	line "nicks and cuts?"
+	para "pantalones cortos,"
+	line "¿no te arañas?"
 	done
 
 BugCatcherEdBeatenText:
-	text "Ouch, ouch, ouch!"
+	text "¡Au, au, au!"
 	done
 
 BugCatcherEdAfterBattleText:
-	text "They'll really"
-	line "sting when you"
-	cont "take a bath."
+	text "Seguro que te"
+	line "pican si te bañas."
 	done
 
 BugCatcherDougSeenText:
-	text "Why don't girls"
-	line "like bug #MON?"
+	text "¿Por qué a las"
+	line "chicas no les"
+
+	para "gustan los"
+	line "#MON bicho?"
 	done
 
 BugCatcherDougBeatenText:
-	text "No good!"
+	text "¡Muy mal!"
 	done
 
 BugCatcherDougAfterBattleText:
-	text "Bug #MON squish"
-	line "like plush toys"
+	text "Los #MON bicho"
+	line "parecen muñecos de"
 
-	para "when you squeeze"
-	line "their bellies."
+	para "goma cuando les"
+	line "aprietas la tripa."
 
-	para "I love how they"
-	line "feel!"
+	para "¡Me encanta"
+	line "tocarlos!"
 	done
 
 Route2SignText:
-	text "ROUTE 2"
+	text "RUTA 2"
 
-	para "VIRIDIAN CITY -"
-	line "PEWTER CITY"
+	para "CIUDAD VERDE -"
+	line "CIUDAD PLATEADA"
 	done
 
 Route2DiglettsCaveSignText:
-	text "DIGLETT'S CAVE"
+	text "CUEVA DIGLETT"
 	done
 
 Route2_MapEvents:

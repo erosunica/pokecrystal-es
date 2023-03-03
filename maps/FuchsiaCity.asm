@@ -51,75 +51,77 @@ FuchsiaCityFruitTree:
 	fruittree FRUITTREE_FUCHSIA_CITY
 
 FuchsiaCityYoungsterText:
-	text "One of the ELITE"
-	line "FOUR used to be"
+	text "Un miembro del"
+	line "ALTO MANDO era el"
 
-	para "the LEADER of"
-	line "FUCHSIA's GYM."
+	para "LÍDER del GIMNASIO"
+	line "de CIUDAD FUCSIA."
 	done
 
 FuchsiaCityPokefanMText:
-	text "KOGA's daughter"
-	line "succeeded him as"
+	text "La hija de KOGA le"
+	line "ha sucedido como"
 
-	para "the GYM LEADER"
-	line "after he joined"
-	cont "the ELITE FOUR."
+	para "LÍDER del GIMNASIO"
+	line "cuando él se unió"
+	cont "al ALTO MANDO."
 	done
 
 FuchsiaCityTeacherText:
-	text "The SAFARI ZONE is"
-	line "closed… It's sad,"
+	text "La ZONA SAFARI"
+	line "está cerrada. Da"
 
-	para "considering it's"
-	line "FUCHSIA's main"
-	cont "attraction."
+	para "pena, ya que es"
+	line "la mayor atracción"
+	cont "de CIUDAD FUCSIA."
 	done
 
 FuchsiaCitySignText:
-	text "FUCHSIA CITY"
+	text "CIUDAD FUCSIA"
 
-	para "Behold! It's"
-	line "Passion Pink!"
+	para "¡Mirad la CIUDAD"
+	line "FUCSIA! ¡La pasión"
+	cont "rosa!"
 	done
 
 FuchsiaGymSignText:
-	text "FUCHSIA CITY"
-	line "#MON GYM"
-	cont "LEADER: JANINE"
+	text "LÍDER DEL GIMNASIO"
+	line "#MON DE CIUDAD"
+	cont "FUCSIA: SACHIKO"
 
-	para "The Poisonous"
-	line "Ninja Master"
+	para "La venenosa"
+	line "maestra ninja"
 	done
 
 SafariZoneOfficeSignText:
-	text "There's a notice"
-	line "here…"
+	text "Aquí hay una nota…"
 
-	para "SAFARI ZONE OFFICE"
-	line "is closed until"
-	cont "further notice."
+	para "El PUESTO GUARDA"
+	line "DE LA ZONA SAFARI"
+
+	para "está cerrado hasta"
+	line "nuevo aviso"
 	done
 
 WardensHomeSignText:
-	text "SAFARI ZONE"
-	line "WARDEN'S HOME"
+	text "CASA DEL GUARDA"
+	line "DE LA ZONA SAFARI"
 	done
 
 SafariZoneClosedSignText:
-	text "The WARDEN is"
-	line "traveling abroad."
+	text "El GUARDA está de"
+	line "viaje. Ésa es la"
 
-	para "Therefore, the"
-	line "SAFARI ZONE is"
-	cont "closed."
+	para "razón por la que"
+	line "la ZONA SAFARI"
+	cont "está cerrada"
 	done
 
 NoLitteringSignText:
-	text "No littering."
+	text "No ensuciar."
 
-	para "Please take your"
-	line "waste with you."
+	para "Por favor, no"
+	line "tirar basura"
 	done
 
 FuchsiaCity_MapEvents:

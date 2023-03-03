@@ -23,24 +23,25 @@ Route7SaffronGuardScript:
 	end
 
 Route7SaffronGuardPowerPlantText:
-	text "Did you hear about"
-	line "the accident at"
-	cont "the POWER PLANT?"
+	text "¿Has oído lo del"
+	line "accidente de la"
+	cont "CENTRAL ENERGÍA?"
 
-	para "It's located in"
-	line "the East, close to"
-	cont "LAVENDER TOWN."
+	para "Se encuentra al"
+	line "Este, cerca de"
+	cont "PUEBLO LAVANDA."
 	done
 
 Route7SaffronGuardSeriousText:
-	text "I take my GUARD"
-	line "job seriously."
+	text "Me tomo muy en"
+	line "serio mi trabajo"
+	cont "de GUARDA."
 
-	para "Hey! You have a"
+	para "¡Eh! Tienes una"
 	line "#DEX."
 
-	para "OK. You can go"
-	line "through."
+	para "Vale. Puedes"
+	line "pasar."
 	done
 
 Route7SaffronGate_MapEvents:

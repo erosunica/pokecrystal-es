@@ -1,61 +1,65 @@
 WiltonAskNumber1Text:
-	text "Eh, our battle was"
-	line "fun, I'd say…"
+	text "Eh, nuestra lucha"
+	line "fue divertida…"
 
-	para "When I'm fishing,"
-	line "I sometimes snag"
+	para "Cuando pesco, a"
+	line "veces recojo"
 
-	para "items that people"
-	line "have dropped."
+	para "objetos que ha"
+	line "perdido la gente."
 
-	para "Do you want them?"
-	line "What's the number?"
+	para "¿Los quieres?"
+	line "¿Cuál es tu número"
+	cont "de teléfono?"
 	done
 
 WiltonAskNumber2Text:
-	text "If I snag an item"
-	line "while I'm fishing,"
+	text "Si recojo algún"
+	line "objeto mientras"
+	cont "pesco, es tuyo."
 
-	para "it's yours. What's"
-	line "your number?"
+	para "¿Cuál es tu número"
+	line "de teléfono?"
 	done
 
 WiltonNumberAcceptedText:
-	text "If I snag anything"
-	line "good, I'll be sure"
-	cont "to let you know."
+	text "Si atrapo algo"
+	line "bueno, te avisaré."
 	done
 
 WiltonNumberDeclinedText:
-	text "All right… Come"
-	line "back if you have a"
-	cont "change of heart."
+	text "Muy bien… Vuelve"
+	line "si cambias de"
+	cont "opinión."
 	done
 
 WiltonPhoneFullText:
-	text "You can't register"
-	line "another number."
+	text "No puedes guardar"
+	line "más números de"
+	cont "teléfono."
 	done
 
 WiltonRematchText:
-	text "Argh! You startled"
-	line "POLIWAG into"
-	cont "fleeing again!"
+	text "¡Argh! ¡Has"
+	line "asustado a POLIWAG"
+	cont "y ha huido!"
 	done
 
 WiltonGiftText:
-	text "So here you are."
+	text "Así que has"
+	line "venido."
 
-	para "See this?"
-	line "I snagged it just"
+	para "¿Lo ves?"
+	line "Lo he recogido"
 
-	para "a little while"
-	line "ago. It's yours."
+	para "hace un rato."
+	line "Es tuyo."
 	done
 
 WiltonPackFullText:
-	text "Your PACK's full?"
+	text "¿Tu MOCHILA está"
+	line "llena?"
 
-	para "I'll give it to"
-	line "you later."
+	para "Te lo daré más"
+	line "tarde."
 	done

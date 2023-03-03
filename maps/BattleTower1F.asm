@@ -347,183 +347,181 @@ MovementData_BattleTowerBattleRoomPlayerTurnsToFaceNextOpponent:
 	step_end
 
 Text_BattleTowerWelcomesYou:
-	text "BATTLE TOWER"
-	line "welcomes you!"
+	text "¡Gracias por venir"
+	line "a la TORRE"
+	cont "BATALLA!"
 
-	para "I could show you"
-	line "to a BATTLE ROOM."
+	para "Te mostraré una"
+	line "SALA BATALLA."
 	done
 
 Text_WantToGoIntoABattleRoom:
-	text "Want to go into a"
-	line "BATTLE ROOM?"
+	text "¿Quieres entrar en"
+	line "una SALA BATALLA?"
 	done
 
 Text_RightThisWayToYourBattleRoom:
-	text "Right this way to"
-	line "your BATTLE ROOM."
+	text "Por aquí accederás"
+	line "a tu SALA BATALLA."
 	done
 
 Text_BattleTowerIntroduction_1:
-	text "BATTLE TOWER is a"
-	line "facility made for"
-	cont "#MON battles."
+	text "TORRE BATALLA es"
+	line "el lugar de las"
+	cont "batallas #MON."
 
-	para "Countless #MON"
-	line "trainers gather"
+	para "Entrenadores"
+	line "#MON de todas"
 
-	para "from all over to"
-	line "hold battles in"
+	para "partes vienen para"
+	line "luchar en SALAS"
 
-	para "specially designed"
-	line "BATTLE ROOMS."
+	para "BATALLA especial-"
+	line "mente diseñadas."
 
-	para "There are many"
-	line "BATTLE ROOMS in"
-	cont "the BATTLE TOWER."
+	para "Hay muchas SALAS"
+	line "BATALLA en la"
+	cont "TORRE BATALLA."
 
-	para "Each ROOM holds"
-	line "seven trainers."
+	para "En cada SALA hay"
+	line "7 entrenadores."
 
-	para "If you defeat the"
-	line "seven in a ROOM,"
+	para "Si vences a los"
+	line "siete de la SALA,"
 
-	para "and you have a"
-	line "good record, you"
+	para "y demuestras que"
+	line "lo mereces, te"
 
-	para "could become the"
-	line "ROOM's LEADER."
+	para "convertirás en"
+	line "LÍDER de la SALA."
 
-	para "All LEADERS will"
-	line "be recorded in the"
+	para "Los LÍDERES van a"
+	line "la LISTA de HONOR"
 
-	para "HONOR ROLL for"
-	line "posterity."
+	para "para la"
+	line "posteridad."
 
-	para "You may challenge"
-	line "in up to five"
+	para "Puedes acceder"
+	line "hasta a 5 SALAS"
+	cont "BATALLA por día."
 
-	para "BATTLE ROOMS each"
-	line "day."
+	para "Aunque sólo puedes"
+	line "luchar una vez al"
 
-	para "However, you may"
-	line "battle only once a"
+	para "día en una misma"
+	line "SALA."
 
-	para "day in any given"
-	line "ROOM."
+	para "Para detener una"
+	line "sesión, debes"
 
-	para "To interrupt a"
-	line "session, you must"
+	para "GUARDAR. Si no, no"
+	line "podrás retomar"
 
-	para "SAVE. If not, you"
-	line "won't be able to"
-
-	para "resume your ROOM"
-	line "challenge."
+	para "el combate en la"
+	line "SALA."
 
 	para ""
 	done
 
 Text_BattleTowerIntroduction_2:
-	text "BATTLE TOWER is a"
-	line "facility made for"
-	cont "#MON battles."
+	text "La TORRE BATALLA"
+	line "es una instalación"
 
-	para "Countless #MON"
-	line "trainers gather"
+	para "construida para"
+	line "combates #MON."
 
-	para "from all over to"
-	line "hold battles in"
+	para "Incontables entre-"
+	line "nadores #MON"
 
-	para "specially designed"
-	line "BATTLE ROOMS."
+	para "llegan de todas"
+	line "partes para luchar"
 
-	para "There are many"
-	line "BATTLE ROOMS in"
-	cont "the BATTLE TOWER."
+	para "en las SALAS"
+	line "BATALLA."
 
-	para "Each ROOM holds"
-	line "seven trainers."
+	para "Hay muchas SALAS"
+	line "BATALLA en la"
+	cont "TORRE BATALLA."
 
-	para "Beat them all, and"
-	line "win a prize."
+	para "Cada SALA cuenta"
+	line "con siete"
+	cont "entrenadores."
 
-	para "To interrupt a"
-	line "session, you must"
+	para "Derrótales a todos"
+	line "y ganarás un"
+	cont "premio."
 
-	para "SAVE. If not, you"
-	line "won't be able to"
+	para "Para interrumpir"
+	line "una sesión, debes"
 
-	para "resume your ROOM"
-	line "challenge."
+	para "GUARDAR. Si no lo"
+	line "haces, no podrás"
+
+	para "continuar tu"
+	line "desafío."
 
 	para ""
 	done
 
 Text_ReceivedAListOfLeadersOnTheHonorRoll:
-	text "Received a list of"
-	line "LEADERS on the"
-	cont "HONOR ROLL."
+	text "Recibió una lista"
+	line "de LÍDERES de la"
+	cont "LISTA de HONOR."
 
 	para ""
 	done
 
 Text_PleaseConfirmOnThisMonitor:
-	text "Please confirm on"
-	line "this monitor."
+	text "Confirma en este"
+	line "monitor."
 	done
 
 Text_ThankYou:
-	text "Thank you!"
-
-	para ""
-	done
+	text "¡Gracias!"
+	prompt
 
 Text_ThanksForVisiting:
-	text "Thanks for"
-	line "visiting!"
+	text "¡Gracias por tu"
+	line "visita!"
 	done
 
 Text_BeatenAllTheTrainers_Mobile:
-	text "Congratulations!"
+	text "¡Felicidades!"
 
-	para "You've beaten all"
-	line "the trainers!"
+	para "¡Has vencido a los"
+	line "entrenadores!"
 
-	para "Your feat may be"
-	line "worth registering,"
+	para "Tu proeza merece"
+	line "ser registrada,"
 
-	para "<PLAYER>. With your"
-	line "results, you may"
+	para "<PLAYER>. Con"
+	line "estos resultados,"
 
-	para "be chosen as a"
-	line "ROOM LEADER."
-
-	para ""
-	done
+	para "pasas a ser LÍDER"
+	line "de la SALA."
+	prompt
 
 Text_CongratulationsYouveBeatenAllTheTrainers:
-	text "Congratulations!"
+	text "¡Felicidades!"
 
-	para "You've beaten all"
-	line "the trainers!"
+	para "¡Has derrotado a"
+	line "todos los"
+	cont "entrenadores!"
 
-	para "For that, you get"
-	line "this great prize!"
+	para "¡Por ello, toma"
+	line "este gran premio!"
 
 	para ""
 	done
 
 Text_AskRegisterRecord_Mobile:
-	text "Would you like to"
-	line "register your"
-
-	para "record with the"
-	line "CENTER?"
+	text "¿Quieres registrar"
+	line "tu récord con el"
+	cont "CENTRO?"
 	done
 
 Text_PlayerGotFive:
-	text "<PLAYER> got five"
+	text "¡<PLAYER> obtiene 5"
 	line "@"
 	text_ram wStringBuffer4
 	text "!@"
@@ -532,263 +530,264 @@ Text_PlayerGotFive:
 	text_end
 
 Text_YourPackIsStuffedFull:
-	text "Oops, your PACK is"
-	line "stuffed full."
+	text "Ups, tu MOCHILA"
+	line "está llena."
 
-	para "Please make room"
-	line "and come back."
+	para "Por favor, vacíala"
+	line "y vuelve."
 	done
 
 Text_YourRegistrationIsComplete:
-	text "Your registration"
-	line "is complete."
+	text "Tu registro ha"
+	line "sido completado."
 
-	para "Please come again!"
+	para "¡Vuelve pronto!"
 	done
 
 Text_WeHopeToServeYouAgain:
-	text "We hope to serve"
-	line "you again."
+	text "Esperamos volver a"
+	line "atenderte pronto."
 	done
 
 Text_PleaseStepThisWay:
-	text "Please step this"
-	line "way."
+	text "Por aquí, por"
+	line "favor."
 	done
 
 Text_WouldYouLikeToHearAboutTheBattleTower:
-	text "Would you like to"
-	line "hear about the"
-	cont "BATTLE TOWER?"
+	text "¿Quieres saber"
+	line "más sobre la"
+	cont "TORRE BATALLA?"
 	done
 
 Text_CantBeRegistered:
-	text "Your record from"
-	line "the previous"
+	text "Tu récord de la"
+	line "anterior SALA no"
 
-	para "BATTLE ROOM can't"
-	line "be registered. OK?"
+	para "puede ser"
+	line "registrado. ¿Vale?"
 	done
 
 Text_CantBeRegistered_PreviousRecordDeleted:
-	text "Your record from"
-	line "the previous"
+	text "Tu récord de la"
+	line "anterior SALA no"
 
-	para "BATTLE ROOM can't"
-	line "be registered."
+	para "puede ser"
+	line "registrado."
 
-	para "Also, the existing"
-	line "record will be"
-	cont "deleted. OK?"
+	para "Además, el récord"
+	line "actual será"
+	cont "borrado. ¿Vale?"
 	done
 
 Text_CheckTheLeaderHonorRoll:
-	text "Check the LEADER"
-	line "HONOR ROLL?"
+	text "¿Miras la LISTA"
+	line "de HONOR?"
 	done
 
 Text_ReadBattleTowerRules:
-	text "BATTLE TOWER rules"
-	line "are written here."
+	text "Las reglas de la"
+	line "TORRE BATALLA"
 
-	para "Read the rules?"
+	para "están aquí."
+	line "¿Quieres leerlas?"
 	done
 
 Text_BattleTowerRules:
-	text "Three #MON may"
-	line "enter battles."
+	text "Pueden combatir"
+	line "tres #MON."
 
-	para "All three must be"
-	line "different."
+	para "Los tres deben ser"
+	line "diferentes."
 
-	para "The items they"
-	line "hold must also be"
-	cont "different."
+	para "Los objetos que"
+	line "lleven también"
+	cont "serán diferentes."
 
-	para "Certain #MON"
-	line "may also have"
+	para "Ciertos #MON"
+	line "pueden tener"
 
-	para "level restrictions"
-	line "placed on them."
+	para "restricciones de"
+	line "nivel."
 	done
 
 Text_BattleTower_LeftWithoutSaving:
-	text "Excuse me!"
-	line "You didn't SAVE"
+	text "¡Perdona!"
+	line "No has GUARDADO"
 
-	para "before exiting"
-	line "the BATTLE ROOM."
+	para "antes de salir de"
+	line "la SALA."
 
-	para "I'm awfully sorry,"
-	line "but your challenge"
+	para "Lo siento mucho,"
+	line "pero tu batalla se"
 
-	para "will be declared"
-	line "invalid."
+	para "declarará no"
+	line "válida."
 	done
 
 Text_YourMonWillBeHealedToFullHealth:
-	text "Your #MON will"
-	line "be healed to full"
-	cont "health."
+	text "Tus #MON"
+	line "serán curados"
+	cont "completamente."
 	done
 
 Text_NextUpOpponentNo:
-	text "Next up, opponent"
-	line "no.@"
+	text "Ahora el oponente"
+	line "n.° @"
 	text_ram wStringBuffer3
-	text ". Ready?"
+	text ". ¡Adelante!"
 	done
 
 Text_SaveBeforeConnecting_Mobile:
-	text "Your session will"
-	line "be SAVED before"
+	text "Tu sesión será"
+	line "GUARDADA antes de"
 
-	para "connecting with"
-	line "the CENTER."
+	para "conectar con el"
+	line "CENTRO."
 	done
 
 Text_SaveBeforeEnteringBattleRoom:
-	text "Before entering"
-	line "the BATTLE ROOM,"
+	text "Antes de entrar en"
+	line "la SALA BATALLA,"
 
-	para "your progress will"
-	line "be saved."
+	para "tu progreso será"
+	line "guardado."
 	done
 
 Text_SaveAndEndTheSession:
-	text "SAVE and end the"
-	line "session?"
+	text "¿GUARDAR y acabar"
+	line "la sesión?"
 	done
 
 Text_SaveBeforeReentry:
-	text "Your record will"
-	line "be SAVED before"
+	text "Tu récord será"
+	line "GUARDADO antes de"
 
-	para "you go back into"
-	line "the previous ROOM."
+	para "que vuelvas a la"
+	line "SALA anterior."
 	done
 
 Text_CancelYourBattleRoomChallenge:
-	text "Cancel your BATTLE"
-	line "ROOM challenge?"
+	text "¿Cancelar la"
+	line "SALA BATALLA?"
 	done
 
 Text_RegisterRecordOnFile_Mobile:
-	text "We have your"
-	line "previous record on"
+	text "Tu récord anterior"
+	line "está archivado."
 
-	para "file. Would you"
-	line "like to register"
-	cont "it at the CENTER?"
+	para "¿Quieres"
+	line "registrarlo"
+	cont "en el CENTRO?"
 	done
 
 Text_WeveBeenWaitingForYou:
-	text "We've been waiting"
-	line "for you. This way"
+	text "Te esperábamos."
+	line "Por aquí llegarás"
 
-	para "to a BATTLE ROOM,"
-	line "please."
+	para "a una SALA"
+	line "BATALLA."
 	done
 
 Text_FiveDayBattleLimit_Mobile:
-	text "You may enter only"
-	line "five BATTLE ROOMS"
-	cont "each day."
+	text "Sólo puedes entrar"
+	line "a 5 SALAS BATALLA"
+	cont "al día."
 
-	para "Please come back"
-	line "tomorrow."
+	para "Por favor, vuelve"
+	line "mañana."
 	done
 
 Text_TooMuchTimeElapsedNoRegister:
-	text "Sorry, but it's"
-	line "not possible to"
+	text "Lo siento, pero no"
+	line "es posible"
 
-	para "register your"
-	line "current record at"
+	para "registrar tu"
+	line "actual récord en"
 
-	para "the CENTER because"
-	line "too much time has"
+	para "el CENTRO porque"
+	line "ha pasado mucho"
 
-	para "elapsed since the"
-	line "start of your"
-	cont "challenge."
+	para "tiempo desde que"
+	line "empezaste el"
+	cont "desafío."
 	done
 
 ; a dupe?
 Text_RegisterRecordTimedOut_Mobile:
-	text "Sorry, but it's"
-	line "not possible to"
+	text "Lo siento. No es"
+	line "posible registrar"
 
-	para "register your most"
-	line "recent record at"
+	para "tu récord más"
+	line "reciente en el"
 
-	para "the CENTER because"
-	line "too much time has"
+	para "CENTRO porque ha"
+	line "pasado mucho"
 
-	para "elapsed since the"
-	line "start of your"
-	cont "challenge."
+	para "tiempo desde que"
+	line "empezaste el"
+	cont "desafío."
 	done
 
 Text_AMonLevelExceeds:
-	text "One or more of"
-	line "your #MON's"
-	cont "levels exceeds @"
+	text "Al menos uno de"
+	line "tus #MON excede"
+	cont "el nivel de @"
 	text_decimal wScriptVar, 1, 3
 	text "."
 	done
 
 Text_MayNotEnterABattleRoomUnderL70:
 	text_ram wcd49
-	text " may not"
-	line "enter a BATTLE"
-	cont "ROOM under L70."
+	text " no"
+	line "entrará en una"
+	cont "SALA menor de N70."
 
-	para "This BATTLE ROOM"
-	line "is for L@"
+	para "Esta SALA es para"
+	line "el N@"
 	text_decimal wScriptVar, 1, 3
 	text "."
 	done
 
 Text_BattleTowerYoungster:
-	text "Destroyed by the"
-	line "first opponent in"
+	text "Destruido por el"
+	line "primer oponente en"
 
-	para "no time at all…"
-	line "I'm no good…"
+	para "un instante…"
+	line "Qué malo soy…"
 	done
 
 Text_BattleTowerCooltrainerF:
-	text "There are lots of"
-	line "BATTLE ROOMS, but"
+	text "¡Hay muchas SALAS"
+	line "BATALLA, pero"
 
-	para "I'm going to win"
-	line "them all!"
+	para "voy a superarlas"
+	line "todas!"
 	done
 
 Text_BattleTowerGranny:
-	text "It's a grueling"
-	line "task, not being"
+	text "Es duro no poder"
+	line "usar objetos"
 
-	para "able to use items"
-	line "in battle."
+	para "durante la"
+	line "batalla."
 
-	para "Making your"
-	line "#MON hold items"
+	para "Hacer que tus"
+	line "#MON lleven"
 
-	para "is the key to"
-	line "winning battles."
+	para "objetos es clave"
+	line "para vencer."
 	done
 
 Text_BattleTowerBugCatcher:
-	text "I'm trying to see"
-	line "how far I can go"
+	text "Quiero ver hasta"
+	line "dónde puedo llegar"
 
-	para "using just bug"
-	line "#MON."
+	para "usando sólo"
+	line "#MON bicho."
 
-	para "Don't let there be"
-	line "any fire #MON…"
+	para "Espero que no haya"
+	line "#MON de fuego…"
 	done
 
 BattleTower1F_MapEvents:

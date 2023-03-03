@@ -21,26 +21,28 @@ CeruleanMart_CooltrainerF:
 	jumptextfaceplayer CeruleanMart_CooltrainerFText
 
 CeruleanMart_CooltrainerMText:
-	text "You'll run into"
-	line "many trainers on"
+	text "Encontrarás muchos"
+	line "entrenadores de"
 
-	para "the way to CERU-"
-	line "LEAN's CAPE."
+	para "camino hacia"
+	line "CABO CELESTE."
 
-	para "They want to see"
-	line "how they stack"
+	para "Quieren saber cómo"
+	line "son en comparación"
 
-	para "up against other"
-	line "trainers."
+	para "con otros"
+	line "entrenadores."
 	done
 
 CeruleanMart_CooltrainerFText:
-	text "MISTY is about the"
-	line "only person in"
+	text "MISTY es casi la"
+	line "única persona de"
 
-	para "town who can beat"
-	line "the trainers at"
-	cont "CERULEAN's CAPE."
+	para "la ciudad capaz de"
+	line "vencer a los"
+
+	para "ENTRENADORES de"
+	line "CABO CELESTE."
 	done
 
 CeruleanMart_MapEvents:

@@ -1,10 +1,10 @@
-	db "LIGHT@" ; species name
-	dw 311, 500 ; height, weight
+	db "LUZ@" ; species name
+	dbw 12, 225 ; height, weight
 
-	db   "This #MON uses"
-	next "the bright part of"
-	next "its body, which"
+	db   "Utiliza la parte"
+	next "brillante del"
+	next "cuerpo, que en su"
 
-	page "changed from a"
-	next "dorsal fin, to"
-	next "lure prey.@"
+	page "día fue una aleta,"
+	next "para atraer a sus"
+	next "víctimas.@"

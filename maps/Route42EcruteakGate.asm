@@ -10,11 +10,11 @@ Route42EcruteakGateOfficerScript:
 	jumptextfaceplayer Route42EcruteakGateOfficerText
 
 Route42EcruteakGateOfficerText:
-	text "MT.MORTAR is like"
-	line "a maze inside."
+	text "MONTE MORTERO es"
+	line "como un laberinto."
 
-	para "Be careful. Don't"
-	line "get lost in there."
+	para "Ten cuidado."
+	line "No te pierdas."
 	done
 
 Route42EcruteakGate_MapEvents:

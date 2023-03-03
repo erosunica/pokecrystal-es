@@ -1,79 +1,80 @@
 BrentAnswerPhoneText:
-	text "Yes? @"
+	text "¿Sí? Soy @"
 	text_ram wStringBuffer3
-	text " here…"
+	text "…"
 
-	para "Ah, <PLAYER>. What"
-	line "can I do for you?"
+	para "Ah, <PLAYER>."
+	line "¿Puedo ayudarte?"
 	done
 
 BrentAnswerPhoneDayText:
-	text "Yes? @"
+	text "¿Sí? Soy @"
 	text_ram wStringBuffer3
-	text " here…"
+	text "…"
 
-	para "Ah, <PLAYER>. What"
-	line "can I do for you?"
+	para "Ah, <PLAYER>."
+	line "¿Puedo ayudarte?"
 	done
 
 BrentAnswerPhoneNiteText:
-	text "Yes? @"
+	text "¿Sí? Aquí @"
 	text_ram wStringBuffer3
-	text " here…"
+	text "…"
 
-	para "Ah, <PLAYER>. What"
-	line "can I do for you?"
+	para "Ah, <PLAYER>. ¿En"
+	line "qué puedo ayudar-"
+	cont "te?"
 	done
 
 BrentGreetText:
-	text "Hiya, <PLAYER>. How"
-	line "are you doing?"
+	text "Hola, <PLAYER>."
+	line "¿Qué tal te va?"
 
-	para "Hey! It's me,"
+	para "¡Eh! Soy yo,"
 	line "@"
 	text_ram wStringBuffer3
 	text "."
 	done
 
 BrentGreetDayText:
-	text "Hiya, <PLAYER>, how"
-	line "are you doing?"
+	text "Hola, <PLAYER>."
+	line "¿Qué tal te va?"
 
-	para "Hey, it's me,"
+	para "¡Eh! Soy yo,"
 	line "@"
 	text_ram wStringBuffer3
 	text "."
 	done
 
 BrentGreetNiteText:
-	text "Hiya, <PLAYER>, how"
-	line "are you doing?"
+	text "Hola, <PLAYER>."
+	line "¿Qué tal te va?"
 
-	para "Hey, it's me,"
+	para "¡Eh! Soy yo,"
 	line "@"
 	text_ram wStringBuffer3
 	text "."
 	done
 
 BrentGenericText:
-	text "Oh yeah, I saw you"
-	line "coming out of a"
+	text "Ah, sí. El otro"
+	line "día vi como salías"
 
-	para "#MON CENTER the"
-	line "other day."
+	para "de un CENTRO"
+	line "#MON."
 
-	para "You heal your"
-	line "#MON regularly,"
+	para "Curas a tus #-"
+	line "MON habitualmente,"
 
-	para "don't you?"
-	line "I'm impressed."
+	para "¿verdad?"
+	line "Me impresiona."
 
-	para "Heh, my @"
+	para "Eh, mi @"
 	text_ram wStringBuffer4
 	text_start
-	line "is so tough, it"
+	line "es tan duro, que"
 
-	para "doesn't need to go"
-	line "to #MON CENTERS"
-	cont "often. Heheh!"
+	para "no necesita ir a"
+	line "los CENTROS #-"
+	cont "MON a menudo. ¡Je!"
 	done

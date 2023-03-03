@@ -1,62 +1,67 @@
 BrentAskNumber1Text:
-	text "By the way, you're"
-	line "a #MANIAC…"
+	text "A propósito, tú"
+	line "debes de adorar a"
+	cont "los #MON…"
 
-	para "I can tell."
-	line "Yes, you are."
+	para "Se nota."
+	line "Sí, seguro."
 
-	para "But your knowledge"
-	line "is shallow still!"
+	para "¡Pero tus conoci-"
+	line "mientos aún no son"
+	cont "muy profundos!"
 
-	para "Do you know BILL?"
-	line "He's an incredible"
+	para "¿Conoces a BILL?"
+	line "Es un #MANÍACO"
 
-	para "#MANIAC."
-	line "I revere him."
+	para "increíble."
+	line "Le venero."
 
-	para "I'll teach you all"
-	line "I know about BILL,"
+	para "Te enseñaré todo"
+	line "lo que sé acerca"
 
-	para "so leave me your"
-	line "phone number."
+	para "de BILL, así que"
+	line "déjame tu número"
+	cont "de teléfono."
 	done
 
 BrentAskNumber2Text:
-	text "I'll teach you all"
-	line "I know about BILL,"
+	text "Te enseñaré todo"
+	line "lo que sé acerca"
 
-	para "so leave me your"
-	line "phone number."
+	para "de BILL, así que"
+	line "déjame tu número"
+	cont "de teléfono."
 	done
 
 BrentNumberAcceptedText:
-	text "BILL--he's more"
-	line "than amazing!"
+	text "¡BILL es más que"
+	line "asombroso!"
 
-	para "To be a #MANIAC"
-	line "like him someday…"
+	para "Quiero ser un"
+	line "#MANÍACO tan"
 
-	para "That's my dream."
+	para "bueno como él…"
+	line "Ése es mi sueño."
 	done
 
 BrentNumberDeclinedText:
-	text "You're going to"
-	line "regret it…"
-
-	para "And I won't care…"
+	text "Lo vas a lamentar…"
+	line "Y me dará igual…"
 	done
 
 BrentPhoneFullText:
-	text "Huh? Your phone"
-	line "list's full."
+	text "¿Eh? Tu agenda de"
+	line "teléfonos está"
+	cont "llena."
 
-	para "A #MANIAC has"
-	line "to be more tidy!"
+	para "¡Los #MANÍACOS"
+	line "deberían ser más"
+	cont "ordenados!"
 	done
 
 BrentRematchText:
-	text "I've been waiting."
+	text "Estaba esperando."
 
-	para "Look, check out my"
+	para "Mira… ¡Mira mis"
 	line "#MON!"
 	done

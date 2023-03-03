@@ -178,102 +178,103 @@ VioletCitySpinningEarl_MovementData:
 	step_end
 
 Text_EarlAsksIfYouBeatFalkner:
-	text "Hello!"
-	line "You are trainer?"
+	text "¡Hola! ¿Entrenas"
+	line "#MON? ¿Has"
 
-	para "Battle GYM LEADER,"
-	line "win you did?"
+	para "ganado al LÍDER"
+	line "del GIMNASIO?"
 	done
 
 Text_VeryNiceIndeed:
-	text "Ooh, la la!"
-	line "Very indeed nice!"
+	text "¡Oh, la, la!"
+	line "¡Muy bien!"
 	done
 
 Text_FollowEarl:
-	text "Is that so? Then"
-	line "study shall you!"
-	cont "Follow me!"
+	text "¿Es verdad? ¡Pues"
+	line "tú estudiarás!"
+	cont "¡Sígueme!"
 	done
 
 Text_HereTeacherIAm:
-	text "Here, teacher I"
-	line "am. Good it is"
-	cont "you study here!"
+	text "El profesor soy"
+	line "yo. ¡Bien está"
+	cont "que aquí estudies!"
 	done
 
 VioletCityLassText:
-	text "Ghosts are rumored"
-	line "to appear in"
-	cont "SPROUT TOWER."
+	text "Dicen que en la"
+	line "TORRE BELLSPROUT"
+	cont "hay fantasmas."
 
-	para "They said normal-"
-	line "type #MON moves"
+	para "Y que los #MON"
+	line "de tipo normal no"
 
-	para "had no effect on"
-	line "ghosts."
+	para "afectan a los"
+	line "fantasmas."
 	done
 
 VioletCitySuperNerdText:
-	text "Hey, you're a"
-	line "#MON trainer?"
+	text "¿Entrenas #MON?"
 
-	para "If you beat the"
-	line "GYM LEADER here,"
+	para "¡Si ganas a este"
+	line "LÍDER de GIMNASIO,"
 
-	para "you'll be ready"
-	line "for prime time!"
+	para "estarás en el"
+	line "camino del éxito!"
 	done
 
 VioletCityGrampsText:
-	text "FALKNER, from the"
-	line "VIOLET #MON"
+	text "¡PEGASO, del"
+	line "GIMNASIO #MON"
 
-	para "GYM, is a fine"
-	line "trainer!"
+	para "de CIUDAD MALVA,"
+	line "es magnífico!"
 
-	para "He inherited his"
-	line "father's gym and"
+	para "Heredó el"
+	line "gimnasio de su"
 
-	para "has done a great"
-	line "job with it."
+	para "padre y ha hecho"
+	line "un gran trabajo."
 	done
 
 VioletCityYoungsterText:
-	text "I saw a wiggly"
-	line "tree up ahead!"
+	text "¡He visto un árbol"
+	line "que se mueve!"
 
-	para "If you touch it,"
-	line "it squirms and"
-	cont "dances! Cool!"
+	para "¡Si lo tocas, se"
+	line "retuerce y baila!"
+
+	para "¡Es genial!"
 	done
 
 VioletCitySignText:
-	text "VIOLET CITY"
+	text "CIUDAD MALVA"
 
-	para "The City of"
-	line "Nostalgic Scents"
+	para "La ciudad de los"
+	line "aromas nostálgicos"
 	done
 
 VioletGymSignText:
-	text "VIOLET CITY"
-	line "#MON GYM"
-	cont "LEADER: FALKNER"
+	text "LÍDER DEL GIMNASIO"
+	line "#MON DE CIUDAD"
+	cont "MALVA: PEGASO"
 
-	para "The Elegant Master"
-	line "of Flying #MON"
+	para "El elegante"
+	line "maestro de los"
+	cont "#MON voladores"
 	done
 
 SproutTowerSignText:
-	text "SPROUT TOWER"
+	text "TORRE BELLSPROUT"
 
-	para "Experience the"
-	line "Way of #MON"
+	para "Vive la vida"
+	line "#MON"
 	done
 
 EarlsPokemonAcademySignText:
-	text "EARL'S #MON"
-	line "ACADEMY"
+	text "ACADEMIA #MON"
+	line "DE PRIMO"
 	done
 
 VioletCity_MapEvents:

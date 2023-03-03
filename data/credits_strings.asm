@@ -59,13 +59,18 @@ CreditsStrings:
 	dw .HideyukiHashimoto
 	dw .SatoshiYamato
 	dw .ShigeruMiyamoto
-	dw .GailTilden
-	dw .NobOgasawara
-	dw .SethMcMahill
-	dw .HirotoAlexander
-	dw .TeresaLillygren
-	dw .ThomasHertzog
-	dw .ErikJohnson
+	dw .KaiZeh
+	dw .HiroyukiUesugi
+	dw .TanjaBaar
+	dw .KaiNeumann
+	dw .MauriceTisdale
+	dw .AntonioGreppi
+	dw .CarlosMontilla
+	dw .SofiaMarin
+	dw .PalmaSanchez
+	dw .AngelVictoria
+	dw .SpanishTestingTeam
+	dw .MisakoNishio
 	dw .HiroNakamura
 	dw .TerukiMurakawa
 	dw .KazuyoshiOsawa
@@ -103,6 +108,7 @@ CreditsStrings:
 	dw .UsCoordination
 	dw .TextTranslation
 	dw .PaadTesting
+	dw .TextCorrection
 
 .SatoshiTajiri:       db "   SATOSHI TAJIRI@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   JUNICHI MASUDA@"         ; "ますだ　じゅんいち@"
@@ -167,49 +173,55 @@ CreditsStrings:
 .ShigeruMiyamoto:     db "  SHIGERU MIYAMOTO@"        ; "みやもと　しげる@"
 .End:                 db "        END@"               ; "おしまい@"
 .Unknown:             db "      ????????@"            ; "？？？？？？？？@"
-.GailTilden:          db "    GAIL TILDEN@"
-.NobOgasawara:        db "   NOB OGASAWARA@"
-.SethMcMahill:        db "   SETH McMAHILL@"
-.HirotoAlexander:     db "  HIROTO ALEXANDER@"
-.TeresaLillygren:     db "  TERESA LILLYGREN@"
-.ThomasHertzog:       db "   THOMAS HERTZOG@"
-.ErikJohnson:         db "    ERIK JOHNSON@"
+.KaiZeh:              db "      KAI ZEH@"
+.HiroyukiUesugi:      db "  HIROYUKI UESUGI@"
+.TanjaBaar:           db "     TANJA BAAR@"
+.KaiNeumann:          db "    KAI NEUMANN@"
+.MauriceTisdale:      db "  MAURICE TISDALE@"
+.AntonioGreppi:       db "   ANTONIO GREPPI@"
+.CarlosMontilla:      db "  CARLOS MONTILLA@"
+.SofiaMarin:          db "    SOFIA MARÍN@"
+.PalmaSanchez:        db "   PALMA SÁNCHEZ@"
+.AngelVictoria:       db "   ÁNGEL VICTORIA@"
+.SpanishTestingTeam:  db "SPANISH TESTING TEAM@"
+.MisakoNishio:        db "   MISAKO NISHIO@"
 .HiroNakamura:        db "   HIRO NAKAMURA@"
 .TerukiMurakawa:      db "  TERUKI MURAKAWA@"
 .KazuyoshiOsawa:      db "  KAZUYOSHI OSAWA@"
 .KimikoNakamichi:     db "  KIMIKO NAKAMICHI@"
 .Staff:               db "      #MON"                 ; "ポケットモンスター"
-                    next "  CRYSTAL VERSION"          ; "　　クりスタル　バージョン"
+                    next "  EDICIÓN CRISTAL"          ; "　　クりスタル　バージョン"
                     next "       STAFF@"              ; "　　　　スタッフ@"
 .Director:            db "      DIRECTOR@"            ; "エグゼクティブ　ディレクター@"
-.CoDirector:          db "    CO-DIRECTOR@"           ; "ディレクター@"
-.Programmers:         db "    PROGRAMMERS@"           ; "プログラム@"
-.GraphicsDirector:    db " GRAPHICS DIRECTOR@"        ; "グラフィック　ディレクター@"
-.MonsterDesign:       db "   MONSTER DESIGN@"         ; "#　デザイン@"
-.GraphicsDesign:      db "  GRAPHICS DESIGN@"         ; "グラフィック　デザイン@"
-.Music:               db "       MUSIC@"              ; "おんがく@"
-.SoundEffects:        db "   SOUND EFFECTS@"          ; "サウンド　エフェクト@"
-.GameDesign:          db "    GAME DESIGN@"           ; "ゲームデザイン@"
-.GameScenario:        db "   GAME SCENARIO@"          ; "シナりオ@"
-.ToolProgramming:     db "  TOOL PROGRAMMING@"        ; "ツール　プログラム@"
-.ParametricDesign:    db " PARAMETRIC DESIGN@"        ; "パラメーター　せってい@"
-.ScriptDesign:        db "   SCRIPT DESIGN@"          ; "スクりプト　せってい@"
-.MapDataDesign:       db "  MAP DATA DESIGN@"         ; "マップデータ　せってい@"
-.MapDesign:           db "     MAP DESIGN@"           ; "マップ　デザイン@"
-.ProductTesting:      db "  PRODUCT TESTING@"         ; "デバッグプレイ@"
-.SpecialThanks:       db "   SPECIAL THANKS@"         ; "スぺシャルサンクス@"
-.Producers:           db "     PRODUCERS@"            ; "プロデューサー@"
-.ExecutiveProducer:   db " EXECUTIVE PRODUCER@"       ; "エグゼクティブ　プロデューサー@"
-.PokemonAnimation:    db " #MON ANIMATION@"           ; "#　アニメーション@"
-.PokedexText:         db "    #DEX TEXT@"             ; "ずかん　テキスト@"
-.MobilePrjLeader:     db " MOBILE PRJ. LEADER@"       ; "モバイルプロジェクト　りーダー@"
-.MobileSystemAd:      db " MOBILE SYSTEM AD.@"        ; "モバイル　システムアドバイザー@"
-.MobileStadiumDir:    db "MOBILE STADIUM DIR.@"       ; "モバイルスタジアム　ディレクター@"
-.Coordination:        db "    COORDINATION@"          ; "コーディネーター@"
-.UsVersionStaff:      db "  US VERSION STAFF@"
-.UsCoordination:      db "  US COORDINATION@"
-.TextTranslation:     db "  TEXT TRANSLATION@"
-.PaadTesting:         db "    PAAD TESTING@"
+.CoDirector:          db "    SUBDIRECTOR@"           ; "ディレクター@"
+.Programmers:         db "   PROGRAMADORES@"          ; "プログラム@"
+.GraphicsDirector:    db "  DIRECTOR GRÁFICO@"        ; "グラフィック　ディレクター@"
+.MonsterDesign:       db "  DISEÑO CRIATURAS@"        ; "#　デザイン@"
+.GraphicsDesign:      db "   DISEÑO GRÁFICO@"         ; "グラフィック　デザイン@"
+.Music:               db "       MÚSICA@"             ; "おんがく@"
+.SoundEffects:        db "  EFECTOS SONOROS@"         ; "サウンド　エフェクト@"
+.GameDesign:          db "  DISEÑO DEL JUEGO@"        ; "ゲームデザイン@"
+.GameScenario:        db " ESCENARIO DE JUEGO@"       ; "シナりオ@"
+.ToolProgramming:     db "    PROGRAMACIÓN@"          ; "ツール　プログラム@"
+.ParametricDesign:    db " DISEÑO PARAMÉTRICO@"       ; "パラメーター　せってい@"
+.ScriptDesign:        db "       SCRIPT@"             ; "スクりプト　せってい@"
+.MapDataDesign:       db "DISEÑO DATOS MAPEADO@"      ; "マップデータ　せってい@"
+.MapDesign:           db " DISEÑO DEL MAPEADO@"       ; "マップ　デザイン@"
+.ProductTesting:      db "       TESTEO@"             ; "デバッグプレイ@"
+.SpecialThanks:       db "  AGRADECIMIENTOS@"         ; "スぺシャルサンクス@"
+.Producers:           db "    PRODUCTORES@"           ; "プロデューサー@"
+.ExecutiveProducer:   db "  PROD. EJECUTIVO@"         ; "エグゼクティブ　プロデューサー@"
+.PokemonAnimation:    db " ANIMACIÓN #MON@"           ; "#　アニメーション@"
+.PokedexText:         db "   TEXTO #DEX@"             ; "ずかん　テキスト@"
+.MobilePrjLeader:     db "@"                          ; "モバイルプロジェクト　りーダー@"
+.MobileSystemAd:      db "@"                          ; "モバイル　システムアドバイザー@"
+.MobileStadiumDir:    db "@"                          ; "モバイルスタジアム　ディレクター@"
+.Coordination:        db "    COORDINACIÓN@"          ; "コーディネーター@"
+.UsVersionStaff:      db " EQUIPO V. ESPAÑOLA@"
+.UsCoordination:      db "COORDINACIÓN EUROPA@"
+.TextTranslation:     db "  TEXTO CASTELLANO@"
+.PaadTesting:         db "       TESTEO@"
+.TextCorrection:      db "CORRECCIÓN DE TEXTO@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

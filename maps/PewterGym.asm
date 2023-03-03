@@ -74,136 +74,134 @@ PewterGymStatue:
 	jumpstd gymstatue2
 
 BrockIntroText:
-	text "BROCK: Wow, it's"
-	line "not often that we"
+	text "BROCK: ¡Uau! No"
+	line "todos los días nos"
 
-	para "get a challenger"
-	line "from JOHTO."
+	para "desafía alguien de"
+	line "JOHTO."
 
-	para "I'm BROCK, the"
-	line "PEWTER GYM LEADER."
+	para "Soy BROCK, LÍDER"
+	line "del GIM. de C."
 
-	para "I'm an expert on"
-	line "rock-type #MON."
+	para "PLATEADA y experto"
+	line "en #MON roca."
 
-	para "My #MON are im-"
-	line "pervious to most"
+	para "Mis #MON son"
+	line "insensibles a la"
 
-	para "physical attacks."
-	line "You'll have a hard"
+	para "mayoría de ataques"
+	line "físicos. Te será"
 
-	para "time inflicting"
-	line "any damage."
+	para "muy difícil"
+	line "hacerles daño."
 
-	para "Come on!"
+	para "¡Venga!"
 	done
 
 BrockWinLossText:
-	text "BROCK: Your #-"
-	line "MON's powerful at-"
-	cont "tacks overcame my"
-	cont "rock-hard defense…"
+	text "BROCK: Mi dura"
+	line "defensa no soportó"
 
-	para "You're stronger"
-	line "than I expected…"
+	para "los ataques de tus"
+	line "#MON…"
 
-	para "Go ahead--take"
-	line "this BADGE."
+	para "Eres más fuerte de"
+	line "lo que pensaba…"
+
+	para "Toma. Coge esta"
+	line "MEDALLA."
 	done
 
 ReceivedBoulderBadgeText:
-	text "<PLAYER> received"
-	line "BOULDERBADGE."
+	text "<PLAYER> recibió"
+	line "la MEDALLA ROCA."
 	done
 
 BrockBoulderBadgeText:
 	text "BROCK: <PLAY_G>,"
-	line "thanks. I enjoyed"
+	line "gracias. Me ha"
 
-	para "battling you, even"
-	line "though I am a bit"
-	cont "upset."
+	para "gustado el combate"
+	line "aunque estoy algo"
+	cont "molesto."
 
-	para "That BOULDERBADGE"
-	line "will make your"
+	para "La MEDALLA ROCA"
+	line "hará que tus"
 
-	para "#MON even more"
-	line "powerful."
+	para "#MON sean más"
+	line "fuertes."
 	done
 
 BrockFightDoneText:
-	text "BROCK: The world"
-	line "is huge. There are"
+	text "BROCK: El mundo es"
+	line "enorme. Hay muchos"
 
-	para "still many strong"
-	line "trainers like you."
+	para "entrenadores tan"
+	line "fuertes como tú."
 
-	para "Just wait and see."
-	line "I'm going to be-"
-	cont "come a lot strong-"
-	cont "er too."
+	para "Espera y verás."
+	line "Yo también me voy"
+
+	para "a hacer más"
+	line "fuerte."
 	done
 
 CamperJerrySeenText:
-	text "The trainers of"
-	line "this GYM use rock-"
-	cont "type #MON."
+	text "Los entrenadores"
+	line "de este GIMNASIO"
+	cont "usan #MON roca."
 
-	para "The rock-type has"
-	line "high DEFENSE."
+	para "Éstos tienen mayor"
+	line "DEFENSA. Los"
 
-	para "Battles could end"
-	line "up going a long"
+	para "combates pueden"
+	line "durar mucho rato."
 
-	para "time. Are you"
-	line "ready for this?"
+	para "¿Te sientes con"
+	line "fuerzas?"
 	done
 
 CamperJerryBeatenText:
-	text "I have to win"
-	line "these battles…"
+	text "Tengo que ganar"
+	line "estos combates…"
 	done
 
 CamperJerryAfterBattleText:
-	text "Hey, you! Trainer"
-	line "from JOHTO! BROCK"
+	text "¡Eh, tú! ¡Joven de"
+	line "JOHTO! BROCK es"
+	cont "muy duro."
 
-	para "is tough. He'll"
-	line "punish you if you"
-
-	para "don't take him"
-	line "seriously."
+	para "Te castigará si no"
+	line "le tomas en serio."
 	done
 
 PewterGymGuyText:
-	text "Yo! CHAMP in"
-	line "making! You're"
+	text "¡Eh! Eres"
+	line "realmente temible."
 
-	para "really rocking."
-	line "Are you battling"
+	para "¿Estás enfrentán-"
+	line "dote a los LÍDERES"
 
-	para "the GYM LEADERS of"
+	para "de GIMNASIO de"
 	line "KANTO?"
 
-	para "They're strong and"
-	line "dedicated people,"
+	para "Son fuertes y"
+	line "entregados, igual"
 
-	para "just like JOHTO's"
-	line "GYM LEADERS."
+	para "que los LÍDERES de"
+	line "GIMNASIO de JOHTO."
 	done
 
 PewterGymGuyWinText:
-	text "Yo! CHAMP in"
-	line "making! That GYM"
+	text "¡Hola! Este"
+	line "GIMNASIO no te ha"
+	cont "costado mucho."
 
-	para "didn't give you"
-	line "much trouble."
+	para "Tu forma de atacar"
+	line "ha sido realmente"
 
-	para "The way you took"
-	line "charge was really"
-
-	para "inspiring. I mean"
-	line "that seriously."
+	para "increíble."
+	line "Lo digo en serio."
 	done
 
 PewterGym_MapEvents:

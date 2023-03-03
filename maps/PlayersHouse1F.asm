@@ -211,176 +211,181 @@ MomWalksBackMovement:
 	step_end
 
 ElmsLookingForYouText:
-	text "Oh, <PLAYER>…! Our"
-	line "neighbor, PROF."
+	text "¡Ah, <PLAYER>…!"
+	line "Nuestro vecino,"
 
-	para "ELM, was looking"
-	line "for you."
+	para "el PROF. ELM, te"
+	line "estaba buscando."
 
-	para "He said he wanted"
-	line "you to do some-"
-	cont "thing for him."
+	para "Dijo que quería"
+	line "que le hicieras"
+	cont "un favor."
 
-	para "Oh! I almost for-"
-	line "got! Your #MON"
+	para "¡Ah! ¡Casi se me"
+	line "olvida! Ya han"
 
-	para "GEAR is back from"
-	line "the repair shop."
+	para "traído tu #GEAR"
+	line "del taller."
 
-	para "Here you go!"
+	para "¡Aquí tienes!"
 	done
 
 MomGivesPokegearText:
-	text "#MON GEAR, or"
-	line "just #GEAR."
+	text "El #MON GEAR o"
+	line "sólo #GEAR."
 
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
+	para "Es básico para"
+	line "ser un buen"
+	cont "entrenador."
 
-	para "Oh, the day of the"
-	line "week isn't set."
+	para "¡Ah! Falta el día"
+	line "de la semana."
 
-	para "You mustn't forget"
-	line "that!"
+	para "¡No olvides"
+	line "ponerlo!"
 	done
 
 IsItDSTText:
-	text "Is it Daylight"
-	line "Saving Time now?"
+	text "¿Es horario de"
+	line "verano?"
 	done
 
 ComeHomeForDSTText:
-	text "Come home to"
-	line "adjust your clock"
+	text "Vuelve a casa"
+	line "para cambiar de"
+	cont "hora el reloj."
 
-	para "for Daylight"
-	line "Saving Time."
-
-	para "By the way, do you"
-	line "know how to use"
-	cont "the PHONE?"
+	para "Por cierto…"
+	line "¿Sabes cómo usar"
+	cont "el TELÉFONO?"
 	done
 
 KnowTheInstructionsText:
-	text "Don't you just"
-	line "turn the #GEAR"
+	text "¿Recuerdas que"
+	line "hay que encender"
 
-	para "on and select the"
-	line "PHONE icon?"
+	para "el #GEAR y"
+	line "elegir el"
+	cont "TELÉFONO?"
 	done
 
 DontKnowTheInstructionsText:
-	text "I'll read the"
-	line "instructions."
+	text "Te leeré las"
+	line "instrucciones."
 
-	para "Turn the #GEAR"
-	line "on and select the"
-	cont "PHONE icon."
+	para "Enciende el"
+	line "#GEAR y elige"
+	cont "el TELÉFONO."
 	done
 
 InstructionsNextText:
-	text "Phone numbers are"
-	line "stored in memory."
+	text "Los números están"
+	line "en la memoria."
 
-	para "Just choose a name"
-	line "you want to call."
+	para "Elige el nombre"
+	line "que quieras."
 
-	para "Gee, isn't that"
-	line "convenient?"
+	para "¿No te parece"
+	line "estupendo?"
 	done
 
 HurryUpElmIsWaitingText:
-	text "PROF.ELM is wait-"
-	line "ing for you."
+	text "El PROF. ELM te"
+	line "está esperando."
 
-	para "Hurry up, baby!"
+	para "¡Date prisa!"
 	done
 
 SoWhatWasProfElmsErrandText:
-	text "So, what was PROF."
-	line "ELM's errand?"
+	text "¿Qué quería el"
+	line "PROF. ELM?"
 
 	para "…"
 
-	para "That does sound"
-	line "challenging."
+	para "Parece muy"
+	line "difícil."
 
-	para "But, you should be"
-	line "proud that people"
-	cont "rely on you."
+	para "Deberías llevar"
+	line "con orgullo el que"
+
+	para "la gente confíe en"
+	line "ti."
 	done
 
 ImBehindYouText:
-	text "<PLAYER>, do it!"
+	text "¡Vamos, <PLAYER>!"
 
-	para "I'm behind you all"
-	line "the way!"
+	para "¡Cuentas con toda"
+	line "mi ayuda!"
 	done
 
 NeighborMornIntroText:
-	text "Good morning,"
+	text "¡Buenos días,"
 	line "<PLAY_G>!"
 
-	para "I'm visiting!"
+	para "¡Estoy de visita!"
 	done
 
 NeighborDayIntroText:
-	text "Hello, <PLAY_G>!"
-	line "I'm visiting!"
+	text "¡Hola, <PLAY_G>!"
+	line "¡Estoy de visita!"
 	done
 
 NeighborNiteIntroText:
-	text "Good evening,"
+	text "¡Buenas tardes,"
 	line "<PLAY_G>!"
 
-	para "I'm visiting!"
+	para "¡Estoy de visita!"
 	done
 
 NeighborText:
-	text "<PLAY_G>, have you"
-	line "heard?"
+	text "<PLAY_G>, ¿lo"
+	line "has oído?"
 
-	para "My daughter is"
-	line "adamant about"
+	para "Mi hija está"
+	line "empeñada en"
 
-	para "becoming PROF."
-	line "ELM's assistant."
+	para "convertirse en"
+	line "ayudante del PROF."
+	cont "ELM."
 
-	para "She really loves"
-	line "#MON!"
+	para "¡Le encantan"
+	line "los #MON!"
 	done
 
 StoveText:
-	text "Mom's specialty!"
+	text "¡La especialidad"
+	line "de mi madre!"
 
-	para "CINNABAR VOLCANO"
-	line "BURGER!"
+	para "¡HAMBURGUESA"
+	line "VOLCÁN CANELA!"
 	done
 
 SinkText:
-	text "The sink is spot-"
-	line "less. Mom likes it"
-	cont "clean."
+	text "El fregadero está"
+	line "impecable. A mamá"
+	cont "le gusta limpio."
 	done
 
 FridgeText:
-	text "Let's see what's"
-	line "in the fridge…"
+	text "Veamos qué hay en"
+	line "la nevera…"
 
-	para "FRESH WATER and"
-	line "tasty LEMONADE!"
+	para "¡AGUA FRESCA y una"
+	line "sabrosa LIMONADA!"
 	done
 
 TVText:
-	text "There's a movie on"
-	line "TV: Stars dot the"
+	text "Hay una película"
+	line "en TV: dos chicos"
 
-	para "sky as two boys"
-	line "ride on a train…"
+	para "montan en tren"
+	line "bajo el cielo"
+	cont "estrellado…"
 
-	para "I'd better get"
-	line "rolling too!"
+	para "¡Será mejor que yo"
+	line "me ponga en marcha"
+	cont "también!"
 	done
 
 PlayersHouse1F_MapEvents:

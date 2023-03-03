@@ -1,73 +1,75 @@
 ParryAskNumber1Text:
-	text "Sheesh, the way"
-	line "you attacked! That"
+	text "¡Fiuu! ¡Esa manera"
+	line "de atacar es"
 
-	para "was something! We"
-	line "should meet again!"
+	para "única! ¡Debemos"
+	line "vernos de nuevo!"
 
-	para "How about giving"
-	line "me your number?"
+	para "¿Qué tal si me"
+	line "das tu número de"
+	cont "teléfono?"
 	done
 
 ParryAskNumber2Text:
-	text "So you want to"
-	line "register my phone"
+	text "Así que quieres"
+	line "tener mi teléfono"
 
-	para "number for a re-"
-	line "match, huh?"
+	para "para una revancha,"
+	line "¿verdad?"
 	done
 
 ParryNumberAcceptedText:
-	text "I'll call you"
-	line "whenever I feel"
-	cont "like battling!"
+	text "¡Te llamaré cuando"
+	line "me apetezca echar"
+	cont "un combate!"
 	done
 
 ParryNumberDeclinedText:
-	text "No? That's fine."
+	text "¿No? Pues vale."
 
-	para "A definite no is"
-	line "easy to take!"
+	para "¡No parece un no"
+	line "definitivo!"
 
-	para "I'll be right here"
-	line "when you're ready"
-	cont "for a rematch."
+	para "Estaré aquí para"
+	line "cuando quieras la"
+	cont "revancha."
 	done
 
 ParryPhoneFullText:
-	text "Oh? There's no"
-	line "room to register"
-	cont "my phone number."
+	text "¡Oh! No hay sitio"
+	line "para registrar mi"
+
+	para "número de"
+	line "teléfono."
 	done
 
 ParryRematchText:
-	text "Hey, here comes"
-	line "the kid! Let's go!"
+	text "¡Eh, aquí llega!"
+	line "¡Adelante!"
 
-	para "Ready for my usual"
-	line "no-brainer, all-"
-	cont "out offense?"
+	para "Aquí llega mi ata-"
+	line "que sin cuartel…"
 	done
 
 ParryPackFullText:
-	text "Your PACK looks"
-	line "stuffed full!"
+	text "¡Tu MOCHILA parece"
+	line "estar llena!"
 
-	para "You can't have"
-	line "this now."
+	para "Ahora no te puedo"
+	line "dar esto."
 	done
 
 ParryRematchGiftText:
-	text "Well, you're"
-	line "special all right."
+	text "Bien… Eres"
+	line "muy especial."
 
-	para "If only I'd begun"
-	line "#MON when I was"
-	cont "a tad younger…"
+	para "Si hubiera empeza-"
+	line "do con los #MON"
+	cont "cuando era joven…"
 
-	para "I want you to work"
-	line "and succeed for"
+	para "Quiero que te"
+	line "esfuerces por los"
 
-	para "the both of us."
-	line "So take this, OK?"
+	para "dos, así que coge"
+	line "esto… ¿Vale?"
 	done

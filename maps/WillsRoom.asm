@@ -79,51 +79,51 @@ WillsRoom_EnterMovement:
 	step_end
 
 WillScript_WillBeforeText:
-	text "Welcome to #MON"
-	line "LEAGUE, <PLAYER>."
+	text "Bienvenidos a la"
+	line "LIGA #MON."
 
-	para "Allow me to intro-"
-	line "duce myself. I am"
-	cont "WILL."
+	para "Permíteme que me"
+	line "presente. Me llamo"
+	cont "MENTO."
 
-	para "I have trained all"
-	line "around the world,"
+	para "Me he entrenado"
+	line "por todo el mundo"
 
-	para "making my psychic"
-	line "#MON powerful."
+	para "para mejorar a mis"
+	line "#MON psíquicos."
 
-	para "And, at last, I've"
-	line "been accepted into"
-	cont "the ELITE FOUR."
+	para "Y, por fin, me han"
+	line "aceptado en el"
+	cont "ALTO MANDO."
 
-	para "I can only keep"
-	line "getting better!"
+	para "¡Sólo puedo seguir"
+	line "mejorando!"
 
-	para "Losing is not an"
-	line "option!"
+	para "¡Es imposible que"
+	line "pierda!"
 	done
 
 WillScript_WillBeatenText:
-	text "I… I can't…"
-	line "believe it…"
+	text "No… Esto es…"
+	line "increíble…"
 	done
 
 WillScript_WillDefeatText:
-	text "Even though I was"
-	line "defeated, I won't"
-	cont "change my course."
+	text "Aunque haya perdi-"
+	line "do, no cambiaré "
+	cont "mis planes."
 
-	para "I will continue"
-	line "battling until I"
+	para "¡Seguiré luchando"
+	line "hasta ser el mejor"
 
-	para "stand above all"
-	line "trainers!"
+	para "de todos los"
+	line "entrenadores!"
 
-	para "Now, <PLAYER>, move"
-	line "on and experience"
+	para "Y ahora <PLAYER>,"
+	line "experimenta toda"
 
-	para "the true ferocity"
-	line "of the ELITE FOUR."
+	para "la fuerza del"
+	line "ALTO MANDO."
 	done
 
 WillsRoom_MapEvents:

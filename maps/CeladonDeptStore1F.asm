@@ -24,51 +24,49 @@ CeladonDeptStore1FElevatorButton:
 	jumpstd elevatorbutton
 
 CeladonDeptStore1FReceptionistText:
-	text "Hello! Welcome to"
-	line "CELADON DEPT."
-	cont "STORE!"
+	text "¡Hola! ¡Éste es el"
+	line "CENTRO COMERCIAL"
+	cont "de CIUDAD AZULONA!"
 
-	para "The directory is"
-	line "on the wall."
+	para "El directorio está"
+	line "en la pared."
 	done
 
 CeladonDeptStore1FGentlemanText:
-	text "This DEPT.STORE is"
-	line "part of the same"
+	text "Este C. COMERCIAL"
+	line "pertenece a la"
 
-	para "chain as the one"
-	line "in GOLDENROD CITY."
+	para "misma cadena que"
+	line "el de C. TRIGAL."
 
-	para "They were both"
-	line "renovated at the"
-	cont "same time."
+	para "Los dos fueron"
+	line "renovados al"
+	cont "mismo tiempo."
 	done
 
 CeladonDeptStore1FTeacherText:
-	text "This is my first"
-	line "time here."
+	text "Es la primera vez"
+	line "que vengo."
 
-	para "It's so big…"
+	para "Es muy grande…"
 
-	para "I'm afraid I'll"
-	line "get lost."
+	para "Me da miedo"
+	line "perderme."
 	done
 
 CeladonDeptStore1FDirectoryText:
-	text "1F: SERVICE"
-	line "    COUNTER"
+	text "PB: INFORMACIÓN"
 
-	para "2F: TRAINER'S"
-	line "    MARKET"
+	para "P1: TIENDA DE"
+	line "    ENTRENADORES"
 
-	para "3F: TM SHOP"
+	para "P2: TIENDA DE MT"
 
-	para "4F: WISEMAN GIFTS"
+	para "P3: REGALOS"
 
-	para "5F: DRUG STORE"
+	para "P4: FARMACIA"
 
-	para "6F: ROOFTOP"
-	line "    SQUARE"
+	para "P5: AZOTEA"
 	done
 
 CeladonDeptStore1F_MapEvents:

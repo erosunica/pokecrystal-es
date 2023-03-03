@@ -46,68 +46,69 @@ OlivineLighthouse3FEther:
 	itemball ETHER
 
 BirdKeeperTheoSeenText:
-	text "Why are you here?"
-	line "Are you just going"
+	text "¿Qué haces aquí?"
+	line "¿Sólo mirando?"
 
-	para "to gawk? I suggest"
-	line "that you leave!"
+	para "¡Pues será mejor"
+	line "que te vayas!"
 	done
 
 BirdKeeperTheoBeatenText:
-	text "You really are"
-	line "concerned…"
+	text "Te preocupas de"
+	line "verdad…"
 	done
 
 BirdKeeperTheoAfterBattleText:
-	text "How the heck do"
-	line "you go up?"
+	text "¿Cómo diablos se"
+	line "sube?"
 
-	para "I want to visit"
-	line "the sick #MON,"
+	para "Quiero visitar"
+	line "al #MON"
 
-	para "but I can't get up"
-	line "there…"
+	para "enfermo, pero no"
+	line "puedo subir…"
 	done
 
 SailorTerrellSeenText:
-	text "Sailors are both"
-	line "kind and strong."
-	cont "How about you?"
+	text "Los marineros"
+	line "somos fuertes y"
+	cont "simpáticos. ¿Y tú?"
 	done
 
 SailorTerrellBeatenText:
-	text "You are both kind"
-	line "and strong…"
+	text "Eres fuerte y"
+	line "amable…"
 	done
 
 SailorTerrellAfterBattleText:
-	text "Every time I come"
-	line "back to OLIVINE, I"
-	cont "visit the GYM."
+	text "Siempre que vuelvo"
+	line "a CIUDAD OLIVO"
+	cont "voy al GIMNASIO."
 
-	para "The GYM LEADER's"
-	line "#MON type has"
+	para "El tipo de #MON"
+	line "de su LÍDER ha"
 
-	para "changed without me"
-	line "noticing."
+	para "cambiado sin darme"
+	line "cuenta."
 	done
 
 GentlemanPrestonSeenText:
-	text "I travel the world"
-	line "to train my #-"
-	cont "MON. I wish to"
-	cont "battle with you."
+	text "Viajo por el mundo"
+	line "para entrenar a"
+
+	para "mis #MON."
+	line "¿Quieres luchar?"
 	done
 
 GentlemanPrestonBeatenText:
-	text "…sigh… I must"
-	line "train some more…"
+	text "Ufffff…"
+	line "Debo entrenar más."
 	done
 
 GentlemanPrestonAfterBattleText:
-	text "JASMINE used to"
-	line "use rock #MON"
-	cont "like ONIX."
+	text "YASMINA solía"
+	line "utilizar #MON"
+	cont "roca como ONIX."
 	done
 
 OlivineLighthouse3F_MapEvents:

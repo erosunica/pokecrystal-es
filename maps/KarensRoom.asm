@@ -79,55 +79,56 @@ KarensRoom_EnterMovement:
 	step_end
 
 KarenScript_KarenBeforeText:
-	text "I am KAREN of the"
-	line "ELITE FOUR."
+	text "Soy KAREN, del"
+	line "ALTO MANDO."
 
-	para "You're <PLAYER>?"
-	line "How amusing."
+	para "¿Eres <PLAYER>?"
+	line "¡Qué gracia!"
 
-	para "I love dark-type"
-	line "#MON."
+	para "Me gustan los"
+	line "#MON de tipo"
+	cont "siniestro."
 
-	para "I find their wild,"
-	line "tough image to be"
+	para "Su naturaleza tan"
+	line "fuerte y salvaje"
 
-	para "so appealing. And"
-	line "they're so strong."
+	para "me parece muy"
+	line "atractiva."
 
-	para "Think you can take"
-	line "them? Just try to"
-	cont "entertain me."
+	para "¿Crees que podrás"
+	line "detenerlos? ¡A ver"
+	cont "qué tal lo haces!"
 
-	para "Let's go."
+	para "¡Vamos allá!"
 	done
 
 KarenScript_KarenBeatenText:
-	text "Well, aren't you"
-	line "good. I like that"
-	cont "in a trainer."
+	text "Lo haces bien…"
+	line "Me gusta eso en"
+	cont "los entrenadores."
 	done
 
 KarenScript_KarenDefeatText:
-	text "Strong #MON."
+	text "#MON fuertes."
 
-	para "Weak #MON."
+	para "#MON débiles."
 
-	para "That is only the"
-	line "selfish perception"
-	cont "of people."
+	para "Ésa es la visión"
+	line "egoísta que tiene"
+	cont "todo el mundo."
 
-	para "Truly skilled"
-	line "trainers should"
+	para "Si un entrenador"
+	line "es bueno, debería"
 
-	para "try to win with"
-	line "their favorites."
+	para "ser capaz de ganar"
+	line "con sus favoritos."
 
-	para "I like your style."
-	line "You understand"
-	cont "what's important."
+	para "Me gusta tu"
+	line "estilo. Sabes"
+	cont "lo que importa."
 
-	para "Go on--the CHAM-"
-	line "PION is waiting."
+	para "Adelante. El"
+	line "CAMPEÓN te espera."
 	done
 
 KarensRoom_MapEvents:

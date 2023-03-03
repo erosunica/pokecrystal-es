@@ -162,78 +162,74 @@ MovementData_0x74555:
 	step_end
 
 VictoryRoadRivalBeforeText:
-	text "Hold it."
+	text "Espera."
 
-	para "…Are you going to"
-	line "take the #MON"
-	cont "LEAGUE challenge?"
+	para "¿Vas a participar"
+	line "en la LIGA"
+	cont "#MON?"
 
-	para "…Don't make me"
-	line "laugh."
+	para "No me hagas reír."
 
-	para "You're so much"
-	line "weaker than I am."
+	para "Eres mucho más"
+	line "débil que yo,"
 
-	para "I'm not like I was"
-	line "before."
+	para "porque ya no soy"
+	line "el mismo de antes."
 
-	para "I now have the"
-	line "best and strongest"
+	para "¡Ahora tengo los"
+	line "mejores #MON"
 
-	para "#MON with me."
-	line "I'm invincible!"
+	para "y los más fuertes!"
+	line "¡Soy invencible!"
 
-	para "<PLAYER>!"
-	line "I challenge you!"
+	para "¡<PLAYER>!"
+	line "¡Yo te desafío!"
 	done
 
 VictoryRoadRivalDefeatText:
-	text "…I couldn't win…"
+	text "He perdido…"
 
-	para "I gave it every-"
-	line "thing I had…"
+	para "Hice todo lo que"
+	line "pude…"
 
-	para "What you possess,"
-	line "and what I lack…"
+	para "Lo que tú tienes"
+	line "y yo no tengo…"
 
-	para "I'm beginning to"
-	line "understand what"
+	para "Empiezo a entender"
+	line "lo que me dijo"
 
-	para "that dragon master"
-	line "said to me…"
+	para "aquel maestro de"
+	line "dragones…"
 	done
 
 VictoryRoadRivalAfterText:
-	text "…I haven't given up"
-	line "on becoming the"
-	cont "greatest trainer…"
+	text "Sigo queriendo"
+	line "ser el mejor"
+	cont "entrenador…"
 
-	para "I'm going to find"
-	line "out why I can't"
+	para "Descubriré por qué"
+	line "no puedo ganar y"
+	cont "ser más fuerte…"
 
-	para "win and become"
-	line "stronger…"
+	para "Te desafiaré en"
+	line "cuanto lo sepa."
 
-	para "When I do, I will"
-	line "challenge you."
+	para "Y te aplastaré"
+	line "con todo mi poder."
 
-	para "And I'll beat you"
-	line "down with all my"
-	cont "power."
-
-	para "…Humph! You keep"
-	line "at it until then."
+	para "Hasta entonces,"
+	line "¡sigue entrenando!"
 	done
 
 VictoryRoadRivalVictoryText:
-	text "…Humph!"
+	text "¡Bah!"
 
-	para "When it comes down"
-	line "to it, nothing can"
-	cont "beat power."
+	para "Después de todo,"
+	line "no hay nada mejor"
+	cont "que el poder."
 
-	para "I don't need any-"
-	line "thing else."
+	para "No necesito nada"
+	line "más."
 	done
 
 VictoryRoad_MapEvents:

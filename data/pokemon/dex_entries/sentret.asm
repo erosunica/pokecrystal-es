@@ -1,10 +1,10 @@
-	db "SCOUT@" ; species name
-	dw 207, 130 ; height, weight
+	db "EXPLORADOR@" ; species name
+	dbw 8, 60 ; height, weight
 
-	db   "When acting as a"
-	next "lookout, it warns"
-	next "others of danger"
+	db   "Cuando hace de"
+	next "centinela, avisa"
+	next "del peligro a los"
 
-	page "by screeching and"
-	next "hitting the ground"
-	next "with its tail.@"
+	page "demás, chillando y"
+	next "dando golpes al"
+	next "suelo con la cola.@"

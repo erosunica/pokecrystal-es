@@ -1,10 +1,10 @@
-	db "LONG BODY@" ; species name
-	dw 511, 720 ; height, weight
+	db "ALARGADO@" ; species name
+	dbw 18, 325 ; height, weight
 
-	db   "It lives in narrow"
-	next "burrows that fit"
-	next "its slim body. The"
+	db   "Las madrigueras"
+	next "son su hogar; se"
+	next "adaptan muy bien a"
 
-	page "deeper the nests"
-	next "go, the more maze-"
-	next "like they become.@"
+	page "su tamaño. Los ni-"
+	next "dos están al fondo"
+	next "del laberinto.@"

@@ -57,77 +57,78 @@ Route3MtMoonSquareSign:
 	jumptext Route3MtMoonSquareSignText
 
 FirebreatherOtisSeenText:
-	text "Ah! The weather's"
-	line "as fine as ever."
+	text "¡Ah! Hace un"
+	line "tiempo estupendo."
 	done
 
 FirebreatherOtisBeatenText:
-	text "It's sunny, but"
-	line "I'm all wet…"
+	text "Hace sol, pero"
+	line "estoy mojado…"
 	done
 
 FirebreatherOtisAfterBattleText:
-	text "When it rains,"
-	line "it's hard to get"
-	cont "ignition…"
+	text "Cuando llueve,"
+	line "es difícil"
+	cont "encenderlo…"
 	done
 
 YoungsterWarrenSeenText:
-	text "Hmmm… I don't know"
-	line "what to do…"
+	text "¡Mmm…! No sé"
+	line "qué hacer…"
 	done
 
 YoungsterWarrenBeatenText:
-	text "I knew I'd lose…"
+	text "Sabía que"
+	line "perdería…"
 	done
 
 YoungsterWarrenAfterBattleText:
-	text "You looked strong."
+	text "Parecías fuerte."
 
-	para "I was afraid to"
-	line "take you on…"
+	para "Me daba miedo"
+	line "desafiarte…"
 	done
 
 YoungsterJimmySeenText:
-	text "I can run like the"
-	line "wind!"
+	text "¡Puedo correr como"
+	line "el viento!"
 	done
 
 YoungsterJimmyBeatenText:
-	text "Blown away!"
+	text "¡He perdido!"
 	done
 
 YoungsterJimmyAfterBattleText:
-	text "I wear shorts the"
-	line "whole year round."
+	text "Siempre llevo"
+	line "pantalones cortos."
 
-	para "That's my fashion"
-	line "policy."
+	para "Ésa es mi forma"
+	line "de vestir."
 	done
 
 FirebreatherBurtSeenText:
-	text "Step right up and"
-	line "take a look!"
+	text "¡Sube y echa un"
+	line "vistazo!"
 	done
 
 FirebreatherBurtBeatenText:
-	text "Yow! That's hot!"
+	text "¡Uh! ¡Eso quema!"
 	done
 
 FirebreatherBurtAfterBattleText:
-	text "The greatest fire-"
-	line "breather in KANTO,"
-	cont "that's me."
+	text "Soy el mejor"
+	line "COMEFUEGOS de"
+	cont "KANTO."
 
-	para "But not the best"
-	line "trainer…"
+	para "Pero no el mejor"
+	line "entrenador…"
 	done
 
 Route3MtMoonSquareSignText:
-	text "MT.MOON SQUARE"
+	text "PLAZA MT. MOON"
 
-	para "Just go up the"
-	line "stairs."
+	para "Sube las"
+	line "escaleras"
 	done
 
 Route3_MapEvents:

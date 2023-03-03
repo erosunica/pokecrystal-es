@@ -1,10 +1,10 @@
-	db "ARMOR@" ; species name
-	dw 607, 4450 ; height, weight
+	db "CORAZA@" ; species name
+	dbw 20, 2020 ; height, weight
 
-	db   "In just one of its"
-	next "mighty hands, it"
-	next "has the power to"
+	db   "En una de sus"
+	next "poderosas garras"
+	next "tiene el poder de"
 
-	page "make the ground"
-	next "shake and moun-"
-	next "tains crumble.@"
+	page "hacer temblar"
+	next "la tierra y las"
+	next "montañas.@"

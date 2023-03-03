@@ -31,31 +31,33 @@ HouseForSaleBookshelf:
 	jumpstd difficultbookshelf
 
 Route5CleanseTagHouseGrannyText1:
-	text "Eeyaaaah!"
+	text "¡Aaaayy!"
 
-	para "I sense a sinister"
-	line "shadow hovering"
-	cont "over you."
+	para "Siento que una"
+	line "siniestra sombra"
 
-	para "Take this to ward"
-	line "it off!"
+	para "se cierne sobre"
+	line "ti."
+
+	para "¡Toma esto para"
+	line "protegerte!"
 	done
 
 Route5CleanseTagHouseGrannyText2:
-	text "You were in mortal"
-	line "danger, but you"
-	cont "are protected now."
+	text "Corrías un peligro"
+	line "mortal, pero ahora"
+	cont "estás a salvo."
 	done
 
 Route5CleanseTagHouseTeacherText:
-	text "My grandma is into"
-	line "warding off what"
+	text "A mi abuela le"
+	line "gusta protegerse"
 
-	para "she believes to be"
-	line "evil spirits."
+	para "contra supuestos"
+	line "malos espíritus."
 
-	para "I'm sorry that she"
-	line "startled you."
+	para "Perdona si te"
+	line "ha asustado."
 	done
 
 Route5CleanseTagHouse_MapEvents:

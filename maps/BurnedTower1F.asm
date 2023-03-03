@@ -160,119 +160,128 @@ BurnedTower1FEusineMovement:
 BurnedTowerSilver_BeforeText:
 	text "<……> <……> <……>"
 
-	para "…Oh, it's you."
+	para "…"
+	line "Oh, eres tú."
 
-	para "I came looking for"
-	line "some legendary"
+	para "Vine buscando a"
+	line "unos #MON"
 
-	para "#MON that they"
-	line "say roosts here."
+	para "legendarios que al"
+	line "parecer están por"
+	cont "aquí."
 
-	para "But there's"
-	line "nothing here!"
+	para "¡Pero aquí no hay"
+	line "nada!"
 
-	para "Nothing after all"
-	line "the trouble of"
+	para "Nada, después de"
+	line "todos los proble-"
+	cont "mas que he tenido"
+	cont "para llegar a este"
+	cont "vertedero…"
 
-	para "coming to this"
-	line "dump? No way!"
-
-	para "It's all your"
-	line "fault!"
+	para "¡Ha sido por tu"
+	line "culpa!"
 	done
 
 BurnedTowerSilver_WinText:
-	text "…Humph!"
+	text "¡Bah…!"
 
-	para "This is why I hate"
-	line "battling wimps."
+	para "Esto es por lo que"
+	line "no me gusta luchar"
+	cont "con blandengues."
 
-	para "There's no"
-	line "challenge in it."
+	para "No tiene ninguna"
+	line "gracia."
 	done
 
 BurnedTowerSilver_AfterText1:
-	text "…Aw, whatever."
+	text "¡Qué más da!"
 
-	para "You would never be"
-	line "able to catch a"
-
-	para "legendary #MON"
-	line "anyway."
+	para "Jamás podrías"
+	line "atrapar un #MON"
+	cont "legendario."
 	done
 
 BurnedTowerSilver_LossText:
-	text "…Humph!"
+	text "¡Bah!"
 
-	para "This is why I hate"
-	line "battling wimps."
+	para "¡Por eso no me"
+	line "gusta luchar"
 
-	para "It's just a waste"
-	line "of my time."
+	para "contra memos! ¡Qué"
+	line "pérdida de tiempo!"
 	done
 
 BurnedTowerSilver_AfterText2:
-	text "Humph!"
+	text "¡Bah!"
 
-	para "What are you doing"
-	line "falling into a"
+	para "¿Qué haces"
+	line "cayéndote por un"
 
-	para "hole? Some genius"
-	line "you are!"
+	para "agujero? ¿No ibas"
+	line "de inteligente?"
 
-	para "Serves you right!"
+	para "¡Te está bien"
+	line "empleado!"
 	done
 
 BurnedTower1FEusineIntroText:
-	text "EUSINE: My name's"
+	text "EUSINE: Me llamo"
 	line "EUSINE."
 
-	para "I'm on the trail"
-	line "of a #MON named"
-	cont "SUICUNE."
+	para "Estoy tras la"
+	line "pista de un"
 
-	para "And you are…?"
+	para "#MON llamado"
+	line "SUICUNE."
 
-	para "<PLAYER>? Glad to"
-	line "meet you!"
+	para "¿Y tú eres…?"
 
-	para "I heard rumors"
-	line "that SUICUNE is in"
+	para "¿<PLAYER>?"
+	line "¡Encantado"
+	cont "de conocerte!"
 
-	para "this BURNED TOWER,"
-	line "so I came to look."
+	para "He oído rumores de"
+	line "que SUICUNE está"
 
-	para "But where exactly"
-	line "could it be?"
+	para "en TORRE QUEMADA,"
+	line "así que he venido"
+	cont "a mirar."
+
+	para "¿Pero dónde puede"
+	line "estar exactamente?"
 	done
 
 BurnedTower1FEusineText:
-	text "EUSINE: I heard"
-	line "that SUICUNE is in"
+	text "EUSINE: He oído"
+	line "rumores de que"
 
-	para "this BURNED TOWER,"
-	line "so I came to look."
+	para "SUICUNE está en"
+	line "TORRE QUEMADA, así"
 
-	para "But where exactly"
-	line "could it be?"
+	para "que he venido a"
+	line "mirar."
+
+	para "¿Pero dónde puede"
+	line "estar exactamente?"
 	done
 
 BurnedTower1FMortyText:
-	text "MORTY: ECRUTEAK's"
-	line "GYM LEADER has to"
+	text "MORTI: El LÍDER de"
+	line "GIMNASIO de CIUDAD"
 
-	para "study what are"
-	line "said to be the"
+	para "IRIS tenía que"
+	line "estudiar lo que se"
 
-	para "legendary #MON"
-	line "--SUICUNE, ENTEI"
-	cont "and RAIKOU."
+	para "dice de los"
+	line "#MON legenda-"
+	cont "rios: SUICUNE,"
+	cont "ENTEI y RAIKOU."
 
-	para "EUSINE is here, so"
-	line "I've decided to"
-
-	para "investigate the"
-	line "TOWER with him."
+	para "EUSINE está aquí,"
+	line "así que he decidi-"
+	cont "do investigar"
+	cont "la TORRE con él."
 	done
 
 BurnedTower1F_MapEvents:

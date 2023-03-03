@@ -1,10 +1,10 @@
-	db "BIG JAW@" ; species name
-	dw 307, 550 ; height, weight
+	db "GRAN FAUCE@" ; species name
+	dbw 11, 250 ; height, weight
 
-	db   "The tips of its"
-	next "fangs are slanted"
-	next "backward. Once"
+	db   "Si agarra con las"
+	next "fauces a su presa,"
+	next "no hay marcha"
 
-	page "those fangs clamp"
-	next "down, the prey has"
-	next "no hope of escape.@"
+	page "atrás, pues tiene"
+	next "los colmillos"
+	next "hacia dentro.@"

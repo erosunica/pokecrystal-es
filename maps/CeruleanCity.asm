@@ -148,51 +148,52 @@ CeruleanCityHiddenBerserkGene:
 	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
 
 CeruleanCityCooltrainerMText1:
-	text "KANTO's POWER"
-	line "PLANT?"
+	text "¿La CENTRAL"
+	line "ENERGÍA de KANTO?"
 
-	para "It's near the end"
-	line "of ROUTE 9, the"
+	para "Está al final de"
+	line "la RUTA 9, el"
 
-	para "road that heads"
-	line "east from here."
+	para "camino que hay"
+	line "al este de aquí."
 
-	para "I think there was"
-	line "an accident of"
-	cont "some sort there."
+	para "Creo que hubo"
+	line "algún tipo de"
+	cont "accidente allí."
 	done
 
 CeruleanCityCooltrainerMText2:
-	text "You're collecting"
-	line "every single kind"
-	cont "of #MON?"
+	text "¿Vas a atrapar"
+	line "todos los tipos de"
+	cont "#MON?"
 
-	para "That must be quite"
-	line "a challenge, but"
-	cont "it sounds fun too."
+	para "Parece un gran"
+	line "desafío, pero será"
+	cont "divertido."
 	done
 
 CeruleanCitySuperNerdText:
-	text "The CAPE in the"
-	line "north is a good"
+	text "El CABO que está"
+	line "al norte es ideal"
 
-	para "place for dates."
-	line "Girls like it!"
+	para "para una cita a"
+	line "ciegas."
+	cont "¡Es tan romántico!"
 	done
 
 CeruleanCitySlowbroText:
-	text "SLOWBRO: Yarah?"
+	text "SLOWBRO: ¿Slow?"
 	done
 
 CeruleanCityCooltrainerFText1:
-	text "My SLOWBRO and I"
-	line "make an awesome"
-	cont "combination!"
+	text "¡Mi SLOWBRO y yo"
+	line "formamos un equipo"
+	cont "impresionante!"
 	done
 
 CeruleanCityCooltrainerFText2:
-	text "SLOWBRO, show me"
-	line "your CONFUSION!"
+	text "¡SLOWBRO, enséñame"
+	line "tu CONFUSIÓN!"
 	done
 
 CeruleanCityCooltrainerFText3:
@@ -200,77 +201,82 @@ CeruleanCityCooltrainerFText3:
 	done
 
 CeruleanCityFisherText:
-	text "I'm a huge fan of"
-	line "CERULEAN GYM's"
-	cont "MISTY."
+	text "Soy un gran segui-"
+	line "dor de MISTY, la"
+
+	para "LÍDER de GIMNASIO"
+	line "de CIUDAD CELESTE."
 	done
 
 CeruleanCityFisherRocketTipText:
-	text "I saw this shady"
-	line "guy go off toward"
-	cont "CERULEAN's CAPE."
+	text "Vi a ese tipo"
+	line "sospechoso de"
+
+	para "camino al CABO de"
+	line "CIUDAD CELESTE."
 	done
 
 CeruleanCityYoungsterText1:
-	text "There used to be a"
-	line "cave here that had"
+	text "Antes había una"
+	line "cueva aquí que"
 
-	para "horribly powerful"
-	line "#MON in it."
+	para "tenía #MON"
+	line "realmente fuertes."
 	done
 
 CeruleanCityYoungsterText2:
-	text "Ayuh?"
+	text "¡Caray!"
 
-	para "My ITEMFINDER is"
-	line "responding…"
+	para "Mi BUSCAOBJETOS"
+	line "responde…"
 	done
 
 CeruleanCitySignText:
-	text "CERULEAN CITY"
+	text "CIUDAD CELESTE"
 
-	para "A Mysterious Blue"
-	line "Aura Surrounds It"
+	para "Una misteriosa"
+	line "aura azulada la"
+	cont "rodea"
 	done
 
 CeruleanGymSignText:
-	text "CERULEAN CITY"
-	line "#MON GYM"
-	cont "LEADER: MISTY"
+	text "LÍDER DEL GIMNASIO"
+	line "#MON DE CIUDAD"
+	cont "CELESTE: MISTY"
 
-	para "The Tomboyish"
-	line "Mermaid"
+	para "La sirena poco"
+	line "femenina"
 	done
 
 CeruleanBikeShopSignText:
-	text "There's a notice"
-	line "here…"
+	text "Aquí hay una nota…"
 
-	para "The BIKE SHOP has"
-	line "moved to GOLDENROD"
-	cont "CITY in JOHTO…"
+	para "La TIENDA DE BICIS"
+	line "se ha trasladado a"
+
+	para "CIUDAD TRIGAL, en"
+	line "JOHTO…"
 	done
 
 CeruleanPoliceSignText:
-	text "There's a notice"
-	line "here…"
+	text "Aquí hay una nota…"
 
-	para "Stamp out thievery"
-	line "and make the city"
+	para "¡Acaba con los"
+	line "ladrones y haz que"
 
-	para "a friendlier, more"
-	line "cheerful place!"
+	para "la ciudad sea más"
+	line "grata y alegre!"
 
-	para "CERULEAN POLICE"
+	para "POLICÍA C. CELESTE"
 	done
 
 CeruleanCapeSignText:
-	text "CERULEAN CAPE"
-	line "AHEAD"
+	text "Hacia el"
+	line "CABO CELESTE"
 	done
 
 CeruleanLockedDoorText:
-	text "It's locked…"
+	text "Está cerrado…"
 	done
 
 CeruleanCity_MapEvents:

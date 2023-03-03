@@ -1,69 +1,70 @@
 JoseAnswerPhoneText:
-	text "Hello, this is"
+	text "Hola, soy"
 	line "@"
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>?"
-	line "Good morning!"
+	para "Oh, ¿<PLAY_G>?"
+	line "¡Buenos días!"
 	done
 
 JoseAnswerPhoneDayText:
-	text "Hello, this is"
+	text "Hola, soy"
 	line "@"
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>? Hi!"
+	para "Oh, ¿<PLAY_G>?"
+	line "¡Hola!"
 	done
 
 JoseAnswerPhoneNiteText:
-	text "Hello, this is"
+	text "Hola, soy"
 	line "@"
 	text_ram wStringBuffer3
 	text "…"
 
-	para "Oh, <PLAY_G>?"
-	line "Good evening!"
+	para "Oh, ¿<PLAY_G>?"
+	line "¡Buenas noches!"
 	done
 
 JoseGreetText:
-	text "Oh, <PLAY_G>?"
+	text "Oh, ¿<PLAY_G>?"
 
-	para "Tweet! Yeah, it's"
-	line "me, @"
+	para "¡Genial! Sí, soy"
+	line "yo, @"
 	text_ram wStringBuffer3
 	text "."
 	done
 
 JoseGreetDayText:
-	text "Oh, <PLAY_G>?"
+	text "Oh, ¿<PLAY_G>?"
 
-	para "Tweet! Yeah, it's"
-	line "me, @"
+	para "¡Genial! Sí, soy"
+	line "yo, @"
 	text_ram wStringBuffer3
 	text "."
 	done
 
 JoseGreetNiteText:
-	text "Oh, <PLAY_G>?"
+	text "Oh, ¿<PLAY_G>?"
 
-	para "Tweet! Yeah, it's"
-	line "me, @"
+	para "¡Genial! Sí, soy"
+	line "yo, @"
 	text_ram wStringBuffer3
 	text "."
 	done
 
 JoseGenericText:
-	text "Are your #MON"
-	line "still cooking?"
+	text "Tus #MON,"
+	line "¿aún se entrenan?"
 
-	para "My @"
+	para "Mi @"
 	text_ram wStringBuffer4
-	text " has"
-	line "too much energy."
+	text_start
+	line "tiene mucha"
+	cont "energía."
 
-	para "Once it takes off,"
-	line "it won't come back"
-	cont "for a while."
+	para "Cuando despega, no"
+	line "vuelve en un rato."
 	done

@@ -71,76 +71,76 @@ CeladonEusine:
 	step_end
 
 CeladonPokecenter1FCooltrainerFText:
-	text "ERIKA is a master"
-	line "of grass #MON."
+	text "ERIKA es experta"
+	line "en #MON planta."
 
-	para "She'll make you"
-	line "pay if you don't"
-	cont "watch yourself."
+	para "Si no tienes"
+	line "cuidado, acabará"
+	cont "contigo."
 	done
 
 CeladonPokecenter1FPharmacistText:
-	text "TEAM ROCKET's"
-	line "hideout is in the"
+	text "El TEAM ROCKET"
+	line "está escondido"
 
-	para "basement of the"
-	line "GAME CORNER."
+	para "en el sótano del"
+	line "CASINO."
 
-	para "Oh, wait. That was"
-	line "three years ago."
+	para "Espera. Eso fue"
+	line "hace tres años."
 	done
 
 CeladonEusineText1:
-	text "EUSINE: Hi!"
+	text "EUSINE: ¡Hola!"
 
-	para "I'm back visiting"
-	line "my hometown."
+	para "Vuelvo de visitar"
+	line "mi ciudad."
 
-	para "It's been quite a"
-	line "while."
+	para "Llevaba tiempo"
+	line "sin ir."
 	done
 
 EusineLeavesCeladonText:
-	text "<PLAYER>, have you"
-	line "heard?"
+	text "<PLAYER>, ¿lo"
+	line "has oído?"
 
-	para "There have been"
-	line "fresh rumors of a"
+	para "Rumores recientes"
+	line "dicen que un"
 
-	para "rainbow-colored"
-	line "#MON appearing"
-	cont "at TIN TOWER."
+	para "#MON multicolor"
+	line "aparece en la"
+	cont "TORRE HOJALATA."
 
-	para "I've just had my"
-	line "party healed, so"
+	para "Acabo de curar a"
+	line "mi equipo y ahora"
 
-	para "now I'm headed to"
-	line "ECRUTEAK."
+	para "salgo para CIUDAD"
+	line "IRIS."
 
-	para "I'll be seeing"
-	line "you, <PLAYER>!"
+	para "¡Nos vemos,"
+	line "<PLAYER>!"
 	done
 
 NoBeastsText:
-	text "Oh, by the way,"
+	text "Oh, por cierto,"
 	line "<PLAYER>."
 
-	para "Have you caught"
-	line "the legendary"
+	para "¿Has capturado"
+	line "los #MON"
 
-	para "#MON RAIKOU and"
-	line "ENTEI?"
+	para "legendarios RAIKOU"
+	line "y ENTEI?"
 
 	para "<……><……><……>"
 
-	para "Okay…"
+	para "Vale…"
 
-	para "If you catch even"
-	line "one, I hope that"
-	cont "you'll inform me."
+	para "Si llegas a captu-"
+	line "rar aunque sea"
+	cont "uno, infórmame."
 
-	para "I'm counting on"
-	line "you, <PLAYER>!"
+	para "¡Cuento contigo,"
+	line "<PLAYER>!"
 	done
 
 CeladonPokecenter1F_MapEvents:

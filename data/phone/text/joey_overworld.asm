@@ -1,71 +1,74 @@
 JoeyAskNumber1Text:
-	text "Listen, can I get"
-	line "your phone number?"
+	text "Dime, ¿me das tu"
+	line "número de"
+	cont "teléfono?"
 
-	para "I'll ring you for"
-	line "some battles."
+	para "Te llamaré para"
+	line "luchar."
 
-	para "I'm a rookie too, "
-	line "so I think it'd be"
-	cont "a good motivator."
+	para "Yo también soy"
+	line "novato, así que"
+
+	para "será una buena"
+	line "motivación."
 	done
 
 JoeyAskNumber2Text:
-	text "Can I get your"
-	line "phone number?"
+	text "¿Me das tu número"
+	line "de teléfono?"
 
-	para "I don't want to"
-	line "lose against you!"
+	para "¡No quiero perder"
+	line "contra ti!"
 
-	para "We have to battle"
-	line "again, OK?"
+	para "Tenemos que luchar"
+	line "de nuevo, ¿vale?"
 	done
 
 JoeyNumberAcceptedText:
-	text "I'll ring you"
-	line "whenever I get the"
-	cont "urge to battle!"
+	text "¡Te llamaré"
+	line "siempre que quiera"
+	cont "luchar!"
 	done
 
 JoeyNumberDeclinedText:
-	text "Oh, all right…"
+	text "Oh, bueno…"
 
-	para "But I won't lose"
-	line "to you again!"
+	para "¡Pero no volveré a"
+	line "perder contra ti!"
 	done
 
 JoeyPhoneFullText:
-	text "Huh, what? Your"
-	line "phone's full."
+	text "¿Eh, cómo? Tu"
+	line "agenda está llena."
 	done
 
 JoeyRematchText:
-	text "I've been waiting!"
-	line "Let's battle now!"
+	text "¡Te esperaba!"
+	line "¡A luchar!"
 	done
 
 JoeyPackFullText:
-	text "Hey, wait! Your"
-	line "PACK is stuffed!"
+	text "¡Eh, espera! ¡Tu"
+	line "MOCHILA está"
+	cont "llena!"
 
-	para "Well, we'll leave"
-	line "it till next time."
+	para "Lo dejaremos hasta"
+	line "la próxima vez."
 	done
 
 JoeyRematchGiftText:
-	text "And yet another"
-	line "loss…"
+	text "He perdido otra"
+	line "vez…"
 
-	para "No doubt about"
-	line "it--you're tough."
+	para "No hay manera de"
+	line "vencerte."
 
-	para "Being beaten this"
-	line "often actually"
-	cont "feels good now!"
+	para "¡Tanta derrota me"
+	line "hace sentir bien!"
 
-	para "Here, take this. "
-	line "Use it to get even"
+	para "Coge esto. Úsalo"
+	line "para ser aún"
 
-	para "tougher. That will"
-	line "toughen me up too!"
+	para "mejor. ¡También"
+	line "yo mejoraré!"
 	done

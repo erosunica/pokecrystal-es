@@ -74,37 +74,37 @@ GoldenrodDeptStoreB1FUltraBall:
 	itemball ULTRA_BALL
 
 GoldenrodDeptStoreB1FBlackBelt1Text:
-	text "Hey, kid! You're"
-	line "holding us up!"
+	text "¡Eh, tú! ¡Estás"
+	line "interrumpiéndonos!"
 
-	para "Our policy is to"
-	line "work behind the"
+	para "¡Tenemos por"
+	line "costumbre trabajar"
 
-	para "scenes where no"
-	line "one can see us!"
+	para "sin que nadie"
+	line "nos vea!"
 	done
 
 GoldenrodDeptStoreB1FBlackBelt2Text:
-	text "I lose my passion"
-	line "for work if some-"
-	cont "one's watching."
+	text "Pierdo las ganas"
+	line "de trabajar si hay"
+	cont "alguien mirando."
 
-	para "Come on, kid,"
-	line "scoot!"
+	para "¡Venga, tú,"
+	line "fuera de aquí!"
 	done
 
 GoldenrodDeptStoreB1FBlackBelt3Text:
-	text "Oohah! Oohah!"
+	text "¡Oohah! ¡Oohah!"
 
-	para "The stuff on the"
-	line "ground's junk."
+	para "Hay cosas tiradas"
+	line "por el suelo."
 
-	para "Take it if you"
-	line "want it!"
+	para "¡Recógelas si"
+	line "quieres!"
 	done
 
 GoldenrodDeptStoreB1FMachokeText:
-	text "MACHOKE: Maaacho!"
+	text "MACHOKE: ¡Machok!"
 	done
 
 GoldenrodDeptStoreB1F_MapEvents:

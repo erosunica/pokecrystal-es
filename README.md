@@ -1,12 +1,10 @@
-# Pokémon Crystal [![Build Status][ci-badge]][ci]
+# Pokémon - Edición Cristal [![Build Status][ci-badge]][ci]
 
-This is a disassembly of Pokémon Crystal.
+This is a disassembly of the Spanish version of Pokémon Crystal: Pokémon - Edición Cristal.
 
-It builds the following ROMs:
+It builds the following ROM:
 
-- Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `sha1: f4cd194bdee0d04ca4eac29e09b8e4e9d818c133`
-- Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `sha1: f2f52230b536214ef7c9924f483392993e226cfb`
-- Pokemon - Crystal Version (A) [C][!].gbc `sha1: a0fc810f1d4e124434f7be2c989ab5b5892ddf36`
+- Pokemon - Edicion Cristal (Spain).gbc `sha1: 889a06fc0bb863666865aa69def0adf97945ac2a`
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
@@ -23,6 +21,7 @@ Other disassembly projects:
 - [**Pokémon Red/Blue**][pokered]
 - [**Pokémon Yellow**][pokeyellow]
 - [**Pokémon Gold/Silver**][pokegold]
+- [**Pokémon Crystal**][pokecrystal]
 - [**Pokémon Pinball**][pokepinball]
 - [**Pokémon TCG**][poketcg]
 - [**Pokémon Ruby**][pokeruby]
@@ -32,6 +31,7 @@ Other disassembly projects:
 [pokered]: https://github.com/pret/pokered
 [pokeyellow]: https://github.com/pret/pokeyellow
 [pokegold]: https://github.com/pret/pokegold
+[pokecrystal]: https://github.com/pret/pokecrystal
 [pokepinball]: https://github.com/pret/pokepinball
 [poketcg]: https://github.com/pret/poketcg
 [pokeruby]: https://github.com/pret/pokeruby

@@ -1,81 +1,83 @@
 LizAnswerPhoneText:
-	text "Hello, @"
+	text "Hola. @"
 	text_ram wStringBuffer3
 	text_start
-	line "speaking."
+	line "al habla."
 
 	para "Oh, <PLAY_G>."
-	line "Good morning."
+	line "Buenos días."
 	done
 
 LizAnswerPhoneDayText:
-	text "Hello, @"
+	text "Hola. @"
 	text_ram wStringBuffer3
 	text_start
-	line "speaking."
+	line "al habla."
 
 	para "Oh, <PLAY_G>."
-	line "How are you?"
+	line "¿Qué tal estás?"
 	done
 
 LizAnswerPhoneNiteText:
-	text "Hello, @"
+	text "Hola. @"
 	text_ram wStringBuffer3
 	text_start
-	line "speaking."
+	line "al habla."
 
 	para "Oh, <PLAY_G>."
-	line "Good evening."
+	line "Buenas noches."
 	done
 
 LizGreetText:
-	text "Good morning,"
+	text "Buenos días,"
 	line "<PLAY_G>."
 
-	para "This is @"
+	para "Soy @"
 	text_ram wStringBuffer3
 	text "."
-	line "Were you sleeping?"
+	line "¿Dormías?"
 	done
 
 LizGreetDayText:
-	text "Hi, <PLAY_G>."
-	line "This is @"
+	text "Hola, <PLAY_G>."
+	line "Soy @"
 	text_ram wStringBuffer3
 	text "."
 
-	para "How are things"
-	line "going for you?"
+	para "¿Qué tal te van"
+	line "las cosas?"
 	done
 
 LizGreetNiteText:
-	text "Good evening,"
+	text "Buenas noches,"
 	line "<PLAY_G>."
 
-	para "This is @"
+	para "Soy @"
 	text_ram wStringBuffer3
 	text "."
-	line "Are you awake?"
+	line "¿Aún sin dormir?"
 	done
 
 LizGenericText:
-	text "I had some time,"
-	line "so I called you."
+	text "Tenía algo de"
+	line "tiempo, así que"
+	cont "pensé en llamarte."
 
-	para "So anyway, how are"
-	line "your #MON?"
+	para "De todos modos,"
+	line "¿qué tal están tus"
+	cont "#MON?"
 
-	para "Me, I take my"
+	para "Yo llevo a mi"
 	line "@"
 	text_ram wStringBuffer4
-	text " to the"
+	text " al"
 
-	para "#MON CENTER in"
-	line "VIOLET every day,"
+	para "CENTRO #MON de"
+	line "CIUDAD MALVA todos"
 
-	para "so it's doing just"
-	line "fantastic!"
+	para "los días, así que"
+	line "está fantástico."
 
-	para "I'm friends with"
-	line "the receptionist!"
+	para "¡Soy amiga de la"
+	line "recepcionista!"
 	done

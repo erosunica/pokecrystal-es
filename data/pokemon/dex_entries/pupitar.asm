@@ -1,10 +1,10 @@
-	db "HARD SHELL@" ; species name
-	dw 311, 3350 ; height, weight
+	db "CAPARAZÓN@" ; species name
+	dbw 12, 1520 ; height, weight
 
-	db   "It will not stay"
-	next "still, even while"
-	next "it's a pupa. It"
+	db   "No se está quieto"
+	next "ni aun dentro de"
+	next "su capullo. Tiene"
 
-	page "already has arms"
-	next "and legs under its"
-	next "solid shell.@"
+	page "extremidades"
+	next "debajo de la"
+	next "sólida concha.@"

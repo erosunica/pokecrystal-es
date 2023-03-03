@@ -155,175 +155,176 @@ RadioTower3FPokemonMusicSign:
 	jumptext RadioTower3FPokemonMusicSignText
 
 RadioTower3FSuperNerdText:
-	text "We have recordings"
-	line "of the cries of"
+	text "Hemos grabado los"
+	line "gritos de todos"
 
-	para "all #MON that"
-	line "have been found."
+	para "los #MON"
+	line "descubiertos."
 
-	para "We must have about"
-	line "200 kinds."
+	para "Debemos de tener"
+	line "unos 200 tipos."
 	done
 
 RadioTower3FGymGuyText_Rockets:
-	text "To trainers, #-"
-	line "MON are their"
-	cont "beloved partners."
+	text "Los #MON son"
+	line "muy queridos por"
+	cont "sus entrenadores."
 
-	para "It's terrible how"
-	line "TEAM ROCKET is"
+	para "Es horrible ver"
+	line "cómo trata el"
 
-	para "trying to control"
-	line "#MON."
+	para "TEAM ROCKET"
+	line "a los #MON."
 	done
 
 RadioTower3FGymGuyText:
-	text "We run 24 hours a"
-	line "day to broadcast"
+	text "Emitimos programas"
+	line "de entretenimiento"
 
-	para "entertaining pro-"
-	line "grams."
+	para "las 24 horas del"
+	line "día."
 
-	para "I'll do my best to"
-	line "run around the"
-	cont "clock too!"
+	para "¡Intentaremos"
+	line "hacerlo lo mejor"
+	cont "posible!"
 	done
 
 RadioTower3FCooltrainerFPleaseSaveDirectorText:
-	text "The TEAM ROCKET"
-	line "boss has locked"
-	cont "himself in."
+	text "El jefe del TEAM"
+	line "ROCKET se ha"
+	cont "encerrado."
 
-	para "But the DIRECTOR"
-	line "can open it."
+	para "Pero el DIRECTOR"
+	line "puede abrirle."
 
-	para "He's up on the"
-	line "fifth floor."
+	para "Está en el cuarto"
+	line "piso."
 
-	para "Please save him!"
+	para "¡Sálvale!"
 	done
 
 RadioTower3FCooltrainerFIsDirectorSafeText:
-	text "Is the DIRECTOR"
-	line "safe?"
+	text "¿Está a salvo el"
+	line "DIRECTOR?"
 	done
 
 RadioTower3FCooltrainerFYoureMyHeroText:
-	text "Thank you!"
-	line "You're my hero!"
+	text "¡Gracias!"
+	line "¡Eres genial!"
 
-	para "This is a token of"
-	line "my appreciation."
+	para "Toma esto como"
+	line "agradecimiento."
 	done
 
 RadioTower3FCooltrainerFItsSunnyDayText:
-	text "It's SUNNY DAY."
-	line "It powers up fire-"
-	cont "type moves for a"
-	cont "while."
+	text "¡Es DÍA SOLEADO!"
+	line "Mejora movimientos"
+
+	para "del tipo fuego"
+	line "durante un tiempo."
 	done
 
 RadioTower3FCooltrainerFYouWereMarvelousText:
-	text "You were simply"
-	line "marvelous!"
+	text "¡Estuviste"
+	line "genial!"
 	done
 
 GruntM7SeenText:
-	text "I've been given"
-	line "strict orders."
+	text "He recibido"
+	line "órdenes."
 
-	para "I'm to crush any-"
-	line "one who challenges"
-	cont "TEAM ROCKET!"
+	para "¡Aplastaré a todo"
+	line "aquel que desafíe"
+	cont "al TEAM ROCKET!"
 	done
 
 GruntM7BeatenText:
-	text "What?!"
+	text "¿¡Qué!?"
 	done
 
 GruntM7AfterBattleText:
-	text "I failed in my"
-	line "duties…"
+	text "No he cumplido con"
+	line "mi deber…"
 
-	para "I'll be docked pay"
-	line "for this…"
+	para "Me van a bajar el"
+	line "sueldo…"
 	done
 
 GruntM8SeenText:
-	text "It feels great"
-	line "ordering #MON"
-	cont "to commit crimes."
+	text "Me encanta ordenar"
+	line "a los #MON que"
+	cont "cometan delitos."
 	done
 
 GruntM8BeatenText:
-	text "You're kidding!"
+	text "¿Bromeas?"
 	done
 
 GruntM8AfterBattleText:
-	text "I feel lousy over"
-	line "losing!"
+	text "¡No me gusta"
+	line "perder!"
 
-	para "Darn it! I hate"
-	line "useless #MON!"
+	para "¡Odio a los"
+	line "#MON inútiles!"
 	done
 
 GruntM9SeenText:
-	text "Why did the shut-"
-	line "ter open? Did you"
+	text "¿Por qué se abrió"
+	line "la puerta?"
 
-	para "have something to"
-	line "do with this?"
+	para "¿Acaso has tenido"
+	line "algo que ver?"
 	done
 
 GruntM9BeatenText:
-	text "I'm done for!"
+	text "¡Es mi fin!"
 	done
 
 GruntM9AfterBattleText:
-	text "What?! You made it"
-	line "past our men in"
-	cont "the UNDERGROUND?"
+	text "¿Qué? ¿Esquivaste"
+	line "a nuestros hombres"
+	cont "del SUBTERRÁNEO?"
 
-	para "How could you?"
+	para "¿Cómo lo hiciste?"
 	done
 
 ScientistMarcSeenText:
-	text "An unknown child"
-	line "wandering here?"
+	text "¿Qué haces mero-"
+	line "deando por aquí?"
 
-	para "Who are you?"
+	para "¿Quién eres?"
 	done
 
 ScientistMarcBeatenText:
-	text "Tch! I took you"
-	line "too lightly!"
+	text "¡Vaya! ¡No te tomé"
+	line "muy en serio!"
 	done
 
 ScientistMarcAfterBattleText:
-	text "Bwahahaha…"
+	text "¡Jajajajaja…!"
 
-	para "I can transmit as"
-	line "strong a signal as"
-	cont "I need from here."
+	para "Desde aquí puedo"
+	line "transmitir todo"
+	cont "tipo de señales."
 	done
 
 RadioTower3FCardKeySlotText:
-	text "It's the CARD KEY"
-	line "slot."
+	text "Es la ranura de la"
+	line "LLAVE MAGNÉTICA."
 	done
 
 InsertedTheCardKeyText:
-	text "<PLAYER> inserted"
-	line "the CARD KEY."
+	text "<PLAYER> usó la"
+	line "LLAVE MAGNÉTICA."
 	done
 
 RadioTower3FPersonnelSignText:
-	text "3F PERSONNEL"
+	text "P2 PERSONAL"
 	done
 
 RadioTower3FPokemonMusicSignText:
-	text "#MON MUSIC with"
-	line "Host DJ BEN"
+	text "MÚSICA #MON"
+	line "con el DJ NARDO"
 	done
 
 RadioTower3F_MapEvents:

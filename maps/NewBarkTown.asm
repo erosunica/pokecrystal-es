@@ -187,96 +187,97 @@ Movement_SilverReturnsToTheShadows_NBT:
 	step_end
 
 Text_GearIsImpressive:
-	text "Wow, your #GEAR"
-	line "is impressive!"
+	text "¡Uau! ¡Tu #GEAR"
+	line "es impresionante!"
 
-	para "Did your mom get"
-	line "it for you?"
+	para "¿Te la ha dado tu"
+	line "madre?"
 	done
 
 Text_WaitPlayer:
-	text "Wait, <PLAY_G>!"
+	text "¡Espera,"
+	line "<PLAY_G>!"
 	done
 
 Text_WhatDoYouThinkYoureDoing:
-	text "What do you think"
-	line "you're doing?"
+	text "¿Qué crees que"
+	line "estás haciendo?"
 	done
 
 Text_ItsDangerousToGoAlone:
-	text "It's dangerous to"
-	line "go out without a"
+	text "¡Es peligroso"
+	line "salir sin un"
 	cont "#MON!"
 
-	para "Wild #MON"
-	line "jump out of the"
+	para "De camino hacia la"
+	line "siguiente ciudad"
 
-	para "grass on the way"
-	line "to the next town."
+	para "te encontrarás"
+	line "#MON salvajes."
 	done
 
 Text_YourMonIsAdorable:
-	text "Oh! Your #MON"
-	line "is adorable!"
-	cont "I wish I had one!"
+	text "¡Oh, tu #MON es"
+	line "adorable! ¡Ojalá"
+	cont "tuviera yo uno!"
 	done
 
 Text_TellMomIfLeaving:
-	text "Hi, <PLAY_G>!"
-	line "Leaving again?"
+	text "¡Hola, <PLAY_G>!"
+	line "¿Te vas otra vez?"
 
-	para "You should tell"
-	line "your mom if you"
-	cont "are leaving."
+	para "Deberías avisar"
+	line "a tu madre de que"
+	cont "te vas."
 	done
 
 Text_CallMomOnGear:
-	text "Call your mom on"
-	line "your #GEAR to"
+	text "Llama a tu madre"
+	line "con el #GEAR"
 
-	para "let her know how"
-	line "you're doing."
+	para "y cuéntale cómo"
+	line "te va."
 	done
 
 Text_ElmDiscoveredNewMon:
-	text "Yo, <PLAYER>!"
+	text "¡Hola, <PLAYER>!"
 
-	para "I hear PROF.ELM"
-	line "discovered some"
-	cont "new #MON."
+	para "Dicen que el PROF."
+	line "ELM ha descubierto"
+	cont "nuevos #MON."
 	done
 
 NewBarkTownRivalText1:
 	text "<……>"
 
-	para "So this is the"
-	line "famous ELM #MON"
-	cont "LAB…"
+	para "Así que éste es el"
+	line "famoso LABORATORIO"
+	cont "#MON de ELM…"
 	done
 
 NewBarkTownRivalText2:
-	text "…What are you"
-	line "staring at?"
+	text "¿Qué estás"
+	line "mirando…?"
 	done
 
 NewBarkTownSignText:
-	text "NEW BARK TOWN"
+	text "PUEBLO PRIMAVERA"
 
-	para "The Town Where the"
-	line "Winds of a New"
-	cont "Beginning Blow"
+	para "El pueblo donde"
+	line "soplan vientos de"
+	cont "un nuevo amanecer"
 	done
 
 NewBarkTownPlayersHouseSignText:
-	text "<PLAYER>'s House"
+	text "CASA DE <PLAYER>"
 	done
 
 NewBarkTownElmsLabSignText:
-	text "ELM #MON LAB"
+	text "LABORATORIO DE ELM"
 	done
 
 NewBarkTownElmsHouseSignText:
-	text "ELM'S HOUSE"
+	text "CASA DE ELM"
 	done
 
 NewBarkTown_MapEvents:

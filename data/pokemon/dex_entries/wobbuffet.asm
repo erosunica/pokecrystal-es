@@ -1,10 +1,10 @@
-	db "PATIENT@" ; species name
-	dw 403, 630 ; height, weight
+	db "PACIENTE@" ; species name
+	dbw 13, 285 ; height, weight
 
-	db   "In order to con-"
-	next "ceal its black"
-	next "tail, it lives in"
+	db   "Con el fin de que"
+	next "nadie le vea la"
+	next "negra cola que"
 
-	page "a dark cave and"
-	next "only moves about"
-	next "at night.@"
+	page "tiene, vive en una"
+	next "cueva oscura y só-"
+	next "lo sale de noche.@"

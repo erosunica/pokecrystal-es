@@ -1,68 +1,69 @@
 DanaAnswerPhoneText:
-	text "Hi, @"
+	text "Hola, al habla"
+	line "@"
 	text_ram wStringBuffer3
-	text " on the"
-	line "line."
+	text "."
 
-	para "Hey! It's <PLAY_G>!"
+	para "¡Eh! ¡Pero si es"
+	line "<PLAY_G>!"
 	done
 
 DanaAnswerPhoneDayText:
-	text "Hi, @"
+	text "Hola, al habla"
+	line "@"
 	text_ram wStringBuffer3
-	text " on the"
-	line "line."
+	text "."
 
-	para "I know!"
-	line "It's <PLAY_G>!"
+	para "¡Ya sé!"
+	line "¡Eres <PLAY_G>!"
 	done
 
 DanaAnswerPhoneNiteText:
-	text "Hi, @"
+	text "Hola, al habla"
+	line "@"
 	text_ram wStringBuffer3
-	text " on the"
-	line "line."
+	text "."
 
-	para "<PLAY_G>?"
-	line "What's up?"
+	para "¿<PLAY_G>?"
+	line "¿Qué pasa?"
 	done
 
 DanaGreetText:
-	text "Uh, <PLAY_G>?"
+	text "Uh… ¿<PLAY_G>?"
 
-	para "It's me!"
-	line "It's me, @"
+	para "¡Soy yo!"
+	line "¡Soy @"
 	text_ram wStringBuffer3
 	text "!"
 	done
 
 DanaGreetDayText:
-	text "Uh, <PLAY_G>?"
+	text "Uh… ¿<PLAY_G>?"
 
-	para "It's me!"
-	line "It's me, @"
+	para "¡Soy yo!"
+	line "¡Soy @"
 	text_ram wStringBuffer3
 	text "!"
 	done
 
 DanaGreetNiteText:
-	text "Uh, <PLAY_G>?"
+	text "Uh… ¿<PLAY_G>?"
 
-	para "It's me!"
-	line "It's me, @"
+	para "¡Soy yo!"
+	line "¡Soy, @"
 	text_ram wStringBuffer3
 	text "!"
 	done
 
 DanaGenericText:
-	text "My @"
+	text "Mi @"
 	text_ram wStringBuffer4
-	text " is"
-	line "so full of energy,"
+	text_start
+	line "está tan lleno de"
 
-	para "it's a little"
-	line "scary."
+	para "energía que da un"
+	line "poco de miedo."
 
-	para "How are your"
-	line "#MON doing?"
+	para "¿Qué tal van tus"
+	line "#MON?"
 	done

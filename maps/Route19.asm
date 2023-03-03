@@ -107,129 +107,132 @@ CarefulSwimmingSign:
 	jumptext CarefulSwimmingSignText
 
 SwimmermHaroldSeenText:
-	text "Have you ever gone"
-	line "swimming in the"
-	cont "sea at night?"
+	text "¿Has nadado alguna"
+	line "vez en el mar por"
+	cont "la noche?"
 	done
 
 SwimmermHaroldBeatenText:
-	text "Glub…"
+	text "¡Glup…!"
 	done
 
 SwimmermHaroldAfterBattleText:
-	text "At night, the sea"
-	line "turns black. It"
+	text "De noche, el mar"
+	line "está oscuro. Da la"
 
-	para "feels like it will"
-	line "swallow you up."
+	para "impresión de que"
+	line "te va a tragar."
 	done
 
 SwimmermTuckerSeenText:
-	text "Pant, pant…"
-	line "Just… a little…"
+	text "(Resoplido)…"
+	line "Un… poco más…"
 
-	para "farther… to…"
-	line "FUCHSIA…"
+	para "y… llegaré…"
+	line "a CIUDAD FUCSIA…"
 	done
 
 SwimmermTuckerBeatenText:
-	text "I'm drowning!"
+	text "¡Me ahogo!"
 	done
 
 SwimmermTuckerAfterBattleText:
-	text "I… asked my girl-"
-	line "friend to swim to"
-	cont "FUCHSIA… Gasp…"
+	text "Le… pedí a mi"
+	line "novia que nadara"
+	cont "a CIUDAD FUCSIA…"
 	done
 
 SwimmerfDawnSeenText:
-	text "I'm disgusted by"
-	line "wimpy people!"
+	text "¡No me gustan los"
+	line "peques!"
 	done
 
 SwimmerfDawnBeatenText:
-	text "I could beat you"
-	line "at swimming…"
+	text "Podría ganarte"
+	line "nadando…"
 	done
 
 SwimmerfDawnAfterBattleText:
-	text "It's a quick swim"
-	line "between FUCHSIA"
+	text "No hay que nadar"
+	line "mucho desde CIUDAD"
 
-	para "and SEAFOAM IS-"
-	line "LANDS…"
+	para "FUCSIA a las ISLAS"
+	line "ESPUMA…"
 
-	para "Sheesh, some big"
-	line "man my boyfriend"
-
-	para "is! What a wimp!"
+	para "¡Con todo lo gran-"
+	line "de que es, menudo"
+	cont "blandengue!"
 	done
 
 SwimmermJeromeSeenText:
-	text "Swimming?"
-	line "I'm lousy at it."
+	text "Soy malísimo"
+	line "nadando."
 
-	para "I'm just splashing"
-	line "around in these"
-	cont "shallow waters."
+	para "Sólo estoy"
+	line "chapoteando por"
+
+	para "estas aguas poco"
+	line "profundas."
 	done
 
 SwimmermJeromeBeatenText:
-	text "I thought I could"
-	line "win."
+	text "Creía que podía"
+	line "ganar."
 	done
 
 SwimmermJeromeAfterBattleText:
-	text "I might be bad at"
-	line "swimming, but I"
-	cont "love the sea."
+	text "Puede que no nade"
+	line "muy bien, pero me"
+	cont "encanta el mar."
 	done
 
 Route19Fisher1Text:
-	text "Sorry. This road"
-	line "is closed for"
-	cont "construction."
+	text "Lo siento. La"
+	line "carretera está"
+	cont "cortada por obras."
 
-	para "If you want to get"
-	line "to CINNABAR, you'd"
+	para "Si quieres llegar"
+	line "a ISLA CANELA, ve"
 
-	para "better go south"
-	line "from PALLET TOWN."
+	para "por el Sur, desde"
+	line "PUEBLO PALETA."
 	done
 
 Route19Fisher1Text_RocksCleared:
-	text "I'm all sweaty."
-	line "Time for a swim!"
+	text "Estoy sudando."
+	line "¡Voy a bañarme!"
 	done
 
 Route19Fisher2Text:
-	text "Who knows how long"
-	line "it would take to"
-	cont "move this boulder…"
+	text "A saber cuánto se"
+	line "tardaría en mover"
+	cont "esta roca…"
 	done
 
 Route19Fisher2Text_RocksCleared:
-	text "The roadwork is"
-	line "finally finished."
+	text "Las obras de la"
+	line "carretera ya han"
+	cont "terminado."
 
-	para "Now I can go"
-	line "fishing again."
+	para "Ya puedo volver a"
+	line "pescar."
 	done
 
 Route19SignText:
-	text "ROUTE 19"
+	text "RUTA 19"
 
-	para "FUCHSIA CITY -"
-	line "SEAFOAM ISLANDS"
+	para "CIUDAD FUCSIA -"
+	line "ISLAS ESPUMA"
 	done
 
 CarefulSwimmingSignText:
-	text "Please be careful"
-	line "if you are swim-"
-	cont "ming to SEAFOAM"
-	cont "ISLANDS."
+	text "Por favor, ten"
+	line "cuidado si vas"
 
-	para "FUCHSIA POLICE"
+	para "nadando hasta las"
+	line "ISLAS ESPUMA"
+
+	para "POLICÍA C. FUCSIA"
 	done
 
 Route19_MapEvents:

@@ -40,44 +40,43 @@ GoodRodHouseBookshelf:
 	jumpstd picturebookshelf
 
 OfferGoodRodText:
-	text "OLIVINE is on the"
-	line "sea!"
+	text "¡CIUDAD OLIVO está"
+	line "junto al mar!"
 
-	para "And if it's on the"
-	line "sea, there are"
-	cont "bound to be fish!"
+	para "¡Y si está junto"
+	line "al mar, tiene que"
+	cont "haber peces!"
 
-	para "I've fished here"
-	line "for 30 years."
+	para "Llevo 30 años"
+	line "pescando aquí."
 
-	para "Would you like to"
-	line "face the sea and"
-	cont "fish?"
+	para "¿Quieres mirar al"
+	line "mar y pescar?"
 	done
 
 GiveGoodRodText:
-	text "Ah, hahah!"
-	line "We have ourselves"
-	cont "a new angler!"
+	text "¡Ah, ja, ja! ¡Ya"
+	line "tenemos alguien"
+	cont "más que pesca!"
 	done
 
 GaveGoodRodText:
-	text "Fish aren't found"
-	line "in the sea alone."
+	text "No sólo hay peces"
+	line "en el mar. Allá"
 
-	para "They go wherever"
-	line "there is water."
+	para "donde haya agua"
+	line "los encontrarás."
 	done
 
 DontWantGoodRodText:
-	text "Whaaat? You don't"
-	line "like to fish!?"
-	cont "Incomprehensible!"
+	text "¿Quééé? ¿¡No te"
+	line "gusta pescar!?"
+	cont "¡Incomprensible!"
 	done
 
 HaveGoodRodText:
-	text "How are things?"
-	line "Land the big one?"
+	text "¿Qué tal va todo?"
+	line "¿Pica el grande?"
 	done
 
 OlivineGoodRodHouse_MapEvents:

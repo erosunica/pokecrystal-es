@@ -37,56 +37,54 @@ Route6UndergroundPathSign:
 	jumptext Route6UndergroundPathSignText
 
 Route6PokefanMText:
-	text "The road is closed"
-	line "until the problem"
+	text "La carretera está"
+	line "cortada hasta que"
 
-	para "at the POWER PLANT"
-	line "is solved."
+	para "arreglen la CEN-"
+	line "TRAL ENERGÍA."
 	done
 
 Route6UndergroundPathSignText:
-	text "UNDERGROUND PATH"
+	text "VÍA SUBTERRÁNEA"
 
-	para "CERULEAN CITY -"
-	line "VERMILION CITY"
+	para "CIUDAD CELESTE -"
+	line "CIUDAD CARMÍN"
 	done
 
 PokefanmRexSeenText:
-	text "My PHANPY is the"
-	line "cutest in the"
-	cont "world."
+	text "Mi PHANPY es el"
+	line "más bonito del"
+	cont "mundo."
 	done
 
 PokefanmRexBeatenText:
-	text "My PHANPY!"
+	text "¡Mi PHANPY!"
 	done
 
 PokefanmRexAfterBattleText:
-	text "Look how adorable"
-	line "my PHANPY acts!"
+	text "¡Mira qué adorable"
+	line "es mi PHANPY!"
 
-	para "Isn't it cute"
-	line "enough to make"
-	cont "your heart melt?"
+	para "¿No es tan bonito"
+	line "que te emociona?"
 	done
 
 PokefanmAllanSeenText:
-	text "My TEDDIURSA is"
-	line "the cutest in the"
-	cont "world."
+	text "Mi TEDDIURSA es el"
+	line "más bonito del"
+	cont "mundo."
 	done
 
 PokefanmAllanBeatenText:
-	text "My TEDDIURSA!"
+	text "¡Mi TEDDIURSA!"
 	done
 
 PokefanmAllanAfterBattleText:
-	text "Look how adorable"
-	line "my TEDDIURSA acts!"
+	text "¡Mira qué adorable"
+	line "es mi TEDDIURSA!"
 
-	para "Isn't it cute"
-	line "enough to make"
-	cont "your heart melt?"
+	para "¿No es tan bonito"
+	line "que te emociona?"
 	done
 
 Route6_MapEvents:

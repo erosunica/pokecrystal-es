@@ -19,53 +19,57 @@ Route40BattleTowerGateTwinScript:
 	jumptextfaceplayer Route40BattleTowerGateTwinText
 
 UnknownText_0x9f66f:
-	text "Did you come to"
-	line "see the BATTLE"
-	cont "TOWER too?"
+	text "¿También has"
+	line "venido a ver la"
+	cont "TORRE BATALLA?"
 
-	para "But I guess you"
-	line "can't go in yet."
+	para "Pero imagino que"
+	line "no puedes entrar"
+	cont "todavía."
 	done
 
 UnknownText_0x9f6ba:
-	text "BATTLE TOWER has"
-	line "opened."
+	text "TORRE BATALLA ha"
+	line "abierto."
 
-	para "I want to go, but"
-	line "I haven't thought"
+	para "Quiero ir, pero"
+	line "todavía no he"
 
-	para "up a cool line for"
-	line "when I win."
+	para "ideado una frase"
+	line "para cuando gane."
 	done
 
 Route40BattleTowerGateRockerText:
-	text "Are you going to"
-	line "the BATTLE TOWER?"
+	text "¿Vas a la TORRE"
+	line "BATALLA?"
 
-	para "This is a secret,"
-	line "but if you win a"
+	para "Es un secreto,"
+	line "pero si ganas"
 
-	para "whole lot, you can"
-	line "win special gifts."
+	para "muchas veces"
+	line "podrás conseguir"
+
+	para "regalos"
+	line "especiales."
 	done
 
 UnknownText_0x9f783:
-	text "I'm going to train"
-	line "my #MON so I'll"
+	text "Voy a entrenar mi"
+	line "#MON y así"
 
-	para "be all ready for"
-	line "the BATTLE TOWER."
+	para "estaré listo para"
+	line "la TORRE BATALLA."
 	done
 
 Route40BattleTowerGateTwinText:
-	text "The levels of the"
-	line "#MON I want to"
+	text "Los niveles de los"
+	line "#MON que quiero"
 
-	para "use are all"
-	line "different."
+	para "usar son todos"
+	line "diferentes."
 
-	para "I have to go train"
-	line "them now!"
+	para "¡Tengo que"
+	line "entrenarlos ahora!"
 	done
 
 Route40BattleTowerGate_MapEvents:

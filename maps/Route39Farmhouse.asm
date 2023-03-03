@@ -94,102 +94,102 @@ FarmhouseBookshelf:
 	jumpstd picturebookshelf
 
 FarmerMText_SickCow:
-	text "My MILTANK ain't"
-	line "givin' me milk"
-	cont "n'more."
+	text "Mi MUU-MUU ya no"
+	line "me da leche."
 
-	para "This here FARM's"
-	line "got famous milk."
+	para "La leche de esta"
+	line "GRANJA es famosa."
 
-	para "Most everyone"
-	line "wants a drink."
+	para "Casi todos"
+	line "quieren probarla."
 
-	para "It'll give me lots"
-	line "o' milk if'n I"
+	para "Supongo que si le"
+	line "doy muchas BAYAS"
 
-	para "feed it lots o'"
-	line "BERRIES, I reckon."
+	para "me dará mucha"
+	line "leche."
 	done
 
 FarmerMText_BuyMilk:
-	text "How'd you like my"
-	line "MOOMOO MILK?"
+	text "¿Te gusta mi LECHE"
+	line "MU-MU?"
 
-	para "It's my pride and"
-	line "joy, there."
+	para "Es mi orgullo y mi"
+	line "alegría."
 
-	para "Give it to #MON"
-	line "to restore HP!"
+	para "¡Dásela a los"
+	line "#MON para"
+	cont "restaurar sus PS!"
 
-	para "I'll give it to ya"
-	line "fer just ¥500."
+	para "Tuya es por sólo"
+	line "500¥."
 	done
 
 FarmerMText_GotMilk:
-	text "Here ya go!"
-	line "Drink up'n enjoy!"
+	text "¡Toma! ¡Bébetela"
+	line "y disfruta!"
 	done
 
 FarmerMText_NoMoney:
-	text "Sorry, there."
-	line "No cash, no sale!"
+	text "Lo siento."
+	line "¡Si no hay dinero,"
+	cont "no hay trato!"
 	done
 
 FarmerMText_NoRoom:
-	text "I reckon yer"
-	line "PACK's full."
+	text "Vaya, tu MOCHILA"
+	line "está llena."
 	done
 
 FarmerMText_NoSale:
-	text "You don't want it?"
-	line "Come again, hear?"
+	text "¿No la quieres?"
+	line "Vuelve otro día."
 	done
 
 FarmerMText_Milking:
-	text "I best go do my"
-	line "milkin'."
+	text "Mejor que me vaya"
+	line "a ordeñar."
 	done
 
 FarmerFText_InTrouble:
-	text "Our milk even goes"
-	line "out to KANTO."
+	text "Nuestra leche"
+	line "llega hasta KANTO."
 
-	para "So if our own"
-	line "MILTANK won't give"
+	para "Así que si nuestra"
+	line "MUU-MUU no nos da"
 
-	para "us any milk, we're"
-	line "in trouble."
+	para "leche, tendremos"
+	line "problemas."
 	done
 
 FarmerFText_HealedMiltank:
-	text "You fixed our"
-	line "MILTANK, hon. Now"
+	text "Has curado a"
+	line "nuestra MUU-MUU."
 
-	para "it gives MOOMOO"
-	line "MILK again."
+	para "Ya vuelve a dar"
+	line "LECHE MU-MU."
 
-	para "Here's somethin'"
-	line "fer your trouble."
+	para "Aquí tienes algo"
+	line "que te ayudará."
 	done
 
 Text_ReceivedTM13:
-	text "<PLAYER> received"
-	line "TM13."
+	text "<PLAYER> recibió"
+	line "MT13."
 	done
 
 FarmerFText_SnoreSpeech:
-	text "That there's"
-	line "SNORE."
+	text "Esto es RONQUIDO."
 
-	para "It's a rare move"
-	line "that only works"
+	para "Es un movimiento"
+	line "raro que sólo"
 
-	para "while the #MON"
-	line "is asleep."
+	para "funciona cuando el"
+	line "#MON duerme."
 
-	para "You best think how"
-	line "you ought to use"
-	cont "it, hon."
+	para "Mejor que pienses"
+	line "cómo vas a"
+	cont "utilizarlo."
 	done
 
 Route39Farmhouse_MapEvents:
