@@ -235,8 +235,5 @@ gfx/mobile/stadium2_n64.2bpp: tools/gfx += --trim-whitespace
 	$(if $(tools/gfx),\
 		tools/gfx $(tools/gfx) -d1 -o $@ $@)
 
-%.gbcpal: %.png
-	$(RGBGFX) -p $@ $<
-
 %.dimensions: %.png
 	tools/png_dimensions $< $@
