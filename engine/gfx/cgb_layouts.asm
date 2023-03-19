@@ -465,21 +465,21 @@ _CGB_GSIntro:
 	ret
 
 .ShellderLaprasBGPalette:
-	RGB 19, 31, 19
-	RGB 18, 23, 31
-	RGB 11, 21, 28
-	RGB 04, 16, 24
+	RGB 27, 31, 25
+	RGB 23, 29, 31
+	RGB 15, 27, 30
+	RGB 07, 21, 26
 
 .ShellderLaprasOBPals:
-	RGB 29, 29, 29
-	RGB 20, 19, 20
-	RGB 19, 06, 04
-	RGB 03, 04, 06
+	RGB 31, 31, 31
+	RGB 25, 24, 25
+	RGB 21, 08, 08
+	RGB 03, 05, 06
 
 	RGB 31, 31, 31
 	RGB 31, 31, 31
-	RGB 31, 00, 00
-	RGB 03, 04, 06
+	RGB 30, 05, 07
+	RGB 03, 05, 06
 
 .JigglypuffPikachuScene:
 	ld de, wBGPals1

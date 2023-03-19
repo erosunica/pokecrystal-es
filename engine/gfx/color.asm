@@ -156,14 +156,14 @@ Unreferenced_Function8b07:
 
 .BGPal:
 	RGB 31, 31, 31
-	RGB 18, 23, 31
-	RGB 15, 20, 31
+	RGB 23, 29, 31
+	RGB 19, 27, 31
 	RGB 00, 00, 00
 
 .OBPal:
 	RGB 31, 31, 31
-	RGB 31, 31, 12
-	RGB 08, 16, 28
+	RGB 31, 31, 21
+	RGB 10, 23, 29
 	RGB 00, 00, 00
 
 Unreferenced_Function8b3f:
@@ -459,9 +459,9 @@ Unreferenced_Function95f0:
 
 .Palette:
 	RGB 31, 31, 31
-	RGB 09, 31, 31
-	RGB 10, 12, 31
-	RGB 00, 03, 19
+	RGB 17, 31, 31
+	RGB 11, 21, 31
+	RGB 00, 08, 20
 
 CopyFourPalettes:
 	ld de, wBGPals1

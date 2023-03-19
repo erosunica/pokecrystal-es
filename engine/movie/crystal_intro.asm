@@ -1663,15 +1663,15 @@ endr
 ; Fade between black and light blue.
 hue = 0
 rept 32
-	RGB 0, hue / 2, hue
-hue = hue + 1
+	RGB hue / 20, hue / 3, hue / 2
+hue = hue + 2
 endr
 
 .BlackBlueFade:
 ; Fade between black and blue.
 hue = 0
 rept 32
-	RGB 0, 0, hue
+	RGB 0, hue / 3, hue
 hue = hue + 1
 endr
 
@@ -1730,13 +1730,13 @@ Intro_Scene20_AppearUnown:
 	ret
 
 .pal1
-	RGB 24, 12, 09
+	RGB 27, 15, 14
 	RGB 31, 31, 31
-	RGB 12, 00, 31
+	RGB 09, 13, 31
 	RGB 00, 00, 00
 
 .pal2
-	RGB 24, 12, 09
+	RGB 27, 15, 14
 	RGB 31, 31, 31
 	RGB 31, 31, 31
 	RGB 31, 31, 31
@@ -1793,18 +1793,18 @@ endr
 	ret
 
 .FastFadePalettes:
-hue = 31
+hue = 70
 rept 8
-	RGB hue, hue, hue
+	RGB hue / 3, hue / 3, hue / 3
 hue = hue + -1
-	RGB hue, hue, hue
+	RGB hue / 3, hue / 3, hue / 3
 hue = hue + -2
 endr
 
 .SlowFadePalettes:
-hue = 31
+hue = 76
 rept 16
-	RGB hue, hue, hue
+	RGB hue / 3, hue / 3, hue / 3
 hue = hue + -1
 endr
 

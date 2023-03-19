@@ -2,11 +2,11 @@ PokemonPalettes:
 ; entries correspond to Pokémon species, two apiece
 
 ; 000
-	RGB 30, 22, 17
-	RGB 16, 14, 19
+	RGB 31, 27, 24
+	RGB 19, 20, 23
 ; 000 shiny
-	RGB 30, 22, 17
-	RGB 16, 14, 19
+	RGB 31, 27, 24
+	RGB 19, 20, 23
 
 INCLUDE "gfx/pokemon/bulbasaur/normal.pal"
 INCLUDE "gfx/pokemon/bulbasaur/shiny.pal"
@@ -512,25 +512,25 @@ INCLUDE "gfx/pokemon/celebi/normal.pal"
 INCLUDE "gfx/pokemon/celebi/shiny.pal"
 
 ; 252
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+	RGB 31, 28, 19
+	RGB 28, 17, 07
 ; 252 shiny
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+	RGB 31, 28, 19
+	RGB 28, 17, 07
 
 INCLUDE "gfx/pokemon/egg/normal.pal"
 INCLUDE "gfx/pokemon/egg/shiny.pal"
 
 ; 254
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+	RGB 31, 28, 19
+	RGB 28, 17, 07
 ; 254 shiny
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+	RGB 31, 28, 19
+	RGB 28, 17, 07
 
 ; 255
-	RGB 23, 23, 23
-	RGB 17, 17, 17
+	RGB 28, 28, 28
+	RGB 22, 22, 22
 ; 255 shiny
-	RGB 23, 23, 23
-	RGB 17, 17, 17
+	RGB 28, 28, 28
+	RGB 22, 22, 22

@@ -163,8 +163,8 @@ MG_Mobile_Layout01:
 
 .Palette_49478:
 	RGB 31, 31, 31
-	RGB 26, 31, 00
-	RGB 20, 16, 03
+	RGB 31, 29, 09
+	RGB 25, 17, 08
 	RGB 00, 00, 00
 
 Function49480:
@@ -211,14 +211,14 @@ MG_Mobile_Layout02:
 
 .Palette_49732:
 	RGB 31, 31, 31
-	RGB 23, 16, 07
-	RGB 23, 07, 07
-	RGB 03, 07, 20
+	RGB 27, 19, 13
+	RGB 25, 11, 12
+	RGB 03, 12, 21
 
 .Palette_4973a:
 	RGB 00, 00, 00
-	RGB 07, 05, 31
-	RGB 14, 18, 31
+	RGB 05, 15, 30
+	RGB 18, 26, 31
 	RGB 31, 31, 31
 
 Function49742:
