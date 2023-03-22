@@ -6395,6 +6395,7 @@ LoadEnemyMon:
 	ld bc, wEnemyMonStatsEnd - wEnemyMonStats
 	call CopyBytes
 
+	call ApplyStatusEffectOnEnemyStats
 	ret
 
 CheckSleepingTreeMon:
