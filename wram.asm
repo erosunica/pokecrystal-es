@@ -1657,7 +1657,8 @@ wBufferMonNick:: ds MON_NAME_LENGTH ; d002
 wBufferMonOT:: ds NAME_LENGTH ; d00d
 wBufferMon:: party_struct wBufferMon ; d018
 	ds 8
-wMonOrItemNameBuffer::
+wMonOrItemNameBuffer:: ds NAME_LENGTH
+	ds NAME_LENGTH
 
 NEXTU ; d002
 ; bug-catching contest
@@ -1918,11 +1919,11 @@ ENDU ; d066
 
 wTMHMMoveNameBackup:: ds MOVE_NAME_LENGTH ; d066
 
-wStringBuffer1:: ds 19 ; d073
-wStringBuffer2:: ds 19 ; d086
-wStringBuffer3:: ds 19 ; d099
-wStringBuffer4:: ds 19 ; d0ac
-wStringBuffer5:: ds 19 ; d0bf
+wStringBuffer1:: ds STRING_BUFFER_LENGTH
+wStringBuffer2:: ds STRING_BUFFER_LENGTH
+wStringBuffer3:: ds STRING_BUFFER_LENGTH
+wStringBuffer4:: ds STRING_BUFFER_LENGTH
+wStringBuffer5:: ds STRING_BUFFER_LENGTH
 
 wBattleMenuCursorBuffer:: dw ; d0d2
 
