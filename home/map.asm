@@ -581,13 +581,13 @@ ReadObjectEvents::
 	ld a, [wCurMapObjectEventCount]
 	call CopyMapObjectEvents
 
-; get NUM_OBJECTS - [wCurMapObjectEventCount]
+; get NUM_OBJECTS - [wCurMapObjectEventCount] -1
 	ld a, [wCurMapObjectEventCount]
 	ld c, a
-	ld a, NUM_OBJECTS ; - 1
+	ld a, NUM_OBJECTS - 1
 	sub c
 	jr z, .skip
-	; jr c, .skip
+	jr c, .skip
 
 	; could have done "inc hl" instead
 	ld bc, 1
