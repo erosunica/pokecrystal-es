@@ -1,4 +1,5 @@
 _OptionsMenu:
+	call ClearJoypad
 	ld hl, hInMenu
 	ld a, [hl]
 	push af
