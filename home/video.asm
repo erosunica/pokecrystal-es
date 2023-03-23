@@ -120,40 +120,27 @@ UpdateBGMap::
 	and a
 	ret z
 
-; BG Map 0
-	dec a ; 1
-	jr z, .Tiles
-	dec a ; 2
-	jr z, .Attr
+	dec a ; 1-4 -> 0-3
+	      ; bit 0 = tile/attr
+	      ; bit 1 = map 0/1
+	bit 1, a
+	ld d, a
+	jr nz, .map_1
+
+; BG Map 0 (hBGMapAddress)
+	ldh a, [hBGMapAddress]
+	ld c, a
+	ldh a, [hBGMapAddress + 1]
+	ld b, a
+	jr .next
 
 ; BG Map 1
-	dec a
+.map_1
+	ld bc, vBGMap1
 
-	ldh a, [hBGMapAddress]
-	ld l, a
-	ldh a, [hBGMapAddress + 1]
-	ld h, a
-	push hl
-
-	xor a ; LOW(vBGMap1)
-	ldh [hBGMapAddress], a
-	ld a, HIGH(vBGMap1)
-	ldh [hBGMapAddress + 1], a
-
-	ldh a, [hBGMapMode]
-	push af
-	cp 3
-	call z, .Tiles
-	pop af
-	cp 4
-	call z, .Attr
-
-	pop hl
-	ld a, l
-	ldh [hBGMapAddress], a
-	ld a, h
-	ldh [hBGMapAddress + 1], a
-	ret
+.next
+	rrc d
+	jr nc, .Tiles
 
 .Attr:
 	ld a, 1
@@ -169,63 +156,49 @@ UpdateBGMap::
 .Tiles:
 	hlcoord 0, 0
 
+; hl -> wTilemap/wAttrmap
+; bc -> bg map
 .update
 	ld [hSPBuffer], sp
+	ld sp, hl
 
 ; Which third?
 	ldh a, [hBGMapThird]
-	and a ; 0
-	jr z, .top
-	dec a ; 1
+	cp 1
+	jr c, .top
 	jr z, .middle
-	; 2
 
 THIRD_HEIGHT EQU SCREEN_HEIGHT / 3
 
-.bottom
-	ld de, 2 * THIRD_HEIGHT * SCREEN_WIDTH
-	add hl, de
-	ld sp, hl
+; bottom
+; 2 * height * width = $F0, but add sp is a signed addition
+; so do it in halves
+	add sp, THIRD_HEIGHT * SCREEN_WIDTH
+	add sp, THIRD_HEIGHT * SCREEN_WIDTH
 
-	ldh a, [hBGMapAddress + 1]
-	ld h, a
-	ldh a, [hBGMapAddress]
-	ld l, a
-
-	ld de, 2 * THIRD_HEIGHT * BG_MAP_WIDTH
-	add hl, de
+	ld hl, 2 * THIRD_HEIGHT * BG_MAP_WIDTH
+	add hl, bc
 
 ; Next time: top third
 	xor a
 	jr .start
 
 .middle
-	ld de, THIRD_HEIGHT * SCREEN_WIDTH
-	add hl, de
-	ld sp, hl
+	add sp, THIRD_HEIGHT * SCREEN_WIDTH
 
-	ldh a, [hBGMapAddress + 1]
-	ld h, a
-	ldh a, [hBGMapAddress]
-	ld l, a
-
-	ld de, THIRD_HEIGHT * BG_MAP_WIDTH
-	add hl, de
+	ld hl, 1 * THIRD_HEIGHT * BG_MAP_WIDTH
+	add hl, bc
 
 ; Next time: bottom third
-	ld a, 2
+	inc a
 	jr .start
 
 .top
-	ld sp, hl
-
-	ldh a, [hBGMapAddress + 1]
-	ld h, a
-	ldh a, [hBGMapAddress]
-	ld l, a
+	ld h, b
+	ld l, c
 
 ; Next time: middle third
-	ld a, 1
+	inc a
 
 .start
 ; Which third to update next time
