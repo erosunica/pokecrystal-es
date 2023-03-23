@@ -224,25 +224,10 @@ WaitPlaySFX::
 
 WaitSFX::
 ; infinite loop until sfx is done playing
-
-	push hl
-
-.wait
-	ld hl, wChannel5Flags1
-	bit 0, [hl]
-	jr nz, .wait
-	ld hl, wChannel6Flags1
-	bit 0, [hl]
-	jr nz, .wait
-	ld hl, wChannel7Flags1
-	bit 0, [hl]
-	jr nz, .wait
-	ld hl, wChannel8Flags1
-	bit 0, [hl]
-	jr nz, .wait
-
-	pop hl
-	ret
+	call CheckSFX
+	ret nc
+	call DelayFrame
+	jr WaitSFX
 
 IsSFXPlaying::
 ; Return carry if no sound effect is playing.
