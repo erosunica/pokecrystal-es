@@ -38,7 +38,7 @@ UpdateBGMapBuffer::
 
 ; We can now pop the addresses of affected spots on the BG Map
 
-	ld hl, wBGMapPalBuffer
+	ld bc, wBGMapPalBuffer
 	ld de, wBGMapBuffer
 
 .next
@@ -46,30 +46,29 @@ UpdateBGMapBuffer::
 
 rept 2
 ; Get our BG Map address
-	pop bc
+	pop hl
 
 ; Palettes
 	ld a, 1
 	ldh [rVBK], a
 
-	ld a, [hli]
-	ld [bc], a
+	ld a, [bc]
+	ld [hli], a
 	inc c
-	ld a, [hli]
-	ld [bc], a
-	dec c
+	ld a, [bc]
+	ld [hld], a
+	inc c
 
 ; Tiles
-	ld a, 0
+	xor a
 	ldh [rVBK], a
 
 	ld a, [de]
-	inc de
-	ld [bc], a
-	inc c
+	ld [hli], a
+	inc e
 	ld a, [de]
-	inc de
-	ld [bc], a
+	ld [hl], a
+	inc e
 endr
 
 ; We've done 2 16x8 blocks
