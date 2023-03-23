@@ -139,6 +139,15 @@ VBlank0::
 	ldh a, [hROMBankBackup]
 	rst Bankswitch
 
+	; enable LCD interrupt if needed
+	ld a, [hLCDCPointer]
+	and a
+	jr z, .no_stat
+	ldh a, [rIE]
+	set LCD_STAT, a
+	ldh [rIE], a
+.no_stat
+
 	ldh a, [hSeconds]
 	ldh [hSecondsBackup], a
 

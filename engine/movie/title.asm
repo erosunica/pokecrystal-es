@@ -159,14 +159,15 @@ _TitleScreen:
 ; (This part is actually totally pointless, you can't
 ;  see anything until these values are overwritten!)
 
+	ld e, +112 ; coming from the left
+	ld d, -112 ; coming from the right
 	ld b, 80 / 2 ; alternate for 80 lines
 	ld hl, wLYOverrides
 .loop
-; $00 is the middle position
-	ld [hl], +112 ; coming from the left
-	inc hl
-	ld [hl], -112 ; coming from the right
-	inc hl
+	ld a, e
+	ld [hli], a
+	ld a, d
+	ld [hli], a
 	dec b
 	jr nz, .loop
 

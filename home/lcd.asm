@@ -10,25 +10,35 @@ Unreferenced_Function547::
 	ret
 
 LCD::
+; It's assumed we're in BANK(wLYOverrides)
 	push af
-	ldh a, [hLCDCPointer]
-	and a
-	jr z, .done
-
-; At this point it's assumed we're in WRAM bank 5!
 	push bc
 	ldh a, [rLY]
 	ld c, a
 	ld b, HIGH(wLYOverrides)
 	ld a, [bc]
 	ld b, a
+
 	ldh a, [hLCDCPointer]
+; Check if we actually had a pointer, if not we may be in the wrong ram
+; bank, but WRAM reads have no side effects so a rouge read is harmless
+	and a
+	jr z, .clear
+
 	ld c, a
 	ld a, b
 	ldh [c], a
 	pop bc
+	pop af
+	reti
 
-.done
+.clear
+; Interrupting on every HBlank takes a substantial chunk of CPU time
+; So clear the interrupt, VBlank will enable it
+	ldh a, [rIE]
+	res LCD_STAT, a
+	ldh [rIE], a
+	pop bc
 	pop af
 	reti
 

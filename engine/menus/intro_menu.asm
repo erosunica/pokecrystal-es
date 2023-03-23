@@ -1068,33 +1068,37 @@ TitleScreenScene:
 TitleScreenEntrance:
 ; Animate the logo:
 ; Move each line by 4 pixels until our count hits 0.
+	farcall AnimateTitleCrystal
+
 	ldh a, [hSCX]
 	and a
 	jr z, .done
 	sub 4
 	ldh [hSCX], a
 
-; Lay out a base (all lines scrolling together).
-	ld e, a
-	ld hl, wLYOverrides
-	ld bc, 8 * 10 ; logo height
-	call ByteFill
-
 ; Reversed signage for every other line's position.
 ; This is responsible for the interlaced effect.
-	ld a, e
-	xor $ff
+	ld e, a
+	cpl
 	inc a
+	ld d, a
 
-	ld b, 8 * 10 / 2 ; logo height / 2
-	ld hl, wLYOverrides + 1
+	ld b, 8 * 10 ; logo height
+	ld hl, wLYOverrides
+.wait
+; Wait until the logo has draw to avoid tearing
+	ld a, [rLY]
+	cp b
+	jr c, .wait
+	rr b ; logo height / 2
 .loop
+	ld a, e
 	ld [hli], a
-	inc hl
+	ld a, d
+	ld [hli], a
 	dec b
 	jr nz, .loop
 
-	farcall AnimateTitleCrystal
 	ret
 
 .done
