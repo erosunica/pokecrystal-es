@@ -46,31 +46,23 @@ PrintLetterDelay::
 .updatedelay
 	ld [wTextDelayFrames], a
 
-.checkjoypad
-	call GetJoypad
+.loop
+	ld a, [wTextDelayFrames]
+	and a
+	jr z, .end
+
+	call DelayFrame
 
 ; input override
 	ld a, [wDisableTextAcceleration]
 	and a
-	jr nz, .wait
+	jr nz, .loop
 
-; Wait one frame if holding A or B.
+; Finish early if holding A or B.
+	call GetJoypad
 	ldh a, [hJoyDown]
-	bit A_BUTTON_F, a
-	jr z, .checkb
-	jr .delay
-.checkb
-	bit B_BUTTON_F, a
-	jr z, .wait
-
-.delay
-	call DelayFrame
-	jr .end
-
-.wait
-	ld a, [wTextDelayFrames]
-	and a
-	jr nz, .checkjoypad
+	and a, A_BUTTON | B_BUTTON
+	jr z, .loop
 
 .end
 	pop af
