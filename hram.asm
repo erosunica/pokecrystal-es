@@ -160,3 +160,7 @@ hDMATransfer:: db ; ffe8
 hMobile:: db ; ffe9
 hSystemBooted:: db ; ffea
 hClockResetTrigger:: db ; ffeb
+hRequested2bpp:: db ; ffec
+hRequested1bpp:: db ; ffed
+hRequestedVTileSource:: dw ; ffee
+hRequestedVTileDest::   dw ; ffef
