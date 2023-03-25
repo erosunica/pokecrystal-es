@@ -130,7 +130,7 @@ _DepositPKMN:
 	ld hl, BillsPCDepositMenuHeader
 	call CopyMenuHeader
 	ld a, [wMenuCursorY]
-	call StoreTo_wMenuCursorBuffer
+	ld [wMenuCursorBuffer], a
 	call VerticalMenu
 	jp c, BillsPCDepositFuncCancel
 	ld a, [wMenuCursorY]
@@ -387,7 +387,7 @@ BillsPC_Withdraw:
 	ld hl, .MenuHeader
 	call CopyMenuHeader
 	ld a, [wMenuCursorY]
-	call StoreTo_wMenuCursorBuffer
+	ld [wMenuCursorBuffer], a
 	call VerticalMenu
 	jp c, .cancel
 	ld a, [wMenuCursorY]
@@ -638,7 +638,7 @@ _MovePKMNWithoutMail:
 	ld hl, .MenuHeader
 	call CopyMenuHeader
 	ld a, [wMenuCursorY]
-	call StoreTo_wMenuCursorBuffer
+	ld [wMenuCursorBuffer], a
 	call VerticalMenu
 	jp c, .Cancel
 	ld a, [wMenuCursorY]

@@ -1275,15 +1275,11 @@ LinkTradePartymonMenuLoop:
 	farcall LinkTradeMenu
 	ld a, d
 	and a
-	jr nz, .check_joypad
-	jp LinkTradePartiesMenuMasterLoop
+	jp z, LinkTradePartiesMenuMasterLoop
 
-.check_joypad
 	bit A_BUTTON_F, a
-	jr z, .not_a_button
-	jp Function28926
+	jp nz, Function28926
 
-.not_a_button
 	bit D_DOWN_F, a
 	jr z, .not_d_down
 	ld a, [wMenuCursorY]
@@ -1361,7 +1357,7 @@ Function28926:
 	xor a
 	ld [w2DMenuFlags1], a
 	ld [w2DMenuFlags2], a
-	call ScrollingMenuJoypad
+	call DoMenuJoypadLoop
 	bit D_RIGHT_F, a
 	jr nz, .d_right
 	bit B_BUTTON_F, a
@@ -1393,7 +1389,7 @@ Function28926:
 	xor a
 	ld [w2DMenuFlags1], a
 	ld [w2DMenuFlags2], a
-	call ScrollingMenuJoypad
+	call DoMenuJoypadLoop
 	bit D_LEFT_F, a
 	jp nz, .joy_loop
 	bit B_BUTTON_F, a
@@ -1663,9 +1659,9 @@ LinkTrade:
 	ld [wMenuCursorY], a
 	ld [wMenuCursorX], a
 	farcall Link_WaitBGMap
-	call ScrollingMenuJoypad
+	call DoMenuJoypadLoop
 	push af
-	call Call_ExitMenu
+	call ExitMenu
 	call WaitBGMap2
 	pop af
 	bit 1, a

@@ -1901,13 +1901,13 @@ CloseSubmenu::
 	call ClearBGPalettes
 	call ReloadTilesetAndPalettes
 	call UpdateSprites
-	call Call_ExitMenu
+	call ExitMenu
 	call ret_d90
 	jr FinishExitMenu
 
 ExitAllMenus::
 	call ClearBGPalettes
-	call Call_ExitMenu
+	call ExitMenu
 	call ReloadTilesetAndPalettes
 	call UpdateSprites
 	call ret_d90

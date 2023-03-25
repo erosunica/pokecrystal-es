@@ -6,8 +6,7 @@ _2DMenu_::
 	call Draw2DMenu
 	call UpdateSprites
 	call ApplyTilemap
-	call Get2DMenuSelection
-	ret
+	jp Get2DMenuSelection
 
 _InterpretBattleMenu::
 	ld hl, CopyMenuData
@@ -18,8 +17,7 @@ _InterpretBattleMenu::
 	farcall MobileTextBorder
 	call UpdateSprites
 	call ApplyTilemap
-	call Get2DMenuSelection
-	ret
+	jp Get2DMenuSelection
 
 _InterpretMobileMenu::
 	ld hl, CopyMenuData
@@ -59,12 +57,11 @@ Draw2DMenu:
 	xor a
 	ldh [hBGMapMode], a
 	call MenuBox
-	call Place2DMenuItemStrings
-	ret
+	jp Place2DMenuItemStrings
 
 Get2DMenuSelection:
 	call Init2DMenuCursorPosition
-	call StaticMenuJoypad
+	call DoMenuJoypadLoop
 	call MenuClickSound
 Mobile_GetMenuSelection:
 	ld a, [wMenuDataFlags]
@@ -244,9 +241,7 @@ Init2DMenuCursorPosition:
 	ld [wMenuJoypadFilter], a
 	ret
 
-_StaticMenuJoypad::
-	call Place2DMenuCursor
-_ScrollingMenuJoypad::
+_DoMenuJoypadLoop::
 	ld hl, w2DMenuFlags2
 	res 7, [hl]
 	ldh a, [hBGMapMode]
@@ -328,7 +323,7 @@ MenuJoypadLoop:
 	jr z, .loop
 
 .done
-	ret
+	jp Move2DMenuCursor
 
 .BGMap_OAM:
 	ldh a, [hOAMUpdate]
@@ -343,7 +338,10 @@ MenuJoypadLoop:
 	ret
 
 Do2DMenuRTCJoypad:
+	jr .handleLoop
 .loopRTC
+	call DelayFrame
+.handleLoop
 	call UpdateTimeAndPals
 	call Menu_WasButtonPressed
 	ret c
@@ -516,14 +514,15 @@ Place2DMenuCursor:
 	ld a, [w2DMenuCursorOffsets]
 	swap a
 	and $f
+	jr z, .got_row
 	ld c, a
 	ld a, [wMenuCursorY]
 	ld b, a
 	xor a
-	dec b
-	jr z, .got_row
+	jr .handle_loop
 .row_loop
 	add c
+.handle_loop
 	dec b
 	jr nz, .row_loop
 
@@ -532,6 +531,7 @@ Place2DMenuCursor:
 	call AddNTimes
 	ld a, [w2DMenuCursorOffsets]
 	and $f
+	jr z, .got_col
 	ld c, a
 	ld a, [wMenuCursorX]
 	ld b, a
@@ -611,7 +611,6 @@ _PushWindow::
 
 .done
 	pop hl
-	call .ret ; empty function
 	ld a, h
 	ld [de], a
 	dec de
@@ -633,7 +632,6 @@ _PushWindow::
 	call GetMenuBoxDims
 	inc b
 	inc c
-	call .ret ; empty function
 
 .row
 	push bc
@@ -653,9 +651,6 @@ _PushWindow::
 	dec b
 	jr nz, .row
 
-	ret
-
-.ret
 	ret
 
 _ExitMenu::

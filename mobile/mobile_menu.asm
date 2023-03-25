@@ -30,14 +30,14 @@ Function49f16:
 	call PlaceString
 	call WaitBGMap2
 	call SetPalettes
-	call StaticMenuJoypad
+	call DoMenuJoypadLoop
 	ld hl, wMenuCursorY
 	ld b, [hl]
 	push bc
 	jr .check_buttons
 
 .joy_loop
-	call ScrollingMenuJoypad
+	call DoMenuJoypadLoop
 	ld hl, wMenuCursorY
 	ld b, [hl]
 	push bc
@@ -164,7 +164,7 @@ Function4a098:
 	call WaitBGMap
 	call LoadStandardMenuHeader
 	farcall Function89de0
-	call Call_ExitMenu
+	call ExitMenu
 	call MG_Mobile_Layout_LoadPals
 	call Function4a485
 	pop bc
@@ -273,14 +273,14 @@ Function4a149:
 	call PlaceString
 	farcall Mobile_OpenAndCloseMenu_HDMATransferTilemapAndAttrmap
 	call SetPalettes
-	call StaticMenuJoypad
+	call DoMenuJoypadLoop
 	ld hl, wMenuCursorY
 	ld b, [hl]
 	push bc
 	jr asm_4a19d
 
 Function4a195:
-	call ScrollingMenuJoypad
+	call DoMenuJoypadLoop
 	ld hl, wMenuCursorY
 	ld b, [hl]
 	push bc
@@ -392,7 +392,7 @@ Function4a28a:
 	call PlaceString
 	farcall Mobile_OpenAndCloseMenu_HDMATransferTilemapAndAttrmap
 	call Function4a118
-	call ScrollingMenuJoypad
+	call DoMenuJoypadLoop
 	push af
 	call PlayClickSFX
 	pop af
@@ -406,7 +406,7 @@ Function4a28a:
 .asm_4a2df
 	farcall Function11765d
 	call ClearBGPalettes
-	call Call_ExitMenu
+	call ExitMenu
 	call LoadFontsExtra
 	scf
 	ret
@@ -441,7 +441,7 @@ Function4a28a:
 .dont_delete_password
 	call ExitMenu
 .quit
-	call Call_ExitMenu
+	call ExitMenu
 	farcall Mobile_OpenAndCloseMenu_HDMATransferTilemapAndAttrmap
 	xor a
 	ret
@@ -681,14 +681,14 @@ Function4a4c4:
 	call PlaceString
 	call WaitBGMap2
 	call SetPalettes
-	call StaticMenuJoypad
+	call DoMenuJoypadLoop
 	ld hl, wMenuCursorY
 	ld b, [hl]
 	push bc
 	jr asm_4a54d
 
 Function4a545:
-	call ScrollingMenuJoypad
+	call DoMenuJoypadLoop
 	ld hl, wMenuCursorY
 	ld b, [hl]
 	push bc

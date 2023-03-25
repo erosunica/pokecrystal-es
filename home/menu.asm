@@ -20,15 +20,9 @@ SetMenuAttributes::
 	pop hl
 	ret
 
-StaticMenuJoypad::
-	callfar _StaticMenuJoypad
-	call GetMenuJoypad
-	ret
-
-ScrollingMenuJoypad::
-	callfar _ScrollingMenuJoypad
-	call GetMenuJoypad
-	ret
+DoMenuJoypadLoop::
+	callfar _DoMenuJoypadLoop
+	; fallthrough
 
 GetMenuJoypad::
 	push bc
@@ -87,8 +81,7 @@ RestoreTileBackup::
 	call MenuBoxCoord2Tile
 	call .copy
 	call MenuBoxCoord2Attr
-	call .copy
-	ret
+	; fallthrough
 
 .copy
 	call GetMenuBoxDims
@@ -226,10 +219,8 @@ GetMenuTextStartCoord::
 ; bit 7: if set, leave extra room on the left
 	ld a, [wMenuDataFlags]
 	bit 7, a
-	jr z, .bit_7_clear
+	ret z
 	inc c
-
-.bit_7_clear
 	ret
 
 ClearMenuBoxInterior::
@@ -239,16 +230,14 @@ ClearMenuBoxInterior::
 	call GetMenuBoxDims
 	dec b
 	dec c
-	call ClearBox
-	ret
+	jp ClearBox
 
 ClearWholeMenuBox::
 	call MenuBoxCoord2Tile
 	call GetMenuBoxDims
 	inc c
 	inc b
-	call ClearBox
-	ret
+	jp ClearBox
 
 MenuBoxCoord2Tile::
 	ld a, [wMenuBorderLeftCoord]
@@ -306,8 +295,7 @@ Coord2Attr::
 
 LoadMenuHeader::
 	call CopyMenuHeader
-	call PushWindow
-	ret
+	jp PushWindow
 
 CopyMenuHeader::
 	ld de, wMenuHeader
@@ -315,10 +303,6 @@ CopyMenuHeader::
 	call CopyBytes
 	ldh a, [hROMBank]
 	ld [wMenuDataBank], a
-	ret
-
-StoreTo_wMenuCursorBuffer::
-	ld [wMenuCursorBuffer], a
 	ret
 
 MenuTextbox::
@@ -332,8 +316,7 @@ MenuTextbox::
 
 LoadMenuTextbox::
 	ld hl, .MenuHeader
-	call LoadMenuHeader
-	ret
+	jp LoadMenuHeader
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -343,23 +326,17 @@ LoadMenuTextbox::
 
 MenuTextboxBackup::
 	call MenuTextbox
-	call CloseWindow
-	ret
+	jp CloseWindow
 
 LoadStandardMenuHeader::
 	ld hl, .MenuHeader
-	call LoadMenuHeader
-	ret
+	jp LoadMenuHeader
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw 0
 	db 1 ; default option
-
-Call_ExitMenu::
-	call ExitMenu
-	ret
 
 VerticalMenu::
 	xor a
@@ -373,7 +350,7 @@ VerticalMenu::
 	bit 7, a
 	jr z, .cancel
 	call InitVerticalMenuCursor
-	call StaticMenuJoypad
+	call DoMenuJoypadLoop
 	call MenuClickSound
 	bit 1, a
 	jr z, .okay
@@ -427,15 +404,6 @@ _YesNoBox::
 	ld hl, YesNoMenuHeader
 	call CopyMenuHeader
 	pop bc
-; This seems to be an overflow prevention, but
-; it was coded wrong.
-	ld a, b
-	cp SCREEN_WIDTH - 6
-	jr nz, .okay ; should this be "jr nc"?
-	ld a, SCREEN_WIDTH - 5
-	ld b, a
-
-.okay
 	ld a, b
 	ld [wMenuBorderLeftCoord], a
 	add 4
@@ -480,8 +448,7 @@ YesNoMenuHeader::
 
 OffsetMenuHeader::
 	call _OffsetMenuHeader
-	call PushWindow
-	ret
+	jp PushWindow
 
 _OffsetMenuHeader::
 	push de
@@ -513,8 +480,7 @@ DoNthMenu::
 	call InitMenuCursorAndButtonPermissions
 	call GetStaticMenuJoypad
 	call GetMenuJoypad
-	call MenuClickSound
-	ret
+	jp MenuClickSound
 
 SetUpMenu::
 	call DrawVariableLengthMenuBox ; ???
@@ -528,8 +494,7 @@ DrawVariableLengthMenuBox::
 	call CopyMenuData
 	call GetMenuIndexSet
 	call AutomaticGetMenuBottomCoord
-	call MenuBox
-	ret
+	jp MenuBox
 
 MenuWriteText::
 	xor a
@@ -624,15 +589,13 @@ InitMenuCursorAndButtonPermissions::
 .disallow_select
 	ld a, [wMenuDataFlags]
 	bit 2, a
-	jr z, .disallow_left_right
+	ret z
 	set D_LEFT_F, [hl]
 	set D_RIGHT_F, [hl]
-
-.disallow_left_right
 	ret
 
 GetScrollingMenuJoypad::
-	call ScrollingMenuJoypad
+	call DoMenuJoypadLoop
 	ld hl, wMenuJoypadFilter
 	and [hl]
 	jr ContinueGettingMenuJoypad
@@ -640,7 +603,7 @@ GetScrollingMenuJoypad::
 GetStaticMenuJoypad::
 	xor a
 	ld [wMenuJoypad], a
-	call StaticMenuJoypad
+	call DoMenuJoypadLoop
 
 ContinueGettingMenuJoypad:
 	bit A_BUTTON_F, a
@@ -703,8 +666,7 @@ PlaceMenuStrings::
 	ld d, h
 	ld e, l
 	pop hl
-	call PlaceString
-	ret
+	jp PlaceString
 
 PlaceNthMenuStrings::
 	push de
@@ -716,8 +678,7 @@ PlaceNthMenuStrings::
 	ld d, [hl]
 	ld e, a
 	pop hl
-	call PlaceString
-	ret
+	jp PlaceString
 
 Unreferenced_Function1f9e::
 	call GetMenuDataPointerTableEntry
@@ -780,8 +741,7 @@ ClearWindowData::
 .bytefill
 	ld bc, $10
 	xor a
-	call ByteFill
-	ret
+	jp ByteFill
 
 MenuClickSound::
 	push af
@@ -805,8 +765,7 @@ PlayClickSFX::
 MenuTextboxWaitButton::
 	call MenuTextbox
 	call WaitButton
-	call ExitMenu
-	ret
+	jp ExitMenu
 
 Place2DMenuItemName::
 	ldh [hBuffer], a

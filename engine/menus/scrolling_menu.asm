@@ -8,6 +8,7 @@ _InitScrollingMenu::
 	call ScrollingMenu_InitFlags
 	call ScrollingMenu_ValidateSwitchItem
 	call ScrollingMenu_InitDisplay
+	call Place2DMenuCursor
 	call ApplyTilemap
 	xor a
 	ldh [hBGMapMode], a
@@ -16,8 +17,8 @@ _InitScrollingMenu::
 _ScrollingMenu::
 .loop
 	call ScrollingMenuJoyAction
-	jp c, .exit
-	call z, .zero
+	jr c, .exit
+	call z, ScrollingMenu_InitDisplay
 	jr .loop
 
 .exit
@@ -25,16 +26,6 @@ _ScrollingMenu::
 	ld [wMenuJoypad], a
 	ld a, 0
 	ldh [hInMenu], a
-	ret
-
-.zero
-	call ScrollingMenu_InitDisplay
-	ld a, 1
-	ldh [hBGMapMode], a
-	ld c, 3
-	call DelayFrames
-	xor a
-	ldh [hBGMapMode], a
 	ret
 
 ScrollingMenu_InitDisplay:
@@ -53,35 +44,25 @@ ScrollingMenu_InitDisplay:
 
 ScrollingMenuJoyAction:
 .loop
-	call ScrollingMenuJoypad
-	ldh a, [hJoyLast]
-	and D_PAD
-	ld b, a
-	ldh a, [hJoyPressed]
-	and BUTTONS
-	or b
-	bit A_BUTTON_F, a
-	jp nz, .a_button
-	bit B_BUTTON_F, a
-	jp nz, .b_button
-	bit SELECT_F, a
-	jp nz, .select
-	bit START_F, a
-	jp nz, .start
-	bit D_RIGHT_F, a
-	jp nz, .d_right
-	bit D_LEFT_F, a
-	jp nz, .d_left
-	bit D_UP_F, a
-	jp nz, .d_up
-	bit D_DOWN_F, a
-	jp nz, .d_down
+	call _DoMenuJoypadLoop
+	call GetMenuJoypad
+	rrca
+	jr c, .a_button
+	rrca
+	jr c, .b_button
+	rrca
+	jr c, .select
+	rrca
+	jr c, .start
+	rrca
+	jr c, .d_right
+	rrca
+	jp c, .d_left
+	rrca
+	jp c, .d_up
+	rrca
+	jp c, .d_down
 	jr .loop
-
-.unreferenced ; unused
-	ld a, -1
-	and a
-	ret
 
 .a_button
 	call PlaceHollowCursor
@@ -111,13 +92,13 @@ ScrollingMenuJoyAction:
 .select
 	ld a, [wMenuDataFlags]
 	bit 7, a
-	jp z, xor_a_dec_a
+	jr z, .unset_zero_flag
 	ld a, [wMenuCursorY]
 	dec a
 	call ScrollingMenu_GetListItemCoordAndFunctionArgs
 	ld a, [wMenuSelection]
 	cp -1
-	jp z, xor_a_dec_a
+	jr z, .unset_zero_flag
 	call ScrollingMenu_GetCursorPosition
 	dec a
 	ld [wScrollingMenuCursorPosition], a
@@ -128,63 +109,66 @@ ScrollingMenuJoyAction:
 .start
 	ld a, [wMenuDataFlags]
 	bit 6, a
-	jp z, xor_a_dec_a
+	jr z, .unset_zero_flag
 	ld a, START
 	scf
 	ret
 
 .d_left
-	ld hl, w2DMenuFlags2
-	bit 7, [hl]
-	jp z, xor_a_dec_a
+	ld a, [w2DMenuFlags2]
+	bit 7, a
+	jr z, .unset_zero_flag
 	ld a, [wMenuDataFlags]
 	bit 3, a
-	jp z, xor_a_dec_a
+	jr z, .unset_zero_flag
 	ld a, D_LEFT
 	scf
 	ret
 
 .d_right
-	ld hl, w2DMenuFlags2
-	bit 7, [hl]
-	jp z, xor_a_dec_a
+	ld a, [w2DMenuFlags2]
+	bit 7, a
+	jr z, .unset_zero_flag
 	ld a, [wMenuDataFlags]
 	bit 2, a
-	jp z, xor_a_dec_a
+	jr z, .unset_zero_flag
 	ld a, D_RIGHT
 	scf
 	ret
 
 .d_up
-	ld hl, w2DMenuFlags2
-	bit 7, [hl]
-	jp z, xor_a
-	ld hl, wMenuScrollPosition
-	ld a, [hl]
+	ld a, [wMenuScrollPosition]
 	and a
-	jr z, .xor_dec_up
+	jr z, .check_call_function_3
+	ld a, [w2DMenuFlags2]
+	bit 7, a
+	jr z, .check_call_function_3
+	ld hl, wMenuScrollPosition
 	dec [hl]
-	jp xor_a
-
-.xor_dec_up
-	jp xor_a_dec_a
+	jr .set_zero_flag
 
 .d_down
-	ld hl, w2DMenuFlags2
-	bit 7, [hl]
-	jp z, xor_a
-	ld hl, wMenuScrollPosition
-	ld a, [wMenuData_ScrollingMenuHeight]
-	add [hl]
+	call ScrollingMenu_GetCursorPosition
 	ld b, a
 	ld a, [wScrollingMenuListSize]
 	cp b
-	jr c, .xor_dec_down
+	jr c, .check_call_function_3
+	ld a, [w2DMenuFlags2]
+	bit 7, a
+	jr z, .check_call_function_3
+	ld hl, wMenuScrollPosition
 	inc [hl]
-	jp xor_a
 
-.xor_dec_down
-	jp xor_a_dec_a
+.set_zero_flag
+	xor a
+	ret
+
+.check_call_function_3
+	call ScrollingMenu_CheckCallFunction3
+.unset_zero_flag
+	xor a
+	dec a
+	ret
 
 ScrollingMenu_GetCursorPosition:
 	ld a, [wMenuScrollPosition]
@@ -245,15 +229,13 @@ InitScrollingMenuCursor:
 	inc a
 	cp b
 	jr c, .asm_2475a
-	jr nc, .asm_24763
+	ret nc
 
 .asm_2475a
 	xor a
 	ld [wMenuScrollPosition], a
 	ld a, $1
 	ld [wMenuCursorBuffer], a
-
-.asm_24763
 	ret
 
 ScrollingMenu_InitFlags:
@@ -332,14 +314,12 @@ ScrollingMenu_ValidateSwitchItem:
 	ld c, a
 	ld a, [wSwitchItem]
 	and a
-	jr z, .done
+	ret z
 	dec a
 	cp c
-	jr c, .done
+	ret c
 	xor a
 	ld [wSwitchItem], a
-
-.done
 	ret
 
 ScrollingMenu_UpdateDisplay:
@@ -384,17 +364,18 @@ ScrollingMenu_UpdateDisplay:
 	ld a, c
 	cp b
 	jr nz, .loop
+	ld a, $1
+	ldh [hCGBPalUpdate], a
+	call DelayFrame
 	ld a, [wMenuDataFlags]
 	bit 4, a ; place arrows
-	jr z, .done
+	ret z
 	ld a, [wMenuBorderBottomCoord]
 	ld b, a
 	ld a, [wMenuBorderRightCoord]
 	ld c, a
 	call Coord2Tile
 	ld [hl], "▼"
-
-.done
 	ret
 
 .cancel
@@ -402,8 +383,7 @@ ScrollingMenu_UpdateDisplay:
 	bit 0, a ; call function on cancel
 	jr nz, .call_function
 	ld de, .string_2485f
-	call PlaceString
-	ret
+	jp PlaceString
 
 .string_2485f
 	db "SALIR@"
@@ -423,31 +403,28 @@ ScrollingMenu_CallFunctions1and2:
 	pop hl
 	ld a, [wMenuData_ScrollingMenuWidth]
 	and a
-	jr z, .done
+	ret z
 	ld e, a
 	ld d, $0
 	add hl, de
 	ld d, h
 	ld e, l
 	ld hl, wMenuData_ScrollingMenuFunction2
-	call CallPointerAt
-
-.done
-	ret
+	jp CallPointerAt
 
 ScrollingMenu_PlaceCursor:
 	ld a, [wSwitchItem]
 	and a
-	jr z, .done
+	ret z
 	ld b, a
 	ld a, [wMenuScrollPosition]
 	cp b
-	jr nc, .done
+	ret nc
 	ld c, a
 	ld a, [wMenuData_ScrollingMenuHeight]
 	add c
 	cp b
-	jr c, .done
+	ret c
 	ld a, b
 	sub c
 	dec a
@@ -462,8 +439,6 @@ ScrollingMenu_PlaceCursor:
 	ld c, a
 	call Coord2Tile
 	ld [hl], "▷"
-
-.done
 	ret
 
 ScrollingMenu_CheckCallFunction3:
@@ -481,8 +456,7 @@ ScrollingMenu_CheckCallFunction3:
 	dec a
 	call ScrollingMenu_GetListItemCoordAndFunctionArgs
 	ld hl, wMenuData_ScrollingMenuFunction3
-	call CallPointerAt
-	ret
+	jp CallPointerAt
 
 ScrollingMenu_GetListItemCoordAndFunctionArgs:
 	push de
@@ -500,9 +474,6 @@ ScrollingMenu_GetListItemCoordAndFunctionArgs:
 	ld a, [wMenuData_ScrollingMenuItemFormat]
 	cp SCROLLINGMENU_ITEMS_NORMAL
 	jr z, .got_spacing
-	cp SCROLLINGMENU_ITEMS_QUANTITY
-	jr z, .pointless_jump
-.pointless_jump
 	add hl, de
 .got_spacing
 	add hl, de
