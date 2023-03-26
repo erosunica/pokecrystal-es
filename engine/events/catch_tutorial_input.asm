@@ -30,14 +30,8 @@ DudeAutoInput_RightA:
 	db NO_INPUT, $ff ; end
 
 DudeAutoInput_DownA:
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
+	db NO_INPUT, $08
 	db D_DOWN,   $00
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
+	db NO_INPUT, $08
 	db A_BUTTON, $00
 	db NO_INPUT, $ff ; end
