@@ -200,9 +200,10 @@ NamingScreen:
 	ld hl, vTiles0 tile $00
 	ld c, $4
 	push bc
+	push de
 	call Request2bpp
-	pop bc
 	pop de
+	pop bc
 	ld hl, 12 tiles
 	add hl, de
 	ld e, l
@@ -213,6 +214,7 @@ NamingScreen:
 	ld hl, wSpriteAnimDict
 	ld [hli], a
 	ld [hl], a
+	pop de
 	ld b, SPRITE_ANIM_INDEX_RED_WALK
 	ld a, d
 	cp HIGH(KrisSpriteGFX)
