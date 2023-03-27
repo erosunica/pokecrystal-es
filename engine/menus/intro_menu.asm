@@ -12,7 +12,7 @@ _MainMenu:
 ; unused
 	ret
 
-PrintDayOfWeek:
+UnusedPrintDayOfWeek: ; unused
 	push de
 	ld hl, .Days
 	ld a, b

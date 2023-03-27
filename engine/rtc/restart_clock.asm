@@ -186,10 +186,9 @@ RestartClock:
 	ld b, 5
 	ld c, 18
 	call Textbox
-	decoord 1, 8
+	bccoord 1, 8
 	ld a, [wBuffer4]
-	ld b, a
-	farcall PrintDayOfWeek
+	call PrintDayOfWeek
 	ld a, [wBuffer5]
 	ld b, a
 	ld a, [wBuffer6]

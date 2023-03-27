@@ -252,10 +252,8 @@ MainMenu_PrintCurrentTimeAndDay:
 	and $80
 	jp nz, .PrintTimeNotSet
 	call UpdateTime
-	call GetWeekday
-	ld b, a
-	decoord 1, 15
-	call .PlaceCurrentDay
+	bccoord 1, 15
+	call TextCommand_DAY
 	decoord 4, 16
 	ldh a, [hHours]
 	ld c, a
@@ -284,7 +282,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	text_far _MainMenuTimeUnknownText
 	text_end
 
-.PlaceCurrentDay:
+.PlaceCurrentDay: ; unused
 	push de
 	ld hl, .Days
 	ld a, b
