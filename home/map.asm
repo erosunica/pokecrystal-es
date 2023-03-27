@@ -581,20 +581,16 @@ ReadObjectEvents::
 	ld a, [wCurMapObjectEventCount]
 	call CopyMapObjectEvents
 
-; get NUM_OBJECTS - [wCurMapObjectEventCount] -1
+; get NUM_OBJECTS - 1 - [wCurMapObjectEventCount]
 	ld a, [wCurMapObjectEventCount]
-	ld c, a
-	ld a, NUM_OBJECTS - 1
-	sub c
-	jr z, .skip
-	jr c, .skip
+	cp NUM_OBJECTS - 1
+	jr nc, .skip
+	; a = NUM_OBJECTS - 1 - a
+	cpl
+	add NUM_OBJECTS - 1 + 1
 
-	; could have done "inc hl" instead
-	ld bc, 1
-	add hl, bc
+	inc hl
 ; Fill the remaining sprite IDs and y coords with 0 and -1, respectively.
-; Bleeds into wObjectMasks due to a bug.  Uncomment the above subtraction
-; to fix.
 	ld bc, MAPOBJECT_LENGTH
 .loop
 	ld [hl],  0
@@ -640,19 +636,7 @@ ClearObjectStructs::
 	ld hl, wObject1Struct
 	ld bc, OBJECT_LENGTH * (NUM_OBJECT_STRUCTS - 1)
 	xor a
-	call ByteFill
-
-; Just to make sure (this is rather pointless)
-	ld hl, wObject1Struct
-	ld de, OBJECT_LENGTH
-	ld c, NUM_OBJECT_STRUCTS - 1
-	xor a
-.loop
-	ld [hl], a
-	add hl, de
-	dec c
-	jr nz, .loop
-	ret
+	jp ByteFill
 
 GetWarpDestCoords::
 	call GetMapScriptsBank
@@ -1902,7 +1886,6 @@ CloseSubmenu::
 	call ReloadTilesetAndPalettes
 	call UpdateSprites
 	call ExitMenu
-	call ret_d90
 	jr FinishExitMenu
 
 ExitAllMenus::
@@ -1910,7 +1893,6 @@ ExitAllMenus::
 	call ExitMenu
 	call ReloadTilesetAndPalettes
 	call UpdateSprites
-	call ret_d90
 FinishExitMenu::
 	ld b, SCGB_MAPPALS
 	call GetSGBLayout
@@ -2140,8 +2122,6 @@ GetMapEnvironment::
 	pop hl
 	ret
 
-	ret ; unused
-
 GetAnyMapEnvironment::
 	push hl
 	push de
@@ -2185,7 +2165,6 @@ GetMapMusic::
 	jr z, .mahoganymart
 	bit RADIO_TOWER_MUSIC_F, c
 	jr nz, .radiotower
-	farcall Function8b342
 	ld e, c
 	ld d, 0
 .done

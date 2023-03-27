@@ -42,7 +42,6 @@ PrintBCDNumber::
 
 PrintBCDDigit::
 	and %00001111
-	and a
 	jr z, .zeroDigit
 .nonzeroDigit
 	res PRINTNUM_LEADINGZEROS_F, b ; unset 7 to indicate that a nonzero digit has been reached

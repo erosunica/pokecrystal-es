@@ -2525,7 +2525,7 @@ Script_writecmdqueue:
 	ld d, a
 	ld a, [wScriptBank]
 	ld b, a
-	farcall WriteCmdQueue ; no need to farcall
+	call WriteCmdQueue
 	ret
 
 Script_delcmdqueue:
@@ -2536,7 +2536,7 @@ Script_delcmdqueue:
 	ld [wScriptVar], a
 	call GetScriptByte
 	ld b, a
-	farcall DelCmdQueue ; no need to farcall
+	call DelCmdQueue
 	ret c
 	ld a, TRUE
 	ld [wScriptVar], a
@@ -2771,8 +2771,6 @@ Script_halloffame:
 
 	ld hl, wGameTimerPause
 	res GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]
-	farcall StubbedTrainerRankings_HallOfFame
-	farcall StubbedTrainerRankings_HallOfFame2
 	farcall HallOfFame
 	ld hl, wGameTimerPause
 	set GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]

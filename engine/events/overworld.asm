@@ -407,8 +407,6 @@ UsedSurfScript:
 	waitbutton
 	closetext
 
-	callasm .empty_fn ; empty function
-
 	readmem wBuffer2
 	writevar VAR_MOVEMENT
 
@@ -417,7 +415,7 @@ UsedSurfScript:
 	special SurfStartStep
 	end
 
-.empty_fn
+.empty_fn ; unused
 	farcall StubbedTrainerRankings_Surf
 	ret
 
@@ -627,7 +625,6 @@ FlyFunction:
 	farcall Function561d
 	call DelayFrame
 	call ReplaceKrisSprite
-	farcall LoadOverworldFont
 	ret
 
 WaterfallFunction:
@@ -691,7 +688,6 @@ Script_UsedWaterfall:
 	ld a, [wPlayerStandingTile]
 	call CheckWaterfallTile
 	ret z
-	farcall StubbedTrainerRankings_Waterfall
 	ld a, $1
 	ld [wScriptVar], a
 	ret

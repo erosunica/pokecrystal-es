@@ -149,32 +149,14 @@ _TitleScreen:
 
 ; LY/SCX trickery starts here
 
-	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wLYOverrides)
 	ldh [rSVBK], a
 
-; Make alternating lines come in from opposite sides
-
-; (This part is actually totally pointless, you can't
-;  see anything until these values are overwritten!)
-
-	ld e, +112 ; coming from the left
-	ld d, -112 ; coming from the right
-	ld b, 80 / 2 ; alternate for 80 lines
+; Make sure the wLYOverrides buffer is empty
 	ld hl, wLYOverrides
-.loop
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	dec b
-	jr nz, .loop
-
-; Make sure the rest of the buffer is empty
-	ld hl, wLYOverrides + 80
 	xor a
-	ld bc, wLYOverridesEnd - (wLYOverrides + 80)
+	ld bc, wLYOverridesEnd - wLYOverrides
 	call ByteFill
 
 ; Let LCD Stat know we're messing around with SCX

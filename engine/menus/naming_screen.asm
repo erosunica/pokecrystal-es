@@ -714,7 +714,6 @@ NamingScreen_AnimateCursor:
 	ret
 
 NamingScreen_TryAddCharacter:
-	ld a, [wNamingScreenLastCharacter] ; lost
 MailComposition_TryAddCharacter:
 	ld a, [wNamingScreenMaxNameLength]
 	ld c, a
@@ -1153,7 +1152,7 @@ INCBIN "gfx/icons/mail_big.2bpp"
 	cp $3
 	jr z, .finished
 	call NamingScreen_GetLastCharacter
-	call MailComposition_TryAddLastCharacter
+	call MailComposition_TryAddCharacter
 	jr c, .start
 	ld hl, wNamingScreenCurNameLength
 	ld a, [hl]

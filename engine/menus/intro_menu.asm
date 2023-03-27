@@ -63,7 +63,7 @@ NewGame:
 	ld [wDebugFlags], a
 	call ResetWRAM
 	call NewGame_ClearTilemapEtc
-	call AreYouABoyOrAreYouAGirl
+	farcall InitGender
 	call OakSpeech
 	call InitializeWorld
 	ld a, 1
@@ -109,14 +109,9 @@ _ResetWRAM:
 	xor a
 	call ByteFill
 
-	ldh a, [rLY]
-	ldh [hSecondsBackup], a
 	call DelayFrame
 	ldh a, [hRandomSub]
 	ld [wPlayerID], a
-
-	ldh a, [rLY]
-	ldh [hSecondsBackup], a
 	call DelayFrame
 	ldh a, [hRandomAdd]
 	ld [wPlayerID + 1], a
@@ -212,8 +207,6 @@ endc
 
 	farcall DeletePartyMonMail
 
-	farcall DeleteMobileEventIndex
-
 	call ResetGameTime
 	ret
 
@@ -273,28 +266,11 @@ InitializeMagikarpHouse:
 InitializeNPCNames:
 	ld hl, .Rival
 	ld de, wRivalName
-	call .Copy
-
-	ld hl, .Mom
-	ld de, wMomsName
-	call .Copy
-
-	ld hl, .Red
-	ld de, wRedsName
-	call .Copy
-
-	ld hl, .Green
-	ld de, wGreensName
-
-.Copy:
 	ld bc, NAME_LENGTH
 	call CopyBytes
 	ret
 
 .Rival:  db "¿¿??@"
-.Red:    db "ROJO@"
-.Green:  db "VERDE@"
-.Mom:    db "MAMÁ@"
 
 InitializeWorld:
 	call ShrinkPlayer
@@ -357,7 +333,6 @@ Continue:
 	ld a, HIGH(MUSIC_NONE)
 	ld [wMusicFadeID + 1], a
 	call ClearBGPalettes
-	call Continue_MobileAdapterMenu
 	call CloseWindow
 	call ClearTilemap
 	ld c, 20

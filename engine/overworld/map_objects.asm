@@ -204,7 +204,6 @@ CopyNextCoordsTileToStandingCoordsTile:
 	ld hl, OBJECT_NEXT_TILE
 	add hl, bc
 	ld a, [hl]
-	call UselessAndA
 	ret
 
 Function462a:
@@ -226,23 +225,10 @@ UpdateTallGrassFlags:
 	ld hl, OBJECT_FLAGS2
 	add hl, bc
 	bit OVERHEAD_F, [hl]
-	jr z, .ok
+	ret z
 	ld hl, OBJECT_NEXT_TILE
 	add hl, bc
 	ld a, [hl]
-	call SetTallGrassFlags
-.ok
-	ld hl, OBJECT_NEXT_TILE
-	add hl, bc
-	ld a, [hl]
-	call UselessAndA
-	ret c ; never happens
-	ld hl, OBJECT_STANDING_TILE
-	add hl, bc
-	ld a, [hl]
-	call UselessAndA
-	ret
-
 SetTallGrassFlags:
 	call CheckSuperTallGrassTile
 	jr z, .set
@@ -1519,14 +1505,12 @@ StepType05:
 	ld [hl], a
 	call IncrementObjectStructField1c
 StepType04:
-	call Stubbed_Function4fb2
 	ld hl, OBJECT_DIRECTION_WALKING
 	add hl, bc
 	ld [hl], STANDING
 	ret
 
 NPCStep:
-	call Stubbed_Function4fb2
 	call AddStepVector
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
@@ -2230,7 +2214,7 @@ Function565c:
 Function5673:
 	call Function56a3
 	jr c, SetFacing_Standing
-	farcall Function4440 ; no need to farcall
+	call Function4440
 	xor a
 	ret
 
@@ -2254,7 +2238,7 @@ Function5688:
 	ld hl, OBJECT_NEXT_TILE
 	add hl, bc
 	ld [hl], a
-	farcall UpdateTallGrassFlags ; no need to farcall
+	call UpdateTallGrassFlags
 	ret
 
 Function56a3:
@@ -2544,7 +2528,7 @@ ResetFollower:
 	cp -1
 	ret z
 	call GetObjectStruct
-	farcall Function58e3 ; no need to bankswitch
+	call Function58e3
 	ld a, -1
 	ld [wObjectFollow_Follower], a
 	ret

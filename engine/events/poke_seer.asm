@@ -253,9 +253,9 @@ GetCaughtOT:
 	call AddNTimes
 	ld de, wSeerOTName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	jp CopyBytes
 
-; this routine is useless in Western localizations
+; unused (this routine is useless in Western localizations)
 	ld hl, .male
 	ld a, [wSeerCaughtGender]
 	bit 7, a

@@ -143,7 +143,7 @@ UnusedWait30Frames:
 HandleMap:
 	call ResetOverworldDelay
 	call HandleMapTimeAndJoypad
-	farcall HandleCmdQueue ; no need to farcall
+	call HandleCmdQueue
 	call MapEvents
 
 ; Not immediately entering a connected map will cause problems.
@@ -337,7 +337,6 @@ CheckTileEvent:
 
 	call RandomEncounter
 	ret c
-	jr .ok ; pointless
 
 .ok
 	xor a
@@ -385,7 +384,7 @@ SetUpFiveStepWildEncounterCooldown:
 	ld [wWildEncounterCooldown], a
 	ret
 
-ret_968d7:
+ret_968d7: ; unused
 	ret
 
 SetMinTwoStepWildEncounterCooldown:
@@ -548,7 +547,6 @@ TryObjectEvent:
 	ld a, [hl]
 	ldh [hLastTalked], a
 
-	ldh a, [hLastTalked]
 	call GetMapObject
 	ld hl, MAPOBJECT_COLOR
 	add hl, bc
@@ -774,7 +772,6 @@ PlayerMovement:
 	ret
 
 .jump:
-	call ret_968d7 ; mobile
 	xor a
 	ld c, a
 	ret

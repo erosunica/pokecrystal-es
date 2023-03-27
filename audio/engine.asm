@@ -2306,7 +2306,7 @@ SetLRTracks:
 	ld e, a
 	ld d, 0
 	; get this channel's lr tracks
-	call GetLRTracks
+	ld hl, StereoTracks
 	add hl, de ; de = channel 0-3
 	ld a, [hl]
 	; load lr tracks into Tracks
@@ -2346,7 +2346,6 @@ _PlayMusic::
 	dec a
 	jr nz, .loop
 	xor a
-	ld [wUnusedMusicF9Flag], a
 	ld [wChannel1JumpCondition], a
 	ld [wChannel2JumpCondition], a
 	ld [wChannel3JumpCondition], a
@@ -2619,7 +2618,7 @@ PlayStereoSFX::
 	maskbits NUM_MUSIC_CHANS
 	ld e, a
 	ld d, 0
-	call GetLRTracks
+	ld hl, StereoTracks
 	add hl, de
 	ld a, [hl]
 	ld hl, wStereoPanningMask
@@ -2759,7 +2758,7 @@ INCLUDE "audio/wave_samples.asm"
 
 INCLUDE "audio/drumkits.asm"
 
-GetLRTracks:
+GetLRTracks: ; unused
 ; gets the default sound l/r channels
 ; stores mono/stereo table in hl
 	ld a, [wOptions]
@@ -2780,7 +2779,6 @@ MonoTracks:
 	db $11, $22, $44, $88
 
 StereoTracks:
-; made redundant
 ; seems to be modified on a per-song basis
 	db $11, $22, $44, $88
 

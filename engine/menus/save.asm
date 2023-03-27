@@ -18,7 +18,6 @@ SaveMenu:
 
 .refused
 	call ExitMenu
-	call ret_d90
 	farcall SaveMenu_CopyTilemapAtOnce
 	scf
 	ret
@@ -104,7 +103,6 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call SaveBackupPokemonData
 	call SaveBackupChecksum
 	farcall BackupPartyMonMail
-	farcall BackupMobileEventIndex
 	farcall SaveRTC
 	call LoadBox
 	call ResumeGameLogic
@@ -204,9 +202,6 @@ SaveTheGame_yesorno:
 	ld a, [wMenuCursorY]
 	dec a
 	call CloseWindow
-	push af
-	call ret_d90
-	pop af
 	and a
 	ret
 
@@ -270,7 +265,6 @@ _SaveGameData:
 	call SaveBackupChecksum
 	call UpdateStackTop
 	farcall BackupPartyMonMail
-	farcall BackupMobileEventIndex
 	farcall SaveRTC
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
@@ -353,12 +347,6 @@ ErasePreviousSave:
 	call EraseMysteryGift
 	call SaveData
 	call EraseBattleTowerStatus
-	ld a, BANK(sStackTop)
-	call GetSRAMBank
-	xor a
-	ld [sStackTop + 0], a
-	ld [sStackTop + 1], a
-	call CloseSRAM
 	ld a, $1
 	ld [wSavedAtLeastOnce], a
 	ret
@@ -586,7 +574,6 @@ TryLoadSaveFile:
 	call LoadPokemonData
 	call LoadBox
 	farcall RestorePartyMonMail
-	farcall RestoreMobileEventIndex
 	farcall RestoreMysteryGift
 	call ValidateBackupSave
 	call SaveBackupOptions
@@ -603,7 +590,6 @@ TryLoadSaveFile:
 	call LoadBackupPokemonData
 	call LoadBox
 	farcall RestorePartyMonMail
-	farcall RestoreMobileEventIndex
 	farcall RestoreMysteryGift
 	call ValidateSave
 	call SaveOptions
@@ -813,29 +799,14 @@ VerifyBackupChecksum:
 	ret
 
 _SaveData:
-	; This is called within two scenarios:
-	;   a) ErasePreviousSave (the process of erasing the save from a previous game file)
-	;   b) unused mobile functionality
+	; This is called within ErasePreviousSave (the process of erasing the save from a previous game file).
 	; It is not part of a regular save.
-
 	ld a, BANK(sCrystalData)
 	call GetSRAMBank
 	ld hl, wCrystalData
 	ld de, sCrystalData
 	ld bc, wCrystalDataEnd - wCrystalData
 	call CopyBytes
-
-	; This block originally had some mobile functionality, but since we're still in
-	; BANK(sCrystalData), it instead overwrites the sixteen wEventFlags starting at 1:a603 with
-	; garbage from wd479. This isn't an issue, since ErasePreviousSave is followed by a regular
-	; save that unwrites the garbage.
-
-	ld hl, wd479
-	ld a, [hli]
-	ld [s4_a60e + 0], a
-	ld a, [hli]
-	ld [s4_a60e + 1], a
-
 	jp CloseSRAM
 
 _LoadData:
@@ -845,16 +816,6 @@ _LoadData:
 	ld de, wCrystalData
 	ld bc, wCrystalDataEnd - wCrystalData
 	call CopyBytes
-
-	; This block originally had some mobile functionality to mirror _SaveData above, but instead it
-	; (harmlessly) writes the aforementioned wEventFlags to the unused wd479.
-
-	ld hl, wd479
-	ld a, [s4_a60e + 0]
-	ld [hli], a
-	ld a, [s4_a60e + 1]
-	ld [hli], a
-
 	jp CloseSRAM
 
 GetBoxAddress:

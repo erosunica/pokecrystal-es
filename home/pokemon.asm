@@ -270,9 +270,8 @@ GetBaseData::
 	ld de, UnusedEggFrontpic
 
 ; Sprite dimensions
-	ld b, $55 ; 5x5
 	ld hl, wBasePicSize
-	ld [hl], b
+	ld [hl], $55 ; 5x5
 
 ; Beta front and back sprites
 ; (see pokegold-spaceworld's data/pokemon/base_stats/*)

@@ -17,7 +17,7 @@ PrintMonTypes:
 	ld a, [wBaseType2]
 	cp b
 	pop hl
-	jr z, .hide_type_2
+	ret z
 
 	ld bc, SCREEN_WIDTH
 	add hl, bc
@@ -26,7 +26,7 @@ PrintMonTypes:
 	ld b, a
 	jr PrintType
 
-.hide_type_2
+.hide_type_2 ; unused
 	; Erase any type name that was here before.
 	; Seems to be pointless in localized versions.
 	ld a, " "

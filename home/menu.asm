@@ -392,13 +392,6 @@ YesNoBox::
 	lb bc, SCREEN_WIDTH - 6, 7
 
 PlaceYesNoBox::
-	jr _YesNoBox
-
-PlaceGenericTwoOptionBox::
-	call LoadMenuHeader
-	jr InterpretTwoOptionMenu
-
-_YesNoBox::
 ; Return nc (yes) or c (no).
 	push bc
 	ld hl, YesNoMenuHeader

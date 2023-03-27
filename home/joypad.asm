@@ -1,4 +1,4 @@
-Joypad::
+Joypad:: ; unused
 ; Replaced by Joypad, called from VBlank instead of the useless
 ; joypad interrupt.
 

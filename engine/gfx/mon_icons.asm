@@ -290,7 +290,7 @@ GetIconGFX:
 	add hl, de
 	ld de, HeldItemIcons
 	lb bc, BANK(HeldItemIcons), 2
-	call GetGFXUnlessMobile
+	call Get2bpp_2
 	ld a, [wCurIconTile]
 	add 10
 	ld [wCurIconTile], a
@@ -338,7 +338,7 @@ endr
 	pop hl
 
 	lb bc, BANK(Icons), 8
-	call GetGFXUnlessMobile
+	call Get2bpp_2
 
 	pop hl
 	ret

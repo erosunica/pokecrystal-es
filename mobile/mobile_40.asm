@@ -2204,7 +2204,6 @@ Function100ec5:
 	ret
 
 Function100eca:
-	farcall Mobile_InitPartyMenuBGPal7
 	call Function100ed4
 	ret
 
@@ -5133,7 +5132,6 @@ Function102423:
 	ret nc
 	farcall SaveAfterLinkTrade
 	farcall StubbedTrainerRankings_Trades
-	farcall BackupMobileEventIndex
 	ld hl, wcd4b
 	set 1, [hl]
 	ld a, 0

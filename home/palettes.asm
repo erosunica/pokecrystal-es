@@ -297,7 +297,7 @@ ClearVBank1::
 	ldh [rVBK], a
 	ret
 
-ret_d90::
+ret_d90:: ; unused
 	ret
 
 ReloadSpritesNoPalettes::

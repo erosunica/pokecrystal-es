@@ -479,8 +479,6 @@ PokeBallEffect:
 	cp BATTLETYPE_TUTORIAL
 	jp z, .FinishTutorial
 
-	farcall StubbedTrainerRankings_WildMonsCaught
-
 	ld hl, Text_GotchaMonWasCaught
 	call PrintText
 
@@ -2678,7 +2676,6 @@ ApplyPPUp:
 .use
 	ld a, [hl]
 	and PP_UP_MASK
-	ld a, [de] ; wasted cycle
 	call nz, ComputeMaxPP
 
 .skip
@@ -2836,7 +2833,6 @@ GetMaxPPOfMove:
 	ld [hl], a
 	xor a
 	ld [wTempPP], a
-	ld a, b ; this gets lost anyway
 	call ComputeMaxPP
 	ld a, [hl]
 	and PP_MASK

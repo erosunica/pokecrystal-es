@@ -14,7 +14,6 @@ _InterpretBattleMenu::
 	rst FarCall
 
 	call Draw2DMenu
-	farcall MobileTextBorder
 	call UpdateSprites
 	call ApplyTilemap
 	jp Get2DMenuSelection
