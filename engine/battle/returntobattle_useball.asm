@@ -1,4 +1,4 @@
-_ReturnToBattle_UseBall:
+_ReturnToBattle_UseBall: ; unused
 	call ClearBGPalettes
 	call ClearTilemap
 	ld a, [wBattleType]

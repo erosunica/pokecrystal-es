@@ -1,4 +1,4 @@
-SaveMenu_CopyTilemapAtOnce:
+UnusedSaveMenu_CopyTilemapAtOnce: ; unused
 	ldh a, [hCGB]
 	and a
 	jp z, WaitBGMap

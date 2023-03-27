@@ -1,4 +1,4 @@
-TownMap_ConvertLineBreakCharacters:
+UnusedTownMap_ConvertLineBreakCharacters: ; unused
 	ld hl, wStringBuffer1
 .loop
 	ld a, [hl]

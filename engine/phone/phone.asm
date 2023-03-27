@@ -557,7 +557,7 @@ Phone_StartRinging:
 	call PlaySFX
 	call Phone_CallerTextbox
 	call UpdateSprites
-	farcall PhoneRing_CopyTilemapAtOnce
+	call PhoneRing_CopyTilemapAtOnce
 	ret
 
 HangUp_Wait20Frames:
@@ -566,7 +566,7 @@ HangUp_Wait20Frames:
 Phone_Wait20Frames:
 	ld c, 20
 	call DelayFrames
-	farcall PhoneRing_CopyTilemapAtOnce
+	call PhoneRing_CopyTilemapAtOnce
 	ret
 
 Function90363:
@@ -692,6 +692,53 @@ GetCallerLocation:
 	farcall GetLandmarkName
 	pop bc
 	pop de
+	ret
+
+PhoneRing_CopyTilemapAtOnce:
+	ldh a, [hCGB]
+	and a
+	jp z, WaitBGMap
+	ld a, [wSpriteUpdatesEnabled]
+	and a
+	jp z, WaitBGMap
+
+; The following is a modified version of CopyTilemapAtOnce
+; that waits for [rLY] to be LY_VBLANK - 1 instead of $80 - 1.
+	ldh a, [hBGMapMode]
+	push af
+	xor a
+	ldh [hBGMapMode], a
+
+	ldh a, [hMapAnims]
+	push af
+	xor a
+	ldh [hMapAnims], a
+
+.wait
+	ldh a, [rLY]
+	cp LY_VBLANK - 1
+	jr c, .wait
+
+	di
+	ld a, BANK(vBGMap2)
+	ldh [rVBK], a
+	hlcoord 0, 0, wAttrmap
+	call CopyBGMapViaStack
+	xor a ; BANK(vBGMap0)
+	ldh [rVBK], a
+	hlcoord 0, 0
+	call CopyBGMapViaStack
+
+.wait2
+	ldh a, [rLY]
+	cp LY_VBLANK - 1
+	jr c, .wait2
+	ei
+
+	pop af
+	ldh [hMapAnims], a
+	pop af
+	ldh [hBGMapMode], a
 	ret
 
 INCLUDE "data/phone/phone_contacts.asm"

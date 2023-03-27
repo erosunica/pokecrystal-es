@@ -1,4 +1,4 @@
-PhoneRing_CopyTilemapAtOnce:
+UnusedPhoneRing_CopyTilemapAtOnce: ; unused
 	ldh a, [hCGB]
 	and a
 	jp z, WaitBGMap
