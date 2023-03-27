@@ -3,33 +3,37 @@ SaveMenu_CopyTilemapAtOnce:
 	and a
 	jp z, WaitBGMap
 
-; The following is a modified version of CopyTilemapAtOnce.
+; The following is a modified version of CopyTilemapAtOnce
+; that waits for [rLY] to be $60 instead of $80 - 1.
 	ldh a, [hBGMapMode]
 	push af
 	xor a
 	ldh [hBGMapMode], a
+
 	ldh a, [hMapAnims]
 	push af
 	xor a
 	ldh [hMapAnims], a
-.WaitLY:
+
+.wait
 	ldh a, [rLY]
 	cp $60
-	jr c, .WaitLY
+	jr c, .wait
 
 	di
 	ld a, BANK(vBGMap2)
 	ldh [rVBK], a
 	hlcoord 0, 0, wAttrmap
-	call .CopyTilemapAtOnce
+	call CopyBGMapViaStack
 	ld a, BANK(vBGMap0)
 	ldh [rVBK], a
 	hlcoord 0, 0
-	call .CopyTilemapAtOnce
-.WaitLY2:
+	call CopyBGMapViaStack
+
+.wait2
 	ldh a, [rLY]
 	cp $60
-	jr c, .WaitLY2
+	jr c, .wait2
 	ei
 
 	pop af
@@ -38,7 +42,7 @@ SaveMenu_CopyTilemapAtOnce:
 	ldh [hBGMapMode], a
 	ret
 
-.CopyTilemapAtOnce:
+.CopyTilemapAtOnce: ; unused
 	ld [hSPBuffer], sp
 	ld sp, hl
 	ldh a, [hBGMapAddress + 1]

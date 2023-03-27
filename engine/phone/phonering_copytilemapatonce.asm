@@ -6,11 +6,13 @@ PhoneRing_CopyTilemapAtOnce:
 	cp $0
 	jp z, WaitBGMap
 
-; What follows is a modified version of CopyTilemapAtOnce.
+; The following is a modified version of CopyTilemapAtOnce
+; that waits for [rLY] to be LY_VBLANK - 1 instead of $80 - 1.
 	ldh a, [hBGMapMode]
 	push af
 	xor a
 	ldh [hBGMapMode], a
+	
 	ldh a, [hMapAnims]
 	push af
 	xor a
@@ -24,11 +26,12 @@ PhoneRing_CopyTilemapAtOnce:
 	ld a, BANK(vBGMap2)
 	ldh [rVBK], a
 	hlcoord 0, 0, wAttrmap
-	call .CopyTilemapAtOnce
+	call CopyBGMapViaStack
 	ld a, BANK(vBGMap0)
 	ldh [rVBK], a
 	hlcoord 0, 0
-	call .CopyTilemapAtOnce
+	call CopyBGMapViaStack
+
 .wait2
 	ldh a, [rLY]
 	cp LY_VBLANK - 1
@@ -41,7 +44,7 @@ PhoneRing_CopyTilemapAtOnce:
 	ldh [hBGMapMode], a
 	ret
 
-.CopyTilemapAtOnce:
+.CopyTilemapAtOnce: ; unused
 	ld [hSPBuffer], sp
 	ld sp, hl
 	ldh a, [hBGMapAddress + 1]
