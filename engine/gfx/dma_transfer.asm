@@ -1,4 +1,4 @@
-HDMATransferAttrmapAndTilemapToWRAMBank3::
+HDMATransferAttrmapAndTilemapToWRAMBank3:: ; unused
 	ld hl, .Function
 	jp CallInSafeGFXMode
 
@@ -20,8 +20,7 @@ HDMATransferAttrmapAndTilemapToWRAMBank3::
 	ret
 
 HDMATransferTilemapToWRAMBank3::
-	ld hl, .Function
-	jp CallInSafeGFXMode
+	call CallInSafeGFXMode
 
 .Function:
 	decoord 0, 0
@@ -34,8 +33,7 @@ HDMATransferTilemapToWRAMBank3::
 	ret
 
 HDMATransferAttrmapToWRAMBank3:
-	ld hl, .Function
-	jp CallInSafeGFXMode
+	call CallInSafeGFXMode
 
 .Function:
 	decoord 0, 0, wAttrmap
@@ -48,8 +46,7 @@ HDMATransferAttrmapToWRAMBank3:
 	ret
 
 ReloadMapPart::
-	ld hl, .Function
-	jp CallInSafeGFXMode
+	call CallInSafeGFXMode
 
 .Function:
 	decoord 0, 0, wAttrmap
@@ -144,8 +141,7 @@ Mobile_ReloadMapPart:
 
 OpenAndCloseMenu_HDMATransferTilemapAndAttrmap::
 ; OpenText
-	ld hl, .Function
-	jp CallInSafeGFXMode
+	call CallInSafeGFXMode
 
 .Function:
 	; Transfer wAttrmap and Tilemap to BGMap
@@ -202,6 +198,8 @@ Mobile_OpenAndCloseMenu_HDMATransferTilemapAndAttrmap:
 	ret
 
 CallInSafeGFXMode:
+	pop hl
+
 	ldh a, [hBGMapMode]
 	push af
 	ldh a, [hMapAnims]
@@ -497,8 +495,7 @@ _Get1bpp::
 	ret
 
 HDMATransfer_OnlyTopFourRows:
-	ld hl, .Function
-	jp CallInSafeGFXMode
+	call CallInSafeGFXMode
 
 .Function:
 	ld hl, wScratchTilemap
