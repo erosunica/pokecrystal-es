@@ -1,9 +1,19 @@
 HandleNewMap:
-	call ClearUnusedMapBuffer
-	call ResetMapBufferEventFlags
-	call ResetFlashIfOutOfCave
+	xor a
+	ld hl, wEventFlags
+	ld [hl], a
+	ld hl, wBikeFlags
+	ld [hl], a
+	ld a, [wEnvironment]
+	cp ROUTE
+	jr z, .outdoors
+	cp TOWN
+	jr nz, .not_outdoors
+.outdoors
+	ld hl, wStatusFlags
+	res STATUSFLAGS_FLASH_F, [hl]
+.not_outdoors
 	call GetCurrentMapSceneID
-	call ResetBikeFlags
 	ld a, MAPCALLBACK_NEWMAP
 	call RunMapCallback
 HandleContinueMap:
@@ -19,12 +29,48 @@ EnterMapConnection:
 	ld a, [wPlayerStepDirection]
 	and a ; DOWN
 	jp z, .south
-	cp UP
+	dec a ; UP
 	jp z, .north
-	cp LEFT
+	dec a ; LEFT
 	jp z, .west
-	cp RIGHT
-	jp z, .east
+	dec a ; RIGHT
+	ret nz
+	; fallthrough
+
+.east
+	ld a, [wEastConnectedMapGroup]
+	ld [wMapGroup], a
+	ld a, [wEastConnectedMapNumber]
+	ld [wMapNumber], a
+	ld a, [wEastConnectionStripXOffset]
+	ld [wXCoord], a
+	ld a, [wEastConnectionStripYOffset]
+	ld hl, wYCoord
+	add [hl]
+	ld [hl], a
+	ld c, a
+	ld hl, wEastConnectionWindow
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	srl c
+	jr z, .skip_to_load
+	ld a, [wEastConnectedMapWidth]
+	add 6
+	ld e, a
+	ld d, 0
+
+.loop
+	add hl, de
+	dec c
+	jr nz, .loop
+
+.skip_to_load
+	ld a, l
+	ld [wOverworldMapAnchor], a
+	ld a, h
+	ld [wOverworldMapAnchor + 1], a
+	scf
 	ret
 
 .west
@@ -44,43 +90,8 @@ EnterMapConnection:
 	ld h, [hl]
 	ld l, a
 	srl c
-	jr z, .skip_to_load
-	ld a, [wWestConnectedMapWidth]
-	add 6
-	ld e, a
-	ld d, 0
-
-.loop
-	add hl, de
-	dec c
-	jr nz, .loop
-
-.skip_to_load
-	ld a, l
-	ld [wOverworldMapAnchor], a
-	ld a, h
-	ld [wOverworldMapAnchor + 1], a
-	jp .done
-
-.east
-	ld a, [wEastConnectedMapGroup]
-	ld [wMapGroup], a
-	ld a, [wEastConnectedMapNumber]
-	ld [wMapNumber], a
-	ld a, [wEastConnectionStripXOffset]
-	ld [wXCoord], a
-	ld a, [wEastConnectionStripYOffset]
-	ld hl, wYCoord
-	add [hl]
-	ld [hl], a
-	ld c, a
-	ld hl, wEastConnectionWindow
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	srl c
 	jr z, .skip_to_load2
-	ld a, [wEastConnectedMapWidth]
+	ld a, [wWestConnectedMapWidth]
 	add 6
 	ld e, a
 	ld d, 0
@@ -95,7 +106,8 @@ EnterMapConnection:
 	ld [wOverworldMapAnchor], a
 	ld a, h
 	ld [wOverworldMapAnchor + 1], a
-	jp .done
+	scf
+	ret
 
 .north
 	ld a, [wNorthConnectedMapGroup]
@@ -120,7 +132,8 @@ EnterMapConnection:
 	ld [wOverworldMapAnchor], a
 	ld a, h
 	ld [wOverworldMapAnchor + 1], a
-	jp .done
+	scf
+	ret
 
 .south
 	ld a, [wSouthConnectedMapGroup]
@@ -145,7 +158,6 @@ EnterMapConnection:
 	ld [wOverworldMapAnchor], a
 	ld a, h
 	ld [wOverworldMapAnchor + 1], a
-.done
 	scf
 	ret
 

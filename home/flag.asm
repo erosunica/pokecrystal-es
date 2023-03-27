@@ -1,17 +1,17 @@
-ResetMapBufferEventFlags::
+ResetMapBufferEventFlags:: ; unused
 	xor a
 	ld hl, wEventFlags
 	ld [hli], a
 	ret
 
-ResetBikeFlags::
+ResetBikeFlags:: ; unused
 	xor a
 	ld hl, wBikeFlags
 	ld [hli], a
 	ld [hl], a
 	ret
 
-ResetFlashIfOutOfCave::
+ResetFlashIfOutOfCave:: ; unused
 	ld a, [wEnvironment]
 	cp ROUTE
 	jr z, .outdoors

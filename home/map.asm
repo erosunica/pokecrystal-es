@@ -1,6 +1,6 @@
 ; Functions dealing with rendering and interacting with maps.
 
-ClearUnusedMapBuffer::
+ClearUnusedMapBuffer:: ; unused
 	ld hl, wUnusedMapBuffer
 	ld bc, wUnusedMapBufferEnd - wUnusedMapBuffer
 	ld a, 0
