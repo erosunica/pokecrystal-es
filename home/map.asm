@@ -679,6 +679,10 @@ endr
 	ret
 
 LoadBlockData::
+	ldh a, [hVBlank]
+	push af
+	ld a, 2
+	ldh [hVBlank], a
 	ld hl, wOverworldMapBlocks
 	ld bc, wOverworldMapBlocksEnd - wOverworldMapBlocks
 	ld a, 0
@@ -687,6 +691,8 @@ LoadBlockData::
 	call FillMapConnections
 	ld a, MAPCALLBACK_TILES
 	call RunMapCallback
+	pop af
+	ldh [hVBlank], a
 	ret
 
 ChangeMap::
