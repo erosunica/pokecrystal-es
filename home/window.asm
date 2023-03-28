@@ -40,6 +40,7 @@ CloseText::
 	ldh [hWY], a
 	call ReplaceKrisSprite
 	farcall InitMapNameSign
+	farcall LoadOverworldFont
 	ret
 
 OpenText::

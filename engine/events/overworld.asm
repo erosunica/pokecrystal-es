@@ -625,6 +625,7 @@ FlyFunction:
 	farcall Function561d
 	call DelayFrame
 	call ReplaceKrisSprite
+	farcall LoadOverworldFont
 	ret
 
 WaterfallFunction:
