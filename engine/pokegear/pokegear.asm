@@ -2787,15 +2787,17 @@ TownMapPlayerIcon:
 ; Standing icon
 	ld hl, vTiles0 tile $10
 	ld c, 4 ; # tiles
+	push bc
+	push de
 	call Request2bpp
+	pop de
+	pop bc
 ; Walking icon
 	ld hl, $c0
 	add hl, de
 	ld d, h
 	ld e, l
 	ld hl, vTiles0 tile $14
-	ld c, 4 ; # tiles
-	ld a, BANK(ChrisSpriteGFX) ; does nothing
 	call Request2bpp
 ; Animation/palette
 	depixel 0, 0

@@ -137,7 +137,11 @@ MagnetTrain_LoadGFX_PlayMusic:
 	ldh [rSVBK], a
 	ld hl, vTiles0
 	ld c, 4
+	push bc
+	push de
 	call Request2bpp
+	pop de
+	pop bc
 
 	; Load the trainer walking frame
 	ld hl, 12 tiles
