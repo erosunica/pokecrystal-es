@@ -304,8 +304,6 @@ Unreferenced_Function8bec:
 	ret
 
 ApplyMonOrTrainerPals:
-	call CheckCGB
-	ret z
 	ld a, e
 	and a
 	jr z, .get_trainer
@@ -376,8 +374,6 @@ ApplyHPBarPals:
 	ret
 
 LoadStatsScreenPals:
-	call CheckCGB
-	ret z
 	ld hl, StatsScreenPals
 	ld b, 0
 	dec c
@@ -407,31 +403,6 @@ LoadMailPalettes:
 	add hl, hl
 	ld de, .MailPals
 	add hl, de
-	call CheckCGB
-	jr nz, .cgb
-	push hl
-	ld hl, PalPacket_9ce6
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop hl
-	inc hl
-	inc hl
-	ld a, [hli]
-	ld [wSGBPals + 3], a
-	ld a, [hli]
-	ld [wSGBPals + 4], a
-	ld a, [hli]
-	ld [wSGBPals + 5], a
-	ld a, [hli]
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	call PushSGBPals
-	ld hl, BlkPacket_9a86
-	call PushSGBPals
-	ret
-
-.cgb
 	ld de, wBGPals1
 	ld bc, 1 palettes
 	ld a, BANK(wBGPals1)
@@ -804,7 +775,7 @@ rept 4
 endr
 	ret
 
-PushSGBPals:
+PushSGBPals: ; unused
 	ld a, [wcfbe]
 	push af
 	set 7, a
@@ -814,7 +785,7 @@ PushSGBPals:
 	ld [wcfbe], a
 	ret
 
-_PushSGBPals:
+_PushSGBPals: ; unused
 	ld a, [hl]
 	and $7
 	ret z
@@ -854,7 +825,7 @@ _PushSGBPals:
 	jr nz, .loop
 	ret
 
-InitSGBBorder:
+InitSGBBorder: ; unused
 	call CheckCGB
 	ret nz
 ; SGB/DMG only
@@ -887,9 +858,6 @@ InitSGBBorder:
 	ret
 
 InitCGBPals::
-	call CheckCGB
-	ret z
-; CGB only
 	ld a, BANK(vTiles3)
 	ldh [rVBK], a
 	ld hl, vTiles3
@@ -941,7 +909,7 @@ InitCGBPals::
 	jr nz, .loop
 	ret
 
-_InitSGBBorderPals:
+_InitSGBBorderPals: ; unused
 	ld hl, .PacketPointerTable
 	ld c, 9
 .loop

@@ -81,7 +81,7 @@ VBlank0::
 
 	call UpdateBGMapBuffer
 	jr c, .done
-	call UpdatePalsIfCGB
+	call UpdateCGBPals
 	jr c, .done
 	call DMATransfer
 	jr c, .done
@@ -169,7 +169,7 @@ VBlank1::
 	ldh a, [hSCY]
 	ldh [rSCY], a
 
-	call UpdatePals
+	call UpdateCGBPals
 	jr c, .done
 
 	call UpdateBGMap
@@ -212,7 +212,7 @@ VBlank1::
 	ldh [rIF], a
 	ret
 
-UpdatePals::
+UpdatePals:: ; unused
 ; update pals for either dmg or cgb
 
 	ldh a, [hCGB]
@@ -312,7 +312,7 @@ VBlank5::
 	ldh a, [hSCX]
 	ldh [rSCX], a
 
-	call UpdatePalsIfCGB
+	call UpdateCGBPals
 	jr c, .done
 
 	call UpdateBGMap

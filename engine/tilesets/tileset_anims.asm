@@ -632,19 +632,16 @@ AnimateFlowerTile:
 
 ; Alternate tile graphic every other frame
 	ld a, [wTileAnimationTimer]
-	and %10
+	maskbits 2, 1
+	add a
+	add a
+	add a
 
-; CGB has different color mappings for flowers.
-	ld e, a
-	ldh a, [hCGB]
-	and 1
-	add e
-
-	swap a
-	ld e, a
-	ld d, 0
-	ld hl, FlowerTileFrames
-	add hl, de
+	add LOW(FlowerTileFrames)
+	ld l, a
+	adc HIGH(FlowerTileFrames)
+	sub l
+	ld h, a
 	ld sp, hl
 
 	ld hl, vTiles2 tile $03
@@ -652,9 +649,7 @@ AnimateFlowerTile:
 	jp WriteTile
 
 FlowerTileFrames:
-	INCBIN "gfx/tilesets/flower/dmg_1.2bpp"
 	INCBIN "gfx/tilesets/flower/cgb_1.2bpp"
-	INCBIN "gfx/tilesets/flower/dmg_2.2bpp"
 	INCBIN "gfx/tilesets/flower/cgb_2.2bpp"
 
 LavaBubbleAnim1:
@@ -855,11 +850,6 @@ endr
 AnimateWaterPalette:
 ; Transition between color values 0-2 for color 0 in palette 3.
 
-; No palette changes on DMG.
-	ldh a, [hCGB]
-	and a
-	ret z
-
 ; We don't want to mess with non-standard palettes.
 	ldh a, [rBGP] ; BGP
 	cp %11100100
@@ -917,10 +907,6 @@ AnimateWaterPalette:
 	ret
 
 FlickeringCaveEntrancePalette:
-; No palette changes on DMG.
-	ldh a, [hCGB]
-	and a
-	ret z
 ; We don't want to mess with non-standard palettes.
 	ldh a, [rBGP]
 	cp %11100100

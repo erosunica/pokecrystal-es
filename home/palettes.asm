@@ -1,9 +1,6 @@
 ; Functions dealing with palettes.
 
-UpdatePalsIfCGB::
-; update bgp data from wBGPals2
-; update obp data from wOBPals2
-; return carry if successful
+UpdatePalsIfCGB:: ; unused
 
 ; check cgb
 	ldh a, [hCGB]
@@ -11,13 +8,15 @@ UpdatePalsIfCGB::
 	ret z
 
 UpdateCGBPals::
-; return carry if successful
 ; any pals to update?
 	ldh a, [hCGBPalUpdate]
 	and a
 	ret z
 
 ForceUpdateCGBPals::
+; update bgp data from wBGPals2
+; update obp data from wOBPals2
+; return carry if successful
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wBGPals2)
@@ -73,11 +72,6 @@ DmgToCgbBGPals::
 	ldh [rBGP], a
 	push af
 
-; Don't need to be here if DMG
-	ldh a, [hCGB]
-	and a
-	jr z, .end
-
 	push hl
 	push de
 	push bc
@@ -105,7 +99,6 @@ DmgToCgbBGPals::
 	pop bc
 	pop de
 	pop hl
-.end
 	pop af
 	ret
 
@@ -119,10 +112,6 @@ DmgToCgbObjPals::
 	ldh [rOBP0], a
 	ld a, d
 	ldh [rOBP1], a
-
-	ldh a, [hCGB]
-	and a
-	ret z
 
 	push hl
 	push de
@@ -157,11 +146,6 @@ DmgToCgbObjPal0::
 	ldh [rOBP0], a
 	push af
 
-; Don't need to be here if not CGB
-	ldh a, [hCGB]
-	and a
-	jr z, .dmg
-
 	push hl
 	push de
 	push bc
@@ -186,19 +170,12 @@ DmgToCgbObjPal0::
 	pop bc
 	pop de
 	pop hl
-
-.dmg
 	pop af
 	ret
 
 DmgToCgbObjPal1::
 	ldh [rOBP1], a
 	push af
-
-	ldh a, [hCGB]
-	and a
-	jr z, .dmg
-
 	push hl
 	push de
 	push bc
@@ -223,8 +200,6 @@ DmgToCgbObjPal1::
 	pop bc
 	pop de
 	pop hl
-
-.dmg
 	pop af
 	ret
 
@@ -281,10 +256,6 @@ endr
 	ret
 
 ClearVBank1::
-	ldh a, [hCGB]
-	and a
-	ret z
-
 	ld a, 1
 	ldh [rVBK], a
 
@@ -301,9 +272,6 @@ ret_d90:: ; unused
 	ret
 
 ReloadSpritesNoPalettes::
-	ldh a, [hCGB]
-	and a
-	ret z
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wBGPals2)

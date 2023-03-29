@@ -1,4 +1,4 @@
-LoadSGBLayout:
+LoadSGBLayout: ; unused
 	call CheckCGB
 	jp nz, LoadSGBLayoutCGB
 

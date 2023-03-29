@@ -1,6 +1,6 @@
 ; Replaces the functionality of sgb.asm to work with CGB hardware.
 
-CheckCGB:
+CheckCGB: ; unused
 	ldh a, [hCGB]
 	and a
 	ret

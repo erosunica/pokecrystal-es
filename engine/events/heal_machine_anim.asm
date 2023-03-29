@@ -155,13 +155,6 @@ INCBIN "gfx/overworld/heal_machine.2bpp"
 	dsprite   7, 1,  11, 5, $7d, PAL_OW_TREE | OBP_NUM
 
 .LoadPalettes:
-	call IsCGB
-	jr nz, .cgb
-	ld a, %11100000
-	ldh [rOBP1], a
-	ret
-
-.cgb
 	ld hl, .palettes
 	ld de, wOBPals2 palette PAL_OW_TREE
 	ld bc, 1 palettes
@@ -187,14 +180,6 @@ INCLUDE "gfx/overworld/heal_machine.pal"
 	ret
 
 .FlashPalettes:
-	call IsCGB
-	jr nz, .go
-	ldh a, [rOBP1]
-	xor %00101000
-	ldh [rOBP1], a
-	ret
-
-.go
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wOBPals2)

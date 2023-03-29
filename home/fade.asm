@@ -21,28 +21,12 @@ Unreferenced_Function48c::
 	ret
 
 RotateFourPalettesRight::
-	ldh a, [hCGB]
-	and a
-	jr z, .dmg
 	ld hl, IncGradGBPalTable_00
 	ld b, 4
 	jr RotatePalettesRight
 
-.dmg
-	ld hl, IncGradGBPalTable_08
-	ld b, 4
-	jr RotatePalettesRight
-
 RotateThreePalettesRight::
-	ldh a, [hCGB]
-	and a
-	jr z, .dmg
 	ld hl, IncGradGBPalTable_05
-	ld b, 3
-	jr RotatePalettesRight
-
-.dmg
-	ld hl, IncGradGBPalTable_13
 	ld b, 3
 RotatePalettesRight::
 ; Rotate palettes to the right and fill with loaded colors from the left
@@ -63,28 +47,12 @@ RotatePalettesRight::
 	ret
 
 RotateFourPalettesLeft::
-	ldh a, [hCGB]
-	and a
-	jr z, .dmg
 	ld hl, IncGradGBPalTable_04 - 1
 	ld b, 4
 	jr RotatePalettesLeft
 
-.dmg
-	ld hl, IncGradGBPalTable_12 - 1
-	ld b, 4
-	jr RotatePalettesLeft
-
 RotateThreePalettesLeft::
-	ldh a, [hCGB]
-	and a
-	jr z, .dmg
 	ld hl, IncGradGBPalTable_07 - 1
-	ld b, 3
-	jr RotatePalettesLeft
-
-.dmg
-	ld hl, IncGradGBPalTable_15 - 1
 	ld b, 3
 RotatePalettesLeft::
 ; Rotate palettes to the left and fill with loaded colors from the right

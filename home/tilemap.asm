@@ -10,32 +10,22 @@ WaitBGMap::
 	ret
 
 WaitBGMap2::
-	ldh a, [hCGB]
-	and a
-	jr z, .bg0
-
 	ld a, 2
 	ldh [hBGMapMode], a
 	ld c, 3
 	call DelayFrames
-
-.bg0
 	ld a, 1
 	ldh [hBGMapMode], a
 	ld c, 3
 	call DelayFrames
 	ret
 
-IsCGB::
+IsCGB:: ; unused
 	ldh a, [hCGB]
 	and a
 	ret
 
 ApplyTilemap::
-	ldh a, [hCGB]
-	and a
-	jr z, .dmg
-
 	ld a, [wSpriteUpdatesEnabled]
 	cp 0
 	jr z, .dmg
@@ -52,19 +42,12 @@ ApplyTilemap::
 	call DelayFrames
 	ret
 
-CGBOnly_CopyTilemapAtOnce::
+CGBOnly_CopyTilemapAtOnce:: ; unused
 	ldh a, [hCGB]
 	and a
 	jr z, WaitBGMap
 
 CopyTilemapAtOnce::
-	jr .CopyTilemapAtOnce
-
-; unused
-	farcall HDMATransferAttrmapAndTilemapToWRAMBank3
-	ret
-
-.CopyTilemapAtOnce:
 	ldh a, [hBGMapMode]
 	push af
 	xor a
@@ -146,17 +129,6 @@ endr
 SetPalettes::
 ; Inits the Palettes
 ; depending on the system the monochromes palettes or color palettes
-	ldh a, [hCGB]
-	and a
-	jr nz, .SetPalettesForGameBoyColor
-	ld a, %11100100
-	ldh [rBGP], a
-	ld a, %11010000
-	ldh [rOBP0], a
-	ldh [rOBP1], a
-	ret
-
-.SetPalettesForGameBoyColor:
 	push de
 	ld a, %11100100
 	call DmgToCgbBGPals
@@ -167,20 +139,6 @@ SetPalettes::
 
 ClearPalettes::
 ; Make all palettes white
-
-; CGB: make all the palette colors white
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-
-; DMG: just change palettes to 0 (white)
-	xor a
-	ldh [rBGP], a
-	ldh [rOBP0], a
-	ldh [rOBP1], a
-	ret
-
-.cgb
 	ldh a, [rSVBK]
 	push af
 
@@ -205,17 +163,7 @@ GetMemSGBLayout::
 	ld b, SCGB_RAM
 GetSGBLayout::
 ; load sgb packets unless dmg
-
-	ldh a, [hCGB]
-	and a
-	jr nz, .sgb
-
-	ldh a, [hSGB]
-	and a
-	ret z
-
-.sgb
-	predef_jump LoadSGBLayout
+	predef_jump LoadSGBLayoutCGB
 
 SetHPPal::
 ; Set palette for hp bar pixel length e at hl.

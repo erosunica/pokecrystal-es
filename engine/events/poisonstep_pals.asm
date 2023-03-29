@@ -1,22 +1,4 @@
 LoadPoisonBGPals:
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	cp DARKNESS_F
-	ld a, %00000000
-	jr z, .convert_pals
-	ld a, %10101010
-
-.convert_pals
-	call DmgToCgbBGPals
-	ld c, 4
-	call DelayFrames
-	farcall _UpdateTimePals
-	ret
-
-.cgb
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wBGPals2)

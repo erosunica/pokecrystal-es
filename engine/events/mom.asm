@@ -448,7 +448,7 @@ Mom_ContinueMenuSetup:
 	lb bc, PRINTNUM_MONEY | PRINTNUM_LEADINGZEROS | 3, 6
 	call PrintNum
 	call UpdateSprites
-	call CGBOnly_CopyTilemapAtOnce
+	call CopyTilemapAtOnce
 	ret
 
 Mom_Wait10Frames:

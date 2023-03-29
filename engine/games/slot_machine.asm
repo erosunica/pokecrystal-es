@@ -166,11 +166,6 @@ Slots_GetPals:
 	ld a, %11100100
 	call DmgToCgbBGPals
 	lb de, %11100100, %11100100
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	lb de, %11000000, %11100100
-.cgb
 	call DmgToCgbObjPals
 	ret
 

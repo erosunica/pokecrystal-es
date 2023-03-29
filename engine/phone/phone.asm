@@ -695,9 +695,6 @@ GetCallerLocation:
 	ret
 
 PhoneRing_CopyTilemapAtOnce:
-	ldh a, [hCGB]
-	and a
-	jp z, WaitBGMap
 	ld a, [wSpriteUpdatesEnabled]
 	and a
 	jp z, WaitBGMap

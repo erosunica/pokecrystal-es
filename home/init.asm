@@ -19,17 +19,8 @@ Reset::
 	jr Init
 
 _Start::
-	cp $11
-	jr z, .cgb
-	xor a
-	jr .load
-
-.cgb
 	ld a, $1
-
-.load
 	ldh [hCGB], a
-	ld a, $1
 	ldh [hSystemBooted], a
 
 Init::
@@ -146,11 +137,7 @@ Init::
 	ld [MBC3LatchClock], a
 	ld [MBC3SRamEnable], a
 
-	ldh a, [hCGB]
-	and a
-	jr z, .no_double_speed
 	call NormalSpeed
-.no_double_speed
 
 	xor a
 	ldh [rIF], a
@@ -159,8 +146,6 @@ Init::
 	ei
 
 	call DelayFrame
-
-	predef InitSGBBorder ; SGB init
 
 	call InitSound
 	xor a
