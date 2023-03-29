@@ -2615,11 +2615,11 @@ NewPokedexEntry:
 Pokedex_SetBGMapMode3:
 	ld a, $3
 	ldh [hBGMapMode], a
-	ld c, 4
+	ld c, 3
 	jp DelayFrames
 
 Pokedex_SetBGMapMode4:
 	ld a, $4
 	ldh [hBGMapMode], a
-	ld c, 4
+	ld c, 3
 	jp DelayFrames
