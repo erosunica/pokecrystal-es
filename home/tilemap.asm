@@ -38,7 +38,7 @@ ApplyTilemap::
 ; WaitBGMap
 	ld a, 1
 	ldh [hBGMapMode], a
-	ld c, 4
+	ld c, 3
 	call DelayFrames
 	ret
 
