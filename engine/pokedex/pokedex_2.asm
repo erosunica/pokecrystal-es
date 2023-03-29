@@ -26,8 +26,7 @@ AnimateDexSearchSlowpoke:
 	ld [wDexSearchSlowpokeFrame], a
 	call DoDexSearchSlowpokeFrame
 	ld c, 32
-	call DelayFrames
-	ret
+	jp DelayFrames
 
 .FrameIDs:
 	; frame ID, duration
@@ -161,12 +160,12 @@ DisplayDexEntry:
 	call ByteFill
 	; page number
 	hlcoord 1, 9
-	ld [hl], $55
-	inc hl
-	ld [hl], $55
+	ld a, $55
+	ld [hli], a
+	ld [hl], a
 	hlcoord 1, 10
-	ld [hl], $56 ; P.
-	inc hl
+	ld a, $56 ; P.
+	ld [hli], a
 	ld [hl], $57 ; 1
 	pop de
 	inc de
@@ -191,19 +190,18 @@ DisplayDexEntry:
 	call ByteFill
 	; page number
 	hlcoord 1, 9
-	ld [hl], $55
-	inc hl
-	ld [hl], $55
+	ld a, $55
+	ld [hli], a
+	ld [hl], a
 	hlcoord 1, 10
-	ld [hl], $56 ; P.
-	inc hl
+	ld a, $56 ; P.
+	ld [hli], a
 	ld [hl], $58 ; 2
 	pop de
 	inc de
 	pop af
 	hlcoord 2, 11
-	call FarString
-	ret
+	jp FarString
 
 UnreferencedPOKeString:
 ; unused

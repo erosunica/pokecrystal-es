@@ -1,4 +1,4 @@
-NewPokedexEntry:
+UnusedNewPokedexEntry: ; unused
 	ldh a, [hMapAnims]
 	push af
 	xor a
@@ -15,7 +15,7 @@ NewPokedexEntry:
 	ldh [hSCX], a
 	xor a
 	ld [wPokedexStatus], a
-	farcall _NewPokedexEntry
+	farcall NewPokedexEntry.NewPokedexEntry
 	call WaitPressAorB_BlinkCursor
 	ld a, 1 ; page 2
 	ld [wPokedexStatus], a
@@ -28,12 +28,12 @@ NewPokedexEntry:
 	ldh a, [hSCX]
 	add -POKEDEX_SCX
 	ldh [hSCX], a
-	call .ReturnFromDexRegistration
+	call .UnusedReturnFromDexRegistration
 	pop af
 	ldh [hMapAnims], a
 	ret
 
-.ReturnFromDexRegistration:
+.UnusedReturnFromDexRegistration: ; unused
 	call ClearTilemap
 	call LoadFontsExtra
 	call LoadStandardFont
