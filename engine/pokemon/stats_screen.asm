@@ -4,7 +4,7 @@
 	const BLUE_PAGE  ; 3
 NUM_STAT_PAGES EQU const_value + -1
 
-BattleStatsScreenInit:
+BattleStatsScreenInit: ; unused
 	ld a, [wLinkMode]
 	cp LINK_MOBILE
 	jr nz, StatsScreenInit
@@ -12,17 +12,9 @@ BattleStatsScreenInit:
 	ld a, [wBattleMode]
 	and a
 	jr z, StatsScreenInit
-	jr _MobileStatsScreenInit
 
 StatsScreenInit:
 	ld hl, StatsScreenMain
-	jr StatsScreenInit_gotaddress
-
-_MobileStatsScreenInit:
-	ld hl, StatsScreenMobile
-	jr StatsScreenInit_gotaddress
-
-StatsScreenInit_gotaddress:
 	ldh a, [hMapAnims]
 	push af
 	xor a
@@ -73,7 +65,7 @@ StatsScreenMain:
 	jr z, .loop
 	ret
 
-StatsScreenMobile:
+StatsScreenMobile: ; unused
 	xor a
 	ld [wJumptableIndex], a
 	inc a ; PINK_PAGE ; first_page

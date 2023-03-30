@@ -194,7 +194,6 @@ BattleTextbox::
 ; Open a textbox and print text at hl.
 	push hl
 	call SpeechTextbox
-	call MobileTextBorder
 	call UpdateSprites
 	call ApplyTilemap
 	pop hl

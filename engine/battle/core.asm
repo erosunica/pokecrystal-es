@@ -130,27 +130,12 @@ WildFled_EnemyFled_LinkBattleCanceled:
 	and BATTLERESULT_BITMASK
 	ld [wBattleResult], a ; WIN
 	ld hl, BattleText_EnemyFled
-	call CheckMobileBattleError
-	jr nc, .print_text
-
-	ld hl, wcd2a
-	bit 4, [hl]
-	jr nz, .skip_text
-
-	ld hl, BattleText_LinkErrorBattleCanceled
 
 .print_text
 	call StdBattleTextbox
-
-.skip_text
 	call StopDangerSound
-	call CheckMobileBattleError
-	jr c, .skip_sfx
-
 	ld de, SFX_RUN
 	call PlaySFX
-
-.skip_sfx
 	call SetPlayerTurn
 	ld a, 1
 	ld [wBattleEnded], a
@@ -158,7 +143,6 @@ WildFled_EnemyFled_LinkBattleCanceled:
 
 BattleTurn:
 .loop
-	call Stubbed_Function3c1bf
 	call CheckContestBattleOver
 	jp c, .quit
 
@@ -174,14 +158,6 @@ BattleTurn:
 	call HandleBerserkGene
 	call UpdateBattleMonInParty
 	farcall AIChooseMove
-
-	call IsMobileBattle
-	jr nz, .not_disconnected
-	farcall Function100da5
-	farcall StartMobileInactivityTimer
-	farcall Function100dd8
-	jp c, .quit
-.not_disconnected
 
 	call CheckPlayerLockedIn
 	jr c, .skip_iteration
@@ -208,9 +184,6 @@ BattleTurn:
 .false
 	call Battle_PlayerFirst
 .proceed
-	call CheckMobileBattleError
-	jr c, .quit
-
 	ld a, [wForcedSwitch]
 	and a
 	jr nz, .quit
@@ -871,8 +844,6 @@ Battle_EnemyFirst:
 	callfar AI_SwitchOrTryItem
 	jr c, .switch_item
 	call EnemyTurn_EndOpponentProtectEndureDestinyBond
-	call CheckMobileBattleError
-	ret c
 	ld a, [wForcedSwitch]
 	and a
 	ret nz
@@ -887,8 +858,6 @@ Battle_EnemyFirst:
 	jp z, HandleEnemyMonFaint
 	call RefreshBattleHuds
 	call PlayerTurn_EndOpponentProtectEndureDestinyBond
-	call CheckMobileBattleError
-	ret c
 	ld a, [wForcedSwitch]
 	and a
 	ret nz
@@ -915,8 +884,6 @@ Battle_PlayerFirst:
 	ld a, [wForcedSwitch]
 	and a
 	ret nz
-	call CheckMobileBattleError
-	ret c
 	call HasEnemyFainted
 	jp z, HandleEnemyMonFaint
 	call HasPlayerFainted
@@ -934,8 +901,6 @@ Battle_PlayerFirst:
 	call TryEnemyFlee
 	jp c, WildFled_EnemyFled_LinkBattleCanceled
 	call EnemyTurn_EndOpponentProtectEndureDestinyBond
-	call CheckMobileBattleError
-	ret c
 	ld a, [wForcedSwitch]
 	and a
 	ret nz
@@ -2045,8 +2010,6 @@ HandleEnemyMonFaint:
 
 .dont_flee
 	call ForcePlayerMonChoice
-	call CheckMobileBattleError
-	jp c, WildFled_EnemyFled_LinkBattleCanceled
 
 	ld a, BATTLEPLAYERACTION_USEITEM
 	ld [wBattlePlayerAction], a
@@ -2353,8 +2316,6 @@ WinTrainerBattle:
 	ld hl, BattleText_EnemyWasDefeated
 	call StdBattleTextbox
 
-	call IsMobileBattle
-	jr z, .mobile
 	ld a, [wLinkMode]
 	and a
 	ret nz
@@ -2379,7 +2340,7 @@ WinTrainerBattle:
 .skip_win_loss_text
 	jp .GiveMoney
 
-.mobile
+.mobile ; unused
 	call BattleWinSlideInEnemyTrainerFrontpic
 	ld c, 40
 	call DelayFrames
@@ -2512,13 +2473,6 @@ AddBattleMoneyToAccount:
 	ld c, 3
 	and a
 	push de
-	push hl
-	push bc
-	ld b, h
-	ld c, l
-	farcall StubbedTrainerRankings_AddToBattlePayouts
-	pop bc
-	pop hl
 .loop
 	ld a, [de]
 	adc [hl]
@@ -2631,8 +2585,6 @@ HandlePlayerMonFaint:
 
 .switch
 	call ForcePlayerMonChoice
-	call CheckMobileBattleError
-	jp c, WildFled_EnemyFled_LinkBattleCanceled
 	ld a, c
 	and a
 	ret nz
@@ -2677,8 +2629,7 @@ UpdateFaintedPlayerMon:
 	ld [wBattleResult], a
 	ld a, [wWhichMonFaintedFirst]
 	and a
-	ret z
-	ret ; ??????????
+	ret
 
 AskUseNextPokemon:
 	call EmptyBattleTextbox
@@ -2723,8 +2674,6 @@ ForcePlayerMonChoice:
 .skip_link
 	xor a ; BATTLEPLAYERACTION_USEMOVE
 	ld [wBattlePlayerAction], a
-	call CheckMobileBattleError
-	jr c, .enemy_fainted_mobile_error
 	ld hl, wEnemyMonHP
 	ld a, [hli]
 	or [hl]
@@ -2828,12 +2777,10 @@ JumpToPartyMenuAndPrintText:
 	ret
 
 SelectBattleMon:
-	call IsMobileBattle
-	jr z, .mobile
 	farcall PartyMenuSelect
 	ret
 
-.mobile
+.mobile ; unused
 	farcall Mobile_PartyMenuSelect
 	ret
 
@@ -2870,8 +2817,6 @@ ForcePickPartyMonInBattle:
 .pick
 	call PickPartyMonInBattle
 	ret nc
-	call CheckMobileBattleError
-	ret c
 
 	ld de, SFX_WRONG
 	call PlaySFX
@@ -2892,8 +2837,6 @@ ForcePickSwitchMonInBattle:
 
 .pick
 	call ForcePickPartyMonInBattle
-	call CheckMobileBattleError
-	ret c
 	call SwitchMonAlreadyOut
 	jr c, .pick
 
@@ -2970,8 +2913,6 @@ LostBattle:
 
 .not_tied
 	ld hl, LostAgainstText
-	call IsMobileBattle
-	jr z, .mobile
 
 .text
 	call StdBattleTextbox
@@ -2980,7 +2921,7 @@ LostBattle:
 	scf
 	ret
 
-.mobile
+.mobile ; unused
 ; Remove the enemy from the screen.
 	hlcoord 0, 0
 	lb bc, 8, 21
@@ -3809,8 +3750,6 @@ TryToRunAwayFromBattle:
 	ld [wCurPlayerMove], a
 	call LinkBattleSendReceiveAction
 	call SafeLoadTempTilemapToTilemap
-	call CheckMobileBattleError
-	jr c, .mobile
 
 	; Got away safely
 	ld a, [wBattleAction]
@@ -3837,7 +3776,7 @@ TryToRunAwayFromBattle:
 	scf
 	ret
 
-.mobile
+.mobile ; unused
 	call StopDangerSound
 	ld hl, wcd2a
 	bit 4, [hl]
@@ -3845,7 +3784,7 @@ TryToRunAwayFromBattle:
 	ld hl, BattleText_LinkErrorBattleCanceled
 	call StdBattleTextbox
 
-.skip_link_error
+.skip_link_error ; unused
 	call WaitSFX
 	call LoadTilemapToTempTilemap
 	scf
@@ -4912,14 +4851,11 @@ BattleMenu_Fight:
 	ret
 
 LoadBattleMenu2:
-	call IsMobileBattle
-	jr z, .mobile
-
 	farcall LoadBattleMenu
 	and a
 	ret
 
-.mobile
+.mobile ; unused
 	farcall Function100b12
 	ld a, [wcd2b]
 	and a
@@ -5064,14 +5000,10 @@ BattleMenuPKMN_Loop:
 	jr .loop
 
 .PressedB:
-	call CheckMobileBattleError
-	jr c, .Cancel
 	jr BattleMenuPKMN_Loop
 
 .Stats:
 	call Battle_StatsScreen
-	call CheckMobileBattleError
-	jr c, .Cancel
 	jp BattleMenuPKMN_ReturnFromStats
 
 .Cancel:
@@ -5086,12 +5018,10 @@ BattleMenuPKMN_Loop:
 	jp BattleMenu
 
 .GetMenu:
-	call IsMobileBattle
-	jr z, .mobile
 	farcall BattleMonMenu
 	ret
 
-.mobile
+.mobile ; unused
 	farcall MobileBattleMonMenu
 	ret
 
@@ -5114,7 +5044,7 @@ Battle_StatsScreen:
 	call LowVolume
 	xor a ; PARTYMON
 	ld [wMonType], a
-	farcall BattleStatsScreenInit
+	farcall StatsScreenInit
 	call MaxVolume
 
 	call DisableLCD
@@ -5309,12 +5239,6 @@ CheckAmuletCoin:
 	ret
 
 MoveSelectionScreen:
-	call IsMobileBattle
-	jr nz, .not_mobile
-	farcall MobileMoveSelectionScreen
-	ret
-
-.not_mobile
 	ld hl, wEnemyMonMoves
 	ld a, [wMoveSelectionMenuType]
 	dec a
@@ -5484,9 +5408,6 @@ MoveSelectionScreen:
 	dec a
 	cp c
 	jr z, .move_disabled
-	ld a, [wUnusedPlayerLockedMove]
-	and a
-	jr nz, .skip2
 	ld a, [wMenuCursorY]
 	ld hl, wBattleMonMoves
 	ld c, a
@@ -5494,7 +5415,6 @@ MoveSelectionScreen:
 	add hl, bc
 	ld a, [hl]
 
-.skip2
 	ld [wCurPlayerMove], a
 	xor a
 	ret
@@ -5627,7 +5547,6 @@ MoveInfoBox:
 	ld b, 3
 	ld c, 9
 	call Textbox
-	call MobileTextBorder
 
 	ld a, [wPlayerDisableCount]
 	and a
@@ -5697,11 +5616,6 @@ MoveInfoBox:
 
 .PrintPP:
 	hlcoord 5, 11
-	ld a, [wLinkMode] ; What's the point of this check?
-	cp LINK_MOBILE
-	jr c, .ok
-	hlcoord 5, 11
-.ok
 	push hl
 	ld de, wStringBuffer1
 	lb bc, 1, 2
@@ -8024,7 +7938,6 @@ Unreferenced_DoBattle:
 	ret
 
 BattleIntro:
-	farcall StubbedTrainerRankings_Battles ; mobile
 	call LoadTrainerOrWildMonPic
 	xor a
 	ld [wTempBattleMonSpecies], a
@@ -8105,7 +8018,6 @@ BackUpBGMap2:
 
 InitEnemyTrainer:
 	ld [wTrainerClass], a
-	farcall StubbedTrainerRankings_TrainerBattles
 	xor a
 	ld [wTempEnemyMonSpecies], a
 	callfar GetTrainerAttributes
@@ -8161,7 +8073,6 @@ InitEnemyTrainer:
 InitEnemyWildmon:
 	ld a, WILD_BATTLE
 	ld [wBattleMode], a
-	farcall StubbedTrainerRankings_WildBattles
 	call LoadEnemyMon
 	ld hl, wEnemyMonMoves
 	ld de, wWildMonMoves
@@ -8888,7 +8799,6 @@ InitBattleDisplay:
 	ld b, 4
 	ld c, 18
 	call Textbox
-	farcall MobileTextBorder
 	hlcoord 1, 5
 	lb bc, 3, 7
 	call ClearBox
@@ -9094,8 +9004,6 @@ BattleStartMessage:
 	cp BATTLETYPE_FISH
 	jr nz, .NotFishing
 
-	farcall StubbedTrainerRankings_HookedEncounters
-
 	ld hl, HookedPokemonAttackedText
 	jr .PlaceBattleStartText
 
@@ -9113,11 +9021,4 @@ BattleStartMessage:
 	farcall BattleStart_TrainerHuds
 	pop hl
 	call StdBattleTextbox
-
-	call IsMobileBattle2
-	ret nz
-
-	ld c, $2 ; start
-	farcall Mobile_PrintOpponentBattleMessage
-
 	ret
