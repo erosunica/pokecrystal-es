@@ -698,7 +698,7 @@ EggHatch_AnimationSequence:
 	ld c, $31 ; Egg tiles start here
 	ld a, EGG
 	call Hatch_UpdateFrontpicBGMapCenter
-	ld c, 80
+	ld c, 60
 	call DelayFrames
 	xor a
 	ld [wFrameCounter], a

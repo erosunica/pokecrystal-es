@@ -76,7 +76,7 @@ NewGame:
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
 
-AreYouABoyOrAreYouAGirl:
+AreYouABoyOrAreYouAGirl: ; unused
 	farcall Mobile_AlwaysReturnNotCarry ; some mobile stuff
 	jr c, .ok
 	farcall InitGender
@@ -312,7 +312,7 @@ Continue:
 	call DisplaySaveInfoOnContinue
 	ld a, $1
 	ldh [hBGMapMode], a
-	ld c, 20
+	ld c, 5
 	call DelayFrames
 	call ConfirmContinue
 	jr nc, .Check1Pass
@@ -335,7 +335,7 @@ Continue:
 	call ClearBGPalettes
 	call CloseWindow
 	call ClearTilemap
-	ld c, 20
+	ld c, 5
 	call DelayFrames
 	farcall JumpRoamMons
 	farcall MysteryGift_CopyReceivedDecosToPC ; Mystery Gift
@@ -367,7 +367,7 @@ PostCreditsSpawn:
 	ldh [hMapEntryMethod], a
 	ret
 
-Continue_MobileAdapterMenu:
+Continue_MobileAdapterMenu: ; unused
 	farcall Mobile_AlwaysReturnNotCarry ; mobile check
 	ret nc
 

@@ -407,10 +407,10 @@ PlaceYesNoBox::
 	ld [wMenuBorderBottomCoord], a
 	call PushWindow
 
-InterpretTwoOptionMenu::
+; InterpretTwoOptionMenu::
 	call VerticalMenu
 	push af
-	ld c, $f
+	ld c, 10
 	call DelayFrames
 	call CloseWindow
 	pop af
@@ -787,7 +787,7 @@ InterpretBattleMenu::
 	ld a, [wMenuCursorBuffer]
 	ret
 
-InterpretMobileMenu::
+InterpretMobileMenu:: ; only used in mobile
 	ldh a, [hROMBank]
 	ld [wMenuData_2DMenuItemStringsBank], a
 	farcall _InterpretMobileMenu

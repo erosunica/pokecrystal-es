@@ -449,7 +449,7 @@ Paragraph::
 	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
 	call ClearBox
 	call UnloadBlinkingCursor
-	ld c, 20
+	ld c, 10
 	call DelayFrames
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	pop de
@@ -562,7 +562,7 @@ TextScroll::
 	ld a, " "
 	ld bc, TEXTBOX_INNERW
 	call ByteFill
-	ld c, 5
+	ld c, 2
 	call DelayFrames
 	ret
 
@@ -878,7 +878,7 @@ TextCommand_PAUSE::
 	ldh a, [hJoyDown]
 	and A_BUTTON | B_BUTTON
 	jr nz, .done
-	ld c, 30
+	ld c, 15
 	call DelayFrames
 .done
 	pop bc
@@ -959,7 +959,7 @@ TextCommand_DOTS::
 	ldh a, [hJoyDown]
 	and A_BUTTON | B_BUTTON
 	jr nz, .next
-	ld c, 10
+	ld c, 5
 	call DelayFrames
 .next
 	pop de
