@@ -1,9 +1,5 @@
 GetTrainerClassName:
-	ld hl, wRivalName
 	ld a, c
-	cp RIVAL1
-	jr z, .rival
-
 	ld [wCurSpecies], a
 	ld a, TRAINER_NAME
 	ld [wNamedObjectTypeBuffer], a
@@ -11,7 +7,7 @@ GetTrainerClassName:
 	ld de, wStringBuffer1
 	ret
 
-.rival
+.rival ; unused
 	ld de, wStringBuffer1
 	push de
 	ld bc, NAME_LENGTH
@@ -25,11 +21,7 @@ GetOTName:
 	and a
 	jr nz, .ok
 
-	ld hl, wRivalName
 	ld a, c
-	cp RIVAL1
-	jr z, .ok
-
 	ld [wCurSpecies], a
 	ld a, TRAINER_NAME
 	ld [wNamedObjectTypeBuffer], a
