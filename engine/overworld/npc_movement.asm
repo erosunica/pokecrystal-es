@@ -1,34 +1,24 @@
 CanObjectMoveInDirection:
+	ld hl, OBJECT_FLAGS1
+	add hl, bc
+	bit NOCLIP_TILES_F, [hl]	
+	jr nz, .continue	
+	
+	push hl
+	push bc	
 	ld hl, OBJECT_PALETTE
 	add hl, bc
 	bit SWIMMING_F, [hl]
 	jr z, .not_swimming
-
-	ld hl, OBJECT_FLAGS1
-	add hl, bc
-	bit NOCLIP_TILES_F, [hl]
-	jr nz, .noclip_tiles
-	push hl
-	push bc
 	call WillObjectBumpIntoLand
-	pop bc
-	pop hl
-	ret c
-	jr .continue
-
+	jr .noclip_tiles
 .not_swimming
-	ld hl, OBJECT_FLAGS1
-	add hl, bc
-	bit NOCLIP_TILES_F, [hl]
-	jr nz, .noclip_tiles
-	push hl
-	push bc
 	call WillObjectBumpIntoWater
+.noclip_tiles
 	pop bc
 	pop hl
 	ret c
 
-.noclip_tiles
 .continue
 	bit NOCLIP_OBJS_F, [hl]
 	jr nz, .noclip_objs
