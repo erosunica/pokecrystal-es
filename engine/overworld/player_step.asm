@@ -18,7 +18,7 @@ _HandlePlayerStep::
 
 .update_player_coords
 	call UpdatePlayerCoords
-	jr .finish
+	; fallthrough
 
 .finish
 	call HandlePlayerStep
@@ -82,69 +82,50 @@ HandlePlayerStep:
 	ret
 
 UpdatePlayerCoords:
+	ld hl, wYCoord
 	ld a, [wPlayerStepDirection]
 	and a
-	jr nz, .check_step_down
-	ld hl, wYCoord
-	inc [hl]
-	ret
-
-.check_step_down
-	cp UP
-	jr nz, .check_step_left
-	ld hl, wYCoord
-	dec [hl]
-	ret
-
-.check_step_left
-	cp LEFT
-	jr nz, .check_step_right
-	ld hl, wXCoord
-	dec [hl]
-	ret
-
-.check_step_right
-	cp RIGHT
+	jr z, .incrementCoord
+	dec a
+	jr z, .decrementCoord
+	inc hl
+	dec a
+	jr z, .decrementCoord
+	dec a
 	ret nz
-	ld hl, wXCoord
+.incrementCoord
 	inc [hl]
+	ret
+.decrementCoord
+	dec [hl]
 	ret
 
 UpdateOverworldMap:
 	ld a, [wPlayerStepDirection]
 	and a
 	jr z, .step_down
-	cp UP
+	dec a
 	jr z, .step_up
-	cp LEFT
+	dec a
 	jr z, .step_left
-	cp RIGHT
-	jr z, .step_right
-	ret
-
+	dec a
+	ret nz
+;step_right
+	call .ScrollOverworldMapRight
+	call LoadMapPart
+	jp ScrollMapRight
 .step_down
 	call .ScrollOverworldMapDown
 	call LoadMapPart
-	call ScrollMapDown
-	ret
-
+	jp ScrollMapDown
 .step_up
 	call .ScrollOverworldMapUp
 	call LoadMapPart
-	call ScrollMapUp
-	ret
-
+	jp ScrollMapUp
 .step_left
 	call .ScrollOverworldMapLeft
 	call LoadMapPart
-	call ScrollMapLeft
-	ret
-
-.step_right
-	call .ScrollOverworldMapRight
-	call LoadMapPart
-	call ScrollMapRight
-	ret
+	jp ScrollMapLeft
 
 .ScrollOverworldMapDown:
 	ld a, [wBGMapAnchor]
@@ -161,13 +142,8 @@ UpdateOverworldMap:
 	inc [hl]
 	ld a, [hl]
 	cp 2 ; was 1
-	jr nz, .done_down
+	ret nz
 	ld [hl], 0
-	call .ScrollMapDataDown
-.done_down
-	ret
-
-.ScrollMapDataDown:
 	ld hl, wOverworldMapAnchor
 	ld a, [wMapWidth]
 	add 3 * 2 ; surrounding tiles
@@ -192,13 +168,8 @@ UpdateOverworldMap:
 	dec [hl]
 	ld a, [hl]
 	cp -1 ; was 0
-	jr nz, .done_up
+	ret nz
 	ld [hl], $1
-	call .ScrollMapDataUp
-.done_up
-	ret
-
-.ScrollMapDataUp:
 	ld hl, wOverworldMapAnchor
 	ld a, [wMapWidth]
 	add 3 * 2 ; surrounding tiles
@@ -224,13 +195,8 @@ UpdateOverworldMap:
 	dec [hl]
 	ld a, [hl]
 	cp -1
-	jr nz, .done_left
+	ret nz
 	ld [hl], 1
-	call .ScrollMapDataLeft
-.done_left
-	ret
-
-.ScrollMapDataLeft:
 	ld hl, wOverworldMapAnchor
 	ld a, [hl]
 	sub 1
@@ -253,13 +219,8 @@ UpdateOverworldMap:
 	inc [hl]
 	ld a, [hl]
 	cp 2
-	jr nz, .done_right
+	ret nz
 	ld [hl], 0
-	call .ScrollMapDataRight
-.done_right
-	ret
-
-.ScrollMapDataRight:
 	ld hl, wOverworldMapAnchor
 	ld a, [hl]
 	add 1
