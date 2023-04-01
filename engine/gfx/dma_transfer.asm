@@ -55,7 +55,7 @@ ReloadMapPart::
 	decoord 0, 0
 	ld hl, wScratchTilemap
 	call PadTilemapForHDMATransfer
-	call DelayFrame
+	call DelayFrame ; really needed?
 
 	di
 	ldh a, [rVBK]
@@ -70,9 +70,7 @@ ReloadMapPart::
 	call HDMATransfer_Wait127Scanlines_toBGMap
 	pop af
 	ldh [rVBK], a
-	ei
-
-	ret
+	reti
 
 Mobile_ReloadMapPart:
 	ld hl, ReloadMapPart ; useless
@@ -99,9 +97,7 @@ Mobile_ReloadMapPart:
 	ld hl, wScratchTilemap
 	pop af
 	ldh [rVBK], a
-	ei
-
-	ret
+	reti
 
 ; unused
 	ld hl, .unreferenced_1040da
@@ -168,8 +164,7 @@ OpenAndCloseMenu_HDMATransferTilemapAndAttrmap::
 	call HDMATransfer_Wait123Scanlines_toBGMap
 	pop af
 	ldh [rVBK], a
-	ei
-	ret
+	reti
 
 Mobile_OpenAndCloseMenu_HDMATransferTilemapAndAttrmap:
 	ld hl, .Function
@@ -326,9 +321,7 @@ _continue_HDMATransfer:
 	jr nz, .final_ly_loop
 	ld hl, rHDMA5
 	res 7, [hl]
-	ei
-
-	ret
+	reti
 
 _LoadHDMAParameters:
 	ld a, h
