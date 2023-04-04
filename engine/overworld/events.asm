@@ -365,7 +365,7 @@ CheckTileEvent:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	call CallScript
 	ret
 
@@ -387,7 +387,7 @@ SetUpFiveStepWildEncounterCooldown:
 ret_968d7: ; unused
 	ret
 
-SetMinTwoStepWildEncounterCooldown:
+SetMinTwoStepWildEncounterCooldown: ; unused
 	ld a, [wWildEncounterCooldown]
 	cp 2
 	ret nc
@@ -421,9 +421,9 @@ rept SCENE_SCRIPT_SIZE
 	add hl, de
 endr
 
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	call GetFarHalfword
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	call CallScript
 
 	ld hl, wScriptFlags
@@ -587,7 +587,7 @@ TryObjectEvent:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	call CallScript
 	ret
 
@@ -597,7 +597,7 @@ TryObjectEvent:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	ld de, wItemBallData
 	ld bc, wItemBallDataEnd - wItemBallData
 	call FarCopyBytes
@@ -675,7 +675,7 @@ TryBGEvent:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	call CallScript
 	scf
 	ret
@@ -684,7 +684,7 @@ TryBGEvent:
 	call CheckBGEventFlag
 	jp nz, .dontread
 	call PlayTalkObject
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	ld de, wHiddenItemData
 	ld bc, wHiddenItemDataEnd - wHiddenItemData
 	call FarCopyBytes
@@ -697,7 +697,7 @@ TryBGEvent:
 .copy
 	call CheckBGEventFlag
 	jr nz, .dontread
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	ld de, wHiddenItemData
 	ld bc, wHiddenItemDataEnd - wHiddenItemData
 	call FarCopyBytes
@@ -718,9 +718,9 @@ TryBGEvent:
 	pop hl
 	inc hl
 	inc hl
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	call GetFarHalfword
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	call CallScript
 	scf
 	ret
@@ -735,7 +735,7 @@ CheckBGEventFlag:
 	ld h, [hl]
 	ld l, a
 	push hl
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	call GetFarHalfword
 	ld e, l
 	ld d, h

@@ -639,7 +639,7 @@ ClearObjectStructs::
 	jp ByteFill
 
 GetWarpDestCoords::
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	rst Bankswitch
 
 	ld hl, wMapEventsPointer
@@ -935,7 +935,7 @@ CallMapScript::
 	ld a, [wScriptRunning]
 	and a
 	ret nz
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	jr CallScript
 
 RunMapCallback::
@@ -947,7 +947,7 @@ RunMapCallback::
 	call .FindCallback
 	jr nc, .done
 
-	call GetMapScriptsBank
+	ld a, [wMapScriptsBank]
 	ld b, a
 	ld d, h
 	ld e, l
@@ -2034,7 +2034,7 @@ SwitchToAnyMapAttributesBank::
 	rst Bankswitch
 	ret
 
-GetMapAttributesBank::
+GetMapAttributesBank:: ; unused
 	ld a, [wMapGroup]
 	ld b, a
 	ld a, [wMapNumber]
@@ -2071,7 +2071,7 @@ SwitchToMapScriptsBank::
 	rst Bankswitch
 	ret
 
-GetMapScriptsBank::
+GetMapScriptsBank:: ; unused
 	ld a, [wMapScriptsBank]
 	ret
 
