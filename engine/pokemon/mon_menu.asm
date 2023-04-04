@@ -624,31 +624,27 @@ OpenPartyStats:
 
 MonMenu_Cut:
 	farcall CutFunction
+_MonMenu_StandardCheck:
 	ld a, [wFieldMoveSucceeded]
 	cp $1
-	jr nz, .Fail
+	jr nz, _MonMenu_StandardFail
+_MonMenu_StandardSuccess:
 	ld b, $4
 	ld a, $2
 	ret
 
-.Fail:
+_MonMenu_StandardFail:
 	ld a, $3
 	ret
 
 MonMenu_Fly:
 	farcall FlyFunction
 	ld a, [wFieldMoveSucceeded]
-	cp $2
-	jr z, .Fail
 	cp $0
 	jr z, .Error
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
+	cp $2
+	jr z, _MonMenu_StandardFail
+	jr _MonMenu_StandardSuccess
 
 .Error:
 	ld a, $0
@@ -660,94 +656,43 @@ MonMenu_Fly:
 
 MonMenu_Flash:
 	farcall FlashFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
+	jr _MonMenu_StandardCheck
 
 MonMenu_Strength:
 	farcall StrengthFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
+	jr _MonMenu_StandardCheck
 
 MonMenu_Whirlpool:
 	farcall WhirlpoolFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
+	jr _MonMenu_StandardCheck
 
 MonMenu_Waterfall:
 	farcall WaterfallFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
+	jr _MonMenu_StandardCheck
 
 MonMenu_Teleport:
 	farcall TeleportFunction
+_MonMenu_AlternateCheck:
 	ld a, [wFieldMoveSucceeded]
 	and a
-	jr z, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
+	jr z, _MonMenu_StandardFail
+	jr _MonMenu_StandardSuccess
 
 MonMenu_Surf:
 	farcall SurfFunction
-	ld a, [wFieldMoveSucceeded]
-	and a
-	jr z, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
+	jr _MonMenu_AlternateCheck
 
 MonMenu_Dig:
 	farcall DigFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
+	jr _MonMenu_StandardCheck
 
-.Fail:
-	ld a, $3
-	ret
+MonMenu_Headbutt:
+	farcall HeadbuttFunction
+	jr _MonMenu_StandardCheck
+
+MonMenu_RockSmash:
+	farcall RockSmashFunction
+	jr _MonMenu_StandardCheck
 
 MonMenu_Softboiled_MilkDrink:
 	call .CheckMonHasEnoughHP
@@ -788,32 +733,6 @@ MonMenu_Softboiled_MilkDrink:
 	dec hl
 	ldh a, [hQuotient + 2]
 	sbc [hl]
-	ret
-
-MonMenu_Headbutt:
-	farcall HeadbuttFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_RockSmash:
-	farcall RockSmashFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
 	ret
 
 MonMenu_SweetScent:
