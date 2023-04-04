@@ -118,8 +118,8 @@ DoPlayerMovement::
 
 	ld a, [wPlayerStandingTile]
 	ld c, a
-	call CheckWhirlpoolTile
-	jr c, .not_whirlpool
+	cp COLL_WHIRLPOOL
+	jr nz, .not_whirlpool
 	ld a, PLAYERMOVEMENT_FORCE_TURN
 	scf
 	ret
@@ -128,10 +128,6 @@ DoPlayerMovement::
 	and $f0
 	cp HI_NYBBLE_CURRENT
 	jr z, .water
-	cp HI_NYBBLE_WALK
-	jr z, .land1
-	cp HI_NYBBLE_WALK_ALT
-	jr z, .land2
 	cp HI_NYBBLE_WARPS
 	jr z, .warps
 	jr .no_walk
@@ -153,7 +149,7 @@ DoPlayerMovement::
 	db UP    ; COLL_WATERFALL_UP
 	db DOWN  ; COLL_WATERFALL
 
-.land1
+.land1 ; unused
 	ld a, c
 	and 7
 	ld c, a
@@ -176,7 +172,7 @@ DoPlayerMovement::
 	db STANDING ; COLL_BRAKE_46
 	db STANDING ; COLL_BRAKE_47
 
-.land2
+.land2 ; unused
 	ld a, c
 	and 7
 	ld c, a
@@ -202,8 +198,6 @@ DoPlayerMovement::
 .warps
 	ld a, c
 	cp COLL_DOOR
-	jr z, .down
-	cp COLL_DOOR_79
 	jr z, .down
 	cp COLL_STAIRCASE
 	jr z, .down
@@ -273,8 +267,8 @@ DoPlayerMovement::
 	jr z, .bump
 
 	ld a, [wPlayerStandingTile]
-	call CheckIceTile
-	jr nc, .ice
+	cp COLL_ICE
+	jr z, .ice
 
 ; Downhill riding is slower when not moving down.
 	call .BikeCheck
@@ -784,8 +778,8 @@ CheckStandingOnIce::
 	cp $f0
 	jr z, .not_ice
 	ld a, [wPlayerStandingTile]
-	call CheckIceTile
-	jr nc, .yep
+	cp COLL_ICE
+	jr z, .yep
 	ld a, [wPlayerState]
 	cp PLAYER_SKATE
 	jr nz, .not_ice

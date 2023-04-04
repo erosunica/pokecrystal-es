@@ -111,7 +111,7 @@ GetTileCollision::
 	pop de
 	ret
 
-CheckGrassTile::
+CheckGrassTile:: ; unused
 	ld d, a
 	and $f0
 	cp HI_NYBBLE_TALL_GRASS
@@ -135,37 +135,37 @@ CheckGrassTile::
 	scf
 	ret
 
-CheckSuperTallGrassTile::
+CheckSuperTallGrassTile:: ; unused
 	cp COLL_LONG_GRASS
 	ret z
 	cp COLL_LONG_GRASS_1C
 	ret
 
-CheckCutTreeTile::
+CheckCutTreeTile:: ; unused
 	cp COLL_CUT_TREE
 	ret z
 	cp COLL_CUT_TREE_1A
 	ret
 
-CheckHeadbuttTreeTile::
+CheckHeadbuttTreeTile:: ; unused
 	cp COLL_HEADBUTT_TREE
 	ret z
 	cp COLL_HEADBUTT_TREE_1D
 	ret
 
-CheckCounterTile::
+CheckCounterTile:: ; unused
 	cp COLL_COUNTER
 	ret z
 	cp COLL_COUNTER_98
 	ret
 
-CheckPitTile::
+CheckPitTile:: ; unused
 	cp COLL_PIT
 	ret z
 	cp COLL_PIT_68
 	ret
 
-CheckIceTile::
+CheckIceTile:: ; unused
 	cp COLL_ICE
 	ret z
 	cp COLL_ICE_2B
@@ -173,7 +173,7 @@ CheckIceTile::
 	scf
 	ret
 
-CheckWhirlpoolTile::
+CheckWhirlpoolTile:: ; unused
 	nop
 	cp COLL_WHIRLPOOL
 	ret z
@@ -182,7 +182,7 @@ CheckWhirlpoolTile::
 	scf
 	ret
 
-CheckWaterfallTile::
+CheckWaterfallTile:: ; unused
 	cp COLL_WATERFALL
 	ret z
 	cp COLL_CURRENT_DOWN
@@ -191,8 +191,6 @@ CheckWaterfallTile::
 CheckStandingOnEntrance::
 	ld a, [wPlayerStandingTile]
 	cp COLL_DOOR
-	ret z
-	cp COLL_DOOR_79
 	ret z
 	cp COLL_STAIRCASE
 	ret z
@@ -574,12 +572,12 @@ _GetMovementByte::
 	ld a, h
 	ret
 
-SetVramState_Bit0::
+SetVramState_Bit0:: ; unused
 	ld hl, wVramState
 	set 0, [hl]
 	ret
 
-ResetVramState_Bit0::
+ResetVramState_Bit0:: ; unused
 	ld hl, wVramState
 	res 0, [hl]
 	ret

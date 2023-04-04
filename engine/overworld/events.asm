@@ -349,7 +349,7 @@ CheckTileEvent:
 
 .warp_tile
 	ld a, [wPlayerStandingTile]
-	call CheckPitTile
+	cp COLL_PIT
 	jr nz, .not_pit
 	ld a, PLAYEREVENT_FALL
 	scf
@@ -1077,46 +1077,41 @@ TryTileCollisionEvent::
 	farcall CheckFacingTileForStdScript
 	jr c, .done
 
-	call CheckCutTreeTile
-	jr nz, .whirlpool
-	farcall TryCutOW
-	jr .done
-
-.whirlpool
+	cp COLL_CUT_TREE
+	jr z, .cut
 	ld a, [wFacingTileID]
-	call CheckWhirlpoolTile
-	jr nz, .waterfall
-	farcall TryWhirlpoolOW
-	jr .done
-
-.waterfall
-	ld a, [wFacingTileID]
-	call CheckWaterfallTile
-	jr nz, .headbutt
-	farcall TryWaterfallOW
-	jr .done
-
-.headbutt
-	ld a, [wFacingTileID]
-	call CheckHeadbuttTreeTile
-	jr nz, .surf
-	farcall TryHeadbuttOW
-	jr c, .done
-	jr .noevent
-
-.surf
+	cp COLL_WHIRLPOOL
+	jr z, .whirlpool
+	cp COLL_WATERFALL
+	jr z, .waterfall
+	cp COLL_HEADBUTT_TREE
+	jr z, .headbutt
 	farcall TrySurfOW
 	jr nc, .noevent
-	jr .done
-
-.noevent
-	xor a
-	ret
-
 .done
 	call PlayClickSFX
 	ld a, $ff
 	scf
+	ret
+
+.cut
+	farcall TryCutOW
+	jr .done
+
+.whirlpool
+	farcall TryWhirlpoolOW
+	jr .done
+
+.waterfall
+	farcall TryWaterfallOW
+	jr .done
+
+.headbutt
+	farcall TryHeadbuttOW
+	jr c, .done
+
+.noevent
+	xor a
 	ret
 
 RandomEncounter::
@@ -1178,7 +1173,7 @@ CanUseSweetScent::
 
 .ice_check
 	ld a, [wPlayerStandingTile]
-	call CheckIceTile
+	cp COLL_ICE
 	jr z, .no
 	scf
 	ret
@@ -1249,7 +1244,7 @@ ChooseWildEncounter_BugContest::
 
 TryWildEncounter_BugContest:
 	ld a, [wPlayerStandingTile]
-	call CheckSuperTallGrassTile
+	cp COLL_LONG_GRASS
 	ld b, 40 percent
 	jr z, .ok
 	ld b, 20 percent
@@ -1610,7 +1605,7 @@ CmdQueue_StoneTable:
 	ld hl, OBJECT_NEXT_TILE
 	add hl, de
 	ld a, [hl]
-	call CheckPitTile
+	cp COLL_PIT
 	jr nz, .next
 
 	ld hl, OBJECT_DIRECTION_WALKING
