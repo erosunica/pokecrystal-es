@@ -337,10 +337,7 @@ MenuJoypadLoop:
 	ret
 
 Do2DMenuRTCJoypad:
-	jr .handleLoop
 .loopRTC
-	call DelayFrame
-.handleLoop
 	call UpdateTimeAndPals
 	call Menu_WasButtonPressed
 	ret c
