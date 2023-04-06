@@ -122,8 +122,6 @@ Pack:
 	ld [wCurPocket], a
 	call ClearPocketList
 	call DrawPocketName
-	xor a
-	ldh [hBGMapMode], a
 	call WaitBGMap_DrawPackGFX
 	call Pack_JumptableNext
 	ret
@@ -431,20 +429,20 @@ UseItem:
 
 .dw
 ; entries correspond to ITEMMENU_* constants
-	dw .Oak     ; ITEMMENU_NOUSE
+	dw .Oak         ; ITEMMENU_NOUSE
 	dw .Oak
 	dw .Oak
 	dw .Oak
-	dw .Current ; ITEMMENU_CURRENT
-	dw .Party   ; ITEMMENU_PARTY
-	dw .Field   ; ITEMMENU_CLOSE
+	dw DoItemEffect ; ITEMMENU_CURRENT
+	dw .Party       ; ITEMMENU_PARTY
+	dw .Field       ; ITEMMENU_CLOSE
 
 .Oak:
 	ld hl, OakThisIsntTheTimeText
 	call Pack_PrintTextNoScroll
 	ret
 
-.Current:
+.Current: ; unused
 	call DoItemEffect
 	ret
 
@@ -731,8 +729,6 @@ BattlePack:
 	ld [wCurPocket], a
 	call ClearPocketList
 	call DrawPocketName
-	xor a
-	ldh [hBGMapMode], a
 	call WaitBGMap_DrawPackGFX
 	ld hl, PackEmptyText
 	call Pack_PrintTextNoScroll

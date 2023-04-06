@@ -53,7 +53,7 @@ Divide::
 	pop hl
 	ret
 
-SubtractSigned::
+SubtractSigned:: ; unused
 ; Return a - b, sign in carry.
 	sub b
 	ret nc

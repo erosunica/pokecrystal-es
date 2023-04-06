@@ -238,12 +238,12 @@ Unreferenced_Function8b81:
 	ret
 
 LoadTrainerClassPaletteAsNthBGPal:
-	ld a, [wTrainerClass]
+	ld a, [wTrainerClass] ; only used in mobile
 	call GetTrainerPalettePointer
 	ld a, e
 	jr got_palette_pointer_8bd7
 
-LoadMonPaletteAsNthBGPal:
+LoadMonPaletteAsNthBGPal: ; only used in mobile
 	ld a, [wCurPartySpecies]
 	call _GetMonPalettePointer
 	ld a, e
@@ -255,7 +255,7 @@ LoadMonPaletteAsNthBGPal:
 	inc hl
 	inc hl
 
-got_palette_pointer_8bd7:
+got_palette_pointer_8bd7: ; only used in mobile
 	push hl
 	ld hl, wBGPals1
 	ld de, 1 palettes

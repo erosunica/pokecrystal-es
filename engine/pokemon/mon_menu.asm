@@ -633,21 +633,15 @@ _MonMenu_StandardSuccess:
 	ld a, $2
 	ret
 
-_MonMenu_StandardFail:
-	ld a, $3
-	ret
-
 MonMenu_Fly:
 	farcall FlyFunction
 	ld a, [wFieldMoveSucceeded]
-	cp $0
-	jr z, .Error
+	and a
+	ret z
 	cp $2
-	jr z, _MonMenu_StandardFail
-	jr _MonMenu_StandardSuccess
-
-.Error:
-	ld a, $0
+	jr nz, _MonMenu_StandardSuccess
+_MonMenu_StandardFail:
+	ld a, $3
 	ret
 
 .Unreferenced:

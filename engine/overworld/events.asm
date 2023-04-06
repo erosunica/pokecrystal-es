@@ -101,7 +101,6 @@ CheckWildEncountersScriptFlag:
 StartMap:
 	xor a
 	ld [wScriptVar], a
-	xor a
 	ld [wScriptRunning], a
 	ld hl, wMapStatus
 	ld bc, wMapStatusEnd - wMapStatus
@@ -159,22 +158,11 @@ HandleMap:
 
 MapEvents:
 	ld a, [wMapEventStatus]
-	ld hl, .jumps
-	rst JumpTable
-	ret
-
-.jumps
-; entries correspond to MAPEVENTS_* constants
-	dw .events
-	dw .no_events
-
-.events
+	and a
+	ret nz
 	call PlayerEvents
 	call DisableEvents
 	farcall ScriptEvents
-	ret
-
-.no_events
 	ret
 
 MaxOverworldDelay:

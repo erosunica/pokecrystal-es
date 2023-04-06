@@ -241,13 +241,13 @@ _CardFlip:
 	call JoyTextDelay
 	ldh a, [hJoyLast]
 	and A_BUTTON
-	jr nz, .betdone
+	jp nz, .Increment
 	call ChooseCard_HandleJoypad
 	call CardFlip_UpdateCursorOAM
 	call DelayFrame
 	jr .betloop
 
-.betdone
+.betdone ; unused
 	call .Increment
 	ret
 

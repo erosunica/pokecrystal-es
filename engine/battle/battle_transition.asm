@@ -21,15 +21,16 @@ DoBattleTransition:
 	ld hl, hVBlank
 	ld a, [hl]
 	push af
-	ld [hl], $1
+	ld [hl], 3
+	jr .handleLoop
 
 .loop
-	ld a, [wJumptableIndex]
-	bit 7, a ; BATTLETRANSITION_END?
-	jr nz, .done
 	call BattleTransitionJumptable
 	call DelayFrame
-	jr .loop
+.handleLoop
+	ld a, [wJumptableIndex]
+	bit 7, a
+	jr z, .loop
 
 .done
 	ldh a, [rSVBK]
@@ -613,7 +614,7 @@ StartTrainerBattle_LoadPokeBallGraphics:
 	dec b
 	jr nz, .loop
 
-	call .loadpokeballgfx
+	ld de, PokeBallTransition
 	hlcoord 2, 1
 
 	ld b, SCREEN_WIDTH - 4
@@ -709,7 +710,7 @@ INCLUDE "gfx/overworld/trainer_battle_day.pal"
 .nightpals
 INCLUDE "gfx/overworld/trainer_battle_nite.pal"
 
-.loadpokeballgfx
+.loadpokeballgfx ; unused
 	ld a, [wOtherTrainerClass]
 	ld de, PokeBallTransition
 	ret

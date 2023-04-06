@@ -222,6 +222,7 @@ GameFreakLogoScene1:
 	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	inc [hl]
+GameFreakLogoScene5:
 	ret
 
 GameFreakLogoScene2:
@@ -323,7 +324,6 @@ GameFreakLogoScene4:
 	add hl, bc
 	inc [hl]
 	call PlaceGameFreakPresents_AdvanceIndex
-GameFreakLogoScene5:
 	ret
 
 GameFreakLogoPalettes:
@@ -494,7 +494,7 @@ IntroScene2:
 	ld a, [hl]
 	inc [hl]
 	cp $80
-	jr nc, .endscene
+	jp nc, NextIntroScene
 	cp $60
 	jr nz, .DontPlaySound
 	push af
@@ -508,7 +508,7 @@ IntroScene2:
 	xor a
 	call CrystalIntro_UnownFade
 	ret
-.endscene
+.endscene ; unused
 	call NextIntroScene
 	ret
 
@@ -566,11 +566,11 @@ IntroScene4:
 	ld hl, wIntroSceneFrameCounter
 	ld a, [hl]
 	cp $80
-	jr z, .endscene
+	jp z, NextIntroScene
 	inc [hl]
 	ret
 
-.endscene
+.endscene ; unused
 	call NextIntroScene
 	ret
 
@@ -633,7 +633,7 @@ IntroScene6:
 	ld a, [hl]
 	inc [hl]
 	cp $80
-	jr nc, .endscene
+	jp nc, NextIntroScene
 	cp $60
 	jr z, .SecondUnown
 	cp $40
@@ -668,7 +668,7 @@ IntroScene6:
 	call CrystalIntro_UnownFade
 	ret
 
-.endscene
+.endscene ; unused
 	call NextIntroScene
 	ret
 
@@ -816,7 +816,7 @@ IntroScene10:
 	ld a, [hl]
 	inc [hl]
 	cp $c0
-	jr z, .done
+	jp z, NextIntroScene
 	cp $20
 	jr z, .wooper
 	cp $40
@@ -838,7 +838,7 @@ IntroScene10:
 	ld de, SFX_INTRO_PICHU
 	call PlaySFX
 	ret
-.done
+.done ; unused
 	call NextIntroScene
 	ret
 
@@ -899,7 +899,7 @@ IntroScene12:
 	ld a, [hl]
 	inc [hl]
 	cp $c0
-	jr nc, .done
+	jp nc, NextIntroScene
 	cp $80
 	jr nc, .second_half
 ; first half
@@ -928,7 +928,7 @@ IntroScene12:
 	call CrystalIntro_UnownFade
 	ret
 
-.done
+.done ; unused
 	call NextIntroScene
 	ret
 
@@ -1034,7 +1034,7 @@ IntroScene14:
 	ld a, [hl]
 	inc [hl]
 	cp $80
-	jr z, .done
+	jp z, NextIntroScene
 	cp $60
 	jr z, .jump
 	jr nc, .asm_e4e1a
@@ -1066,7 +1066,7 @@ IntroScene14:
 	ld [wGlobalAnimXOffset], a
 	ret
 
-.done
+.done ; unused
 	call NextIntroScene
 	ret
 
@@ -1140,7 +1140,7 @@ IntroScene16:
 	ld a, [hl]
 	inc [hl]
 	cp $80
-	jr nc, .done
+	jp nc, NextIntroScene
 	call Intro_Scene16_AnimateSuicune
 	ldh a, [hSCY]
 	and a
@@ -1207,14 +1207,14 @@ IntroScene18:
 	ld a, [hl]
 	inc [hl]
 	cp $60
-	jr nc, .done
+	jp nc, NextIntroScene
 	ldh a, [hSCX]
 	cp $60
 	ret z
 	add 8
 	ldh [hSCX], a
 	ret
-.done
+.done ; unused
 	call NextIntroScene
 	ret
 
@@ -1289,7 +1289,7 @@ IntroScene20:
 	ld a, [hl]
 	inc [hl]
 	cp $98
-	jr nc, .finished
+	jp nc, NextIntroScene
 	cp $58
 	ret nc
 	cp $40
@@ -1325,7 +1325,7 @@ IntroScene20:
 	call Intro_Scene20_AppearUnown
 	ret
 
-.finished
+.finished ; unused
 	call NextIntroScene
 	ret
 
@@ -1387,11 +1387,11 @@ IntroScene25:
 ; Wait around a bit.
 	ld a, [wIntroSceneFrameCounter]
 	dec a
-	jr z, .done
+	jp z, NextIntroScene
 	ld [wIntroSceneFrameCounter], a
 	ret
 
-.done
+.done ; unused
 	call NextIntroScene
 	ret
 
@@ -1477,7 +1477,7 @@ IntroScene28:
 	jr z, .done
 	dec [hl]
 	cp $18
-	jr z, .clear
+	jp z, ClearBGPalettes
 	cp $8
 	ret nz
 
@@ -1485,7 +1485,7 @@ IntroScene28:
 	call PlaySFX
 	ret
 
-.clear
+.clear ; unused
 	call ClearBGPalettes
 	ret
 

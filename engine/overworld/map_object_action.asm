@@ -36,14 +36,14 @@ SetFacingStandAction:
 	add hl, bc
 	ld a, [hl]
 	and 1
-	jr nz, SetFacingStepAction
-	jp SetFacingCurrent
+	jr z, SetFacingCurrent
+	; fallthrough
 
 SetFacingStepAction:
 	ld hl, OBJECT_FLAGS1
 	add hl, bc
 	bit SLIDING_F, [hl]
-	jp nz, SetFacingCurrent
+	jr nz, SetFacingCurrent
 
 	ld hl, OBJECT_STEP_FRAME
 	add hl, bc
@@ -68,7 +68,7 @@ SetFacingSkyfall:
 	ld hl, OBJECT_FLAGS1
 	add hl, bc
 	bit SLIDING_F, [hl]
-	jp nz, SetFacingCurrent
+	jr nz, SetFacingCurrent
 
 	ld hl, OBJECT_STEP_FRAME
 	add hl, bc
@@ -93,7 +93,7 @@ SetFacingBumpAction:
 	ld hl, OBJECT_FLAGS1
 	add hl, bc
 	bit SLIDING_F, [hl]
-	jp nz, SetFacingCurrent
+	jr nz, SetFacingCurrent
 
 	ld hl, OBJECT_STEP_FRAME
 	add hl, bc

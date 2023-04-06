@@ -177,6 +177,9 @@ endr
 	pop hl
 	ret
 
+WaitPlaySFX::
+	call WaitSFX
+	; fallthrough
 PlaySFX::
 ; Play sound effect de.
 ; Sound effects are ordered by priority (highest to lowest)
@@ -215,11 +218,6 @@ PlaySFX::
 	pop bc
 	pop de
 	pop hl
-	ret
-
-WaitPlaySFX::
-	call WaitSFX
-	call PlaySFX
 	ret
 
 WaitSFX::

@@ -476,7 +476,7 @@ DoNthMenu::
 	jp MenuClickSound
 
 SetUpMenu::
-	call DrawVariableLengthMenuBox ; ???
+	call DrawVariableLengthMenuBox
 	call MenuWriteText
 	call InitMenuCursorAndButtonPermissions ; set up selection pointer
 	ld hl, w2DMenuFlags1

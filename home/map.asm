@@ -104,11 +104,6 @@ LoadMapPart::
 	rst Bankswitch
 	call LoadMetatiles
 
-	ld a, "■"
-	hlcoord 0, 0
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call ByteFill
-
 	ld a, BANK(_LoadMapPart)
 	rst Bankswitch
 	call _LoadMapPart
@@ -466,12 +461,9 @@ GetMapConnections::
 .no_west
 
 	bit EAST_F, b
-	jr z, .no_east
+	ret z
 	ld de, wEastMapConnection
-	call GetMapConnection
-.no_east
-
-	ret
+	; fallthrough
 
 GetMapConnection::
 ; Load map connection struct at hl into de.

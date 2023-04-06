@@ -343,7 +343,7 @@ endr
 	pop hl
 	ret
 
-GetGFXUnlessMobile:
+GetGFXUnlessMobile: ; unused
 	ld a, [wLinkMode]
 	cp LINK_MOBILE
 	jp nz, Request2bpp

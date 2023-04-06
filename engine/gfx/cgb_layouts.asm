@@ -157,7 +157,7 @@ InitPartyMenuBGPal7:
 	call FarCopyWRAM
 	ret
 
-InitPartyMenuBGPal0:
+InitPartyMenuBGPal0: ; unused
 	ld hl, PartyMenuBGPalette
 	ld de, wBGPals1 palette 0
 	ld bc, 1 palettes
@@ -528,7 +528,11 @@ _CGB_MapPals:
 _CGB_PartyMenu:
 	ld hl, PalPacket_PartyMenu + 1
 	call CopyFourPalettes
-	call InitPartyMenuBGPal0
+	ld hl, PartyMenuBGPalette
+	ld de, wBGPals1 palette 0
+	ld bc, 1 palettes
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
 	call InitPartyMenuBGPal7
 	call InitPartyMenuOBPals
 	call ApplyAttrmap

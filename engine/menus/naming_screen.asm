@@ -723,11 +723,11 @@ MailComposition_TryAddCharacter:
 
 	ld a, [wNamingScreenLastCharacter]
 
-NamingScreen_LoadNextCharacter:
+;NamingScreen_LoadNextCharacter:
 	call NamingScreen_GetTextCursorPosition
 	ld [hl], a
 
-NamingScreen_AdvanceCursor_CheckEndOfString:
+;NamingScreen_AdvanceCursor_CheckEndOfString:
 	ld hl, wNamingScreenCurNameLength
 	inc [hl]
 	call NamingScreen_GetTextCursorPosition
@@ -756,7 +756,7 @@ NamingScreen_AdvanceCursor_CheckEndOfString:
 .loop
 	ld a, [hli]
 	cp $ff
-	jr z, NamingScreen_AdvanceCursor_CheckEndOfString
+;	jr z, NamingScreen_AdvanceCursor_CheckEndOfString
 	cp c
 	jr z, .done
 	inc hl
@@ -764,7 +764,7 @@ NamingScreen_AdvanceCursor_CheckEndOfString:
 
 .done
 	ld a, [hl]
-	jr NamingScreen_LoadNextCharacter
+;	jr NamingScreen_LoadNextCharacter
 
 INCLUDE "data/text/unused_dakutens.asm"
 
@@ -1416,7 +1416,7 @@ MailComposition_TryAddLastCharacter:
 .asm_121cd
 	ld a, [hli]
 	cp $ff
-	jp z, NamingScreen_AdvanceCursor_CheckEndOfString
+;	jp z, NamingScreen_AdvanceCursor_CheckEndOfString
 	cp c
 	jr z, .asm_121d9
 	inc hl
@@ -1424,6 +1424,6 @@ MailComposition_TryAddLastCharacter:
 
 .asm_121d9
 	ld a, [hl]
-	jp NamingScreen_LoadNextCharacter
+;	jp NamingScreen_LoadNextCharacter
 
 INCLUDE "data/text/mail_input_chars.asm"

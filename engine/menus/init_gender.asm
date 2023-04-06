@@ -1,4 +1,4 @@
-InitCrystalData:
+InitCrystalData: ; only used in mobile
 	ld a, $1
 	ld [wd474], a
 	xor a
@@ -61,20 +61,21 @@ InitGenderScreen:
 	ld [wMusicFade], a
 	ld a, MUSIC_NONE
 	ld [wMusicFadeID], a
-	ld a, $0
+	xor a
 	ld [wMusicFadeID + 1], a
+	ld [wPlayerGender], a
+	ld [wd002], a
+	ld [wd003], a
 	ld c, 8
 	call DelayFrames
 	call ClearBGPalettes
-	call InitCrystalData
 	call LoadFontsExtra
 	hlcoord 0, 0
 	ld bc, SCREEN_HEIGHT * SCREEN_WIDTH
-	ld a, $0
+	xor a
 	call ByteFill
 	hlcoord 0, 0, wAttrmap
 	ld bc, SCREEN_HEIGHT * SCREEN_WIDTH
-	xor a
 	call ByteFill
 	ret
 

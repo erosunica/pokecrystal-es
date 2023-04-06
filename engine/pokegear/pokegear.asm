@@ -1441,14 +1441,14 @@ UpdateRadioStation:
 .loop
 	ld a, [hli]
 	cp -1
-	jr z, .nostation
+	jp z, NoRadioStation
 	cp d
 	jr z, .foundstation
 	inc hl
 	inc hl
 	jr .loop
 
-.nostation
+.nostation ; unused
 	call NoRadioStation
 	ret
 
@@ -1500,7 +1500,7 @@ RadioChannels:
 
 ; Oak's Pokémon Talk in the afternoon and evening
 	call .InJohto
-	jr nc, .NoSignal
+	jp nc, NoRadioStation
 	ld a, [wTimeOfDay]
 	and a
 	jp z, LoadStation_PokedexShow
@@ -1508,67 +1508,63 @@ RadioChannels:
 
 .PokemonMusic:
 	call .InJohto
-	jr nc, .NoSignal
+	jr nc, NoRadioStation
 	jp LoadStation_PokemonMusic
 
 .LuckyChannel:
 	call .InJohto
-	jr nc, .NoSignal
+	jr nc, NoRadioStation
 	jp LoadStation_LuckyChannel
 
 .BuenasPassword:
 	call .InJohto
-	jr nc, .NoSignal
+	jr nc, NoRadioStation
 	jp LoadStation_BuenasPassword
 
 .RuinsOfAlphRadio:
 	ld a, [wPokegearMapPlayerIconLandmark]
 	cp RUINS_OF_ALPH
-	jr nz, .NoSignal
+	jr nz, NoRadioStation
 	jp LoadStation_UnownRadio
 
 .PlacesAndPeople:
 	call .InJohto
-	jr c, .NoSignal
+	jr c, NoRadioStation
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_EXPN_CARD_F, a
-	jr z, .NoSignal
+	jr z, NoRadioStation
 	jp LoadStation_PlacesAndPeople
 
 .LetsAllSing:
 	call .InJohto
-	jr c, .NoSignal
+	jr c, NoRadioStation
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_EXPN_CARD_F, a
-	jr z, .NoSignal
+	jr z, NoRadioStation
 	jp LoadStation_LetsAllSing
 
 .PokeFluteRadio:
 	call .InJohto
-	jr c, .NoSignal
+	jr c, NoRadioStation
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_EXPN_CARD_F, a
-	jr z, .NoSignal
+	jr z, NoRadioStation
 	jp LoadStation_PokeFluteRadio
 
 .EvolutionRadio:
 ; This station airs in the Lake of Rage area when Team Rocket is still in Mahogany.
 	ld a, [wStatusFlags]
 	bit STATUSFLAGS_ROCKET_SIGNAL_F, a
-	jr z, .NoSignal
+	jr z, NoRadioStation
 	ld a, [wPokegearMapPlayerIconLandmark]
 	cp MAHOGANY_TOWN
 	jr z, .ok
 	cp ROUTE_43
 	jr z, .ok
 	cp LAKE_OF_RAGE
-	jr nz, .NoSignal
+	jr nz, NoRadioStation
 .ok
 	jp LoadStation_EvolutionRadio
-
-.NoSignal:
-	call NoRadioStation
-	ret
 
 .InJohto:
 ; if in Johto or on the S.S. Aqua, set carry
@@ -1585,6 +1581,17 @@ RadioChannels:
 
 .johto
 	scf
+	ret
+
+NoRadioStation:
+	call NoRadioMusic
+	call NoRadioName
+	xor a
+	ld [wPokegearRadioChannelBank], a
+	ld [wPokegearRadioChannelAddr], a
+	ld [wPokegearRadioChannelAddr + 1], a
+	ld a, $1
+	ldh [hBGMapMode], a
 	ret
 
 LoadStation_OaksPokemonTalk:
@@ -1746,17 +1753,6 @@ Radio_BackUpFarCallParams:
 	ld [wPokegearRadioChannelAddr], a
 	ld a, h
 	ld [wPokegearRadioChannelAddr + 1], a
-	ret
-
-NoRadioStation:
-	call NoRadioMusic
-	call NoRadioName
-	xor a
-	ld [wPokegearRadioChannelBank], a
-	ld [wPokegearRadioChannelAddr], a
-	ld [wPokegearRadioChannelAddr + 1], a
-	ld a, $1
-	ldh [hBGMapMode], a
 	ret
 
 NoRadioMusic:

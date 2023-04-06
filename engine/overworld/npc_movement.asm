@@ -261,44 +261,7 @@ WillObjectBumpIntoSomeoneElse:
 	ld hl, OBJECT_NEXT_MAP_Y
 	add hl, bc
 	ld e, [hl]
-	jr IsNPCAtCoord
-
-Unreferenced_Function7015:
-	ldh a, [hMapObjectIndexBuffer]
-	call GetObjectStruct
-	call .CheckWillBeFacingNPC
-	call IsNPCAtCoord
-	ret
-
-.CheckWillBeFacingNPC:
-	ld hl, OBJECT_NEXT_MAP_X
-	add hl, bc
-	ld d, [hl]
-	ld hl, OBJECT_NEXT_MAP_Y
-	add hl, bc
-	ld e, [hl]
-	call GetSpriteDirection
-	and a
-	jr z, .down
-	cp OW_UP
-	jr z, .up
-	cp OW_LEFT
-	jr z, .left
-	inc d
-	ret
-
-.down
-	inc e
-	ret
-
-.up
-	dec e
-	ret
-
-.left
-	dec d
-	ret
-
+	; fallthrough
 IsNPCAtCoord:
 	ld bc, wObjectStructs
 	xor a

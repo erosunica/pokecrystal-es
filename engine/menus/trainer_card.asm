@@ -404,15 +404,15 @@ TrainerCard_InitBorder:
 TrainerCard_Page2_3_PlaceLeadersFaces:
 	push de
 	push hl
-	ld [hli], a
-	inc a
-	ld [hli], a
-	inc a
-	ld [hli], a
-	inc a
-	ld [hli], a
-	inc a
 	ld de, SCREEN_WIDTH - 3
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
 	add hl, de
 	ld [hli], a
 	inc a
@@ -420,7 +420,6 @@ TrainerCard_Page2_3_PlaceLeadersFaces:
 	inc a
 	ld [hli], a
 	inc a
-	ld de, SCREEN_WIDTH - 3
 	add hl, de
 	ld [hli], a
 	inc a

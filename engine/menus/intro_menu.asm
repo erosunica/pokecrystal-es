@@ -1273,7 +1273,6 @@ Unreferenced_Function639b:
 
 Copyright:
 	call ClearTilemap
-	call LoadFontsExtra
 	ld de, CopyrightGFX
 	ld hl, vTiles2 tile $60
 	lb bc, BANK(CopyrightGFX), 29

@@ -208,14 +208,14 @@ MainMenu_PrintCurrentTimeAndDay:
 .PlaceBox:
 	call CheckRTCStatus
 	and $80
-	jr nz, .TimeFail
+	jp nz, SpeechTextbox
 	hlcoord 0, 14
 	ld b, 2
 	ld c, 18
 	call Textbox
 	ret
 
-.TimeFail:
+.TimeFail: ; unused
 	call SpeechTextbox
 	ret
 

@@ -14,7 +14,7 @@ CopyBytes::
 	jr nz, .CopyByte
 	ret
 
-SwapBytes::
+SwapBytes:: ; only used in mobile
 ; swap bc bytes between hl and de
 .Loop:
 	; stash [hl] away on the stack
@@ -117,7 +117,7 @@ GetFarWRAMByte::
 	ldh a, [hBuffer]
 	ret
 
-GetFarWRAMWord::
+GetFarWRAMWord:: ; only used in mobile
 	ldh [hBuffer], a
 	ldh a, [rSVBK]
 	push af
