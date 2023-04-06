@@ -42,7 +42,7 @@ DoBattle:
 	call EnemySwitch
 
 .wild
-	ld c, 40
+	ld c, 20
 	call DelayFrames
 
 .player_2
@@ -53,8 +53,6 @@ DoBattle:
 	jp z, LostBattle
 	call SafeLoadTempTilemapToTilemap
 	ld a, [wBattleType]
-	cp BATTLETYPE_DEBUG
-	jp z, .tutorial_debug
 	cp BATTLETYPE_TUTORIAL
 	jp z, .tutorial_debug
 	xor a
@@ -1981,7 +1979,7 @@ HandleEnemyMonFaint:
 
 	ld a, $1
 	ldh [hBGMapMode], a
-	ld c, 60
+	ld c, 20
 	call DelayFrames
 
 	ld a, [wBattleMode]
@@ -3607,8 +3605,6 @@ CheckIfCurPartyMonIsFitToFight:
 TryToRunAwayFromBattle:
 ; Run away from battle, with or without item
 	ld a, [wBattleType]
-	cp BATTLETYPE_DEBUG
-	jp z, .can_escape
 	cp BATTLETYPE_CONTEST
 	jp z, .can_escape
 	cp BATTLETYPE_TRAP
@@ -3766,9 +3762,9 @@ TryToRunAwayFromBattle:
 	call StopDangerSound
 	push de
 	ld de, SFX_RUN
-	call WaitPlaySFX
-	pop de
 	call WaitSFX
+	call PlaySFX
+	pop de
 	ld hl, BattleText_GotAwaySafely
 	call StdBattleTextbox
 	call WaitSFX
@@ -4802,8 +4798,6 @@ BattleMenu:
 	call LoadTempTilemapToTilemap
 
 	ld a, [wBattleType]
-	cp BATTLETYPE_DEBUG
-	jr z, .ok
 	cp BATTLETYPE_TUTORIAL
 	jr z, .ok
 	call EmptyBattleTextbox
@@ -5158,7 +5152,7 @@ EnemyMonEntrance:
 BattleMonEntrance:
 	call WithdrawMonText
 
-	ld c, 50
+	ld c, 25
 	call DelayFrames
 
 	ld hl, wPlayerSubStatus4
@@ -5192,7 +5186,7 @@ BattleMonEntrance:
 	ret
 
 PassedBattleMonEntrance:
-	ld c, 50
+	ld c, 25
 	call DelayFrames
 
 	hlcoord 9, 7
@@ -8959,7 +8953,7 @@ BattleStartMessage:
 	call PlaySFX
 	call WaitSFX
 
-	ld c, 20
+	ld c, 10
 	call DelayFrames
 
 	farcall Battle_GetTrainerName
