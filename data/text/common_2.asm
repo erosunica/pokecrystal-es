@@ -774,7 +774,7 @@ _UsedMove1Text::
 	line "usó @"
 	text_end
 
-_UsedMove2Text::
+_UsedMove2Text:: ; unused
 	text_start
 	line "usó @"
 	text_end
@@ -786,27 +786,26 @@ _UsedInsteadText::
 
 _MoveNameText::
 	text_ram wStringBuffer2
-	text_end
-
-	text_end ; unused
-
-_EndUsedMove1Text::
 	text "!"
 	done
 
-_EndUsedMove2Text::
+_EndUsedMove1Text:: ; unused
 	text "!"
 	done
 
-_EndUsedMove3Text::
+_EndUsedMove2Text:: ; unused
 	text "!"
 	done
 
-_EndUsedMove4Text::
+_EndUsedMove3Text:: ; unused
 	text "!"
 	done
 
-_EndUsedMove5Text::
+_EndUsedMove4Text:: ; unused
+	text "!"
+	done
+
+_EndUsedMove5Text:: ; unused
 	text "!"
 	done
 

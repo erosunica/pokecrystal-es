@@ -2,7 +2,7 @@
 ; Each move is given an identifier for what usedmovetext to use (0-4).
 ; Made redundant in English localization, where all are just "[mon]¯used [move]!"
 
-MoveGrammar:
+MoveGrammar: ; unused
 ; 0: originally "[mon]の¯[move]¯つかった!" ("[mon]¯used¯[move]!")
 	db SWORDS_DANCE
 	db GROWTH
