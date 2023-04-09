@@ -1437,7 +1437,7 @@ Script_memcall:
 	ld d, [hl]
 	; fallthrough
 
-ScriptCall:
+ScriptCall::
 	ld hl, wScriptStackSize
 	ld a, [hl]
 	cp 5
@@ -1465,7 +1465,7 @@ ScriptCall:
 	ld [wScriptPos + 1], a
 	ret
 
-CallCallback::
+CallCallback:: ; unused
 	ld a, [wScriptBank]
 	or $80
 	ld [wScriptBank], a
@@ -2739,7 +2739,6 @@ ExitScriptSubroutine:
 	add hl, de
 	ld a, [hli]
 	ld b, a
-	and " "
 	ld [wScriptBank], a
 	ld a, [hli]
 	ld e, a
