@@ -10,7 +10,7 @@ SaveMenu:
 	call AskOverwriteSaveFile
 	jr c, .refused
 	call PauseGameLogic
-	call _SavingDontTurnOffThePower
+	call SavedTheGame
 	call ResumeGameLogic
 	call ExitMenu
 	and a
@@ -85,7 +85,6 @@ ChangeBoxSaveGame:
 	call AskOverwriteSaveFile
 	jr c, .refused
 	call PauseGameLogic
-	call SavingDontTurnOffThePower
 	call SaveBox
 	pop de
 	ld a, e
@@ -103,7 +102,7 @@ Link_SaveGame:
 	call AskOverwriteSaveFile
 	jr c, .refused
 	call PauseGameLogic
-	call _SavingDontTurnOffThePower
+	call SavedTheGame
 	call ResumeGameLogic
 	and a
 
@@ -147,10 +146,7 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call LoadBox
 	call ResumeGameLogic
 	ld de, SFX_SAVE
-	call PlaySFX
-	ld c, 24
-	call DelayFrames
-	ret
+	jp PlaySFX
 
 StartMoveMonWOMail_SaveGame:
 	ld hl, MoveMonWOMailSaveText
@@ -161,7 +157,7 @@ StartMoveMonWOMail_SaveGame:
 	call AskOverwriteSaveFile
 	jr c, .refused
 	call PauseGameLogic
-	call _SavingDontTurnOffThePower
+	call SavedTheGame
 	call ResumeGameLogic
 	and a
 	ret
@@ -201,7 +197,7 @@ AddHallOfFameEntry:
 	call CloseSRAM
 	ret
 
-SaveGameData:
+SaveGameData: ; unused
 	call _SaveGameData
 	ret
 
@@ -210,22 +206,13 @@ AskOverwriteSaveFile:
 	and a
 	jr z, .erase
 	call CompareLoadedAndSavedPlayerID
-	jr z, .yoursavefile
+	ret z ; pretend the player answered "Yes", but without asking
 	ld hl, AnotherSaveFileText
 	call SaveTheGame_yesorno
 	jr nz, .refused
-	jr .erase
-
-.yoursavefile
-	ld hl, AlreadyASaveFileText
-	call SaveTheGame_yesorno
-	jr nz, .refused
-	jr .ok
 
 .erase
 	call ErasePreviousSave
-
-.ok
 	and a
 	ret
 
@@ -260,32 +247,17 @@ CompareLoadedAndSavedPlayerID:
 	cp c
 	ret
 
-_SavingDontTurnOffThePower:
-	call SavingDontTurnOffThePower
 SavedTheGame:
+	; SAVING...
+	ld hl, SavingDontTurnOffThePowerText
+	call PrintText
 	call _SaveGameData
-	; wait 32 frames
-	ld c, 32
-	call DelayFrames
-	; copy the original text speed setting to the stack
-	ld a, [wOptions]
-	push af
-	; set text speed to medium
-	ld a, TEXT_DELAY_MED
-	ld [wOptions], a
 	; <PLAYER> saved the game!
 	ld hl, SavedTheGameText
 	call PrintText
-	; restore the original text speed setting
-	pop af
-	ld [wOptions], a
 	ld de, SFX_SAVE
 	call WaitPlaySFX
-	call WaitSFX
-	; wait 30 frames
-	ld c, 30
-	call DelayFrames
-	ret
+	jp WaitSFX
 
 _SaveGameData:
 	ld a, TRUE
@@ -356,7 +328,7 @@ FindStackTop:
 	inc hl
 	jr .loop
 
-SavingDontTurnOffThePower:
+SavingDontTurnOffThePower: ; unused
 	; Prevent joypad interrupts
 	xor a
 	ldh [hJoypadReleased], a
@@ -1107,7 +1079,7 @@ SavedTheGameText:
 	text_far _SavedTheGameText
 	text_end
 
-AlreadyASaveFileText:
+AlreadyASaveFileText: ; unused
 	text_far _AlreadyASaveFileText
 	text_end
 

@@ -195,8 +195,7 @@ _WouldYouLikeToSaveTheGameText::
 	done
 
 _SavingDontTurnOffThePowerText::
-	text "GUARDANDO… NO"
-	line "APAGAR LA CONSOLA."
+	text "GUARDANDO…"
 	done
 
 _SavedTheGameText::
@@ -204,7 +203,7 @@ _SavedTheGameText::
 	line "el juego."
 	done
 
-_AlreadyASaveFileText::
+_AlreadyASaveFileText:: ; unused
 	text "Ya existe un"
 	line "archivo guardado."
 	cont "¿Sobrescribirlo?"
