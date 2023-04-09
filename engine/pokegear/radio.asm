@@ -644,7 +644,7 @@ ClearBottomLine:
 	ld a, " "
 	jp ByteFill
 
-PokedexShow_GetDexEntryBank:
+PokedexShow_GetDexEntryBank: ; unused
 	push hl
 	push de
 	ld a, [wCurPartySpecies]
@@ -696,9 +696,16 @@ PokedexShow2:
 	ld b, 0
 	add hl, bc
 	add hl, bc
+	add hl, bc
+	; b = bank
+	ld a, BANK(PokedexDataPointerTable)
+	call GetFarByte
+	ld b, a
+	inc hl
+	; hl = address
 	ld a, BANK(PokedexDataPointerTable)
 	call GetFarHalfword
-	call PokedexShow_GetDexEntryBank
+	ld a, b
 	push af
 	push hl
 	call CopyDexEntryPart1
