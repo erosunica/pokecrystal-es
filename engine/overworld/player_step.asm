@@ -1,10 +1,10 @@
 _HandlePlayerStep::
 	ld a, [wPlayerStepFlags]
-	add a, a ; PLAYERSTEP_START_F
+	add a ; PLAYERSTEP_START_F
 	jr c, .update_overworld_map
-	add a, a ; PLAYERSTEP_STOP_F
+	add a ; PLAYERSTEP_STOP_F
 	jr c, .update_player_coords
-	add a, a ; PLAYERSTEP_CONTINUE_F
+	add a ; PLAYERSTEP_CONTINUE_F
 	jr c, .finish
 	ret
 

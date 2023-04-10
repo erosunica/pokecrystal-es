@@ -61,7 +61,7 @@ PrintLetterDelay::
 ; Finish early if holding A or B.
 	call GetJoypad
 	ldh a, [hJoyDown]
-	and a, A_BUTTON | B_BUTTON
+	and A_BUTTON | B_BUTTON
 	jr z, .loop
 
 .end

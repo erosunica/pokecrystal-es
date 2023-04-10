@@ -2416,7 +2416,7 @@ Pokedex_LoadAnyFootprint:
 	dec a
 	and %111
 	swap a ; * $10
-	add a, a
+	add a
 	ld l, a
 	ld h, 0
 	add hl, de
