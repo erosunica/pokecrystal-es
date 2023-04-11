@@ -165,7 +165,7 @@ UpdateOverworldMap:
 	ld hl, wMetatileStandingY
 	dec [hl]
 	ld a, [hl]
-	cp -1 ; was 0
+	inc a
 	ret nz
 	ld [hl], $1
 	ld hl, wOverworldMapAnchor
@@ -192,7 +192,7 @@ UpdateOverworldMap:
 	ld hl, wMetatileStandingX
 	dec [hl]
 	ld a, [hl]
-	cp -1
+	inc a
 	ret nz
 	ld [hl], 1
 	ld hl, wOverworldMapAnchor
@@ -220,9 +220,8 @@ UpdateOverworldMap:
 	ret nz
 	ld [hl], 0
 	ld hl, wOverworldMapAnchor
-	ld a, [hl]
-	add 1
-	ld [hli], a
-	ret nc
+	inc [hl]
+	ret nz
+	inc hl
 	inc [hl]
 	ret
