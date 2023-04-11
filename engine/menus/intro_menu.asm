@@ -1062,7 +1062,7 @@ TitleScreenEntrance:
 	ld hl, wLYOverrides
 .wait
 ; Wait until the logo has draw to avoid tearing
-	ld a, [rLY]
+	ldh a, [rLY]
 	cp b
 	jr c, .wait
 	rr b ; logo height / 2

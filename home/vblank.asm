@@ -137,7 +137,7 @@ VBlank0::
 	call UpdateJoypad
 
 	; enable LCD interrupt if needed
-	ld a, [hLCDCPointer]
+	ldh a, [hLCDCPointer]
 	and a
 	jr z, .no_stat
 	ldh a, [rIE]
