@@ -761,7 +761,7 @@ DoAnimFrame:
 	ld a, [hl]
 	add $2
 	ld [hl], a
-	xor $ff
+	cpl
 	inc a
 	ld d, $20
 	call .Sprites_Sine
@@ -781,7 +781,7 @@ DoAnimFrame:
 	jr nc, .asm_8d67f
 	add $2
 	ld [hl], a
-	xor $ff
+	cpl
 	inc a
 	ld d, $20
 	call .Sprites_Sine
