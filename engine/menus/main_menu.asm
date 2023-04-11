@@ -143,7 +143,7 @@ MainMenu_GetWhichMenu:
 	ld a, [wSaveFileExists]
 	and a
 	jr nz, .next
-	ld a, $0 ; New Game
+	xor a ; New Game
 	ret
 
 .next

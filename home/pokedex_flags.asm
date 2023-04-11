@@ -9,8 +9,8 @@ CountSetBits::
 
 .count
 	srl e
-	ld a, 0
-	adc c
+	ld a, c
+	adc 0
 	ld c, a
 	dec d
 	jr nz, .count

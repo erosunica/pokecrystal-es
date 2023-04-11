@@ -614,7 +614,7 @@ ApplyAttrmap:
 	ld e, a
 	dec b
 	jr nz, .row
-	ld a, $0
+	xor a
 	ldh [rVBK], a
 	ret
 
@@ -864,7 +864,7 @@ InitCGBPals::
 	ld bc, $200 tiles
 	xor a
 	call ByteFill
-	ld a, BANK(vTiles0)
+	; a == 0 == BANK(vTiles0)
 	ldh [rVBK], a
 	ld a, 1 << rBGPI_AUTO_INCREMENT
 	ldh [rBGPI], a

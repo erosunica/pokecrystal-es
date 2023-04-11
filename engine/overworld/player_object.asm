@@ -20,7 +20,7 @@ SpawnPlayer:
 	ld a, -1
 	ld [wObjectFollow_Leader], a
 	ld [wObjectFollow_Follower], a
-	ld a, $0
+	xor a
 	ld hl, PlayerObjectTemplate
 	call CopyPlayerObjectTemplate
 	ld b, $0
@@ -43,7 +43,6 @@ SpawnPlayer:
 	ld a, PLAYER_OBJECT
 	ldh [hMapObjectIndexBuffer], a
 	ld bc, wMapObjects
-	ld a, PLAYER_OBJECT
 	ldh [hObjectStructIndexBuffer], a
 	ld de, wObjectStructs
 	call CopyMapObjectToObjectStruct

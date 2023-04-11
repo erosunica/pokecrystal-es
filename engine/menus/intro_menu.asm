@@ -328,9 +328,8 @@ Continue:
 .Check2Pass:
 	ld a, $8
 	ld [wMusicFade], a
-	ld a, LOW(MUSIC_NONE)
+	xor a ; MUSIC_NONE
 	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_NONE)
 	ld [wMusicFadeID + 1], a
 	call ClearBGPalettes
 	call CloseWindow
@@ -1165,7 +1164,7 @@ TitleScreenMain:
 	ret
 
 .incave
-	ld a, 0
+	xor a
 	jr .done
 
 .delete_save_data
@@ -1185,7 +1184,7 @@ TitleScreenMain:
 	inc [hl]
 
 ; Fade out the title screen music
-	xor a
+	xor a ; MUSIC_NONE
 	ld [wMusicFadeID], a
 	ld [wMusicFadeID + 1], a
 	ld hl, wMusicFade

@@ -4408,7 +4408,7 @@ HandleStatBoostingHeldItems:
 
 .DoPlayer:
 	call GetPartymonItem
-	ld a, $0
+	xor a
 	jp .HandleItem
 
 .DoEnemy:

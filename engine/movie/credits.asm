@@ -4,8 +4,8 @@ INCLUDE "constants.asm"
 SECTION "Credits", ROMX
 
 Credits::
+	xor a
 	bit 6, b ; Hall Of Fame
-	ld a, $0
 	jr z, .okay
 	ld a, $40
 .okay
@@ -493,7 +493,7 @@ GetCreditsPalette:
 	call .GetPalAddress
 
 	push hl
-	ld a, 0
+	xor a
 	call .UpdatePals
 	pop hl
 	ret

@@ -228,9 +228,9 @@ TownMap_InitCursorAndPlayerIconPositions:
 	ret
 
 Pokegear_InitJumptableIndices:
-	ld a, POKEGEARSTATE_CLOCKINIT
+	xor a ; POKEGEARSTATE_CLOCKINIT
 	ld [wJumptableIndex], a
-	xor a ; POKEGEARCARD_CLOCK
+	; a == 0 == POKEGEARCARD_CLOCK
 	ld [wPokegearCard], a
 	ret
 

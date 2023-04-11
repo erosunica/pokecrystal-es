@@ -59,9 +59,8 @@ AreYouABoyOrAreYouAGirlText:
 InitGenderScreen:
 	ld a, $10
 	ld [wMusicFade], a
-	ld a, MUSIC_NONE
+	xor a ; MUSIC_NONE
 	ld [wMusicFadeID], a
-	xor a
 	ld [wMusicFadeID + 1], a
 	ld [wPlayerGender], a
 	ld [wd002], a
