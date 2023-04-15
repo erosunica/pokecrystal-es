@@ -160,13 +160,12 @@ GetMonSubmenuItems:
 	ld a, MON_ITEM
 	call GetPartyParamLocation
 	ld d, [hl]
-	farcall ItemIsMail
+	farcall ItemIsMail ; set carry if mail
 	pop hl
-	ld a, MONMENUITEM_MAIL
-	jr c, .ok
-	ld a, MONMENUITEM_ITEM
-
-.ok
+	; carry ? MONMENUITEM_MAIL : MONMENUITEM_ITEM
+	sbc a
+	and MONMENUITEM_MAIL - MONMENUITEM_ITEM
+	add MONMENUITEM_ITEM
 	call AddMonMenuItem
 
 .skip2

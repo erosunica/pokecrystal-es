@@ -415,10 +415,9 @@ Script_yesorno:
 ; script command 0x4e
 
 	call YesNoBox
-	ld a, FALSE
-	jr c, .no
-	ld a, TRUE
-.no
+	; carry ? FALSE : TRUE
+	sbc a
+	inc a
 	ld [wScriptVar], a
 	ret
 
@@ -549,10 +548,9 @@ Script_verbosegiveitemvar:
 	ld [wItemQuantityChangeBuffer], a
 	ld hl, wNumItems
 	call ReceiveItem
-	ld a, TRUE
-	jr c, .ok2
-	xor a
-.ok2
+	; carry ? TRUE : FALSE
+	sbc a
+	and TRUE
 	ld [wScriptVar], a
 	call CurItemName
 	ld de, wStringBuffer1
@@ -2047,12 +2045,9 @@ Script_giveitem:
 	ld [wItemQuantityChangeBuffer], a
 	ld hl, wNumItems
 	call ReceiveItem
-	jr nc, .full
-	ld a, TRUE
-	ld [wScriptVar], a
-	ret
-.full
-	xor a
+	; carry ? TRUE : FALSE
+	sbc a
+	and TRUE
 	ld [wScriptVar], a
 	ret
 

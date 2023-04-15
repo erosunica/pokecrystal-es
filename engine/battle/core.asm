@@ -6136,12 +6136,9 @@ LoadEnemyMon:
 .TreeMon:
 ; If we're headbutting trees, some monsters enter battle asleep
 	call CheckSleepingTreeMon
-	ld a, TREEMON_SLEEP_TURNS
-	jr c, .UpdateStatus
-; Otherwise, no status
-	xor a
-
-.UpdateStatus:
+	; carry ? TREEMON_SLEEP_TURNS : 0 (no status)
+	sbc a
+	and TREEMON_SLEEP_TURNS
 	ld hl, wEnemyMonStatus
 	ld [hli], a
 
