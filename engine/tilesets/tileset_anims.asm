@@ -449,8 +449,8 @@ AnimateWaterTile:
 
 	add LOW(WaterTileFrames)
 	ld l, a
-	ld a, 0
 	adc HIGH(WaterTileFrames)
+	sub l
 	ld h, a
 
 ; The stack now points to the start of the tile for this frame.
@@ -694,8 +694,8 @@ AnimateTowerPillarTile:
 	ld hl, .frames
 	add l
 	ld l, a
-	ld a, 0
 	adc h
+	sub l
 	ld h, a
 	ld a, [hl]
 
@@ -712,8 +712,8 @@ AnimateTowerPillarTile:
 	inc hl
 	ld h, [hl]
 	ld l, a
-	ld a, 0
 	adc h
+	sub l
 	ld h, a
 
 	ld sp, hl
@@ -761,8 +761,8 @@ AnimateWhirlpoolTile:
 	inc hl
 	ld h, [hl]
 	ld l, a
-	ld a, 0
 	adc h
+	sub l
 	ld h, a
 
 ; The stack now points to the desired frame.
