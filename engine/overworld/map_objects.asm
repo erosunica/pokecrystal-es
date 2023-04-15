@@ -2288,9 +2288,10 @@ Function56cd:
 	ld d, 3
 .ok2
 	ld a, [hl]
-	srl a
-	srl a
-	srl a
+	rrca
+	rrca
+	rrca
+	and %00011111
 	cp SCREEN_WIDTH
 	jr c, .ok3
 	sub BG_MAP_WIDTH
@@ -2317,9 +2318,10 @@ Function56cd:
 	ld e, 3
 .ok5
 	ld a, [hl]
-	srl a
-	srl a
-	srl a
+	rrca
+	rrca
+	rrca
+	and %00011111
 	cp SCREEN_HEIGHT
 	jr c, .ok6
 	sub BG_MAP_HEIGHT
