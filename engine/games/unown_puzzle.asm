@@ -717,11 +717,11 @@ ConvertLoadedPuzzlePieces:
 	ret
 
 .GetEnlargedTile:
+	; a = [.EnlargedTiles + a]
 	push hl
-	ld hl, .EnlargedTiles
-	add l
+	add LOW(.EnlargedTiles)
 	ld l, a
-	adc h
+	adc HIGH(.EnlargedTiles)
 	sub l
 	ld h, a
 	ld a, [hl]
