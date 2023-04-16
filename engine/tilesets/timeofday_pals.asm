@@ -191,11 +191,9 @@ ReplaceTimeOfDayPals:
 	cp $4 ; Dark cave, needs Flash
 	jr z, .DarkCave
 	and $7
-	add l
-	ld l, a
-	adc h
-	sub l
-	ld h, a
+	ld e, a
+	ld d, 0
+	add hl, de
 	ld a, [hl]
 	ld [wTimeOfDayPalset], a
 	ret

@@ -1497,11 +1497,9 @@ IntroScene28:
 Intro_Scene24_ApplyPaletteFade:
 ; load the (a)th palette from .FadePals to all wBGPals2
 	ld hl, .FadePals
-	add l
-	ld l, a
-	ld a, $0
-	adc h
-	ld h, a
+	ld e, a
+	ld d, 0
+	add hl, de
 
 	ldh a, [rSVBK]
 	push af
@@ -1704,8 +1702,8 @@ Intro_Scene20_AppearUnown:
 	ld a, c
 	add e
 	ld e, a
-	ld a, $0
 	adc d
+	sub e
 	ld d, a
 
 	ld bc, 1 palettes
@@ -1716,8 +1714,8 @@ Intro_Scene20_AppearUnown:
 	ld a, c
 	add e
 	ld e, a
-	ld a, $0
 	adc d
+	sub e
 	ld d, a
 
 	ld bc, 1 palettes
