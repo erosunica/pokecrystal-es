@@ -558,12 +558,9 @@ BattleBGEffect_27:
 	add hl, bc
 	ld a, [hl]
 	and a
-	jr z, .user
 	ld a, $9
-	jr .okay
-
-.user
-	ld a, $8
+	jr nz, .okay
+	dec a ; ld a, $8
 .okay
 	ld hl, BG_EFFECT_STRUCT_03
 	add hl, bc
@@ -1419,11 +1416,8 @@ BattleBGEffect_Tackle:
 	add hl, bc
 	ld [hl], 0
 	call BGEffect_CheckBattleTurn
-	jr nz, .player_side
 	ld a, 2
-	jr .okay
-
-.player_side
+	jr z, .okay
 	ld a, -2
 .okay
 	ld [hl], a
@@ -1453,11 +1447,8 @@ BattleBGEffect_25:
 	add hl, bc
 	ld [hl], 0
 	call BGEffect_CheckBattleTurn
-	jr nz, .player_side
 	ld a, 2
-	jr .okay
-
-.player_side
+	jr z, .okay
 	ld a, -2
 .okay
 	ld [hl], a
@@ -1584,11 +1575,8 @@ BGEffect2d_2f_zero:
 	add hl, bc
 	ld [hl], $0
 	call BGEffect_CheckBattleTurn
-	jr nz, .player_turn
 	ld a, -2
-	jr .okay
-
-.player_turn
+	jr z, .okay
 	ld a, 2
 .okay
 	ld [hl], a
