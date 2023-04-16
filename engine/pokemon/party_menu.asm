@@ -500,9 +500,9 @@ PlacePartyMonMobileBattleSelection:
 	ld e, MON_NAME_LENGTH
 	sub e
 	ld l, a
-	ld a, h
-	sbc $0
-	ld h, a
+	jr nc, .noCarry
+	dec h
+.noCarry
 	ld de, .String_Kettei_Yameru
 	call PlaceString
 	ld b, $3
