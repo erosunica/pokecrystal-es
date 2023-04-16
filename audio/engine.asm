@@ -972,12 +972,9 @@ ApplyPitchSlide:
 	add hl, bc
 	add [hl]
 	ld [hl], a
-	adc e
-	sub [hl]
-	ld e, a
-	adc d
-	sub e
-	ld d, a
+	jr nc, .no_increment
+	inc de
+.no_increment
 	; Compare the dw at [Channel*PitchSlideTarget] to de.
 	; If frequency is greater, we're finished.
 	; Otherwise, load the frequency and set two flags.

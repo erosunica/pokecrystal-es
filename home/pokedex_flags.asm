@@ -9,9 +9,9 @@ CountSetBits::
 
 .count
 	srl e
-	ld a, c
-	adc 0
-	ld c, a
+	jr nc, .noCarry
+	inc c
+.noCarry
 	dec d
 	jr nz, .count
 
