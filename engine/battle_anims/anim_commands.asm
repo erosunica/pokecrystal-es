@@ -674,11 +674,12 @@ BattleAnimCmd_5GFX:
 	ld [hli], a
 	push bc
 	push hl
+	swap a
+	ld h, a
+	and $f0
 	ld l, a
-	ld h, $0
-rept 4
-	add hl, hl
-endr
+	xor h
+	ld h, a
 	ld de, vTiles0 tile BATTLEANIM_BASE_TILE
 	add hl, de
 	ld a, [wBattleAnimByte]

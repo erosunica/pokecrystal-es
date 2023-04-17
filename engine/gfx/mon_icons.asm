@@ -162,10 +162,7 @@ InitPartyMenuIcon:
 	call GetMemIconGFX
 	ldh a, [hObjectStructIndexBuffer]
 ; y coord
-	add a
-	add a
-	add a
-	add a
+	swap a ; a *= 16, assuming a < 16 since [hObjectStructIndexBuffer] < NUM_OBJECT_STRUCTS EQU 13
 	add $1c
 	ld d, a
 ; x coord
