@@ -205,37 +205,19 @@ GetMonSprite:
 	jr z, .BreedMon2
 	cp SPRITE_VARS
 	jr nc, .Variable
-	jr .Icon
-
-.Normal:
-	and a
-	ret
-
-.Icon:
+; Icon
 	sub SPRITE_POKEMON
 	ld e, a
 	ld d, 0
 	ld hl, SpriteMons
 	add hl, de
 	ld a, [hl]
-	jr .Mon
-
-.BreedMon1
-	ld a, [wBreedMon1Species]
-	jr .Mon
-
-.BreedMon2
-	ld a, [wBreedMon2Species]
-
 .Mon:
 	ld e, a
 	and a
 	jr z, .NoBreedmon
-
 	farcall LoadOverworldMonIcon
-
-	ld l, 1
-	ld h, 0
+	lb hl, 0, 1
 	scf
 	ret
 
@@ -247,14 +229,22 @@ GetMonSprite:
 	add hl, de
 	ld a, [hl]
 	and a
-	jp nz, GetMonSprite
-
+	jr nz, GetMonSprite
+	; fallthrough
 .NoBreedmon:
 	ld a, 1
-	ld l, 1
-	ld h, 0
+	lb hl, 0, 1
+.Normal:
 	and a
 	ret
+
+.BreedMon1:
+	ld a, [wBreedMon1Species]
+	jr .Mon
+
+.BreedMon2:
+	ld a, [wBreedMon2Species]
+	jr .Mon
 
 _DoesSpriteHaveFacings::
 ; Checks to see whether we can apply a facing to a sprite.
