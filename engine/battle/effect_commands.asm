@@ -2814,8 +2814,7 @@ SpeciesItemBoost:
 	ret nz
 
 ; Double the stat
-	sla l
-	rl h
+	add hl, hl
 	ret
 
 EnemyAttackDamage:
