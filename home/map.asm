@@ -745,10 +745,10 @@ FillMapConnections::
 	ld c, a
 	call GetAnyMapBlocksBank
 
-	ld a, [wNorthConnectionStripPointer]
+	ld hl, wNorthConnectionStripPointer
+	ld a, [hli]
+	ld h, [hl]
 	ld l, a
-	ld a, [wNorthConnectionStripPointer + 1]
-	ld h, a
 	ld a, [wNorthConnectionStripLocation]
 	ld e, a
 	ld a, [wNorthConnectionStripLocation + 1]
@@ -768,10 +768,10 @@ FillMapConnections::
 	ld c, a
 	call GetAnyMapBlocksBank
 
-	ld a, [wSouthConnectionStripPointer]
+	ld hl, wSouthConnectionStripPointer
+	ld a, [hli]
+	ld h, [hl]
 	ld l, a
-	ld a, [wSouthConnectionStripPointer + 1]
-	ld h, a
 	ld a, [wSouthConnectionStripLocation]
 	ld e, a
 	ld a, [wSouthConnectionStripLocation + 1]
@@ -791,10 +791,10 @@ FillMapConnections::
 	ld c, a
 	call GetAnyMapBlocksBank
 
-	ld a, [wWestConnectionStripPointer]
+	ld hl, wWestConnectionStripPointer
+	ld a, [hli]
+	ld h, [hl]
 	ld l, a
-	ld a, [wWestConnectionStripPointer + 1]
-	ld h, a
 	ld a, [wWestConnectionStripLocation]
 	ld e, a
 	ld a, [wWestConnectionStripLocation + 1]
@@ -814,10 +814,10 @@ FillMapConnections::
 	ld c, a
 	call GetAnyMapBlocksBank
 
-	ld a, [wEastConnectionStripPointer]
+	ld hl, wEastConnectionStripPointer
+	ld a, [hli]
+	ld h, [hl]
 	ld l, a
-	ld a, [wEastConnectionStripPointer + 1]
-	ld h, a
 	ld a, [wEastConnectionStripLocation]
 	ld e, a
 	ld a, [wEastConnectionStripLocation + 1]
@@ -1151,10 +1151,10 @@ ScrollMapDown::
 	call BackupBGMapRow
 	ld c, 2 * SCREEN_WIDTH
 	call ScrollBGMapPalettes
-	ld a, [wBGMapAnchor]
+	ld hl, wBGMapAnchor
+	ld a, [hli]
+	ld h, [hl]
 	ld l, a
-	ld a, [wBGMapAnchor + 1]
-	ld h, a
 	ld bc, BG_MAP_WIDTH tiles
 	add hl, bc
 ; cap d at HIGH(vBGMap0)
