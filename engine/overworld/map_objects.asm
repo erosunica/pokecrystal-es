@@ -2820,7 +2820,15 @@ InitSprites:
 	push hl
 	ld a, d
 	and $f
-	call .GetObjectStructPointer
+	add a
+	add LOW(.ObjectStructPointers)
+	ld l, a
+	adc HIGH(.ObjectStructPointers)
+	sub l
+	ld h, a
+	ld a, [hli]
+	ld b, [hl]
+	ld c, a
 	call .InitSprite
 	pop hl
 	pop bc
@@ -2952,18 +2960,7 @@ InitSprites:
 	scf
 	ret
 
-.GetObjectStructPointer:
-	ld c, a
-	ld b, 0
-	ld hl, .Addresses
-	add hl, bc
-	add hl, bc
-	ld c, [hl]
-	inc hl
-	ld b, [hl]
-	ret
-
-.Addresses:
+.ObjectStructPointers:
 	dw wPlayerStruct
 	dw wObject1Struct
 	dw wObject2Struct

@@ -96,26 +96,20 @@ GetTreeMons:
 ; Return nc if table a doesn't exist.
 
 	cp NUM_TREEMON_SETS
-	jr nc, .quit
+	ret nc
 
-	and a
-	jr z, .quit
-
-	ld e, a
-	ld d, 0
-	ld hl, TreeMons
-	add hl, de
-	add hl, de
+	add a
+	add LOW(TreeMons)
+	ld l, a
+	adc HIGH(TreeMons)
+	sub l
+	ld h, a
 
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
 
 	scf
-	ret
-
-.quit
-	xor a
 	ret
 
 INCLUDE "data/wild/treemons.asm"

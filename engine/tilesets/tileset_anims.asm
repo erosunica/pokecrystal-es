@@ -646,10 +646,11 @@ LavaBubbleAnim1:
 	inc a
 	and %011
 	swap a
-	ld e, a
-	ld d, 0
-	ld hl, LavaBubbleFrames
-	add hl, de
+	add LOW(LavaBubbleFrames)
+	ld l, a
+	adc HIGH(LavaBubbleFrames)
+	sub l
+	ld h, a	
 	ld sp, hl
 	ld hl, vTiles2 tile $5b
 	jp WriteTile
@@ -664,10 +665,11 @@ LavaBubbleAnim2:
 	add a
 	add a
 	add a
-	ld e, a
-	ld d, 0
-	ld hl, LavaBubbleFrames
-	add hl, de
+	add LOW(LavaBubbleFrames)
+	ld l, a
+	adc HIGH(LavaBubbleFrames)
+	sub l
+	ld h, a	
 	ld sp, hl
 	ld hl, vTiles2 tile $38
 	jp WriteTile

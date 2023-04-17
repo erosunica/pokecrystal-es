@@ -556,10 +556,11 @@ Credits_LoadBorderGFX:
 	add a
 	add e
 	add a
-	ld e, a
-	ld d, 0
-	ld hl, .Frames
-	add hl, de
+	add LOW(.Frames)
+	ld l, a
+	adc HIGH(.Frames)
+	sub l
+	ld h, a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
