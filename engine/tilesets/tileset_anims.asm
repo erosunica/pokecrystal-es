@@ -484,8 +484,8 @@ ForestTreeLeftAnimation:
 	add a
 	add LOW(ForestTreeLeftFrames)
 	ld l, a
-	ld a, 0
 	adc HIGH(ForestTreeLeftFrames)
+	sub l
 	ld h, a
 
 .asm_fc47d
@@ -521,8 +521,8 @@ ForestTreeRightAnimation:
 	add a
 	add LOW(ForestTreeLeftFrames)
 	ld l, a
-	ld a, 0
 	adc HIGH(ForestTreeLeftFrames)
+	sub l
 	ld h, a
 	push bc
 	ld bc, ForestTreeRightFrames - ForestTreeLeftFrames
@@ -555,8 +555,8 @@ ForestTreeLeftAnimation2:
 	add a
 	add LOW(ForestTreeLeftFrames)
 	ld l, a
-	ld a, 0
 	adc HIGH(ForestTreeLeftFrames)
+	sub l
 	ld h, a
 
 .asm_fc515
@@ -585,8 +585,8 @@ ForestTreeRightAnimation2:
 	add a
 	add LOW(ForestTreeLeftFrames)
 	ld l, a
-	ld a, 0
 	adc HIGH(ForestTreeLeftFrames)
+	sub l
 	ld h, a
 	push bc
 	ld bc, ForestTreeRightFrames - ForestTreeLeftFrames
