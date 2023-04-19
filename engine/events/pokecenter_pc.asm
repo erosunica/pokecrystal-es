@@ -87,7 +87,7 @@ PCPC_TURN_OFF     EQU 4
 .ChooseWhichPCListToUse:
 	call CheckReceivedDex
 	jr nz, .got_dex
-	ld a, 0 ; before Pokédex
+	xor a ; before Pokédex
 	ret
 
 .got_dex

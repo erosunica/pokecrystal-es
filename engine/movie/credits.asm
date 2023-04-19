@@ -193,7 +193,7 @@ Credits_UpdateGFXRequestPath:
 	ldh [hRequestedVTileSource], a
 	ld a, h
 	ldh [hRequestedVTileSource + 1], a
-	ld a, LOW(vTiles2)
+	xor a ; LOW(vTiles2)
 	ldh [hRequestedVTileDest], a
 	ld a, HIGH(vTiles2)
 	ldh [hRequestedVTileDest + 1], a
