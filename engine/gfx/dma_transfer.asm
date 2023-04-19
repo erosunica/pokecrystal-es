@@ -257,10 +257,7 @@ HDMATransfer_Wait123Scanlines_toBGMap:
 	ld d, a
 	ldh a, [hBGMapAddress]
 	ld e, a
-	ld c, 2 * SCREEN_HEIGHT
-
-HDMATransfer_Wait123Scanlines:
-	ld b, $7b
+	lb bc, $7b, 2 * SCREEN_HEIGHT
 	jr _continue_HDMATransfer
 
 HDMATransfer_Wait127Scanlines:

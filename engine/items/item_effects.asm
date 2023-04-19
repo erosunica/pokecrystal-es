@@ -1299,8 +1299,7 @@ RareCandyEffect:
 	predef CopyMonToTempMon
 
 	hlcoord 9, 0
-	ld b, 10
-	ld c, 9
+	lb bc, 10, 9
 	call Textbox
 
 	hlcoord 11, 1

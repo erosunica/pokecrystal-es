@@ -6,8 +6,7 @@ _OptionsMenu:
 	ld [hl], $1
 	call ClearBGPalettes
 	hlcoord 0, 0
-	ld b, 16
-	ld c, 18
+	lb bc, 16, 18
 	call Textbox
 	hlcoord 2, 2
 	ld de, StringOptions

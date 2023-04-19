@@ -67,8 +67,7 @@ MenuHeader_0x24b1d:
 DisplayCoinCaseBalance:
 	; Place a text box of size 1x7 at 11, 0.
 	hlcoord 11, 0
-	ld b, 1
-	ld c, 7
+	lb bc, 1, 7
 	call Textbox
 	hlcoord 12, 0
 	ld de, CoinString
@@ -84,8 +83,7 @@ DisplayCoinCaseBalance:
 
 DisplayMoneyAndCoinBalance:
 	hlcoord 5, 0
-	ld b, 3
-	ld c, 13
+	lb bc, 3, 13
 	call Textbox
 	hlcoord 6, 1
 	ld de, MoneyString
@@ -145,8 +143,7 @@ Unreferenced_Function24b8f:
 
 StartMenu_DrawBugContestStatusBox:
 	hlcoord 0, 0
-	ld b, 5
-	ld c, 18
+	lb bc, 5, 18
 	call Textbox
 	ret
 

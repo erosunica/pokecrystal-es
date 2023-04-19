@@ -207,8 +207,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	and $80
 	jp nz, SpeechTextbox
 	hlcoord 0, 14
-	ld b, 2
-	ld c, 18
+	lb bc, 2, 18
 	call Textbox
 	ret
 
