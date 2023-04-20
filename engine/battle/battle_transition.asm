@@ -84,59 +84,22 @@ DoBattleTransition:
 	ret
 
 .NonMobile_LoadPokeballTiles:
-	call LoadTrainerBattlePokeballTiles
-	hlbgcoord 0, 0
-	call ConvertTrainerBattlePokeballTilesTo2bpp
-	ret
-
-LoadTrainerBattlePokeballTiles:
 ; Load the tiles used in the Pokeball Graphic that fills the screen
 ; at the start of every Trainer battle.
-	ld de, TrainerBattlePokeballTiles
-	ld hl, vTiles0 tile BATTLETRANSITION_SQUARE
-	lb bc, BANK(TrainerBattlePokeballTiles), 2
-	call Request2bpp
-
-	ldh a, [rVBK]
-	push af
 	ld a, $1
 	ldh [rVBK], a
-
-	ld de, TrainerBattlePokeballTiles
-	ld hl, vTiles3 tile BATTLETRANSITION_SQUARE
-	lb bc, BANK(TrainerBattlePokeballTiles), 2
+	ld de, .TrainerBattlePokeballTiles
+	ld hl, vTiles3 tile $fe
+	lb bc, BANK(.TrainerBattlePokeballTiles), 2
 	call Request2bpp
-
-	pop af
+	xor a
 	ldh [rVBK], a
-	ret
+	ld de, .TrainerBattlePokeballTiles
+	ld hl, vTiles0 tile $fe
+	lb bc, BANK(.TrainerBattlePokeballTiles), 2
+	jp Request2bpp
 
-ConvertTrainerBattlePokeballTilesTo2bpp:
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wDecompressScratch)
-	ldh [rSVBK], a
-	push hl
-	ld hl, wDecompressScratch
-	ld bc, $28 tiles
-
-.loop
-	ld [hl], -1
-	inc hl
-	dec bc
-	ld a, c
-	or b
-	jr nz, .loop
-
-	pop hl
-	ld de, wDecompressScratch
-	lb bc, BANK(@), $28
-	call Request2bpp
-	pop af
-	ldh [rSVBK], a
-	ret
-
-TrainerBattlePokeballTiles:
+.TrainerBattlePokeballTiles:
 INCBIN "gfx/overworld/trainer_battle_pokeball_tiles.2bpp"
 
 BattleTransitionJumptable:
