@@ -1340,6 +1340,7 @@ InitMysteryGiftLayout:
 	ld b, SCGB_MYSTERY_GIFT
 	call GetSGBLayout
 	call SetPalettes
+	call DelayFrame
 	ret
 
 .Load5GFX:
