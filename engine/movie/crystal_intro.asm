@@ -1826,9 +1826,9 @@ Intro_LoadTilemap:
 	ld a, BG_MAP_WIDTH - SCREEN_WIDTH
 	add l
 	ld l, a
-	jr nc, .noCarry
-	inc h
-.noCarry
+	adc h
+	sub l
+	ld h, a
 	dec b
 	jr nz, .row
 
