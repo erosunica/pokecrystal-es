@@ -19,8 +19,17 @@ Reset::
 	jr Init
 
 _Start::
+	cp $11
+	jr z, .cgb
+	xor a
+	jr .load
+
+.cgb
 	ld a, $1
+
+.load
 	ldh [hCGB], a
+	ld a, $1
 	ldh [hSystemBooted], a
 
 Init::
@@ -54,6 +63,14 @@ Init::
 	xor a
 	ldh [rLCDC], a
 
+; Place stack at its default location in in HRAM for 'call nz, DoubleSpeed'
+	ld sp, $FFFE
+
+; Enable double speed now to speed up the rest of initialization
+	ldh a, [hCGB]
+	and a
+	call nz, DoubleSpeed
+
 ; Clear WRAM bank 0
 	ld hl, WRAM0_Begin
 	ld bc, WRAM0_End - WRAM0_Begin
@@ -65,6 +82,7 @@ Init::
 	or c
 	jr nz, .ByteFill
 
+; Move stack to WRAM
 	ld sp, wStack
 
 ; Clear HRAM
@@ -136,8 +154,6 @@ Init::
 	xor a
 	ld [MBC3LatchClock], a
 	ld [MBC3SRamEnable], a
-
-	call NormalSpeed
 
 	xor a
 	ldh [rIF], a
