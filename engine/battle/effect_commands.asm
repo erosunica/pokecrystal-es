@@ -3360,8 +3360,7 @@ BattleCommand_DefrostOpponent:
 	push hl
 	push af
 
-	ld a, EFFECT_ATTACK_UP
-	ld [hl], a
+	ld [hl], EFFECT_ATTACK_UP
 	call BattleCommand_StatUp
 
 	pop af

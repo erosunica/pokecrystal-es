@@ -471,8 +471,7 @@ ComposeMailMessage:
 	ld hl, wTempMailAuthorNationality
 	ld a, "E"
 	ld [hli], a
-	ld a, "S"
-	ld [hl], a
+	ld [hl], "S"
 
 	; If the terminating byte isn't found, wTempMailAuthorNationality will hold
 	; the last two bytes copied from wPlayerName

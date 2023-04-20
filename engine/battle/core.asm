@@ -1457,8 +1457,7 @@ HandleFutureSight:
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVarAddr
 	push af
-	ld a, FUTURE_SIGHT
-	ld [hl], a
+	ld [hl], FUTURE_SIGHT
 
 	callfar UpdateMoveData
 	xor a
@@ -4095,8 +4094,7 @@ PursuitSwitch:
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVarAddr
-	ld a, $ff
-	ld [hl], a
+	ld [hl], $ff
 
 	pop af
 	ld [wCurBattleMon], a

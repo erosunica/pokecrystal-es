@@ -870,8 +870,7 @@ Printer_PlaceTopBorder:
 	ld [hli], a
 	dec c
 	jr nz, .loop
-	ld a, "┐"
-	ld [hl], a
+	ld [hl], "┐"
 	ret
 
 Printer_PlaceSideBorders:
@@ -879,8 +878,7 @@ Printer_PlaceSideBorders:
 	ld de, SCREEN_WIDTH - 1
 	ld c, SCREEN_HEIGHT
 .loop
-	ld a, "│"
-	ld [hl], a
+	ld [hl], "│"
 	add hl, de
 	ld a, "│"
 	ld [hli], a
@@ -898,8 +896,7 @@ Printer_PlaceBottomBorders:
 	ld [hli], a
 	dec c
 	jr nz, .loop
-	ld a, "┘"
-	ld [hl], a
+	ld [hl], "┘"
 	ret
 
 Printer_PlaceEmptyBoxSlotString:
