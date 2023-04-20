@@ -365,8 +365,8 @@ TMHM_DisplayPocketItems:
 	push af
 	sub NUM_TMS
 	ld [wTempTMHM], a
-	ld [hl], "O"
-	inc hl
+	ld a, "O"
+	ld [hli], a
 	ld de, wTempTMHM
 	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
@@ -390,8 +390,8 @@ TMHM_DisplayPocketItems:
 	jr nc, .hm2
 	ld bc, SCREEN_WIDTH + 9
 	add hl, bc
-	ld [hl], "×"
-	inc hl
+	ld a, "×"
+	ld [hli], a
 	pop bc
 	push bc
 	ld a, b

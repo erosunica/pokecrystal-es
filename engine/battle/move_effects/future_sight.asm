@@ -64,8 +64,8 @@ BattleCommand_FutureSight:
 	ld hl, wCurDamage
 	ld a, [hl]
 	ld [de], a
-	ld [hl], 0
-	inc hl
+	ld a, 0
+	ld [hli], a
 	inc de
 	ld a, [hl]
 	ld [de], a

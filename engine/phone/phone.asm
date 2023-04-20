@@ -485,8 +485,8 @@ Phone_FirstOfTwoRings:
 Phone_CallerTextboxWithName2:
 	call Phone_CallerTextbox
 	hlcoord 1, 2
-	ld [hl], "☎"
-	inc hl
+	ld a, "☎"
+	ld [hli], a
 	inc hl
 	ld a, [wPhoneCaller]
 	ld e, a
@@ -570,8 +570,8 @@ Function90363:
 	push bc
 	call Phone_CallerTextbox
 	hlcoord 1, 1
-	ld [hl], "☎"
-	inc hl
+	ld a, "☎"
+	ld [hli], a
 	inc hl
 	ld d, h
 	ld e, l

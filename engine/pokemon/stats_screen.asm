@@ -364,10 +364,10 @@ StatsScreen_InitUpperHalf:
 	ld [wDeciramBuffer], a
 	ld [wCurSpecies], a
 	hlcoord 8, 0
-	ld [hl], "№"
-	inc hl
-	ld [hl], "."
-	inc hl
+	ld a, "№"
+	ld [hli], a
+	ld a, "."
+	ld [hli], a
 	hlcoord 10, 0
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	ld de, wDeciramBuffer

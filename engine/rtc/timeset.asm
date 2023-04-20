@@ -313,8 +313,8 @@ OakTimeWhatHoursText:
 	text_far _OakTimeWhatHoursText
 	text_asm
 	hlcoord 1, 16
-	ld [hl], "¿"
-	inc hl
+	ld a, "¿"
+	ld [hli], a
 	call DisplayHourOClock
 	ld a, "?"
 	ld [bc], a
@@ -337,8 +337,8 @@ OakTimeWhoaMinutesText:
 	text_far _OakTimeWhoaMinutesText
 	text_asm
 	hlcoord 8, 14
-	ld [hl], "¿"
-	inc hl
+	ld a, "¿"
+	ld [hli], a
 	call DisplayMinutesWithMinString
 	ld a, "?"
 	ld [bc], a
@@ -361,8 +361,8 @@ OakText_ResponseToSetTime:
 	call PrintAdjustedHour
 	ld h, d
 	ld l, e
-	ld [hl], ":"
-	inc hl
+	ld a, ":"
+	ld [hli], a
 	ld de, wInitMinuteBuffer
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum

@@ -307,8 +307,8 @@ BattleAnimFunction_PokeBall:
 	call ReinitBattleAnimFrameset
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $0
-	inc hl
+	xor a
+	ld [hli], a
 	ld [hl], $10
 .four
 	ld hl, BATTLEANIMSTRUCT_0F
@@ -500,8 +500,8 @@ BattleAnimFunction_07:
 	call BattleAnim_IncAnonJumptableIndex
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $30
-	inc hl
+	ld a, $30
+	ld [hli], a
 	ld [hl], $48
 .one
 	ld hl, BATTLEANIMSTRUCT_0F
@@ -1585,8 +1585,8 @@ Functioncd907:
 	call BattleAnim_IncAnonJumptableIndex
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $28
-	inc hl
+	ld a, $28
+	ld [hli], a
 	ld [hl], $0
 Functioncd913:
 	ld hl, BATTLEANIMSTRUCT_PARAM
@@ -2039,8 +2039,8 @@ BattleAnimFunction_1D:
 Functioncdb9f:
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $28
-	inc hl
+	ld a, $28
+	ld [hli], a
 	ld [hl], $10
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
@@ -3045,8 +3045,8 @@ Functionce12a:
 	ret nz
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $20
-	inc hl
+	ld a, $20
+	ld [hli], a
 	srl [hl]
 	ret
 
