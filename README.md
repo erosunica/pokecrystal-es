@@ -1,10 +1,20 @@
 # Pokémon - Edición Cristal [![Build Status][ci-badge]][ci]
 
+### Optimization branch.
+
+Focused on optimizing performance to reduce load times and energy consumption.
+
+Includes all the bug fixes from the [bugfix](../../tree/bugfix) branch.
+
+Credits: Rangi, FIQ, ariscop, aaaaaa123456789, Prism devs
+
+---
+
 This is a disassembly of the Spanish version of Pokémon Crystal: Pokémon - Edición Cristal.
 
 It builds the following ROM:
 
-- Pokemon - Edicion Cristal (Spain).gbc `sha1: 889a06fc0bb863666865aa69def0adf97945ac2a`
+- Pokemon - Edicion Cristal (Spain).gbc `sha1: `
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
