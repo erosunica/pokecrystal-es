@@ -802,7 +802,6 @@ Script_winlosstext:
 	ld [hli], a
 	call GetScriptByte
 	ld [hli], a
-	ld hl, wLossTextPointer
 	call GetScriptByte
 	ld [hli], a
 	call GetScriptByte
