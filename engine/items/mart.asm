@@ -578,9 +578,9 @@ RooftopSaleAskPurchaseQuantity:
 	add hl, de
 	add hl, de
 	inc hl
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	ret
 
 MartHowManyText:

@@ -5644,8 +5644,8 @@ CheckPlayerHasUsableMoves:
 .loop
 	dec d
 	jr z, .done
-	ld c, [hl]
-	inc hl
+	ld a, [hli]
+	ld c, a
 	dec b
 	jr z, .loop
 	or c
@@ -7595,8 +7595,8 @@ WithdrawMonText:
 	push bc
 	ld hl, wEnemyMonHP + 1
 	ld de, wEnemyHPAtTimeOfPlayerSwitch + 1
-	ld b, [hl]
-	dec hl
+	ld a, [hld]
+	ld b, a
 	ld a, [de]
 	sub b
 	ldh [hMultiplicand + 2], a

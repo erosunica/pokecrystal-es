@@ -337,10 +337,10 @@ GetStepVector:
 	ld h, 0
 	ld de, StepVectors
 	add hl, de
-	ld d, [hl]
-	inc hl
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	ld e, a
 	ld a, [hli]
 	ld h, [hl]
 	ret
@@ -901,12 +901,11 @@ MapObjectMovementPattern:
 	ld hl, .data_4a81
 	add hl, de
 	add hl, de
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
 	ld e, [hl]
 	ld hl, OBJECT_SPRITE_X_OFFSET
 	add hl, bc
-	ld [hl], d
+	ld [hl], a
 	ld hl, OBJECT_SPRITE_Y_OFFSET
 	add hl, bc
 	ld [hl], e
@@ -1633,9 +1632,9 @@ StepType0f:
 StepTypeTrackingObject:
 	ld hl, OBJECT_1D
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	ld hl, OBJECT_SPRITE
 	add hl, de
 	ld a, [hl]
@@ -2924,8 +2923,8 @@ InitSprites:
 	inc hl
 	ld [bc], a ; x
 	inc c
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
+	ld e, a
 	ldh a, [hFFC1]
 	bit ABSOLUTE_TILE_ID_F, e
 	jr z, .nope1

@@ -21,10 +21,10 @@ _AnimateTileset::
 
 ; 2-byte parameter
 ; All functions take input de.
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
 
 ; Function address
 	ld a, [hli]
@@ -341,9 +341,9 @@ endr
 ScrollTileUp:
 	ld h, d
 	ld l, e
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
 	ld e, [hl]
+	ld d, a
 	ld bc, TILE_WIDTH * 2 - 2
 	add hl, bc
 	ld a, TILE_WIDTH / 2
@@ -370,9 +370,9 @@ ScrollTileDown:
 	ld de, TILE_WIDTH * 2 - 2
 	push hl
 	add hl, de
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
 	ld e, [hl]
+	ld d, a
 	pop hl
 	ld a, TILE_WIDTH / 2
 .loop
@@ -704,10 +704,10 @@ AnimateTowerPillarTile:
 ; Destination
 	ld l, e
 	ld h, d
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
 
 ; Add the frame index to the starting address
 	add [hl]
@@ -748,10 +748,10 @@ AnimateWhirlpoolTile:
 ; de = VRAM address
 	ld l, e
 	ld h, d
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
 ; Tile address is now at hl.
 
 ; Get the tile for this frame.

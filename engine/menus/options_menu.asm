@@ -142,9 +142,9 @@ Options_TextSpeed:
 	ld hl, .Strings
 	add hl, bc
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	hlcoord 9, 3
 	call PlaceString
 	and a
@@ -349,9 +349,9 @@ Options_Print:
 	ld hl, .Strings
 	add hl, bc
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	hlcoord 9, 11
 	call PlaceString
 	and a

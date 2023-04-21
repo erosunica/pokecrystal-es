@@ -282,8 +282,8 @@ Script_memcallasm:
 	ld l, a
 	call GetScriptByte
 	ld h, a
-	ld b, [hl]
-	inc hl
+	ld a, [hli]
+	ld b, a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -780,9 +780,9 @@ Script_trainerflagaction:
 	xor a
 	ld [wScriptVar], a
 	ld hl, wTempTrainerEventFlag
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	call GetScriptByte
 	ld b, a
 	call EventFlagAction
@@ -1132,9 +1132,9 @@ ApplyEventActionAppearDisappear:
 	ld hl, MAPOBJECT_EVENT_FLAG
 	add hl, bc
 	pop bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	ld a, -1
 	cp e
 	jr nz, .okay
@@ -1427,10 +1427,10 @@ Script_memcall:
 	ld l, a
 	call GetScriptByte
 	ld h, a
-	ld b, [hl]
-	inc hl
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld e, a
 	ld d, [hl]
 	; fallthrough
 
@@ -1500,8 +1500,8 @@ Script_memjump:
 	ld l, a
 	call GetScriptByte
 	ld h, a
-	ld b, [hl]
-	inc hl
+	ld a, [hli]
+	ld b, a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -2287,9 +2287,9 @@ Script_givepoke:
 	ld b, a
 	jr z, .ok
 	ld hl, wScriptPos
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	call GetScriptByte
 	call GetScriptByte
 	call GetScriptByte

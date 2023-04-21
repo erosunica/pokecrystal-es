@@ -81,9 +81,9 @@ GetBattleAnimFrame:
 	ld hl, BattleAnimFrameData
 	add hl, de
 	add hl, de
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	ld hl, BATTLEANIMSTRUCT_FRAME
 	add hl, bc
 	ld l, [hl]
@@ -109,10 +109,10 @@ LoadBattleAnimGFX:
 	add hl, hl
 	ld de, AnimObjGFX
 	add hl, de
-	ld c, [hl]
-	inc hl
-	ld b, [hl]
-	inc hl
+	ld a, [hli]
+	ld c, a
+	ld a, [hli]
+	ld b, a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a

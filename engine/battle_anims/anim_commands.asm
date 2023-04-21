@@ -385,8 +385,7 @@ BattleAnimCmd_Ret:
 	ld hl, wBattleAnimFlags
 	res BATTLEANIM_IN_SUBROUTINE_F, [hl]
 	ld hl, wBattleAnimParent
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
 	ld hl, wBattleAnimAddress
 	ld [hl], e
@@ -401,8 +400,7 @@ BattleAnimCmd_Call:
 	ld d, a
 	push de
 	ld hl, wBattleAnimAddress
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
 	ld hl, wBattleAnimParent
 	ld [hl], e
@@ -459,9 +457,9 @@ BattleAnimCmd_Loop:
 	ld hl, wBattleAnimFlags
 	res BATTLEANIM_IN_LOOP_F, [hl]
 	ld hl, wBattleAnimAddress
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	inc de
 	inc de
 	ld [hl], d
@@ -488,9 +486,9 @@ BattleAnimCmd_JumpUntil:
 
 .dont_jump
 	ld hl, wBattleAnimAddress
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	inc de
 	inc de
 	ld [hl], d
@@ -515,9 +513,9 @@ BattleAnimCmd_IfVarEqual:
 	jr z, .jump
 
 	ld hl, wBattleAnimAddress
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	inc de
 	inc de
 	ld [hl], d
@@ -543,9 +541,9 @@ BattleAnimCmd_IfParamEqual:
 	jr z, .jump
 
 	ld hl, wBattleAnimAddress
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	inc de
 	inc de
 	ld [hl], d
@@ -572,9 +570,9 @@ BattleAnimCmd_IfParamAnd:
 	jr nz, .jump
 
 	ld hl, wBattleAnimAddress
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	inc de
 	inc de
 	ld [hl], d
@@ -1351,9 +1349,9 @@ ClearBattleAnims::
 	jr nz, .loop
 
 	ld hl, wFXAnimID
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	ld hl, BattleAnimations
 	add hl, de
 	add hl, de

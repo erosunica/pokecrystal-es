@@ -1416,9 +1416,9 @@ CheckTypeMatchup:
 	push de
 	push bc
 	ld d, a
-	ld b, [hl]
-	inc hl
+	ld a, [hli]
 	ld c, [hl]
+	ld b, a
 	ld a, 10 ; 1.0
 	ld [wTypeMatchup], a
 	ld hl, TypeMatchups

@@ -164,9 +164,9 @@ GetWindowStackTop::
 PlaceVerticalMenuItems::
 	call CopyMenuData
 	ld hl, wMenuDataPointer
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	call GetMenuTextStartCoord
 	call Coord2Tile ; hl now contains the tilemap address where we will start printing text.
 	inc de

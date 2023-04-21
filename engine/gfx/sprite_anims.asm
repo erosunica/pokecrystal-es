@@ -599,9 +599,9 @@ DoAnimFrame:
 .CutLeaves
 	ld hl, SPRITEANIMSTRUCT_0D
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	ld hl, $80
 	add hl, de
 	ld e, l
@@ -842,8 +842,8 @@ DoAnimFrame:
 
 .AnonymousJumptable:
 	ld hl, sp+$0
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
+	ld e, a
 	ld d, [hl]
 	inc de
 

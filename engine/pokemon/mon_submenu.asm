@@ -198,8 +198,8 @@ IsFieldMove:
 	jr z, .nope
 	cp MONMENU_MENUOPTION
 	jr z, .nope
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
+	ld d, a
 	ld a, [hli]
 	cp b
 	jr nz, .next

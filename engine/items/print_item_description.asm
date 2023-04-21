@@ -23,9 +23,9 @@ PrintItemDescription:
 	ld b, 0
 	add hl, bc
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	pop hl
 	jp PlaceString
 

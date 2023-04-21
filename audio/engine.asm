@@ -721,9 +721,9 @@ LoadNote:
 	; get frequency
 	ld hl, CHANNEL_FREQUENCY
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	; get direction of pitch slide
 	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
@@ -743,9 +743,9 @@ LoadNote:
 	; get frequency
 	ld hl, CHANNEL_FREQUENCY
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	; ????
 	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
@@ -770,13 +770,11 @@ LoadNote:
 	; get frequency
 	ld hl, CHANNEL_FREQUENCY
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
 	; get distance from pitch slide target
 	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
-	ld a, e
 	sub [hl]
 	ld e, a
 	sbc d
@@ -846,9 +844,9 @@ HandleTrackVibrato:
 	jr z, .vibrato
 	ld hl, CHANNEL_PITCH_OFFSET
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	ld hl, wCurTrackFrequency
 	ld a, [hli]
 	ld h, [hl]
@@ -948,9 +946,9 @@ ApplyPitchSlide:
 	; de = Frequency
 	ld hl, CHANNEL_FREQUENCY
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	; check whether pitch slide is going up or down
 	ld hl, CHANNEL_FLAGS3
 	add hl, bc
@@ -1084,12 +1082,11 @@ ReadNoiseSample:
 
 	; de = [wNoiseSampleAddress]
 	ld hl, wNoiseSampleAddress
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 
 	; is it empty?
-	ld a, e
 	or d
 	jr z, .quit
 
@@ -1426,8 +1423,7 @@ Music_Ret:
 	; copy LastMusicAddress to MusicAddress
 	ld hl, CHANNEL_LAST_MUSIC_ADDRESS
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
 	ld hl, CHANNEL_MUSIC_ADDRESS
 	add hl, bc
@@ -1448,9 +1444,9 @@ Music_Call:
 	; copy MusicAddress to LastMusicAddress
 	ld hl, CHANNEL_MUSIC_ADDRESS
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	ld hl, CHANNEL_LAST_MUSIC_ADDRESS
 	add hl, bc
 	ld [hl], e
@@ -1535,9 +1531,9 @@ Music_Loop:
 	; skip to next command
 	ld hl, CHANNEL_MUSIC_ADDRESS
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	inc de ; skip
 	inc de ; pointer
 	ld [hl], d
@@ -1577,9 +1573,9 @@ Music_JumpIf:
 	; get address
 	ld hl, CHANNEL_MUSIC_ADDRESS
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	; skip pointer
 	inc de
 	inc de
@@ -1628,9 +1624,9 @@ MusicEE:
 	; get address
 	ld hl, CHANNEL_MUSIC_ADDRESS
 	add hl, bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	; skip pointer
 	inc de
 	inc de
@@ -2065,9 +2061,9 @@ Music_RestartChannel:
 	ld l, a
 	call GetMusicByte
 	ld h, a
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	push bc ; save current channel
 	call LoadChannel
 	call StartChannel
@@ -2149,9 +2145,9 @@ GetFrequency:
 	add hl, hl ; skip 2 bytes for each
 	ld de, FrequencyTable
 	add hl, de
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	; get our octave
 	pop af
 	; shift right by [7 - octave] bits
@@ -2316,8 +2312,8 @@ _PlayMusic::
 	add hl, de ; pointer
 	ld a, [hli]
 	ld [wMusicBank], a
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
+	ld e, a
 	ld d, [hl] ; music header address
 	call LoadMusicByte ; store first byte of music header in a
 	rlca
@@ -2366,9 +2362,9 @@ _PlayCry::
 	ld a, [hli]
 	ld [wMusicBank], a
 
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 
 ; Read the cry's sound header
 	call LoadMusicByte
@@ -2530,9 +2526,9 @@ _PlaySFX::
 	ld a, [hli]
 	ld [wMusicBank], a
 	; get address
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 	; get # channels
 	call LoadMusicByte
 	rlca ; top 2
@@ -2580,9 +2576,9 @@ PlayStereoSFX::
 	ld a, [hli]
 	ld [wMusicBank], a
 ; address
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
 	ld d, [hl]
+	ld e, a
 
 ; bit 2-3
 	call LoadMusicByte
@@ -2669,8 +2665,8 @@ LoadChannel:
 	ld hl, ChannelPointers
 	add hl, bc
 	add hl, bc
-	ld c, [hl]
-	inc hl
+	ld a, [hli]
+	ld c, a
 	ld b, [hl] ; bc = channel pointer
 	ld hl, CHANNEL_FLAGS1
 	add hl, bc

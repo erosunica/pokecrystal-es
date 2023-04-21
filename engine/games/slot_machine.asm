@@ -467,13 +467,17 @@ SlotsAction_PayoutAnim:
 	dec hl
 	ld [hl], d
 	ld hl, wCoins
-	ld d, [hl]
-	inc hl
+	ld a, [hli]
 	ld e, [hl]
-	call Slots_CheckCoinCaseFull
-	jr c, .okay
+	ld d, a
+	cp HIGH(MAX_COINS)
+	jr c, .not_full
+	ld a, e
+	cp LOW(MAX_COINS)
+	jr nc, .full
+.not_full
 	inc de
-.okay
+.full
 	ld [hl], e
 	dec hl
 	ld [hl], d
@@ -521,7 +525,7 @@ Slots_LoadReelState:
 	ld [de], a
 	ret
 
-Slots_CheckCoinCaseFull:
+Slots_CheckCoinCaseFull: ; unused
 	ld a, d
 	cp HIGH(MAX_COINS)
 	jr c, .not_full
