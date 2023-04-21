@@ -399,7 +399,7 @@ MartUnderground:
 	db REVIVAL_HERB
 	db -1 ; end
 
-DefaultMart:
+DefaultMart: ; unused
 	db 2 ; # items
 	db POKE_BALL
 	db POTION

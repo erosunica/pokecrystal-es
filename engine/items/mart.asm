@@ -7,9 +7,15 @@
 	const MARTTEXT_SOLD_OUT
 
 OpenMartDialog::
-	call GetMart
 	ld a, c
 	ld [wMartType], a
+	ld hl, Marts
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld d, [hl]
+	ld e, a
+	ld b, BANK(Marts)
 	call LoadMartPointer
 	ld a, [wMartType]
 	ld hl, .dialogs
@@ -111,7 +117,7 @@ LoadMartPointer:
 	ld [wFacingDirection], a
 	ret
 
-GetMart:
+GetMart: ; unused
 	ld a, e
 	cp (Marts.End - Marts) / 2
 	jr c, .IsAMart
