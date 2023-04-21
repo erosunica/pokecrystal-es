@@ -1764,8 +1764,8 @@ ReviveFullHP:
 ContinueRevive:
 	ld a, MON_HP
 	call GetPartyParamLocation
-	ld [hl], d
-	inc hl
+	ld a, d
+	ld [hli], a
 	ld [hl], e
 	jp LoadCurHPIntoBuffer5
 

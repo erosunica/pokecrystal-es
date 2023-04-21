@@ -1058,24 +1058,24 @@ GetScriptByte::
 	push hl
 	push bc
 	ldh a, [hROMBank]
-	push af
+	ld c, a
 	ld a, [wScriptBank]
 	rst Bankswitch
 
 	ld hl, wScriptPos
 	ld a, [hli]
-	ld c, a
-	ld b, [hl]
+	ld h, [hl]
+	ld l, a
 
-	ld a, [bc]
-
-	inc bc
-	ld [hl], b
-	dec hl
-	ld [hl], c
-
+	ld a, [hli]
 	ld b, a
-	pop af
+
+	ld a, l
+	ld [wScriptPos], a
+	ld a, h
+	ld [wScriptPos + 1], a
+
+	ld a, c
 	rst Bankswitch
 	ld a, b
 	pop bc

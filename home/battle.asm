@@ -249,8 +249,8 @@ GetBattleAnimByte::
 	ld a, BANK(BattleAnimCommands)
 	rst Bankswitch
 
-	ld [hl], d
-	dec hl
+	ld a, d
+	ld [hld], a
 	ld [hl], e
 
 	pop de

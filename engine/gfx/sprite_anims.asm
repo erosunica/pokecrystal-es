@@ -609,8 +609,8 @@ DoAnimFrame:
 
 	ld hl, SPRITEANIMSTRUCT_0D
 	add hl, bc
-	ld [hl], e
-	inc hl
+	ld a, e
+	ld [hli], a
 	ld [hl], d
 
 	ld hl, SPRITEANIMSTRUCT_0C
