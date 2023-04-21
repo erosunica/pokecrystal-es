@@ -236,8 +236,6 @@ PlayerEvents:
 	and a
 	ret nz
 
-	call Dummy_CheckScriptFlags3Bit5 ; This is a waste of time
-
 	call CheckTrainerBattle_GetPlayerEvent
 	jr c, .ok
 
@@ -381,7 +379,7 @@ SetMinTwoStepWildEncounterCooldown: ; unused
 	ld [wWildEncounterCooldown], a
 	ret
 
-Dummy_CheckScriptFlags3Bit5:
+Dummy_CheckScriptFlags3Bit5: ; unused
 	call CheckBit5_ScriptFlags3
 	ret z
 	call ret_2f3e

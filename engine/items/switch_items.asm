@@ -225,20 +225,12 @@ Function24a6c:
 	ret
 
 ItemSwitch_ConvertItemFormatToDW:
-	push hl
 	ld a, [wMenuData_ScrollingMenuItemFormat]
 	ld c, a
 	ld b, 0
-	ld hl, .format_dws
-	add hl, bc
-	add hl, bc
-	ld c, [hl]
-	inc hl
-	ld b, [hl]
-	pop hl
 	ret
 
-.format_dws
+.format_dws ; unused
 	dw 0
 	dw 1
 	dw 2

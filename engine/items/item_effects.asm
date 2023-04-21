@@ -2806,8 +2806,6 @@ GetMaxPPOfMove:
 	ld hl, wTempMonMoves
 	dec a
 	jr z, .got_nonpartymon ; BOXMON
-
-	ld hl, wTempMonMoves ; Wasted cycles
 	dec a
 	jr z, .got_nonpartymon ; TEMPMON
 
