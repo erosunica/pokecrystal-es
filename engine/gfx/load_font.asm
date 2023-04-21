@@ -45,6 +45,10 @@ _LoadStandardFont::
 	ret
 
 _LoadFontsExtra1::
+	ld de, FontsExtra_SolidBlackGFX
+	ld hl, vTiles2 tile "■" ; $60
+	lb bc, BANK(FontsExtra_SolidBlackGFX), 1
+	call Get1bpp_2
 	ld de, FontsExtra2_UpArrowGFX
 	ld hl, vTiles2 tile "▲" ; $61
 	lb bc, BANK(FontsExtra2_UpArrowGFX), 1
