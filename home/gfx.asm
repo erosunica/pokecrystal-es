@@ -223,6 +223,8 @@ Request2bpp::
 	ldh a, [hTilesPerCycle]
 	add b
 	ldh [hTilesPerCycle], a
+	xor a
+	ldh [hRequested2bpp], a
 	jr .handleLoop
 
 .copyEightTilesAndContinue
@@ -269,7 +271,7 @@ Request1bpp::
 	jr nz, .copyEightTilesAndContinue
 .copyRemainingTilesAndExit
 	add TILES_PER_BLANK
-	ldh [hTilesPerCycle], a
+	ldh [hRequested1bpp], a
 	xor a
 	ldh [hTilesPerCycle], a
 	call DelayFrame
@@ -285,6 +287,8 @@ Request1bpp::
 	ldh a, [hTilesPerCycle]
 	add b
 	ldh [hTilesPerCycle], a
+	xor a
+	ldh [hRequested1bpp], a
 	jr .handleLoop
 
 .copyEightTilesAndContinue
