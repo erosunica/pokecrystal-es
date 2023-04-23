@@ -730,8 +730,8 @@ LoadNote:
 	ld a, e
 	sub [hl]
 	ld e, a
-	sbc d
-	add e
+	sbc a
+	add d
 	ld d, a
 	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
 	add hl, bc
@@ -752,8 +752,8 @@ LoadNote:
 	ld a, [hl]
 	sub e
 	ld e, a
-	sbc d
-	add e
+	sbc a
+	add d
 	ld d, a
 	; ????
 	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
@@ -777,8 +777,8 @@ LoadNote:
 	add hl, bc
 	sub [hl]
 	ld e, a
-	sbc d
-	add e
+	sbc a
+	add d
 	ld d, a
 	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
 	add hl, bc
@@ -998,8 +998,8 @@ ApplyPitchSlide:
 	ld e, [hl]
 	sub e
 	ld e, a
-	sbc d
-	add e
+	sbc a
+	add d
 	ld d, a
 	; [Channel*Field25] *= 2
 	; if rollover: Frequency -= 1
