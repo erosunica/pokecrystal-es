@@ -1327,7 +1327,7 @@ HealPowderEffect:
 
 	call UseStatusHealer
 
-	cp $0
+	and a
 	jr nz, .asm_efc9
 	ld c, HAPPINESS_BITTERPOWDER
 	farcall ChangeHappiness
@@ -1461,7 +1461,7 @@ RevivalHerbEffect:
 	jp c, StatusHealer_ExitMenu
 
 	call RevivePokemon
-	cp 0
+	and a
 	jr nz, .asm_f0c5
 
 	ld c, HAPPINESS_REVIVALHERB
@@ -1596,7 +1596,7 @@ EnergypowderEnergyRootCommon:
 	push bc
 	call ItemRestoreHP
 	pop bc
-	cp 0
+	and a
 	jr nz, .skip_happiness
 
 	farcall ChangeHappiness
