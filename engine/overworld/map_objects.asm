@@ -30,8 +30,7 @@ Function437b:
 	call .CheckObjectStillVisible
 	ret c
 	call .HandleStepType
-	call .HandleObjectAction
-	ret
+	jp .HandleObjectAction
 
 .CheckObjectStillVisible:
 	ld hl, OBJECT_FLAGS2
@@ -176,8 +175,7 @@ _HandleObjectAction:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call _hl_
-	ret
+	jp _hl_
 
 INCLUDE "engine/overworld/map_object_action.asm"
 
@@ -785,8 +783,7 @@ MapObjectMovementPattern:
 	ld hl, OBJECT_STEP_TYPE
 	add hl, bc
 	ld [hl], STEP_TYPE_03
-	call IncrementObjectMovementByteIndex
-	ret
+	jp IncrementObjectMovementByteIndex
 
 .MovementSpinTurnLeft:
 	ld de, .DirectionData_Counterclockwise
@@ -818,8 +815,7 @@ MapObjectMovementPattern:
 	ld a, [hl]
 	pop hl
 	ld [hl], a
-	call DecrementObjectMovementByteIndex
-	ret
+	jp DecrementObjectMovementByteIndex
 
 .MovementShadow:
 	call ._MovementShadow_Grass_Emote_BoulderDust
@@ -1099,8 +1095,7 @@ NPCJump:
 	ld hl, OBJECT_FLAGS2
 	add hl, bc
 	res OVERHEAD_F, [hl]
-	call IncrementObjectStructField1c
-	ret
+	jp IncrementObjectStructField1c
 
 .Land:
 	call AddStepVector
@@ -1141,8 +1136,7 @@ PlayerJump:
 	ld hl, wPlayerStepFlags
 	set PLAYERSTEP_STOP_F, [hl]
 	set PLAYERSTEP_MIDAIR_F, [hl]
-	call IncrementObjectStructField1c
-	ret
+	jp IncrementObjectStructField1c
 
 .initland
 	call GetNextTile
@@ -1188,8 +1182,7 @@ TeleportFrom:
 	add hl, bc
 	dec [hl]
 	ret nz
-	call IncrementObjectStructField1c
-	ret
+	jp IncrementObjectStructField1c
 
 .InitSpinRise:
 	ld hl, OBJECT_STEP_FRAME
@@ -1250,8 +1243,7 @@ TeleportTo:
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	ld [hl], 16
-	call IncrementObjectStructField1c
-	ret
+	jp IncrementObjectStructField1c
 
 .DoWait:
 	ld hl, OBJECT_STEP_DURATION
@@ -1269,8 +1261,7 @@ TeleportTo:
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	ld [hl], 16
-	call IncrementObjectStructField1c
-	ret
+	jp IncrementObjectStructField1c
 
 .DoDescent:
 	ld hl, OBJECT_ACTION
@@ -1296,8 +1287,7 @@ TeleportTo:
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	ld [hl], 16
-	call IncrementObjectStructField1c
-	ret
+	jp IncrementObjectStructField1c
 
 .DoFinalSpin:
 	ld hl, OBJECT_ACTION
@@ -1684,7 +1674,7 @@ StepType15:
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	dec [hl]
-	jr z, .ok
+	jp z, DeleteMapObject
 	ld a, [hl]
 	call .GetSign
 	ld hl, OBJECT_1D
@@ -1694,10 +1684,6 @@ StepType15:
 	ld a, [wPlayerStepVectorY]
 	add d
 	ld [wPlayerStepVectorY], a
-	ret
-
-.ok
-	call DeleteMapObject
 	ret
 
 .GetSign:
@@ -1808,8 +1794,7 @@ Function5000: ; unscripted?
 
 GetMovementByte:
 	ld hl, wMovementDataBank
-	call _GetMovementByte
-	ret
+	jp _GetMovementByte
 
 Function5015:
 	ld hl, OBJECT_MOVEMENT_BYTE_INDEX
@@ -2136,21 +2121,18 @@ Function5602:
 	call Function5629 ; respawn player
 	ld a, [wBattleScriptFlags]
 	bit 7, a
-	jr z, .ok
+	jp z, _UpdateSprites
 	ldh a, [hLastTalked]
 	and a
-	jr z, .ok
+	jp z, _UpdateSprites
 	call Function5629 ; respawn opponent
-.ok
-	call _UpdateSprites
-	ret
+	jp _UpdateSprites
 
 Function561d:
 	call Function5645 ; clear sprites
 	ld a, PLAYER
 	call Function5629 ; respawn player
-	call _UpdateSprites
-	ret
+	jp _UpdateSprites
 
 Function5629:
 	cp NUM_OBJECTS
@@ -2166,8 +2148,7 @@ Function5629:
 	call GetObjectStruct
 	call DoesObjectHaveASprite
 	ret z
-	call Function5673
-	ret
+	jp Function5673
 
 Function5645:
 	xor a
@@ -2224,8 +2205,7 @@ Function5688:
 	ld hl, OBJECT_NEXT_TILE
 	add hl, bc
 	ld [hl], a
-	call UpdateTallGrassFlags
-	ret
+	jp UpdateTallGrassFlags
 
 Function56a3:
 	ld hl, OBJECT_NEXT_MAP_X
@@ -2372,8 +2352,7 @@ Function56cd:
 
 HandleNPCStep::
 	call .ResetStepVector
-	call .DoStepsForAllObjects
-	ret
+	jp .DoStepsForAllObjects
 
 .ResetStepVector:
 	xor a
@@ -2413,8 +2392,7 @@ RefreshPlayerSprite:
 	call .TryResetPlayerAction
 	farcall CheckWarpFacingDown
 	call c, SpawnInFacingDown
-	call .SpawnInCustomFacing
-	ret
+	jp .SpawnInCustomFacing
 
 .TryResetPlayerAction:
 	ld hl, wPlayerSpriteSetupFlags
@@ -2441,8 +2419,7 @@ SpawnInFacingDown:
 	ld a, DOWN
 ContinueSpawnFacing:
 	ld bc, wPlayerStruct
-	call SetSpriteDirection
-	ret
+	jp SetSpriteDirection
 
 _SetPlayerPalette:
 	ld a, d
@@ -2487,8 +2464,7 @@ SetLeaderIfVisible:
 
 StopFollow::
 	call ResetLeader
-	call ResetFollower
-	ret
+	jp ResetFollower
 
 ResetLeader:
 	ld a, -1
@@ -2748,8 +2724,7 @@ InitSprites:
 	ld c, PRIORITY_NORM
 	call .InitSpritesByPriority
 	ld c, PRIORITY_LOW
-	call .InitSpritesByPriority
-	ret
+	jp .InitSpritesByPriority
 
 .DeterminePriorities:
 	xor a

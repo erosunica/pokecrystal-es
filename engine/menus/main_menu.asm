@@ -208,12 +208,10 @@ MainMenu_PrintCurrentTimeAndDay:
 	jp nz, SpeechTextbox
 	hlcoord 0, 14
 	lb bc, 2, 18
-	call Textbox
-	ret
+	jp Textbox
 
 .TimeFail: ; unused
-	call SpeechTextbox
-	ret
+	jp SpeechTextbox
 
 .PlaceTime:
 	ld a, [wSaveFileExists]
@@ -233,8 +231,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	ld [hli], a
 	ld de, hMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
-	call PrintNum
-	ret
+	jp PrintNum
 
 .min
 ; unused
@@ -243,8 +240,7 @@ MainMenu_PrintCurrentTimeAndDay:
 .PrintTimeNotSet:
 	hlcoord 1, 14
 	ld de, .TimeNotSet
-	call PlaceString
-	ret
+	jp PlaceString
 
 .TimeNotSet:
 	db "HORA NO FIJADA@"
@@ -265,8 +261,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	ld h, b
 	ld l, c
 	ld de, .Day
-	call PlaceString
-	ret
+	jp PlaceString
 
 .Days:
 	db "DOMINGO@"
@@ -285,8 +280,7 @@ Function49ed0:
 	call ClearTilemap
 	call LoadFontsExtra
 	call LoadStandardFont
-	call ClearWindowData
-	ret
+	jp ClearWindowData
 
 MainMenu_NewGame:
 	farcall NewGame

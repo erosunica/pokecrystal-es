@@ -447,8 +447,7 @@ SpecialMapMusic::
 GetMapMusic_MaybeSpecial::
 	call SpecialMapMusic
 	ret c
-	call GetMapMusic
-	ret
+	jp GetMapMusic
 
 Unreferenced_Function3d9f::
 ; Places a BCD number at the

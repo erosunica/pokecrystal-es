@@ -40,8 +40,7 @@ _InterpretMobileMenu::
 	ld a, [wMenuJoypadFilter]
 	and c
 	jr z, .loop
-	call Mobile_GetMenuSelection
-	ret
+	jp Mobile_GetMenuSelection
 
 .quit
 	ld a, [w2DMenuNumCols]
@@ -717,8 +716,7 @@ Unreferenced_Function24423:
 	ld a, c
 	or b
 	jr nz, .loop
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 Error_Cant_ExitMenu:
 	ld hl, .WindowPoppingErrorText

@@ -740,8 +740,7 @@ Function104dfe:
 	ld d, $5
 	call Function104dc5
 	ld d, $5
-	call Function104dd1
-	ret
+	jp Function104dd1
 
 Function104e3a:
 	; Wait a random amount of time
@@ -893,8 +892,7 @@ Function104ed6:
 	ld d, $5
 	call Function104dc5
 	ld d, $11
-	call Function104dd1
-	ret
+	jp Function104dd1
 
 Function104f42:
 	ldh a, [hMGStatusFlags]
@@ -1042,8 +1040,7 @@ Function104faf:
 	call Function104da9
 	jp z, Function104f42
 	ld d, $10
-	call Function104dd1
-	ret
+	jp Function104dd1
 
 Function10502e:
 	ld b, $0
@@ -1340,8 +1337,7 @@ InitMysteryGiftLayout:
 	ld b, SCGB_MYSTERY_GIFT
 	call GetSGBLayout
 	call SetPalettes
-	call DelayFrame
-	ret
+	jp DelayFrame
 
 .Load5GFX:
 	ld b, 5
@@ -1512,8 +1508,7 @@ Function105777:
 	call WaitBGMap
 	ld b, SCGB_DIPLOMA
 	call GetSGBLayout
-	call SetPalettes
-	ret
+	jp SetPalettes
 
 Function10578c:
 	ld de, wLinkData
@@ -1542,8 +1537,7 @@ Function10578c:
 	ld hl, $a007 ; address of MBC30 bank
 	ld bc, $c
 	call CopyBytes
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 Function1057d7:
 	call ClearBGPalettes

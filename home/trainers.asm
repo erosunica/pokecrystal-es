@@ -242,5 +242,4 @@ PrintWinLossText::
 	ld a, [wMapScriptsBank]
 	call FarPrintText
 	call WaitBGMap
-	call WaitPressAorB_BlinkCursor
-	ret
+	jp WaitPressAorB_BlinkCursor

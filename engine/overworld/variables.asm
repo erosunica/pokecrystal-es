@@ -17,17 +17,12 @@ _GetVarAction::
 	ld a, [hl]
 	ld b, a
 	and RETVAR_EXECUTE
-	jr nz, .call
+	jp nz, _de_
 	ld a, b
 	and RETVAR_ADDR_DE
 	ret nz
 	ld a, [de]
-	jr .loadstringbuffer2
-
-.call
-	call _de_
-	ret
-
+	; fallthrough
 .loadstringbuffer2
 	ld de, wStringBuffer2
 	ld [de], a

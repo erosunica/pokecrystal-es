@@ -153,8 +153,7 @@ GetTreeMon:
 	ld a, [hli]
 	cp -1
 	jr nz, .skip
-	call SelectTreeMon
-	ret
+	jp SelectTreeMon
 
 SelectTreeMon:
 ; Read a TreeMons table and pick one monster at random.

@@ -221,8 +221,7 @@ PrintPartyMonPage1:
 	call WaitBGMap
 	ld b, SCGB_STATS_SCREEN_HP_PALS
 	call GetSGBLayout
-	call SetPalettes
-	ret
+	jp SetPalettes
 
 PrintPartyMonPage2:
 	call ClearBGPalettes
@@ -271,13 +270,11 @@ PrintPartyMonPage2:
 	call WaitBGMap
 	ld b, SCGB_STATS_SCREEN_HP_PALS
 	call GetSGBLayout
-	call SetPalettes
-	ret
+	jp SetPalettes
 
 .PrintTempMonStats:
 	lb bc, 2, 3
-	call PrintNum
-	ret
+	jp PrintNum
 
 Function1dc50e:
 	ld bc, NAME_LENGTH
@@ -293,14 +290,11 @@ Function1dc51a:
 
 	ld [wNamedObjectIndexBuffer], a
 	call GetMoveName
-	jr .got_string
+	jp PlaceString
 
 .no_move
 	ld de, String1dc584
-
-.got_string
-	call PlaceString
-	ret
+	jp PlaceString
 
 Function1dc52c:
 	farcall GetGender

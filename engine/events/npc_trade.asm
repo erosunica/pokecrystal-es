@@ -5,31 +5,31 @@ NPCTrade::
 	ld b, CHECK_FLAG
 	call TradeFlagAction
 	ld a, TRADE_DIALOG_AFTER
-	jr nz, .done
+	jp nz, PrintTradeText
 
 	ld a, TRADE_DIALOG_INTRO
 	call PrintTradeText
 
 	call YesNoBox
 	ld a, TRADE_DIALOG_CANCEL
-	jr c, .done
+	jp c, PrintTradeText
 
 ; Select givemon from party
 	ld b, PARTYMENUACTION_GIVE_MON
 	farcall SelectTradeOrDayCareMon
 	ld a, TRADE_DIALOG_CANCEL
-	jr c, .done
+	jp c, PrintTradeText
 
 	ld e, NPCTRADE_GIVEMON
 	call GetTradeAttribute
 	ld a, [wCurPartySpecies]
 	cp [hl]
 	ld a, TRADE_DIALOG_WRONG
-	jr nz, .done
+	jp nz, PrintTradeText
 
 	call CheckTradeGender
 	ld a, TRADE_DIALOG_WRONG
-	jr c, .done
+	jp c, PrintTradeText
 
 	ld b, SET_FLAG
 	call TradeFlagAction
@@ -47,10 +47,7 @@ NPCTrade::
 	call RestartMapMusic
 
 	ld a, TRADE_DIALOG_COMPLETE
-
-.done
-	call PrintTradeText
-	ret
+	jp PrintTradeText
 
 .TradeAnimation:
 	call DisableSpriteUpdates
@@ -63,8 +60,7 @@ NPCTrade::
 	ld [wcf64], a
 	pop af
 	ld [wJumptableIndex], a
-	call ReturnToMapWithSpeechTextbox
-	ret
+	jp ReturnToMapWithSpeechTextbox
 
 CheckTradeGender:
 	xor a
@@ -288,8 +284,7 @@ GetTradeAttribute:
 
 Trade_GetAttributeOfCurrentPartymon:
 	ld a, [wCurPartyMon]
-	call AddNTimes
-	ret
+	jp AddNTimes
 
 Trade_GetAttributeOfLastPartymon:
 	ld a, [wPartyCount]
@@ -309,8 +304,7 @@ GetTradeMonName:
 
 CopyTradeName:
 	ld bc, NAME_LENGTH
-	call CopyBytes
-	ret
+	jp CopyBytes
 
 Unreferenced_Functionfcdfb:
 	ld bc, 4
@@ -399,8 +393,7 @@ PrintTradeText:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call PrintText
-	ret
+	jp PrintText
 
 TradeTexts:
 ; entries correspond to TRADE_DIALOG_* × TRADE_DIALOGSET_* constants

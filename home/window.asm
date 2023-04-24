@@ -38,10 +38,9 @@ CloseText::
 	call SafeUpdateSprites
 	ld a, $90
 	ldh [hWY], a
-	call ReplaceKrisSprite
 	farcall InitMapNameSign
 	farcall LoadOverworldFont
-	ret
+	jp ReplaceKrisSprite
 
 OpenText::
 	call ClearWindowData

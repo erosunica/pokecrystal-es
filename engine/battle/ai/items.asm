@@ -14,11 +14,11 @@ AI_SwitchOrTryItem:
 
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
-	jr nz, DontSwitch
+	jp nz, AI_TryItem
 
 	ld a, [wEnemyWrapCount]
 	and a
-	jr nz, DontSwitch
+	jp nz, AI_TryItem
 
 	ld hl, TrainerClassAttributes + TRNATTR_AI_ITEM_SWITCH
 	ld a, [wInBattleTowerBattle] ; always load the first trainer class in wTrainerClass for BattleTower-Trainers
@@ -38,22 +38,21 @@ AI_SwitchOrTryItem:
 	jp nz, SwitchSometimes
 	; fallthrough
 
-DontSwitch:
-	call AI_TryItem
-	ret
+DontSwitch: ; unused
+	jp AI_TryItem
 
 SwitchOften:
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
-	jp z, DontSwitch
+	jp z, AI_TryItem
 
 	cp $10
 	jr nz, .not_10
 	call Random
 	cp 50 percent + 1
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_10
 
 	cp $20
@@ -61,13 +60,13 @@ SwitchOften:
 	call Random
 	cp 79 percent - 1
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_20
 
 	; $30
 	call Random
 	cp 4 percent
-	jp c, DontSwitch
+	jp c, AI_TryItem
 
 .switch
 	ld a, [wEnemySwitchMonParam]
@@ -81,14 +80,14 @@ SwitchRarely:
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
-	jp z, DontSwitch
+	jp z, AI_TryItem
 
 	cp $10
 	jr nz, .not_10
 	call Random
 	cp 8 percent
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_10
 
 	cp $20
@@ -96,13 +95,13 @@ SwitchRarely:
 	call Random
 	cp 12 percent
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_20
 
 	; $30
 	call Random
 	cp 79 percent - 1
-	jp c, DontSwitch
+	jp c, AI_TryItem
 
 .switch
 	ld a, [wEnemySwitchMonParam]
@@ -115,14 +114,14 @@ SwitchSometimes:
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
-	jp z, DontSwitch
+	jp z, AI_TryItem
 
 	cp $10
 	jr nz, .not_10
 	call Random
 	cp 20 percent - 1
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_10
 
 	cp $20
@@ -130,13 +129,13 @@ SwitchSometimes:
 	call Random
 	cp 50 percent + 1
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_20
 
 	; $30
 	call Random
 	cp 20 percent - 1
-	jp c, DontSwitch
+	jp c, AI_TryItem
 
 .switch
 	ld a, [wEnemySwitchMonParam]

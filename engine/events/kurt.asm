@@ -1,7 +1,6 @@
 Kurt_PrintTextWhichApricorn:
 	ld hl, .WhichApricornText
-	call PrintText
-	ret
+	jp PrintText
 
 .WhichApricornText:
 	text_far _WhichApricornText
@@ -9,8 +8,7 @@ Kurt_PrintTextWhichApricorn:
 
 Kurt_PrintTextHowMany:
 	ld hl, .HowManyShouldIMakeText
-	call PrintText
-	ret
+	jp PrintText
 
 .HowManyShouldIMakeText:
 	text_far _HowManyShouldIMakeText
@@ -112,7 +110,7 @@ Kurt_SelectQuantity:
 	ld a, [wCurItem]
 	ld [wMenuSelection], a
 	call Kurt_GetQuantityOfApricorn
-	jr z, .done
+	jp z, CloseWindow
 	ld a, [wItemQuantityChangeBuffer]
 	ld [wItemQuantityBuffer], a
 	ld a, $1
@@ -135,14 +133,11 @@ Kurt_SelectQuantity:
 	pop bc
 	ld a, b
 	cp -1
-	jr z, .done
+	jp z, CloseWindow
 	ld a, [wItemQuantityChangeBuffer]
 	ld [wItemQuantityChangeBuffer], a ; What is the point of this operation?
 	scf
-
-.done
-	call CloseWindow
-	ret
+	jp CloseWindow
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags

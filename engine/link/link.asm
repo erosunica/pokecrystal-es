@@ -494,8 +494,7 @@ LinkTimeout:
 	call ClearScreen
 	ld b, SCGB_DIPLOMA
 	call GetSGBLayout
-	call WaitBGMap2
-	ret
+	jp WaitBGMap2
 
 .LinkTimeoutText:
 	text_far _LinkTimeoutText
@@ -1946,7 +1945,7 @@ String_TooBadTheTradeWasCanceled:
 LinkTextboxAtHL:
 	ld d, h
 	ld e, l
-	farcall LinkTextbox
+	farcall _LinkTextbox
 	ret
 
 LoadTradeScreenBorder:
@@ -1955,8 +1954,7 @@ LoadTradeScreenBorder:
 
 SetTradeRoomBGPals:
 	farcall _LoadTradeRoomBGPals
-	call SetPalettes
-	ret
+	jp SetPalettes
 
 Unreferenced_Function28f09:
 	hlcoord 0, 0
@@ -2063,8 +2061,7 @@ Function29c67:
 	add hl, bc
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
-	call GetPokemonName
-	ret
+	jp GetPokemonName
 
 EnterTimeCapsule:
 	ld c, 10

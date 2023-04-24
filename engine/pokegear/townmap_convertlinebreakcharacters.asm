@@ -23,5 +23,4 @@ UnusedTownMap_ConvertLineBreakCharacters: ; unused
 .end
 	ld de, wStringBuffer1
 	hlcoord 9, 0
-	call PlaceString
-	ret
+	jp PlaceString

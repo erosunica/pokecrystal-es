@@ -3,7 +3,7 @@ _BillsPC:
 	ret c
 	call .LogIn
 	call .UseBillsPC
-	jp .LogOut
+	jp CloseSubmenu
 
 .CheckCanUsePC:
 	ld a, [wPartyCount]
@@ -31,16 +31,14 @@ _BillsPC:
 	call PrintText
 	pop af
 	ld [wOptions], a
-	call LoadFontsBattleExtra
-	ret
+	jp LoadFontsBattleExtra
 
 .PCWhatText:
 	text_far _PCWhatText
 	text_end
 
-.LogOut:
-	call CloseSubmenu
-	ret
+.LogOut: ; unused
+	jp CloseSubmenu
 
 .UseBillsPC:
 	ld hl, .MenuHeader
@@ -53,7 +51,7 @@ _BillsPC:
 	ld [wWhichIndexSet], a
 	ldh [hBGMapMode], a
 	call DoNthMenu
-	jr c, .cancel
+	jp c, CloseWindow
 	ld a, [wMenuCursorBuffer]
 	push af
 	ld a, [wMenuSelection]
@@ -62,9 +60,7 @@ _BillsPC:
 	pop bc
 	ld a, b
 	jr nc, .loop
-.cancel
-	call CloseWindow
-	ret
+	jp CloseWindow
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -245,8 +241,7 @@ ClearPCItemScreen:
 	lb bc, 4, 18
 	call Textbox
 	call WaitBGMap2
-	call SetPalettes ; load regular palettes?
-	ret
+	jp SetPalettes ; load regular palettes?
 
 CopyBoxmonToTempMon:
 	ld a, [wCurPartyMon]
@@ -258,8 +253,7 @@ CopyBoxmonToTempMon:
 	ld a, BANK(sBoxMon1Species)
 	call GetSRAMBank
 	call CopyBytes
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 Unreferenced_LoadBoxMonListing:
 	ld a, [wCurBox]
@@ -361,8 +355,7 @@ Unreferenced_LoadBoxMonListing:
 	dec b
 	jr nz, .loop
 .empty_box
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 .BoxAddrs:
 	dba sBox1

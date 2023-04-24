@@ -142,11 +142,8 @@ BuenaPrintText::
 	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
 	call ClearBox
 	pop hl
-
-PrintTextboxText::
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
-	call PlaceHLTextAtBC
-	ret
+	jp PlaceHLTextAtBC
 
 SetUpTextbox::
 	push hl
@@ -556,8 +553,7 @@ TextScroll::
 	ld bc, TEXTBOX_INNERW
 	call ByteFill
 	ld c, 2
-	call DelayFrames
-	ret
+	jp DelayFrames
 
 Text_WaitBGMap::
 	push bc
@@ -606,6 +602,9 @@ PokeFluteTerminatorCharacter::
 .stop:
 	text_end
 
+PrintTextboxText::
+	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
+	; fallthrough
 PlaceHLTextAtBC::
 	ld a, [wTextboxFlags]
 	push af

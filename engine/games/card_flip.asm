@@ -107,8 +107,7 @@ _CardFlip:
 	call YesNoBox
 	jr c, .SaidNo
 	call CardFlip_ShuffleDeck
-	call .Increment
-	ret
+	jp .Increment
 
 .SaidNo:
 	ld a, 7
@@ -150,8 +149,7 @@ _CardFlip:
 	ld a, $1
 	ldh [hBGMapMode], a
 	call WaitSFX
-	call .Increment
-	ret
+	jp .Increment
 
 .CardFlipNotEnoughCoinsText:
 	text_far _CardFlipNotEnoughCoinsText
@@ -226,8 +224,7 @@ _CardFlip:
 	call CardFlip_FillGreenBox
 	pop af
 	ld [wCardFlipWhichCard], a
-	call .Increment
-	ret
+	jp .Increment
 
 .CardFlipChooseACardText:
 	text_far _CardFlipChooseACardText
@@ -247,8 +244,7 @@ _CardFlip:
 	jr .betloop
 
 .betdone ; unused
-	call .Increment
-	ret
+	jp .Increment
 
 .CardFlipPlaceYourBetText:
 	text_far _CardFlipPlaceYourBetText
@@ -280,14 +276,12 @@ _CardFlip:
 	call GetCoordsOfChosenCard
 	call CardFlip_DisplayCardFaceUp
 	call WaitBGMap2
-	call .Increment
-	ret
+	jp .Increment
 
 .TabulateTheResult:
 	call CardFlip_CheckWinCondition
 	call WaitPressAorB_BlinkCursor
-	call .Increment
-	ret
+	jp .Increment
 
 .PlayAgain:
 	call ClearSprites
@@ -295,8 +289,7 @@ _CardFlip:
 	call CardFlip_UpdateCoinBalanceDisplay
 	call YesNoBox
 	jr nc, .Continue
-	call .Increment
-	ret
+	jp .Increment
 
 .Continue:
 	ld a, [wCardFlipNumCardsPlayed]
@@ -358,8 +351,7 @@ CardFlip_ShuffleDeck:
 	ld [wCardFlipNumCardsPlayed], a
 	ld hl, wDiscardPile
 	ld bc, CARDFLIP_DECK_SIZE
-	call ByteFill
-	ret
+	jp ByteFill
 
 CollapseCursorPosition:
 	ld hl, 0
@@ -392,8 +384,7 @@ PlaceCardFaceDown:
 	ldh [hBGMapMode], a
 	ld de, .FaceDownCardTilemap
 	lb bc, 6, 5
-	call CardFlip_CopyToBox
-	ret
+	jp CardFlip_CopyToBox
 
 .FaceDownCardTilemap:
 	db $08, $09, $09, $09, $0a
@@ -457,8 +448,7 @@ CardFlip_DisplayCardFaceUp:
 	and 3
 	inc a
 	lb bc, 6, 5
-	call CardFlip_FillBox
-	ret
+	jp CardFlip_FillBox
 
 .FaceUpCardTilemap:
 	db $18, $19, $19, $19, $1a
@@ -484,8 +474,7 @@ CardFlip_UpdateCoinBalanceDisplay:
 	call Textbox
 	pop hl
 	call PrintTextboxText
-	call CardFlip_PrintCoinBalance
-	ret
+	; fallthrough
 
 CardFlip_PrintCoinBalance:
 	hlcoord 7, 15
@@ -497,8 +486,7 @@ CardFlip_PrintCoinBalance:
 	hlcoord 15, 16
 	ld de, wCoins
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 4
-	call PrintNum
-	ret
+	jp PrintNum
 
 .CoinStr:
 	db "FICHAS@"
@@ -516,8 +504,7 @@ CardFlip_InitTilemap:
 	call CardFlip_CopyToBox
 	hlcoord 0, 12
 	lb bc, 4, 18
-	call Textbox
-	ret
+	jp Textbox
 
 CardFlip_FillGreenBox:
 	ld a, $29
@@ -1073,8 +1060,7 @@ CardFlip_CheckWinCondition:
 	call PlaySFX
 	ld hl, .CardFlipDarnText
 	call CardFlip_UpdateCoinBalanceDisplay
-	call WaitSFX
-	ret
+	jp WaitSFX
 
 .Payout:
 	push bc
@@ -1119,8 +1105,7 @@ CardFlip_CheckWinCondition:
 	ld a, l
 	ld [wCoins + 1], a
 	ld de, SFX_PAY_DAY
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 .IsCoinCaseFull:
 	ld a, [wCoins]
@@ -1145,8 +1130,7 @@ CardFlip_CheckWinCondition:
 PlaceOAMCardBorder:
 	call GetCoordsOfChosenCard
 	ld hl, .SpriteData
-	call CardFlip_CopyOAM
-	ret
+	jp CardFlip_CopyOAM
 
 .SpriteData:
 	db 18
@@ -1308,8 +1292,7 @@ ChooseCard_HandleJoypad:
 
 .play_sound
 	ld de, SFX_POKEBALLS_PLACED_ON_TABLE
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 CardFlip_UpdateCursorOAM:
 	call ClearSprites
@@ -1325,8 +1308,7 @@ CardFlip_UpdateCursorOAM:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call CardFlip_CopyOAM
-	ret
+	jp CardFlip_CopyOAM
 
 .OAMData:
 cardflip_cursor: MACRO

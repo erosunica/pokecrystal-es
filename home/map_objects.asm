@@ -300,8 +300,7 @@ CheckObjectTime::
 ; unused
 	ldh [hMapObjectIndexBuffer], a
 	call GetMapObject
-	call CopyObjectStruct
-	ret
+	jp CopyObjectStruct
 
 _CopyObjectStruct::
 	ldh [hMapObjectIndexBuffer], a
@@ -343,8 +342,7 @@ ApplyDeletionToMapObject::
 
 DeleteObjectStruct::
 	call ApplyDeletionToMapObject
-	call MaskObject
-	ret
+	jp MaskObject
 
 CopyPlayerObjectTemplate::
 	push hl
@@ -356,8 +354,7 @@ CopyPlayerObjectTemplate::
 	inc de
 	pop hl
 	ld bc, MAPOBJECT_LENGTH - 1
-	call CopyBytes
-	ret
+	jp CopyBytes
 
 Unreferenced_Function19b8:
 	call GetMapObject

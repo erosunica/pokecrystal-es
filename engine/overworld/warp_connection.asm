@@ -246,11 +246,7 @@ LoadMapTimeOfDay:
 	farcall ReplaceTimeOfDayPals
 	farcall UpdateTimeOfDayPal
 	call OverworldTextModeSwitch
-	call .ClearBGMap
-	call .PushAttrmap
-	ret
-
-.ClearBGMap:
+; ClearBGMap
 	ld a, HIGH(vBGMap0)
 	ld [wBGMapAnchor + 1], a
 	xor a ; LOW(vBGMap0)
@@ -258,27 +254,21 @@ LoadMapTimeOfDay:
 	ldh [hSCY], a
 	ldh [hSCX], a
 	farcall ApplyBGMapAnchorToObjects
-
 	ldh a, [rVBK]
 	push af
 	ld a, $1
 	ldh [rVBK], a
-
 	xor a
 	ld bc, vBGMap1 - vBGMap0
 	hlbgcoord 0, 0
 	call ByteFill
-
 	pop af
 	ldh [rVBK], a
-
 	ld a, "■"
 	ld bc, vBGMap1 - vBGMap0
 	hlbgcoord 0, 0
 	call ByteFill
-	ret
-
-.PushAttrmap:
+; PushAttrmap
 	decoord 0, 0
 	call .copy
 	decoord 0, 0, wAttrmap
@@ -311,9 +301,8 @@ LoadMapGraphics:
 	ldh [hMapAnims], a
 	ldh [hTileAnimFrame], a
 	farcall RefreshSprites
-	call LoadFontsExtra
 	farcall LoadOverworldFont
-	ret
+	jp LoadFontsExtra
 
 LoadMapPalettes:
 	ld b, SCGB_MAPPALS

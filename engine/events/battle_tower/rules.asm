@@ -60,8 +60,7 @@ ExcuseMeYoureNotReadyText:
 
 BattleTower_PleaseReturnWhenReady:
 	ld hl, .BattleTowerReturnWhenReadyText
-	call PrintText
-	ret
+	jp PrintText
 
 .BattleTowerReturnWhenReadyText:
 	text_far _BattleTowerReturnWhenReadyText
@@ -212,8 +211,7 @@ Function_PartyCountEq3:
 
 Function_PartySpeciesAreUnique:
 	ld hl, wPartyMon1Species
-	call VerifyUniqueness
-	ret
+	; fallthrough
 
 VerifyUniqueness:
 	ld de, wPartyCount
@@ -278,8 +276,7 @@ VerifyUniqueness:
 
 Function_PartyItemsAreUnique:
 	ld hl, wPartyMon1Item
-	call VerifyUniqueness
-	ret
+	jp VerifyUniqueness
 
 Function_HasPartyAnEgg:
 	ld hl, wPartyCount

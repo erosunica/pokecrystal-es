@@ -124,8 +124,7 @@ DecompressRequest2bpp::
 
 	ld de, sScratch
 	call Get2bpp
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 FarCopyBytes::
 ; copy bc bytes from a:hl to de
@@ -475,7 +474,7 @@ HBlankCopy2bpp::
 .outerLoop2
 	ldh a, [rLY]
 	cp LY_REQUEST
-	jp nc, ContinueHBlankCopy
+	jr nc, ContinueHBlankCopy
 .waitNoHBlank2
 	ldh a, [c]
 	and b
@@ -498,12 +497,12 @@ endr
 	dec a
 	ldh [hTilesPerCycle], a
 	jr nz, .outerLoop2
-	jp DoneHBlankCopy
+	jr DoneHBlankCopy
 
 .outerLoop
 	ldh a, [rLY]
 	cp LY_REQUEST
-	jp nc, ContinueHBlankCopy
+	jr nc, ContinueHBlankCopy
 .innerLoop
 	pop bc
 	pop de

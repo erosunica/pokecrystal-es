@@ -158,7 +158,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	cp $a4
-	jr nc, .asm_8d356
+	jp nc, DeinitializeSprite
 
 	ld hl, SPRITEANIMSTRUCT_0D
 	add hl, bc
@@ -184,15 +184,11 @@ DoAnimFrame:
 	ld a, [hl]
 	add $3
 	ld [hl], a
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
-	ret
-
-.asm_8d356
-	call DeinitializeSprite
 	ret
 
 .GSIntroHoOh
@@ -202,7 +198,7 @@ DoAnimFrame:
 	inc a
 	ld [hl], a
 	ld d, $2
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -242,14 +238,14 @@ DoAnimFrame:
 	ld a, [hl]
 	push af
 	push de
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Sprites_Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -268,15 +264,14 @@ DoAnimFrame:
 .asm_8d3ba
 	ld a, $1
 	ld [wcf64], a
-	call DeinitializeSprite
-	ret
+	jp DeinitializeSprite
 
 .GSIntroSparkle
 	ld hl, SPRITEANIMSTRUCT_0C
 	add hl, bc
 	ld a, [hli]
 	or [hl]
-	jr z, .asm_8d41e
+	jp z, DeinitializeSprite
 
 	ld hl, SPRITEANIMSTRUCT_0F
 	add hl, bc
@@ -287,14 +282,14 @@ DoAnimFrame:
 	ld a, [hl]
 	push af
 	push de
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Sprites_Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -344,10 +339,6 @@ DoAnimFrame:
 	ld [hl], a
 	ret
 
-.asm_8d41e
-	call DeinitializeSprite
-	ret
-
 .SlotsGolem:
 	callfar Slots_AnimateGolem
 	ret
@@ -360,8 +351,7 @@ DoAnimFrame:
 	ret nz
 	ld [hl], $3
 	ld a, SPRITE_ANIM_FRAMESET_SLOTS_CHANSEY_2
-	call _ReinitSpriteAnimFrame
-	ret
+	jp _ReinitSpriteAnimFrame
 
 .SlotsChanseyEgg:
 	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
@@ -381,15 +371,14 @@ DoAnimFrame:
 	ld a, $4
 	ld [wcf64], a
 	ld de, SFX_PLACE_PUZZLE_PIECE_DOWN
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 .move_right
 	inc [hl]
 .move_vertical
 	ld a, e
 	ld d, $20
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -418,7 +407,7 @@ DoAnimFrame:
 	dw .TradePokeBall_two
 	dw .TradePokeBall_three
 	dw .TradePokeBall_four
-	dw .TradePokeBall_five
+	dw DeinitializeSprite
 
 .TradePokeBall_zero
 	ld a, SPRITE_ANIM_FRAMESET_TRADE_POKE_BALL_WOBBLE
@@ -457,7 +446,7 @@ DoAnimFrame:
 	jr c, .asm_8d4cd
 	dec [hl]
 	ld d, $28
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -467,7 +456,7 @@ DoAnimFrame:
 .asm_8d4cd
 	ld de, SFX_GOT_SAFARI_BALLS
 	call PlaySFX
-	jr .TradePokeBall_five
+	jp DeinitializeSprite
 
 .TradePokeBall_one
 	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
@@ -517,8 +506,7 @@ DoAnimFrame:
 	sub $c
 	ld [hl], a
 	ld de, SFX_SWITCH_POKEMON
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 .asm_8d51c
 	xor a
@@ -526,12 +514,7 @@ DoAnimFrame:
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
-	call .IncrementJumptableIndex
-	ret
-
-.TradePokeBall_five
-	call DeinitializeSprite
-	ret
+	jp .IncrementJumptableIndex
 
 .TradeTubeBulge
 	ld hl, SPRITEANIMSTRUCT_XCOORD
@@ -540,16 +523,11 @@ DoAnimFrame:
 	inc [hl]
 	inc [hl]
 	cp $b0
-	jr nc, .delete
+	jp nc, DeinitializeSprite
 	and $3
 	ret nz
 	ld de, SFX_POKEBALLS_PLACED_ON_TABLE
-	call PlaySFX
-	ret
-
-.delete
-	call DeinitializeSprite
-	ret
+	jp PlaySFX
 
 .TrademonInTube
 	callfar TradeAnim_AnimateTrademonInTube
@@ -560,7 +538,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	cp $80
-	jr nc, .finish_EggShell
+	jp nc, DeinitializeSprite
 	ld d, a
 	add $8
 	ld [hl], a
@@ -573,7 +551,7 @@ DoAnimFrame:
 
 	push af
 	push de
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -581,15 +559,11 @@ DoAnimFrame:
 
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Sprites_Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
-	ret
-
-.finish_EggShell
-	call DeinitializeSprite
 	ret
 
 .RadioTuningKnob:
@@ -621,14 +595,14 @@ DoAnimFrame:
 	inc [hl]
 	push af
 	push de
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Sprites_Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -667,7 +641,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
-	call .Sprites_Cosine
+	call Sprites_Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -679,7 +653,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	cp -9 * 8
-	jr nc, .delete_leaf
+	jp nc, DeinitializeSprite
 	inc [hl]
 	inc [hl]
 
@@ -692,15 +666,11 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
-	call .Sprites_Cosine
+	call Sprites_Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
-	ret
-
-.delete_leaf
-	call DeinitializeSprite
 	ret
 
 .FlyTo:
@@ -728,7 +698,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
-	call .Sprites_Cosine
+	call Sprites_Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -761,14 +731,13 @@ DoAnimFrame:
 	cpl
 	inc a
 	ld d, $20
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	ld a, SPRITE_ANIM_FRAMESET_INTRO_SUICUNE_2
-	call _ReinitSpriteAnimFrame
-	ret
+	jp _ReinitSpriteAnimFrame
 
 .IntroPichuWooper
 	ld hl, SPRITEANIMSTRUCT_0C
@@ -781,7 +750,7 @@ DoAnimFrame:
 	cpl
 	inc a
 	ld d, $20
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -802,14 +771,14 @@ DoAnimFrame:
 	ld a, [hl]
 	push af
 	push de
-	call .Sprites_Sine
+	call Sprites_Sine
 
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
 	pop de
 	pop af
-	call .Sprites_Cosine
+	call Sprites_Cosine
 
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -821,8 +790,7 @@ DoAnimFrame:
 	cp $40
 	ret nz
 	ld a, SPRITE_ANIM_FRAMESET_INTRO_UNOWN_F_2
-	call _ReinitSpriteAnimFrame
-	ret
+	jp _ReinitSpriteAnimFrame
 
 .IntroSuicuneAway
 	ld hl, SPRITEANIMSTRUCT_YCOORD
@@ -862,12 +830,4 @@ DoAnimFrame:
 	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	inc [hl]
-	ret
-
-.Sprites_Sine:
-	call Sprites_Sine
-	ret
-
-.Sprites_Cosine:
-	call Sprites_Cosine
 	ret

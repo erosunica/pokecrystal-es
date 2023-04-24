@@ -136,8 +136,7 @@ EnterMap:
 
 UnusedWait30Frames:
 	ld c, 30
-	call DelayFrames
-	ret
+	jp DelayFrames
 
 HandleMap:
 	call ResetOverworldDelay
@@ -153,8 +152,7 @@ HandleMap:
 	call HandleMapObjects
 	call NextOverworldFrame
 	call HandleMapBackground
-	call CheckPlayerState
-	ret
+	jp CheckPlayerState
 
 MapEvents:
 	ld a, [wMapEventStatus]
@@ -178,8 +176,7 @@ NextOverworldFrame:
 	and a
 	ret z
 	ld c, a
-	call DelayFrames
-	ret
+	jp DelayFrames
 
 HandleMapTimeAndJoypad:
 	ld a, [wMapEventStatus]
@@ -188,14 +185,12 @@ HandleMapTimeAndJoypad:
 
 	call UpdateTime
 	call GetJoypad
-	call TimeOfDayPals
-	ret
+	jp TimeOfDayPals
 
 HandleMapObjects:
 	farcall HandleNPCStep ; engine/map_objects.asm
 	farcall _HandlePlayerStep
-	call _CheckObjectEnteringVisibleRange
-	ret
+	jp _CheckObjectEnteringVisibleRange
 
 HandleMapBackground:
 	farcall _UpdateSprites
@@ -350,8 +345,7 @@ CheckTileEvent:
 	ld h, [hl]
 	ld l, a
 	ld a, [wMapScriptsBank]
-	call CallScript
-	ret
+	jp CallScript
 
 CheckWildEncounterCooldown::
 	ld hl, wWildEncounterCooldown
@@ -382,8 +376,7 @@ SetMinTwoStepWildEncounterCooldown: ; unused
 Dummy_CheckScriptFlags3Bit5: ; unused
 	call CheckBit5_ScriptFlags3
 	ret z
-	call ret_2f3e
-	ret
+	jp ret_2f3e
 
 RunSceneScript:
 	ld a, [wCurMapSceneScriptCount]
@@ -572,8 +565,7 @@ TryObjectEvent:
 	ld h, [hl]
 	ld l, a
 	ld a, [wMapScriptsBank]
-	call CallScript
-	ret
+	jp CallScript
 
 .itemball
 	ld hl, MAPOBJECT_SCRIPT_POINTER

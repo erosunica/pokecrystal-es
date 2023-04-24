@@ -4,8 +4,7 @@ ClearUnusedMapBuffer:: ; unused
 	ld hl, wUnusedMapBuffer
 	ld bc, wUnusedMapBufferEnd - wUnusedMapBuffer
 	ld a, 0
-	call ByteFill
-	ret
+	jp ByteFill
 
 CheckScenes::
 ; Checks wCurMapSceneScriptPointer.  If it's empty, returns -1 in a.  Otherwise, returns the active scene ID in a.
@@ -93,8 +92,7 @@ GetMapSceneID::
 
 OverworldTextModeSwitch::
 	call LoadMapPart
-	call SwapTextboxPalettes
-	ret
+	jp SwapTextboxPalettes
 
 LoadMapPart::
 	ldh a, [hROMBank]
@@ -218,12 +216,6 @@ CheckWarpTile::
 	scf
 	ret
 
-WarpCheck::
-	call GetDestinationWarpNumber
-	ret nc
-	call CopyWarpData
-	ret
-
 GetDestinationWarpNumber::
 	farcall CheckWarpCollision
 	ret nc
@@ -295,6 +287,11 @@ GetDestinationWarpNumber::
 	inc hl
 	scf
 	ret
+
+WarpCheck::
+	call GetDestinationWarpNumber
+	ret nc
+	; fallthrough
 
 CopyWarpData::
 	ldh a, [hROMBank]
@@ -373,24 +370,14 @@ LoadMapAttributes::
 	call SwitchToMapScriptsBank
 	call ReadMapScripts
 	xor a ; do not skip object events
-	call ReadMapEvents
-	ret
+	jp ReadMapEvents
 
 LoadMapAttributes_SkipObjects::
 	call CopyMapPartialAndAttributes
 	call SwitchToMapScriptsBank
 	call ReadMapScripts
 	ld a, TRUE ; skip object events
-	call ReadMapEvents
-	ret
-
-CopyMapPartialAndAttributes::
-	call CopyMapPartial
-	call SwitchToMapAttributesBank
-	call GetMapAttributesPointer
-	call CopyMapAttributes
-	call GetMapConnections
-	ret
+	; fallthrough
 
 ReadMapEvents::
 	push af
@@ -408,8 +395,7 @@ ReadMapEvents::
 	and a ; skip object events?
 	ret nz
 
-	call ReadObjectEvents
-	ret
+	jp ReadObjectEvents
 
 ReadMapScripts::
 	ld hl, wMapScriptsPointer
@@ -417,8 +403,7 @@ ReadMapScripts::
 	ld h, [hl]
 	ld l, a
 	call ReadMapSceneScripts
-	call ReadMapCallbacks
-	ret
+	jp ReadMapCallbacks
 
 CopyMapAttributes::
 	ld de, wMapAttributes
@@ -430,6 +415,13 @@ CopyMapAttributes::
 	dec c
 	jr nz, .loop
 	ret
+
+CopyMapPartialAndAttributes::
+	call CopyMapPartial
+	call SwitchToMapAttributesBank
+	call GetMapAttributesPointer
+	call CopyMapAttributes
+	; fallthrough
 
 GetMapConnections::
 	ld a, $ff
@@ -488,8 +480,7 @@ ReadMapSceneScripts::
 	ret z
 
 	ld bc, SCENE_SCRIPT_SIZE
-	call AddNTimes
-	ret
+	jp AddNTimes
 
 ReadMapCallbacks::
 	ld a, [hli]
@@ -504,8 +495,7 @@ ReadMapCallbacks::
 	ret z
 
 	ld bc, CALLBACK_SIZE
-	call AddNTimes
-	ret
+	jp AddNTimes
 
 ReadWarps::
 	ld a, [hli]
@@ -519,8 +509,7 @@ ReadWarps::
 	and a
 	ret z
 	ld bc, WARP_EVENT_SIZE
-	call AddNTimes
-	ret
+	jp AddNTimes
 
 ReadCoordEvents::
 	ld a, [hli]
@@ -536,8 +525,7 @@ ReadCoordEvents::
 	ret z
 
 	ld bc, COORD_EVENT_SIZE
-	call AddNTimes
-	ret
+	jp AddNTimes
 
 ReadBGEvents::
 	ld a, [hli]
@@ -553,8 +541,7 @@ ReadBGEvents::
 	ret z
 
 	ld bc, BG_EVENT_SIZE
-	call AddNTimes
-	ret
+	jp AddNTimes
 
 ReadObjectEvents::
 	push hl
@@ -1293,8 +1280,7 @@ Unreferenced_Function2816::
 	ld hl, wBGMapBuffer
 	ld bc, wBGMapBufferEnd - wBGMapBuffer
 	xor a
-	call ByteFill
-	ret
+	jp ByteFill
 
 LoadTilesetGFX::
 	ld hl, wTilesetAddress
@@ -1502,44 +1488,6 @@ GetMovementPermissions::
 	db DOWN_MASK | LEFT_MASK
 	db UP_MASK | LEFT_MASK
 
-.UpDown:
-	ld a, [wPlayerStandingMapX]
-	ld d, a
-	ld a, [wPlayerStandingMapY]
-	ld e, a
-
-	push de
-	inc e
-	call GetCoordTile
-	ld [wTileDown], a
-	call .Down
-
-	pop de
-	dec e
-	call GetCoordTile
-	ld [wTileUp], a
-	call .Up
-	ret
-
-.LeftRight:
-	ld a, [wPlayerStandingMapX]
-	ld d, a
-	ld a, [wPlayerStandingMapY]
-	ld e, a
-
-	push de
-	dec d
-	call GetCoordTile
-	ld [wTileLeft], a
-	call .Left
-
-	pop de
-	inc d
-	call GetCoordTile
-	ld [wTileRight], a
-	call .Right
-	ret
-
 .Down:
 	call .CheckHiNybble
 	ret nz
@@ -1557,6 +1505,24 @@ GetMovementPermissions::
 	or FACE_DOWN
 	ld [wTilePermissions], a
 	ret
+
+.UpDown:
+	ld a, [wPlayerStandingMapX]
+	ld d, a
+	ld a, [wPlayerStandingMapY]
+	ld e, a
+
+	push de
+	inc e
+	call GetCoordTile
+	ld [wTileDown], a
+	call .Down
+
+	pop de
+	dec e
+	call GetCoordTile
+	ld [wTileUp], a
+	; fallthrough
 
 .Up:
 	call .CheckHiNybble
@@ -1576,6 +1542,24 @@ GetMovementPermissions::
 	ld [wTilePermissions], a
 	ret
 
+.LeftRight:
+	ld a, [wPlayerStandingMapX]
+	ld d, a
+	ld a, [wPlayerStandingMapY]
+	ld e, a
+
+	push de
+	dec d
+	call GetCoordTile
+	ld [wTileLeft], a
+	call .Left
+
+	pop de
+	inc d
+	call GetCoordTile
+	ld [wTileRight], a
+	; fallthrough
+	
 .Right:
 	call .CheckHiNybble
 	ret nz
@@ -1690,8 +1674,7 @@ GetCoordTile::
 
 .nocarry2
 	ld a, [wTilesetCollisionBank]
-	call GetFarByte
-	ret
+	jp GetFarByte
 
 .nope
 	ld a, -1
@@ -1866,8 +1849,7 @@ FadeToMenu::
 	call LoadStandardMenuHeader
 	farcall FadeOutPalettes
 	call ClearSprites
-	call DisableSpriteUpdates
-	ret
+	jp DisableSpriteUpdates
 
 CloseSubmenu::
 	call ClearBGPalettes
@@ -1887,8 +1869,7 @@ FinishExitMenu::
 	farcall LoadOW_BGPal7
 	call WaitBGMap2
 	farcall FadeInPalettes
-	call EnableSpriteUpdates
-	ret
+	jp EnableSpriteUpdates
 
 ReturnToMapWithSpeechTextbox::
 	push af
@@ -1935,8 +1916,7 @@ ReloadTilesetAndPalettes::
 	pop af
 	rst Bankswitch
 
-	call EnableLCD
-	ret
+	jp EnableLCD
 
 GetMapPointer::
 	ld a, [wMapGroup]
@@ -1971,8 +1951,7 @@ GetAnyMapPointer::
 	dec c
 	ld b, 0
 	ld a, 9
-	call AddNTimes
-	ret
+	jp AddNTimes
 
 GetMapField::
 ; Extract data from the current map's group entry.
