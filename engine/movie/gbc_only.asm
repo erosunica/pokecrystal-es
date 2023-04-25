@@ -21,7 +21,8 @@ GBCOnlyScreen:
 	ld de, wGBCOnlyDecompressBuffer
 	ld hl, vTiles2
 	lb bc, BANK(GBCOnlyGFX), 84
-	call Get2bpp
+	ld a, LOW(hRequested2bpp)
+	call Get1or2bppDMG
 
 	ld de, Font
 	ld hl, vTiles1

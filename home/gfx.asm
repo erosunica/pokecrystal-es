@@ -540,3 +540,63 @@ endr
 	ldh [hTilesPerCycle], a
 	jr nz, .outerLoop
 	jp DoneHBlankCopy
+
+Get1or2bppDMG::
+	ld b, a
+	ldh a, [hBGMapMode]
+	push af
+	xor a
+	ldh [hBGMapMode], a
+
+	ldh a, [hROMBank]
+	push af
+	ld a, b
+	rst Bankswitch
+
+	ldh a, [hVBlank]
+	push af
+	ld a, 6
+	ldh [hVBlank], a
+	call WriteVCopyRegistersToHRAM
+	ld c, b
+.loop
+	ldh a, [hTilesPerCycle]
+	sub 8
+	ldh [hTilesPerCycle], a
+	jr c, .copyRemainingTilesAndExit
+	jr nz, .copyEightTilesAndContinue
+.copyRemainingTilesAndExit
+	add 8
+	ldh [c], a
+	xor a
+	ldh [hTilesPerCycle], a
+	call DelayFrame
+	ldh a, [c]
+	and a
+	jr z, .clearTileCountAndFinish
+.addUncopiedTilesToCount
+	ld b, a
+	ldh a, [hTilesPerCycle]
+	add b
+	ldh [hTilesPerCycle], a
+	jr .loop
+.clearTileCountAndFinish
+	xor a
+	ldh [hTilesPerCycle], a
+	jr .done
+.copyEightTilesAndContinue
+	ld a, 8
+	ldh [c], a
+	call DelayFrame
+	ldh a, [c]
+	and a
+	jr nz, .addUncopiedTilesToCount
+	jr .loop
+.done
+	pop af
+	ldh [hVBlank], a
+	pop af
+	rst Bankswitch
+	pop af
+	ldh [hBGMapMode], a
+	ret
