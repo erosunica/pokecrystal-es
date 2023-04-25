@@ -179,7 +179,7 @@ FarCopyBytesDouble:
 	ret
 
 LY_REQUEST EQU $88
-TILES_PER_BLANK EQU 8
+TILES_PER_BLANK EQU 16
 
 Request2bpp::
 ; Load 2bpp at b:de to occupy c tiles of hl.
@@ -425,9 +425,15 @@ HBlankCopy1bpp:
 	ld a, d
 	ld [hli], a
 	ld [hli], a
-	ld a, l
-	and $f
-	jr nz, .innerLoop
+rept 2
+	pop de
+	ld a, e
+	ld [hli], a
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	ld [hli], a
+endr
 	ldh a, [hTilesPerCycle]
 	dec a
 	ldh [hTilesPerCycle], a
@@ -483,7 +489,7 @@ HBlankCopy2bpp::
 	ldh a, [c]
 	and b
 	jr nz, .waitHBlank2
-rept 4
+rept 8
 	pop de
 	ld a, e
 	ld [hli], a
@@ -522,16 +528,13 @@ endr
 	ld [hli], a
 	ld a, d
 	ld [hli], a
-rept 2
+rept 6
 	pop de
 	ld a, e
 	ld [hli], a
 	ld a, d
 	ld [hli], a
 endr
-	ld a, l
-	and $f
-	jr nz, .innerLoop
 	ldh a, [hTilesPerCycle]
 	dec a
 	ldh [hTilesPerCycle], a
