@@ -443,7 +443,18 @@ Paragraph::
 	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
 	call ClearBox
 	call UnloadBlinkingCursor
-	ld c, 10
+	ld a, [wOptions]
+	bit NO_TEXT_SCROLL, a
+	jr nz, .got_delay
+	and %11
+	jr z, .got_delay
+	ld c, 5
+.loop
+	dec a
+	jr z, .got_delay
+	sla c
+	jr .loop
+.got_delay	
 	call DelayFrames
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	pop de
