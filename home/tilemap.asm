@@ -115,10 +115,8 @@ endr
 	ldh [hTilesPerCycle], a
 	jr nz, .loop
 
-	ldh a, [hSPBuffer]
-	ld l, a
-	ldh a, [hSPBuffer + 1]
-	ld h, a
+	ld sp, hSPBuffer
+	pop hl
 	ld sp, hl
 	ret
 

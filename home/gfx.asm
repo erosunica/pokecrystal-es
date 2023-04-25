@@ -385,9 +385,8 @@ HBlankCopy1bpp:
 
 ; Source
 	ld hl, hRequestedVTileSource
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
+	ld sp, hl
+	pop hl
 	ld sp, hl
 
 ; Destination
@@ -446,10 +445,8 @@ ContinueHBlankCopy:
 	ld [hRequestedVTileDest], sp
 	scf
 DoneHBlankCopy:
-	ldh a, [hSPBuffer]
-	ld l, a
-	ldh a, [hSPBuffer + 1]
-	ld h, a
+	ld sp, hSPBuffer
+	pop hl
 	ld sp, hl
 	reti
 
@@ -459,9 +456,8 @@ HBlankCopy2bpp::
 
 ; Source
 	ld hl, hRequestedVTileSource
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
+	ld sp, hl
+	pop hl
 	ld sp, hl
 
 ; Destination
