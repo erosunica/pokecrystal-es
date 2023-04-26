@@ -742,6 +742,9 @@ ChooseMoveToDelete:
 	ret
 
 .ChooseMoveToDelete
+	call ClearBGPalettes
+	call ClearTilemap
+	call ClearSprites
 	call SetUpMoveScreenBG
 	ld de, DeleteMoveScreenAttrs
 	call SetMenuAttributes
@@ -795,6 +798,9 @@ ManagePokemonMoves:
 	ld a, [hl]
 	push af
 	set NO_TEXT_SCROLL, [hl]
+	call ClearBGPalettes
+	call ClearTilemap
+	call ClearSprites
 	call MoveScreenLoop
 	pop af
 	ld [wOptions], a
@@ -1020,9 +1026,6 @@ String_MoveWhere:
 	db "¿Mover adónde?@"
 
 SetUpMoveScreenBG:
-	call ClearBGPalettes
-	call ClearTilemap
-	call ClearSprites
 	xor a
 	ldh [hBGMapMode], a
 	farcall LoadStatsScreenPageTilesGFX
@@ -1045,6 +1048,12 @@ SetUpMoveScreenBG:
 	hlcoord 2, 0
 	lb bc, 2, 3
 	call ClearBox
+	hlcoord 0, 10
+	ld de, String_MoveType_Top
+	call PlaceString
+	hlcoord 0, 11
+	ld de, String_MoveType_Bottom
+	call PlaceString
 	xor a
 	ld [wMonType], a
 	ld hl, wPartyMonNicknames
@@ -1064,6 +1073,11 @@ SetUpMoveScreenBG:
 	lb bc, 1, 3
 	jp ClearBox
 
+String_MoveType_Top:
+	db "┌─────┐@"
+String_MoveType_Bottom:
+	db "│TIPO/└@"
+
 SetUpMoveList:
 	xor a
 	ldh [hBGMapMode], a
@@ -1074,6 +1088,7 @@ SetUpMoveList:
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
 	call CopyBytes
+	call SetPalettes
 	ld a, SCREEN_WIDTH * 2
 	ld [wBuffer1], a
 	hlcoord 2, 3
@@ -1081,13 +1096,10 @@ SetUpMoveList:
 	hlcoord 10, 4
 	predef ListMovePP
 	call WaitBGMap
-	call SetPalettes
 	ld a, [wNumMoves]
 	inc a
 	ld [w2DMenuNumRows], a
-	hlcoord 0, 11
-	lb bc, 5, 18
-	jp Textbox
+	ret
 
 PrepareToPlaceMoveData:
 	ld hl, wPartyMon1Moves
@@ -1108,12 +1120,6 @@ PrepareToPlaceMoveData:
 PlaceMoveData:
 	xor a
 	ldh [hBGMapMode], a
-	hlcoord 0, 10
-	ld de, String_MoveType_Top
-	call PlaceString
-	hlcoord 0, 11
-	ld de, String_MoveType_Bottom
-	call PlaceString
 	hlcoord 11, 12
 	ld de, String_MoveAtk
 	call PlaceString
@@ -1148,10 +1154,6 @@ PlaceMoveData:
 	ldh [hBGMapMode], a
 	ret
 
-String_MoveType_Top:
-	db "┌─────┐@"
-String_MoveType_Bottom:
-	db "│TIPO/└@"
 String_MoveAtk:
 	db "ATAQ/@"
 String_MoveNoPower:
