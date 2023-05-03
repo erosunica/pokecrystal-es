@@ -15,10 +15,7 @@ PlayBattleAnim:
 
 _PlayBattleAnim:
 	ld c, 6
-.wait
-	call DelayFrame
-	dec c
-	jr nz, .wait
+	call DelayFrames
 
 	call BattleAnimAssignPals
 	call BattleAnimRequestPals
@@ -44,9 +41,8 @@ _PlayBattleAnim:
 	ld a, $1
 	ldh [hBGMapMode], a
 
-	call DelayFrame
-	call DelayFrame
-	call DelayFrame
+	ld c, 3
+	call DelayFrames
 	jp WaitSFX
 
 BattleAnimRunScript:
@@ -135,9 +131,8 @@ BattleAnimClearHud:
 	call ClearActorHud
 	ld a, $1
 	ldh [hBGMapMode], a
-	call DelayFrame
-	call DelayFrame
-	call DelayFrame
+	ld c, 3
+	call DelayFrames
 	jp WaitTop
 
 BattleAnimRestoreHuds:
@@ -158,9 +153,8 @@ BattleAnimRestoreHuds:
 
 	ld a, $1
 	ldh [hBGMapMode], a
-	call DelayFrame
-	call DelayFrame
-	call DelayFrame
+	ld c, 3
+	call DelayFrames
 	jp WaitTop
 
 BattleAnimRequestPals:
