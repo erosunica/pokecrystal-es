@@ -514,10 +514,10 @@ Place2DMenuCursor:
 	ld a, [wMenuCursorY]
 	ld b, a
 	xor a
-	jr .handle_loop
+	jr .handleRowLoop
 .row_loop
 	add c
-.handle_loop
+.handleRowLoop
 	dec b
 	jr nz, .row_loop
 
@@ -531,10 +531,10 @@ Place2DMenuCursor:
 	ld a, [wMenuCursorX]
 	ld b, a
 	xor a
-	dec b
-	jr z, .got_col
+	jr .handleColLoop
 .col_loop
 	add c
+.handleColLoop
 	dec b
 	jr nz, .col_loop
 
