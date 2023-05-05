@@ -402,9 +402,7 @@ InitEggMoves:
 	dec c
 	jr nz, .next
 	call GetEggMove
-	jr nc, .skip
-	call LoadEggMove
-
+	call c, LoadEggMove
 .skip
 	inc de
 	dec b

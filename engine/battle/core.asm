@@ -598,10 +598,7 @@ ParsePlayerAction:
 	call UpdateBattleHuds
 	ld a, [wCurPlayerMove]
 	cp STRUGGLE
-	jr z, .struggle
-	call PlayClickSFX
-
-.struggle
+	call nz, PlayClickSFX
 	ld a, $1
 	ldh [hBGMapMode], a
 	pop af
@@ -2089,8 +2086,7 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	jr nz, .player_mon_did_not_faint
 	ld a, [wWhichMonFaintedFirst]
 	and a
-	jr nz, .player_mon_did_not_faint
-	call UpdateFaintedPlayerMon
+	call z, UpdateFaintedPlayerMon
 
 .player_mon_did_not_faint
 	call CheckPlayerPartyForFitMon
@@ -2330,10 +2326,7 @@ WinTrainerBattle:
 .skip_heal
 	ld a, [wDebugFlags]
 	bit DEBUG_BATTLE_F, a
-	jr nz, .skip_win_loss_text
-	call PrintWinLossText
-
-.skip_win_loss_text
+	call z, PrintWinLossText
 	jp .GiveMoney
 
 .mobile ; unused
@@ -2860,9 +2853,7 @@ LostBattle:
 
 	ld a, [wDebugFlags]
 	bit DEBUG_BATTLE_F, a
-	jr nz, .skip_win_loss_text
-	call PrintWinLossText
-.skip_win_loss_text
+	call z, PrintWinLossText
 	ret
 
 .battle_tower
@@ -3055,9 +3046,7 @@ EnemySwitch:
 	; Shift Mode
 	call ResetEnemyBattleVars
 	call CheckWhetherSwitchmonIsPredetermined
-	jr c, .skip
-	call FindMonInOTPartyToSwitchIntoBattle
-.skip
+	call nc, FindMonInOTPartyToSwitchIntoBattle
 	; 'b' contains the PartyNr of the mon the AI will switch to
 	call LoadEnemyMonToSwitchTo
 	call OfferSwitch
@@ -3080,9 +3069,7 @@ EnemySwitch:
 EnemySwitch_SetMode:
 	call ResetEnemyBattleVars
 	call CheckWhetherSwitchmonIsPredetermined
-	jr c, .skip
-	call FindMonInOTPartyToSwitchIntoBattle
-.skip
+	call nc, FindMonInOTPartyToSwitchIntoBattle
 	; 'b' contains the PartyNr of the mon the AI will switch to
 	call LoadEnemyMonToSwitchTo
 	ld a, 1
@@ -4914,20 +4901,14 @@ BattleMenu_Pack:
 	callfar CheckItemPocket
 	ld a, [wItemAttributeParamBuffer]
 	cp BALL
-	jr z, .ball
-	call ClearBGPalettes
-
-.ball
+	call nz, ClearBGPalettes
 	xor a
 	ldh [hBGMapMode], a
 	call _LoadBattleFontsHPBar
 	call ClearSprites
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
-	jr z, .tutorial2
-	call GetBattleMonBackpic
-
-.tutorial2
+	call nz, GetBattleMonBackpic
 	call GetEnemyMonFrontpic
 	ld a, $1
 	ld [wMenuCursorY], a
@@ -5143,9 +5124,7 @@ BattleMonEntrance:
 
 	call SetEnemyTurn
 	call PursuitSwitch
-	jr c, .ok
-	call RecallPlayerMon
-.ok
+	call nc, RecallPlayerMon
 
 	hlcoord 9, 7
 	lb bc, 5, 11

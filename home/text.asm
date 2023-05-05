@@ -433,10 +433,7 @@ Paragraph::
 
 	ld a, [wLinkMode]
 	cp LINK_COLOSSEUM
-	jr z, .linkbattle
-	call LoadBlinkingCursor
-
-.linkbattle
+	call nz, LoadBlinkingCursor
 	call Text_WaitBGMap
 	call PromptButton
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
@@ -463,10 +460,7 @@ Paragraph::
 _ContText::
 	ld a, [wLinkMode]
 	or a
-	jr nz, .communication
-	call LoadBlinkingCursor
-
-.communication
+	call z, LoadBlinkingCursor
 	call Text_WaitBGMap
 
 	push de
@@ -509,16 +503,13 @@ PlaceDexEnd::
 PromptText::
 	ld a, [wLinkMode]
 	cp LINK_COLOSSEUM
-	jr z, .ok
-	call LoadBlinkingCursor
-
-.ok
+	call nz, LoadBlinkingCursor
 	call Text_WaitBGMap
 	call PromptButton
 	ld a, [wLinkMode]
 	cp LINK_COLOSSEUM
-	jr z, DoneText
-	call UnloadBlinkingCursor
+	call nz, UnloadBlinkingCursor
+	; fallthrough
 
 DoneText::
 	pop hl

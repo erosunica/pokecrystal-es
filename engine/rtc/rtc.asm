@@ -9,17 +9,6 @@ Unreferenced_StopRTC:
 	ld [MBC3RTC], a
 	jp CloseSRAM
 
-StartRTC:
-	ld a, SRAM_ENABLE
-	ld [MBC3SRamEnable], a
-	call LatchClock
-	ld a, RTC_DH
-	ld [MBC3SRamBank], a
-	ld a, [MBC3RTC]
-	res 6, a ; halt
-	ld [MBC3RTC], a
-	jp CloseSRAM
-
 GetTimeOfDay::
 ; get time of day based on the current hour
 	ldh a, [hHours] ; hour
@@ -89,11 +78,19 @@ StartClock::
 	call GetClock
 	call Function1409b
 	call FixDays
-	jp nc, StartRTC
 	; bit 5: Day count exceeds 139
 	; bit 6: Day count exceeds 255
-	call RecordRTCStatus ; set flag on sRTCStatusFlags
-	jp StartRTC
+	call c, RecordRTCStatus ; set flag on sRTCStatusFlags
+;StartRTC
+	ld a, SRAM_ENABLE
+	ld [MBC3SRamEnable], a
+	call LatchClock
+	ld a, RTC_DH
+	ld [MBC3SRamBank], a
+	ld a, [MBC3RTC]
+	res 6, a ; halt
+	ld [MBC3RTC], a
+	jp CloseSRAM
 
 Function1409b:
 	ld hl, hRTCDayHi

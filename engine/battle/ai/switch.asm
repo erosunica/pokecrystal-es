@@ -64,8 +64,7 @@ CheckPlayerMoveTypeMatchups:
 	call .IncreaseScore
 	ld a, e
 	and a
-	jr nz, .done
-	call .IncreaseScore
+	call z, .IncreaseScore
 	jr .done
 
 .unknown_moves
@@ -75,18 +74,14 @@ CheckPlayerMoveTypeMatchups:
 	call CheckTypeMatchup
 	ld a, [wTypeMatchup]
 	cp EFFECTIVE + 1 ; 1.0 + 0.1
-	jr c, .ok
-	call .DecreaseScore
-.ok
+	call nc, .DecreaseScore
 	ld a, [wBattleMonType2]
 	cp b
-	jr z, .ok2
+	jr z, .done
 	call CheckTypeMatchup
 	ld a, [wTypeMatchup]
 	cp EFFECTIVE + 1 ; 1.0 + 0.1
-	jr c, .ok2
-	call .DecreaseScore
-.ok2
+	call nc, .DecreaseScore
 
 .done
 	call .CheckEnemyMoveMatchups

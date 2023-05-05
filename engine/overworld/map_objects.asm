@@ -2101,9 +2101,7 @@ Function55e0::
 .loop
 	ldh [hMapObjectIndexBuffer], a
 	call DoesObjectHaveASprite
-	jr z, .ok
-	call Function565c
-.ok
+	call nz, Function565c
 	ld hl, OBJECT_LENGTH
 	add hl, bc
 	ld b, h
@@ -2124,8 +2122,7 @@ Function5602:
 	jp z, _UpdateSprites
 	ldh a, [hLastTalked]
 	and a
-	jp z, _UpdateSprites
-	call Function5629 ; respawn opponent
+	call nz, Function5629 ; respawn opponent
 	jp _UpdateSprites
 
 Function561d:
@@ -2369,9 +2366,7 @@ HandleNPCStep::
 .loop
 	ldh [hMapObjectIndexBuffer], a
 	call DoesObjectHaveASprite
-	jr z, .next
-	call Function437b
-.next
+	call nz, Function437b
 	ld hl, OBJECT_LENGTH
 	add hl, bc
 	ld b, h

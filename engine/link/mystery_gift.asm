@@ -60,8 +60,7 @@ DoMysteryGift:
 	call .AddMysteryGiftPartnerID
 	ld a, [wc900]
 	cp 4
-	jr z, .skip_append_save
-	call .SaveMysteryGiftTrainerName
+	call nz, .SaveMysteryGiftTrainerName
 .skip_append_save
 	ld a, [wMysteryGiftPartnerSentDeco]
 	and a

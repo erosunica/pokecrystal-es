@@ -1033,15 +1033,6 @@ ApplyObjectFacing:
 	ld hl, wVramState
 	bit 6, [hl]
 	jp nz, UpdateSprites
-	call .DisableTextTiles
-	jp UpdateSprites
-
-.not_visible
-	pop de
-	scf
-	ret
-
-.DisableTextTiles:
 	call LoadMapPart
 	hlcoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
@@ -1052,6 +1043,11 @@ ApplyObjectFacing:
 	ld a, b
 	or c
 	jr nz, .loop
+	jp UpdateSprites
+
+.not_visible
+	pop de
+	scf
 	ret
 
 Script_variablesprite:

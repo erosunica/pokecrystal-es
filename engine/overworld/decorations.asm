@@ -342,8 +342,7 @@ PopulateDecoCategoryMenu:
 	ld hl, .NonscrollingMenuHeader
 	call LoadMenuHeader
 	call DoNthMenu
-	jp c, ExitMenu
-	call DoDecorationAction2
+	call nc, DoDecorationAction2
 	jp ExitMenu
 
 .beyond_eight
@@ -364,8 +363,7 @@ PopulateDecoCategoryMenu:
 	call ScrollingMenu
 	ld a, [wMenuJoypad]
 	cp 2
-	jp z, ExitMenu
-	call DoDecorationAction2
+	call nz, DoDecorationAction2
 	jp ExitMenu
 
 .empty

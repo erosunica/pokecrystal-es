@@ -328,11 +328,8 @@ GivePartyItem:
 	ld [hl], a
 	ld d, a
 	farcall ItemIsMail
-	jr nc, .done
-	call ComposeMailMessage
-
-.done
-	ret
+	ret nc
+	jp ComposeMailMessage
 
 TakePartyItem:
 	call SpeechTextbox

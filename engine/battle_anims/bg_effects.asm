@@ -701,9 +701,7 @@ BattleBGEffect_RunPicResizeScript:
 	cp -2
 	jr z, .clear
 	cp -3
-	jr z, .skip
-	call .PlaceGraphic
-.skip
+	call nz, .PlaceGraphic
 	call BattleBGEffects_IncrementJumptable
 	ld a, $1
 	ldh [hBGMapMode], a
@@ -1386,9 +1384,7 @@ Tackle_BGEffect25_2d_two:
 	add hl, bc
 	ld a, [hl]
 	and a
-	jr nz, .asm_c8893
-	call BattleBGEffects_IncrementJumptable
-.asm_c8893
+	call z, BattleBGEffects_IncrementJumptable
 	call Functionc88a5
 	ld hl, BG_EFFECT_STRUCT_BATTLE_TURN
 	add hl, bc

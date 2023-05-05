@@ -641,19 +641,16 @@ endr
 	ld a, [hli]
 	cp -1
 	jr nz, .skip
-	call .backup
 
-.skip
-	farcall GetMapScreenCoords
-	ret
-
-.backup
 	ld a, [wPrevWarp]
 	ld [wBackupWarpNumber], a
 	ld a, [wPrevMapGroup]
 	ld [wBackupMapGroup], a
 	ld a, [wPrevMapNumber]
 	ld [wBackupMapNumber], a
+
+.skip
+	farcall GetMapScreenCoords
 	ret
 
 LoadBlockData::

@@ -256,9 +256,7 @@ MobileMenuJoypad:
 	push af
 	call Move2DMenuCursor
 	call Do2DMenuRTCJoypad
-	jr nc, .skip_joypad
-	call _2DMenuInterpretJoypad
-.skip_joypad
+	call c, _2DMenuInterpretJoypad
 	pop af
 	ldh [hBGMapMode], a
 	call GetMenuJoypad
@@ -677,10 +675,8 @@ _ExitMenu::
 	call GetWindowStackTop
 	ld a, h
 	or l
-	jr z, .done
-	call PopWindow
+	call nz, PopWindow
 
-.done
 	pop af
 	ldh [rSVBK], a
 	ld hl, wWindowStackSize
