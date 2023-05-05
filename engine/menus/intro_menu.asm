@@ -1137,10 +1137,9 @@ TitleScreenMain:
 .check_start
 	ld a, [hl]
 	and START | A_BUTTON
-	jr nz, .incave
-	ret
+	ret z
 
-.incave
+;.incave
 	xor a
 	jr .done
 

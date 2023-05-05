@@ -2625,10 +2625,7 @@ Script_end:
 ; script command 0x91
 
 	call ExitScriptSubroutine
-	jr c, .resume
-	ret
-
-.resume
+	ret nc
 	xor a
 	ld [wScriptRunning], a
 	ld a, SCRIPT_OFF

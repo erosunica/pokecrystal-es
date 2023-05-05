@@ -716,9 +716,7 @@ DoAnimFrame:
 .IntroSuicune
 	ld a, [wIntroSceneTimer]
 	and a
-	jr nz, .asm_8d645
-	ret
-.asm_8d645
+	ret z
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], $0

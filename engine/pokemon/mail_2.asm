@@ -53,10 +53,8 @@ ReadAnyMail:
 	and A_BUTTON | B_BUTTON | START
 	jr z, .loop
 	and START
-	jr nz, .pressed_start
-	ret
-
-.pressed_start
+	ret z
+;.pressed_start
 	ld a, [wJumptableIndex]
 	push af
 	callfar PrintMailAndExit ; printer

@@ -372,17 +372,7 @@ UpdateChannels:
 	bit NOTE_NOISE_SAMPLING, [hl]
 	jr nz, .asm_e824d
 	bit NOTE_VIBRATO_OVERRIDE, [hl]
-	jr nz, .asm_e823a
-	ret
-
-.asm_e822f ; unused
-	ld a, [wCurTrackFrequency]
-	ldh [rNR33], a
-	ld a, [wCurTrackFrequency + 1]
-	ldh [rNR34], a
-	ret
-
-.asm_e823a
+	ret z
 	ld a, [wCurTrackFrequency]
 	ldh [rNR33], a
 	ret
