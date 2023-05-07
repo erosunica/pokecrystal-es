@@ -176,8 +176,7 @@ CheckReplaceKrisSprite:
 	cp ENVIRONMENT_5
 	jr z, .no_biking
 	cp DUNGEON
-	jr z, .no_biking
-	jr .nope
+	jr nz, .nope
 .no_biking
 	ld a, [wPlayerState]
 	cp PLAYER_BIKE

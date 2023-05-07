@@ -521,11 +521,8 @@ PlayDanger:
 
 	; Play the low tone
 	cp 16
-	jr z, .halfway
+	jr nz, .increment
 
-	jr .increment
-
-.halfway
 	ld hl, DangerSoundLow
 	jr .applychannel
 
@@ -1951,9 +1948,7 @@ Music_StereoPanning:
 	; stereo on?
 	ld a, [wOptions]
 	bit STEREO, a
-	jr nz, Music_ForceStereoPanning
-	; skip param
-	jp GetMusicByte
+	jp z, GetMusicByte ; skip param
 
 Music_ForceStereoPanning:
 ; force panning

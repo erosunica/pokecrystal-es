@@ -167,8 +167,7 @@ PlaceMapNameCenterAlign:
 	cp " "
 	jr z, .space
 	cp "¯"
-	jr z, .space
-	jr .loop
+	jr nz, .loop
 .space
 	; place an opaque space
 	dec hl

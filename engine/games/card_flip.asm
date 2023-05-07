@@ -288,10 +288,7 @@ _CardFlip:
 	ld hl, .CardFlipPlayAgainText
 	call CardFlip_UpdateCoinBalanceDisplay
 	call YesNoBox
-	jr nc, .Continue
-	jp .Increment
-
-.Continue:
+	jp c, .Increment
 	ld a, [wCardFlipNumCardsPlayed]
 	inc a
 	ld [wCardFlipNumCardsPlayed], a
@@ -841,8 +838,8 @@ CardFlip_CheckWinCondition:
 .PoliOddish:
 	ld a, [wCardFlipFaceUpCard]
 	and $2
-	jr nz, .WinSix
-	jp .Lose
+	jp z, .Lose
+	; fallthrough
 
 .WinSix:
 	ld c, $6
@@ -866,8 +863,8 @@ CardFlip_CheckWinCondition:
 	ld a, [wCardFlipFaceUpCard]
 	and $18
 	cp $10
-	jr z, .WinNine
-	jp .Lose
+	jp nz, .Lose
+	; fallthrough
 
 .WinNine:
 	ld c, $9
@@ -898,8 +895,8 @@ CardFlip_CheckWinCondition:
 	ld a, [wCardFlipFaceUpCard]
 	or ~$3
 	inc a
-	jr z, .WinTwelve
-	jp .Lose
+	jp nz, .Lose
+	; fallthrough
 
 .WinTwelve:
 	ld c, $c
@@ -944,8 +941,8 @@ CardFlip_CheckWinCondition:
 	ld a, [wCardFlipFaceUpCard]
 	and $1c
 	cp $14
-	jr z, .WinEighteen
-	jp .Lose
+	jp nz, .Lose
+	; fallthrough
 
 .WinEighteen:
 	ld c, $12
@@ -1108,10 +1105,7 @@ CardFlip_CheckWinCondition:
 	ld a, [wCoins]
 	cp HIGH(MAX_COINS)
 	jr c, .less
-	jr z, .check_low
-	jr .more
-
-.check_low
+	jr nz, .more
 	ld a, [wCoins + 1]
 	cp LOW(MAX_COINS)
 	jr c, .less

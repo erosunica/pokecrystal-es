@@ -104,8 +104,7 @@ UpdateOpponentInParty::
 UpdateUserInParty::
 	ldh a, [hBattleTurn]
 	and a
-	jr z, UpdateBattleMonInParty
-	jr UpdateEnemyMonInParty
+	jr nz, UpdateEnemyMonInParty
 
 UpdateBattleMonInParty::
 ; Update level, status, current HP

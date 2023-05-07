@@ -129,10 +129,7 @@ INCBIN "gfx/trainer_card/trainer_card.2bpp"
 GetPlayerBackpic:
 	ld a, [wPlayerGender]
 	bit PLAYERGENDER_FEMALE_F, a
-	jr z, GetChrisBackpic
-	jp GetKrisBackpic
-
-GetChrisBackpic:
+	jp nz, GetKrisBackpic
 	ld hl, ChrisBackpic
 	ld b, BANK(ChrisBackpic)
 	ld de, vTiles2 tile $31

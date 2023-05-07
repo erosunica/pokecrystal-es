@@ -625,10 +625,8 @@ IntroScene6:
 	cp $40
 	jr nc, .StopUnown
 	cp $20
-	jr z, .FirstUnown
-	jr .NoUnown
+	jr nz, .NoUnown
 
-.FirstUnown:
 	push af
 	depixel 7, 15
 	call CrystalIntro_InitUnownAnim

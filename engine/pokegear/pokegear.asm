@@ -2405,10 +2405,7 @@ Pokedex_GetArea:
 	ret nz
 	ld a, e
 	and $10
-	jr nz, .copy_sprites
-	jp ClearSprites
-
-.copy_sprites
+	jp z, ClearSprites
 	hlcoord 0, 0
 	ld de, wVirtualOAM
 	ld bc, wVirtualOAMEnd - wVirtualOAM

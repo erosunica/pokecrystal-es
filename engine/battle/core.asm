@@ -193,8 +193,7 @@ BattleTurn:
 	call HandleBetweenTurnEffects
 	ld a, [wBattleEnded]
 	and a
-	jr nz, .quit
-	jp .loop
+	jp z, .loop
 
 .quit
 	ret
@@ -2071,10 +2070,8 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	call BreakAttraction
 	ld a, [wBattleMode]
 	dec a
-	jr z, .wild2
-	jr .trainer
+	jr nz, .trainer
 
-.wild2
 	call StopDangerSound
 	ld a, $1
 	ld [wBattleLowHealthAlarm], a
@@ -5090,10 +5087,8 @@ PlayerSwitch:
 	cp BATTLEACTION_SWITCH1
 	jp c, .switch
 	cp BATTLEACTION_FORFEIT
-	jr nz, .dont_run
-	jp WildFled_EnemyFled_LinkBattleCanceled
+	jp z, WildFled_EnemyFled_LinkBattleCanceled
 
-.dont_run
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
 	jr z, .player_1

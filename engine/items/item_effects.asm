@@ -1101,9 +1101,7 @@ EvoStoneEffect:
 
 	ld a, [wMonTriedToEvolve]
 	and a
-	jr z, .NoEffect
-
-	jp UseDisposableItem
+	jp nz, UseDisposableItem
 
 .NoEffect:
 	call WontHaveAnyEffectMessage
@@ -1534,15 +1532,8 @@ FullRestoreEffect:
 	jp z, StatusHealer_NoEffect
 
 	call IsMonAtFullHealth
-	jr c, .NotAtFullHealth
+	jp nc, FullyHealStatus
 
-	jp FullyHealStatus
-
-.NotAtFullHealth:
-	call .FullRestore
-	jp StatusHealer_Jumptable
-
-.FullRestore:
 	xor a
 	ld [wLowHealthAlarm], a
 	call ReviveFullHP
@@ -1559,7 +1550,7 @@ FullRestoreEffect:
 	call ItemActionTextWaitButton
 	call UseDisposableItem
 	xor a
-	ret
+	jp StatusHealer_Jumptable
 
 BitterBerryEffect:
 	ld hl, wPlayerSubStatus3

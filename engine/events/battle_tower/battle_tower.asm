@@ -432,8 +432,7 @@ endr
 	and a
 	jr z, .not_move
 	cp NUM_ATTACKS + 1
-	jr nc, .not_move
-	jr .valid_move
+	jr c, .valid_move
 
 .not_move
 	dec hl
