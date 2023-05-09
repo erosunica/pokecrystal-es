@@ -74,9 +74,3 @@ DisableLCD::
 	ld a, b
 	ldh [rIE], a
 	ret
-
-EnableLCD::
-	ldh a, [rLCDC]
-	set rLCDC_ENABLE, a
-	ldh [rLCDC], a
-	ret

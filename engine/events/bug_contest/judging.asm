@@ -138,6 +138,16 @@ BugContest_GetPlayersResult:
 .done
 	ret
 
+ClearContestResults:
+	ld hl, wBugContestResults
+	ld b, wBugContestWinnersEnd - wBugContestResults
+	xor a
+.loop
+	ld [hli], a
+	dec b
+	jr nz, .loop
+	ret
+
 BugContest_JudgeContestants:
 	call ClearContestResults
 	call ComputeAIContestantScores
@@ -150,17 +160,7 @@ BugContest_JudgeContestants:
 	ld [hli], a
 	ldh a, [hProduct + 1]
 	ld [hl], a
-	jp DetermineContestWinners
-
-ClearContestResults:
-	ld hl, wBugContestResults
-	ld b, wBugContestWinnersEnd - wBugContestResults
-	xor a
-.loop
-	ld [hli], a
-	dec b
-	jr nz, .loop
-	ret
+	; fallthrough
 
 DetermineContestWinners:
 	ld de, wBugContestTempScore

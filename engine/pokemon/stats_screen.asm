@@ -94,7 +94,6 @@ StatsScreenPointerTable:
 	dw StatsScreen_LoadPage
 	dw StatsScreenWaitCry
 	dw MonStatsJoypad
-	dw StatsScreen_Exit
 
 StatsScreen_WaitAnim:
 	ld hl, wcf64
@@ -113,18 +112,6 @@ StatsScreen_WaitAnim:
 	ld hl, wcf64
 	res 5, [hl]
 	farcall HDMATransferTilemapToWRAMBank3
-	ret
-
-StatsScreen_SetJumptableIndex:
-	ld a, [wJumptableIndex]
-	and $80
-	or h
-	ld [wJumptableIndex], a
-	ret
-
-StatsScreen_Exit:
-	ld hl, wJumptableIndex
-	set 7, [hl]
 	ret
 
 MonStatsInit:
@@ -167,8 +154,15 @@ EggStatsJoypad:
 	jp StatsScreen_JoypadAction
 
 .quit
-	ld h, 7
-	jp StatsScreen_SetJumptableIndex
+	ld h, 1 << 7 ; exit
+	; fallthrough
+
+StatsScreen_SetJumptableIndex:
+	ld a, [wJumptableIndex]
+	and $80
+	or h
+	ld [wJumptableIndex], a
+	ret
 
 StatsScreen_LoadPage:
 	call StatsScreen_LoadGFX
@@ -178,16 +172,6 @@ StatsScreen_LoadPage:
 	inc a
 	ld [wJumptableIndex], a
 	ret
-
-MonStatsJoypad:
-	call StatsScreen_GetJoypad
-	jr nc, .next
-	ld h, 0
-	jp StatsScreen_SetJumptableIndex
-
-.next
-	and D_DOWN | D_UP | D_LEFT | D_RIGHT | A_BUTTON | B_BUTTON
-	jp StatsScreen_JoypadAction
 
 StatsScreenWaitCry:
 	call IsSFXPlaying
@@ -251,6 +235,16 @@ StatsScreen_GetJoypad:
 	scf
 	ret
 
+MonStatsJoypad:
+	call StatsScreen_GetJoypad
+	jr nc, .next
+	ld h, 0
+	jp StatsScreen_SetJumptableIndex
+
+.next
+	and D_DOWN | D_UP | D_LEFT | D_RIGHT | A_BUTTON | B_BUTTON
+	; fallthrough
+
 StatsScreen_JoypadAction:
 	push af
 	ld a, [wcf64]
@@ -258,7 +252,7 @@ StatsScreen_JoypadAction:
 	ld c, a
 	pop af
 	bit B_BUTTON_F, a
-	jp nz, .b_button
+	jp nz, EggStatsJoypad.quit
 	bit D_LEFT_F, a
 	jr nz, .d_left
 	bit D_RIGHT_F, a
@@ -312,7 +306,7 @@ StatsScreen_JoypadAction:
 .a_button
 	ld a, c
 	cp BLUE_PAGE ; last page
-	jr z, .b_button
+	jp z, EggStatsJoypad.quit
 .d_right
 	inc c
 	ld a, BLUE_PAGE ; last page
@@ -340,10 +334,6 @@ StatsScreen_JoypadAction:
 
 .load_mon
 	ld h, 0
-	jp StatsScreen_SetJumptableIndex
-
-.b_button
-	ld h, 7
 	jp StatsScreen_SetJumptableIndex
 
 StatsScreen_InitUpperHalf:

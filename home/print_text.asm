@@ -90,10 +90,6 @@ CopyDataUntil::
 	jr nz, CopyDataUntil
 	ret
 
-PrintNum::
-	homecall _PrintNum
-	ret
-
 MobilePrintNum::
 	homecall _MobilePrintNum
 	ret

@@ -1,11 +1,3 @@
-GetEmote2bpp:
-	ld a, $1
-	ldh [rVBK], a
-	call Get2bpp
-	xor a
-	ldh [rVBK], a
-	ret
-
 _ReplaceKrisSprite::
 	call GetPlayerSprite
 	ld a, [wUsedSprites]
@@ -47,7 +39,67 @@ RefreshSprites::
 	call ByteFill
 	call GetPlayerSprite
 	call AddMapSprites
-	jp LoadAndSortSprites
+	; fallthrough
+
+LoadAndSortSprites:
+	call LoadSpriteGFX
+	call SortUsedSprites
+ArrangeUsedSprites:
+; Get the length of each sprite and space them out in VRAM.
+; Crystal introduces a second table in VRAM bank 0.
+
+	ld hl, wUsedSprites
+	lb bc, 0, SPRITE_GFX_LIST_CAPACITY
+.FirstTableLength:
+; Keep going until the end of the list.
+	ld a, [hli]
+	and a
+	jr z, .quit
+
+	ld a, [hl]
+	call GetSpriteLength
+
+; Spill over into the second table after $80 tiles.
+	add b
+	cp $80
+	jr z, .loop
+	jr nc, .SecondTable
+
+.loop
+	ld [hl], b
+	inc hl
+	ld b, a
+
+; Assumes the next table will be reached before c hits 0.
+	dec c
+	jr nz, .FirstTableLength
+
+.SecondTable:
+; The second tile table starts at tile $80.
+	ld b, $80
+	dec hl
+.SecondTableLength:
+; Keep going until the end of the list.
+	ld a, [hli]
+	and a
+	jr z, .quit
+
+	ld a, [hl]
+	call GetSpriteLength
+
+; There are only two tables, so don't go any further than that.
+	add b
+	jr c, .quit
+
+	ld [hl], b
+	ld b, a
+	inc hl
+
+	dec c
+	jr nz, .SecondTableLength
+
+.quit
+	ret
 
 GetPlayerSprite:
 ; Get Chris or Kris's sprite.
@@ -147,12 +199,6 @@ LoadUsedSpritesGFX:
 	ld c, EMOTE_BOULDER_DUST
 .outdoor
 	farcall LoadEmote
-	ret
-
-SafeGetSprite:
-	push hl
-	call GetSprite
-	pop hl
 	ret
 
 GetSprite:
@@ -278,11 +324,6 @@ _GetSpritePalette::
 	xor a
 	ld c, a
 	ret
-
-LoadAndSortSprites:
-	call LoadSpriteGFX
-	call SortUsedSprites
-	jp ArrangeUsedSprites
 
 AddSpriteGFX:
 ; Add any new sprite ids to a list of graphics to be loaded.
@@ -416,63 +457,6 @@ SortUsedSprites:
 .quit
 	ret
 
-ArrangeUsedSprites:
-; Get the length of each sprite and space them out in VRAM.
-; Crystal introduces a second table in VRAM bank 0.
-
-	ld hl, wUsedSprites
-	lb bc, 0, SPRITE_GFX_LIST_CAPACITY
-.FirstTableLength:
-; Keep going until the end of the list.
-	ld a, [hli]
-	and a
-	jr z, .quit
-
-	ld a, [hl]
-	call GetSpriteLength
-
-; Spill over into the second table after $80 tiles.
-	add b
-	cp $80
-	jr z, .loop
-	jr nc, .SecondTable
-
-.loop
-	ld [hl], b
-	inc hl
-	ld b, a
-
-; Assumes the next table will be reached before c hits 0.
-	dec c
-	jr nz, .FirstTableLength
-
-.SecondTable:
-; The second tile table starts at tile $80.
-	ld b, $80
-	dec hl
-.SecondTableLength:
-; Keep going until the end of the list.
-	ld a, [hli]
-	and a
-	jr z, .quit
-
-	ld a, [hl]
-	call GetSpriteLength
-
-; There are only two tables, so don't go any further than that.
-	add b
-	jr c, .quit
-
-	ld [hl], b
-	ld b, a
-	inc hl
-
-	dec c
-	jr nz, .SecondTableLength
-
-.quit
-	ret
-
 GetSpriteLength:
 ; Return the length of sprite type a in tiles.
 
@@ -532,7 +516,9 @@ GetUsedSprites:
 
 GetUsedSprite:
 	ldh a, [hUsedSpriteIndex]
-	call SafeGetSprite
+	push hl
+	call GetSprite
+	pop hl
 	ldh a, [hUsedSpriteTile]
 	call .GetTileAddr
 	push hl
@@ -628,7 +614,14 @@ LoadEmote::
 	ld a, c
 	and a
 	ret z
-	jp GetEmote2bpp
+	; fallthrough
+GetEmote2bpp:
+	ld a, $1
+	ldh [rVBK], a
+	call Get2bpp
+	xor a
+	ldh [rVBK], a
+	ret
 
 INCLUDE "data/sprites/emotes.asm"
 

@@ -8,12 +8,6 @@ BattleStart_TrainerHuds:
 	ret z
 	jp ShowOTTrainerMonsRemaining
 
-EnemySwitch_TrainerHud:
-	ld a, $e4
-	ldh [rOBP0], a
-	call LoadBallIconGFX
-	jp ShowOTTrainerMonsRemaining
-
 ShowPlayerMonsRemaining:
 	call DrawPlayerPartyIconHUDBorder
 	ld hl, wPartyMon1HP
@@ -28,6 +22,12 @@ ShowPlayerMonsRemaining:
 	ld [wPlaceBallsDirection], a
 	ld hl, wVirtualOAMSprite00
 	jp LoadTrainerHudOAM
+
+EnemySwitch_TrainerHud:
+	ld a, $e4
+	ldh [rOBP0], a
+	call LoadBallIconGFX
+	; fallthrough
 
 ShowOTTrainerMonsRemaining:
 	call DrawEnemyHUDBorder

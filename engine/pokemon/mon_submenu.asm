@@ -41,7 +41,7 @@ MonMenuLoop:
 	ld [wMenuDataFlags], a
 	ld a, [wBuffer1] ; items
 	ld [wMenuDataItems], a
-	call InitVerticalMenuCursor
+	callfar _InitVerticalMenuCursor
 	ld hl, w2DMenuFlags1
 	set 6, [hl]
 	call DoMenuJoypadLoop
@@ -243,7 +243,7 @@ BattleMonMenu:
 	ld a, [wMenuDataFlags]
 	bit 7, a
 	jr z, .set_carry
-	call InitVerticalMenuCursor
+	callfar _InitVerticalMenuCursor
 	ld hl, w2DMenuFlags1
 	set 6, [hl]
 	call DoMenuJoypadLoop

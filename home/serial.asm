@@ -272,7 +272,13 @@ Serial_PrintWaitingTextAndSyncAndExchangeNybble::
 	call LoadTilemapToTempTilemap
 	callfar PlaceWaitingText
 	call WaitLinkTransfer
-	jp SafeLoadTempTilemapToTilemap
+SafeLoadTempTilemapToTilemap::
+	xor a
+	ldh [hBGMapMode], a
+	call LoadTempTilemapToTilemap
+	ld a, 1
+	ldh [hBGMapMode], a
+	ret
 
 Serial_SyncAndExchangeNybble::
 	call LoadTilemapToTempTilemap

@@ -889,14 +889,8 @@ TrademonStats_MonTemplate:
 	lb bc, $6, $d
 	call Textbox
 	hlcoord 4, 0
-	ld de, .OTMonData
+	ld de, TrademonStats_OTMonData
 	jp PlaceString
-
-.OTMonData:
-	db   "─── №."
-	next ""
-	next "EO/"
-	next "№<ID> @"
 
 TrademonStats_Egg:
 	call WaitTop
@@ -907,14 +901,9 @@ TrademonStats_Egg:
 	lb bc, 6, 13
 	call Textbox
 	hlcoord 4, 2
-	ld de, .EggData
+	ld de, TrademonStats_EggData
 	call PlaceString
-	jp TrademonStats_WaitBGMap
-
-.EggData:
-	db   "HUEVO"
-	next "EO/¿¿??"
-	next "№<ID> ¿¿??@"
+	; fallthrough
 
 TrademonStats_WaitBGMap:
 	call WaitBGMap
@@ -922,6 +911,17 @@ TrademonStats_WaitBGMap:
 	ld a, HIGH(vBGMap0)
 	ldh [hBGMapAddress + 1], a
 	ret
+
+TrademonStats_OTMonData:
+	db   "─── №."
+	next ""
+	next "EO/"
+	next "№<ID> @"
+
+TrademonStats_EggData:
+	db   "HUEVO"
+	next "EO/¿¿??"
+	next "№<ID> ¿¿??@"
 
 TrademonStats_PrintSpeciesNumber:
 	hlcoord 10, 0

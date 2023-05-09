@@ -122,8 +122,32 @@ RunBattleAnimScript:
 	ld a, [wBattleAnimFlags]
 	bit BATTLEANIM_STOP_F, a
 	jr z, .playframe
+	bit BATTLEANIM_KEEPSPRITES_F, a
+	jr z, .delete
 
-	jp BattleAnim_ClearOAM
+	; Instead of deleting the sprites, make them all use palette 0 (monochrome)
+	ld hl, wVirtualOAMSprite00Attributes
+	ld c, NUM_SPRITE_OAM_STRUCTS
+.loop
+	ld a, [hl]
+	and $ff ^ (PALETTE_MASK | VRAM_BANK_1)
+	ld [hli], a
+rept SPRITEOAMSTRUCT_LENGTH + -1
+	inc hl
+endr
+	dec c
+	jr nz, .loop
+	ret
+
+.delete
+	ld hl, wVirtualOAM
+	ld c, wVirtualOAMEnd - wVirtualOAM
+	xor a
+.loop2
+	ld [hli], a
+	dec c
+	jr nz, .loop2
+	ret
 
 BattleAnimClearHud:
 	call DelayFrame
@@ -216,55 +240,10 @@ Unreferenced_Functioncc220:
 	ldh [hBGMapAddress + 1], a
 	jp DelayFrame
 
-BattleAnim_ClearOAM:
-	ld a, [wBattleAnimFlags]
-	bit BATTLEANIM_KEEPSPRITES_F, a
-	jr z, .delete
-
-	; Instead of deleting the sprites, make them all use palette 0 (monochrome)
-	ld hl, wVirtualOAMSprite00Attributes
-	ld c, NUM_SPRITE_OAM_STRUCTS
-.loop
-	ld a, [hl]
-	and $ff ^ (PALETTE_MASK | VRAM_BANK_1)
-	ld [hli], a
-rept SPRITEOAMSTRUCT_LENGTH + -1
-	inc hl
-endr
-	dec c
-	jr nz, .loop
-	ret
-
-.delete
-	ld hl, wVirtualOAM
-	ld c, wVirtualOAMEnd - wVirtualOAM
-	xor a
-.loop2
-	ld [hli], a
-	dec c
-	jr nz, .loop2
-	ret
-
 RunBattleAnimCommand:
 	call .CheckTimer
 	ret nc
-	jp .RunScript
 
-.CheckTimer:
-	ld a, [wBattleAnimDelay]
-	and a
-	jr z, .done
-
-	dec a
-	ld [wBattleAnimDelay], a
-	and a
-	ret
-
-.done
-	scf
-	ret
-
-.RunScript:
 .loop
 	call GetBattleAnimByte
 
@@ -288,8 +267,21 @@ RunBattleAnimCommand:
 
 .do_anim
 	call .DoCommand
-
 	jr .loop
+
+.CheckTimer:
+	ld a, [wBattleAnimDelay]
+	and a
+	jr z, .done
+
+	dec a
+	ld [wBattleAnimDelay], a
+	and a
+	ret
+
+.done
+	scf
+	ret
 
 .DoCommand:
 ; Execute battle animation command in [wBattleAnimByte].

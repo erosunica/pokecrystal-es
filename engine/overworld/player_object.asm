@@ -55,6 +55,17 @@ PlayerObjectTemplate:
 ; Said bytes seem to be unused.
 	object_event -4, -4, SPRITE_CHRIS, SPRITEMOVEDATA_PLAYER, 15, 15, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 0, -1
 
+PlayerSpawn_ConvertCoords:
+	push bc
+	ld a, [wXCoord]
+	add 4
+	ld d, a
+	ld a, [wYCoord]
+	add 4
+	ld e, a
+	pop bc
+	; fallthrough
+
 CopyDECoordsToMapObject::
 	push de
 	ld a, b
@@ -67,17 +78,6 @@ CopyDECoordsToMapObject::
 	add hl, bc
 	ld [hl], e
 	ret
-
-PlayerSpawn_ConvertCoords:
-	push bc
-	ld a, [wXCoord]
-	add 4
-	ld d, a
-	ld a, [wYCoord]
-	add 4
-	ld e, a
-	pop bc
-	jp CopyDECoordsToMapObject
 
 WriteObjectXY::
 	ld a, b
@@ -682,7 +682,12 @@ GetRelativeFacing::
 	add hl, bc
 	ld a, [hl]
 	cp NUM_OBJECT_STRUCTS
-	jr nc, .carry
+	jr c, .continue
+.carry
+	scf
+	ret
+
+.continue
 	ld d, a
 	ld a, e
 	call GetMapObject
@@ -692,14 +697,7 @@ GetRelativeFacing::
 	cp NUM_OBJECT_STRUCTS
 	jr nc, .carry
 	ld e, a
-	jp .GetFacing_e_relativeto_d
 
-.carry
-	scf
-	ret
-
-.GetFacing_e_relativeto_d:
-; Determines which way object e would have to turn to face object d.  Returns carry if it's impossible.
 ; load the coordinates of object d into bc
 	ld a, d
 	call GetObjectStruct

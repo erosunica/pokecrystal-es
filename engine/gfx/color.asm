@@ -388,25 +388,6 @@ LoadStatsScreenPals:
 	ld a, $1
 	ret
 
-LoadMailPalettes:
-	ld l, e
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld de, .MailPals
-	add hl, de
-	ld de, wBGPals1
-	ld bc, 1 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	call ApplyPals
-	call WipeAttrmap
-	jp ApplyAttrmap
-
-.MailPals:
-INCLUDE "gfx/mail/mail.pal"
-
 INCLUDE "engine/gfx/cgb_layouts.asm"
 
 Unreferenced_Function95f0:
@@ -565,6 +546,22 @@ ApplyPals:
 	ld a, BANK(wGBCPalettes)
 	jp FarCopyWRAM
 
+LoadMailPalettes:
+	ld l, e
+	ld h, 0
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld de, MailPals
+	add hl, de
+	ld de, wBGPals1
+	ld bc, 1 palettes
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	call ApplyPals
+	call WipeAttrmap
+	; fallthrough
+
 ApplyAttrmap:
 	ldh a, [rLCDC]
 	bit rLCDC_ENABLE, a
@@ -606,6 +603,9 @@ ApplyAttrmap:
 	xor a
 	ldh [rVBK], a
 	ret
+
+MailPals:
+INCLUDE "gfx/mail/mail.pal"
 
 ; CGB layout for SCGB_PARTY_MENU_HP_PALS
 CGB_ApplyPartyMenuHPPals:

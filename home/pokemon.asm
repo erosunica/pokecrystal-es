@@ -220,7 +220,11 @@ Print8BitNumLeftAlign::
 	ld [wDeciramBuffer], a
 	ld de, wDeciramBuffer
 	ld b, PRINTNUM_LEFTALIGN | 1
-	jp PrintNum
+	; fallthrough
+
+PrintNum::
+	homecall _PrintNum
+	ret
 
 Unreferenced_GetNthMove::
 	ld hl, wListMoves_MoveIndicesBuffer

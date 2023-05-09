@@ -169,7 +169,13 @@ Function16d6e1:
 	db "¡ESPERA.…!@"
 
 LinkTradeMenu:
-	call .MenuAction
+	ld hl, w2DMenuFlags2
+	res 7, [hl]
+	ldh a, [hBGMapMode]
+	push af
+	call .loop
+	pop af
+	ldh [hBGMapMode], a
 	; fallthrough
 
 .GetJoypad:
@@ -186,16 +192,6 @@ LinkTradeMenu:
 	ld a, b
 	pop bc
 	ld d, a
-	ret
-
-.MenuAction:
-	ld hl, w2DMenuFlags2
-	res 7, [hl]
-	ldh a, [hBGMapMode]
-	push af
-	call .loop
-	pop af
-	ldh [hBGMapMode], a
 	ret
 
 .loop

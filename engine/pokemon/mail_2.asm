@@ -660,19 +660,7 @@ LoadMirageMailGFX:
 	hlcoord 2, 11
 	call Mail_Draw16TileRow
 	pop hl
-	jp MailGFX_PlaceMessage
-
-MailGFX_GenerateMonochromeTilesColor2:
-.loop
-	xor a
-	ld [hli], a
-	ld a, $ff
-	ld [hli], a
-	dec bc
-	ld a, b
-	or c
-	jr nz, .loop
-	ret
+	; fallthrough
 
 MailGFX_PlaceMessage:
 	ld bc, MAIL_STRUCT_LENGTH
@@ -711,6 +699,18 @@ Unreferenced_Functionb984e:
 .loop
 	ld a, [hl]
 	xor $ff
+	ld [hli], a
+	dec bc
+	ld a, b
+	or c
+	jr nz, .loop
+	ret
+
+MailGFX_GenerateMonochromeTilesColor2:
+.loop
+	xor a
+	ld [hli], a
+	ld a, $ff
 	ld [hli], a
 	dec bc
 	ld a, b

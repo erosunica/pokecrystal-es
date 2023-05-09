@@ -1870,8 +1870,18 @@ Music_NoteType:
 	maskbits NUM_MUSIC_CHANS
 	cp CHAN4
 	ret z
-	; volume envelope
-	jp Music_VolumeEnvelope
+	; fallthough
+
+Music_VolumeEnvelope:
+; volume envelope
+; params: 1
+;	hi: volume
+;   lo: fade
+	call GetMusicByte
+	ld hl, CHANNEL_VOLUME_ENVELOPE
+	add hl, bc
+	ld [hl], a
+	ret
 
 Music_PitchSweep:
 ; update pitch sweep
@@ -1891,17 +1901,6 @@ Music_DutyCycle:
 	rrca
 	and $c0
 	ld hl, CHANNEL_DUTY_CYCLE
-	add hl, bc
-	ld [hl], a
-	ret
-
-Music_VolumeEnvelope:
-; volume envelope
-; params: 1
-;	hi: volume
-;   lo: fade
-	call GetMusicByte
-	ld hl, CHANNEL_VOLUME_ENVELOPE
 	add hl, bc
 	ld [hl], a
 	ret

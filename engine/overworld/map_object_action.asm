@@ -18,6 +18,10 @@ ObjectActionPairPointers:
 	dw SetFacingGrassShake,            SetFacingStanding
 	dw SetFacingSkyfall,               SetFacingCurrent
 
+SetFacingCounterclockwiseSpin2:
+	call CounterclockwiseSpinAction
+	; fallthrough
+
 SetFacingStanding:
 	ld hl, OBJECT_FACING_STEP
 	add hl, bc
@@ -122,10 +126,6 @@ SetFacingCounterclockwiseSpin:
 	add hl, bc
 	ld [hl], a
 	ret
-
-SetFacingCounterclockwiseSpin2:
-	call CounterclockwiseSpinAction
-	jp SetFacingStanding
 
 CounterclockwiseSpinAction:
 ; Here, OBJECT_STEP_FRAME consists of two 2-bit components,

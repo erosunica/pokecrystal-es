@@ -442,11 +442,6 @@ SpecialMapMusic::
 	scf
 	ret
 
-GetMapMusic_MaybeSpecial::
-	call SpecialMapMusic
-	ret c
-	jp GetMapMusic
-
 Unreferenced_Function3d9f::
 ; Places a BCD number at the
 ; upper center of the screen.

@@ -349,11 +349,11 @@ AI_Items:
 	bit UNKNOWN_USE_F, a
 	jp nz, .CheckQuarterHP
 	callfar AICheckEnemyQuarterHP
-	jp nc, .UseHealItem
+	jp nc, .Use
 	call Random
 	cp 50 percent + 1
-	jp c, .UseHealItem
-	jp .DontUse
+	jp nc, .DontUse
+	jp .Use
 
 .CheckQuarterHP:
 	callfar AICheckEnemyQuarterHP
@@ -361,18 +361,16 @@ AI_Items:
 	call Random
 	cp 20 percent - 1
 	jp c, .DontUse
-	jr .UseHealItem
+	jp .Use
 
 .CheckHalfOrQuarterHP:
 	callfar AICheckEnemyHalfHP
 	jp c, .DontUse
 	callfar AICheckEnemyQuarterHP
-	jp nc, .UseHealItem
+	jp nc, .Use
 	call Random
 	cp 20 percent - 1
 	jp nc, .DontUse
-
-.UseHealItem:
 	jp .Use
 
 .HyperPotion:
@@ -748,7 +746,13 @@ EnemyUsedDireHit:
 	ld hl, wEnemySubStatus4
 	set SUBSTATUS_FOCUS_ENERGY, [hl]
 	ld a, DIRE_HIT
-	jp PrintText_UsedItemOn_AND_AIUpdateHUD
+	; fallthrough
+
+PrintText_UsedItemOn_AND_AIUpdateHUD:
+; a = ITEM_CONSTANT
+	ld [wCurEnemyItem], a
+	call PrintText_UsedItemOn
+	jp AIUpdateHUD
 
 Function3851e: ; This appears to be unused
 	ldh [hDivisor], a
@@ -803,13 +807,6 @@ EnemyUsedXItem:
 	call PrintText_UsedItemOn
 	pop bc
 	farcall RaiseStat
-	jp AIUpdateHUD
-
-; Parameter
-; a = ITEM_CONSTANT
-PrintText_UsedItemOn_AND_AIUpdateHUD:
-	ld [wCurEnemyItem], a
-	call PrintText_UsedItemOn
 	jp AIUpdateHUD
 
 PrintText_UsedItemOn:

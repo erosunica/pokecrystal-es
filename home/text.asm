@@ -19,6 +19,11 @@ FillBoxWithByte::
 	jr nz, .row
 	ret
 
+ClearScreen::
+	ld a, PAL_BG_TEXT
+	hlcoord 0, 0, wAttrmap
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+	call ByteFill
 ClearTilemap::
 ; Fill wTilemap with blank tiles.
 
@@ -32,24 +37,6 @@ ClearTilemap::
 	bit rLCDC_ENABLE, a
 	ret z
 	jp WaitBGMap
-
-ClearScreen::
-	ld a, PAL_BG_TEXT
-	hlcoord 0, 0, wAttrmap
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call ByteFill
-	jr ClearTilemap
-
-Textbox::
-; Draw a text box at hl with room for b lines of c characters each.
-; Places a border around the textbox, then switches the palette to the
-; text black-and-white scheme.
-	push bc
-	push hl
-	call TextboxBorder
-	pop hl
-	pop bc
-	jr TextboxPalette
 
 TextboxBorder::
 	; Top
@@ -97,6 +84,23 @@ TextboxBorder::
 	jr nz, .loop
 	ret
 
+SpeechTextbox::
+; Standard textbox.
+	hlcoord TEXTBOX_X, TEXTBOX_Y
+	lb bc, TEXTBOX_INNERH, TEXTBOX_INNERW
+	; fallthrough
+
+Textbox::
+; Draw a text box at hl with room for b lines of c characters each.
+; Places a border around the textbox, then switches the palette to the
+; text black-and-white scheme.
+	push bc
+	push hl
+	call TextboxBorder
+	pop hl
+	pop bc
+	; fallthrough
+
 TextboxPalette::
 ; Fill text box width c height b at hl with pal 7
 	ld de, wAttrmap - wTilemap
@@ -121,18 +125,18 @@ TextboxPalette::
 	jr nz, .col
 	ret
 
-SpeechTextbox::
-; Standard textbox.
-	hlcoord TEXTBOX_X, TEXTBOX_Y
-	lb bc, TEXTBOX_INNERH, TEXTBOX_INNERW
-	jp Textbox
-
 RadioTerminator::
 	ld hl, .stop
 	ret
 
 .stop:
 	text_end
+
+MenuTextbox::
+	push hl
+	call LoadMenuTextbox
+	pop hl
+	; fallthrough
 
 PrintText::
 	call SetUpTextbox
@@ -604,6 +608,14 @@ PokeFluteTerminatorCharacter::
 .stop:
 	text_end
 
+BattleTextbox::
+; Open a textbox and print text at hl.
+	push hl
+	call SpeechTextbox
+	call UpdateSprites
+	call ApplyTilemap
+	pop hl
+	; fallthrough
 PrintTextboxText::
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	; fallthrough

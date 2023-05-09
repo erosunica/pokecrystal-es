@@ -233,14 +233,6 @@ MoveList_InitAnimatedMonIcon:
 	ld [hl], SPRITE_ANIM_SEQ_NULL
 	ret
 
-Trade_LoadMonIconGFX:
-	ld a, [wTempIconSpecies]
-	call ReadMonMenuIcon
-	ld [wCurIcon], a
-	ld a, $62
-	ld [wCurIconTile], a
-	jp GetMemIconGFX
-
 GetSpeciesIcon:
 ; Load species icon into VRAM at tile a
 	push de
@@ -267,6 +259,14 @@ Unreferenced_GetMonIcon2:
 	ld [wCurIcon], a
 	pop de
 	jp GetIcon_de
+
+Trade_LoadMonIconGFX:
+	ld a, [wTempIconSpecies]
+	call ReadMonMenuIcon
+	ld [wCurIcon], a
+	ld a, $62
+	ld [wCurIconTile], a
+	; fallthrough
 
 GetMemIconGFX:
 	ld a, [wCurIconTile]

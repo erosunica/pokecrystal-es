@@ -298,9 +298,23 @@ ScrollTileRightLeft:
 	ld [wTileAnimationTimer], a
 	and %100
 	jr nz, ScrollTileLeft
-	jr ScrollTileRight
+	; fallthrough
 
-ScrollTileUpDown:
+ScrollTileRight:
+	ld h, d
+	ld l, e
+	ld c, 4
+.loop
+rept 4
+	ld a, [hl]
+	rrca
+	ld [hli], a
+endr
+	dec c
+	jr nz, .loop
+	ret
+
+ScrollTileUpDown: ; unused
 ; Scroll up for 4 ticks, then down for 4 ticks.
 	ld a, [wTileAnimationTimer]
 	inc a
@@ -318,20 +332,6 @@ ScrollTileLeft:
 rept 4
 	ld a, [hl]
 	rlca
-	ld [hli], a
-endr
-	dec c
-	jr nz, .loop
-	ret
-
-ScrollTileRight:
-	ld h, d
-	ld l, e
-	ld c, 4
-.loop
-rept 4
-	ld a, [hl]
-	rrca
 	ld [hli], a
 endr
 	dec c

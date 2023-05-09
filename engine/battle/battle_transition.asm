@@ -220,6 +220,11 @@ StartTrainerBattle_Finish:
 	ld [wJumptableIndex], a
 	ret
 
+StartTrainerBattle_Flash:
+	call DoFlashAnimation
+	ret nc
+	; fallthrough
+
 StartTrainerBattle_NextScene:
 	ld hl, wJumptableIndex
 	inc [hl]
@@ -232,12 +237,7 @@ StartTrainerBattle_SetUpBGMap:
 	ldh [hBGMapMode], a
 	ret
 
-StartTrainerBattle_Flash:
-	call .DoFlashAnimation
-	ret nc
-	jp StartTrainerBattle_NextScene
-
-.DoFlashAnimation:
+DoFlashAnimation:
 	ld a, [wTimeOfDayPalset]
 	cp %11111111 ; dark cave
 	jr z, .done

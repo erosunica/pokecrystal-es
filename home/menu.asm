@@ -55,10 +55,9 @@ HideCursor::
 	ld [hl], " "
 	ret
 
-PushWindow::
-	callfar _PushWindow
-	ret
-
+MenuTextboxWaitButton::
+	call MenuTextbox
+	call WaitButton
 ExitMenu::
 	push af
 	callfar _ExitMenu
@@ -69,6 +68,8 @@ InitVerticalMenuCursor::
 	callfar _InitVerticalMenuCursor
 	ret
 
+MenuTextboxBackup::
+	call MenuTextbox
 CloseWindow::
 	push af
 	call ExitMenu
@@ -195,6 +196,10 @@ PlaceVerticalMenuItems::
 	add hl, bc
 	jp PlaceString
 
+DrawVariableLengthMenuBox::
+	call CopyMenuData
+	call GetMenuIndexSet
+	call AutomaticGetMenuBottomCoord
 MenuBox::
 	call MenuBoxCoord2Tile
 	call GetMenuBoxDims
@@ -295,7 +300,11 @@ Coord2Attr::
 
 LoadMenuHeader::
 	call CopyMenuHeader
-	jp PushWindow
+	; fallthrough
+
+PushWindow::
+	callfar _PushWindow
+	ret
 
 CopyMenuHeader::
 	ld de, wMenuHeader
@@ -303,15 +312,6 @@ CopyMenuHeader::
 	call CopyBytes
 	ldh a, [hROMBank]
 	ld [wMenuDataBank], a
-	ret
-
-MenuTextbox::
-	push hl
-	call LoadMenuTextbox
-	pop hl
-	jp PrintText
-
-; unused
 	ret
 
 LoadMenuTextbox::
@@ -323,10 +323,6 @@ LoadMenuTextbox::
 	menu_coords 0, 12, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw vTiles0
 	db 0 ; default option
-
-MenuTextboxBackup::
-	call MenuTextbox
-	jp CloseWindow
 
 LoadStandardMenuHeader::
 	ld hl, .MenuHeader
@@ -349,7 +345,7 @@ VerticalMenu::
 	ld a, [wMenuDataFlags]
 	bit 7, a
 	jr z, .cancel
-	call InitVerticalMenuCursor
+	callfar _InitVerticalMenuCursor
 	call DoMenuJoypadLoop
 	call MenuClickSound
 	bit 1, a
@@ -467,14 +463,6 @@ _OffsetMenuHeader::
 	ld [wMenuBorderBottomCoord], a
 	ret
 
-DoNthMenu::
-	call DrawVariableLengthMenuBox
-	call MenuWriteText
-	call InitMenuCursorAndButtonPermissions
-	call GetStaticMenuJoypad
-	call GetMenuJoypad
-	jp MenuClickSound
-
 SetUpMenu::
 	call DrawVariableLengthMenuBox
 	call MenuWriteText
@@ -482,12 +470,6 @@ SetUpMenu::
 	ld hl, w2DMenuFlags1
 	set 7, [hl]
 	ret
-
-DrawVariableLengthMenuBox::
-	call CopyMenuData
-	call GetMenuIndexSet
-	call AutomaticGetMenuBottomCoord
-	jp MenuBox
 
 MenuWriteText::
 	xor a
@@ -572,7 +554,7 @@ RunMenuItemPrintingFunction::
 	jp hl
 
 InitMenuCursorAndButtonPermissions::
-	call InitVerticalMenuCursor
+	callfar _InitVerticalMenuCursor
 	ld hl, wMenuJoypadFilter
 	ld a, [wMenuDataFlags]
 	bit 3, a
@@ -736,6 +718,12 @@ ClearWindowData::
 	xor a
 	jp ByteFill
 
+DoNthMenu::
+	call DrawVariableLengthMenuBox
+	call MenuWriteText
+	call InitMenuCursorAndButtonPermissions
+	call GetStaticMenuJoypad
+	call GetMenuJoypad
 MenuClickSound::
 	push af
 	and A_BUTTON | B_BUTTON
@@ -753,11 +741,6 @@ PlayClickSFX::
 	call PlaySFX
 	pop de
 	ret
-
-MenuTextboxWaitButton::
-	call MenuTextbox
-	call WaitButton
-	jp ExitMenu
 
 Place2DMenuItemName::
 	ldh [hBuffer], a

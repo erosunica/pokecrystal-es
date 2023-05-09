@@ -1,3 +1,9 @@
+DeinitBattleAnimation:
+	ld hl, BATTLEANIMSTRUCT_INDEX
+	add hl, bc
+	ld [hl], $0
+	ret
+
 QueueBattleAnimation:
 	ld hl, wActiveAnimObjects
 	ld e, NUM_ANIM_OBJECTS
@@ -17,13 +23,7 @@ QueueBattleAnimation:
 	ld b, h
 	ld hl, wLastAnimObjectIndex
 	inc [hl]
-	jp InitBattleAnimation
-
-DeinitBattleAnimation:
-	ld hl, BATTLEANIMSTRUCT_INDEX
-	add hl, bc
-	ld [hl], $0
-	ret
+	; fallthrough
 
 InitBattleAnimation:
 	ld a, [wBattleObjectTempID]

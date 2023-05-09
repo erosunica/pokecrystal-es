@@ -19,15 +19,6 @@ CloseText::
 	ld a, $1
 	ldh [hOAMUpdate], a
 
-	call .CloseText
-
-	pop af
-	ldh [hOAMUpdate], a
-	ld hl, wVramState
-	res 6, [hl]
-	ret
-
-.CloseText:
 	call ClearWindowData
 	xor a
 	ldh [hBGMapMode], a
@@ -40,7 +31,13 @@ CloseText::
 	ldh [hWY], a
 	farcall InitMapNameSign
 	farcall LoadOverworldFont
-	jp ReplaceKrisSprite
+	farcall _ReplaceKrisSprite
+
+	pop af
+	ldh [hOAMUpdate], a
+	ld hl, wVramState
+	res 6, [hl]
+	ret
 
 OpenText::
 	call ClearWindowData

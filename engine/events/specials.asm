@@ -195,14 +195,7 @@ CardFlip:
 	ret c
 	ld a, BANK(_CardFlip)
 	ld hl, _CardFlip
-	jp StartGameCornerGame
-
-DummyNonfunctionalGameCornerGame:
-	call CheckCoinsAndCoinCase
-	ret c
-	ld a, BANK(_DummyGame)
-	ld hl, _DummyGame
-	jp StartGameCornerGame
+	; fallthrough
 
 StartGameCornerGame:
 	call FarQueueScript
@@ -216,6 +209,13 @@ StartGameCornerGame:
 	pop af
 	rst FarCall
 	jp ExitAllMenus
+
+DummyNonfunctionalGameCornerGame:
+	call CheckCoinsAndCoinCase
+	ret c
+	ld a, BANK(_DummyGame)
+	ld hl, _DummyGame
+	jp StartGameCornerGame
 
 CheckCoinsAndCoinCase:
 	ld hl, wCoins
@@ -253,6 +253,15 @@ CheckCoinsAndCoinCase:
 ClearBGPalettesBufferScreen: ; unused
 	call ClearBGPalettes
 	jp BufferScreen
+
+CheckPokerus:
+; Check if a monster in your party has Pokerus
+	farcall _CheckPokerus
+	jp ScriptReturnCarry
+
+CheckLuckyNumberShowFlag:
+	farcall _CheckLuckyNumberShowFlag
+	; fallthrough
 
 ScriptReturnCarry:
 	jr c, .carry
@@ -293,21 +302,12 @@ StoreSwarmMapIndices::
 	ld [wYanmaMapNumber], a
 	ret
 
-CheckPokerus:
-; Check if a monster in your party has Pokerus
-	farcall _CheckPokerus
-	jp ScriptReturnCarry
-
 ResetLuckyNumberShowFlag:
 	farcall RestartLuckyNumberCountdown
 	ld hl, wLuckyNumberShowFlag
 	res LUCKYNUMBERSHOW_GAME_OVER_F, [hl]
 	farcall LoadOrRegenerateLuckyIDNumber
 	ret
-
-CheckLuckyNumberShowFlag:
-	farcall _CheckLuckyNumberShowFlag
-	jp ScriptReturnCarry
 
 SnorlaxAwake:
 ; Check if the Poké Flute channel is playing, and if the player is standing

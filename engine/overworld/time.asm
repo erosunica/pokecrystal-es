@@ -10,6 +10,7 @@ ClearDailyTimers:
 InitCallReceiveDelay::
 	xor a
 	ld [wTimeCyclesSinceLastCall], a
+	; fallthrough
 
 NextCallReceiveDelay:
 	ld a, [wTimeCyclesSinceLastCall]
@@ -23,7 +24,17 @@ NextCallReceiveDelay:
 	ld hl, .ReceiveCallDelays
 	add hl, de
 	ld a, [hl]
-	jp RestartReceiveCallDelay
+	ld hl, wReceiveCallDelay_MinsRemaining
+	ld [hl], a
+	call UpdateTime
+	ld hl, wReceiveCallDelay_StartTime
+	ld a, [wCurDay]
+	ld [hli], a
+	ldh a, [hHours]
+	ld [hli], a
+	ldh a, [hMinutes]
+	ld [hli], a
+	ret
 
 .ReceiveCallDelays:
 	db 20, 10, 5, 3
@@ -42,8 +53,53 @@ CheckReceiveCallTimer:
 	scf
 	ret
 
-InitOneDayCountdown:
+_CheckLuckyNumberShowFlag:
+	ld hl, wLuckyNumberDayBuffer
+	; fallthrough
+
+CheckDayDependentEventHL:
+	inc hl
+	push hl
+	call CalcDaysSince
+	ld a, [wDaysSince]
+	pop hl
+	dec hl
+	jp UpdateTimeRemaining
+
+CheckReceiveCallDelay:
+	ld hl, wReceiveCallDelay_StartTime
+	call CalcMinsHoursDaysSince
+	call GetMinutesSinceIfLessThan60
+	ld hl, wReceiveCallDelay_MinsRemaining
+	; fallthrough
+
+UpdateTimeRemaining:
+; If the amount of time elapsed exceeds the capacity of its
+; unit, skip this part.
+	cp -1
+	jr z, .set_carry
+	ld c, a
+	ld a, [hl] ; time remaining
+	sub c
+	jr nc, .ok
+	xor a
+
+.ok
+	ld [hl], a
+	jr z, .set_carry
+	xor a
+	ret
+
+.set_carry
+	xor a
+	ld [hl], a
+	scf
+	ret
+
+RestartDailyResetTimer:
+	ld hl, wDailyResetTimer
 	ld a, 1
+	; fallthrough
 
 InitNDaysCountdown:
 	ld [hl], a
@@ -53,32 +109,15 @@ InitNDaysCountdown:
 	inc hl
 	jp CopyDayToHL
 
-CheckDayDependentEventHL:
-	inc hl
-	push hl
-	call CalcDaysSince
-	call GetDaysSince
-	pop hl
-	dec hl
-	jp UpdateTimeRemaining
-
-RestartReceiveCallDelay:
-	ld hl, wReceiveCallDelay_MinsRemaining
-	ld [hl], a
+InitializeStartDay:
 	call UpdateTime
-	ld hl, wReceiveCallDelay_StartTime
-	jp CopyDayHourMinToHL
+	ld hl, wTimerEventStartDay
+	; fallthrough
 
-CheckReceiveCallDelay:
-	ld hl, wReceiveCallDelay_StartTime
-	call CalcMinsHoursDaysSince
-	call GetMinutesSinceIfLessThan60
-	ld hl, wReceiveCallDelay_MinsRemaining
-	jp UpdateTimeRemaining
-
-RestartDailyResetTimer:
-	ld hl, wDailyResetTimer
-	jp InitOneDayCountdown
+CopyDayToHL:
+	ld a, [wCurDay]
+	ld [hl], a
+	ret
 
 CheckDailyResetTimer::
 	ld hl, wDailyResetTimer
@@ -128,7 +167,15 @@ StartBugContestTimer:
 	ld [wBugContestSecsRemaining], a
 	call UpdateTime
 	ld hl, wBugContestStartTime
-	jp CopyDayHourMinSecToHL
+	ld a, [wCurDay]
+	ld [hli], a
+	ldh a, [hHours]
+	ld [hli], a
+	ldh a, [hMinutes]
+	ld [hli], a
+	ldh a, [hSeconds]
+	ld [hli], a
+	ret
 
 CheckBugContestTimer::
 	ld hl, wBugContestStartTime
@@ -164,15 +211,10 @@ CheckBugContestTimer::
 	scf
 	ret
 
-InitializeStartDay:
-	call UpdateTime
-	ld hl, wTimerEventStartDay
-	jp CopyDayToHL
-
 CheckPokerusTick::
 	ld hl, wTimerEventStartDay
 	call CalcDaysSince
-	call GetDaysSince
+	ld a, [wDaysSince]
 	and a
 	jr z, .done ; not even a day has passed since game start
 	ld b, a
@@ -192,7 +234,7 @@ SetUnusedTwoDayTimer:
 CheckUnusedTwoDayTimer:
 	ld hl, wUnusedTwoDayTimerStartDate
 	call CalcDaysSince
-	call GetDaysSince
+	ld a, [wDaysSince]
 	ld hl, wUnusedTwoDayTimer
 	jp UpdateTimeRemaining
 
@@ -226,10 +268,6 @@ RestartLuckyNumberCountdown:
 	add 7
 	ret
 
-_CheckLuckyNumberShowFlag:
-	ld hl, wLuckyNumberDayBuffer
-	jp CheckDayDependentEventHL
-
 DoMysteryGiftIfDayHasPassed:
 	ld a, BANK(sMysteryGiftTimer)
 	call GetSRAMBank
@@ -244,7 +282,8 @@ DoMysteryGiftIfDayHasPassed:
 	call CheckDayDependentEventHL
 	jr nc, .not_timed_out
 	ld hl, wBuffer1
-	call InitOneDayCountdown
+	ld a, 1
+	call InitNDaysCountdown
 	call CloseSRAM
 	farcall Function1050c8
 
@@ -258,30 +297,7 @@ DoMysteryGiftIfDayHasPassed:
 	ld [sMysteryGiftTimer + 1], a
 	jp CloseSRAM
 
-UpdateTimeRemaining:
-; If the amount of time elapsed exceeds the capacity of its
-; unit, skip this part.
-	cp -1
-	jr z, .set_carry
-	ld c, a
-	ld a, [hl] ; time remaining
-	sub c
-	jr nc, .ok
-	xor a
-
-.ok
-	ld [hl], a
-	jr z, .set_carry
-	xor a
-	ret
-
-.set_carry
-	xor a
-	ld [hl], a
-	scf
-	ret
-
-GetSecondsSinceIfLessThan60:
+GetSecondsSinceIfLessThan60: ; unused
 	ld a, [wDaysSince]
 	and a
 	jr nz, GetTimeElapsed_ExceedsUnitLimit
@@ -303,15 +319,11 @@ GetMinutesSinceIfLessThan60:
 	ld a, [wMinutesSince]
 	ret
 
-GetHoursSinceIfLessThan24:
+GetHoursSinceIfLessThan24: ; unused
 	ld a, [wDaysSince]
 	and a
 	jr nz, GetTimeElapsed_ExceedsUnitLimit
 	ld a, [wHoursSince]
-	ret
-
-GetDaysSince:
-	ld a, [wDaysSince]
 	ret
 
 GetTimeElapsed_ExceedsUnitLimit:
@@ -346,6 +358,7 @@ CalcSecsMinsHoursDaysSince:
 	ld [hl], c ; current seconds
 	dec hl
 	ld [wSecondsSince], a ; seconds since
+	; fallthrough
 
 _CalcMinsHoursDaysSince:
 	ldh a, [hMinutes]
@@ -357,6 +370,7 @@ _CalcMinsHoursDaysSince:
 	ld [hl], c ; current minutes
 	dec hl
 	ld [wMinutesSince], a ; minutes since
+	; fallthrough
 
 _CalcHoursDaysSince:
 	ldh a, [hHours]
@@ -368,6 +382,7 @@ _CalcHoursDaysSince:
 	ld [hl], c ; current hours
 	dec hl
 	ld [wHoursSince], a ; hours since
+	; fallthrough
 
 _CalcDaysSince:
 	ld a, [wCurDay]
@@ -380,34 +395,9 @@ _CalcDaysSince:
 	ld [wDaysSince], a ; days since
 	ret
 
-CopyDayHourMinSecToHL:
+CopyDayHourToHL: ; unused
 	ld a, [wCurDay]
 	ld [hli], a
 	ldh a, [hHours]
-	ld [hli], a
-	ldh a, [hMinutes]
-	ld [hli], a
-	ldh a, [hSeconds]
-	ld [hli], a
-	ret
-
-CopyDayToHL:
-	ld a, [wCurDay]
-	ld [hl], a
-	ret
-
-CopyDayHourToHL:
-	ld a, [wCurDay]
-	ld [hli], a
-	ldh a, [hHours]
-	ld [hli], a
-	ret
-
-CopyDayHourMinToHL:
-	ld a, [wCurDay]
-	ld [hli], a
-	ldh a, [hHours]
-	ld [hli], a
-	ldh a, [hMinutes]
 	ld [hli], a
 	ret

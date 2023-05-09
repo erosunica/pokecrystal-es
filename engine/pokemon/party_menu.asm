@@ -785,8 +785,23 @@ PrintPartyMenuActionText:
 	call GetNick
 	ld a, [wPartyMenuActionText]
 	and $f
-	ld hl, .MenuActionTexts
-	jp .PrintText
+	add a
+	add LOW(.MenuActionTexts)
+	ld l, a
+	adc HIGH(.MenuActionTexts)
+	sub l
+	ld h, a
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld a, [wOptions]
+	push af
+	set NO_TEXT_SCROLL, a
+	ld [wOptions], a
+	call PrintText
+	pop af
+	ld [wOptions], a
+	ret
 
 .MenuActionTexts:
 ; entries correspond to PARTYMENUTEXT_* constants
@@ -840,20 +855,3 @@ PrintPartyMenuActionText:
 .CameToItsSensesText:
 	text_far _CameToItsSensesText
 	text_end
-
-.PrintText:
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ld a, [wOptions]
-	push af
-	set NO_TEXT_SCROLL, a
-	ld [wOptions], a
-	call PrintText
-	pop af
-	ld [wOptions], a
-	ret

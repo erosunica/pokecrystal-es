@@ -475,7 +475,20 @@ Pokedex_RedisplayDexEntry:
 	call Pokedex_DrawDexEntryScreenBG
 	call Pokedex_GetSelectedMon
 	farcall DisplayDexEntry
-	jp Pokedex_DrawFootprint
+	; fallthrough
+
+Pokedex_DrawFootprint:
+	hlcoord 18, 1
+	ld a, $62
+	ld [hli], a
+	inc a
+	ld [hl], a
+	hlcoord 18, 2
+	ld a, $64
+	ld [hli], a
+	inc a
+	ld [hl], a
+	ret
 
 Pokedex_InitOptionScreen:
 	xor a
@@ -922,7 +935,11 @@ Pokedex_ListingHandleDPadInput:
 	ld a, [hl]
 	and D_RIGHT
 	jr nz, Pokedex_ListingMoveDownOnePage
-	jr Pokedex_ListingPosStayedSame
+	; fallthrough
+
+Pokedex_ListingPosStayedSame:
+	and a
+	ret
 
 Pokedex_ListingMoveCursorUp:
 	ld hl, wDexListingCursor
@@ -991,11 +1008,7 @@ Pokedex_ListingMoveDownOnePage:
 	ld a, [hl]
 	add d
 	ld [hl], a
-	jr Pokedex_ListingPosChanged
-
-Pokedex_ListingPosStayedSame:
-	and a
-	ret
+	; fallthrough
 
 Pokedex_ListingPosChanged:
 	scf
@@ -1605,19 +1618,6 @@ Pokedex_PlaceDefaultStringIfNotSeen:
 .NameNotSeen:
 	db "-----@"
 
-Pokedex_DrawFootprint:
-	hlcoord 18, 1
-	ld a, $62
-	ld [hli], a
-	inc a
-	ld [hl], a
-	hlcoord 18, 2
-	ld a, $64
-	ld [hli], a
-	inc a
-	ld [hl], a
-	ret
-
 Pokedex_GetSelectedMon:
 ; Gets the species of the currently selected Pokémon. This corresponds to the
 ; position of the cursor in the main listing, but this function can be used
@@ -1668,6 +1668,17 @@ Pokedex_OrderMonsByMode:
 	dw .OldMode
 	dw Pokedex_ABCMode
 
+.OldMode:
+	ld hl, wPokedexOrder
+	ld a, $1
+	ld c, NUM_POKEMON
+.loopold
+	ld [hli], a
+	inc a
+	dec c
+	jr nz, .loopold
+	jr .FindLastSeen
+
 .NewMode:
 	ld de, NewPokedexOrder
 	ld hl, wPokedexOrder
@@ -1678,17 +1689,6 @@ Pokedex_OrderMonsByMode:
 	ld [hli], a
 	dec c
 	jr nz, .loopnew
-	jr .FindLastSeen
-
-.OldMode:
-	ld hl, wPokedexOrder
-	ld a, $1
-	ld c, NUM_POKEMON
-.loopold
-	ld [hli], a
-	inc a
-	dec c
-	jr nz, .loopold
 	; fallthrough
 
 .FindLastSeen:
@@ -2006,7 +2006,53 @@ Pokedex_UpdateCursorOAM:
 	cp DEXMODE_OLD
 	jp z, Pokedex_PutOldModeCursorOAM
 	call Pokedex_PutNewModeABCModeCursorOAM
-	jp Pokedex_PutScrollbarOAM
+	; fallthrough
+
+Pokedex_PutScrollbarOAM:
+; Writes the OAM data for the scrollbar in the new mode and ABC mode.
+	push de
+	ld a, [wDexListingEnd]
+	dec a
+	ld e, a
+	ld a, [wDexListingCursor]
+	ld hl, wDexListingScrollOffset
+	add [hl]
+	cp e
+	jr z, .max
+	ld hl, 0
+	ld bc, 121 ; max y - min y
+	call AddNTimes
+	ld e, l
+	ld d, h
+	ld b, 0
+	ld a, d
+	or e
+	jr z, .done
+	ld a, [wDexListingEnd]
+	ld c, a
+.loop
+	ld a, e
+	sub c
+	ld e, a
+	ld a, d
+	sbc 0
+	ld d, a
+	jr c, .done
+	inc b
+	jr .loop
+.max
+	ld b, 121 ; max y - min y
+.done
+	ld a, 20 ; min y
+	add b
+	pop hl
+	ld [hli], a
+	ld a, 161 ; x
+	ld [hli], a
+	ld a, $0f ; tile id
+	ld [hli], a
+	ld [hl], 0 ; attributes
+	ret
 
 Pokedex_PutOldModeCursorOAM:
 	ld hl, .CursorOAM
@@ -2157,52 +2203,6 @@ Pokedex_LoadCursorOAM:
 	ld [de], a
 	inc de
 	jr .loop
-
-Pokedex_PutScrollbarOAM:
-; Writes the OAM data for the scrollbar in the new mode and ABC mode.
-	push de
-	ld a, [wDexListingEnd]
-	dec a
-	ld e, a
-	ld a, [wDexListingCursor]
-	ld hl, wDexListingScrollOffset
-	add [hl]
-	cp e
-	jr z, .max
-	ld hl, 0
-	ld bc, 121 ; max y - min y
-	call AddNTimes
-	ld e, l
-	ld d, h
-	ld b, 0
-	ld a, d
-	or e
-	jr z, .done
-	ld a, [wDexListingEnd]
-	ld c, a
-.loop
-	ld a, e
-	sub c
-	ld e, a
-	ld a, d
-	sbc 0
-	ld d, a
-	jr c, .done
-	inc b
-	jr .loop
-.max
-	ld b, 121 ; max y - min y
-.done
-	ld a, 20 ; min y
-	add b
-	pop hl
-	ld [hli], a
-	ld a, 161 ; x
-	ld [hli], a
-	ld a, $0f ; tile id
-	ld [hli], a
-	ld [hl], 0 ; attributes
-	ret
 
 Pokedex_InitArrowCursor:
 	xor a
@@ -2401,7 +2401,6 @@ Pokedex_LoadSelectedMonTiles:
 
 Pokedex_LoadCurrentFootprint:
 	call Pokedex_GetSelectedMon
-
 Pokedex_LoadAnyFootprint:
 	ld a, [wTempSpecies]
 	dec a

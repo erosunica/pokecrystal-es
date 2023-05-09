@@ -126,58 +126,6 @@ DecompressRequest2bpp::
 	call Get2bpp
 	jp CloseSRAM
 
-FarCopyBytes::
-; copy bc bytes from a:hl to de
-
-	ldh [hBuffer], a
-	ldh a, [hROMBank]
-	push af
-	ldh a, [hBuffer]
-	rst Bankswitch
-
-	call CopyBytes
-
-	pop af
-	rst Bankswitch
-	ret
-
-FarCopyBytesDouble:
-; Copy bc bytes from a:hl to bc*2 bytes at de,
-; doubling each byte in the process.
-
-	ldh [hBuffer], a
-	ldh a, [hROMBank]
-	push af
-	ldh a, [hBuffer]
-	rst Bankswitch
-
-; switcheroo, de <> hl
-	ld a, h
-	ld h, d
-	ld d, a
-	ld a, l
-	ld l, e
-	ld e, a
-
-	inc b
-	inc c
-	jr .dec
-
-.loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	ld [hli], a
-.dec
-	dec c
-	jr nz, .loop
-	dec b
-	jr nz, .loop
-
-	pop af
-	rst Bankswitch
-	ret
-
 LY_REQUEST EQU $88
 TILES_PER_BLANK EQU 16
 
@@ -347,8 +295,22 @@ Copy2bpp:
 	and c
 	ld c, a
 	pop af
+	; fallthrough
 
-	jp FarCopyBytes
+FarCopyBytes::
+; copy bc bytes from a:hl to de
+
+	ldh [hBuffer], a
+	ldh a, [hROMBank]
+	push af
+	ldh a, [hBuffer]
+	rst Bankswitch
+
+	call CopyBytes
+
+	pop af
+	rst Bankswitch
+	ret
 
 Get1bpp::
 	ldh a, [rLCDC]
@@ -377,7 +339,44 @@ Copy1bpp::
 	pop af
 
 	pop hl
-	jp FarCopyBytesDouble
+	; fallthrough
+
+FarCopyBytesDouble:
+; Copy bc bytes from a:hl to bc*2 bytes at de,
+; doubling each byte in the process.
+
+	ldh [hBuffer], a
+	ldh a, [hROMBank]
+	push af
+	ldh a, [hBuffer]
+	rst Bankswitch
+
+; switcheroo, de <> hl
+	ld a, h
+	ld h, d
+	ld d, a
+	ld a, l
+	ld l, e
+	ld e, a
+
+	inc b
+	inc c
+	jr .dec
+
+.loop
+	ld a, [de]
+	inc de
+	ld [hli], a
+	ld [hli], a
+.dec
+	dec c
+	jr nz, .loop
+	dec b
+	jr nz, .loop
+
+	pop af
+	rst Bankswitch
+	ret
 
 HBlankCopy1bpp:
 	di

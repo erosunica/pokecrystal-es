@@ -771,27 +771,6 @@ CopyDexEntry:
 	call CopyRadioTextToRAM
 	pop hl
 	pop af
-	jp CopyDexEntryPart2
-
-CopyDexEntryPart1:
-	ld de, wPokedexShowPointerBank
-	ld bc, SCREEN_WIDTH - 1
-	call FarCopyBytes
-	ld hl, wPokedexShowPointerAddr
-	ld a, TX_START
-	ld [hli], a
-	ld a, "<LINE>"
-	ld [hli], a
-.loop
-	ld a, [hli]
-	cp "@"
-	ret z
-	cp "<NEXT>"
-	ret z
-	cp "<DEXEND>"
-	ret z
-	jr .loop
-
 CopyDexEntryPart2:
 	ld d, a
 .loop
@@ -812,6 +791,25 @@ CopyDexEntryPart2:
 	ld a, d
 	ld [wPokedexShowPointerBank], a
 	ret
+
+CopyDexEntryPart1:
+	ld de, wPokedexShowPointerBank
+	ld bc, SCREEN_WIDTH - 1
+	call FarCopyBytes
+	ld hl, wPokedexShowPointerAddr
+	ld a, TX_START
+	ld [hli], a
+	ld a, "<LINE>"
+	ld [hli], a
+.loop
+	ld a, [hli]
+	cp "@"
+	ret z
+	cp "<NEXT>"
+	ret z
+	cp "<DEXEND>"
+	ret z
+	jr .loop
 
 PokedexShowText:
 	text_far _PokedexShowText

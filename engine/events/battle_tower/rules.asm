@@ -211,6 +211,10 @@ Function_PartyCountEq3:
 
 Function_PartySpeciesAreUnique:
 	ld hl, wPartyMon1Species
+	jr VerifyUniqueness
+
+Function_PartyItemsAreUnique:
+	ld hl, wPartyMon1Item
 	; fallthrough
 
 VerifyUniqueness:
@@ -273,10 +277,6 @@ VerifyUniqueness:
 	ld a, b
 	pop bc
 	ret
-
-Function_PartyItemsAreUnique:
-	ld hl, wPartyMon1Item
-	jp VerifyUniqueness
 
 Function_HasPartyAnEgg:
 	ld hl, wPartyCount

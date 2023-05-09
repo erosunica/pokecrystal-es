@@ -265,17 +265,7 @@ AnimateHOFMonEntrance:
 	xor a
 	ldh [hBGMapMode], a
 	ldh [hSCY], a
-	jp HOF_SlideFrontpic
-
-HOF_SlideBackpic:
-.backpicloop
-	ldh a, [hSCX]
-	cp $70
-	ret z
-	add $4
-	ldh [hSCX], a
-	call DelayFrame
-	jr .backpicloop
+	; fallthrough
 
 HOF_SlideFrontpic:
 .frontpicloop
@@ -287,6 +277,16 @@ HOF_SlideFrontpic:
 	ldh [hSCX], a
 	call DelayFrame
 	jr .frontpicloop
+
+HOF_SlideBackpic:
+.backpicloop
+	ldh a, [hSCX]
+	cp $70
+	ret z
+	add $4
+	ldh [hSCX], a
+	call DelayFrame
+	jr .backpicloop
 
 _HallOfFamePC:
 	call LoadFontsBattleExtra

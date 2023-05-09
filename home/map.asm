@@ -393,8 +393,48 @@ ReadMapEvents::
 	pop af
 	and a ; skip object events?
 	ret nz
+	; fallthrough
 
-	jp ReadObjectEvents
+ReadObjectEvents::
+	push hl
+	call ClearObjectStructs
+	pop de
+	ld hl, wMap1Object
+	ld a, [de]
+	inc de
+	ld [wCurMapObjectEventCount], a
+	ld a, e
+	ld [wCurMapObjectEventsPointer], a
+	ld a, d
+	ld [wCurMapObjectEventsPointer + 1], a
+
+	ld a, [wCurMapObjectEventCount]
+	call CopyMapObjectEvents
+
+; get NUM_OBJECTS - 1 - [wCurMapObjectEventCount]
+	ld a, [wCurMapObjectEventCount]
+	cp NUM_OBJECTS - 1
+	jr nc, .skip
+	; a = NUM_OBJECTS - 1 - a
+	cpl
+	add NUM_OBJECTS - 1 + 1
+
+	inc hl
+; Fill the remaining sprite IDs and y coords with 0 and -1, respectively.
+	ld bc, MAPOBJECT_LENGTH
+.loop
+	ld [hl],  0
+	inc hl
+	ld [hl], -1
+	dec hl
+	add hl, bc
+	dec a
+	jr nz, .loop
+
+.skip
+	ld h, d
+	ld l, e
+	ret
 
 ReadMapScripts::
 	ld hl, wMapScriptsPointer
@@ -402,7 +442,22 @@ ReadMapScripts::
 	ld h, [hl]
 	ld l, a
 	call ReadMapSceneScripts
-	jp ReadMapCallbacks
+	; fallthrough
+
+ReadMapCallbacks::
+	ld a, [hli]
+	ld c, a
+	ld [wCurMapCallbackCount], a
+	ld a, l
+	ld [wCurMapCallbacksPointer], a
+	ld a, h
+	ld [wCurMapCallbacksPointer + 1], a
+	ld a, c
+	and a
+	ret z
+
+	ld bc, CALLBACK_SIZE
+	jp AddNTimes
 
 CopyMapAttributes::
 	ld de, wMapAttributes
@@ -481,21 +536,6 @@ ReadMapSceneScripts::
 	ld bc, SCENE_SCRIPT_SIZE
 	jp AddNTimes
 
-ReadMapCallbacks::
-	ld a, [hli]
-	ld c, a
-	ld [wCurMapCallbackCount], a
-	ld a, l
-	ld [wCurMapCallbacksPointer], a
-	ld a, h
-	ld [wCurMapCallbacksPointer + 1], a
-	ld a, c
-	and a
-	ret z
-
-	ld bc, CALLBACK_SIZE
-	jp AddNTimes
-
 ReadWarps::
 	ld a, [hli]
 	ld c, a
@@ -541,47 +581,6 @@ ReadBGEvents::
 
 	ld bc, BG_EVENT_SIZE
 	jp AddNTimes
-
-ReadObjectEvents::
-	push hl
-	call ClearObjectStructs
-	pop de
-	ld hl, wMap1Object
-	ld a, [de]
-	inc de
-	ld [wCurMapObjectEventCount], a
-	ld a, e
-	ld [wCurMapObjectEventsPointer], a
-	ld a, d
-	ld [wCurMapObjectEventsPointer + 1], a
-
-	ld a, [wCurMapObjectEventCount]
-	call CopyMapObjectEvents
-
-; get NUM_OBJECTS - 1 - [wCurMapObjectEventCount]
-	ld a, [wCurMapObjectEventCount]
-	cp NUM_OBJECTS - 1
-	jr nc, .skip
-	; a = NUM_OBJECTS - 1 - a
-	cpl
-	add NUM_OBJECTS - 1 + 1
-
-	inc hl
-; Fill the remaining sprite IDs and y coords with 0 and -1, respectively.
-	ld bc, MAPOBJECT_LENGTH
-.loop
-	ld [hl],  0
-	inc hl
-	ld [hl], -1
-	dec hl
-	add hl, bc
-	dec a
-	jr nz, .loop
-
-.skip
-	ld h, d
-	ld l, e
-	ret
 
 CopyMapObjectEvents::
 	and a
@@ -889,6 +888,14 @@ LoadMapStatus::
 	ld [wMapStatus], a
 	ret
 
+CallMapScript::
+; Call a script at hl in the current bank if there isn't already a script running
+	ld a, [wScriptRunning]
+	and a
+	ret nz
+	ld a, [wMapScriptsBank]
+	; fallthrough
+
 CallScript::
 ; Call a script at a:hl.
 
@@ -903,14 +910,6 @@ CallScript::
 
 	scf
 	ret
-
-CallMapScript::
-; Call a script at hl in the current bank if there isn't already a script running
-	ld a, [wScriptRunning]
-	and a
-	ret nz
-	ld a, [wMapScriptsBank]
-	jr CallScript
 
 RunMapCallback::
 ; Will run the first callback found with execution index equal to a.
@@ -1095,6 +1094,8 @@ CheckObjectMask::
 	ld a, [hl]
 	ret
 
+DeleteObjectStruct::
+	call ApplyDeletionToMapObject
 MaskObject::
 	ldh a, [hMapObjectIndexBuffer]
 	ld e, a
@@ -1836,34 +1837,6 @@ CheckCurrentMapCoordEvents::
 	scf
 	ret
 
-FadeToMenu::
-	xor a
-	ldh [hBGMapMode], a
-	call LoadStandardMenuHeader
-	farcall FadeOutPalettes
-	call ClearSprites
-	jp DisableSpriteUpdates
-
-CloseSubmenu::
-	call ClearBGPalettes
-	call ReloadTilesetAndPalettes
-	call UpdateSprites
-	call ExitMenu
-	jr FinishExitMenu
-
-ExitAllMenus::
-	call ClearBGPalettes
-	call ExitMenu
-	call ReloadTilesetAndPalettes
-	call UpdateSprites
-FinishExitMenu::
-	ld b, SCGB_MAPPALS
-	call GetSGBLayout
-	farcall LoadOW_BGPal7
-	call WaitBGMap2
-	farcall FadeInPalettes
-	jp EnableSpriteUpdates
-
 ReturnToMapWithSpeechTextbox::
 	push af
 	ld a, $1
@@ -1908,8 +1881,13 @@ ReloadTilesetAndPalettes::
 	call SkipMusic
 	pop af
 	rst Bankswitch
+	; fallthrough
 
-	jp EnableLCD
+EnableLCD::
+	ldh a, [rLCDC]
+	set rLCDC_ENABLE, a
+	ldh [rLCDC], a
+	ret
 
 GetMapPointer::
 	ld a, [wMapGroup]
@@ -2115,6 +2093,10 @@ GetWorldMapLocation::
 	pop hl
 	ret
 
+GetMapMusic_MaybeSpecial::
+	call SpecialMapMusic
+	ret c
+	; fallthrough
 GetMapMusic::
 	push hl
 	push bc

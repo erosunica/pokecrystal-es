@@ -227,7 +227,18 @@ DayCare_GetBackMonForMoney:
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
 	ld a, DAYCARETEXT_GOT_BACK
-	jp PrintDayCareText
+	; fallthrough
+
+PrintDayCareText:
+	ld e, a
+	ld d, 0
+	ld hl, DayCareTextTable
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp PrintText
 
 GetPriceToRetrieveBreedmon:
 	ld a, b
@@ -251,18 +262,8 @@ GetPriceToRetrieveBreedmon:
 	ld [wStringBuffer2 + 4], a
 	ret
 
-PrintDayCareText:
-	ld e, a
-	ld d, 0
-	ld hl, .TextTable
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	jp PrintText
 
-.TextTable:
+DayCareTextTable:
 ; entries correspond to DAYCARETEXT_* constants
 	dw .DayCareManIntroText ; 00
 	dw .DayCareManOddEggText ; 01

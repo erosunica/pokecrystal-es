@@ -91,11 +91,6 @@ TrainerCard:
 	dw TrainerCard_Page3_Joypad
 	dw TrainerCard_Quit
 
-TrainerCard_IncrementJumptable:
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
-
 TrainerCard_Quit:
 	ld hl, wJumptableIndex
 	set 7, [hl]
@@ -112,7 +107,12 @@ TrainerCard_Page1_LoadGFX:
 	lb bc, BANK(CardStatusGFX), 86
 	call Request2bpp
 	call TrainerCard_Page1_PrintDexCaught_GameTime
-	jp TrainerCard_IncrementJumptable
+	; fallthrough
+
+TrainerCard_IncrementJumptable:
+	ld hl, wJumptableIndex
+	inc [hl]
+	ret
 
 TrainerCard_Page1_Joypad:
 	call TrainerCard_Page1_PrintGameTime

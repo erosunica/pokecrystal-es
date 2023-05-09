@@ -53,19 +53,7 @@ OpponentPartyAttr::
 	jr BattlePartyAttr
 .ot
 	pop af
-	jr OTPartyAttr
-
-BattlePartyAttr::
-; Get attribute a from the party struct of the active battle mon.
-	push bc
-	ld c, a
-	ld b, 0
-	ld hl, wPartyMons
-	add hl, bc
-	ld a, [wCurBattleMon]
-	call GetPartyLocation
-	pop bc
-	ret
+	; fallthrough
 
 OTPartyAttr::
 ; Get attribute a from the party struct of the active enemy mon.
@@ -75,6 +63,18 @@ OTPartyAttr::
 	ld hl, wOTPartyMon1Species
 	add hl, bc
 	ld a, [wCurOTMon]
+	call GetPartyLocation
+	pop bc
+	ret
+
+BattlePartyAttr::
+; Get attribute a from the party struct of the active battle mon.
+	push bc
+	ld c, a
+	ld b, 0
+	ld hl, wPartyMons
+	add hl, bc
+	ld a, [wCurBattleMon]
 	call GetPartyLocation
 	pop bc
 	ret
@@ -188,15 +188,6 @@ MobileTextBorder::
 	hlcoord 19, 13
 	ld [hl], $5f ; bottom
 	ret
-
-BattleTextbox::
-; Open a textbox and print text at hl.
-	push hl
-	call SpeechTextbox
-	call UpdateSprites
-	call ApplyTilemap
-	pop hl
-	jp PrintTextboxText
 
 StdBattleTextbox::
 ; Open a textbox and print battle text at 20:hl.

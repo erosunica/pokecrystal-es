@@ -1404,10 +1404,6 @@ GotBiteStep:
 	ret
 
 RockSmashStep:
-	call .Step
-	jp WaitStep_InPlace
-
-.Step:
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	ld a, [hl]
@@ -1419,7 +1415,7 @@ RockSmashStep:
 	ld hl, OBJECT_ACTION
 	add hl, bc
 	ld [hl], a
-	ret
+	jp WaitStep_InPlace
 
 ReturnDigStep:
 	ld hl, OBJECT_STEP_DURATION
@@ -1823,13 +1819,13 @@ Function5026:
 	ld a, [hl]
 	ret
 
-_GetMovementObject:
-	ld hl, GetMovementObject
-	jp HandleMovementData
-
 GetMovementObject:
 	ld a, [wMovementObject]
 	ret
+
+_GetMovementObject:
+	ld hl, GetMovementObject
+	; fallthrough
 
 HandleMovementData:
 	call .StorePointer
@@ -2144,7 +2140,11 @@ Function5629:
 	call GetObjectStruct
 	call DoesObjectHaveASprite
 	ret z
-	jp Function5673
+	call Function56a3
+	jr c, SetFacing_Standing
+	call Function4440
+	xor a
+	ret
 
 Function5645:
 	xor a
@@ -2171,13 +2171,6 @@ Function565c:
 	jr c, SetFacing_Standing
 	call Function5688
 	farcall Function4440
-	xor a
-	ret
-
-Function5673:
-	call Function56a3
-	jr c, SetFacing_Standing
-	call Function4440
 	xor a
 	ret
 
@@ -2347,19 +2340,12 @@ Function56cd:
 	ret
 
 HandleNPCStep::
-	call .ResetStepVector
-	jp .DoStepsForAllObjects
-
-.ResetStepVector:
 	xor a
 	ld [wPlayerStepVectorX], a
 	ld [wPlayerStepVectorY], a
 	ld [wPlayerStepFlags], a
 	ld a, STANDING
 	ld [wPlayerStepDirection], a
-	ret
-
-.DoStepsForAllObjects:
 	ld bc, wObjectStructs
 	xor a
 .loop
@@ -2386,17 +2372,6 @@ RefreshPlayerSprite:
 	call .TryResetPlayerAction
 	farcall CheckWarpFacingDown
 	call c, SpawnInFacingDown
-	jp .SpawnInCustomFacing
-
-.TryResetPlayerAction:
-	ld hl, wPlayerSpriteSetupFlags
-	bit PLAYERSPRITESETUP_RESET_ACTION_F, [hl]
-	ret z
-	xor a ; OBJECT_ACTION_00
-	ld [wPlayerAction], a
-	ret
-
-.SpawnInCustomFacing:
 	ld hl, wPlayerSpriteSetupFlags
 	bit PLAYERSPRITESETUP_CUSTOM_FACING_F, [hl]
 	ret z
@@ -2405,6 +2380,14 @@ RefreshPlayerSprite:
 	add a
 	add a
 	jr ContinueSpawnFacing
+
+.TryResetPlayerAction:
+	ld hl, wPlayerSpriteSetupFlags
+	bit PLAYERSPRITESETUP_RESET_ACTION_F, [hl]
+	ret z
+	xor a ; OBJECT_ACTION_00
+	ld [wPlayerAction], a
+	ret
 
 SpawnInFacingDown:
 	ld a, DOWN
@@ -2454,12 +2437,18 @@ SetLeaderIfVisible:
 	ret
 
 StopFollow::
-	call ResetLeader
-	jp ResetFollower
-
-ResetLeader:
 	ld a, -1
 	ld [wObjectFollow_Leader], a
+	; fallthrough
+
+ResetFollower:
+	ld a, [wObjectFollow_Follower]
+	cp -1
+	ret z
+	call GetObjectStruct
+	call Function58e3
+	ld a, -1
+	ld [wObjectFollow_Follower], a
 	ret
 
 SetFollowerIfVisible:
@@ -2478,16 +2467,6 @@ SetFollowerIfVisible:
 	ld [wObjectFollow_Follower], a
 	ret
 
-ResetFollower:
-	ld a, [wObjectFollow_Follower]
-	cp -1
-	ret z
-	call GetObjectStruct
-	call Function58e3
-	ld a, -1
-	ld [wObjectFollow_Follower], a
-	ret
-
 SetFlagsForMovement_1::
 	ld a, c
 	call CheckObjectVisibility
@@ -2501,7 +2480,7 @@ SetFlagsForMovement_1::
 	xor a
 	ret
 
-Function586e:
+Function586e: ; unused
 	call CheckObjectVisibility
 	ret c
 	ld hl, OBJECT_FLAGS2
@@ -2575,7 +2554,7 @@ Function58b9::
 	pop bc
 	ret
 
-Function58d8:
+Function58d8: ; unused
 	call CheckObjectVisibility
 	ret c
 	ld hl, OBJECT_FLAGS2

@@ -1,15 +1,3 @@
-_FindPartyMonAboveLevel:
-	ld hl, wPartyMon1Level
-	jp FindAboveLevel
-
-_FindPartyMonAtLeastThatHappy:
-	ld hl, wPartyMon1Happiness
-	jp FindAtLeastThatHappy
-
-_FindPartyMonThatSpecies:
-	ld hl, wPartyMon1Species
-	jp FindThatSpecies
-
 _FindPartyMonThatSpeciesYourTrainerID:
 	ld hl, wPartyMon1Species
 	call FindThatSpecies
@@ -32,6 +20,10 @@ _FindPartyMonThatSpeciesYourTrainerID:
 .nope
 	xor a
 	ret
+
+_FindPartyMonAtLeastThatHappy:
+	ld hl, wPartyMon1Happiness
+	; fallthrough
 
 FindAtLeastThatHappy:
 ; Sets the bits for the Pokemon that have a happiness greater than or equal to b.
@@ -67,6 +59,10 @@ FindAtLeastThatHappy:
 	and a
 	ret
 
+_FindPartyMonAboveLevel:
+	ld hl, wPartyMon1Level
+	; fallthrough
+
 FindAboveLevel:
 	ld c, $0
 	ld a, [wPartyCount]
@@ -95,6 +91,10 @@ FindAboveLevel:
 	ld a, c
 	and a
 	ret
+
+_FindPartyMonThatSpecies:
+	ld hl, wPartyMon1Species
+	; fallthrough
 
 FindThatSpecies:
 ; Find species b in your party.

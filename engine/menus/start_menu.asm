@@ -138,10 +138,6 @@ StartMenu::
 	jr .ReturnEnd2
 
 .ReturnRedraw:
-	call .Clear
-	jp .Reopen
-
-.Clear:
 	call ClearBGPalettes
 	call ExitMenu
 	call ReloadTilesetAndPalettes
@@ -149,7 +145,8 @@ StartMenu::
 	call DrawVariableLengthMenuBox
 	call .DrawBugContestStatus
 	call UpdateSprites
-	jp FinishExitMenu
+	call FinishExitMenu
+	jp .Reopen
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags

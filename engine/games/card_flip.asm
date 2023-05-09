@@ -96,18 +96,18 @@ _CardFlip:
 	dw .PlayAgain
 	dw .Quit
 
-.Increment:
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
-
 .AskPlayWithThree:
 	ld hl, .CardFlipPlayWithThreeCoinsText
 	call CardFlip_UpdateCoinBalanceDisplay
 	call YesNoBox
 	jr c, .SaidNo
 	call CardFlip_ShuffleDeck
-	jp .Increment
+	; fallthrough
+
+.Increment:
+	ld hl, wJumptableIndex
+	inc [hl]
+	ret
 
 .SaidNo:
 	ld a, 7

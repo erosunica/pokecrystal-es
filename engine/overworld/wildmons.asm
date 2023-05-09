@@ -448,10 +448,6 @@ _NoSwarmWildmon:
 	and a
 	ret
 
-_NormalWildmonOK:
-	call CopyCurrMapDE
-	jr LookUpWildmonsForMapDE
-
 CopyCurrMapDE:
 	ld a, [wMapGroup]
 	ld d, a
@@ -459,6 +455,9 @@ CopyCurrMapDE:
 	ld e, a
 	ret
 
+_NormalWildmonOK:
+	call CopyCurrMapDE
+	; fallthrough
 LookUpWildmonsForMapDE:
 .loop
 	push hl
@@ -597,7 +596,7 @@ UpdateRoamMons:
 .SkipEntei:
 	ld a, [wRoamMon3MapGroup]
 	cp GROUP_N_A
-	jr z, .Finished
+	jr z, .Finished ; no-optimize stub jump
 	ld b, a
 	ld a, [wRoamMon3MapNumber]
 	ld c, a
@@ -698,7 +697,18 @@ JumpRoamMons:
 	ld [wRoamMon3MapNumber], a
 
 .Finished:
-	jp _BackUpMapIndices
+	; fallthrough
+
+_BackUpMapIndices:
+	ld a, [wRoamMons_CurMapNumber]
+	ld [wRoamMons_LastMapNumber], a
+	ld a, [wRoamMons_CurMapGroup]
+	ld [wRoamMons_LastMapGroup], a
+	ld a, [wMapNumber]
+	ld [wRoamMons_CurMapNumber], a
+	ld a, [wMapGroup]
+	ld [wRoamMons_CurMapGroup], a
+	ret
 
 JumpRoamMon:
 .loop
@@ -730,17 +740,6 @@ JumpRoamMon:
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
-	ret
-
-_BackUpMapIndices:
-	ld a, [wRoamMons_CurMapNumber]
-	ld [wRoamMons_LastMapNumber], a
-	ld a, [wRoamMons_CurMapGroup]
-	ld [wRoamMons_LastMapGroup], a
-	ld a, [wMapNumber]
-	ld [wRoamMons_CurMapNumber], a
-	ld a, [wMapGroup]
-	ld [wRoamMons_CurMapGroup], a
 	ret
 
 INCLUDE "data/wild/roammon_maps.asm"

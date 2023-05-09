@@ -19,6 +19,17 @@ OpenSRAM::
 	ld [MBC3SRamBank], a
 	ret
 
+ClearsScratch::
+; Wipe the first 32 bytes of sScratch
+
+	ld a, BANK(sScratch)
+	call GetSRAMBank
+	ld hl, sScratch
+	ld bc, $20
+	xor a
+	call ByteFill
+	; fallthrough
+
 CloseSRAM::
 	push af
 	ld a, SRAM_DISABLE

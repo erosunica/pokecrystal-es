@@ -72,7 +72,12 @@ SaveAfterLinkTrade:
 	call SaveBackupChecksum
 	farcall BackupPartyMonMail
 	farcall SaveRTC
-	jp ResumeGameLogic
+	; fallthrough
+
+ResumeGameLogic:
+	xor a ; FALSE
+	ld [wGameLogicPaused], a
+	ret
 
 ChangeBoxSaveGame:
 	push de
@@ -166,11 +171,6 @@ StartMoveMonWOMail_SaveGame:
 
 PauseGameLogic:
 	ld a, TRUE
-	ld [wGameLogicPaused], a
-	ret
-
-ResumeGameLogic:
-	xor a ; FALSE
 	ld [wGameLogicPaused], a
 	ret
 
@@ -342,6 +342,12 @@ SavingDontTurnOffThePower: ; unused
 	ld c, 16
 	jp DelayFrames
 
+HallOfFame_InitSaveIfNeeded:
+	ld a, [wSavedAtLeastOnce]
+	and a
+	ret nz
+	; fallthrough
+
 ErasePreviousSave:
 	call EraseBoxes
 	call EraseHallOfFame
@@ -435,12 +441,6 @@ Unreferenced_Function14d93:
 	xor a
 	ld [$a000], a ; address of MBC30 bank
 	jp CloseSRAM
-
-HallOfFame_InitSaveIfNeeded:
-	ld a, [wSavedAtLeastOnce]
-	and a
-	ret nz
-	jp ErasePreviousSave
 
 ValidateSave:
 	ld a, BANK(sCheckValue1) ; aka BANK(sCheckValue2)

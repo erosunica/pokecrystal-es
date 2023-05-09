@@ -34,7 +34,12 @@ WaitScript:
 
 	ld a, SCRIPT_READ
 	ld [wScriptMode], a
-	jp StartScript
+	; fallthrough
+
+StartScript:
+	ld hl, wScriptFlags
+	set SCRIPT_RUNNING, [hl]
+	ret
 
 WaitScriptMovement:
 	call StopScript
@@ -228,19 +233,9 @@ ScriptCommandTable:
 	dw Script_wait                       ; a8
 	dw Script_checksave                  ; a9
 
-StartScript:
-	ld hl, wScriptFlags
-	set SCRIPT_RUNNING, [hl]
-	ret
-
 CheckScript:
 	ld hl, wScriptFlags
 	bit SCRIPT_RUNNING, [hl]
-	ret
-
-StopScript:
-	ld hl, wScriptFlags
-	res SCRIPT_RUNNING, [hl]
 	ret
 
 Script_callasm:
@@ -311,7 +306,16 @@ Script_jumptext:
 	ld [wScriptTextAddr + 1], a
 	ld b, BANK(JumpTextScript)
 	ld hl, JumpTextScript
-	jp ScriptJump
+	; fallthrough
+
+ScriptJump:
+	ld a, b
+	ld [wScriptBank], a
+	ld a, l
+	ld [wScriptPos], a
+	ld a, h
+	ld [wScriptPos + 1], a
+	ret
 
 JumpTextFacePlayerScript:
 	faceplayer
@@ -910,6 +914,16 @@ Script_applymovement:
 	call GetScriptByte
 	call GetScriptObject
 	ld c, a
+	jr ApplyMovement
+
+Script_applymovementlasttalked:
+; script command 0x6a
+; parameters: data
+; apply movement to last talked
+
+	ldh a, [hLastTalked]
+	ld c, a
+	; fallthrough
 
 ApplyMovement:
 	push bc
@@ -932,20 +946,16 @@ ApplyMovement:
 
 	ld a, SCRIPT_WAIT_MOVEMENT
 	ld [wScriptMode], a
-	jp StopScript
+	; fallthrough
+
+StopScript:
+	ld hl, wScriptFlags
+	res SCRIPT_RUNNING, [hl]
+	ret
 
 SetFlagsForMovement_2:
 	farcall _SetFlagsForMovement_2
 	ret
-
-Script_applymovementlasttalked:
-; script command 0x6a
-; parameters: data
-; apply movement to last talked
-
-	ldh a, [hLastTalked]
-	ld c, a
-	jp ApplyMovement
 
 Script_faceplayer:
 ; script command 0x6b
@@ -1072,24 +1082,7 @@ Script_appear:
 	call _CopyObjectStruct
 	ldh a, [hMapObjectIndexBuffer]
 	ld b, 0 ; clear
-	jp ApplyEventActionAppearDisappear
-
-Script_disappear:
-; script command 0x6e
-; parameters: object_id
-
-	call GetScriptByte
-	call GetScriptObject
-	cp LAST_TALKED
-	jr nz, .ok
-	ldh a, [hLastTalked]
-.ok
-	call DeleteObjectStruct
-	ldh a, [hMapObjectIndexBuffer]
-	ld b, 1 ; set
-	call ApplyEventActionAppearDisappear
-	farcall _UpdateSprites
-	ret
+	; fallthrough
 
 ApplyEventActionAppearDisappear:
 	push bc
@@ -1106,6 +1099,23 @@ ApplyEventActionAppearDisappear:
 	cp d
 	jp nz, EventFlagAction
 	xor a
+	ret
+
+Script_disappear:
+; script command 0x6e
+; parameters: object_id
+
+	call GetScriptByte
+	call GetScriptObject
+	cp LAST_TALKED
+	jr nz, .ok
+	ldh a, [hLastTalked]
+.ok
+	call DeleteObjectStruct
+	ldh a, [hMapObjectIndexBuffer]
+	ld b, 1 ; set
+	call ApplyEventActionAppearDisappear
+	farcall _UpdateSprites
 	ret
 
 Script_follow:
@@ -1429,6 +1439,15 @@ CallCallback:: ; unused
 	ld [wScriptBank], a
 	jp ScriptCall
 
+Script_iffalse:
+; script command 0x8
+; parameters: pointer
+
+	ld a, [wScriptVar]
+	and a
+	jp nz, SkipTwoScriptBytes
+	; fallthrough
+
 Script_sjump:
 ; script command 0x3
 ; parameters: pointer
@@ -1467,15 +1486,6 @@ Script_memjump:
 	ld h, [hl]
 	ld l, a
 	jp ScriptJump
-
-Script_iffalse:
-; script command 0x8
-; parameters: pointer
-
-	ld a, [wScriptVar]
-	and a
-	jp nz, SkipTwoScriptBytes
-	jp Script_sjump
 
 Script_iftrue:
 ; script command 0x9
@@ -1526,14 +1536,18 @@ Script_ifless:
 	ld a, [wScriptVar]
 	cp b
 	jr c, Script_sjump
-	jr SkipTwoScriptBytes
+	; fallthrough
+
+SkipTwoScriptBytes:
+	call GetScriptByte
+	jp GetScriptByte
 
 Script_jumpstd:
 ; script command 0xc
 ; parameters: predefined_script
 
 	call StdScript
-	jr ScriptJump
+	jp ScriptJump
 
 Script_callstd:
 ; script command 0xd
@@ -1559,19 +1573,6 @@ StdScript:
 	inc hl
 	ld a, BANK(StdScripts)
 	jp GetFarHalfword
-
-SkipTwoScriptBytes:
-	call GetScriptByte
-	jp GetScriptByte
-
-ScriptJump:
-	ld a, b
-	ld [wScriptBank], a
-	ld a, l
-	ld [wScriptPos], a
-	ld a, h
-	ld [wScriptPos + 1], a
-	ret
 
 Script_prioritysjump:
 ; script command 0x8d
@@ -2335,7 +2336,9 @@ Script_clearflag:
 	call GetScriptByte
 	ld d, a
 	ld b, RESET_FLAG
-	jp _EngineFlagAction
+_EngineFlagAction:
+	farcall EngineFlagAction
+	ret
 
 Script_checkflag:
 ; script command 0x34
@@ -2353,10 +2356,6 @@ Script_checkflag:
 	ld a, TRUE
 .false
 	ld [wScriptVar], a
-	ret
-
-_EngineFlagAction:
-	farcall EngineFlagAction
 	ret
 
 Script_wildoff:
@@ -2538,12 +2537,6 @@ Script_newloadmap:
 	call LoadMapStatus
 	jp StopScript
 
-Script_reloadandreturn:
-; script command 0x92
-
-	call Script_newloadmap
-	jp Script_end
-
 Script_opentext: ; unused, now in the JumpTable
 ; script command 0x47
 
@@ -2620,6 +2613,12 @@ Script_stopandsjump:
 
 	call StopScript
 	jp Script_sjump
+
+Script_reloadandreturn:
+; script command 0x92
+
+	call Script_newloadmap
+	; fallthrough
 
 Script_end:
 ; script command 0x91

@@ -1735,6 +1735,14 @@ BattleAnimFunction_LeechSeed:
 .three:
 	ret
 
+Functioncdae9:
+	ld hl, BATTLEANIMSTRUCT_10
+	add hl, bc
+	ld a, [hl]
+	cp $20
+	jp c, BattleAnim_IncAnonJumptableIndex
+	; fallthrough
+
 Functioncda8d:
 	dec [hl]
 	ld d, $20
@@ -1797,13 +1805,6 @@ Functioncdadf:
 	ld [hl], $40
 	ret
 
-Functioncdae9:
-	ld hl, BATTLEANIMSTRUCT_10
-	add hl, bc
-	ld a, [hl]
-	cp $20
-	jp nc, Functioncda8d
-	call BattleAnim_IncAnonJumptableIndex
 Functioncdaf9:
 	ret
 
@@ -3800,7 +3801,24 @@ BattleAnimFunction_4F:
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	add [hl]
-	jp Functionce6f1
+	; fallthrough
+
+Functionce6f1:
+	push af
+	push de
+	call BattleAnim_Sine
+	sra a
+	sra a
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
+	pop de
+	pop af
+	call BattleAnim_Cosine
+	ld hl, BATTLEANIMSTRUCT_XOFFSET
+	add hl, bc
+	ld [hl], a
+	ret
 
 BattleAnimFunction_4D:
 	ld hl, BATTLEANIMSTRUCT_0F
@@ -3816,23 +3834,6 @@ BattleAnimFunction_4D:
 	cpl
 	inc a
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], a
-	ret
-
-Functionce6f1:
-	push af
-	push de
-	call BattleAnim_Sine
-	sra a
-	sra a
-	ld hl, BATTLEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], a
-	pop de
-	pop af
-	call BattleAnim_Cosine
-	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
 	ret

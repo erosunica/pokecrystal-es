@@ -2309,35 +2309,14 @@ WinTrainerBattle:
 	and a
 	ret nz
 
+	call BattleWinSlideInEnemyTrainerFrontpic
+	ld c, 40
+	call DelayFrames
+
 	ld a, [wInBattleTowerBattle]
-	bit 0, a
-	jr nz, .battle_tower
+	and a
+	jr z, .not_battle_tower
 
-	call BattleWinSlideInEnemyTrainerFrontpic
-	ld c, 40
-	call DelayFrames
-	ld a, [wBattleType]
-	cp BATTLETYPE_CANLOSE
-	jr nz, .skip_heal
-	predef HealParty
-.skip_heal
-	ld a, [wDebugFlags]
-	bit DEBUG_BATTLE_F, a
-	call z, PrintWinLossText
-	jp .GiveMoney
-
-.mobile ; unused
-	call BattleWinSlideInEnemyTrainerFrontpic
-	ld c, 40
-	call DelayFrames
-	ld c, $4 ; win
-	farcall Mobile_PrintOpponentBattleMessage
-	ret
-
-.battle_tower
-	call BattleWinSlideInEnemyTrainerFrontpic
-	ld c, 40
-	call DelayFrames
 	call EmptyBattleTextbox
 	ld c, BATTLETOWERTEXT_LOSS_TEXT
 	farcall BattleTowerText
@@ -2351,7 +2330,16 @@ WinTrainerBattle:
 	call ClearTilemap
 	jp ClearBGPalettes
 
-.GiveMoney:
+.not_battle_tower
+	ld a, [wBattleType]
+	cp BATTLETYPE_CANLOSE
+	jr nz, .skip_heal
+	predef HealParty
+.skip_heal
+	ld a, [wDebugFlags]
+	bit DEBUG_BATTLE_F, a
+	call z, PrintWinLossText
+
 	ld a, [wAmuletCoin]
 	and a
 	call nz, .DoubleReward
@@ -4517,10 +4505,6 @@ DrawPlayerHUD:
 	pop de
 	ret
 
-UpdatePlayerHPPal:
-	ld hl, wPlayerHPPal
-	jp UpdateHPPal
-
 CheckDanger:
 	ld hl, wBattleMonHP
 	ld a, [hli]
@@ -4748,6 +4732,10 @@ DrawEnemyHUD:
 	hlcoord 2, 2
 	ld b, 0
 	jp DrawBattleHPBar
+
+UpdatePlayerHPPal:
+	ld hl, wPlayerHPPal
+	jp UpdateHPPal
 
 UpdateEnemyHPPal:
 	ld hl, wEnemyHPPal
@@ -7654,7 +7642,36 @@ FillInExpBar:
 	pop hl
 	ld de, 7
 	add hl, de
-	jp PlaceExpBar
+PlaceExpBar:
+	ld c, $8 ; number of tiles
+.loop1
+	ld a, b
+	sub $8
+	jr c, .next
+	ld b, a
+	ld a, $6a ; full bar
+	ld [hld], a
+	dec c
+	jr z, .finish
+	jr .loop1
+
+.next
+	add $8
+	jr z, .loop2
+	add $54 ; tile to the left of small exp bar tile
+	jr .skip
+
+.loop2
+	ld a, $62 ; empty bar
+
+.skip
+	ld [hld], a
+	ld a, $62 ; empty bar
+	dec c
+	jr nz, .loop2
+
+.finish
+	ret
 
 CalcExpBar:
 ; Calculate the percent exp between this level and the next
@@ -7753,37 +7770,6 @@ CalcExpBar:
 	cpl
 	add $40 + 1
 	ld b, a
-	ret
-
-PlaceExpBar:
-	ld c, $8 ; number of tiles
-.loop1
-	ld a, b
-	sub $8
-	jr c, .next
-	ld b, a
-	ld a, $6a ; full bar
-	ld [hld], a
-	dec c
-	jr z, .finish
-	jr .loop1
-
-.next
-	add $8
-	jr z, .loop2
-	add $54 ; tile to the left of small exp bar tile
-	jr .skip
-
-.loop2
-	ld a, $62 ; empty bar
-
-.skip
-	ld [hld], a
-	ld a, $62 ; empty bar
-	dec c
-	jr nz, .loop2
-
-.finish
 	ret
 
 GetBattleMonBackpic:
@@ -7927,12 +7913,6 @@ LoadTrainerOrWildMonPic:
 	ld [wTempEnemyMonSpecies], a
 	ret
 
-InitEnemy:
-	ld a, [wOtherTrainerClass]
-	and a
-	jp nz, InitEnemyTrainer ; trainer
-	jp InitEnemyWildmon ; wild
-
 BackUpBGMap2:
 	ldh a, [rSVBK]
 	push af
@@ -8010,6 +7990,10 @@ InitEnemyTrainer:
 .done
 	ret
 
+InitEnemy:
+	ld a, [wOtherTrainerClass]
+	and a
+	jp nz, InitEnemyTrainer ; trainer
 InitEnemyWildmon:
 	ld a, WILD_BATTLE
 	ld [wBattleMode], a
@@ -8095,29 +8079,7 @@ Unreferenced_Function3f662:
 	ret
 
 ExitBattle:
-	call .HandleEndOfBattle
-	jp CleanUpBattleRAM
-
-.HandleEndOfBattle:
-	ld a, [wLinkMode]
-	and a
-	jr z, .not_linked
-	call ShowLinkBattleParticipantsAfterEnd
-	ld c, 150
-	call DelayFrames
-	jp DisplayLinkBattleResult
-
-.not_linked
-	ld a, [wBattleResult]
-	and $f
-	ret nz
-	call CheckPayDay
-	xor a
-	ld [wForceEvolution], a
-	predef EvolveAfterBattle
-	farcall GivePokerusAndConvertBerries
-	ret
-
+	call HandleEndOfBattle
 CleanUpBattleRAM:
 	call BattleEnd_HandleRoamMons
 	xor a
@@ -8148,6 +8110,26 @@ CleanUpBattleRAM:
 	dec b
 	jr nz, .loop
 	jp WaitSFX
+
+HandleEndOfBattle:
+	ld a, [wLinkMode]
+	and a
+	jr z, .not_linked
+	call ShowLinkBattleParticipantsAfterEnd
+	ld c, 150
+	call DelayFrames
+	jp DisplayLinkBattleResult
+
+.not_linked
+	ld a, [wBattleResult]
+	and $f
+	ret nz
+	call CheckPayDay
+	xor a
+	ld [wForceEvolution], a
+	predef EvolveAfterBattle
+	farcall GivePokerusAndConvertBerries
+	ret
 
 CheckPayDay:
 	ld hl, wPayDayMoney
@@ -8793,11 +8775,9 @@ GetTrainerBackpic:
 ; Load the player character's backpic (6x6) into VRAM starting from vTiles2 tile $31.
 
 ; Special exception for Dude.
-	ld b, BANK(DudeBackpic)
-	ld hl, DudeBackpic
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
-	jr z, .Decompress
+	jr z, .DudeBackpic
 
 ; What gender are we?
 	ld a, [wPlayerSpriteSetupFlags]
@@ -8808,17 +8788,23 @@ GetTrainerBackpic:
 	jr z, .Chris
 
 ; It's a girl.
-	farcall GetKrisBackpic
-	ret
+	ld de, KrisBackpic
+	ld hl, vTiles2 tile $31
+	lb bc, BANK(KrisBackpic), 7 * 7
+	jp Get2bpp
 
 .Chris:
 ; It's a boy.
-	ld b, BANK(ChrisBackpic)
 	ld hl, ChrisBackpic
-
-.Decompress:
 	ld de, vTiles2 tile $31
-	ld c, 7 * 7
+	lb bc, BANK(ChrisBackpic), 7 * 7
+	predef DecompressGet2bpp
+	ret
+
+.DudeBackpic:
+	ld hl, DudeBackpic
+	ld de, vTiles2 tile $31
+	lb bc, BANK(DudeBackpic), 7 * 7
 	predef DecompressGet2bpp
 	ret
 

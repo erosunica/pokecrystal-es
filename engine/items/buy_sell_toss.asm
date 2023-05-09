@@ -1,6 +1,5 @@
 SelectQuantityToToss:
 	ld hl, TossItem_MenuHeader
-	call LoadMenuHeader
 	jp Toss_Sell_Loop
 
 SelectQuantityToBuy:
@@ -11,7 +10,6 @@ RooftopSale_SelectQuantityToBuy:
 	ld a, e
 	ld [wBuffer2], a
 	ld hl, BuyItem_MenuHeader
-	call LoadMenuHeader
 	jp Toss_Sell_Loop
 
 SelectQuantityToSell:
@@ -21,10 +19,10 @@ SelectQuantityToSell:
 	ld a, e
 	ld [wBuffer2], a
 	ld hl, SellItem_MenuHeader
-	call LoadMenuHeader
 	; fallthrough
 
 Toss_Sell_Loop:
+	call LoadMenuHeader
 	ld a, 1
 	ld [wItemQuantityChangeBuffer], a
 .loop
@@ -145,24 +143,7 @@ DisplayPurchasePrice:
 
 DisplaySellingPrice:
 	call BuySell_MultiplyPrice
-	call Sell_HalvePrice
-	jp BuySell_DisplaySubtotal
-
-BuySell_MultiplyPrice:
-	xor a
-	ldh [hMultiplicand + 0], a
-	ld a, [wBuffer1]
-	ldh [hMultiplicand + 1], a
-	ld a, [wBuffer2]
-	ldh [hMultiplicand + 2], a
-	ld a, [wItemQuantityChangeBuffer]
-	ldh [hMultiplier], a
-	push hl
-	call Multiply
-	pop hl
-	ret
-
-Sell_HalvePrice:
+	; halve price
 	push hl
 	ld hl, hProduct + 1
 	ld a, [hl]
@@ -175,7 +156,7 @@ Sell_HalvePrice:
 	rra
 	ld [hl], a
 	pop hl
-	ret
+	; fallthrough
 
 BuySell_DisplaySubtotal:
 	push hl
@@ -192,6 +173,20 @@ BuySell_DisplaySubtotal:
 	lb bc, PRINTNUM_MONEY | 3, 6
 	call PrintNum
 	jp WaitBGMap
+
+BuySell_MultiplyPrice:
+	xor a
+	ldh [hMultiplicand + 0], a
+	ld a, [wBuffer1]
+	ldh [hMultiplicand + 1], a
+	ld a, [wBuffer2]
+	ldh [hMultiplicand + 2], a
+	ld a, [wItemQuantityChangeBuffer]
+	ldh [hMultiplier], a
+	push hl
+	call Multiply
+	pop hl
+	ret
 
 TossItem_MenuHeader:
 	db MENU_BACKUP_TILES ; flags

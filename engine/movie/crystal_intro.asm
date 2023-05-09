@@ -128,11 +128,6 @@ PlaceGameFreakPresents:
 	dw PlaceGameFreakPresents_2
 	dw PlaceGameFreakPresents_3
 
-PlaceGameFreakPresents_AdvanceIndex:
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
-
 PlaceGameFreakPresents_0:
 	ret
 
@@ -146,19 +141,13 @@ PlaceGameFreakPresents_1:
 
 .PlaceGameFreak:
 	ld [hl], 0
-	ld hl, .GAME_FREAK
+	ld hl, Splash_GameFreakTiles
 	decoord 5, 10
-	ld bc, .end - .GAME_FREAK
+	ld bc, Splash_GameFreakTiles.end - Splash_GameFreakTiles
 	call CopyBytes
 	call PlaceGameFreakPresents_AdvanceIndex
 	ld de, SFX_GAME_FREAK_PRESENTS
 	jp PlaySFX
-
-.GAME_FREAK:
-	;  G  A  M  E   _  F  R  E  A  K
-	db 0, 1, 2, 3, 13, 4, 5, 3, 1, 6
-.end
-	db "@"
 
 PlaceGameFreakPresents_2:
 	ld hl, wIntroSceneTimer
@@ -170,16 +159,25 @@ PlaceGameFreakPresents_2:
 
 .place_presents
 	ld [hl], 0
-	ld hl, .presents
+	ld hl, Splash_PresentsTiles
 	decoord 7, 11
-	ld bc, .end - .presents
+	ld bc, Splash_PresentsTiles.end - Splash_PresentsTiles
 	call CopyBytes
-	jp PlaceGameFreakPresents_AdvanceIndex
+	; fallthrough
 
-.presents
+PlaceGameFreakPresents_AdvanceIndex:
+	ld hl, wJumptableIndex
+	inc [hl]
+	ret
+
+Splash_GameFreakTiles:
+	;  G  A  M  E   _  F  R  E  A  K
+	db 0, 1, 2, 3, 13, 4, 5, 3, 1, 6
+.end
+
+Splash_PresentsTiles:
 	db 7, 8, 9, 10, 11, 12
 .end
-	db "@"
 
 PlaceGameFreakPresents_3:
 	ld hl, wIntroSceneTimer

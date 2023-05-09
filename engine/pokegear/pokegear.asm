@@ -986,21 +986,6 @@ PokegearPhone_GetDPad:
 	call PokegearPhone_UpdateDisplayList
 	jp WaitBGMap
 
-PokegearPhone_UpdateCursor:
-	ld a, " "
-x = 4
-rept PHONE_DISPLAY_HEIGHT
-	hlcoord 1, x
-	ld [hl], a
-x = x + 2
-endr
-	hlcoord 1, 4
-	ld a, [wPokegearPhoneCursorPosition]
-	ld bc, 2 * SCREEN_WIDTH
-	call AddNTimes
-	ld [hl], "▶"
-	ret
-
 PokegearPhone_UpdateDisplayList:
 	hlcoord 1, 3
 	ld b, PHONE_DISPLAY_HEIGHT * 2 + 1
@@ -1041,7 +1026,22 @@ PokegearPhone_UpdateDisplayList:
 	ld [wPokegearPhoneLoadNameBuffer], a
 	cp PHONE_DISPLAY_HEIGHT
 	jr c, .loop
-	jp PokegearPhone_UpdateCursor
+	; fallthrough
+
+PokegearPhone_UpdateCursor:
+	ld a, " "
+x = 4
+rept PHONE_DISPLAY_HEIGHT
+	hlcoord 1, x
+	ld [hl], a
+x = x + 2
+endr
+	hlcoord 1, 4
+	ld a, [wPokegearPhoneCursorPosition]
+	ld bc, 2 * SCREEN_WIDTH
+	call AddNTimes
+	ld [hl], "▶"
+	ret
 
 PokegearPhone_DeletePhoneNumber:
 	ld hl, wPhoneList
@@ -1275,7 +1275,13 @@ Pokegear_SwitchPage:
 	ld [wJumptableIndex], a
 	ld a, b
 	ld [wPokegearCard], a
-	jp DeleteSpriteAnimStruct2ToEnd
+	ld hl, wSpriteAnim2
+	ld bc, wSpriteAnimationStructsEnd - wSpriteAnim2
+	xor a
+	call ByteFill
+	ld a, 2
+	ld [wSpriteAnimCount], a
+	ret
 
 ExitPokegearRadio_HandleMusic:
 	ld a, [wPokegearRadioMusicPlaying]
@@ -1291,15 +1297,6 @@ ExitPokegearRadio_HandleMusic:
 	call RestartMapMusic
 	xor a
 	ld [wPokegearRadioMusicPlaying], a
-	ret
-
-DeleteSpriteAnimStruct2ToEnd:
-	ld hl, wSpriteAnim2
-	ld bc, wSpriteAnimationStructsEnd - wSpriteAnim2
-	xor a
-	call ByteFill
-	ld a, 2
-	ld [wSpriteAnimCount], a
 	ret
 
 Pokegear_LoadTilemapRLE:

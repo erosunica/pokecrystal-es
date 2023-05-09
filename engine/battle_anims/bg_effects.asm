@@ -168,21 +168,21 @@ BattleBGEffects_IncrementJumptable:
 	inc [hl]
 	ret
 
-BattleBGEffect_FlashInverted:
-	ld de, .inverted
-	jp BattleBGEffect_FlashContinue
-
-.inverted
+BattleBGEffect_FlashInverted_Data:
 	dc 3, 2, 1, 0
 	dc 0, 1, 2, 3
 
-BattleBGEffect_FlashWhite:
-	ld de, .white
-	jp BattleBGEffect_FlashContinue
-
-.white
+BattleBGEffect_FlashWhite_Data:
 	dc 3, 2, 1, 0
 	dc 0, 0, 0, 0
+
+BattleBGEffect_FlashInverted:
+	ld de, BattleBGEffect_FlashInverted_Data
+	jr BattleBGEffect_FlashContinue
+
+BattleBGEffect_FlashWhite:
+	ld de, BattleBGEffect_FlashWhite_Data
+	; fallthrough
 
 BattleBGEffect_FlashContinue:
 ; current timer, flash duration, number of flashes
@@ -607,48 +607,20 @@ BattleBGEffect_27:
 	ld [hl], $1
 	ret
 
-BattleBGEffect_EnterMon:
-	call BGEffect_CheckBattleTurn
-	jr nz, .player_turn
-	ld de, .EnemyData
-	jr .okay
 
-.player_turn
-	ld de, .PlayerData
-.okay
-	ld a, e
-	ld [wBattleAnimTemp1], a
-	ld a, d
-	ld [wBattleAnimTemp2], a
-	jp BattleBGEffect_RunPicResizeScript
-
-.PlayerData:
+BattleBGEffect_EnterMon_PlayerData:
 	db  2, $31, 2
 	db  1, $31, 1
 	db  0, $31, 0
 	db -1
-.EnemyData:
+
+BattleBGEffect_EnterMon_EnemyData:
 	db  5, $00, 5
 	db  4, $00, 4
 	db  3, $00, 3
 	db -1
 
-BattleBGEffect_ReturnMon:
-	call BGEffect_CheckBattleTurn
-	jr nz, .player_turn
-	ld de, .EnemyData
-	jr .okay
-
-.player_turn
-	ld de, .PlayerData
-.okay
-	ld a, e
-	ld [wBattleAnimTemp1], a
-	ld a, d
-	ld [wBattleAnimTemp2], a
-	jp BattleBGEffect_RunPicResizeScript
-
-.PlayerData:
+BattleBGEffect_ReturnMon_PlayerData:
 	db  0, $31, 0
 	db -2, $66, 0
 	db  1, $31, 1
@@ -657,7 +629,8 @@ BattleBGEffect_ReturnMon:
 	db -2, $22, 2
 	db -3, $00, 0
 	db -1
-.EnemyData:
+
+BattleBGEffect_ReturnMon_EnemyData:
 	db  3, $00, 3
 	db -2, $77, 3
 	db  4, $00, 4
@@ -666,6 +639,30 @@ BattleBGEffect_ReturnMon:
 	db -2, $33, 5
 	db -3, $00, 0
 	db -1
+
+BattleBGEffect_EnterMon:
+	call BGEffect_CheckBattleTurn
+	ld de, BattleBGEffect_EnterMon_PlayerData
+	jr nz, .okay
+	ld de, BattleBGEffect_EnterMon_EnemyData
+.okay
+	ld a, e
+	ld [wBattleAnimTemp1], a
+	ld a, d
+	ld [wBattleAnimTemp2], a
+	jr BattleBGEffect_RunPicResizeScript
+
+BattleBGEffect_ReturnMon:
+	call BGEffect_CheckBattleTurn
+	ld de, BattleBGEffect_ReturnMon_PlayerData
+	jr nz, .okay
+	ld de, BattleBGEffect_ReturnMon_EnemyData
+.okay
+	ld a, e
+	ld [wBattleAnimTemp1], a
+	ld a, d
+	ld [wBattleAnimTemp2], a
+	; fallthrough
 
 BattleBGEffect_RunPicResizeScript:
 	call BattleBGEffects_AnonJumptable
@@ -2404,6 +2401,17 @@ BattleBGEffect_GetNextDMGPal:
 	scf
 	ret
 
+BattleBGEffects_ResetVideoHRAM:
+	xor a
+	ldh [hLCDCPointer], a
+	ld a, %11100100
+	ldh [rBGP], a
+	ld [wBGP], a
+	ld [wOBP1], a
+	ldh [hLYOverrideStart], a
+	ldh [hLYOverrideEnd], a
+	; fallthrough
+
 BattleBGEffects_ClearLYOverrides:
 	xor a
 BattleBGEffects_SetLYOverrides:
@@ -2461,17 +2469,6 @@ BattleAnim_ResetLCDStatCustom:
 	xor a
 	ldh [hLCDCPointer], a
 	jp EndBattleBGEffect
-
-BattleBGEffects_ResetVideoHRAM:
-	xor a
-	ldh [hLCDCPointer], a
-	ld a, %11100100
-	ldh [rBGP], a
-	ld [wBGP], a
-	ld [wOBP1], a
-	ldh [hLYOverrideStart], a
-	ldh [hLYOverrideEnd], a
-	jp BattleBGEffects_ClearLYOverrides
 
 Functionc8f2e:
 	push bc

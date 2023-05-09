@@ -379,6 +379,24 @@ LoadOutOfAreaScript:
 	scall PhoneOutOfAreaScript
 	return
 
+Script_ReceivePhoneCall:
+	refreshscreen
+	callasm RingTwice_StartCall
+	memcall wCallerContact + PHONE_CONTACT_SCRIPT2_BANK
+	waitbutton
+	callasm HangUp
+	closetext
+	callasm InitCallReceiveDelay
+	end
+
+Script_SpecialBillCall::
+	callasm .LoadBillScript
+	sjump Script_ReceivePhoneCall
+
+.LoadBillScript:
+	ld e, PHONE_BILL
+	; fallthrough
+
 LoadCallerScript:
 	ld a, e
 	ld [wCurCaller], a
@@ -409,24 +427,6 @@ WrongNumber:
 	text_far _PhoneWrongNumberText
 	text_end
 
-Script_ReceivePhoneCall:
-	refreshscreen
-	callasm RingTwice_StartCall
-	memcall wCallerContact + PHONE_CONTACT_SCRIPT2_BANK
-	waitbutton
-	callasm HangUp
-	closetext
-	callasm InitCallReceiveDelay
-	end
-
-Script_SpecialBillCall::
-	callasm .LoadBillScript
-	sjump Script_ReceivePhoneCall
-
-.LoadBillScript:
-	ld e, PHONE_BILL
-	jp LoadCallerScript
-
 LoadElmCallScript:
 	callasm .LoadElmScript
 	pause 30
@@ -452,7 +452,22 @@ RingTwice_StartCall:
 Phone_CallerTextboxWithName:
 	ld a, [wCurCaller]
 	ld b, a
-	jp Function90363
+Function90363:
+	push bc
+	call Phone_CallerTextbox
+	hlcoord 1, 1
+	ld a, "☎"
+	ld [hli], a
+	inc hl
+	ld d, h
+	ld e, l
+	pop bc
+Function90380:
+	ld h, d
+	ld l, e
+	ld a, b
+	call GetCallerTrainerClass
+	jp GetCallerName
 
 PhoneCall::
 	ld a, b
@@ -506,11 +521,13 @@ Phone_CallEnd:
 	call HangUp_BoopOn
 	call HangUp_Wait20Frames
 	call SpeechTextbox
-	jp HangUp_Wait20Frames
+	; fallthrough
 
-Function90316:
-	ld de, SFX_SHUT_DOWN_PC
-	jp PlaySFX
+HangUp_Wait20Frames:
+Phone_Wait20Frames:
+	ld c, 20
+	call DelayFrames
+	jp PhoneRing_CopyTilemapAtOnce
 
 HangUp_Beep:
 	ld hl, PhoneClickText
@@ -541,37 +558,10 @@ Phone_StartRinging:
 	call UpdateSprites
 	jp PhoneRing_CopyTilemapAtOnce
 
-HangUp_Wait20Frames:
-	jr Phone_Wait20Frames
-
-Phone_Wait20Frames:
-	ld c, 20
-	call DelayFrames
-	jp PhoneRing_CopyTilemapAtOnce
-
-Function90363:
-	push bc
-	call Phone_CallerTextbox
-	hlcoord 1, 1
-	ld a, "☎"
-	ld [hli], a
-	inc hl
-	ld d, h
-	ld e, l
-	pop bc
-	jp Function90380
-
 Phone_CallerTextbox:
 	hlcoord 0, 0
 	lb bc, 2, SCREEN_WIDTH - 2
 	jp Textbox
-
-Function90380:
-	ld h, d
-	ld l, e
-	ld a, b
-	call GetCallerTrainerClass
-	jp GetCallerName
 
 CheckCanDeletePhoneNumber:
 	ld a, c

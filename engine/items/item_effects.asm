@@ -1442,6 +1442,10 @@ GetItemHealingAction:
 
 INCLUDE "data/items/heal_status.asm"
 
+RestoreHPEffect:
+	call ItemRestoreHP
+	; fallthrough
+
 StatusHealer_Jumptable:
 	ld hl, .dw
 	rst JumpTable
@@ -1571,10 +1575,6 @@ BitterBerryEffect:
 .done
 	jp StatusHealer_Jumptable
 
-RestoreHPEffect:
-	call ItemRestoreHP
-	jp StatusHealer_Jumptable
-
 EnergypowderEffect:
 	ld c, HAPPINESS_BITTERPOWDER
 	jr EnergypowderEnergyRootCommon
@@ -1637,7 +1637,16 @@ HealHP_SFX_GFX:
 	predef_jump AnimateHPBar
 
 UseItem_SelectMon:
-	call .SelectMon
+	ld a, b
+	ld [wPartyMenuActionText], a
+	push hl
+	push de
+	push bc
+	call ClearBGPalettes
+	call ChooseMonToUseItemOn
+	pop bc
+	pop de
+	pop hl
 	ret c
 
 	ld a, [wCurPartySpecies]
@@ -1650,19 +1659,6 @@ UseItem_SelectMon:
 
 .not_egg
 	and a
-	ret
-
-.SelectMon:
-	ld a, b
-	ld [wPartyMenuActionText], a
-	push hl
-	push de
-	push bc
-	call ClearBGPalettes
-	call ChooseMonToUseItemOn
-	pop bc
-	pop de
-	pop hl
 	ret
 
 ChooseMonToUseItemOn:
@@ -1747,16 +1743,6 @@ ReviveHalfHP:
 	rr e
 	jr ContinueRevive
 
-ReviveFullHP:
-	call LoadHPFromBuffer1
-ContinueRevive:
-	ld a, MON_HP
-	call GetPartyParamLocation
-	ld a, d
-	ld [hli], a
-	ld [hl], e
-	jp LoadCurHPIntoBuffer5
-
 RestoreHealth:
 	ld a, MON_HP + 1
 	call GetPartyParamLocation
@@ -1766,7 +1752,7 @@ RestoreHealth:
 	ld a, [hl]
 	adc d
 	ld [hl], a
-	jr c, .full_hp
+	jr c, ReviveFullHP
 	call LoadCurHPIntoBuffer5
 	ld a, MON_HP + 1
 	call GetPartyParamLocation
@@ -1780,11 +1766,18 @@ RestoreHealth:
 	dec hl
 	ld a, [de]
 	sbc [hl]
-	jr c, .finish
-.full_hp
-	call ReviveFullHP
-.finish
-	ret
+	ret c
+	; fallthrough
+
+ReviveFullHP:
+	call LoadHPFromBuffer1
+ContinueRevive:
+	ld a, MON_HP
+	call GetPartyParamLocation
+	ld a, d
+	ld [hli], a
+	ld [hl], e
+	jp LoadCurHPIntoBuffer5
 
 RemoveHP:
 	ld a, MON_HP + 1
