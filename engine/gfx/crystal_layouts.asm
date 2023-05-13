@@ -15,10 +15,7 @@ GetMysteryGift_MobileAdapterLayout:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld de, .done
-	push de
-	jp hl
-.done
+	call _hl_
 	ret
 
 .dw

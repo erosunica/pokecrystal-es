@@ -1339,11 +1339,7 @@ Slots_CheckMatchedFirstTwoReels:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld de, .return
-	push de
-	jp hl
-
-.return
+	call _hl_
 	ld a, [wFirstTwoReelsMatching]
 	and a
 	ret z
@@ -1432,11 +1428,7 @@ Slots_CheckMatchedAllThreeReels:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld de, .return
-	push de
-	jp hl
-
-.return
+	call _hl_
 	ld a, [wSlotMatched]
 	cp SLOTS_NO_MATCH
 	jr nz, .matched_nontrivial
@@ -1821,11 +1813,7 @@ Slots_PayoutText:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld de, .return
-	push de
-	jp hl
-
-.return
+	call _hl_
 	ld hl, .Text_PrintPayout
 	jp PrintText
 

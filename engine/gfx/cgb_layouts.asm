@@ -22,12 +22,7 @@ LoadSGBLayoutCGB:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld de, .ReturnFromJumpTable
-	push de
-	jp hl
-
-.ReturnFromJumpTable:
-	ret
+	jp _hl_
 
 .dw
 	dw _CGB_BattleGrayscale

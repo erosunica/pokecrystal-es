@@ -101,12 +101,8 @@ ReadAnyMail:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld de, .done
 	pop bc
-	push de
 	jp hl
-.done
-	ret
 
 MailGFXPointers:
 	dbw FLOWER_MAIL,  LoadFlowerMailGFX
