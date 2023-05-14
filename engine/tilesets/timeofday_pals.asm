@@ -161,8 +161,7 @@ FillWhiteBGColor:
 	ld hl, wBGPals1
 	ld a, [hli]
 	ld e, a
-	ld a, [hli]
-	ld d, a
+	ld d, [hl]
 	ld hl, wBGPals1 + 1 palettes
 	ld c, 6
 .loop
